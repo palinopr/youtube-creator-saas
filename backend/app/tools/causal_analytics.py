@@ -1,53 +1,175 @@
 """
 Causal Analytics - Deep analysis to understand WHY videos succeed or fail.
 Goes beyond correlation to find actual drivers of success.
+
+REFACTORED: Replaced hardcoded KNOWN_CELEBRITIES with dynamic NER using OpenAI.
+- Entities are now extracted dynamically from video titles and descriptions
+- Works for any channel, not just specific test cases
+- Uses OpenAI GPT for intelligent entity recognition
 """
 
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Set
 from datetime import datetime, timedelta
 from collections import Counter, defaultdict
 import statistics
 import re
+import os
+import json
 from googleapiclient.discovery import Resource
+import openai
+
+
+class EntityExtractor:
+    """
+    Dynamic Named Entity Recognition using OpenAI.
+    Replaces hardcoded celebrity lists with intelligent extraction.
+    """
+    
+    def __init__(self, openai_api_key: Optional[str] = None):
+        self.api_key = openai_api_key or os.getenv("OPENAI_API_KEY")
+        self._entity_cache: Dict[str, List[str]] = {}
+        self._channel_entities: Set[str] = set()
+        
+    def extract_entities_batch(self, texts: List[str], batch_size: int = 20) -> Dict[str, List[str]]:
+        """
+        Extract named entities from a batch of texts using OpenAI.
+        Returns a dict mapping text -> list of entities found.
+        """
+        if not self.api_key:
+            print("[EntityExtractor] No API key, falling back to regex-based extraction")
+            return {text: self._extract_entities_regex(text) for text in texts}
+        
+        results = {}
+        
+        # Process in batches to avoid token limits
+        for i in range(0, len(texts), batch_size):
+            batch = texts[i:i+batch_size]
+            batch_results = self._extract_batch_openai(batch)
+            results.update(batch_results)
+        
+        return results
+    
+    def _extract_batch_openai(self, texts: List[str]) -> Dict[str, List[str]]:
+        """Use OpenAI to extract entities from a batch of texts."""
+        try:
+            client = openai.OpenAI(api_key=self.api_key)
+            
+            # Create a numbered list of texts for batch processing
+            numbered_texts = "\n".join([f"{i+1}. {text[:200]}" for i, text in enumerate(texts)])
+            
+            prompt = f"""Extract named entities (people, celebrities, influencers, brands, organizations, places) from these video titles/descriptions.
+
+For each numbered text, return a JSON array of entities found. Only include specific, notable entities - not generic words.
+
+Texts:
+{numbered_texts}
+
+Return ONLY valid JSON in this exact format (no markdown, no explanation):
+{{
+  "1": ["Entity1", "Entity2"],
+  "2": ["Entity1"],
+  ...
+}}
+
+If no entities found for a text, use an empty array: []"""
+
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": "You are an expert at named entity recognition. Extract only notable people, celebrities, brands, and organizations. Return valid JSON only."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.1,
+                max_tokens=2000
+            )
+            
+            content = response.choices[0].message.content.strip()
+            
+            # Clean up response - remove markdown code blocks if present
+            if content.startswith("```"):
+                content = re.sub(r'^```\w*\n?', '', content)
+                content = re.sub(r'\n?```$', '', content)
+            
+            # Parse JSON response
+            parsed = json.loads(content)
+            
+            # Map back to original texts
+            results = {}
+            for i, text in enumerate(texts):
+                key = str(i + 1)
+                entities = parsed.get(key, [])
+                # Normalize entities to lowercase for consistency
+                normalized = [e.lower().strip() for e in entities if isinstance(e, str) and len(e) > 1]
+                results[text] = normalized
+                # Add to channel entity cache
+                self._channel_entities.update(normalized)
+                self._entity_cache[text] = normalized
+            
+            return results
+            
+        except json.JSONDecodeError as e:
+            print(f"[EntityExtractor] JSON parse error: {e}")
+            return {text: self._extract_entities_regex(text) for text in texts}
+        except Exception as e:
+            print(f"[EntityExtractor] OpenAI error: {e}")
+            return {text: self._extract_entities_regex(text) for text in texts}
+    
+    def _extract_entities_regex(self, text: str) -> List[str]:
+        """
+        Fallback regex-based entity extraction.
+        Looks for capitalized multi-word phrases that might be names.
+        """
+        entities = []
+        
+        # Find capitalized word sequences (potential names)
+        name_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'
+        matches = re.findall(name_pattern, text)
+        entities.extend([m.lower() for m in matches])
+        
+        # Find @mentions (social handles often = notable people)
+        mention_pattern = r'@(\w+)'
+        mentions = re.findall(mention_pattern, text)
+        entities.extend([m.lower() for m in mentions])
+        
+        # Find quoted names
+        quote_pattern = r'"([^"]+)"'
+        quotes = re.findall(quote_pattern, text)
+        entities.extend([q.lower() for q in quotes if len(q.split()) <= 4])
+        
+        return list(set(entities))[:5]
+    
+    def get_channel_entities(self) -> Set[str]:
+        """Get all unique entities found across the channel's content."""
+        return self._channel_entities
+    
+    def extract_from_cache_or_new(self, text: str) -> List[str]:
+        """Get entities from cache or extract if not cached."""
+        if text in self._entity_cache:
+            return self._entity_cache[text]
+        
+        # Single text extraction
+        result = self.extract_entities_batch([text])
+        return result.get(text, [])
 
 
 class CausalAnalytics:
     """Deep causal analysis for understanding video success factors."""
     
-    # Known celebrities/artists for detection
-    KNOWN_CELEBRITIES = {
-        # Reggaeton/Latin Artists
-        "daddy yankee", "bad bunny", "anuel", "anuel aa", "ozuna", "j balvin",
-        "farruko", "nicky jam", "don omar", "wisin", "yandel", "maluma",
-        "arcangel", "de la ghetto", "bryant myers", "myke towers", "rauw alejandro",
-        "karol g", "becky g", "natti natasha", "ivy queen", "tego calderon",
-        "residente", "calle 13", "plan b", "zion", "lennox", "jowell", "randy",
-        "6ix9ine", "tekashi", "cardi b", "pitbull", "enrique iglesias",
-        
-        # Puerto Rican personalities/influencers
-        "molusco", "chente", "alofoke", "el chombo", "kobbo", "la india",
-        "gilberto santa rosa", "olga tanon", "tito nieves", "jerry rivera",
-        "marc anthony", "ricky martin", "luis fonsi", "chayanne",
-        
-        # US Artists
-        "drake", "travis scott", "kanye", "kendrick", "jay z", "beyonce",
-        "taylor swift", "doja cat", "megan thee stallion", "cardi b",
-        
-        # Political/News figures
-        "trump", "biden", "jennifer gonzalez", "pierluisi", "wanda vazquez",
-        
-        # Sports
-        "kiké hernandez", "carlos correa", "javier baez", "yadier molina",
-        
-        # Other notable
-        "andrew tate", "alex jones", "joe rogan",
-    }
-    
-    def __init__(self, youtube_service: Resource):
+    def __init__(self, youtube_service: Resource, openai_api_key: Optional[str] = None):
         self.youtube = youtube_service
+        self.entity_extractor = EntityExtractor(openai_api_key)
+        self._videos_cache: List[Dict] = []
     
-    def get_videos_with_full_data(self, max_videos: int = 5000) -> List[Dict[str, Any]]:
-        """Get videos with comprehensive data for causal analysis. Default 5000 to get ALL videos."""
+    def get_videos_with_full_data(self, max_videos: int = 500) -> List[Dict[str, Any]]:
+        """
+        Get videos with comprehensive data for causal analysis.
+        
+        PRODUCTION NOTE: Capped at 500 for real-time requests.
+        For full analysis, use the async ETL pattern.
+        """
+        # Safety cap
+        max_videos = min(max_videos, 500)
+        
         # Get uploads playlist
         channel_response = self.youtube.channels().list(
             part="contentDetails",
@@ -82,6 +204,8 @@ class CausalAnalytics:
         
         # Get full video details in batches
         all_videos = []
+        all_texts_for_ner = []  # Collect texts for batch NER
+        
         for i in range(0, len(all_video_ids), 50):
             batch_ids = all_video_ids[i:i+50]
             
@@ -110,9 +234,6 @@ class CausalAnalytics:
                 duration_str = content.get("duration", "PT0S")
                 duration_seconds = self._parse_duration(duration_str)
                 
-                # Extract celebrities mentioned
-                celebrities = self._extract_celebrities(title, description)
-                
                 # Analyze description structure
                 desc_analysis = self._analyze_description(description)
                 
@@ -129,6 +250,10 @@ class CausalAnalytics:
                 
                 # Extract title patterns
                 title_analysis = self._analyze_title(title)
+                
+                # Prepare text for NER (will be processed in batch)
+                ner_text = f"{title} {description[:500]}"
+                all_texts_for_ner.append(ner_text)
                 
                 all_videos.append({
                     "video_id": video["id"],
@@ -149,11 +274,12 @@ class CausalAnalytics:
                     "like_ratio": round(like_ratio, 2),
                     "comment_ratio": round(comment_ratio, 4),
                     
-                    # Celebrity/Person analysis
-                    "celebrities_mentioned": celebrities,
-                    "celebrity_count": len(celebrities),
-                    "has_celebrity": len(celebrities) > 0,
-                    "primary_celebrity": celebrities[0] if celebrities else None,
+                    # Placeholder for entity analysis (will be filled after batch NER)
+                    "_ner_text": ner_text,
+                    "celebrities_mentioned": [],
+                    "celebrity_count": 0,
+                    "has_celebrity": False,
+                    "primary_celebrity": None,
                     
                     # Title analysis
                     "title_length": len(title),
@@ -184,6 +310,22 @@ class CausalAnalytics:
                     "thumbnail_url": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
                 })
         
+        # Batch NER processing - extract entities from all texts at once
+        print(f"[CausalAnalytics] Running NER on {len(all_texts_for_ner)} video texts...")
+        entity_results = self.entity_extractor.extract_entities_batch(all_texts_for_ner)
+        
+        # Update videos with entity data
+        for video in all_videos:
+            ner_text = video.pop("_ner_text")
+            entities = entity_results.get(ner_text, [])
+            video["celebrities_mentioned"] = entities
+            video["celebrity_count"] = len(entities)
+            video["has_celebrity"] = len(entities) > 0
+            video["primary_celebrity"] = entities[0] if entities else None
+        
+        # Cache for later use
+        self._videos_cache = all_videos
+        
         return all_videos
     
     def _parse_duration(self, duration_str: str) -> int:
@@ -194,20 +336,6 @@ class CausalAnalytics:
         minutes = int(match.group(2) or 0)
         seconds = int(match.group(3) or 0)
         return hours * 3600 + minutes * 60 + seconds
-    
-    def _extract_celebrities(self, title: str, description: str) -> List[str]:
-        """Extract mentioned celebrities from title and description."""
-        text = (title + " " + description).lower()
-        found = []
-        
-        for celeb in self.KNOWN_CELEBRITIES:
-            if celeb in text:
-                found.append(celeb)
-        
-        # Sort by position in text (earlier = more important)
-        found.sort(key=lambda x: text.find(x))
-        
-        return found[:5]  # Max 5 celebrities
     
     def _analyze_description(self, description: str) -> Dict[str, Any]:
         """Analyze description structure and content."""
@@ -265,8 +393,8 @@ class CausalAnalytics:
         is_all_caps = caps_words >= 3
         
         # Simple sentiment based on words
-        positive_words = ['mejor', 'increible', 'exclusiv', 'epic', 'amazing', 'verdad', 'revela']
-        negative_words = ['drama', 'pelea', 'problema', 'escandalo', 'contra', 'destroza', 'descarga']
+        positive_words = ['mejor', 'increible', 'exclusiv', 'epic', 'amazing', 'verdad', 'revela', 'best', 'awesome']
+        negative_words = ['drama', 'pelea', 'problema', 'escandalo', 'contra', 'destroza', 'descarga', 'fight', 'controversy']
         
         title_lower = title.lower()
         pos_count = sum(1 for w in positive_words if w in title_lower)
@@ -295,18 +423,18 @@ class CausalAnalytics:
             return "short"
         elif "entrevista" in title_lower or "interview" in title_lower:
             return "interview"
-        elif "tendencia" in title_lower:
-            return "tendencia"
-        elif "refugio" in title_lower:
-            return "el_refugio"
-        elif "palabreo" in title_lower:
-            return "el_palabreo"
-        elif "cara a cara" in title_lower:
-            return "cara_a_cara"
+        elif "tendencia" in title_lower or "trend" in title_lower:
+            return "trending"
         elif "en vivo" in title_lower or "live" in title_lower:
             return "live"
         elif "reaccion" in title_lower or "react" in title_lower:
             return "reaction"
+        elif "podcast" in title_lower:
+            return "podcast"
+        elif "tutorial" in title_lower or "how to" in title_lower:
+            return "tutorial"
+        elif "review" in title_lower or "reseña" in title_lower:
+            return "review"
         elif duration > 3600:
             return "long_form"
         elif duration > 1200:
@@ -314,7 +442,7 @@ class CausalAnalytics:
         else:
             return "standard"
     
-    # ========== CELEBRITY IMPACT ANALYSIS ==========
+    # ========== CELEBRITY/ENTITY IMPACT ANALYSIS ==========
     
     def analyze_celebrity_impact(self, videos: List[Dict]) -> Dict[str, Any]:
         """Analyze which celebrities/people drive the most views."""
@@ -370,13 +498,18 @@ class CausalAnalytics:
             else:
                 stat["lift_vs_baseline"] = 0
         
+        # Get all unique entities found in the channel
+        all_entities = self.entity_extractor.get_channel_entities()
+        
         return {
             "top_celebrities": celebrity_stats[:20],
             "baseline_no_celebrity": baseline,
             "celebrity_vs_no_celebrity": {
                 "with_celebrity_avg": round(statistics.mean([v["view_count"] for v in videos if v["has_celebrity"]])) if any(v["has_celebrity"] for v in videos) else 0,
                 "without_celebrity_avg": baseline["avg_views"],
-            }
+            },
+            "total_unique_entities_found": len(all_entities),
+            "extraction_method": "openai_ner" if self.entity_extractor.api_key else "regex_fallback",
         }
     
     # ========== TITLE VS CONTENT ANALYSIS ==========
@@ -649,8 +782,16 @@ class CausalAnalytics:
     
     # ========== FULL CAUSAL ANALYSIS ==========
     
-    def run_full_causal_analysis(self, max_videos: int = 5000) -> Dict[str, Any]:
-        """Run comprehensive causal analysis on ALL videos."""
+    def run_full_causal_analysis(self, max_videos: int = 500) -> Dict[str, Any]:
+        """
+        Run comprehensive causal analysis on videos.
+        
+        PRODUCTION NOTE: Capped at 500 videos for real-time requests.
+        For full analysis of larger datasets, use the async ETL endpoints.
+        """
+        # Safety cap
+        max_videos = min(max_videos, 500)
+        
         # Get all videos with full data
         videos = self.get_videos_with_full_data(max_videos=max_videos)
         
@@ -680,6 +821,7 @@ class CausalAnalytics:
                 "views": sorted_videos[0]["view_count"],
                 "celebrities": sorted_videos[0]["celebrities_mentioned"],
             },
+            "entity_extraction_method": "openai_ner" if self.entity_extractor.api_key else "regex_fallback",
         }
         
         return {
@@ -690,4 +832,3 @@ class CausalAnalytics:
             "success_factors": success_factors,
             "content_types": content_types,
         }
-

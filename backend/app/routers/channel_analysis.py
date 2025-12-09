@@ -1,8 +1,12 @@
 """Channel Analysis API - Data-driven insights from your video history."""
 
 from fastapi import APIRouter, HTTPException
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from pydantic import BaseModel
+import uuid
+import asyncio
+from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor
 
 from ..auth import get_authenticated_service
 from ..tools.channel_analyzer import ChannelAnalyzer
@@ -10,6 +14,13 @@ from ..tools.deep_analytics import DeepAnalytics
 from ..tools.causal_analytics import CausalAnalytics
 from ..tools.advanced_causal import AdvancedCausalAnalytics
 from ..tools.content_optimizer import ContentOptimizer
+
+# In-memory storage for analysis jobs (in production, use Redis/DB)
+# This is a simple implementation - the clips module shows how to use SQLite for persistence
+analysis_jobs: Dict[str, Dict[str, Any]] = {}
+
+# Thread pool for running blocking analysis in background
+_executor = ThreadPoolExecutor(max_workers=2)
 
 
 class GenerateTitleRequest(BaseModel):
@@ -32,6 +43,135 @@ class ExtractMetaTagsRequest(BaseModel):
     title: str
 
 router = APIRouter(prefix="/api/analysis", tags=["analysis"])
+
+
+# ========== ASYNC ANALYSIS ENDPOINTS (POLLING SUPPORT) ==========
+
+def _run_deep_analysis_sync(job_id: str, max_videos: int):
+    """
+    Run deep analysis synchronously in a background thread.
+    Updates the job status as it progresses.
+    """
+    try:
+        analysis_jobs[job_id]["status"] = "processing"
+        analysis_jobs[job_id]["progress"] = 10
+        analysis_jobs[job_id]["message"] = "Authenticating with YouTube..."
+        
+        youtube = get_authenticated_service("youtube", "v3")
+        deep = DeepAnalytics(youtube)
+        
+        analysis_jobs[job_id]["progress"] = 20
+        analysis_jobs[job_id]["message"] = "Fetching video data..."
+        
+        # Run the analysis
+        analysis = deep.run_full_analysis(max_videos=max_videos)
+        
+        analysis_jobs[job_id]["progress"] = 90
+        analysis_jobs[job_id]["message"] = "Finalizing results..."
+        
+        if "error" in analysis:
+            analysis_jobs[job_id]["status"] = "failed"
+            analysis_jobs[job_id]["error"] = analysis["error"]
+            analysis_jobs[job_id]["message"] = f"Analysis failed: {analysis['error']}"
+        else:
+            analysis_jobs[job_id]["status"] = "completed"
+            analysis_jobs[job_id]["progress"] = 100
+            analysis_jobs[job_id]["result"] = analysis
+            analysis_jobs[job_id]["message"] = "Analysis complete!"
+        
+        analysis_jobs[job_id]["completed_at"] = datetime.utcnow().isoformat()
+        
+    except Exception as e:
+        analysis_jobs[job_id]["status"] = "failed"
+        analysis_jobs[job_id]["error"] = str(e)
+        analysis_jobs[job_id]["message"] = f"Analysis failed: {str(e)}"
+
+
+@router.post("/deep/start")
+async def start_deep_analysis(max_videos: int = 500):
+    """
+    Start an async deep analysis job.
+    
+    Returns a job_id that can be used to poll for status.
+    This endpoint returns immediately while analysis runs in background.
+    
+    Args:
+        max_videos: Maximum videos to analyze (default 500, capped for performance)
+    
+    Returns:
+        job_id for polling status
+    """
+    # Cap max_videos for safety
+    max_videos = min(max_videos, 500)
+    
+    # Create job
+    job_id = str(uuid.uuid4())[:12]
+    analysis_jobs[job_id] = {
+        "job_id": job_id,
+        "status": "queued",
+        "progress": 0,
+        "message": "Analysis job queued...",
+        "max_videos": max_videos,
+        "created_at": datetime.utcnow().isoformat(),
+        "result": None,
+        "error": None,
+    }
+    
+    # Start analysis in background thread
+    loop = asyncio.get_event_loop()
+    loop.run_in_executor(_executor, _run_deep_analysis_sync, job_id, max_videos)
+    
+    return {
+        "success": True,
+        "job_id": job_id,
+        "message": "Deep analysis started. Poll /api/analysis/deep/status/{job_id} for updates.",
+    }
+
+
+@router.get("/deep/status/{job_id}")
+async def get_deep_analysis_status(job_id: str):
+    """
+    Get the status of an async deep analysis job.
+    
+    Poll this endpoint every 5 seconds until status is "completed" or "failed".
+    
+    Returns:
+        Current job status, progress, and result (if completed)
+    """
+    if job_id not in analysis_jobs:
+        raise HTTPException(status_code=404, detail="Analysis job not found")
+    
+    job = analysis_jobs[job_id]
+    
+    response = {
+        "job_id": job_id,
+        "status": job["status"],
+        "progress": job["progress"],
+        "message": job["message"],
+    }
+    
+    if job["status"] == "completed" and job["result"]:
+        response["result"] = job["result"]
+    
+    if job["status"] == "failed" and job["error"]:
+        response["error"] = job["error"]
+    
+    return response
+
+
+@router.delete("/deep/job/{job_id}")
+async def cancel_deep_analysis(job_id: str):
+    """
+    Cancel or clean up an analysis job.
+    
+    Note: Cannot cancel in-progress analysis, but removes the job record.
+    """
+    if job_id not in analysis_jobs:
+        raise HTTPException(status_code=404, detail="Analysis job not found")
+    
+    del analysis_jobs[job_id]
+    
+    return {"success": True, "message": "Job record removed"}
 
 
 @router.get("/patterns")

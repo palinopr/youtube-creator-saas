@@ -8,6 +8,8 @@ from .routers.seo import router as seo_router
 from .routers.channel_analysis import router as analysis_router
 from .routers.clips import router as clips_router
 from .config import get_settings
+from .workers.manager import start_workers, stop_workers
+from .db.models import init_db
 
 settings = get_settings()
 
@@ -24,8 +26,17 @@ async def lifespan(app: FastAPI):
     if not settings.openai_api_key:
         print("⚠️  Warning: OPENAI_API_KEY not set. AI features will not work.")
     
+    # Initialize database
+    init_db()
+    
+    # Start background workers for async tasks
+    start_workers()
+    print("🔧 Background workers started")
+    
     yield
     
+    # Shutdown workers
+    stop_workers()
     print("👋 YouTube Creator SaaS API shutting down...")
 
 
@@ -88,10 +99,12 @@ async def root():
                 "patterns": "/api/analysis/patterns - Data-driven SEO patterns from YOUR videos",
                 "top_videos": "/api/analysis/top-videos - Your best performing videos",
                 "compare": "/api/analysis/compare/{video_id} - Compare video to your top performers",
+                "deep": "/api/analysis/deep - ASYNC deep analysis (submit job, poll for results)",
+                "deep_status": "/api/analysis/deep/status/{job_id} - Check deep analysis job status",
             },
             "clips": {
                 "generate": "/api/clips/generate - Generate viral short clip suggestions",
-                "render": "/api/clips/render - Render clip to MP4 with captions",
+                "render": "/api/clips/render - Render clip to MP4 with captions (async)",
                 "status": "/api/clips/{job_id}/status - Check render progress",
                 "download": "/api/clips/{job_id}/download - Download rendered clip",
             }
@@ -103,4 +116,3 @@ async def root():
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy"}
-

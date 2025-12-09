@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -19,9 +19,13 @@ import {
   RefreshCw,
   Play,
   Hash,
+  Loader2,
 } from "lucide-react";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+// Polling interval in milliseconds
+const POLL_INTERVAL = 5000;
 
 interface DeepAnalysis {
   summary: {
@@ -68,28 +72,144 @@ interface DeepAnalysis {
   };
 }
 
+interface JobStatus {
+  status: "pending" | "queued" | "processing" | "completed" | "failed";
+  progress: number;
+  message: string;
+  result?: DeepAnalysis;
+  error?: string;
+}
+
 export default function DeepAnalysisPage() {
   const [analysis, setAnalysis] = useState<DeepAnalysis | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [jobId, setJobId] = useState<string | null>(null);
+  const [jobStatus, setJobStatus] = useState<JobStatus | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"overview" | "timing" | "titles" | "engagement" | "content" | "growth">("overview");
+  
+  const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isPollingRef = useRef(false);
 
+  // Cleanup polling on unmount
   useEffect(() => {
-    fetchDeepAnalysis();
+    return () => {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current);
+      }
+    };
   }, []);
 
-  const fetchDeepAnalysis = async () => {
-    setLoading(true);
-    setError(null);
+  // Poll for job status
+  const pollJobStatus = useCallback(async (currentJobId: string) => {
+    if (!currentJobId || isPollingRef.current) return;
+    
+    isPollingRef.current = true;
     
     try {
-      const response = await fetch(`${API_URL}/api/analysis/deep?max_videos=5000`, {
+      const response = await fetch(`${API_URL}/api/analysis/deep/status/${currentJobId}`, {
+        credentials: "include",
+      });
+      
+      if (!response.ok) {
+        if (response.status === 404) {
+          // Job not found, stop polling
+          if (pollIntervalRef.current) {
+            clearInterval(pollIntervalRef.current);
+            pollIntervalRef.current = null;
+          }
+          setError("Analysis job not found. Please try again.");
+          setLoading(false);
+          return;
+        }
+        throw new Error("Failed to fetch job status");
+      }
+      
+      const status: JobStatus = await response.json();
+      setJobStatus(status);
+      
+      if (status.status === "completed" && status.result) {
+        // Job completed successfully
+        setAnalysis(status.result);
+        setLoading(false);
+        setJobId(null);
+        
+        if (pollIntervalRef.current) {
+          clearInterval(pollIntervalRef.current);
+          pollIntervalRef.current = null;
+        }
+      } else if (status.status === "failed") {
+        // Job failed
+        setError(status.error || "Analysis failed. Please try again.");
+        setLoading(false);
+        setJobId(null);
+        
+        if (pollIntervalRef.current) {
+          clearInterval(pollIntervalRef.current);
+          pollIntervalRef.current = null;
+        }
+      }
+      // Otherwise keep polling
+    } catch (err) {
+      console.error("Polling error:", err);
+      // Don't stop polling on transient errors, just log them
+    } finally {
+      isPollingRef.current = false;
+    }
+  }, []);
+
+  // Start the analysis job
+  const startDeepAnalysis = async () => {
+    setLoading(true);
+    setError(null);
+    setJobStatus(null);
+    setAnalysis(null);
+    
+    // Stop any existing polling
+    if (pollIntervalRef.current) {
+      clearInterval(pollIntervalRef.current);
+      pollIntervalRef.current = null;
+    }
+    
+    try {
+      // First, try the async endpoint to start a background job
+      const startResponse = await fetch(`${API_URL}/api/analysis/deep/start?max_videos=500`, {
+        method: "POST",
+        credentials: "include",
+      });
+      
+      if (startResponse.ok) {
+        const startData = await startResponse.json();
+        
+        if (startData.job_id) {
+          // Async job started, begin polling
+          setJobId(startData.job_id);
+          setJobStatus({
+            status: "queued",
+            progress: 0,
+            message: "Analysis job queued...",
+          });
+          
+          // Start polling for status
+          pollIntervalRef.current = setInterval(() => {
+            pollJobStatus(startData.job_id);
+          }, POLL_INTERVAL);
+          
+          // Also poll immediately
+          pollJobStatus(startData.job_id);
+          return;
+        }
+      }
+      
+      // Fallback to synchronous endpoint if async not available
+      const response = await fetch(`${API_URL}/api/analysis/deep?max_videos=500`, {
         credentials: "include",
       });
       
       if (!response.ok) {
         if (response.status === 401) {
           setError("Please authenticate first");
+          setLoading(false);
           return;
         }
         throw new Error("Failed to fetch analysis");
@@ -97,12 +217,17 @@ export default function DeepAnalysisPage() {
       
       const data = await response.json();
       setAnalysis(data);
+      setLoading(false);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch analysis");
-    } finally {
+      setError(err instanceof Error ? err.message : "Failed to start analysis");
       setLoading(false);
     }
   };
+
+  // Auto-start on mount
+  useEffect(() => {
+    startDeepAnalysis();
+  }, []);
 
   const formatNumber = (num: number) => {
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
@@ -110,14 +235,87 @@ export default function DeepAnalysisPage() {
     return num.toLocaleString();
   };
 
+  // Loading state with progress
   if (loading) {
+    const progressPercent = jobStatus?.progress || 0;
+    const statusMessage = jobStatus?.message || "Initializing analysis...";
+    const statusPhase = jobStatus?.status || "pending";
+    
     return (
       <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-          <p className="text-xl text-gray-300 mb-2">Running Deep Analysis...</p>
-          <p className="text-sm text-gray-500">Analyzing ALL your videos (up to 5,000)</p>
-          <p className="text-xs text-gray-600 mt-2">This may take 1-2 minutes</p>
+        <div className="text-center max-w-md mx-auto px-6">
+          {/* Animated spinner */}
+          <div className="relative w-24 h-24 mx-auto mb-6">
+            <div className="absolute inset-0 border-4 border-purple-500/20 rounded-full"></div>
+            <div 
+              className="absolute inset-0 border-4 border-transparent border-t-purple-500 rounded-full animate-spin"
+              style={{ animationDuration: '1s' }}
+            ></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Zap className="w-8 h-8 text-purple-400" />
+            </div>
+          </div>
+          
+          <h2 className="text-xl font-bold text-white mb-2">Running Deep Analysis</h2>
+          <p className="text-gray-400 mb-6">{statusMessage}</p>
+          
+          {/* Progress bar */}
+          <div className="w-full bg-white/10 rounded-full h-3 mb-4 overflow-hidden">
+            <div 
+              className="h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${Math.max(progressPercent, 5)}%` }}
+            />
+          </div>
+          
+          <div className="flex justify-between text-sm text-gray-500 mb-6">
+            <span>{progressPercent}% complete</span>
+            <span className="capitalize">{statusPhase.replace(/_/g, ' ')}</span>
+          </div>
+          
+          {/* Status phases */}
+          <div className="space-y-2 text-left bg-white/5 rounded-xl p-4">
+            {[
+              { id: "queued", label: "Job queued", icon: Clock },
+              { id: "fetching", label: "Fetching video data", icon: Eye },
+              { id: "processing", label: "Analyzing patterns", icon: BarChart3 },
+              { id: "completed", label: "Generating insights", icon: Zap },
+            ].map((phase, i) => {
+              const isActive = statusPhase === phase.id;
+              const isPast = 
+                (statusPhase === "fetching" && i === 0) ||
+                (statusPhase === "processing" && i <= 1) ||
+                (statusPhase === "completed" && i <= 2);
+              
+              return (
+                <div 
+                  key={phase.id}
+                  className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
+                    isActive ? "bg-purple-500/20 text-purple-300" :
+                    isPast ? "text-green-400" : "text-gray-600"
+                  }`}
+                >
+                  {isPast ? (
+                    <CheckCircle className="w-4 h-4" />
+                  ) : isActive ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <phase.icon className="w-4 h-4" />
+                  )}
+                  <span className="text-sm">{phase.label}</span>
+                </div>
+              );
+            })}
+          </div>
+          
+          <p className="text-xs text-gray-600 mt-6">
+            Analyzing up to 500 videos • Polling every {POLL_INTERVAL / 1000}s
+          </p>
+          
+          {jobId && (
+            <p className="text-xs text-gray-700 mt-2 font-mono">
+              Job ID: {jobId}
+            </p>
+          )}
         </div>
       </div>
     );
@@ -126,15 +324,48 @@ export default function DeepAnalysisPage() {
   if (error) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-400 mb-4">{error}</p>
-          <Link href="/" className="text-purple-400 hover:underline">Go back and authenticate</Link>
+        <div className="text-center max-w-md mx-auto px-6">
+          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-8 h-8 text-red-400" />
+          </div>
+          <h2 className="text-xl font-bold mb-2">Analysis Failed</h2>
+          <p className="text-red-400 mb-6">{error}</p>
+          <div className="space-y-3">
+            <button 
+              onClick={startDeepAnalysis}
+              className="w-full px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg font-medium transition-colors"
+            >
+              Try Again
+            </button>
+            <Link 
+              href="/" 
+              className="block w-full px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-medium transition-colors text-center"
+            >
+              Go Back & Authenticate
+            </Link>
+          </div>
         </div>
       </div>
     );
   }
 
   const data = analysis;
+
+  if (!data) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-gray-400 mb-4">No analysis data available</p>
+          <button 
+            onClick={startDeepAnalysis}
+            className="px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg font-medium transition-colors"
+          >
+            Run Analysis
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
@@ -155,8 +386,9 @@ export default function DeepAnalysisPage() {
               </p>
             </div>
             <button
-              onClick={fetchDeepAnalysis}
-              className="ml-auto p-2 hover:bg-white/10 rounded-lg transition-colors"
+              onClick={startDeepAnalysis}
+              disabled={loading}
+              className="ml-auto p-2 hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50"
             >
               <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
             </button>
@@ -661,4 +893,3 @@ export default function DeepAnalysisPage() {
     </div>
   );
 }
-

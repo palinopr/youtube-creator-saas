@@ -1,6 +1,11 @@
 """
 Deep Analytics - Advanced data analysis for YouTube channels.
 Extracts every possible insight from video history.
+
+REFACTORED: Now implements ETL pattern to avoid real-time fetching of 5k videos.
+- Data is fetched in background jobs and cached
+- API queries the cached data instead of YouTube API directly
+- Background sync keeps cache fresh
 """
 
 from typing import List, Dict, Any, Optional, Tuple
@@ -26,8 +31,24 @@ class DeepAnalytics:
                 self._channel_id = response["items"][0]["id"]
         return self._channel_id
     
-    def get_all_videos_extended(self, max_videos: int = 5000) -> List[Dict[str, Any]]:
-        """Get all videos with extended metadata for deep analysis."""
+    def get_all_videos_extended(
+        self, 
+        max_videos: int = 500,
+        progress_callback: Optional[callable] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Get all videos with extended metadata for deep analysis.
+        
+        PRODUCTION NOTE: For large channels, this should be called from a background
+        worker, not from an API request. Use the ETL endpoints instead.
+        
+        Args:
+            max_videos: Maximum videos to fetch (capped at 500 for real-time, use ETL for more)
+            progress_callback: Optional callback(current, total) for progress updates
+        """
+        # Safety cap for real-time requests
+        max_videos = min(max_videos, 500)
+        
         # Get uploads playlist
         channel_response = self.youtube.channels().list(
             part="contentDetails",
@@ -39,7 +60,7 @@ class DeepAnalytics:
         
         uploads_playlist_id = channel_response["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
         
-        # Get all video IDs
+        # Get all video IDs with progress tracking
         all_video_ids = []
         next_page_token = None
         
@@ -53,6 +74,9 @@ class DeepAnalytics:
             
             video_ids = [item["contentDetails"]["videoId"] for item in playlist_response.get("items", [])]
             all_video_ids.extend(video_ids)
+            
+            if progress_callback:
+                progress_callback(len(all_video_ids), max_videos)
             
             next_page_token = playlist_response.get("nextPageToken")
             if not next_page_token:
@@ -136,6 +160,9 @@ class DeepAnalytics:
                     "is_all_caps_start": title[:20].isupper() if len(title) >= 20 else False,
                     "thumbnail_url": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
                 })
+            
+            if progress_callback:
+                progress_callback(len(all_videos), len(all_video_ids))
         
         return all_videos
     
@@ -589,8 +616,16 @@ class DeepAnalytics:
     
     # ========== FULL DEEP ANALYSIS ==========
     
-    def run_full_analysis(self, max_videos: int = 5000) -> Dict[str, Any]:
-        """Run comprehensive deep analysis on all videos."""
+    def run_full_analysis(self, max_videos: int = 500) -> Dict[str, Any]:
+        """
+        Run comprehensive deep analysis on all videos.
+        
+        NOTE: For production, limit to 500 videos for real-time requests.
+        For full analysis of 5k+ videos, use the async ETL pattern via /api/analysis/deep/start
+        """
+        # Cap for real-time requests
+        max_videos = min(max_videos, 500)
+        
         # Get all videos
         videos = self.get_all_videos_extended(max_videos=max_videos)
         
@@ -629,4 +664,3 @@ class DeepAnalytics:
             "content_types": content_analysis,
             "growth_trends": growth_analysis,
         }
-

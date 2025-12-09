@@ -1,19 +1,24 @@
 """
 Clips Router - API endpoints for AI viral short clip generation.
 Implements the Franken-bite method for creating engaging YouTube Shorts.
+
+REFACTORED: Now uses SQLite for persistent job storage instead of in-memory dict.
+Video rendering is handled by background workers to avoid blocking the API.
 """
 
 import os
 import uuid
-import asyncio
 from typing import Optional, List, Dict, Any
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from ..auth import get_authenticated_service
-from ..tools.clips_generator import FrankenBiteDetector, ClipRenderer, ClipSuggestion
+from ..tools.clips_generator import FrankenBiteDetector, ClipRenderer
 from ..tools.transcript_analyzer import TranscriptAnalyzer
+from ..db.models import JobStatus, JobType
+from ..db.repository import JobRepository
+from ..workers.manager import get_worker_manager
 
 
 router = APIRouter(prefix="/api/clips", tags=["clips"])
@@ -23,9 +28,6 @@ router = APIRouter(prefix="/api/clips", tags=["clips"])
 async def test_endpoint():
     """Quick test endpoint."""
     return {"status": "ok", "message": "Clips API is working!"}
-
-# In-memory storage for render jobs (in production, use Redis/DB)
-render_jobs: Dict[str, Dict[str, Any]] = {}
 
 
 class GenerateClipsRequest(BaseModel):
@@ -177,57 +179,13 @@ async def generate_clips(request: GenerateClipsRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-async def _render_clip_task(
-    job_id: str,
-    video_id: str,
-    clip_id: str,
-    segments: List[tuple]
-):
-    """Background task to render a clip."""
-    try:
-        print(f"[RENDER] Starting render task for job {job_id}")
-        render_jobs[job_id]["status"] = "rendering"
-        render_jobs[job_id]["progress"] = 10
-        
-        renderer = ClipRenderer()
-        
-        # Update progress
-        render_jobs[job_id]["progress"] = 30
-        render_jobs[job_id]["message"] = "Downloading video..."
-        print(f"[RENDER] Downloading video {video_id}...")
-        
-        # Render the clip
-        output_path = await renderer.render_clip(
-            video_id=video_id,
-            clip_id=clip_id,
-            segments=segments
-        )
-        
-        print(f"[RENDER] Render returned: {output_path}")
-        
-        if output_path and os.path.exists(output_path):
-            render_jobs[job_id]["status"] = "completed"
-            render_jobs[job_id]["progress"] = 100
-            render_jobs[job_id]["output_path"] = output_path
-            render_jobs[job_id]["message"] = "Render complete!"
-            print(f"[RENDER] ✓ Job {job_id} completed successfully")
-        else:
-            render_jobs[job_id]["status"] = "failed"
-            render_jobs[job_id]["message"] = "Render failed - check FFmpeg installation"
-            print(f"[RENDER] ✗ Job {job_id} failed - no output")
-            
-    except Exception as e:
-        print(f"[RENDER] ✗ Job {job_id} error: {e}")
-        render_jobs[job_id]["status"] = "failed"
-        render_jobs[job_id]["message"] = str(e)
-
-
 @router.post("/render")
-async def render_clip(request: RenderClipRequest, background_tasks: BackgroundTasks):
+async def render_clip(request: RenderClipRequest):
     """
     Start rendering a clip to MP4 with burned-in captions.
     
     This is an async operation - returns a job ID to poll for status.
+    The actual rendering happens in a background worker to avoid blocking the API.
     
     Args:
         video_id: YouTube video ID
@@ -257,32 +215,22 @@ async def render_clip(request: RenderClipRequest, background_tasks: BackgroundTa
         if total_duration > 180:  # 3 minute limit
             raise HTTPException(status_code=400, detail="Total clip duration exceeds 3 minutes")
         
-        # Create job
-        job_id = str(uuid.uuid4())[:12]
-        render_jobs[job_id] = {
-            "job_id": job_id,
-            "video_id": request.video_id,
-            "clip_id": request.clip_id,
-            "status": "queued",
-            "progress": 0,
-            "message": "Queued for rendering...",
-            "output_path": None,
-            "created_at": asyncio.get_event_loop().time()
-        }
-        
-        # Start background render
-        background_tasks.add_task(
-            _render_clip_task,
-            job_id,
-            request.video_id,
-            request.clip_id,
-            segments
+        # Submit job to worker queue (non-blocking)
+        worker_manager = get_worker_manager()
+        job_data = worker_manager.submit_job(
+            job_type=JobType.RENDER_CLIP,
+            video_id=request.video_id,
+            clip_id=request.clip_id,
+            input_data={
+                "segments": segments,
+                "title": request.title,
+            }
         )
         
         return {
             "success": True,
-            "job_id": job_id,
-            "message": "Render job started"
+            "job_id": job_data["job_id"],
+            "message": "Render job queued - check status for progress"
         }
         
     except HTTPException:
@@ -302,10 +250,10 @@ async def get_render_status(job_id: str):
     Returns:
         Current status, progress percentage, and message
     """
-    if job_id not in render_jobs:
-        raise HTTPException(status_code=404, detail="Render job not found")
+    job = JobRepository.get_job(job_id)
     
-    job = render_jobs[job_id]
+    if not job:
+        raise HTTPException(status_code=404, detail="Render job not found")
     
     return {
         "job_id": job_id,
@@ -314,7 +262,8 @@ async def get_render_status(job_id: str):
         "message": job["message"],
         "video_id": job["video_id"],
         "clip_id": job["clip_id"],
-        "ready_for_download": job["status"] == "completed" and job.get("output_path")
+        "ready_for_download": job["status"] == "completed" and job.get("output_path"),
+        "error": job.get("error_message")
     }
 
 
@@ -329,10 +278,10 @@ async def preview_clip(job_id: str):
     Returns:
         Video stream for browser playback
     """
-    if job_id not in render_jobs:
-        raise HTTPException(status_code=404, detail="Render job not found")
+    job = JobRepository.get_job(job_id)
     
-    job = render_jobs[job_id]
+    if not job:
+        raise HTTPException(status_code=404, detail="Render job not found")
     
     if job["status"] != "completed":
         raise HTTPException(status_code=400, detail=f"Render not complete. Status: {job['status']}")
@@ -359,10 +308,10 @@ async def download_clip(job_id: str):
     Returns:
         MP4 file download
     """
-    if job_id not in render_jobs:
-        raise HTTPException(status_code=404, detail="Render job not found")
+    job = JobRepository.get_job(job_id)
     
-    job = render_jobs[job_id]
+    if not job:
+        raise HTTPException(status_code=404, detail="Render job not found")
     
     if job["status"] != "completed":
         raise HTTPException(status_code=400, detail=f"Render not complete. Status: {job['status']}")
@@ -382,25 +331,28 @@ async def download_clip(job_id: str):
 
 
 @router.get("/jobs")
-async def list_render_jobs():
+async def list_render_jobs(limit: int = 50):
     """
     List all render jobs (for debugging/admin).
     
     Returns:
         List of all render jobs and their statuses
     """
+    jobs = JobRepository.list_jobs(job_type=JobType.RENDER_CLIP, limit=limit)
+    
     return {
         "jobs": [
             {
-                "job_id": job_id,
+                "job_id": job["job_id"],
                 "video_id": job["video_id"],
                 "clip_id": job["clip_id"],
                 "status": job["status"],
-                "progress": job["progress"]
+                "progress": job["progress"],
+                "created_at": job["created_at"],
             }
-            for job_id, job in render_jobs.items()
+            for job in jobs
         ],
-        "total": len(render_jobs)
+        "total": len(jobs)
     }
 
 
@@ -412,10 +364,10 @@ async def delete_render_job(job_id: str):
     Args:
         job_id: The job ID to delete
     """
-    if job_id not in render_jobs:
-        raise HTTPException(status_code=404, detail="Render job not found")
+    job = JobRepository.get_job(job_id)
     
-    job = render_jobs[job_id]
+    if not job:
+        raise HTTPException(status_code=404, detail="Render job not found")
     
     # Delete output file if exists
     output_path = job.get("output_path")
@@ -425,8 +377,8 @@ async def delete_render_job(job_id: str):
         except:
             pass
     
-    # Remove from jobs dict
-    del render_jobs[job_id]
+    # Remove from database
+    JobRepository.delete_job(job_id)
     
     return {"success": True, "message": "Job deleted"}
 
@@ -439,29 +391,14 @@ async def cleanup_old_jobs(max_age_hours: int = 24):
     Args:
         max_age_hours: Delete jobs older than this (default 24)
     """
+    # Clean up old jobs from database
+    jobs_deleted = JobRepository.cleanup_old_jobs(max_age_hours=max_age_hours)
+    
+    # Clean up old render files
     renderer = ClipRenderer()
     renderer.cleanup_old_renders(max_age_hours)
     
-    # Clean up old jobs from memory
-    current_time = asyncio.get_event_loop().time()
-    max_age_seconds = max_age_hours * 3600
-    
-    jobs_to_delete = [
-        job_id for job_id, job in render_jobs.items()
-        if current_time - job.get("created_at", 0) > max_age_seconds
-    ]
-    
-    for job_id in jobs_to_delete:
-        output_path = render_jobs[job_id].get("output_path")
-        if output_path and os.path.exists(output_path):
-            try:
-                os.remove(output_path)
-            except:
-                pass
-        del render_jobs[job_id]
-    
     return {
         "success": True,
-        "jobs_cleaned": len(jobs_to_delete)
+        "jobs_cleaned": jobs_deleted
     }
-
