@@ -161,7 +161,7 @@ class VideoCache(Base):
     content_type = Column(String(50), nullable=True)
     
     # Extended metadata (JSON for flexibility)
-    metadata = Column(JSON, default=dict)  # tags, celebrities, etc.
+    video_metadata = Column(JSON, default=dict)  # tags, celebrities, etc.
     
     # Timestamps
     created_at = Column(DateTime, default=datetime.utcnow)
