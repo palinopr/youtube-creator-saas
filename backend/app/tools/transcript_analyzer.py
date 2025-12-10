@@ -58,71 +58,74 @@ class TranscriptAnalyzer:
     
     async def get_transcript(self, video_id: str) -> Optional[Dict[str, Any]]:
         """
-        Fetch transcript using multiple methods:
-        1. youtube-transcript-api (works on production servers, no cookies needed)
-        2. YouTube's Innertube API with browser impersonation (fallback)
+        Fetch transcript using the authenticated YouTube API (user's OAuth token).
+        This works because the user owns the videos.
         """
-        # Method 1: Try youtube-transcript-api first (production-friendly)
+        # Method 1: Use YouTube Captions API (authenticated - works for owned videos)
         try:
-            from youtube_transcript_api import YouTubeTranscriptApi
-            from youtube_transcript_api._errors import (
-                TranscriptsDisabled, 
-                NoTranscriptFound,
-                VideoUnavailable
-            )
+            print(f"[TRANSCRIPT] Trying YouTube Captions API for {video_id}")
             
-            try:
-                # Try to get Spanish transcript first, then any available
-                transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-                
-                # Priority: Spanish manual > Spanish auto > English > any
-                transcript = None
-                for lang in ['es', 'en']:
-                    try:
-                        transcript = transcript_list.find_transcript([lang])
+            # List available captions for this video
+            captions_response = self.youtube.captions().list(
+                part="snippet",
+                videoId=video_id
+            ).execute()
+            
+            captions = captions_response.get("items", [])
+            
+            if captions:
+                # Find best caption track (prefer Spanish, then English, then any)
+                selected_caption = None
+                for lang_pref in ['es', 'en']:
+                    for caption in captions:
+                        if caption['snippet']['language'] == lang_pref:
+                            selected_caption = caption
+                            break
+                    if selected_caption:
                         break
-                    except:
-                        continue
                 
-                if not transcript:
-                    # Get any available transcript
-                    transcript = transcript_list.find_generated_transcript(['es', 'en'])
+                if not selected_caption:
+                    selected_caption = captions[0]  # Use first available
                 
-                if transcript:
-                    transcript_data = transcript.fetch()
-                    full_text = ' '.join([entry['text'] for entry in transcript_data])
-                    full_text = re.sub(r'\s+', ' ', full_text).strip()
-                    
+                caption_id = selected_caption['id']
+                language = selected_caption['snippet']['language']
+                is_auto = selected_caption['snippet'].get('trackKind') == 'asr'
+                
+                print(f"[TRANSCRIPT] Found caption: {language} (auto={is_auto})")
+                
+                # Download the caption track
+                caption_response = self.youtube.captions().download(
+                    id=caption_id,
+                    tfmt='srt'  # Get as SRT format
+                ).execute()
+                
+                # Parse SRT to plain text
+                full_text = self._parse_srt_to_text(caption_response.decode('utf-8'))
+                
+                if full_text:
                     return {
                         "video_id": video_id,
                         "status": "success",
-                        "language": transcript.language_code,
-                        "is_generated": transcript.is_generated,
+                        "language": language,
+                        "is_generated": is_auto,
                         "full_text": full_text,
                         "word_count": len(full_text.split()),
-                        "source": "youtube_transcript_api"
+                        "source": "youtube_captions_api"
                     }
-                    
-            except TranscriptsDisabled:
-                print(f"[TRANSCRIPT] Transcripts disabled for video {video_id}")
-            except NoTranscriptFound:
-                print(f"[TRANSCRIPT] No transcript found for video {video_id}")
-            except VideoUnavailable:
-                print(f"[TRANSCRIPT] Video unavailable: {video_id}")
-            except Exception as e:
-                print(f"[TRANSCRIPT] youtube-transcript-api error: {e}")
+            else:
+                print(f"[TRANSCRIPT] No captions available via API for {video_id}")
                 
-        except ImportError:
-            print("[TRANSCRIPT] youtube-transcript-api not installed, trying fallback...")
+        except Exception as e:
+            print(f"[TRANSCRIPT] YouTube Captions API error: {e}")
         
-        # Method 2: Fallback to Innertube API with curl_cffi
+        # Method 2: Fallback to Innertube API (for non-owned videos)
         try:
             from curl_cffi import requests as curl_requests
         except ImportError:
             return {
                 "video_id": video_id,
-                "status": "error",
-                "error": "No transcript method available. Install: pip install youtube-transcript-api",
+                "status": "no_transcript",
+                "error": "No captions available for this video",
                 "full_text": None
             }
         
@@ -268,6 +271,32 @@ class TranscriptAnalyzer:
                 "error": str(e),
                 "full_text": None
             }
+    
+    def _parse_srt_to_text(self, srt_content: str) -> Optional[str]:
+        """Parse SRT subtitle format to plain text."""
+        try:
+            lines = srt_content.strip().split('\n')
+            text_lines = []
+            
+            for line in lines:
+                line = line.strip()
+                # Skip empty lines, numbers, and timestamps
+                if not line:
+                    continue
+                if line.isdigit():
+                    continue
+                if '-->' in line:
+                    continue
+                # This is actual text
+                text_lines.append(line)
+            
+            full_text = ' '.join(text_lines)
+            # Clean up whitespace
+            full_text = re.sub(r'\s+', ' ', full_text).strip()
+            return full_text
+        except Exception as e:
+            print(f"[TRANSCRIPT] SRT parse error: {e}")
+            return None
     
     def _extract_transcript_text(self, data: Dict) -> Optional[str]:
         """Extract text from YouTube transcript API response."""
