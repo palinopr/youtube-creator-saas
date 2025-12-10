@@ -1,6 +1,70 @@
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Callable, TypeVar
 from datetime import datetime, timedelta
+from functools import wraps
+import logging
+
 from googleapiclient.discovery import Resource
+from googleapiclient.errors import HttpError
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+    retry_if_exception,
+    before_sleep_log,
+    RetryError,
+)
+
+logger = logging.getLogger(__name__)
+
+# Type variable for generic return types
+T = TypeVar('T')
+
+
+def is_retryable_error(exception: BaseException) -> bool:
+    """
+    Determine if an exception should trigger a retry.
+    
+    Retries on:
+    - HTTP 429 (Too Many Requests / Rate Limited)
+    - HTTP 5xx (Server Errors)
+    - Connection errors
+    """
+    if isinstance(exception, HttpError):
+        status_code = exception.resp.status
+        # Retry on rate limiting (429) and server errors (5xx)
+        if status_code == 429:
+            logger.warning(f"Rate limited by YouTube API (429). Will retry...")
+            return True
+        if 500 <= status_code < 600:
+            logger.warning(f"YouTube API server error ({status_code}). Will retry...")
+            return True
+    # Also retry on connection-related errors
+    if isinstance(exception, (ConnectionError, TimeoutError)):
+        logger.warning(f"Connection error: {exception}. Will retry...")
+        return True
+    return False
+
+
+def youtube_api_retry(func: Callable[..., T]) -> Callable[..., T]:
+    """
+    Decorator that adds retry logic to YouTube API calls.
+    
+    Uses exponential backoff with:
+    - Max 5 attempts
+    - Wait 1s, 2s, 4s, 8s, 16s between retries (capped at 60s)
+    - Only retries on rate limits (429) and server errors (5xx)
+    """
+    @retry(
+        retry=retry_if_exception(is_retryable_error),
+        stop=stop_after_attempt(5),
+        wait=wait_exponential(multiplier=1, min=1, max=60),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
+    @wraps(func)
+    def wrapper(*args, **kwargs) -> T:
+        return func(*args, **kwargs)
+    return wrapper
 
 
 class YouTubeTools:
@@ -15,18 +79,23 @@ class YouTubeTools:
     def channel_id(self) -> str:
         """Get the authenticated user's channel ID."""
         if not self._channel_id:
-            response = self.youtube.channels().list(
-                part="id",
-                mine=True
-            ).execute()
-            
-            if not response.get("items"):
-                raise ValueError("No channel found for authenticated user")
-            
-            self._channel_id = response["items"][0]["id"]
-        
+            self._channel_id = self._fetch_channel_id()
         return self._channel_id
     
+    @youtube_api_retry
+    def _fetch_channel_id(self) -> str:
+        """Fetch channel ID with retry logic."""
+        response = self.youtube.channels().list(
+            part="id",
+            mine=True
+        ).execute()
+        
+        if not response.get("items"):
+            raise ValueError("No channel found for authenticated user")
+        
+        return response["items"][0]["id"]
+    
+    @youtube_api_retry
     def get_channel_stats(self) -> Dict[str, Any]:
         """Get channel statistics including subscribers, views, and video count."""
         response = self.youtube.channels().list(
@@ -51,6 +120,7 @@ class YouTubeTools:
             "thumbnail_url": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
         }
     
+    @youtube_api_retry
     def get_recent_videos(self, limit: int = 10) -> List[Dict[str, Any]]:
         """Get recent videos from the channel with their statistics."""
         # First, get the uploads playlist ID
@@ -99,6 +169,7 @@ class YouTubeTools:
         
         return videos
     
+    @youtube_api_retry
     def get_video_details(self, video_id: str) -> Dict[str, Any]:
         """Get detailed information about a specific video."""
         response = self.youtube.videos().list(
@@ -130,6 +201,7 @@ class YouTubeTools:
                            snippet.get("thumbnails", {}).get("high", {})).get("url", ""),
         }
     
+    @youtube_api_retry
     def get_analytics_overview(self, days: int = 30) -> Dict[str, Any]:
         """Get analytics overview for the past N days."""
         if not self.analytics:
@@ -203,6 +275,7 @@ class YouTubeTools:
         except Exception as e:
             return {"error": str(e)}
     
+    @youtube_api_retry
     def get_top_videos(self, days: int = 30, limit: int = 10) -> List[Dict[str, Any]]:
         """Get top performing videos by views in the past N days."""
         if not self.analytics:
@@ -256,6 +329,7 @@ class YouTubeTools:
         except Exception as e:
             return []
     
+    @youtube_api_retry
     def search_videos(self, query: str, limit: int = 10) -> List[Dict[str, Any]]:
         """Search for videos on the channel."""
         response = self.youtube.search().list(
@@ -281,6 +355,7 @@ class YouTubeTools:
 
     # ==================== SEO ANALYSIS TOOLS ====================
     
+    @youtube_api_retry
     def get_video_seo_data(self, video_id: str) -> Dict[str, Any]:
         """Get comprehensive SEO data for a video."""
         response = self.youtube.videos().list(
@@ -354,6 +429,7 @@ class YouTubeTools:
                            snippet.get("thumbnails", {}).get("high", {})).get("url", ""),
         }
     
+    @youtube_api_retry
     def get_channel_keywords(self) -> List[str]:
         """Get channel-level keywords from branding settings."""
         response = self.youtube.channels().list(
@@ -376,6 +452,7 @@ class YouTubeTools:
         # Match quoted strings or single words
         return re.findall(r'"([^"]+)"|(\S+)', keywords)
     
+    @youtube_api_retry
     def search_competitor_videos(self, query: str, limit: int = 10) -> List[Dict[str, Any]]:
         """Search for competitor videos on YouTube (not limited to own channel)."""
         response = self.youtube.search().list(
@@ -416,6 +493,7 @@ class YouTubeTools:
         
         return results
     
+    @youtube_api_retry
     def get_videos_for_seo_audit(self, limit: int = 20) -> List[Dict[str, Any]]:
         """Get recent videos with SEO-relevant data for audit."""
         videos = self.get_recent_videos(limit=limit)
@@ -506,6 +584,7 @@ class YouTubeTools:
 
     # ==================== VIDEO UPDATE TOOLS ====================
     
+    @youtube_api_retry
     def update_video_metadata(
         self, 
         video_id: str, 
@@ -563,6 +642,7 @@ class YouTubeTools:
             "message": "Video metadata updated successfully!"
         }
     
+    @youtube_api_retry
     def get_video_for_editing(self, video_id: str) -> Dict[str, Any]:
         """Get video data in a format suitable for editing."""
         response = self.youtube.videos().list(

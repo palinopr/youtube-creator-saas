@@ -8,14 +8,19 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from googleapiclient.discovery import Resource
 import json
+import re
 import os
 from dotenv import load_dotenv
+import logging
 
 from ..tools.youtube_tools import YouTubeTools
 from ..config import get_settings
 
 # Load environment variables
 load_dotenv()
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 class SEOAgent:
@@ -60,7 +65,117 @@ Include the EXACT suggested title/description/tags when making recommendations."
             temperature=0,  # Deterministic: same video = same suggestions
             api_key=settings.openai_api_key
         )
-    
+
+    def _extract_json_from_response(self, content: str) -> Optional[Dict[str, Any]]:
+        """
+        Robustly extract JSON from an AI response.
+        
+        Handles multiple formats:
+        - JSON wrapped in ```json ... ``` code blocks
+        - JSON wrapped in ``` ... ``` code blocks
+        - Raw JSON object in the response
+        
+        Args:
+            content: The raw response string from the AI
+            
+        Returns:
+            Parsed JSON as a dict, or None if extraction/parsing fails
+        """
+        if not content:
+            return None
+        
+        # Pattern 1: Match ```json ... ``` code blocks (most common)
+        json_code_block_pattern = r'```json\s*([\s\S]*?)\s*```'
+        matches = re.findall(json_code_block_pattern, content, re.IGNORECASE)
+        
+        if matches:
+            for match in matches:
+                try:
+                    return json.loads(match.strip())
+                except json.JSONDecodeError:
+                    continue
+        
+        # Pattern 2: Match generic ``` ... ``` code blocks
+        generic_code_block_pattern = r'```\s*([\s\S]*?)\s*```'
+        matches = re.findall(generic_code_block_pattern, content)
+        
+        if matches:
+            for match in matches:
+                try:
+                    return json.loads(match.strip())
+                except json.JSONDecodeError:
+                    continue
+        
+        # Pattern 3: Try to find a raw JSON object { ... } in the response
+        json_object_pattern = r'\{[\s\S]*\}'
+        matches = re.findall(json_object_pattern, content)
+        
+        if matches:
+            # Try from longest match to shortest (greedy matching may capture too much)
+            for match in sorted(matches, key=len, reverse=True):
+                try:
+                    return json.loads(match)
+                except json.JSONDecodeError:
+                    continue
+        
+        # Pattern 4: Try parsing the entire content as JSON (clean response)
+        try:
+            return json.loads(content.strip())
+        except json.JSONDecodeError:
+            pass
+        
+        logger.warning("Failed to extract JSON from AI response")
+        return None
+
+    def _get_seo_analysis_fallback(
+        self, 
+        current_title: str, 
+        raw_response: str
+    ) -> Dict[str, Any]:
+        """
+        Return a valid fallback structure for SEO analysis when JSON parsing fails.
+        
+        Args:
+            current_title: The current video title to use as suggestion fallback
+            raw_response: The raw AI response to include for debugging
+            
+        Returns:
+            A valid SEO recommendations dictionary
+        """
+        return {
+            "seo_score": 50,
+            "score_explanation": "Unable to parse detailed analysis. Please review the raw analysis below.",
+            "priority_improvements": [
+                "Review the detailed analysis for recommendations",
+                "Consider re-running the analysis",
+                "Check if the video data is complete"
+            ],
+            "suggested_title": current_title,
+            "suggested_description_intro": "",
+            "suggested_tags": [],
+            "detailed_analysis": raw_response,
+            "parse_error": True
+        }
+
+    def _get_metadata_generation_fallback(self, raw_response: str) -> Dict[str, Any]:
+        """
+        Return a valid fallback structure for metadata generation when JSON parsing fails.
+        
+        Args:
+            raw_response: The raw AI response to include for debugging
+            
+        Returns:
+            A valid metadata generation dictionary
+        """
+        return {
+            "titles": [],
+            "description": "",
+            "tags": [],
+            "hashtags": [],
+            "raw_response": raw_response,
+            "parse_error": True
+        }
+
     async def analyze_video_seo(self, video_id: str) -> Dict[str, Any]:
         """Analyze a single video's SEO and provide recommendations."""
         try:
@@ -116,27 +231,16 @@ Format your response as JSON with these keys:
             
             response = await self.llm.ainvoke(messages)
             
-            # Parse JSON response
-            try:
-                # Try to extract JSON from response
-                content = response.content
-                if "```json" in content:
-                    content = content.split("```json")[1].split("```")[0]
-                elif "```" in content:
-                    content = content.split("```")[1].split("```")[0]
-                
-                recommendations = json.loads(content)
-            except json.JSONDecodeError:
-                # If JSON parsing fails, return raw analysis
-                recommendations = {
-                    "seo_score": 50,
-                    "score_explanation": "Unable to parse detailed analysis",
-                    "priority_improvements": ["See detailed analysis"],
-                    "suggested_title": seo_data['title_analysis']['text'],
-                    "suggested_description_intro": "",
-                    "suggested_tags": [],
-                    "detailed_analysis": response.content
-                }
+            # Parse JSON response using robust extraction
+            recommendations = self._extract_json_from_response(response.content)
+            
+            if recommendations is None:
+                # Use fallback structure if parsing fails
+                logger.warning(f"Failed to parse SEO analysis JSON for video {video_id}")
+                recommendations = self._get_seo_analysis_fallback(
+                    current_title=seo_data['title_analysis']['text'],
+                    raw_response=response.content
+                )
             
             return {
                 "video_id": video_id,
@@ -146,6 +250,7 @@ Format your response as JSON with these keys:
             }
             
         except Exception as e:
+            logger.error(f"Error analyzing video SEO for {video_id}: {e}")
             return {"error": str(e), "video_id": video_id}
     
     async def audit_channel_seo(self, limit: int = 10) -> Dict[str, Any]:
@@ -317,23 +422,13 @@ Format as JSON:
             
             response = await self.llm.ainvoke(messages)
             
-            # Parse JSON response
-            try:
-                content = response.content
-                if "```json" in content:
-                    content = content.split("```json")[1].split("```")[0]
-                elif "```" in content:
-                    content = content.split("```")[1].split("```")[0]
-                
-                metadata = json.loads(content)
-            except json.JSONDecodeError:
-                metadata = {
-                    "titles": [],
-                    "description": response.content,
-                    "tags": [],
-                    "hashtags": [],
-                    "raw_response": response.content
-                }
+            # Parse JSON response using robust extraction
+            metadata = self._extract_json_from_response(response.content)
+            
+            if metadata is None:
+                # Use fallback structure if parsing fails
+                logger.warning(f"Failed to parse metadata generation JSON for topic: {video_topic}")
+                metadata = self._get_metadata_generation_fallback(raw_response=response.content)
             
             return {
                 "topic": video_topic,
@@ -342,5 +437,6 @@ Format as JSON:
             }
             
         except Exception as e:
+            logger.error(f"Error generating optimized metadata for topic '{video_topic}': {e}")
             return {"error": str(e)}
 

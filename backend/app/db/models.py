@@ -1,27 +1,65 @@
 """
 Database models for persistent job and cache storage.
-Uses SQLite with SQLAlchemy for production-ready persistence.
+Supports PostgreSQL for production and SQLite for local development.
 """
 
 import os
 import enum
+import logging
 from datetime import datetime
 from typing import Optional
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime, Enum, JSON, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.pool import QueuePool, StaticPool
 from contextlib import contextmanager
 
-# Database setup
+logger = logging.getLogger(__name__)
+
+# Database setup - supports both PostgreSQL (production) and SQLite (development)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "data", "youtube_saas.db")
+SQLITE_DB_PATH = os.path.join(BASE_DIR, "data", "youtube_saas.db")
 
-# Ensure data directory exists
-os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+# Read DATABASE_URL from environment, default to SQLite for local development
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-DATABASE_URL = f"sqlite:///{DB_PATH}"
+if DATABASE_URL is None:
+    # Default to SQLite for local development
+    os.makedirs(os.path.dirname(SQLITE_DB_PATH), exist_ok=True)
+    DATABASE_URL = f"sqlite:///{SQLITE_DB_PATH}"
+    IS_SQLITE = True
+elif DATABASE_URL.startswith("postgres://"):
+    # Heroku uses postgres:// but SQLAlchemy requires postgresql://
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    IS_SQLITE = False
+else:
+    IS_SQLITE = DATABASE_URL.startswith("sqlite")
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+
+def get_engine_kwargs() -> dict:
+    """
+    Get database engine configuration based on database type.
+    
+    SQLite requires check_same_thread=False for multi-threaded access.
+    PostgreSQL uses connection pooling for production performance.
+    """
+    if IS_SQLITE:
+        return {
+            "connect_args": {"check_same_thread": False},
+            "poolclass": StaticPool,  # Better for SQLite with threading
+        }
+    else:
+        # PostgreSQL production settings
+        return {
+            "poolclass": QueuePool,
+            "pool_size": 5,
+            "max_overflow": 10,
+            "pool_pre_ping": True,  # Verify connections before use
+            "pool_recycle": 300,    # Recycle connections after 5 minutes
+        }
+
+
+engine = create_engine(DATABASE_URL, **get_engine_kwargs())
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
@@ -171,7 +209,24 @@ class VideoCache(Base):
 def init_db():
     """Initialize database tables."""
     Base.metadata.create_all(bind=engine)
-    print(f"📦 Database initialized at: {DB_PATH}")
+    
+    if IS_SQLITE:
+        db_info = f"SQLite @ {SQLITE_DB_PATH}"
+    else:
+        # Mask the password in the connection string for logging
+        safe_url = DATABASE_URL
+        if "@" in safe_url:
+            # Format: postgresql://user:pass@host:port/db -> postgresql://user:***@host:port/db
+            prefix, rest = safe_url.split("://", 1)
+            if "@" in rest:
+                user_pass, host_db = rest.split("@", 1)
+                if ":" in user_pass:
+                    user, _ = user_pass.split(":", 1)
+                    safe_url = f"{prefix}://{user}:***@{host_db}"
+        db_info = f"PostgreSQL @ {safe_url}"
+    
+    logger.info(f"📦 Database initialized: {db_info}")
+    print(f"📦 Database initialized: {db_info}")
 
 
 @contextmanager
