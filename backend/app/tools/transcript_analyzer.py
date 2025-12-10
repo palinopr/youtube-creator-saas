@@ -331,7 +331,7 @@ class TranscriptAnalyzer:
             temp_audio_path = os.path.join(temp_dir, f"yt_audio_{video_id}.mp3")
             
             # yt-dlp options - download audio only, limit duration
-            # Use cookies from browser to bypass bot detection
+            # NO cookies needed - uses mobile client APIs
             ydl_opts = {
                 'format': 'worstaudio/worst',  # Smallest audio = smaller file size
                 'outtmpl': temp_audio_path.replace('.mp3', '.%(ext)s'),
@@ -342,37 +342,19 @@ class TranscriptAnalyzer:
                 }],
                 'quiet': True,
                 'no_warnings': True,
-                # Try to use cookies from browser to bypass bot detection
-                'cookiesfrombrowser': ('chrome',),  # Try Chrome cookies first
                 # Limit to first N minutes to stay under 25MB Whisper limit
                 'download_ranges': lambda info, ydl: [{'start_time': 0, 'end_time': max_duration_minutes * 60}],
                 'force_keyframes_at_cuts': True,
-                # Additional options to help bypass detection
-                'extractor_args': {'youtube': {'player_client': ['android', 'web']}},
             }
             
             url = f"https://www.youtube.com/watch?v={video_id}"
             
-            # Try multiple download strategies
+            # Try multiple download strategies (NO cookies - works on production)
             download_success = False
             last_error = None
             
-            # Check if we're on a server (no display = likely production)
-            is_production = not os.environ.get('DISPLAY') and os.environ.get('DATABASE_URL')
-            
-            # Build strategy list based on environment
-            strategies = []
-            
-            if not is_production:
-                # Local development - try browser cookies first
-                strategies.extend([
-                    {'cookiesfrombrowser': ('chrome',), 'desc': 'Chrome cookies'},
-                    {'cookiesfrombrowser': ('firefox',), 'desc': 'Firefox cookies'},
-                    {'cookiesfrombrowser': ('safari',), 'desc': 'Safari cookies'},
-                ])
-            
-            # Always include no-cookie strategies (work on production)
-            strategies.extend([
+            # All strategies work without browser cookies
+            strategies = [
                 # Mobile clients often bypass bot detection
                 {
                     'extractor_args': {'youtube': {'player_client': ['android', 'ios']}},
@@ -387,7 +369,7 @@ class TranscriptAnalyzer:
                     'extractor_args': {'youtube': {'player_client': ['tv_embedded']}},
                     'desc': 'TV embedded client'
                 },
-            ])
+            ]
             
             for strategy in strategies:
                 try:
