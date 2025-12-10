@@ -34,3 +34,4 @@ curl_cffi>=0.6.0
 # Video processing for Clips feature
 ffmpeg-python>=0.2.0
 yt-dlp>=2024.1.0
+youtube-transcript-api>=0.6.1

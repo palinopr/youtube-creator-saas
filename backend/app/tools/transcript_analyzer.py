@@ -58,16 +58,71 @@ class TranscriptAnalyzer:
     
     async def get_transcript(self, video_id: str) -> Optional[Dict[str, Any]]:
         """
-        Fetch transcript using YouTube's Innertube API with browser impersonation.
-        This method works around IP restrictions by mimicking a real Chrome browser.
+        Fetch transcript using multiple methods:
+        1. youtube-transcript-api (works on production servers, no cookies needed)
+        2. YouTube's Innertube API with browser impersonation (fallback)
         """
+        # Method 1: Try youtube-transcript-api first (production-friendly)
+        try:
+            from youtube_transcript_api import YouTubeTranscriptApi
+            from youtube_transcript_api._errors import (
+                TranscriptsDisabled, 
+                NoTranscriptFound,
+                VideoUnavailable
+            )
+            
+            try:
+                # Try to get Spanish transcript first, then any available
+                transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+                
+                # Priority: Spanish manual > Spanish auto > English > any
+                transcript = None
+                for lang in ['es', 'en']:
+                    try:
+                        transcript = transcript_list.find_transcript([lang])
+                        break
+                    except:
+                        continue
+                
+                if not transcript:
+                    # Get any available transcript
+                    transcript = transcript_list.find_generated_transcript(['es', 'en'])
+                
+                if transcript:
+                    transcript_data = transcript.fetch()
+                    full_text = ' '.join([entry['text'] for entry in transcript_data])
+                    full_text = re.sub(r'\s+', ' ', full_text).strip()
+                    
+                    return {
+                        "video_id": video_id,
+                        "status": "success",
+                        "language": transcript.language_code,
+                        "is_generated": transcript.is_generated,
+                        "full_text": full_text,
+                        "word_count": len(full_text.split()),
+                        "source": "youtube_transcript_api"
+                    }
+                    
+            except TranscriptsDisabled:
+                print(f"[TRANSCRIPT] Transcripts disabled for video {video_id}")
+            except NoTranscriptFound:
+                print(f"[TRANSCRIPT] No transcript found for video {video_id}")
+            except VideoUnavailable:
+                print(f"[TRANSCRIPT] Video unavailable: {video_id}")
+            except Exception as e:
+                print(f"[TRANSCRIPT] youtube-transcript-api error: {e}")
+                
+        except ImportError:
+            print("[TRANSCRIPT] youtube-transcript-api not installed, trying fallback...")
+        
+        # Method 2: Fallback to Innertube API with curl_cffi
         try:
             from curl_cffi import requests as curl_requests
         except ImportError:
             return {
                 "video_id": video_id,
                 "status": "error",
-                "error": "curl_cffi not installed. Run: pip install curl_cffi",
+                "error": "No transcript method available. Install: pip install youtube-transcript-api",
                 "full_text": None
             }
         
@@ -302,17 +357,37 @@ class TranscriptAnalyzer:
             download_success = False
             last_error = None
             
-            # Strategy 1: Try with Chrome cookies
-            strategies = [
-                {'cookiesfrombrowser': ('chrome',), 'desc': 'Chrome cookies'},
-                {'cookiesfrombrowser': ('firefox',), 'desc': 'Firefox cookies'},
-                {'cookiesfrombrowser': ('safari',), 'desc': 'Safari cookies'},
-                # Strategy without cookies - use mobile clients that may bypass bot detection
+            # Check if we're on a server (no display = likely production)
+            is_production = not os.environ.get('DISPLAY') and os.environ.get('DATABASE_URL')
+            
+            # Build strategy list based on environment
+            strategies = []
+            
+            if not is_production:
+                # Local development - try browser cookies first
+                strategies.extend([
+                    {'cookiesfrombrowser': ('chrome',), 'desc': 'Chrome cookies'},
+                    {'cookiesfrombrowser': ('firefox',), 'desc': 'Firefox cookies'},
+                    {'cookiesfrombrowser': ('safari',), 'desc': 'Safari cookies'},
+                ])
+            
+            # Always include no-cookie strategies (work on production)
+            strategies.extend([
+                # Mobile clients often bypass bot detection
                 {
-                    'extractor_args': {'youtube': {'player_client': ['android', 'ios', 'mweb']}},
-                    'desc': 'Mobile client (no cookies)'
+                    'extractor_args': {'youtube': {'player_client': ['android', 'ios']}},
+                    'desc': 'Mobile client (Android/iOS)'
                 },
-            ]
+                {
+                    'extractor_args': {'youtube': {'player_client': ['mweb', 'web']}},
+                    'desc': 'Mobile web client'
+                },
+                # TV clients as last resort
+                {
+                    'extractor_args': {'youtube': {'player_client': ['tv_embedded']}},
+                    'desc': 'TV embedded client'
+                },
+            ])
             
             for strategy in strategies:
                 try:
