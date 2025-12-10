@@ -244,14 +244,14 @@ class TranscriptAnalyzer:
         except Exception:
             return None
     
-    async def transcribe_with_whisper(self, video_id: str, max_duration_minutes: int = 30) -> Optional[Dict[str, Any]]:
+    async def transcribe_with_whisper(self, video_id: str, max_duration_minutes: int = 15) -> Optional[Dict[str, Any]]:
         """
         Fallback: Download audio and transcribe with OpenAI Whisper.
         Only downloads first N minutes to save costs and time.
         
         Args:
             video_id: YouTube video ID
-            max_duration_minutes: Max minutes to transcribe (default 30, costs ~$0.18)
+            max_duration_minutes: Max minutes to transcribe (default 15 to stay under 25MB)
             
         Returns:
             Dict with transcript or error
@@ -276,26 +276,76 @@ class TranscriptAnalyzer:
             temp_audio_path = os.path.join(temp_dir, f"yt_audio_{video_id}.mp3")
             
             # yt-dlp options - download audio only, limit duration
+            # Use cookies from browser to bypass bot detection
             ydl_opts = {
-                'format': 'bestaudio/best',
+                'format': 'worstaudio/worst',  # Smallest audio = smaller file size
                 'outtmpl': temp_audio_path.replace('.mp3', '.%(ext)s'),
                 'postprocessors': [{
                     'key': 'FFmpegExtractAudio',
                     'preferredcodec': 'mp3',
-                    'preferredquality': '64',  # Lower quality = smaller file
+                    'preferredquality': '32',  # Very low quality = much smaller file (enough for speech)
                 }],
                 'quiet': True,
                 'no_warnings': True,
-                # Limit to first N minutes to save cost
+                # Try to use cookies from browser to bypass bot detection
+                'cookiesfrombrowser': ('chrome',),  # Try Chrome cookies first
+                # Limit to first N minutes to stay under 25MB Whisper limit
                 'download_ranges': lambda info, ydl: [{'start_time': 0, 'end_time': max_duration_minutes * 60}],
                 'force_keyframes_at_cuts': True,
+                # Additional options to help bypass detection
+                'extractor_args': {'youtube': {'player_client': ['android', 'web']}},
             }
             
             url = f"https://www.youtube.com/watch?v={video_id}"
             
-            # Download audio
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                ydl.download([url])
+            # Try multiple download strategies
+            download_success = False
+            last_error = None
+            
+            # Strategy 1: Try with Chrome cookies
+            strategies = [
+                {'cookiesfrombrowser': ('chrome',), 'desc': 'Chrome cookies'},
+                {'cookiesfrombrowser': ('firefox',), 'desc': 'Firefox cookies'},
+                {'cookiesfrombrowser': ('safari',), 'desc': 'Safari cookies'},
+                # Strategy without cookies - use mobile clients that may bypass bot detection
+                {
+                    'extractor_args': {'youtube': {'player_client': ['android', 'ios', 'mweb']}},
+                    'desc': 'Mobile client (no cookies)'
+                },
+            ]
+            
+            for strategy in strategies:
+                try:
+                    desc = strategy.pop('desc', 'unknown')
+                    current_opts = {**ydl_opts, **strategy}
+                    print(f"[TRANSCRIPT] Trying download strategy: {desc}")
+                    
+                    with yt_dlp.YoutubeDL(current_opts) as ydl:
+                        ydl.download([url])
+                    
+                    # Check if file was created
+                    for ext in ['.mp3', '.m4a', '.webm', '.opus']:
+                        test_path = temp_audio_path.replace('.mp3', ext)
+                        if os.path.exists(test_path) and os.path.getsize(test_path) > 1000:
+                            download_success = True
+                            break
+                    
+                    if download_success:
+                        print(f"[TRANSCRIPT] ✓ Download succeeded with: {desc}")
+                        break
+                        
+                except Exception as e:
+                    last_error = str(e)
+                    print(f"[TRANSCRIPT] Strategy '{desc}' failed: {str(e)[:100]}")
+                    continue
+            
+            if not download_success:
+                return {
+                    "video_id": video_id,
+                    "status": "error",
+                    "error": f"All download strategies failed. Last error: {last_error}",
+                    "full_text": None
+                }
             
             # Find the actual output file (might have different extension)
             actual_path = temp_audio_path
