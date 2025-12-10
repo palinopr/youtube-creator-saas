@@ -18,6 +18,7 @@ settings = get_settings()
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.readonly",
     "https://www.googleapis.com/auth/yt-analytics.readonly",
+    "https://www.googleapis.com/auth/youtube.force-ssl",  # Required for captions API
 ]
 
 # File-based token storage (persists across restarts)
