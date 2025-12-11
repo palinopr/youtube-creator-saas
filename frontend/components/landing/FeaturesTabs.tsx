@@ -508,60 +508,77 @@ export default function FeaturesTabs() {
             {features.map((feature) => {
               const Icon = feature.icon;
               const isActive = activeFeature === feature.id;
+              const FeatureMockup = featureMockups[feature.id];
 
               return (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveFeature(feature.id)}
-                  className={`w-full text-left p-6 rounded-xl transition-all duration-300 feature-tab ${
-                    isActive ? "tab-active landing-card" : ""
-                  }`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                        isActive
-                          ? "bg-gradient-to-br from-brand-500 to-accent-500"
-                          : "bg-white/5"
-                      }`}
-                    >
-                      <Icon
-                        size={20}
-                        className={isActive ? "text-white" : "text-white/60"}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between">
-                        <h3
-                          className={`text-lg font-medium ${
-                            isActive ? "text-white" : "text-white/70"
-                          }`}
-                        >
-                          {feature.title}
-                        </h3>
-                        <ChevronRight
+                <div key={feature.id}>
+                  <button
+                    onClick={() => setActiveFeature(feature.id)}
+                    className={`w-full text-left p-4 sm:p-6 rounded-xl transition-all duration-300 feature-tab ${
+                      isActive ? "tab-active landing-card" : ""
+                    }`}
+                  >
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div
+                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                          isActive
+                            ? "bg-gradient-to-br from-brand-500 to-accent-500"
+                            : "bg-white/5"
+                        }`}
+                      >
+                        <Icon
                           size={18}
-                          className={`flex-shrink-0 transition-transform ${
-                            isActive
-                              ? "text-brand-500 rotate-90"
-                              : "text-white/30"
-                          }`}
+                          className={`${isActive ? "text-white" : "text-white/60"} sm:hidden`}
+                        />
+                        <Icon
+                          size={20}
+                          className={`${isActive ? "text-white" : "text-white/60"} hidden sm:block`}
                         />
                       </div>
-                      {isActive && (
-                        <p className="text-white/60 text-sm mt-2 leading-relaxed">
-                          {feature.description}
-                        </p>
-                      )}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <h3
+                            className={`text-base sm:text-lg font-medium ${
+                              isActive ? "text-white" : "text-white/70"
+                            }`}
+                          >
+                            {feature.title}
+                          </h3>
+                          <ChevronRight
+                            size={18}
+                            className={`flex-shrink-0 transition-transform ${
+                              isActive
+                                ? "text-brand-500 rotate-90"
+                                : "text-white/30"
+                            }`}
+                          />
+                        </div>
+                        {isActive && (
+                          <p className="text-white/60 text-sm mt-2 leading-relaxed">
+                            {feature.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+
+                  {/* Mobile: Show mockup immediately after active feature */}
+                  {isActive && (
+                    <div className="lg:hidden mt-4 mb-2">
+                      <div className="landing-card overflow-hidden">
+                        <div className="aspect-[4/3] bg-navy-900">
+                          <FeatureMockup />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
 
-          {/* Right: Feature mockup */}
-          <div className="lg:sticky lg:top-32">
+          {/* Right: Feature mockup - Desktop only */}
+          <div className="hidden lg:block lg:sticky lg:top-32">
             <div className="landing-card overflow-hidden">
               <div className="aspect-[4/3] bg-navy-900">
                 <ActiveMockup />

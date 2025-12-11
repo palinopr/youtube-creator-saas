@@ -317,74 +317,109 @@ export default function HowItWorksTabs() {
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = activeStep === step.id;
+              const StepMockup = stepMockups[step.id];
 
               return (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(step.id)}
-                  className={`w-full text-left p-6 rounded-xl transition-all duration-300 feature-tab ${
-                    isActive ? "tab-active landing-card" : ""
-                  }`}
-                >
-                  <div className="flex items-start gap-4">
-                    {/* Step number badge */}
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                        isActive
-                          ? "bg-gradient-to-br from-brand-500 to-accent-500"
-                          : "bg-white/5"
-                      }`}
-                    >
-                      {isActive ? (
-                        <Icon size={24} className="text-white" />
-                      ) : (
-                        <span className="text-white/40 font-semibold">
-                          {index + 1}
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p
-                            className={`text-xs font-semibold uppercase tracking-wider mb-1 ${
-                              isActive ? "text-brand-500" : "text-white/40"
-                            }`}
-                          >
-                            {step.step}
-                          </p>
-                          <h3
-                            className={`text-lg font-medium ${
-                              isActive ? "text-white" : "text-white/70"
-                            }`}
-                          >
-                            {step.title}
-                          </h3>
-                        </div>
-                        <ChevronRight
-                          size={18}
-                          className={`flex-shrink-0 transition-transform ${
-                            isActive
-                              ? "text-brand-500 rotate-90"
-                              : "text-white/30"
-                          }`}
-                        />
+                <div key={step.id}>
+                  <button
+                    onClick={() => setActiveStep(step.id)}
+                    className={`w-full text-left p-4 sm:p-6 rounded-xl transition-all duration-300 feature-tab ${
+                      isActive ? "tab-active landing-card" : ""
+                    }`}
+                  >
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      {/* Step number badge */}
+                      <div
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                          isActive
+                            ? "bg-gradient-to-br from-brand-500 to-accent-500"
+                            : "bg-white/5"
+                        }`}
+                      >
+                        {isActive ? (
+                          <Icon size={20} className="text-white sm:hidden" />
+                        ) : (
+                          <span className="text-white/40 font-semibold sm:hidden">
+                            {index + 1}
+                          </span>
+                        )}
+                        {isActive ? (
+                          <Icon size={24} className="text-white hidden sm:block" />
+                        ) : (
+                          <span className="text-white/40 font-semibold hidden sm:block">
+                            {index + 1}
+                          </span>
+                        )}
                       </div>
-                      {isActive && (
-                        <p className="text-white/60 text-sm mt-3 leading-relaxed">
-                          {step.description}
-                        </p>
-                      )}
+
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p
+                              className={`text-xs font-semibold uppercase tracking-wider mb-1 ${
+                                isActive ? "text-brand-500" : "text-white/40"
+                              }`}
+                            >
+                              {step.step}
+                            </p>
+                            <h3
+                              className={`text-base sm:text-lg font-medium ${
+                                isActive ? "text-white" : "text-white/70"
+                              }`}
+                            >
+                              {step.title}
+                            </h3>
+                          </div>
+                          <ChevronRight
+                            size={18}
+                            className={`flex-shrink-0 transition-transform ${
+                              isActive
+                                ? "text-brand-500 rotate-90"
+                                : "text-white/30"
+                            }`}
+                          />
+                        </div>
+                        {isActive && (
+                          <p className="text-white/60 text-sm mt-2 sm:mt-3 leading-relaxed">
+                            {step.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+
+                  {/* Mobile: Show mockup immediately after active step */}
+                  {isActive && (
+                    <div className="lg:hidden mt-4 mb-2">
+                      <div className="landing-card overflow-hidden">
+                        <div className="aspect-[4/3] bg-navy-900 relative">
+                          {/* Step number indicator */}
+                          <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+                            {steps.map((s) => (
+                              <div
+                                key={s.id}
+                                className={`w-6 h-1 rounded-full transition-colors ${
+                                  activeStep === s.id
+                                    ? "bg-brand-500"
+                                    : "bg-white/10"
+                                }`}
+                              />
+                            ))}
+                          </div>
+
+                          {/* Dynamic mockup content */}
+                          <StepMockup />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
 
-          {/* Right: Mini dashboard mockup */}
-          <div className="lg:sticky lg:top-32">
+          {/* Right: Mini dashboard mockup - Desktop only */}
+          <div className="hidden lg:block lg:sticky lg:top-32">
             <div className="landing-card overflow-hidden">
               <div className="aspect-[4/3] bg-navy-900 relative">
                 {/* Step number indicator */}
