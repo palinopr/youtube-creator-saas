@@ -9,11 +9,12 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy requirements first for better caching
-COPY requirements.txt .
+# When built from repo root with RAILWAY_DOCKERFILE_PATH=backend/Dockerfile
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY . .
+# Copy application code from backend directory
+COPY backend/ .
 
 # Create temp directory for clips
 RUN mkdir -p /tmp/clip_renders
