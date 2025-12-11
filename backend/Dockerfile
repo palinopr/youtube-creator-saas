@@ -22,6 +22,7 @@ RUN mkdir -p /tmp/clip_renders
 EXPOSE 8000
 
 # Run without reload for production
-# Railway provides PORT env var, defaults to 8000
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Railway sets PORT env var - use shell form for variable expansion
+SHELL ["/bin/sh", "-c"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
 
