@@ -15,6 +15,11 @@ from .routers.youtube_videos import router as youtube_videos_router
 from .routers.billing import router as billing_router
 from .routers.admin import router as admin_router
 from .routers.user import router as user_router
+from .routers.audience import router as audience_router
+from .routers.traffic import router as traffic_router
+from .routers.revenue import router as revenue_router
+from .routers.comments import router as comments_router
+from .routers.alerts import router as alerts_router
 from .config import get_settings
 from .workers.manager import start_workers, stop_workers
 from .db.models import init_db
@@ -87,6 +92,11 @@ app.include_router(youtube_videos_router)
 app.include_router(billing_router)
 app.include_router(admin_router)
 app.include_router(user_router)
+app.include_router(audience_router)
+app.include_router(traffic_router)
+app.include_router(revenue_router)
+app.include_router(comments_router)
+app.include_router(alerts_router)
 
 
 @app.get("/")
@@ -162,6 +172,32 @@ async def root():
                 "export_data": "/api/user/export-data - Request GDPR data export",
                 "request_deletion": "/api/user/request-deletion - Request account deletion",
                 "cancel_deletion": "/api/user/cancel-deletion - Cancel deletion request",
+            },
+            "audience": {
+                "demographics": "/api/audience/demographics - Age/gender breakdown",
+                "geography": "/api/audience/geography - Views by country",
+                "devices": "/api/audience/devices - Device type breakdown (mobile, desktop, TV)",
+                "summary": "/api/audience/summary - Combined audience intelligence data",
+            },
+            "traffic": {
+                "sources": "/api/traffic/sources - Where views come from (search, suggested, browse)",
+                "subscribers": "/api/traffic/subscribers - Subscriber gain/loss by source",
+                "playback_locations": "/api/traffic/playback-locations - Where videos are watched",
+                "summary": "/api/traffic/summary - Combined traffic analytics",
+            },
+            "revenue": {
+                "overview": "/api/revenue/overview - Revenue and monetization data",
+                "by_country": "/api/revenue/by-country - Revenue breakdown by country with CPM",
+                "daily": "/api/revenue/daily - Day-by-day revenue breakdown",
+                "status": "/api/revenue/status - Check if monetization is available",
+            },
+            "comments": {
+                "analyze": "/api/comments/analyze - AI-powered comment analysis across channel",
+                "analyze_video": "/api/comments/analyze/{video_id} - Analyze comments for specific video",
+                "sentiment_trend": "/api/comments/sentiment-trend - Sentiment trends across videos",
+                "questions": "/api/comments/questions - Extract questions needing responses",
+                "content_ideas": "/api/comments/content-ideas - Mine content ideas from comments",
+                "notable_commenters": "/api/comments/notable-commenters - Find creators who commented",
             }
         }
     }

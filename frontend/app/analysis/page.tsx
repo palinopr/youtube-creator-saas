@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  ArrowLeft,
   BarChart3,
   TrendingUp,
   Tag,
@@ -19,6 +18,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { API_URL } from "@/lib/config";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 interface AnalysisData {
   analysis: {
@@ -190,35 +190,27 @@ export default function AnalysisPage() {
   const model = analysis?.custom_scoring_model;
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Header */}
-      <header className="border-b border-white/10 bg-black/50 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <div>
-              <h1 className="text-xl font-bold flex items-center gap-2">
-                <BarChart3 className="w-6 h-6 text-purple-400" />
-                Channel Performance Analysis
-              </h1>
-              <p className="text-sm text-gray-400">
-                Data-driven insights from {data?.total_videos_analyzed || 0} videos
-              </p>
-            </div>
-            <button
-              onClick={fetchAnalysis}
-              className="ml-auto p-2 hover:bg-white/10 rounded-lg transition-colors"
-              title="Refresh analysis"
-            >
-              <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
-            </button>
+    <DashboardLayout activePath="/analysis">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-2xl font-bold flex items-center gap-2">
+              <BarChart3 className="w-7 h-7 text-purple-400" />
+              Channel Performance Analysis
+            </h1>
+            <p className="text-gray-400 mt-1">
+              Data-driven insights from {data?.total_videos_analyzed || 0} videos
+            </p>
           </div>
+          <button
+            onClick={fetchAnalysis}
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            title="Refresh analysis"
+          >
+            <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
+          </button>
         </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Performance Summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/10 border border-purple-500/30 rounded-xl p-4">
@@ -533,8 +525,8 @@ export default function AnalysisPage() {
             </p>
           </div>
         )}
-      </main>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 }
 

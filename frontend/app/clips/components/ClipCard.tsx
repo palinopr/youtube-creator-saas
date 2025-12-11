@@ -12,22 +12,23 @@ import {
   Eye,
   Zap,
   X,
+  Pencil,
 } from "lucide-react";
 import {
   ClipSuggestion,
   RenderJob,
   formatDuration,
-  getScoreColor,
   API_URL,
 } from "../types";
 import { SegmentBadge } from "./SegmentBadge";
+import { EditClipModal } from "./EditClipModal";
 
 interface ClipCardProps {
   clip: ClipSuggestion;
   index: number;
   videoId: string;
   renderJob?: RenderJob;
-  onRender: (clip: ClipSuggestion) => void;
+  onRender: (clip: ClipSuggestion, startTime?: number, endTime?: number, aspectRatio?: string) => void;
   onDownload: (clipId: string) => void;
 }
 
@@ -41,6 +42,7 @@ export function ClipCard({
 }: ClipCardProps) {
   const [expanded, setExpanded] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
 
   const isRendering = renderJob?.status === "rendering" || renderJob?.status === "queued";
   const isComplete = renderJob?.status === "completed" && renderJob?.ready_for_download;
@@ -50,6 +52,25 @@ export function ClipCard({
   const previewUrl = `https://www.youtube.com/embed/${videoId}?start=${Math.floor(
     clip.hook.start_time
   )}&autoplay=1`;
+
+  // Original clip times for edit modal
+  const originalStart = clip.hook.start_time;
+  const originalEnd = clip.loop_ending
+    ? clip.loop_ending.end_time
+    : clip.body_segments.length > 0
+      ? clip.body_segments[clip.body_segments.length - 1].end_time
+      : clip.hook.end_time;
+
+  // Handle render click - renders immediately with AI times
+  const handleRenderClick = () => {
+    onRender(clip);
+  };
+
+  // Handle edit and re-render with custom times and aspect ratio
+  const handleEditRender = (startTime: number, endTime: number, aspectRatio: string) => {
+    setShowEditModal(false);
+    onRender(clip, startTime, endTime, aspectRatio);
+  };
 
   return (
     <div className="bg-gradient-to-br from-black/40 to-black/20 border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-all group">
@@ -114,7 +135,7 @@ export function ClipCard({
               {showPreview ? <X className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
 
-            {/* Render/Download Button */}
+            {/* Render/Download Buttons */}
             {isComplete ? (
               <button
                 onClick={() => onDownload(clip.clip_id)}
@@ -132,7 +153,7 @@ export function ClipCard({
               </div>
             ) : isFailed ? (
               <button
-                onClick={() => onRender(clip)}
+                onClick={handleRenderClick}
                 className="px-4 py-2.5 bg-red-500/20 hover:bg-red-500/30 rounded-lg text-sm font-medium text-red-300 flex items-center gap-2 transition-colors border border-red-500/30"
               >
                 <RefreshCw className="w-4 h-4" />
@@ -140,7 +161,7 @@ export function ClipCard({
               </button>
             ) : (
               <button
-                onClick={() => onRender(clip)}
+                onClick={handleRenderClick}
                 className="px-4 py-2.5 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 rounded-lg text-sm font-medium text-white flex items-center gap-2 transition-all shadow-lg shadow-pink-500/20 hover:shadow-pink-500/30 hover:scale-[1.02]"
               >
                 <Play className="w-4 h-4" />
@@ -261,7 +282,28 @@ export function ClipCard({
               Your browser does not support video playback.
             </video>
           </div>
+
+          {/* Edit Button - Below the video */}
+          <button
+            onClick={() => setShowEditModal(true)}
+            className="mt-4 w-full py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white flex items-center justify-center gap-2 transition-all"
+          >
+            <Pencil className="w-4 h-4" />
+            Edit
+          </button>
         </div>
+      )}
+
+      {/* Edit Clip Modal - shows after clip is rendered */}
+      {showEditModal && (
+        <EditClipModal
+          clip={clip}
+          videoId={videoId}
+          originalStart={originalStart}
+          originalEnd={originalEnd}
+          onClose={() => setShowEditModal(false)}
+          onRender={handleEditRender}
+        />
       )}
     </div>
   );

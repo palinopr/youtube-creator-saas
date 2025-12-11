@@ -27,6 +27,7 @@ settings = get_settings()
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.readonly",
     "https://www.googleapis.com/auth/yt-analytics.readonly",
+    "https://www.googleapis.com/auth/yt-analytics-monetary.readonly",  # Revenue/monetization data
     "https://www.googleapis.com/auth/youtube.force-ssl",  # Required for captions API
     "openid",  # Required for user info
     "https://www.googleapis.com/auth/userinfo.email",

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { API_URL } from "@/lib/config";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 interface QuickWin {
   action: string;
@@ -148,38 +149,29 @@ export default function OptimizePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
-      {/* Header */}
-      <div className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-white flex items-center gap-3">
-                <span className="text-3xl">🚀</span>
-                Content Optimizer
-              </h1>
-              <p className="text-gray-400 text-sm mt-1">
-                AI-powered recommendations from 5,000+ videos
-              </p>
-            </div>
-            <a 
-              href="/videos"
-              className="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-lg text-white text-sm transition font-medium"
-            >
-              🎬 Edit Existing Videos
-            </a>
-            <a 
-              href="/"
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-sm transition"
-            >
-              ← Dashboard
-            </a>
+    <DashboardLayout activePath="/optimize">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-2xl font-bold text-white flex items-center gap-3">
+              <span className="text-3xl">🚀</span>
+              Content Optimizer
+            </h1>
+            <p className="text-gray-400 text-sm mt-1">
+              AI-powered recommendations from 5,000+ videos
+            </p>
           </div>
+          <a
+            href="/videos"
+            className="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-lg text-white text-sm transition font-medium"
+          >
+            🎬 Edit Existing Videos
+          </a>
         </div>
-      </div>
 
-      {/* Tabs */}
-      <div className="max-w-7xl mx-auto px-6 py-6">
+        {/* Tabs */}
+        <div>
         <div className="flex gap-2 mb-8">
           {[
             { id: "blueprint", label: "📋 Blueprint", desc: "Full Strategy" },
@@ -628,8 +620,9 @@ export default function OptimizePage() {
             </div>
           </div>
         )}
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 }
 

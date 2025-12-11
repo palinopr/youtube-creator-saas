@@ -1,19 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import {
   Scissors,
-  Youtube,
-  Home,
-  Video,
-  Zap,
-  BarChart3,
-  TrendingUp,
   Sparkles,
-  LogOut,
   AlertCircle,
 } from "lucide-react";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 // Types and utilities
 import { VideoItem, API_URL } from "./types";
@@ -82,28 +75,15 @@ export default function ClipsPage() {
     }
   };
 
-  const handleRenderClip = (clip: Parameters<typeof renderClip>[0]) => {
+  const handleRenderClip = (clip: Parameters<typeof renderClip>[0], startTime?: number, endTime?: number) => {
     if (selectedVideo) {
-      renderClip(clip, selectedVideo.video_id);
+      renderClip(clip, selectedVideo.video_id, startTime, endTime);
     }
   };
 
-  const handleLogout = async () => {
-    await fetch(`${API_URL}/auth/logout`, {
-      method: "POST",
-      credentials: "include",
-    });
-    window.location.href = "/";
-  };
-
   return (
-    <div className="min-h-screen bg-[#0a0a0a] flex">
-      {/* Sidebar */}
-      <Sidebar onLogout={handleLogout} />
-
-      {/* Main Content */}
-      <main className="flex-1 min-w-0 overflow-auto">
-        <div className="max-w-7xl mx-auto p-6">
+    <DashboardLayout activePath="/clips">
+      <div className="max-w-7xl mx-auto p-6">
           {/* Header */}
           <header className="mb-8">
             <h1 className="text-3xl font-bold text-white flex items-center gap-3">
@@ -200,105 +180,11 @@ export default function ClipsPage() {
                   )}
                 </div>
 
-                {/* Info Box */}
-                <InfoBox />
               </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
-  );
-}
-
-// Sidebar component
-function Sidebar({ onLogout }: { onLogout: () => void }) {
-  return (
-    <aside className="w-64 bg-[#111] border-r border-white/10 flex-shrink-0 hidden lg:flex flex-col">
-      {/* Logo */}
-      <div className="p-4 border-b border-white/10">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
-            <Youtube className="w-6 h-6 text-white" />
-          </div>
-          <div>
-            <h1 className="font-bold text-white">CreatorSaaS</h1>
-            <p className="text-xs text-gray-500">YouTube Analytics</p>
-          </div>
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="flex-1 p-3 space-y-1">
-        <NavItem icon={<Home />} label="Dashboard" href="/" />
-        <NavItem icon={<Video />} label="Videos" href="/videos" />
-
-        <div className="pt-4 pb-2">
-          <p className="text-xs text-gray-600 uppercase tracking-wider px-3">
-            Tools
-          </p>
-        </div>
-
-        <NavItem icon={<Scissors />} label="Clips" href="/clips" active color="pink" />
-        <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" color="purple" />
-
-        <div className="pt-4 pb-2">
-          <p className="text-xs text-gray-600 uppercase tracking-wider px-3">
-            Analytics
-          </p>
-        </div>
-
-        <NavItem icon={<BarChart3 />} label="Channel Analysis" href="/analysis" />
-        <NavItem icon={<TrendingUp />} label="Deep Analysis" href="/deep-analysis" />
-        <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" />
-      </nav>
-
-      {/* Logout */}
-      <div className="p-3 border-t border-white/10">
-        <button
-          onClick={onLogout}
-          className="flex items-center gap-3 w-full p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-        >
-          <LogOut className="w-5 h-5" />
-          <span className="text-sm">Logout</span>
-        </button>
-      </div>
-    </aside>
-  );
-}
-
-// Navigation item
-function NavItem({
-  icon,
-  label,
-  href,
-  active = false,
-  color = "default",
-}: {
-  icon: React.ReactNode;
-  label: string;
-  href: string;
-  active?: boolean;
-  color?: string;
-}) {
-  const colorClasses: Record<string, string> = {
-    default: active
-      ? "text-white bg-white/10"
-      : "text-gray-400 hover:text-white hover:bg-white/5",
-    purple: "text-purple-400 hover:text-purple-300 hover:bg-purple-500/10",
-    pink: active
-      ? "text-pink-300 bg-pink-500/20"
-      : "text-pink-400 hover:text-pink-300 hover:bg-pink-500/10",
-  };
-
-  return (
-    <Link
-      href={href}
-      className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${colorClasses[color]}`}
-    >
-      <span className="w-5 h-5 flex-shrink-0">{icon}</span>
-      <span className="text-sm font-medium">{label}</span>
-    </Link>
+    </DashboardLayout>
   );
 }
 
@@ -321,20 +207,3 @@ function EmptyState({ hasSelectedVideo }: { hasSelectedVideo: boolean }) {
   );
 }
 
-// Info box about Franken-bite method
-function InfoBox() {
-  return (
-    <div className="mt-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-4">
-      <h3 className="text-white font-medium text-sm mb-2">
-        🎯 Franken-bite Method
-      </h3>
-      <p className="text-gray-400 text-xs leading-relaxed">
-        The AI analyzes your video transcript to find the best{" "}
-        <span className="text-purple-300 font-medium">HOOK</span> (attention grabber) +{" "}
-        <span className="text-blue-300 font-medium">BODY</span> (compressed content) +{" "}
-        <span className="text-orange-300 font-medium">LOOP</span> (ending that flows
-        back). This creates shorts with 25-35s optimal duration and maximum retention.
-      </p>
-    </div>
-  );
-}

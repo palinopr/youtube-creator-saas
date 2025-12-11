@@ -1,17 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import dynamic from "next/dynamic";
 import {
   Play,
   TrendingUp,
+  TrendingDown,
   Users,
   Eye,
   MessageSquare,
   ThumbsUp,
-  Youtube,
   Sparkles,
-  ArrowRight,
   BarChart3,
   Zap,
   Home,
@@ -23,21 +22,32 @@ import {
   X,
   Scissors,
   Check,
-  Star,
-  Shield,
+  Clock,
+  DollarSign,
+  AlertTriangle,
 } from "lucide-react";
 import Link from "next/link";
-import { StatCard, StatCardSkeleton, ChartSkeleton, VideoSpotlight } from "@/components/dashboard";
+import { ChartSkeleton } from "@/components/dashboard";
 import { useDashboardData, formatNumber, formatDate } from "@/hooks/useDashboardData";
 import { API_URL, AUTH_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 import { Logo } from "@/components/ui/Logo";
-import { Testimonials } from "@/components/marketing/Testimonials";
-import { FAQ } from "@/components/marketing/FAQ";
-import { HowItWorks } from "@/components/marketing/HowItWorks";
-import { DashboardPreview } from "@/components/marketing/DashboardPreview";
-import { FeatureShowcase } from "@/components/marketing/FeatureShowcase";
-import { StatsBar } from "@/components/marketing/StatsBar";
 import Sidebar from "@/components/layout/Sidebar";
+// Landing page components (new Sandcastles-inspired design)
+import Header from "@/components/landing/Header";
+import HeroSection from "@/components/landing/HeroSection";
+import LogoCarousel from "@/components/landing/LogoCarousel";
+import FeaturesTabs from "@/components/landing/FeaturesTabs";
+import HowItWorksTabs from "@/components/landing/HowItWorksTabs";
+import SocialProofSection from "@/components/landing/SocialProofSection";
+import TestimonialCarousel from "@/components/landing/TestimonialCarousel";
+import PricingSection from "@/components/landing/PricingSection";
+import FAQSection from "@/components/landing/FAQSection";
+import FinalCTA from "@/components/landing/FinalCTA";
+import Footer from "@/components/landing/Footer";
+import HealthScore from "@/components/dashboard/HealthScore";
+import AlertsPanel, { Alert } from "@/components/dashboard/AlertsPanel";
+import ViralRadar, { TrendingVideo, calculateVideoVelocity } from "@/components/dashboard/ViralRadar";
 
 // Lazy load charts for better performance
 const ViewsTrendChart = dynamic(
@@ -106,386 +116,28 @@ export default function HomePage() {
   return <LandingPage onLogin={handleLogin} />;
 }
 
-const pricingPlans = [
-  {
-    id: "free",
-    name: "Free",
-    price: 0,
-    description: "Get started with basic analytics",
-    highlights: [
-      "10 videos per month",
-      "20 AI queries",
-      "Basic channel stats",
-      "Video performance tracking",
-    ],
-    popular: false,
-  },
-  {
-    id: "starter",
-    name: "Starter",
-    price: 19,
-    description: "Perfect for growing creators",
-    highlights: [
-      "50 videos per month",
-      "100 AI queries",
-      "SEO optimization tools",
-      "20 viral clips per month",
-      "Email support",
-    ],
-    popular: false,
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    price: 49,
-    description: "For serious content creators",
-    highlights: [
-      "Unlimited videos",
-      "500 AI queries",
-      "Advanced SEO tools",
-      "100 viral clips per month",
-      "Priority support",
-      "Competitor research",
-    ],
-    popular: true,
-  },
-  {
-    id: "agency",
-    name: "Agency",
-    price: 149,
-    description: "For teams and agencies",
-    highlights: [
-      "Unlimited everything",
-      "API access",
-      "White-label reports",
-      "Dedicated support",
-      "Custom integrations",
-      "Multi-channel management",
-    ],
-    popular: false,
-  },
-];
-
 function LandingPage({ onLogin }: { onLogin: () => void }) {
   return (
-    <main className="min-h-screen bg-[#0a0a0a]">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-950/20 via-black to-black" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
-          <nav className="flex items-center justify-between mb-20">
-            <Logo size="md" linkToHome={false} />
-            <div className="flex items-center gap-4">
-              <Link
-                href="/pricing"
-                className="text-gray-400 hover:text-white transition-colors hidden sm:block"
-              >
-                Pricing
-              </Link>
-              <button
-                onClick={onLogin}
-                className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-              >
-                Sign In
-              </button>
-            </div>
-          </nav>
-
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full mb-8">
-              <Sparkles className="w-4 h-4 text-red-400" />
-              <span className="text-sm text-red-400">AI-Powered Analytics</span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Maximize Your <br />
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">YouTube Growth</span>
-            </h1>
-
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Get AI-powered insights, optimize your content, and grow your channel
-              with actionable analytics that actually make a difference.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={onLogin}
-                className="group px-8 py-4 bg-red-600 hover:bg-red-500 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
-              >
-                <Youtube className="w-5 h-5" />
-                Connect YouTube
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <Link
-                href="/pricing"
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-24">
-            <FeatureCard
-              icon={<BarChart3 className="w-6 h-6" />}
-              title="Real-Time Analytics"
-              description="Track views, subscribers, and engagement metrics as they happen"
-            />
-            <FeatureCard
-              icon={<Sparkles className="w-6 h-6" />}
-              title="AI Insights"
-              description="Ask questions about your channel and get intelligent answers"
-            />
-            <FeatureCard
-              icon={<TrendingUp className="w-6 h-6" />}
-              title="Growth Recommendations"
-              description="Get actionable tips to improve your content performance"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* How It Works */}
-      <HowItWorks />
-
-      {/* Dashboard Preview */}
-      <DashboardPreview />
-
-      {/* Feature Showcase */}
-      <FeatureShowcase />
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 border-t border-white/10 bg-gradient-to-b from-black to-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full mb-6">
-              <Star className="w-4 h-4 text-brand-400" />
-              <span className="text-sm text-brand-400">Simple Pricing</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Start free and scale as you grow. No hidden fees.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingPlans.map((plan) => (
-              <div
-                key={plan.id}
-                className={`relative rounded-2xl border p-6 flex flex-col ${
-                  plan.popular
-                    ? "border-accent-500 bg-gradient-to-br from-brand-500/10 to-accent-500/10"
-                    : "border-white/10 bg-white/5"
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-brand-500 to-accent-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
-                  <p className="text-sm text-gray-400">{plan.description}</p>
-                </div>
-
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-white">
-                      {plan.price === 0 ? "Free" : `$${plan.price}`}
-                    </span>
-                    {plan.price > 0 && <span className="text-gray-400">/month</span>}
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-6 flex-1">
-                  {plan.highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm">
-                      <Check className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  onClick={onLogin}
-                  className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-                    plan.popular
-                      ? "bg-gradient-to-r from-brand-500 to-accent-500 hover:from-brand-600 hover:to-accent-600 text-white"
-                      : "bg-white/10 hover:bg-white/20 text-white"
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/pricing"
-              className="text-accent-400 hover:text-accent-300 transition-colors"
-            >
-              Compare all features →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof / Trust Section */}
-      <section className="py-24 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid sm:grid-cols-3 gap-6 mb-16">
-            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
-              <div className="p-3 bg-brand-500/10 rounded-lg">
-                <Shield className="w-6 h-6 text-brand-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-white">Secure & Private</h3>
-                <p className="text-sm text-gray-400">Your data stays yours</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
-              <div className="p-3 bg-accent-500/10 rounded-lg">
-                <Zap className="w-6 h-6 text-accent-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-white">Cancel Anytime</h3>
-                <p className="text-sm text-gray-400">No long-term contracts</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
-              <div className="p-3 bg-brand-500/10 rounded-lg">
-                <Sparkles className="w-6 h-6 text-brand-400" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-white">14-Day Free Trial</h3>
-                <p className="text-sm text-gray-400">On Pro & Agency plans</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <StatsBar />
-
-      {/* Testimonials Section */}
-      <Testimonials />
-
-      {/* FAQ Section */}
-      <FAQ />
-
-      {/* CTA Section */}
-      <section className="py-24 border-t border-white/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Grow Your Channel?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Join thousands of creators using AI to optimize their YouTube presence.
-          </p>
-          <button
-            onClick={onLogin}
-            className="group px-8 py-4 bg-red-600 hover:bg-red-500 rounded-xl font-semibold text-lg transition-all inline-flex items-center gap-2"
-          >
-            <Youtube className="w-5 h-5" />
-            Get Started Free
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            {/* Brand */}
-            <div className="md:col-span-1">
-              <Logo size="sm" linkToHome={false} className="mb-4" />
-              <p className="text-sm text-gray-400">
-                AI-powered YouTube analytics to help creators grow their channels faster.
-              </p>
-            </div>
-
-            {/* Product */}
-            <div>
-              <h4 className="font-semibold text-white mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/features" className="hover:text-white transition-colors">Features</Link></li>
-                <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-                <li><a href="mailto:support@tubegrow.io" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} TubeGrow. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 text-sm text-gray-400">
-              <a href="https://twitter.com/tubegrow" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="https://youtube.com/@tubegrow" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                YouTube
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <main className="landing-bg min-h-screen">
+      <Header />
+      <HeroSection />
+      <LogoCarousel />
+      <FeaturesTabs />
+      <HowItWorksTabs />
+      <SocialProofSection />
+      <TestimonialCarousel />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTA />
+      <Footer />
     </main>
-  );
-}
-
-function FeatureCard({ 
-  icon, 
-  title, 
-  description, 
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
-  description: string;
-}) {
-  return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-      <div className="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-4 text-red-400">
-        {icon}
-      </div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
-    </div>
   );
 }
 
 function Dashboard() {
   const { channelStats, recentVideos, topVideo, analyticsOverview, isLoading } = useDashboardData();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
 
   const handleLogout = async () => {
     await fetch(`${API_URL}/auth/logout`, {
@@ -494,6 +146,252 @@ function Dashboard() {
     });
     window.location.reload();
   };
+
+  // Calculate health metrics from analytics data
+  const healthMetrics = useMemo(() => {
+    if (!analyticsOverview?.daily_data || analyticsOverview.daily_data.length < 7) {
+      return undefined;
+    }
+
+    const dailyData = analyticsOverview.daily_data;
+    const recentDays = dailyData.slice(-7);
+    const previousDays = dailyData.slice(-14, -7);
+
+    // Calculate view velocity (recent vs previous)
+    const recentViews = recentDays.reduce((sum, d) => sum + (d.views || 0), 0);
+    const previousViews = previousDays.reduce((sum, d) => sum + (d.views || 0), 0);
+    const viewVelocity = previousViews > 0 ? ((recentViews - previousViews) / previousViews) * 100 : 0;
+
+    // Calculate subscriber growth
+    const recentSubs = recentDays.reduce((sum, d) => sum + (d.subscribers_gained || 0) - (d.subscribers_lost || 0), 0);
+    const previousSubs = previousDays.reduce((sum, d) => sum + (d.subscribers_gained || 0) - (d.subscribers_lost || 0), 0);
+    const subGrowth = previousSubs !== 0 ? ((recentSubs - previousSubs) / Math.abs(previousSubs)) * 100 : (recentSubs > 0 ? 100 : 0);
+
+    // Calculate engagement trend (likes vs views ratio)
+    const recentLikes = recentDays.reduce((sum, d) => sum + (d.likes || 0), 0);
+    const previousLikes = previousDays.reduce((sum, d) => sum + (d.likes || 0), 0);
+    const engagementTrend = previousLikes > 0 ? ((recentLikes - previousLikes) / previousLikes) * 100 : 0;
+
+    // Upload consistency score (based on how regularly videos are published)
+    const videosThisWeek = recentVideos.filter(v => {
+      const publishDate = new Date(v.published_at);
+      const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      return publishDate > weekAgo;
+    }).length;
+    const uploadConsistency = Math.min(100, videosThisWeek * 25); // 4 videos = 100
+
+    return {
+      viewVelocity: Math.round(viewVelocity * 10) / 10,
+      subscriberGrowth: Math.round(subGrowth * 10) / 10,
+      engagementTrend: Math.round(engagementTrend * 10) / 10,
+      uploadConsistency,
+    };
+  }, [analyticsOverview, recentVideos]);
+
+  // Calculate channel average views for viral radar
+  const channelAverageViews = useMemo(() => {
+    if (!recentVideos || recentVideos.length === 0) return 0;
+    const totalViews = recentVideos.reduce((sum, v) => sum + (v.view_count || 0), 0);
+    return Math.round(totalViews / recentVideos.length);
+  }, [recentVideos]);
+
+  // Calculate trending videos for viral radar
+  const trendingVideos: TrendingVideo[] = useMemo(() => {
+    if (!recentVideos || recentVideos.length === 0 || channelAverageViews === 0) return [];
+
+    return recentVideos
+      .filter(v => {
+        const publishDate = new Date(v.published_at);
+        const hoursSince = (Date.now() - publishDate.getTime()) / 3600000;
+        return hoursSince < 168; // Only videos from last 7 days
+      })
+      .map(v => calculateVideoVelocity(
+        {
+          video_id: v.video_id,
+          title: v.title,
+          thumbnail_url: v.thumbnail_url,
+          published_at: v.published_at,
+          view_count: v.view_count,
+          like_count: v.like_count,
+          comment_count: v.comment_count,
+        },
+        channelAverageViews
+      ));
+  }, [recentVideos, channelAverageViews]);
+
+  // Fetch alerts from backend API
+  const [alertsLoading, setAlertsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchAlerts = async () => {
+      setAlertsLoading(true);
+      try {
+        // First, trigger a check for new alerts based on current data
+        await api.checkForAlerts();
+
+        // Then fetch all alerts
+        const response = await api.getAlerts(20, false);
+        setAlerts(response.alerts as Alert[]);
+      } catch (error) {
+        console.error("Failed to fetch alerts:", error);
+        // Fallback: generate alerts locally if API fails
+        generateLocalAlerts();
+      } finally {
+        setAlertsLoading(false);
+      }
+    };
+
+    // Local alert generation as fallback
+    const generateLocalAlerts = () => {
+      const newAlerts: Alert[] = [];
+
+      // Check for viral videos
+      const viralVideos = trendingVideos.filter(v => v.velocity_multiplier >= 3);
+      viralVideos.forEach(v => {
+        newAlerts.push({
+          id: `viral-${v.id}`,
+          type: "viral",
+          title: v.velocity_multiplier >= 5 ? "Video Going Viral!" : "Video Trending Hot!",
+          message: `"${v.title.slice(0, 50)}..." is getting ${v.velocity_multiplier.toFixed(1)}x more views than average.`,
+          timestamp: new Date(),
+          priority: v.velocity_multiplier >= 5 ? "high" : "medium",
+          videoId: v.id,
+          videoTitle: v.title,
+          actionUrl: `/video/${v.id}`,
+          actionLabel: "View analytics",
+        });
+      });
+
+      // Check for view drops
+      if (healthMetrics && healthMetrics.viewVelocity < -20) {
+        newAlerts.push({
+          id: "view-drop",
+          type: "drop",
+          title: "Views Dropping",
+          message: `Views are down ${Math.abs(healthMetrics.viewVelocity).toFixed(0)}% compared to last week. Consider posting new content.`,
+          timestamp: new Date(),
+          priority: healthMetrics.viewVelocity < -50 ? "high" : "medium",
+          actionUrl: "/analysis",
+          actionLabel: "Analyze performance",
+        });
+      }
+
+      // Milestone alerts based on subscriber count
+      if (channelStats?.subscriber_count) {
+        const milestones = [1000, 5000, 10000, 50000, 100000, 500000, 1000000];
+        const subs = channelStats.subscriber_count;
+        milestones.forEach(milestone => {
+          if (subs >= milestone && subs < milestone * 1.05) {
+            newAlerts.push({
+              id: `milestone-${milestone}`,
+              type: "milestone",
+              title: `${formatNumber(milestone)} Subscribers!`,
+              message: `Congratulations! You've reached ${formatNumber(milestone)} subscribers.`,
+              timestamp: new Date(),
+              priority: "medium",
+            });
+          }
+        });
+      }
+
+      // Upload consistency warning
+      if (healthMetrics && healthMetrics.uploadConsistency < 25) {
+        newAlerts.push({
+          id: "upload-consistency",
+          type: "warning",
+          title: "Upload Consistency",
+          message: "You haven't uploaded recently. Consistent uploads help maintain audience engagement.",
+          timestamp: new Date(Date.now() - 3600000),
+          priority: "low",
+          actionUrl: "/optimize",
+          actionLabel: "Get content ideas",
+        });
+      }
+
+      setAlerts(newAlerts);
+    };
+
+    fetchAlerts();
+
+    // Refresh alerts every 5 minutes
+    const interval = setInterval(fetchAlerts, 5 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [trendingVideos, healthMetrics, channelStats]);
+
+  const handleDismissAlert = async (alertId: string) => {
+    // Optimistically update UI
+    setAlerts(prev => prev.map(a =>
+      String(a.id) === alertId ? { ...a, dismissed: true, is_dismissed: true } : a
+    ));
+
+    // Call backend API if the alertId is numeric (backend alert)
+    const numericId = parseInt(alertId, 10);
+    if (!isNaN(numericId)) {
+      try {
+        await api.dismissAlert(numericId);
+      } catch (error) {
+        console.error("Failed to dismiss alert:", error);
+        // Revert on error
+        setAlerts(prev => prev.map(a =>
+          String(a.id) === alertId ? { ...a, dismissed: false, is_dismissed: false } : a
+        ));
+      }
+    }
+  };
+
+  const handleAlertAction = (alert: Alert) => {
+    if (alert.actionUrl) {
+      window.location.href = alert.actionUrl;
+    }
+  };
+
+  // Calculate today's stats from analytics
+  const todayStats = useMemo(() => {
+    if (!analyticsOverview?.daily_data || analyticsOverview.daily_data.length === 0) {
+      return { views: 0, viewsChange: 0, subs: 0, subsChange: 0, watchTime: 0 };
+    }
+
+    const today = analyticsOverview.daily_data[analyticsOverview.daily_data.length - 1];
+    const yesterday = analyticsOverview.daily_data.length > 1
+      ? analyticsOverview.daily_data[analyticsOverview.daily_data.length - 2]
+      : null;
+
+    const viewsChange = yesterday && yesterday.views > 0
+      ? ((today.views - yesterday.views) / yesterday.views) * 100
+      : 0;
+
+    const todaySubs = (today.subscribers_gained || 0) - (today.subscribers_lost || 0);
+    const yesterdaySubs = yesterday
+      ? (yesterday.subscribers_gained || 0) - (yesterday.subscribers_lost || 0)
+      : 0;
+    const subsChange = yesterdaySubs !== 0
+      ? ((todaySubs - yesterdaySubs) / Math.abs(yesterdaySubs)) * 100
+      : 0;
+
+    return {
+      views: today.views || 0,
+      viewsChange: Math.round(viewsChange),
+      subs: todaySubs,
+      subsChange: Math.round(subsChange),
+      watchTime: Math.round((today.watch_time_minutes || 0) / 60), // Convert to hours
+    };
+  }, [analyticsOverview]);
+
+  // Identify underperforming videos
+  const underperformingVideos = useMemo(() => {
+    if (!recentVideos || recentVideos.length === 0) return [];
+
+    return recentVideos
+      .filter(v => {
+        const publishDate = new Date(v.published_at);
+        const hoursSince = (Date.now() - publishDate.getTime()) / 3600000;
+        // Recent videos (last 7 days) that are below average
+        if (hoursSince > 168) return false;
+        const velocity = trendingVideos.find(t => t.id === v.video_id)?.velocity_multiplier || 0;
+        return velocity < 0.8; // Below 80% of expected views
+      })
+      .slice(0, 3);
+  }, [recentVideos, trendingVideos]);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex">
@@ -520,12 +418,13 @@ function Dashboard() {
         <div className="lg:hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}>
           <div className="w-64 bg-[#111] h-full p-4" onClick={e => e.stopPropagation()}>
             <nav className="space-y-1">
-              <NavItem icon={<Home />} label="Dashboard" href="/" active={true} />
+              <NavItem icon={<Home />} label="Command Center" href="/" active={true} />
               <NavItem icon={<Video />} label="Videos" href="/videos" />
+              <NavItem icon={<Users />} label="Audience" href="/audience" color="blue" />
+              <NavItem icon={<BarChart3 />} label="Traffic" href="/traffic" color="emerald" />
+              <NavItem icon={<DollarSign />} label="Revenue" href="/revenue" color="green" />
               <NavItem icon={<Scissors />} label="Clips" href="/clips" color="pink" />
               <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" color="purple" />
-              <NavItem icon={<BarChart3 />} label="Analytics" href="/analysis" />
-              <NavItem icon={<TrendingUp />} label="Deep Analysis" href="/deep-analysis" />
               <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" />
             </nav>
           </div>
@@ -535,70 +434,215 @@ function Dashboard() {
       {/* Main Content */}
       <main className="flex-1 min-w-0 lg:pt-0 pt-16">
         <div className="max-w-7xl mx-auto p-6">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-2xl font-bold text-white">
-              Welcome back{channelStats ? `, ${channelStats.title.split(' ')[0]}` : ''} 👋
-            </h1>
-            <p className="text-gray-500">Here's what's happening with your channel</p>
+          {/* Command Center Header */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-2xl font-bold text-white flex items-center gap-2">
+                  Command Center
+                  <span className="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs rounded-full">
+                    LIVE
+                  </span>
+                </h1>
+                <p className="text-gray-500">Real-time channel performance at a glance</p>
+              </div>
+              <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
+                <Clock className="w-4 h-4" />
+                Last updated: {new Date().toLocaleTimeString()}
+              </div>
+            </div>
           </div>
 
-          {/* Stats Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            {isLoading ? (
-              <>
-                <StatCardSkeleton />
-                <StatCardSkeleton />
-                <StatCardSkeleton />
-                <StatCardSkeleton />
-              </>
-            ) : (
-              <>
-                <StatCard
-                  icon={<Users className="w-5 h-5" />}
-                  label="Subscribers"
-                  value={channelStats ? formatNumber(channelStats.subscriber_count) : "—"}
-                  color="red"
-                />
-                <StatCard
-                  icon={<Eye className="w-5 h-5" />}
-                  label="Total Views"
-                  value={channelStats ? formatNumber(channelStats.view_count) : "—"}
-                  color="blue"
-                />
-                <StatCard
-                  icon={<Play className="w-5 h-5" />}
-                  label="Videos"
-                  value={channelStats ? formatNumber(channelStats.video_count) : "—"}
-                  color="green"
-                />
-                <StatCard
-                  icon={<TrendingUp className="w-5 h-5" />}
-                  label="Avg per Video"
-                  value={channelStats && channelStats.video_count > 0
-                    ? formatNumber(Math.round(channelStats.view_count / channelStats.video_count))
-                    : "—"}
-                  color="purple"
-                />
-              </>
-            )}
+          {/* Top Row: Health Score + Quick Stats */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
+            {/* Health Score - Takes 1 column */}
+            <div className="lg:col-span-1">
+              <HealthScore metrics={healthMetrics} loading={isLoading} />
+            </div>
+
+            {/* Quick Stats - Takes 3 columns */}
+            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Views Today */}
+              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2 bg-blue-500/20 rounded-lg">
+                    <Eye className="w-5 h-5 text-blue-400" />
+                  </div>
+                  {!isLoading && todayStats.viewsChange !== 0 && (
+                    <span className={`flex items-center gap-1 text-sm ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                      {todayStats.viewsChange >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
+                      {todayStats.viewsChange >= 0 ? '+' : ''}{todayStats.viewsChange}%
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-gray-400 mb-1">Views Today</p>
+                <p className="text-3xl font-bold text-white">
+                  {isLoading ? "—" : formatNumber(todayStats.views)}
+                </p>
+              </div>
+
+              {/* Subscribers Today */}
+              <div className="bg-gradient-to-br from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2 bg-red-500/20 rounded-lg">
+                    <Users className="w-5 h-5 text-red-400" />
+                  </div>
+                  {!isLoading && todayStats.subsChange !== 0 && (
+                    <span className={`flex items-center gap-1 text-sm ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                      {todayStats.subsChange >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
+                      {todayStats.subsChange >= 0 ? '+' : ''}{todayStats.subsChange}%
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-gray-400 mb-1">Subs Today</p>
+                <p className="text-3xl font-bold text-white">
+                  {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
+                </p>
+              </div>
+
+              {/* Watch Time Today */}
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2 bg-purple-500/20 rounded-lg">
+                    <Clock className="w-5 h-5 text-purple-400" />
+                  </div>
+                </div>
+                <p className="text-sm text-gray-400 mb-1">Watch Time Today</p>
+                <p className="text-3xl font-bold text-white">
+                  {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Analytics Charts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
-            <ViewsTrendChart
-              dailyData={analyticsOverview?.daily_data}
-              isLoading={isLoading}
-            />
-            <SubscriberChart
-              dailyData={analyticsOverview?.daily_data}
-              currentSubscribers={channelStats?.subscriber_count}
-              isLoading={isLoading}
-            />
+          {/* Middle Row: Performance Chart + Viral Radar */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+            {/* Performance Chart - Takes 2 columns */}
+            <div className="lg:col-span-2">
+              <ViewsTrendChart
+                dailyData={analyticsOverview?.daily_data}
+                isLoading={isLoading}
+              />
+            </div>
+
+            {/* Viral Radar - Takes 1 column */}
+            <div className="lg:col-span-1">
+              <ViralRadar
+                videos={trendingVideos}
+                loading={isLoading}
+                channelAverageViews={channelAverageViews}
+                onVideoClick={(videoId) => window.location.href = `/video/${videoId}`}
+              />
+            </div>
+          </div>
+
+          {/* Bottom Row: Alerts + Video Lists */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+            {/* Alerts Panel */}
+            <div className="lg:col-span-1">
+              <AlertsPanel
+                alerts={alerts}
+                onDismiss={handleDismissAlert}
+                onAction={handleAlertAction}
+                loading={alertsLoading || isLoading}
+              />
+            </div>
+
+            {/* Top Performing + Needs Attention */}
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Top Performing Videos */}
+              <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                <div className="p-4 border-b border-white/10 flex items-center justify-between">
+                  <h3 className="font-semibold flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-green-400" />
+                    Top Performing
+                  </h3>
+                  <span className="text-xs text-white/40">Last 24h</span>
+                </div>
+                <div className="divide-y divide-white/5">
+                  {isLoading ? (
+                    Array.from({ length: 3 }).map((_, i) => (
+                      <div key={i} className="p-4 animate-pulse">
+                        <div className="h-4 bg-white/10 rounded w-3/4 mb-2" />
+                        <div className="h-3 bg-white/10 rounded w-1/2" />
+                      </div>
+                    ))
+                  ) : recentVideos.slice(0, 3).map((video, index) => (
+                    <Link
+                      key={video.video_id}
+                      href={`/video/${video.video_id}`}
+                      className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                    >
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                        index === 0 ? 'bg-yellow-500/20 text-yellow-400' :
+                        index === 1 ? 'bg-gray-400/20 text-gray-300' :
+                        'bg-orange-700/20 text-orange-400'
+                      }`}>
+                        {index + 1}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium truncate">{video.title}</p>
+                        <p className="text-xs text-white/40">
+                          {formatNumber(video.view_count)} views
+                        </p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-white/20" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Needs Attention */}
+              <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                <div className="p-4 border-b border-white/10 flex items-center justify-between">
+                  <h3 className="font-semibold flex items-center gap-2">
+                    <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                    Needs Attention
+                  </h3>
+                </div>
+                <div className="divide-y divide-white/5">
+                  {isLoading ? (
+                    Array.from({ length: 3 }).map((_, i) => (
+                      <div key={i} className="p-4 animate-pulse">
+                        <div className="h-4 bg-white/10 rounded w-3/4 mb-2" />
+                        <div className="h-3 bg-white/10 rounded w-1/2" />
+                      </div>
+                    ))
+                  ) : underperformingVideos.length > 0 ? (
+                    underperformingVideos.map((video) => {
+                      const velocity = trendingVideos.find(t => t.id === video.video_id)?.velocity_multiplier || 0;
+                      return (
+                        <Link
+                          key={video.video_id}
+                          href={`/video/${video.video_id}`}
+                          className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                        >
+                          <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
+                            <TrendingDown className="w-3 h-3 text-red-400" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium truncate">{video.title}</p>
+                            <p className="text-xs text-red-400">
+                              {(velocity * 100).toFixed(0)}% of expected views
+                            </p>
+                          </div>
+                          <ChevronRight className="w-4 h-4 text-white/20" />
+                        </Link>
+                      );
+                    })
+                  ) : (
+                    <div className="p-8 text-center">
+                      <Check className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                      <p className="text-sm text-white/60">All videos performing well!</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <Link
               href="/optimize"
               className="p-5 bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl hover:border-purple-400/50 transition-all group"
@@ -608,74 +652,44 @@ function Dashboard() {
                   <Zap className="w-6 h-6 text-purple-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-white">New Content Ideas</h3>
-                  <p className="text-gray-400 text-sm">Score ideas & generate AI titles</p>
+                  <h3 className="font-bold text-white">Content Ideas</h3>
+                  <p className="text-gray-400 text-sm">AI-powered suggestions</p>
                 </div>
                 <ChevronRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
-            
+
             <Link
-              href="/videos"
-              className="p-5 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-xl hover:border-emerald-400/50 transition-all group"
+              href="/clips"
+              className="p-5 bg-gradient-to-br from-pink-600/20 to-rose-600/20 border border-pink-500/30 rounded-xl hover:border-pink-400/50 transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center">
-                  <Video className="w-6 h-6 text-emerald-400" />
+                <div className="w-12 h-12 bg-pink-500/30 rounded-xl flex items-center justify-center">
+                  <Scissors className="w-6 h-6 text-pink-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-white">Edit Videos</h3>
-                  <p className="text-gray-400 text-sm">SEO, transcripts & AI optimization</p>
+                  <h3 className="font-bold text-white">Viral Clips</h3>
+                  <p className="text-gray-400 text-sm">Generate short-form content</p>
                 </div>
-                <ChevronRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-5 h-5 text-pink-400 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
-          </div>
 
-          {/* Video Spotlight + Recent Videos */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-            {/* Top Video Spotlight */}
-            <div className="lg:col-span-1">
-              <VideoSpotlight video={topVideo || undefined} isLoading={isLoading} />
-            </div>
-
-            {/* Recent Videos */}
-            <div className="lg:col-span-2 bg-[#111] border border-white/10 rounded-xl overflow-hidden">
-              <div className="p-4 border-b border-white/10 flex items-center justify-between">
-                <h2 className="font-semibold text-white flex items-center gap-2">
-                  <Play className="w-5 h-5 text-red-400" />
-                  Recent Videos
-                </h2>
-                <Link href="/videos" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  View all →
-                </Link>
+            <Link
+              href="/audience"
+              className="p-5 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl hover:border-blue-400/50 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-500/30 rounded-xl flex items-center justify-center">
+                  <Users className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-white">Audience Intel</h3>
+                  <p className="text-gray-400 text-sm">Demographics & insights</p>
+                </div>
+                <ChevronRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
               </div>
-
-              <div className="divide-y divide-white/5">
-                {isLoading ? (
-                  // Loading skeletons
-                  Array.from({ length: 4 }).map((_, i) => (
-                    <div key={i} className="flex gap-4 p-4 animate-pulse">
-                      <div className="w-40 h-[90px] bg-white/10 rounded-lg flex-shrink-0" />
-                      <div className="flex-1">
-                        <div className="w-full h-5 bg-white/10 rounded mb-2" />
-                        <div className="w-2/3 h-4 bg-white/10 rounded mb-2" />
-                        <div className="w-1/3 h-3 bg-white/10 rounded" />
-                      </div>
-                    </div>
-                  ))
-                ) : recentVideos.length > 0 ? (
-                  recentVideos.slice(0, 4).map((video) => (
-                    <VideoRow key={video.video_id} video={video} />
-                  ))
-                ) : (
-                  <div className="p-8 text-center text-gray-500">
-                    <Video className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                    <p>No videos found</p>
-                  </div>
-                )}
-              </div>
-            </div>
+            </Link>
           </div>
 
           {/* AI Chat Hint */}

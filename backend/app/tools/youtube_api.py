@@ -189,7 +189,82 @@ class YouTubeAPIClient:
         except Exception as e:
             print(f"[YOUTUBE API] Error listing videos: {e}")
             return {"videos": [], "next_page_token": None, "error": str(e)}
-    
+
+    def search_user_videos(
+        self,
+        query: str,
+        max_results: int = 25
+    ) -> Dict[str, Any]:
+        """
+        Search videos from the authenticated user's channel.
+
+        Args:
+            query: Search query string
+            max_results: Maximum number of videos to return (1-50)
+
+        Returns:
+            Dict with 'videos' list
+        """
+        try:
+            youtube = self._get_service()
+
+            # Get channel ID
+            channel_info = self.get_channel_info()
+            if not channel_info:
+                return {"videos": [], "error": "Could not get channel info"}
+
+            channel_id = channel_info["channel_id"]
+
+            # Search within user's channel
+            search_request = youtube.search().list(
+                part="snippet",
+                channelId=channel_id,
+                q=query,
+                type="video",
+                maxResults=min(max_results, 50),
+                order="relevance"
+            )
+            search_response = search_request.execute()
+
+            video_ids = [item["id"]["videoId"] for item in search_response.get("items", [])]
+
+            if not video_ids:
+                return {"videos": [], "total_results": 0}
+
+            # Get detailed video info including statistics and duration
+            videos_request = youtube.videos().list(
+                part="snippet,contentDetails,statistics",
+                id=",".join(video_ids)
+            )
+            videos_response = videos_request.execute()
+
+            videos = []
+            for item in videos_response.get("items", []):
+                video = YouTubeVideo(
+                    video_id=item["id"],
+                    title=item["snippet"]["title"],
+                    description=item["snippet"].get("description", ""),
+                    thumbnail_url=item["snippet"]["thumbnails"].get("high", {}).get("url") or
+                                  item["snippet"]["thumbnails"].get("default", {}).get("url", ""),
+                    published_at=item["snippet"]["publishedAt"],
+                    duration=item["contentDetails"]["duration"],
+                    view_count=int(item["statistics"].get("viewCount", 0)),
+                    like_count=int(item["statistics"].get("likeCount", 0)),
+                    comment_count=int(item["statistics"].get("commentCount", 0)),
+                    channel_id=item["snippet"]["channelId"],
+                    channel_title=item["snippet"]["channelTitle"],
+                )
+                videos.append(video.to_dict())
+
+            return {
+                "videos": videos,
+                "total_results": search_response.get("pageInfo", {}).get("totalResults", len(videos)),
+            }
+
+        except Exception as e:
+            print(f"[YOUTUBE API] Error searching videos: {e}")
+            return {"videos": [], "error": str(e)}
+
     def get_video_details(self, video_id: str) -> Optional[Dict[str, Any]]:
         """
         Get detailed information about a specific video.

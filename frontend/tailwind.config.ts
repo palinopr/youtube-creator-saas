@@ -42,15 +42,26 @@ const config: Config = {
           900: "#7c2d12",
           950: "#431407",
         },
+        // Navy palette (Sandcastles-inspired)
+        navy: {
+          800: "#0a1628",  // Lighter navy
+          900: "#040E22",  // Card background
+          950: "#020814",  // Body background (darkest)
+        },
+        // Slate for UI elements
+        slate: {
+          800: "#15223C",  // Button background
+        },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        sans: ["Inter", "var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out",
         "slide-up": "slideUp 0.5s ease-out",
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "logo-scroll": "logoScroll 30s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -60,6 +71,10 @@ const config: Config = {
         slideUp: {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        logoScroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

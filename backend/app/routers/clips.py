@@ -55,6 +55,7 @@ class RenderClipRequest(BaseModel):
     title: Optional[str] = Field(default=None, max_length=100)
     prefer_oauth: bool = Field(default=True, description="Try OAuth download first")
     local_video_path: Optional[str] = Field(default=None, max_length=500)
+    aspect_ratio: str = Field(default="9:16", pattern=r'^(9:16|1:1)$', description="Output aspect ratio")
 
     @field_validator('segments')
     @classmethod
@@ -527,6 +528,7 @@ async def render_clip(
                 "title": render_request.title,
                 "prefer_oauth": render_request.prefer_oauth,
                 "local_video_path": render_request.local_video_path,
+                "aspect_ratio": render_request.aspect_ratio,
             }
         )
         

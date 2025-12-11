@@ -5,9 +5,8 @@ import { usePathname } from "next/navigation";
 import AIChatPopup from "./AIChatPopup";
 import { AUTH_ENDPOINTS } from "@/lib/config";
 
-// Routes where the AI chat should NOT appear
+// Routes where the AI chat should NOT appear (even for authenticated users)
 const EXCLUDED_ROUTES = [
-  "/",
   "/login",
   "/pricing",
   "/features",

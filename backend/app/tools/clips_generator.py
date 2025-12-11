@@ -933,42 +933,52 @@ class ClipRenderer:
                 os.remove(audio_path)
     
     def generate_ass_subtitles(
-        self, 
-        words: List[Dict], 
+        self,
+        words: List[Dict],
         output_path: str,
-        style: str = "hormozi"
+        style: str = "hormozi",
+        aspect_ratio: str = "9:16"
     ) -> str:
         """
         Generate ASS subtitle file with Hormozi-style animated captions.
-        
+
         SAFE-ZONE CAPTIONING:
         - MarginV: 350px (clears TikTok/Shorts description area at bottom)
         - MarginL/MarginR: 100px (clears like/share buttons on sides)
-        
+
         Args:
             words: List of {word, start, end} dicts
             output_path: Path to save .ass file
             style: Caption style ('hormozi', 'simple')
-            
+            aspect_ratio: Output aspect ratio ('9:16' or '1:1')
+
         Returns:
             Path to generated .ass file
         """
+        # Get dimensions based on aspect ratio
+        width, height, _ = self._get_aspect_dimensions(aspect_ratio)
+
+        # Adjust margins for 1:1 (square) format - less vertical margin needed
+        margin_v = 200 if aspect_ratio == "1:1" else 350
+        font_size_main = 100 if aspect_ratio == "1:1" else 120
+        font_size_highlight = 110 if aspect_ratio == "1:1" else 130
+
         # ASS header with Hormozi-style formatting
         # SAFE-ZONE MARGINS:
-        # - MarginV=350: Clears TikTok description, comments, music info at bottom
+        # - MarginV: Clears TikTok description, comments, music info at bottom
         # - MarginL=100, MarginR=100: Clears like/share/comment buttons on right
         # - Alignment=2 (bottom center) ensures text stays in safe viewing area
-        ass_content = """[Script Info]
+        ass_content = f"""[Script Info]
 Title: Viral Clip Captions
 ScriptType: v4.00+
-PlayResX: 1080
-PlayResY: 1920
+PlayResX: {width}
+PlayResY: {height}
 WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Main,Impact,120,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,8,0,2,100,100,350,1
-Style: Highlight,Impact,130,&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,10,0,2,100,100,350,1
+Style: Main,Impact,{font_size_main},&H00FFFFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,8,0,2,100,100,{margin_v},1
+Style: Highlight,Impact,{font_size_highlight},&H0000FFFF,&H000000FF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,10,0,2,100,100,{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -1044,28 +1054,34 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             # Even segments (2, 4, 6...) return to standard
             return ZoomLevel.STANDARD.value
     
-    def _build_zoom_crop_filter(self, zoom: float, input_width: int = 1920, input_height: int = 1080) -> str:
+    def _build_zoom_crop_filter(self, zoom: float, aspect_ratio: str = "9:16", input_width: int = 1920, input_height: int = 1080) -> str:
         """
         Build FFmpeg filter for zoom effect with center crop.
-        
+
         The zoom is achieved by:
         1. Scaling up the video by the zoom factor
-        2. Cropping back to 9:16 from the center
-        
+        2. Cropping back to target aspect ratio from the center
+
         This creates a "push in" effect that hides jump cuts.
+
+        Args:
+            zoom: Zoom factor (1.0 = no zoom, 1.15 = 15% zoom in)
+            aspect_ratio: Output aspect ratio ('9:16' or '1:1')
         """
-        # For 9:16 output, we need to crop based on height
-        # Target: 1080x1920 (width x height for vertical video)
-        
+        # Get target dimensions based on aspect ratio
+        width, height, crop_ratio = self._get_aspect_dimensions(aspect_ratio)
+
         # Calculate zoomed dimensions
         if zoom == 1.0:
-            # Standard: just crop to 9:16 and scale
-            return "crop=ih*9/16:ih,scale=1080:1920"
+            # Standard: just crop and scale
+            return self._build_crop_scale_filter(aspect_ratio)
         else:
-            # Zoomed: scale up first, then crop to 9:16, then scale to output
-            # The extra scale creates the zoom effect
+            # Zoomed: scale up first, then crop, then scale to output
             scale_factor = zoom
-            return f"scale=iw*{scale_factor}:ih*{scale_factor},crop=ih*9/16:ih,scale=1080:1920"
+            if aspect_ratio == "1:1":
+                return f"scale=iw*{scale_factor}:ih*{scale_factor},crop=ih:ih,scale={width}:{height}"
+            else:
+                return f"scale=iw*{scale_factor}:ih*{scale_factor},crop=ih*{crop_ratio}:ih,scale={width}:{height}"
     
     def _build_audio_crossfade_filter(self, num_segments: int, crossfade_duration: float = 0.1) -> str:
         """
@@ -1119,7 +1135,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         local_video_path: Optional[str] = None,
         prefer_oauth: bool = True,
         progress_callback: Optional[Callable[[int, str], None]] = None,
-        layout: str = "auto"  # 'auto', 'center', 'split', or 'smart'
+        layout: str = "auto",  # 'auto', 'center', 'split', or 'smart'
+        aspect_ratio: str = "9:16"  # '9:16' for TikTok/Reels, '1:1' for Instagram
     ) -> Optional[str]:
         """
         Render a clip from video segments with VIRAL POLISH editing.
@@ -1130,12 +1147,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         3. Safe-Zone Captions: Margins avoid TikTok/Shorts UI elements
         4. Smart Face Detection: Auto-detects faces and crops around them (NEW!)
         5. Split Screen: Auto-enabled for 2-person interview layouts
-        
+
         VIDEO SOURCE PRIORITY (SaaS mode):
         1. local_video_path if provided (for uploaded videos)
         2. OAuth download if user owns the video (preferred for SaaS)
         3. yt-dlp fallback (for testing only)
-        
+
         Args:
             video_id: YouTube video ID
             clip_id: Unique clip identifier
@@ -1145,11 +1162,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             prefer_oauth: Try OAuth download first (recommended for SaaS)
             progress_callback: Optional function(progress_percent, message) to report status
             layout: 'center' (default) or 'split' (for podcasts)
-            
+            aspect_ratio: '9:16' (TikTok/Reels vertical) or '1:1' (Instagram square)
+
         Returns:
             Path to rendered MP4 file or None on error
         """
-        print(f"[CLIPS] render_clip called: video_id={video_id}, clip_id={clip_id}, layout={layout}")
+        print(f"[CLIPS] render_clip called: video_id={video_id}, clip_id={clip_id}, layout={layout}, aspect_ratio={aspect_ratio}")
         
         if progress_callback:
             progress_callback(35, "Acquiring video source...")
@@ -1181,12 +1199,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             # For simple single-segment clips
             if len(segments) == 1:
                 return await self._render_single_segment(
-                    source_video, clip_id, segments[0], output_path, progress_callback, layout
+                    source_video, clip_id, segments[0], output_path, progress_callback, layout, aspect_ratio
                 )
             else:
                 # Multiple segments - use DYNAMIC EDITING with crossfades and zoom jumps
                 return await self._render_multi_segment_viral(
-                    source_video, clip_id, segments, output_path, progress_callback, layout
+                    source_video, clip_id, segments, output_path, progress_callback, layout, aspect_ratio
                 )
                 
         except Exception as e:
@@ -1195,18 +1213,67 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             traceback.print_exc()
             return None
 
-    def _build_split_screen_filter(self) -> str:
+    def _build_split_screen_filter(self, aspect_ratio: str = "9:16") -> str:
         """
         Build FFmpeg filter for podcast split screen (Left Speaker / Right Speaker).
         Top half = Left 50% of source.
         Bottom half = Right 50% of source.
-        Both scaled to 1080x960 (half of 1920x1080 vertical).
         """
-        return (
-            "[0:v]crop=iw/2:ih:0:0,scale=1080:960[top];"
-            "[0:v]crop=iw/2:ih:iw/2:0,scale=1080:960[bottom];"
-            "[top][bottom]vstack"
-        )
+        if aspect_ratio == "1:1":
+            # Square: 1080x1080, each half is 1080x540
+            return (
+                "[0:v]crop=iw/2:ih:0:0,scale=1080:540[top];"
+                "[0:v]crop=iw/2:ih:iw/2:0,scale=1080:540[bottom];"
+                "[top][bottom]vstack"
+            )
+        else:
+            # 9:16 vertical: 1080x1920, each half is 1080x960
+            return (
+                "[0:v]crop=iw/2:ih:0:0,scale=1080:960[top];"
+                "[0:v]crop=iw/2:ih:iw/2:0,scale=1080:960[bottom];"
+                "[top][bottom]vstack"
+            )
+
+    def _get_aspect_dimensions(self, aspect_ratio: str = "9:16") -> Tuple[int, int, str]:
+        """
+        Get output dimensions and crop ratio based on aspect ratio.
+
+        Args:
+            aspect_ratio: '9:16' for TikTok/Reels or '1:1' for Instagram
+
+        Returns:
+            (width, height, crop_ratio) - e.g. (1080, 1920, "9/16") or (1080, 1080, "1")
+        """
+        if aspect_ratio == "1:1":
+            return (1080, 1080, "1")  # Square: crop to square aspect ratio
+        else:
+            return (1080, 1920, "9/16")  # 9:16 vertical (default)
+
+    def _build_crop_scale_filter(self, aspect_ratio: str = "9:16", face_center_x: Optional[int] = None) -> str:
+        """
+        Build FFmpeg crop and scale filter based on aspect ratio.
+
+        Args:
+            aspect_ratio: '9:16' or '1:1'
+            face_center_x: Optional face center X position for smart cropping
+
+        Returns:
+            FFmpeg filter string for cropping and scaling
+        """
+        width, height, crop_ratio = self._get_aspect_dimensions(aspect_ratio)
+
+        if face_center_x is not None:
+            # Smart crop centered on face
+            if aspect_ratio == "1:1":
+                return f"crop=ih:ih:{face_center_x}-ih/2:0,scale={width}:{height}"
+            else:
+                return f"crop=ih*{crop_ratio}:ih:{face_center_x}-ih*{crop_ratio}/2:0,scale={width}:{height}"
+        else:
+            # Center crop
+            if aspect_ratio == "1:1":
+                return f"crop=ih:ih,scale={width}:{height}"
+            else:
+                return f"crop=ih*{crop_ratio}:ih,scale={width}:{height}"
 
     def detect_faces_in_frame(self, video_path: str, timestamp: float = 1.0) -> List[Dict]:
         """
@@ -1295,7 +1362,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         print(f"[CLIPS] Detected layout: {layout} (avg {avg_faces:.1f} faces)")
         return layout
 
-    def get_smart_crop_position(self, video_path: str, timestamp: float, video_width: int = 1920) -> str:
+    def get_smart_crop_position(self, video_path: str, timestamp: float, aspect_ratio: str = "9:16", video_width: int = 1920) -> str:
         """
         Get FFmpeg crop filter that focuses on detected faces.
 
@@ -1303,27 +1370,39 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         - If one person is speaking (detected), crop around them
         - If both visible, use split screen or pick the left speaker
 
+        Args:
+            video_path: Path to video file
+            timestamp: Time in seconds to sample for face detection
+            aspect_ratio: Output aspect ratio ('9:16' or '1:1')
+            video_width: Width of source video (default 1920)
+
         Returns:
             FFmpeg crop filter string (e.g., "crop=ih*9/16:ih:500:0,scale=1080:1920")
         """
         faces = self.detect_faces_in_frame(video_path, timestamp)
 
+        # Get dimensions for the target aspect ratio
+        width, height, crop_ratio = self._get_aspect_dimensions(aspect_ratio)
+
+        # Calculate crop offset factor (half of crop ratio for centering)
+        if aspect_ratio == "1:1":
+            offset_factor = "1/2"  # ih * 1/2 for square crop offset
+        else:
+            offset_factor = "9/32"  # ih * 9/32 for 9:16 crop offset
+
         if not faces:
             # No faces detected, use center crop
-            return "crop=ih*9/16:ih,scale=1080:1920"
-
-        # Calculate crop width for 9:16 aspect from height
-        # Assuming 1920x1080 input, crop_width = 1080 * 9/16 = 607.5 ≈ 608
-        # But we want to crop FROM height, so crop_width = height * 9/16
+            return self._build_crop_scale_filter(aspect_ratio)
 
         if len(faces) == 1:
             # Single face: center crop around that person
             face = faces[0]
             crop_center_x = face["center_x"]
-            # Ensure we don't crop outside video bounds
-            # crop_width = video_height * 9/16 (for 1080p = 607)
-            # We use ih*9/16 which FFmpeg calculates
-            return f"crop=ih*9/16:ih:{crop_center_x}-ih*9/32:0,scale=1080:1920"
+            # Build filter centered on face
+            if aspect_ratio == "1:1":
+                return f"crop=ih:ih:{crop_center_x}-ih/2:0,scale={width}:{height}"
+            else:
+                return f"crop=ih*{crop_ratio}:ih:{crop_center_x}-ih*{offset_factor}:0,scale={width}:{height}"
 
         elif len(faces) == 2:
             # Two faces: focus on the person on left (usually interviewer/main speaker)
@@ -1343,12 +1422,18 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             else:
                 # Both on same side or center, crop around the group center
                 group_center = (left_face["center_x"] + right_face["center_x"]) // 2
-                return f"crop=ih*9/16:ih:{group_center}-ih*9/32:0,scale=1080:1920"
+                if aspect_ratio == "1:1":
+                    return f"crop=ih:ih:{group_center}-ih/2:0,scale={width}:{height}"
+                else:
+                    return f"crop=ih*{crop_ratio}:ih:{group_center}-ih*{offset_factor}:0,scale={width}:{height}"
 
         else:
             # 3+ faces: crop around the center of the group
             avg_x = sum(f["center_x"] for f in faces) // len(faces)
-            return f"crop=ih*9/16:ih:{avg_x}-ih*9/32:0,scale=1080:1920"
+            if aspect_ratio == "1:1":
+                return f"crop=ih:ih:{avg_x}-ih/2:0,scale={width}:{height}"
+            else:
+                return f"crop=ih*{crop_ratio}:ih:{avg_x}-ih*{offset_factor}:0,scale={width}:{height}"
 
     async def _render_single_segment(
         self,
@@ -1357,56 +1442,93 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         segment: Tuple[float, float],
         output_path: str,
         progress_callback: Optional[Callable] = None,
-        layout: str = "auto"  # 'auto', 'center', 'split', or 'smart'
+        layout: str = "auto",  # 'auto', 'center', 'split', or 'smart'
+        aspect_ratio: str = "9:16"  # '9:16' for TikTok/Reels, '1:1' for Instagram
     ) -> Optional[str]:
         """Render a single segment clip with captions."""
         start, end = segment
         duration = end - start
 
-        # ... (rest of logic) ...
+        if progress_callback:
+            progress_callback(10, "Extracting word timestamps...")
 
-        # Build filter - now with smart face detection
+        # Get word timestamps for this segment
+        words = await self.get_word_timestamps(source_video, start, duration)
+
+        # Filter words to be relative to segment start (0-based for subtitle timing)
+        segment_words = []
+        for w in words:
+            # Adjust times to be relative to the segment start
+            segment_words.append({
+                "word": w["word"],
+                "start": w["start"] - start,  # Make relative to segment
+                "end": w["end"] - start
+            })
+
+        if progress_callback:
+            progress_callback(30, "Generating captions...")
+
+        # Generate ASS subtitle file
+        ass_path = os.path.join(self.temp_dir, f"subs_{clip_id}.ass")
+        if segment_words:
+            self.generate_ass_subtitles(segment_words, ass_path, aspect_ratio=aspect_ratio)
+        else:
+            # Create empty ASS file if no words (prevents file not found)
+            ass_path = None
+
+        if progress_callback:
+            progress_callback(50, "Rendering video...")
+
+        # Build filter - now with smart face detection and aspect ratio support
         if layout == "split":
-            video_filter = self._build_split_screen_filter()
+            video_filter = self._build_split_screen_filter(aspect_ratio)
         elif layout == "auto" or layout == "smart":
             # Use smart cropping based on face detection
-            smart_filter = self.get_smart_crop_position(source_video, start + 1.0)
+            smart_filter = self.get_smart_crop_position(source_video, start + 1.0, aspect_ratio)
             if smart_filter == "SPLIT_SCREEN":
-                video_filter = self._build_split_screen_filter()
+                video_filter = self._build_split_screen_filter(aspect_ratio)
                 print(f"[CLIPS] Auto-detected interview layout, using split screen")
             else:
                 video_filter = smart_filter
                 print(f"[CLIPS] Using smart crop filter: {video_filter[:50]}...")
         else:
-            video_filter = "crop=ih*9/16:ih,scale=1080:1920"
-            
-        filter_complex = (
-            f"{video_filter},"
-            f"ass='{ass_path}'"
-        )
-        
+            video_filter = self._build_crop_scale_filter(aspect_ratio)
+
+        # Build filter - with or without subtitles
+        if ass_path and os.path.exists(ass_path):
+            filter_complex = f"{video_filter},ass='{ass_path}'"
+        else:
+            filter_complex = video_filter
+
         cmd = [
             'ffmpeg',
             '-ss', str(start),
             '-i', source_video,
             '-t', str(duration),
-            '-filter_complex', filter_complex, # Use filter_complex for split screen
+            '-vf', filter_complex,
             '-c:v', 'libx264',
-            # ...
+            '-preset', 'fast',
+            '-crf', '23',
+            '-c:a', 'aac',
+            '-b:a', '128k',
+            '-ar', '48000',
+            '-movflags', '+faststart',
+            '-y',
+            output_path
         ]
-        
-        print(f"[CLIPS] Running FFmpeg: {' '.join(cmd[:5])}...")
+
+        print(f"[CLIPS] Running FFmpeg: {' '.join(cmd[:8])}...")
         result = subprocess.run(cmd, capture_output=True, text=True)
         print(f"[CLIPS] FFmpeg returned code: {result.returncode}")
-        
+
         if result.returncode != 0:
             print(f"[CLIPS] FFmpeg error: {result.stderr[:500]}")
             # Try without subtitles as fallback
             if progress_callback:
                 progress_callback(80, "Retrying without captions...")
-                
+
             # Use same smart filter for fallback (just without subtitles)
-            fallback_filter = video_filter if "SPLIT" not in video_filter else "crop=ih*9/16:ih,scale=1080:1920"
+            fallback_filter = video_filter if "SPLIT" not in video_filter else self._build_crop_scale_filter(aspect_ratio)
             cmd_fallback = [
                 'ffmpeg',
                 '-ss', str(start),
@@ -1424,14 +1546,14 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 output_path
             ]
             subprocess.run(cmd_fallback, capture_output=True)
-        
-        # Cleanup
-        if os.path.exists(ass_path):
+
+        # Cleanup ASS file if it was created
+        if ass_path and os.path.exists(ass_path):
             os.remove(ass_path)
-            
+
         if progress_callback:
             progress_callback(95, "Finalizing...")
-        
+
         return output_path if os.path.exists(output_path) else None
     
     async def _render_multi_segment_viral(
@@ -1441,7 +1563,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         segments: List[Tuple[float, float]],
         output_path: str,
         progress_callback: Optional[Callable] = None,
-        layout: str = "auto"  # 'auto', 'center', 'split', or 'smart'
+        layout: str = "auto",  # 'auto', 'center', 'split', or 'smart'
+        aspect_ratio: str = "9:16"  # '9:16' for TikTok/Reels, '1:1' for Instagram
     ) -> Optional[str]:
         """
         Render multiple segments with VIRAL POLISH dynamic editing.
@@ -1454,7 +1577,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         detected_layout = layout
         if layout == "auto" or layout == "smart":
             first_start = segments[0][0] if segments else 0
-            smart_filter = self.get_smart_crop_position(source_video, first_start + 1.0)
+            smart_filter = self.get_smart_crop_position(source_video, first_start + 1.0, aspect_ratio)
             if smart_filter == "SPLIT_SCREEN":
                 detected_layout = "split"
                 print(f"[CLIPS] Auto-detected interview layout for multi-segment, using split screen")
@@ -1479,12 +1602,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
             # Build video filter with zoom, split, or smart crop
             if detected_layout == "split":
-                video_filter = self._build_split_screen_filter()
+                video_filter = self._build_split_screen_filter(aspect_ratio)
             elif detected_layout == "smart":
                 # Use smart cropping for this segment's timestamp
-                smart_filter = self.get_smart_crop_position(source_video, start + 0.5)
+                smart_filter = self.get_smart_crop_position(source_video, start + 0.5, aspect_ratio)
                 if smart_filter == "SPLIT_SCREEN":
-                    video_filter = self._build_split_screen_filter()
+                    video_filter = self._build_split_screen_filter(aspect_ratio)
                 else:
                     # Apply zoom to the smart crop filter
                     if zoom == 1.0:
@@ -1493,7 +1616,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                         # Add zoom by scaling up before crop
                         video_filter = f"scale=iw*{zoom}:ih*{zoom}," + smart_filter
             else:
-                video_filter = self._build_zoom_crop_filter(zoom)
+                video_filter = self._build_zoom_crop_filter(zoom, aspect_ratio)
 
             # Render segment
             cmd = [
@@ -1517,13 +1640,14 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
             if result.returncode != 0:
                 print(f"[CLIPS] Segment {i} render failed: {result.stderr[:200]}")
-                # Fallback without zoom
+                # Fallback without zoom - use aspect ratio aware filter
+                fallback_filter = self._build_crop_scale_filter(aspect_ratio)
                 cmd_fallback = [
                     'ffmpeg',
                     '-ss', str(start),
                     '-i', source_video,
                     '-t', str(duration),
-                    '-vf', 'crop=ih*9/16:ih,scale=1080:1920',
+                    '-vf', fallback_filter,
                     '-c:v', 'libx264',
                     '-preset', 'fast',
                     '-crf', '23',

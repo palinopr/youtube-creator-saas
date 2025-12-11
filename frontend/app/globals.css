@@ -148,3 +148,191 @@ body {
   animation: slide-in 0.3s ease-out;
 }
 
+/* ========================================
+   LANDING PAGE STYLES (Sandcastles-inspired)
+   ======================================== */
+
+/* Landing page body background */
+.landing-bg {
+  background-color: #020814;
+}
+
+/* Hero glow effect */
+.hero-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(50% 60.83% at 50% 60.83%,
+    rgba(239, 68, 68, 0.4) 0%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* CTA button with inset shadow */
+.btn-cta {
+  background: #15223C;
+  color: white;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px inset;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: radial-gradient(circle at 50% 0px, #15223C 0%, #ef4444 100%);
+  transform: translateY(-1px);
+}
+
+/* Primary CTA (filled) */
+.btn-cta-primary {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  color: white;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px -10px rgba(239, 68, 68, 0.5);
+}
+
+/* Gradient text (red-orange) */
+.text-gradient {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Landing card style */
+.landing-card {
+  background: #040E22;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+/* Carousel scroll-snap */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Logo carousel infinite scroll */
+.logo-carousel {
+  display: flex;
+  animation: logoScroll 30s linear infinite;
+}
+
+.logo-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tab active state */
+.tab-active {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 2px solid #ef4444;
+}
+
+/* Feature tab hover */
+.feature-tab {
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.feature-tab:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-left-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Pricing card popular badge */
+.pricing-popular {
+  position: relative;
+}
+
+.pricing-popular::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* FAQ accordion */
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%);
+}
+
+/* Glass header on scroll */
+.header-glass {
+  background: rgba(2, 8, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Testimonial quote icon */
+.quote-icon {
+  color: #ef4444;
+  opacity: 0.6;
+}
+
+/* Stats number animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-number {
+  animation: countUp 0.6s ease-out forwards;
+}
+

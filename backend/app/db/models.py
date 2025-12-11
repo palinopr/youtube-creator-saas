@@ -623,7 +623,85 @@ class AgentType(str, enum.Enum):
     CLIPS = "clips"
     DEEP_ANALYSIS = "deep_analysis"
     CHAT = "chat"
+    COMMENTS = "comments"
+    ALERTS = "alerts"
     OTHER = "other"
+
+
+class AlertType(str, enum.Enum):
+    """Alert type enumeration."""
+    VIRAL = "viral"              # Video going viral (3x+ average views)
+    DROP = "drop"                # Significant view drop
+    MILESTONE = "milestone"      # Subscriber/view milestones
+    ENGAGEMENT = "engagement"    # Engagement spike or drop
+    COMMENT_SURGE = "comment_surge"  # Unusual comment activity
+    OPPORTUNITY = "opportunity"  # Trending topic in niche
+    WARNING = "warning"          # General warnings (upload consistency, etc.)
+
+
+class AlertPriority(str, enum.Enum):
+    """Alert priority levels."""
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+    CRITICAL = "critical"
+
+
+class Alert(Base):
+    """
+    In-app notification/alert for real-time events.
+    Tracks viral moments, drops, milestones, and opportunities.
+    """
+    __tablename__ = "alerts"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(String(36), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+
+    # Alert type and priority
+    alert_type = Column(Enum(AlertType), nullable=False, index=True)
+    priority = Column(Enum(AlertPriority), default=AlertPriority.MEDIUM)
+
+    # Content
+    title = Column(String(200), nullable=False)
+    message = Column(Text, nullable=False)
+
+    # Related entities (optional)
+    video_id = Column(String(50), nullable=True, index=True)
+    video_title = Column(String(500), nullable=True)
+
+    # Alert data (JSON for flexibility)
+    data = Column(JSON, default=dict)  # threshold values, metrics, etc.
+
+    # Status
+    is_read = Column(Boolean, default=False, index=True)
+    is_dismissed = Column(Boolean, default=False)
+    action_taken = Column(String(100), nullable=True)  # e.g., "viewed_video", "dismissed"
+
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
+    read_at = Column(DateTime, nullable=True)
+    dismissed_at = Column(DateTime, nullable=True)
+
+    # Relationships
+    user = relationship("User", foreign_keys=[user_id])
+
+    def to_dict(self) -> dict:
+        """Convert to dictionary."""
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "alert_type": self.alert_type.value if self.alert_type else None,
+            "priority": self.priority.value if self.priority else None,
+            "title": self.title,
+            "message": self.message,
+            "video_id": self.video_id,
+            "video_title": self.video_title,
+            "data": self.data,
+            "is_read": self.is_read,
+            "is_dismissed": self.is_dismissed,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "read_at": self.read_at.isoformat() if self.read_at else None,
+        }
 
 
 class APIUsage(Base):

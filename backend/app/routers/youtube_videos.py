@@ -97,6 +97,36 @@ async def list_user_videos(
     return result
 
 
+@router.get("/videos/search", response_model=VideoListResponse)
+async def search_user_videos(
+    q: str = Query(..., min_length=1, description="Search query"),
+    max_results: int = Query(default=25, ge=1, le=50, description="Number of videos to return"),
+    user: User = Depends(get_current_user)
+):
+    """
+    Search videos from the authenticated user's YouTube channel.
+
+    Searches through ALL videos on the channel, not just the loaded ones.
+    This is more efficient than loading all videos and filtering client-side.
+
+    Args:
+        q: Search query string
+        max_results: Maximum number of results (1-50)
+
+    Requires OAuth authentication via /auth/login first.
+    """
+    client = get_youtube_client()
+    result = client.search_user_videos(query=q, max_results=max_results)
+
+    if result.get("error") and "Could not get channel" in result.get("error", ""):
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated. Please login at /auth/login"
+        )
+
+    return result
+
+
 @router.get("/videos/{video_id}")
 async def get_video_details(video_id: str, user: User = Depends(get_current_user)):
     """

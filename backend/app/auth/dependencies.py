@@ -277,6 +277,11 @@ async def check_and_increment_usage(
         async def analyze(user: User = Depends(check_usage("videos_per_month"))):
             ...
     """
+    # Admin users bypass all usage limits
+    if user.is_admin:
+        logger.debug(f"Admin user {user.email} bypassing usage check for {resource}")
+        return user
+
     from ..billing.plans import get_usage_limit
 
     limit = get_usage_limit(subscription.plan_id.value, resource)

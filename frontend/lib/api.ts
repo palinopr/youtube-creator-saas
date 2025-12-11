@@ -95,6 +95,46 @@ export interface NextBilling {
   cancel_at_period_end: boolean;
 }
 
+// Alert types
+export type AlertType = "viral" | "drop" | "milestone" | "engagement" | "comment_surge" | "opportunity" | "warning";
+export type AlertPriority = "critical" | "high" | "medium" | "low";
+
+export interface Alert {
+  id: number;
+  alert_type: AlertType;
+  priority: AlertPriority;
+  title: string;
+  message: string;
+  video_id: string | null;
+  video_title: string | null;
+  data: Record<string, any>;
+  is_read: boolean;
+  is_dismissed: boolean;
+  created_at: string;
+  read_at: string | null;
+}
+
+export interface AlertsResponse {
+  alerts: Alert[];
+  count: number;
+  unread_count: number;
+  generated_at: string;
+}
+
+export interface AlertTypeInfo {
+  value: AlertType;
+  label: string;
+  description: string;
+  icon: string;
+}
+
+export interface AlertPriorityInfo {
+  value: AlertPriority;
+  label: string;
+  description: string;
+  color: string;
+}
+
 class ApiClient {
   private baseUrl: string;
 
@@ -216,6 +256,127 @@ class ApiClient {
 
   async getNextBilling(): Promise<NextBilling> {
     return this.request("/api/billing/next-billing");
+  }
+
+  // Audience Intelligence
+  async getAudienceDemographics(days: number = 30): Promise<any> {
+    return this.request(`/api/audience/demographics?days=${days}`);
+  }
+
+  async getAudienceGeography(days: number = 30, limit: number = 20): Promise<any> {
+    return this.request(`/api/audience/geography?days=${days}&limit=${limit}`);
+  }
+
+  async getAudienceDevices(days: number = 30): Promise<any> {
+    return this.request(`/api/audience/devices?days=${days}`);
+  }
+
+  async getAudienceSummary(days: number = 30): Promise<any> {
+    return this.request(`/api/audience/summary?days=${days}`);
+  }
+
+  // Traffic Sources
+  async getTrafficSources(days: number = 30): Promise<any> {
+    return this.request(`/api/traffic/sources?days=${days}`);
+  }
+
+  async getSubscriberSources(days: number = 30): Promise<any> {
+    return this.request(`/api/traffic/subscribers?days=${days}`);
+  }
+
+  async getPlaybackLocations(days: number = 30): Promise<any> {
+    return this.request(`/api/traffic/playback-locations?days=${days}`);
+  }
+
+  async getTrafficSummary(days: number = 30): Promise<any> {
+    return this.request(`/api/traffic/summary?days=${days}`);
+  }
+
+  // Revenue & Monetization
+  async getRevenueOverview(days: number = 30): Promise<any> {
+    return this.request(`/api/revenue/overview?days=${days}`);
+  }
+
+  async getRevenueByCountry(days: number = 30, limit: number = 10): Promise<any> {
+    return this.request(`/api/revenue/by-country?days=${days}&limit=${limit}`);
+  }
+
+  async getDailyRevenue(days: number = 30): Promise<any> {
+    return this.request(`/api/revenue/daily?days=${days}`);
+  }
+
+  async getMonetizationStatus(): Promise<any> {
+    return this.request("/api/revenue/status");
+  }
+
+  // Comment Intelligence
+  async analyzeChannelComments(limit: number = 50, includeNotable: boolean = true): Promise<any> {
+    return this.request(`/api/comments/analyze?limit=${limit}&include_notable=${includeNotable}`);
+  }
+
+  async analyzeVideoComments(videoId: string, limit: number = 50, includeNotable: boolean = true): Promise<any> {
+    return this.request(`/api/comments/analyze/${videoId}?limit=${limit}&include_notable=${includeNotable}`);
+  }
+
+  async getCommentSentimentTrend(videoIds: string[], commentsPerVideo: number = 20): Promise<any> {
+    const idsParam = videoIds.join(",");
+    return this.request(`/api/comments/sentiment-trend?video_ids=${idsParam}&comments_per_video=${commentsPerVideo}`);
+  }
+
+  async getCommentQuestions(videoId?: string, limit: number = 50): Promise<any> {
+    const params = new URLSearchParams({ limit: limit.toString() });
+    if (videoId) params.set("video_id", videoId);
+    return this.request(`/api/comments/questions?${params.toString()}`);
+  }
+
+  async getContentIdeasFromComments(videoId?: string, limit: number = 50): Promise<any> {
+    const params = new URLSearchParams({ limit: limit.toString() });
+    if (videoId) params.set("video_id", videoId);
+    return this.request(`/api/comments/content-ideas?${params.toString()}`);
+  }
+
+  async getNotableCommenters(videoId?: string, minSubscribers: number = 1000): Promise<any> {
+    const params = new URLSearchParams({ min_subscribers: minSubscribers.toString() });
+    if (videoId) params.set("video_id", videoId);
+    return this.request(`/api/comments/notable-commenters?${params.toString()}`);
+  }
+
+  // Alerts
+  async getAlerts(limit: number = 20, unreadOnly: boolean = false, alertType?: AlertType): Promise<AlertsResponse> {
+    const params = new URLSearchParams({
+      limit: limit.toString(),
+      unread_only: unreadOnly.toString(),
+    });
+    if (alertType) params.set("alert_type", alertType);
+    return this.request(`/api/alerts?${params.toString()}`);
+  }
+
+  async getUnreadAlertCount(): Promise<{ unread_count: number }> {
+    return this.request("/api/alerts/unread-count");
+  }
+
+  async markAlertRead(alertId: number): Promise<{ success: boolean; message: string; alert_id: number }> {
+    return this.request(`/api/alerts/${alertId}/read`, { method: "POST" });
+  }
+
+  async markAllAlertsRead(): Promise<{ success: boolean; message: string; updated_count: number }> {
+    return this.request("/api/alerts/read-all", { method: "POST" });
+  }
+
+  async dismissAlert(alertId: number): Promise<{ success: boolean; message: string; alert_id: number }> {
+    return this.request(`/api/alerts/${alertId}/dismiss`, { method: "POST" });
+  }
+
+  async checkForAlerts(): Promise<{ success: boolean; new_alerts_count: number; alerts: Alert[]; message: string; checked_at: string }> {
+    return this.request("/api/alerts/check", { method: "POST" });
+  }
+
+  async getAlertTypes(): Promise<{ types: AlertTypeInfo[] }> {
+    return this.request("/api/alerts/types");
+  }
+
+  async getAlertPriorities(): Promise<{ priorities: AlertPriorityInfo[] }> {
+    return this.request("/api/alerts/priorities");
   }
 }
 

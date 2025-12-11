@@ -18,6 +18,10 @@ import {
   Settings,
   User,
   ChevronUp,
+  Users,
+  Globe,
+  DollarSign,
+  MessageSquare,
 } from "lucide-react";
 import { API_URL, ADMIN_ENDPOINTS, USER_ENDPOINTS, BILLING_ENDPOINTS } from "@/lib/config";
 
@@ -204,10 +208,43 @@ export default function Sidebar({ activePath }: SidebarProps) {
           active={isActive("/analysis")}
         />
         <NavItem
+          icon={<Users />}
+          label="Audience"
+          href="/audience"
+          active={isActive("/audience")}
+        />
+        <NavItem
+          icon={<Globe />}
+          label="Traffic Sources"
+          href="/traffic"
+          active={isActive("/traffic")}
+        />
+        <NavItem
+          icon={<DollarSign />}
+          label="Revenue"
+          href="/revenue"
+          color="emerald"
+          active={isActive("/revenue")}
+        />
+        <NavItem
           icon={<TrendingUp />}
           label="Deep Analysis"
           href="/deep-analysis"
           active={isActive("/deep-analysis")}
+        />
+
+        <div className="pt-4 pb-2">
+          <p className="text-xs text-gray-600 uppercase tracking-wider px-3">
+            Engagement
+          </p>
+        </div>
+
+        <NavItem
+          icon={<MessageSquare />}
+          label="Comments"
+          href="/comments"
+          color="blue"
+          active={isActive("/comments")}
         />
         <NavItem
           icon={<Sparkles />}

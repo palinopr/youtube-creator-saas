@@ -27,6 +27,7 @@ def process_render_job(job_data: dict) -> dict:
     raw_segments = input_data.get("segments", [])
     prefer_oauth = input_data.get("prefer_oauth", True)  # SaaS mode by default
     local_video_path = input_data.get("local_video_path")  # For uploaded videos
+    aspect_ratio = input_data.get("aspect_ratio", "9:16")  # Default 9:16 for vertical
     
     # Convert segments from [{start, end}] dicts to [(start, end)] tuples
     segments = []
@@ -40,7 +41,7 @@ def process_render_job(job_data: dict) -> dict:
     
     print(f"[RENDER WORKER] Processing job {job_id} for video {video_id}")
     print(f"[RENDER WORKER] Segments: {segments}")
-    print(f"[RENDER WORKER] prefer_oauth={prefer_oauth}, local_video_path={local_video_path}")
+    print(f"[RENDER WORKER] prefer_oauth={prefer_oauth}, local_video_path={local_video_path}, aspect_ratio={aspect_ratio}")
     
     # Update progress
     JobRepository.update_job(
@@ -83,7 +84,8 @@ def process_render_job(job_data: dict) -> dict:
                     segments=segments,
                     local_video_path=local_video_path,
                     prefer_oauth=prefer_oauth,
-                    progress_callback=progress_callback
+                    progress_callback=progress_callback,
+                    aspect_ratio=aspect_ratio
                 )
             )
         finally:

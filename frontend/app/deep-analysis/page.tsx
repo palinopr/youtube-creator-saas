@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import {
-  ArrowLeft,
   BarChart3,
   Clock,
   Calendar,
@@ -22,6 +21,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { API_URL } from "@/lib/config";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 // Polling interval in milliseconds
 const POLL_INTERVAL = 5000;
@@ -367,35 +367,27 @@ export default function DeepAnalysisPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Header */}
-      <header className="border-b border-white/10 bg-black/50 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <div>
-              <h1 className="text-xl font-bold flex items-center gap-2">
-                <Zap className="w-6 h-6 text-yellow-400" />
-                Deep Channel Analysis
-              </h1>
-              <p className="text-sm text-gray-400">
-                Comprehensive insights from {data?.summary?.total_videos?.toLocaleString()} videos
-              </p>
-            </div>
-            <button
-              onClick={startDeepAnalysis}
-              disabled={loading}
-              className="ml-auto p-2 hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50"
-            >
-              <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
-            </button>
+    <DashboardLayout activePath="/deep-analysis">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-2xl font-bold flex items-center gap-2">
+              <Zap className="w-7 h-7 text-yellow-400" />
+              Deep Channel Analysis
+            </h1>
+            <p className="text-gray-400 mt-1">
+              Comprehensive insights from {data?.summary?.total_videos?.toLocaleString()} videos
+            </p>
           </div>
+          <button
+            onClick={startDeepAnalysis}
+            disabled={loading}
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50"
+          >
+            <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
+          </button>
         </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Summary Cards */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/10 border border-purple-500/30 rounded-xl p-4">
@@ -888,7 +880,7 @@ export default function DeepAnalysisPage() {
             </div>
           </div>
         )}
-      </main>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 }

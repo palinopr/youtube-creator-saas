@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import {
-  ArrowLeft,
   RefreshCw,
   Loader2,
   TrendingUp,
@@ -30,6 +28,7 @@ import {
   Combine,
 } from "lucide-react";
 import { API_URL } from "@/lib/config";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 interface AdvancedData {
   summary: {
@@ -213,19 +212,16 @@ export default function AdvancedInsightsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white">
-      {/* Header */}
-      <header className="border-b border-orange-500/20 bg-black/70 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-          </Link>
-          <div className="flex flex-col items-center">
-            <h1 className="text-xl font-bold flex items-center gap-2">
-              <Zap className="w-6 h-6 text-orange-400" />
+    <DashboardLayout activePath="/advanced-insights">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Page Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-2xl font-bold flex items-center gap-2">
+              <Zap className="w-7 h-7 text-orange-400" />
               Advanced Insights
             </h1>
-            <p className="text-sm text-gray-400">
+            <p className="text-gray-400 mt-1">
               Deep analysis of {formatNumber(data.summary.total_videos_analyzed)} videos
             </p>
           </div>
@@ -236,9 +232,6 @@ export default function AdvancedInsightsPage() {
             <RefreshCw className="w-5 h-5 text-gray-400" />
           </button>
         </div>
-      </header>
-
-      <div className="max-w-7xl mx-auto px-6 py-8">
         {/* Tabs */}
         <div className="flex flex-wrap gap-2 mb-8 border-b border-white/10 pb-4">
           <button
@@ -643,7 +636,7 @@ export default function AdvancedInsightsPage() {
           </div>
         )}
       </div>
-    </main>
+    </DashboardLayout>
   );
 }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Film,
   Search,
@@ -8,7 +8,7 @@ import {
   ThumbsUp,
   Loader2,
 } from "lucide-react";
-import { VideoItem, formatNumber, formatISODuration } from "../types";
+import { VideoItem, formatNumber, formatISODuration, API_URL } from "../types";
 
 interface VideoSelectorProps {
   videos: VideoItem[];
@@ -24,13 +24,42 @@ export function VideoSelector({
   onSelectVideo,
 }: VideoSelectorProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<VideoItem[] | null>(null);
+  const [searching, setSearching] = useState(false);
 
-  const filteredVideos = videos.filter((v) =>
-    v.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Debounced search - calls backend API
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setSearchResults(null);
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      setSearching(true);
+      try {
+        const res = await fetch(
+          `${API_URL}/api/youtube/videos/search?q=${encodeURIComponent(searchQuery)}&max_results=50`,
+          { credentials: "include" }
+        );
+        if (res.ok) {
+          const data = await res.json();
+          setSearchResults(data.videos || []);
+        }
+      } catch (error) {
+        console.error("Search error:", error);
+      }
+      setSearching(false);
+    }, 500); // 500ms debounce
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Show search results if searching, otherwise show all videos
+  const displayVideos = searchQuery.trim() ? (searchResults ?? []) : videos;
+  const isLoading = loading || searching;
 
   return (
-    <div className="bg-[#111] border border-white/10 rounded-xl p-4 h-full flex flex-col">
+    <div className="bg-[#111] border border-white/10 rounded-xl p-4 h-full flex flex-col overflow-hidden">
       <h2 className="font-semibold text-white mb-4 flex items-center gap-2">
         <Film className="w-5 h-5 text-pink-400" />
         Your Videos
@@ -43,19 +72,22 @@ export function VideoSelector({
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search videos..."
+          placeholder="Search all videos..."
           className="w-full pl-10 pr-4 py-2.5 bg-black/50 border border-white/10 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-pink-500 transition-colors"
         />
+        {searching && (
+          <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-pink-500 animate-spin" />
+        )}
       </div>
 
-      {/* Video List - fills remaining space */}
-      <div className="flex-1 overflow-y-auto pr-1 space-y-2 scrollbar-thin">
-        {loading ? (
+      {/* Video List - scrollable container */}
+      <div className="overflow-y-auto pr-1 space-y-2" style={{ maxHeight: 'calc(100vh - 320px)' }}>
+        {isLoading && !searchResults ? (
           <div className="flex justify-center py-8">
             <Loader2 className="w-6 h-6 text-pink-500 animate-spin" />
           </div>
-        ) : filteredVideos.length > 0 ? (
-          filteredVideos.slice(0, 30).map((video) => (
+        ) : displayVideos.length > 0 ? (
+          displayVideos.map((video) => (
             <VideoListItem
               key={video.video_id}
               video={video}
@@ -65,7 +97,7 @@ export function VideoSelector({
           ))
         ) : (
           <p className="text-gray-500 text-sm text-center py-8">
-            No videos found
+            {searchQuery ? "No videos found for this search" : "No videos found"}
           </p>
         )}
       </div>

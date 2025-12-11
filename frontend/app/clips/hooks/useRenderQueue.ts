@@ -5,7 +5,7 @@ import { ClipSuggestion, RenderJob, API_URL } from "../types";
 
 interface UseRenderQueueReturn {
   renderJobs: Record<string, RenderJob>;
-  renderClip: (clip: ClipSuggestion, videoId: string) => Promise<void>;
+  renderClip: (clip: ClipSuggestion, videoId: string, customStart?: number, customEnd?: number, aspectRatio?: string) => Promise<void>;
   downloadClip: (clipId: string) => void;
   clearJobs: () => void;
 }
@@ -117,35 +117,49 @@ export function useRenderQueue(): UseRenderQueueReturn {
   }, []);
 
   const renderClip = useCallback(
-    async (clip: ClipSuggestion, videoId: string) => {
+    async (clip: ClipSuggestion, videoId: string, customStart?: number, customEnd?: number, aspectRatio?: string) => {
       try {
-        // Build segments from the actual AI-detected timestamps
+        // Build segments - either custom edited range or AI-detected timestamps
         const segments: { start: number; end: number }[] = [];
 
-        // Add hook segment
-        if (clip.hook) {
-          segments.push({
-            start: clip.hook.start_time,
-            end: clip.hook.end_time,
-          });
-        }
+        // Default aspect ratio is 9:16 (TikTok/Reels)
+        const ratio = aspectRatio || "9:16";
+        console.log("[CLIPS] Using aspect ratio:", ratio);
 
-        // Add body segments
-        if (clip.body_segments && clip.body_segments.length > 0) {
-          for (const seg of clip.body_segments) {
+        // If custom start/end provided, use single segment with those times
+        if (customStart !== undefined && customEnd !== undefined) {
+          segments.push({
+            start: customStart,
+            end: customEnd,
+          });
+          console.log("[CLIPS] Using custom edited times:", customStart, "to", customEnd);
+        } else {
+          // Use original AI-detected segments
+          // Add hook segment
+          if (clip.hook) {
             segments.push({
-              start: seg.start_time,
-              end: seg.end_time,
+              start: clip.hook.start_time,
+              end: clip.hook.end_time,
             });
           }
-        }
 
-        // Add loop ending segment
-        if (clip.loop_ending) {
-          segments.push({
-            start: clip.loop_ending.start_time,
-            end: clip.loop_ending.end_time,
-          });
+          // Add body segments
+          if (clip.body_segments && clip.body_segments.length > 0) {
+            for (const seg of clip.body_segments) {
+              segments.push({
+                start: seg.start_time,
+                end: seg.end_time,
+              });
+            }
+          }
+
+          // Add loop ending segment
+          if (clip.loop_ending) {
+            segments.push({
+              start: clip.loop_ending.start_time,
+              end: clip.loop_ending.end_time,
+            });
+          }
         }
 
         // Fallback if no segments found
@@ -165,6 +179,7 @@ export function useRenderQueue(): UseRenderQueueReturn {
             clip_id: clip.clip_id,
             segments: segments,
             title: clip.title,
+            aspect_ratio: ratio,
             prefer_oauth: true, // Use OAuth for SaaS mode - user's own videos
           }),
         });
