@@ -24,6 +24,9 @@ cryptography>=43.0.0
 # Stripe Billing
 stripe>=11.0.0
 
+# Database
+sqlalchemy>=2.0.0
+
 # Environment and utilities
 python-dotenv>=1.0.1
 httpx>=0.28.0
@@ -38,7 +41,7 @@ youtube-transcript-api>=0.6.3
 # Video processing for Clips feature
 ffmpeg-python>=0.2.0
 yt-dlp>=2024.12.0
-opencv-python-headless>=4.10.0
+# opencv-python-headless - optional, for face detection (disabled to speed up builds)
 
 # Rate limiting
 slowapi>=0.1.9
