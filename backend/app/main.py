@@ -1,17 +1,28 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from .auth import auth_router
 from .routers.analytics import router as analytics_router
 from .routers.seo import router as seo_router
 from .routers.channel_analysis import router as analysis_router
 from .routers.clips import router as clips_router
+from .routers.youtube_videos import router as youtube_videos_router
+from .routers.billing import router as billing_router
+from .routers.admin import router as admin_router
+from .routers.user import router as user_router
 from .config import get_settings
 from .workers.manager import start_workers, stop_workers
 from .db.models import init_db
 
 settings = get_settings()
+
+# Initialize rate limiter
+limiter = Limiter(key_func=get_remote_address)
 
 
 @asynccontextmanager
@@ -47,13 +58,19 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Attach rate limiter to app
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         settings.frontend_url,
         "http://localhost:3000",
+        "http://localhost:3001",
         "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -66,6 +83,10 @@ app.include_router(analytics_router)
 app.include_router(seo_router)
 app.include_router(analysis_router)
 app.include_router(clips_router)
+app.include_router(youtube_videos_router)
+app.include_router(billing_router)
+app.include_router(admin_router)
+app.include_router(user_router)
 
 
 @app.get("/")
@@ -107,6 +128,40 @@ async def root():
                 "render": "/api/clips/render - Render clip to MP4 with captions (async)",
                 "status": "/api/clips/{job_id}/status - Check render progress",
                 "download": "/api/clips/{job_id}/download - Download rendered clip",
+            },
+            "youtube": {
+                "channel": "/api/youtube/channel - Get connected YouTube channel info",
+                "videos": "/api/youtube/videos - List user's own videos",
+                "video_details": "/api/youtube/videos/{video_id} - Get video details",
+                "verify_ownership": "/api/youtube/videos/{video_id}/verify-ownership - Verify user owns video",
+                "prepare_download": "/api/youtube/videos/{video_id}/prepare-download - Download user's video",
+            },
+            "billing": {
+                "plans": "/api/billing/plans - Get available subscription plans",
+                "subscription": "/api/billing/subscription - Get current subscription status",
+                "checkout": "/api/billing/checkout - Create Stripe checkout session",
+                "portal": "/api/billing/portal - Create Stripe customer portal session",
+                "usage": "/api/billing/usage - Get usage statistics",
+                "downgrade": "/api/billing/downgrade - Downgrade to free plan",
+                "webhook": "/api/billing/webhook - Stripe webhook handler",
+            },
+            "admin": {
+                "status": "/api/admin/status - Check admin services status",
+                "seo_rankings": "/api/admin/seo/rankings - Get SEO rankings summary",
+                "seo_domains": "/api/admin/seo/domains - Manage tracked domains",
+                "seo_keywords": "/api/admin/seo/keywords - Manage tracked keywords",
+                "api_costs_summary": "/api/admin/api-costs/summary - Get API cost summary",
+                "api_costs_breakdown": "/api/admin/api-costs/breakdown - Get cost breakdown by day/agent/model",
+                "api_costs_recent": "/api/admin/api-costs/recent - Get recent API calls",
+                "api_costs_by_user": "/api/admin/api-costs/by-user - Get costs by user",
+            },
+            "user": {
+                "profile": "/api/user/profile - Get/update user profile",
+                "settings": "/api/user/settings - Get/update account settings",
+                "channels": "/api/user/channels - Get connected YouTube channels",
+                "export_data": "/api/user/export-data - Request GDPR data export",
+                "request_deletion": "/api/user/request-deletion - Request account deletion",
+                "cancel_deletion": "/api/user/cancel-deletion - Cancel deletion request",
             }
         }
     }

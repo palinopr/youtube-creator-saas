@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { 
-  Sparkles, 
-  X, 
-  Send, 
+import {
+  Sparkles,
+  X,
+  Send,
   Loader2,
   Bot,
   User,
@@ -12,8 +12,7 @@ import {
   Minimize2,
   Trash2
 } from "lucide-react";
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+import { API_URL } from "@/lib/config";
 
 interface Message {
   id: string;

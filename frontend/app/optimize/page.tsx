@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { API_URL } from "@/lib/config";
 
 interface QuickWin {
   action: string;
@@ -72,9 +73,9 @@ export default function OptimizePage() {
     setLoading(true);
     try {
       const [blueprintRes, quickWinsRes, nextVideoRes] = await Promise.all([
-        fetch("http://localhost:8000/api/analysis/optimize"),
-        fetch("http://localhost:8000/api/analysis/optimize/quick-wins"),
-        fetch("http://localhost:8000/api/analysis/optimize/next-video"),
+        fetch(`${API_URL}/api/analysis/optimize`),
+        fetch(`${API_URL}/api/analysis/optimize/quick-wins`),
+        fetch(`${API_URL}/api/analysis/optimize/next-video`),
       ]);
       
       const blueprintData = await blueprintRes.json();
@@ -94,7 +95,7 @@ export default function OptimizePage() {
     if (!scoreTitle) return;
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/api/analysis/optimize/score", {
+      const res = await fetch(`${API_URL}/api/analysis/optimize/score`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -115,7 +116,7 @@ export default function OptimizePage() {
     if (!generateTopic) return;
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/api/analysis/optimize/generate-title", {
+      const res = await fetch(`${API_URL}/api/analysis/optimize/generate-title`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

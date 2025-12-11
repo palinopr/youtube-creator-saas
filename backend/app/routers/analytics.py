@@ -1,18 +1,23 @@
-from fastapi import APIRouter, HTTPException, Depends
-from pydantic import BaseModel
+from fastapi import APIRouter, HTTPException, Depends, Query, Request
+from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime, timedelta
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
+from ..auth.dependencies import get_current_user, check_usage
+from ..db.models import User
 from ..tools.youtube_tools import YouTubeTools
 from ..agents.analytics_agent import AnalyticsAgent
 
 router = APIRouter(prefix="/api", tags=["analytics"])
+limiter = Limiter(key_func=get_remote_address)
 
 
 class AgentQuery(BaseModel):
     """Request model for agent queries."""
-    question: str
+    question: str = Field(..., min_length=1, max_length=1000, description="Question to ask the AI agent")
 
 
 class VideoStats(BaseModel):
@@ -38,7 +43,7 @@ class ChannelStats(BaseModel):
 
 
 @router.get("/channels/list")
-async def list_accessible_channels():
+async def list_accessible_channels(user: User = Depends(get_current_user)):
     """List all channels the authenticated user has access to (including Brand Accounts)."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -73,7 +78,7 @@ async def list_accessible_channels():
 
 
 @router.get("/channel/stats", response_model=ChannelStats)
-async def get_channel_stats():
+async def get_channel_stats(user: User = Depends(get_current_user)):
     """Get current channel statistics."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -87,7 +92,10 @@ async def get_channel_stats():
 
 
 @router.get("/videos/recent", response_model=List[VideoStats])
-async def get_recent_videos(limit: int = 10):
+async def get_recent_videos(
+    limit: int = Query(default=10, ge=1, le=100, description="Number of videos"),
+    user: User = Depends(get_current_user)
+):
     """Get recent videos with their statistics."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -101,7 +109,7 @@ async def get_recent_videos(limit: int = 10):
 
 
 @router.get("/videos/{video_id}")
-async def get_video_details(video_id: str):
+async def get_video_details(video_id: str, user: User = Depends(get_current_user)):
     """Get detailed statistics for a specific video."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -115,7 +123,10 @@ async def get_video_details(video_id: str):
 
 
 @router.get("/analytics/overview")
-async def get_analytics_overview(days: int = 30):
+async def get_analytics_overview(
+    days: int = Query(default=30, ge=1, le=365, description="Days of history"),
+    user: User = Depends(get_current_user)
+):
     """Get analytics overview for the past N days."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -130,7 +141,12 @@ async def get_analytics_overview(days: int = 30):
 
 
 @router.post("/agent/query")
-async def query_agent(query: AgentQuery):
+@limiter.limit("10/minute")
+async def query_agent(
+    request: Request,
+    query: AgentQuery,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """Ask the AI agent a question about your channel."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
@@ -151,7 +167,11 @@ async def query_agent(query: AgentQuery):
 
 
 @router.get("/insights/quick")
-async def get_quick_insights():
+@limiter.limit("5/minute")
+async def get_quick_insights(
+    request: Request,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """Get quick AI-generated insights about the channel."""
     try:
         youtube = get_authenticated_service("youtube", "v3")

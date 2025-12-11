@@ -2,28 +2,23 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { 
-  Eye, 
-  ThumbsUp, 
+import {
+  Eye,
+  ThumbsUp,
   MessageSquare,
   Calendar,
   Search,
-  Youtube,
-  Home,
   Video,
-  Zap,
-  BarChart3,
-  TrendingUp,
-  Sparkles,
-  LogOut,
   ChevronRight,
   Play,
   ArrowUpDown,
   Loader2,
-  Scissors,
 } from "lucide-react";
-
-const API_URL = "http://localhost:8000";
+import { API_URL } from "@/lib/config";
+import { formatNumber, formatDate } from "@/lib/utils";
+import Sidebar from "@/components/layout/Sidebar";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/components/providers/ErrorProvider";
 
 interface VideoItem {
   video_id: string;
@@ -43,9 +38,14 @@ export default function VideosPage() {
   const [sortBy, setSortBy] = useState<"date" | "views" | "likes">("date");
   const [sortOrder, setSortOrder] = useState<"desc" | "asc">("desc");
 
+  const { isAuthenticated, isLoading: authLoading } = useAuth({ requireAuth: true });
+  const { showError } = useToast();
+
   useEffect(() => {
-    loadVideos();
-  }, []);
+    if (isAuthenticated) {
+      loadVideos();
+    }
+  }, [isAuthenticated]);
 
   const loadVideos = async () => {
     try {
@@ -55,31 +55,13 @@ export default function VideosPage() {
       if (res.ok) {
         const data = await res.json();
         setVideos(Array.isArray(data) ? data : data.videos || []);
+      } else {
+        showError("Failed to load videos");
       }
     } catch (error) {
-      console.error("Error loading videos:", error);
+      showError("Failed to load videos. Please try again.");
     }
     setLoading(false);
-  };
-
-  const handleLogout = async () => {
-    await fetch(`${API_URL}/auth/logout`, {
-      method: "POST",
-      credentials: "include",
-    });
-    window.location.href = "/";
-  };
-
-  const formatNumber = (num: number | undefined | null) => {
-    if (num === undefined || num === null) return "0";
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
-    if (num >= 1000) return (num / 1000).toFixed(1) + "K";
-    return num.toString();
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
   };
 
   // Filter and sort videos
@@ -97,55 +79,18 @@ export default function VideosPage() {
       return sortOrder === "desc" ? comparison : -comparison;
     });
 
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <Loader2 className="w-10 h-10 text-red-500 animate-spin" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex">
-      {/* Left Sidebar */}
-      <aside className="w-64 bg-[#111] border-r border-white/10 flex-shrink-0 hidden lg:flex flex-col">
-        {/* Logo */}
-        <div className="p-4 border-b border-white/10">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Youtube className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="font-bold text-white">CreatorSaaS</h1>
-              <p className="text-xs text-gray-500">YouTube Analytics</p>
-            </div>
-          </Link>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-3 space-y-1">
-          <NavItem icon={<Home />} label="Dashboard" href="/" />
-          <NavItem icon={<Video />} label="Videos" href="/videos" active />
-          
-          <div className="pt-4 pb-2">
-            <p className="text-xs text-gray-600 uppercase tracking-wider px-3">Tools</p>
-          </div>
-          
-          <NavItem icon={<Scissors />} label="Clips" href="/clips" color="pink" />
-          <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" color="purple" />
-          
-          <div className="pt-4 pb-2">
-            <p className="text-xs text-gray-600 uppercase tracking-wider px-3">Analytics</p>
-          </div>
-          
-          <NavItem icon={<BarChart3 />} label="Channel Analysis" href="/analysis" />
-          <NavItem icon={<TrendingUp />} label="Deep Analysis" href="/deep-analysis" />
-          <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" />
-        </nav>
-
-        {/* Logout */}
-        <div className="p-3 border-t border-white/10">
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-3 w-full p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-          >
-            <LogOut className="w-5 h-5" />
-            <span className="text-sm">Logout</span>
-          </button>
-        </div>
-      </aside>
+      <Sidebar activePath="/videos" />
 
       {/* Main Content */}
       <main className="flex-1 min-w-0">
@@ -262,37 +207,3 @@ export default function VideosPage() {
     </div>
   );
 }
-
-function NavItem({ 
-  icon, 
-  label, 
-  href, 
-  active = false, 
-  color = "default"
-}: { 
-  icon: React.ReactNode; 
-  label: string; 
-  href: string;
-  active?: boolean;
-  color?: string;
-}) {
-  const colorClasses: Record<string, string> = {
-    default: active ? "text-white bg-white/10" : "text-gray-400 hover:text-white hover:bg-white/5",
-    purple: "text-purple-400 hover:text-purple-300 hover:bg-purple-500/10",
-    pink: "text-pink-400 hover:text-pink-300 hover:bg-pink-500/10",
-    emerald: "text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10",
-    blue: "text-blue-400 hover:text-blue-300 hover:bg-blue-500/10",
-    indigo: "text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10",
-  };
-  
-  return (
-    <Link
-      href={href}
-      className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${colorClasses[color]}`}
-    >
-      <span className="w-5 h-5 flex-shrink-0">{icon}</span>
-      <span className="text-sm font-medium">{label}</span>
-    </Link>
-  );
-}
-

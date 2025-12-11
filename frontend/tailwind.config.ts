@@ -14,17 +14,33 @@ const config: Config = {
           dark: "#282828",
           light: "#F9F9F9",
         },
+        // TubeGrow Brand Colors
         brand: {
           50: "#fef2f2",
           100: "#fee2e2",
           200: "#fecaca",
           300: "#fca5a5",
           400: "#f87171",
-          500: "#ef4444",
+          500: "#ef4444",  // Primary red
           600: "#dc2626",
           700: "#b91c1c",
           800: "#991b1b",
           900: "#7f1d1d",
+          950: "#450a0a",
+        },
+        // Orange accent (for gradient end)
+        accent: {
+          50: "#fff7ed",
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#f97316",  // Primary orange
+          600: "#ea580c",
+          700: "#c2410c",
+          800: "#9a3412",
+          900: "#7c2d12",
+          950: "#431407",
         },
       },
       fontFamily: {

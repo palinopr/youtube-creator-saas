@@ -1,14 +1,18 @@
 """Channel Analysis API - Data-driven insights from your video history."""
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request, Depends
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel
 import uuid
 import asyncio
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
+from ..auth.dependencies import get_current_user, check_usage
+from ..db.models import User
 from ..tools.channel_analyzer import ChannelAnalyzer
 from ..tools.deep_analytics import DeepAnalytics
 from ..tools.causal_analytics import CausalAnalytics
@@ -43,6 +47,7 @@ class ExtractMetaTagsRequest(BaseModel):
     title: str
 
 router = APIRouter(prefix="/api/analysis", tags=["analysis"])
+limiter = Limiter(key_func=get_remote_address)
 
 
 # ========== ASYNC ANALYSIS ENDPOINTS (POLLING SUPPORT) ==========
@@ -88,7 +93,12 @@ def _run_deep_analysis_sync(job_id: str, max_videos: int):
 
 
 @router.post("/deep/start")
-async def start_deep_analysis(max_videos: int = 500):
+@limiter.limit("3/minute")
+async def start_deep_analysis(
+    request: Request,
+    max_videos: int = 500,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Start an async deep analysis job.
     
@@ -129,7 +139,7 @@ async def start_deep_analysis(max_videos: int = 500):
 
 
 @router.get("/deep/status/{job_id}")
-async def get_deep_analysis_status(job_id: str):
+async def get_deep_analysis_status(job_id: str, user: User = Depends(get_current_user)):
     """
     Get the status of an async deep analysis job.
     
@@ -160,7 +170,7 @@ async def get_deep_analysis_status(job_id: str):
 
 
 @router.delete("/deep/job/{job_id}")
-async def cancel_deep_analysis(job_id: str):
+async def cancel_deep_analysis(job_id: str, user: User = Depends(get_current_user)):
     """
     Cancel or clean up an analysis job.
     
@@ -175,7 +185,12 @@ async def cancel_deep_analysis(job_id: str):
 
 
 @router.get("/patterns")
-async def analyze_channel_patterns(max_videos: int = 5000):
+@limiter.limit("5/minute")
+async def analyze_channel_patterns(
+    request: Request,
+    max_videos: int = 5000,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Analyze your channel's video history to find performance patterns.
     
@@ -225,7 +240,7 @@ async def analyze_channel_patterns(max_videos: int = 5000):
 
 
 @router.get("/top-videos")
-async def get_top_performing_videos(limit: int = 20):
+async def get_top_performing_videos(limit: int = 20, user: User = Depends(get_current_user)):
     """
     Get top performing videos with their SEO characteristics.
     
@@ -253,7 +268,7 @@ async def get_top_performing_videos(limit: int = 20):
 
 
 @router.get("/compare/{video_id}")
-async def compare_to_top_performers(video_id: str):
+async def compare_to_top_performers(video_id: str, user: User = Depends(get_current_user)):
     """
     Compare a specific video's SEO to your top performers.
     
@@ -342,7 +357,12 @@ async def compare_to_top_performers(video_id: str):
 # ========== DEEP ANALYTICS ENDPOINTS ==========
 
 @router.get("/deep")
-async def deep_channel_analysis(max_videos: int = 5000):
+@limiter.limit("3/minute")
+async def deep_channel_analysis(
+    request: Request,
+    max_videos: int = 5000,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Run comprehensive deep analysis on your channel.
     
@@ -377,7 +397,7 @@ async def deep_channel_analysis(max_videos: int = 5000):
 
 
 @router.get("/posting-times")
-async def analyze_posting_times(max_videos: int = 5000):
+async def analyze_posting_times(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze best posting times for your channel.
     
@@ -406,7 +426,7 @@ async def analyze_posting_times(max_videos: int = 5000):
 
 
 @router.get("/title-patterns")
-async def analyze_title_patterns(max_videos: int = 5000):
+async def analyze_title_patterns(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze title patterns to find power words and phrases.
     
@@ -435,7 +455,7 @@ async def analyze_title_patterns(max_videos: int = 5000):
 
 
 @router.get("/engagement")
-async def analyze_engagement(max_videos: int = 5000):
+async def analyze_engagement(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze engagement patterns (likes, comments, ratios).
     
@@ -463,7 +483,7 @@ async def analyze_engagement(max_videos: int = 5000):
 
 
 @router.get("/content-types")
-async def analyze_content_types(max_videos: int = 5000):
+async def analyze_content_types(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze performance by content type.
     
@@ -490,7 +510,7 @@ async def analyze_content_types(max_videos: int = 5000):
 
 
 @router.get("/growth")
-async def analyze_growth_trends(max_videos: int = 5000):
+async def analyze_growth_trends(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze channel growth trends over time.
     
@@ -520,7 +540,12 @@ async def analyze_growth_trends(max_videos: int = 5000):
 # ========== CAUSAL ANALYTICS ENDPOINTS ==========
 
 @router.get("/causal")
-async def run_causal_analysis(max_videos: int = 50000):
+@limiter.limit("3/minute")
+async def run_causal_analysis(
+    request: Request,
+    max_videos: int = 50000,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Deep causal analysis to understand WHY videos succeed.
     
@@ -551,7 +576,7 @@ async def run_causal_analysis(max_videos: int = 50000):
 
 
 @router.get("/celebrity-impact")
-async def analyze_celebrity_impact(max_videos: int = 5000):
+async def analyze_celebrity_impact(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze which celebrities/people drive the most views.
     
@@ -579,7 +604,7 @@ async def analyze_celebrity_impact(max_videos: int = 5000):
 
 
 @router.get("/success-factors")
-async def analyze_success_factors(max_videos: int = 5000):
+async def analyze_success_factors(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Break down what factors contribute to video success.
     
@@ -604,7 +629,7 @@ async def analyze_success_factors(max_videos: int = 5000):
 
 
 @router.get("/description-impact")
-async def analyze_description_impact(max_videos: int = 5000):
+async def analyze_description_impact(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Deep dive into description patterns and their impact.
     
@@ -634,7 +659,7 @@ async def analyze_description_impact(max_videos: int = 5000):
 
 
 @router.get("/title-vs-content")
-async def analyze_title_vs_content(max_videos: int = 5000):
+async def analyze_title_vs_content(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Separate title SEO effect from content/person effect.
     
@@ -659,7 +684,12 @@ async def analyze_title_vs_content(max_videos: int = 5000):
 
 
 @router.get("/advanced")
-async def run_advanced_analysis(max_videos: int = 5000):
+@limiter.limit("3/minute")
+async def run_advanced_analysis(
+    request: Request,
+    max_videos: int = 5000,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Run advanced causal analysis with deeper insights:
     - Factor combinations (celebrity + emoji + long title)
@@ -683,7 +713,7 @@ async def run_advanced_analysis(max_videos: int = 5000):
 
 
 @router.get("/combo-effects")
-async def analyze_combo_effects(max_videos: int = 5000):
+async def analyze_combo_effects(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze what happens when you combine multiple success factors.
     E.g., celebrity + emoji + long title = ?
@@ -702,7 +732,7 @@ async def analyze_combo_effects(max_videos: int = 5000):
 
 
 @router.get("/celebrity-trends")
-async def analyze_celebrity_trends(max_videos: int = 5000):
+async def analyze_celebrity_trends(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze which celebrities are rising or falling in performance.
     """
@@ -720,7 +750,7 @@ async def analyze_celebrity_trends(max_videos: int = 5000):
 
 
 @router.get("/multi-celebrity")
-async def analyze_multi_celebrity(max_videos: int = 5000):
+async def analyze_multi_celebrity(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze if mentioning multiple celebrities multiplies views.
     """
@@ -738,7 +768,7 @@ async def analyze_multi_celebrity(max_videos: int = 5000):
 
 
 @router.get("/engagement-quality")
-async def analyze_engagement_quality(max_videos: int = 5000):
+async def analyze_engagement_quality(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze engagement quality (likes/comments ratio), not just views.
     """
@@ -756,7 +786,7 @@ async def analyze_engagement_quality(max_videos: int = 5000):
 
 
 @router.get("/controversy-celebrity")
-async def analyze_controversy_celebrity(max_videos: int = 5000):
+async def analyze_controversy_celebrity(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze if controversial celebrity videos perform differently.
     """
@@ -774,7 +804,7 @@ async def analyze_controversy_celebrity(max_videos: int = 5000):
 
 
 @router.get("/celebrity-title-patterns")
-async def analyze_celebrity_title_patterns(max_videos: int = 5000):
+async def analyze_celebrity_title_patterns(max_videos: int = 5000, user: User = Depends(get_current_user)):
     """
     Analyze which title patterns work best with celebrity videos.
     E.g., "Entrevista a X" vs "X revela" vs "X vs Y"
@@ -795,7 +825,7 @@ async def analyze_celebrity_title_patterns(max_videos: int = 5000):
 # ========== CONTENT OPTIMIZER ENDPOINTS ==========
 
 @router.get("/optimize")
-async def get_optimization_blueprint():
+async def get_optimization_blueprint(user: User = Depends(get_current_user)):
     """
     Get complete optimization blueprint based on ALL channel data.
     
@@ -823,7 +853,12 @@ async def get_optimization_blueprint():
 
 
 @router.post("/optimize/generate-title")
-async def generate_optimized_title(request: GenerateTitleRequest):
+@limiter.limit("10/minute")
+async def generate_optimized_title(
+    request: Request,
+    title_request: GenerateTitleRequest,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Generate AI-optimized title for a video topic.
     
@@ -844,18 +879,23 @@ async def generate_optimized_title(request: GenerateTitleRequest):
     try:
         optimizer = ContentOptimizer({})
         result = await optimizer.generate_optimized_title(
-            topic=request.topic,
-            celebrities=request.celebrities,
-            transcript=request.transcript
+            topic=title_request.topic,
+            celebrities=title_request.celebrities,
+            transcript=title_request.transcript
         )
         return result
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.post("/optimize/extract-meta-tags")
-async def extract_meta_tags(request: ExtractMetaTagsRequest):
+@limiter.limit("10/minute")
+async def extract_meta_tags(
+    request: Request,
+    meta_request: ExtractMetaTagsRequest,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Extract 15-20 meta tags from transcript to maximize SEO.
     
@@ -871,17 +911,22 @@ async def extract_meta_tags(request: ExtractMetaTagsRequest):
     try:
         optimizer = ContentOptimizer({})
         result = await optimizer.extract_meta_tags(
-            transcript=request.transcript,
-            current_title=request.title
+            transcript=meta_request.transcript,
+            current_title=meta_request.title
         )
         return result
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.post("/optimize/score")
-async def score_video_before_publish(request: ScoreVideoRequest):
+@limiter.limit("10/minute")
+async def score_video_before_publish(
+    request: Request,
+    score_request: ScoreVideoRequest,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Score a video idea BEFORE you publish to predict success.
     
@@ -904,18 +949,18 @@ async def score_video_before_publish(request: ScoreVideoRequest):
     try:
         optimizer = ContentOptimizer({})
         result = await optimizer.score_video_idea(
-            title=request.title,
-            description=request.description,
-            celebrities=request.celebrities
+            title=score_request.title,
+            description=score_request.description,
+            celebrities=score_request.celebrities
         )
         return result
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.get("/optimize/next-video")
-async def get_next_video_recommendation():
+async def get_next_video_recommendation(user: User = Depends(get_current_user)):
     """
     Get THE specific video you should make next.
     
@@ -966,7 +1011,7 @@ async def get_next_video_recommendation():
 
 
 @router.get("/optimize/quick-wins")
-async def get_quick_wins():
+async def get_quick_wins(user: User = Depends(get_current_user)):
     """
     Get immediate actions that will boost your channel.
     
@@ -989,7 +1034,12 @@ async def get_quick_wins():
 # ========== TRANSCRIPT ANALYSIS ENDPOINTS ==========
 
 @router.get("/transcripts/patterns")
-async def analyze_transcript_patterns(max_videos: int = 50):
+@limiter.limit("3/minute")
+async def analyze_transcript_patterns(
+    request: Request,
+    max_videos: int = 50,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Analyze video transcripts to find what CONTENT drives views.
     
@@ -1025,7 +1075,12 @@ async def analyze_transcript_patterns(max_videos: int = 50):
 
 
 @router.get("/transcripts/video/{video_id}")
-async def analyze_single_video_transcript(video_id: str):
+@limiter.limit("10/minute")
+async def analyze_single_video_transcript(
+    request: Request,
+    video_id: str,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Deep AI analysis of a single video's transcript.
     
@@ -1065,7 +1120,12 @@ async def analyze_single_video_transcript(video_id: str):
 
 
 @router.get("/transcripts/compare")
-async def compare_top_vs_bottom_transcripts(max_videos: int = 100):
+@limiter.limit("3/minute")
+async def compare_top_vs_bottom_transcripts(
+    request: Request,
+    max_videos: int = 100,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
     """
     Compare transcripts of TOP performing videos vs BOTTOM performing videos.
     
@@ -1101,7 +1161,7 @@ async def compare_top_vs_bottom_transcripts(max_videos: int = 100):
 
 
 @router.get("/transcripts/get/{video_id}")
-async def get_video_transcript(video_id: str):
+async def get_video_transcript(video_id: str, user: User = Depends(get_current_user)):
     """
     Get the raw transcript of a video.
     

@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { 
-  Play, 
-  TrendingUp, 
-  Users, 
-  Eye, 
+import dynamic from "next/dynamic";
+import {
+  Play,
+  TrendingUp,
+  Users,
+  Eye,
   MessageSquare,
   ThumbsUp,
   Youtube,
@@ -21,10 +22,33 @@ import {
   Menu,
   X,
   Scissors,
+  Check,
+  Star,
+  Shield,
 } from "lucide-react";
 import Link from "next/link";
+import { StatCard, StatCardSkeleton, ChartSkeleton, VideoSpotlight } from "@/components/dashboard";
+import { useDashboardData, formatNumber, formatDate } from "@/hooks/useDashboardData";
+import { API_URL, AUTH_ENDPOINTS } from "@/lib/config";
+import { Logo } from "@/components/ui/Logo";
+import { Testimonials } from "@/components/marketing/Testimonials";
+import { FAQ } from "@/components/marketing/FAQ";
+import { HowItWorks } from "@/components/marketing/HowItWorks";
+import { DashboardPreview } from "@/components/marketing/DashboardPreview";
+import { FeatureShowcase } from "@/components/marketing/FeatureShowcase";
+import { StatsBar } from "@/components/marketing/StatsBar";
+import Sidebar from "@/components/layout/Sidebar";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Lazy load charts for better performance
+const ViewsTrendChart = dynamic(
+  () => import("@/components/dashboard/ViewsTrendChart").then((mod) => ({ default: mod.ViewsTrendChart })),
+  { loading: () => <ChartSkeleton />, ssr: false }
+);
+
+const SubscriberChart = dynamic(
+  () => import("@/components/dashboard/SubscriberChart").then((mod) => ({ default: mod.SubscriberChart })),
+  { loading: () => <ChartSkeleton />, ssr: false }
+);
 
 export default function HomePage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -36,20 +60,32 @@ export default function HomePage() {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await fetch(`${API_URL}/auth/status`, {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+      const response = await fetch(AUTH_ENDPOINTS.STATUS, {
         credentials: "include",
+        signal: controller.signal,
       });
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
       setIsAuthenticated(data.authenticated);
     } catch (error) {
       console.error("Auth check failed:", error);
+      // Default to not authenticated on error
+      setIsAuthenticated(false);
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleLogin = () => {
-    window.location.href = `${API_URL}/auth/login`;
+    window.location.href = AUTH_ENDPOINTS.LOGIN;
   };
 
   if (isLoading) {
@@ -70,6 +106,66 @@ export default function HomePage() {
   return <LandingPage onLogin={handleLogin} />;
 }
 
+const pricingPlans = [
+  {
+    id: "free",
+    name: "Free",
+    price: 0,
+    description: "Get started with basic analytics",
+    highlights: [
+      "10 videos per month",
+      "20 AI queries",
+      "Basic channel stats",
+      "Video performance tracking",
+    ],
+    popular: false,
+  },
+  {
+    id: "starter",
+    name: "Starter",
+    price: 19,
+    description: "Perfect for growing creators",
+    highlights: [
+      "50 videos per month",
+      "100 AI queries",
+      "SEO optimization tools",
+      "20 viral clips per month",
+      "Email support",
+    ],
+    popular: false,
+  },
+  {
+    id: "pro",
+    name: "Pro",
+    price: 49,
+    description: "For serious content creators",
+    highlights: [
+      "Unlimited videos",
+      "500 AI queries",
+      "Advanced SEO tools",
+      "100 viral clips per month",
+      "Priority support",
+      "Competitor research",
+    ],
+    popular: true,
+  },
+  {
+    id: "agency",
+    name: "Agency",
+    price: 149,
+    description: "For teams and agencies",
+    highlights: [
+      "Unlimited everything",
+      "API access",
+      "White-label reports",
+      "Dedicated support",
+      "Custom integrations",
+      "Multi-channel management",
+    ],
+    popular: false,
+  },
+];
+
 function LandingPage({ onLogin }: { onLogin: () => void }) {
   return (
     <main className="min-h-screen bg-[#0a0a0a]">
@@ -77,19 +173,24 @@ function LandingPage({ onLogin }: { onLogin: () => void }) {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-950/20 via-black to-black" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
           <nav className="flex items-center justify-between mb-20">
-            <div className="flex items-center gap-2">
-              <Youtube className="w-8 h-8 text-red-500" />
-              <span className="text-xl font-bold">CreatorSaaS</span>
+            <Logo size="md" linkToHome={false} />
+            <div className="flex items-center gap-4">
+              <Link
+                href="/pricing"
+                className="text-gray-400 hover:text-white transition-colors hidden sm:block"
+              >
+                Pricing
+              </Link>
+              <button
+                onClick={onLogin}
+                className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+              >
+                Sign In
+              </button>
             </div>
-            <button
-              onClick={onLogin}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-            >
-              Sign In
-            </button>
           </nav>
 
           <div className="text-center max-w-4xl mx-auto">
@@ -104,7 +205,7 @@ function LandingPage({ onLogin }: { onLogin: () => void }) {
             </h1>
 
             <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Get AI-powered insights, optimize your content, and grow your channel 
+              Get AI-powered insights, optimize your content, and grow your channel
               with actionable analytics that actually make a difference.
             </p>
 
@@ -117,6 +218,12 @@ function LandingPage({ onLogin }: { onLogin: () => void }) {
                 Connect YouTube
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+              <Link
+                href="/pricing"
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
 
@@ -140,6 +247,218 @@ function LandingPage({ onLogin }: { onLogin: () => void }) {
           </div>
         </div>
       </div>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Dashboard Preview */}
+      <DashboardPreview />
+
+      {/* Feature Showcase */}
+      <FeatureShowcase />
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 border-t border-white/10 bg-gradient-to-b from-black to-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full mb-6">
+              <Star className="w-4 h-4 text-brand-400" />
+              <span className="text-sm text-brand-400">Simple Pricing</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Start free and scale as you grow. No hidden fees.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {pricingPlans.map((plan) => (
+              <div
+                key={plan.id}
+                className={`relative rounded-2xl border p-6 flex flex-col ${
+                  plan.popular
+                    ? "border-accent-500 bg-gradient-to-br from-brand-500/10 to-accent-500/10"
+                    : "border-white/10 bg-white/5"
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-brand-500 to-accent-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
+                  <p className="text-sm text-gray-400">{plan.description}</p>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-bold text-white">
+                      {plan.price === 0 ? "Free" : `$${plan.price}`}
+                    </span>
+                    {plan.price > 0 && <span className="text-gray-400">/month</span>}
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-6 flex-1">
+                  {plan.highlights.map((highlight, index) => (
+                    <li key={index} className="flex items-start gap-2 text-sm">
+                      <Check className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  onClick={onLogin}
+                  className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
+                    plan.popular
+                      ? "bg-gradient-to-r from-brand-500 to-accent-500 hover:from-brand-600 hover:to-accent-600 text-white"
+                      : "bg-white/10 hover:bg-white/20 text-white"
+                  }`}
+                >
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/pricing"
+              className="text-accent-400 hover:text-accent-300 transition-colors"
+            >
+              Compare all features →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Trust Section */}
+      <section className="py-24 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid sm:grid-cols-3 gap-6 mb-16">
+            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
+              <div className="p-3 bg-brand-500/10 rounded-lg">
+                <Shield className="w-6 h-6 text-brand-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Secure & Private</h3>
+                <p className="text-sm text-gray-400">Your data stays yours</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
+              <div className="p-3 bg-accent-500/10 rounded-lg">
+                <Zap className="w-6 h-6 text-accent-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Cancel Anytime</h3>
+                <p className="text-sm text-gray-400">No long-term contracts</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-xl">
+              <div className="p-3 bg-brand-500/10 rounded-lg">
+                <Sparkles className="w-6 h-6 text-brand-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">14-Day Free Trial</h3>
+                <p className="text-sm text-gray-400">On Pro & Agency plans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <StatsBar />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* CTA Section */}
+      <section className="py-24 border-t border-white/10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Grow Your Channel?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Join thousands of creators using AI to optimize their YouTube presence.
+          </p>
+          <button
+            onClick={onLogin}
+            className="group px-8 py-4 bg-red-600 hover:bg-red-500 rounded-xl font-semibold text-lg transition-all inline-flex items-center gap-2"
+          >
+            <Youtube className="w-5 h-5" />
+            Get Started Free
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            {/* Brand */}
+            <div className="md:col-span-1">
+              <Logo size="sm" linkToHome={false} className="mb-4" />
+              <p className="text-sm text-gray-400">
+                AI-powered YouTube analytics to help creators grow their channels faster.
+              </p>
+            </div>
+
+            {/* Product */}
+            <div>
+              <h4 className="font-semibold text-white mb-4">Product</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/features" className="hover:text-white transition-colors">Features</Link></li>
+                <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+                <li><a href="mailto:support@tubegrow.io" className="hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-500">
+              &copy; {new Date().getFullYear()} TubeGrow. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4 text-sm text-gray-400">
+              <a href="https://twitter.com/tubegrow" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="https://youtube.com/@tubegrow" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
@@ -165,43 +484,8 @@ function FeatureCard({
 }
 
 function Dashboard() {
-  const [channelStats, setChannelStats] = useState<any>(null);
-  const [recentVideos, setRecentVideos] = useState<any[]>([]);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const { channelStats, recentVideos, topVideo, analyticsOverview, isLoading } = useDashboardData();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    fetchChannelStats();
-    fetchRecentVideos();
-  }, []);
-
-  const fetchChannelStats = async () => {
-    try {
-      const response = await fetch(`${API_URL}/api/channel/stats`, {
-        credentials: "include",
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setChannelStats(data);
-      }
-    } catch (error) {
-      console.error("Failed to fetch channel stats:", error);
-    }
-  };
-
-  const fetchRecentVideos = async () => {
-    try {
-      const response = await fetch(`${API_URL}/api/videos/recent?limit=10`, {
-        credentials: "include",
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setRecentVideos(data);
-      }
-    } catch (error) {
-      console.error("Failed to fetch recent videos:", error);
-    }
-  };
 
   const handleLogout = async () => {
     await fetch(`${API_URL}/auth/logout`, {
@@ -211,75 +495,10 @@ function Dashboard() {
     window.location.reload();
   };
 
-  const formatNumber = (num: number | undefined | null) => {
-    if (num === undefined || num === null) return "0";
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
-    if (num >= 1000) return (num / 1000).toFixed(1) + "K";
-    return num.toString();
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-  };
-
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex">
-      {/* Left Sidebar */}
-      <aside className={`${sidebarOpen ? 'w-64' : 'w-20'} bg-[#111] border-r border-white/10 flex-shrink-0 hidden lg:flex flex-col transition-all duration-300`}>
-        {/* Logo */}
-        <div className="p-4 border-b border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Youtube className="w-6 h-6 text-white" />
-            </div>
-            {sidebarOpen && (
-              <div>
-                <h1 className="font-bold text-white">CreatorSaaS</h1>
-                <p className="text-xs text-gray-500">YouTube Analytics</p>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-3 space-y-1">
-          <NavItem icon={<Home />} label="Dashboard" href="/" active={true} collapsed={!sidebarOpen} />
-          <NavItem icon={<Video />} label="Videos" href="/videos" collapsed={!sidebarOpen} />
-          
-          <div className="pt-4 pb-2">
-            {sidebarOpen && <p className="text-xs text-gray-600 uppercase tracking-wider px-3">Tools</p>}
-          </div>
-          
-          <NavItem icon={<Scissors />} label="Clips" href="/clips" collapsed={!sidebarOpen} color="pink" />
-          <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" collapsed={!sidebarOpen} color="purple" />
-          
-          <div className="pt-4 pb-2">
-            {sidebarOpen && <p className="text-xs text-gray-600 uppercase tracking-wider px-3">Analytics</p>}
-          </div>
-          
-          <NavItem icon={<BarChart3 />} label="Channel Analysis" href="/analysis" collapsed={!sidebarOpen} />
-          <NavItem icon={<TrendingUp />} label="Deep Analysis" href="/deep-analysis" collapsed={!sidebarOpen} />
-          <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" collapsed={!sidebarOpen} />
-        </nav>
-
-        {/* User Section */}
-        <div className="p-3 border-t border-white/10">
-          {channelStats && sidebarOpen && (
-            <div className="p-3 bg-white/5 rounded-lg mb-3">
-              <p className="font-medium text-sm truncate">{channelStats.title}</p>
-              <p className="text-xs text-gray-500">{formatNumber(channelStats.subscriber_count)} subscribers</p>
-            </div>
-          )}
-          <button
-            onClick={handleLogout}
-            className={`flex items-center gap-3 w-full p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors ${!sidebarOpen && 'justify-center'}`}
-          >
-            <LogOut className="w-5 h-5" />
-            {sidebarOpen && <span className="text-sm">Logout</span>}
-          </button>
-        </div>
-      </aside>
+      {/* Left Sidebar - Uses shared component */}
+      <Sidebar activePath="/" />
 
       {/* Mobile Header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#111] border-b border-white/10 p-4">
@@ -288,8 +507,7 @@ function Dashboard() {
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 hover:bg-white/10 rounded-lg">
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            <Youtube className="w-6 h-6 text-red-500" />
-            <span className="font-bold">CreatorSaaS</span>
+            <Logo size="sm" showIcon={false} linkToHome={false} />
           </div>
           <button onClick={handleLogout} className="p-2 text-gray-400 hover:text-white">
             <LogOut className="w-5 h-5" />
@@ -307,6 +525,8 @@ function Dashboard() {
               <NavItem icon={<Scissors />} label="Clips" href="/clips" color="pink" />
               <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" color="purple" />
               <NavItem icon={<BarChart3 />} label="Analytics" href="/analysis" />
+              <NavItem icon={<TrendingUp />} label="Deep Analysis" href="/deep-analysis" />
+              <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" />
             </nav>
           </div>
         </div>
@@ -314,50 +534,66 @@ function Dashboard() {
 
       {/* Main Content */}
       <main className="flex-1 min-w-0 lg:pt-0 pt-16">
-        <div className="max-w-6xl mx-auto p-6">
+        <div className="max-w-7xl mx-auto p-6">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h1 className="text-2xl font-bold text-white">
-                Welcome back{channelStats ? `, ${channelStats.title.split(' ')[0]}` : ''} 👋
-              </h1>
-              <p className="text-gray-500">Here's what's happening with your channel</p>
-            </div>
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="hidden lg:flex p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
+          <div className="mb-8">
+            <h1 className="text-2xl font-bold text-white">
+              Welcome back{channelStats ? `, ${channelStats.title.split(' ')[0]}` : ''} 👋
+            </h1>
+            <p className="text-gray-500">Here's what's happening with your channel</p>
           </div>
 
           {/* Stats Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <StatCard
-              icon={<Users className="w-5 h-5" />}
-              label="Subscribers"
-              value={channelStats ? formatNumber(channelStats.subscriber_count) : "—"}
-              color="red"
+            {isLoading ? (
+              <>
+                <StatCardSkeleton />
+                <StatCardSkeleton />
+                <StatCardSkeleton />
+                <StatCardSkeleton />
+              </>
+            ) : (
+              <>
+                <StatCard
+                  icon={<Users className="w-5 h-5" />}
+                  label="Subscribers"
+                  value={channelStats ? formatNumber(channelStats.subscriber_count) : "—"}
+                  color="red"
+                />
+                <StatCard
+                  icon={<Eye className="w-5 h-5" />}
+                  label="Total Views"
+                  value={channelStats ? formatNumber(channelStats.view_count) : "—"}
+                  color="blue"
+                />
+                <StatCard
+                  icon={<Play className="w-5 h-5" />}
+                  label="Videos"
+                  value={channelStats ? formatNumber(channelStats.video_count) : "—"}
+                  color="green"
+                />
+                <StatCard
+                  icon={<TrendingUp className="w-5 h-5" />}
+                  label="Avg per Video"
+                  value={channelStats && channelStats.video_count > 0
+                    ? formatNumber(Math.round(channelStats.view_count / channelStats.video_count))
+                    : "—"}
+                  color="purple"
+                />
+              </>
+            )}
+          </div>
+
+          {/* Analytics Charts */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+            <ViewsTrendChart
+              dailyData={analyticsOverview?.daily_data}
+              isLoading={isLoading}
             />
-            <StatCard
-              icon={<Eye className="w-5 h-5" />}
-              label="Total Views"
-              value={channelStats ? formatNumber(channelStats.view_count) : "—"}
-              color="blue"
-            />
-            <StatCard
-              icon={<Play className="w-5 h-5" />}
-              label="Videos"
-              value={channelStats ? formatNumber(channelStats.video_count) : "—"}
-              color="green"
-            />
-            <StatCard
-              icon={<TrendingUp className="w-5 h-5" />}
-              label="Avg per Video"
-              value={channelStats && channelStats.video_count > 0 
-                ? formatNumber(Math.round(channelStats.view_count / channelStats.video_count)) 
-                : "—"}
-              color="purple"
+            <SubscriberChart
+              dailyData={analyticsOverview?.daily_data}
+              currentSubscribers={channelStats?.subscriber_count}
+              isLoading={isLoading}
             />
           </div>
 
@@ -396,29 +632,49 @@ function Dashboard() {
             </Link>
           </div>
 
-          {/* Recent Videos - Full Width */}
-          <div className="bg-[#111] border border-white/10 rounded-xl overflow-hidden">
-            <div className="p-4 border-b border-white/10 flex items-center justify-between">
-              <h2 className="font-semibold text-white flex items-center gap-2">
-                <Play className="w-5 h-5 text-red-400" />
-                Recent Videos
-              </h2>
-              <Link href="/videos" className="text-sm text-gray-400 hover:text-white transition-colors">
-                View all →
-              </Link>
+          {/* Video Spotlight + Recent Videos */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+            {/* Top Video Spotlight */}
+            <div className="lg:col-span-1">
+              <VideoSpotlight video={topVideo || undefined} isLoading={isLoading} />
             </div>
-            
-            <div className="divide-y divide-white/5">
-              {recentVideos.length > 0 ? (
-                recentVideos.slice(0, 6).map((video) => (
-                  <VideoRow key={video.video_id} video={video} formatNumber={formatNumber} formatDate={formatDate} />
-                ))
-              ) : (
-                <div className="p-8 text-center text-gray-500">
-                  <Video className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                  <p>No videos found</p>
-                </div>
-              )}
+
+            {/* Recent Videos */}
+            <div className="lg:col-span-2 bg-[#111] border border-white/10 rounded-xl overflow-hidden">
+              <div className="p-4 border-b border-white/10 flex items-center justify-between">
+                <h2 className="font-semibold text-white flex items-center gap-2">
+                  <Play className="w-5 h-5 text-red-400" />
+                  Recent Videos
+                </h2>
+                <Link href="/videos" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  View all →
+                </Link>
+              </div>
+
+              <div className="divide-y divide-white/5">
+                {isLoading ? (
+                  // Loading skeletons
+                  Array.from({ length: 4 }).map((_, i) => (
+                    <div key={i} className="flex gap-4 p-4 animate-pulse">
+                      <div className="w-40 h-[90px] bg-white/10 rounded-lg flex-shrink-0" />
+                      <div className="flex-1">
+                        <div className="w-full h-5 bg-white/10 rounded mb-2" />
+                        <div className="w-2/3 h-4 bg-white/10 rounded mb-2" />
+                        <div className="w-1/3 h-3 bg-white/10 rounded" />
+                      </div>
+                    </div>
+                  ))
+                ) : recentVideos.length > 0 ? (
+                  recentVideos.slice(0, 4).map((video) => (
+                    <VideoRow key={video.video_id} video={video} />
+                  ))
+                ) : (
+                  <div className="p-8 text-center text-gray-500">
+                    <Video className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                    <p>No videos found</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -456,6 +712,7 @@ function NavItem({
     emerald: "text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10",
     blue: "text-blue-400 hover:text-blue-300 hover:bg-blue-500/10",
     indigo: "text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10",
+    red: "text-red-400 hover:text-red-300 hover:bg-red-500/10",
   };
   
   return (
@@ -470,44 +727,8 @@ function NavItem({
   );
 }
 
-function StatCard({ 
-  icon, 
-  label, 
-  value, 
-  color 
-}: { 
-  icon: React.ReactNode; 
-  label: string; 
-  value: string;
-  color: string;
-}) {
-  const colorClasses: Record<string, string> = {
-    red: "text-red-400 bg-red-500/20",
-    blue: "text-blue-400 bg-blue-500/20",
-    green: "text-green-400 bg-green-500/20",
-    purple: "text-purple-400 bg-purple-500/20",
-  };
-  
-  return (
-    <div className="bg-[#111] border border-white/10 rounded-xl p-4">
-      <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${colorClasses[color]}`}>
-        {icon}
-      </div>
-      <p className="text-2xl font-bold text-white">{value}</p>
-      <p className="text-sm text-gray-500">{label}</p>
-    </div>
-  );
-}
 
-function VideoRow({ 
-  video, 
-  formatNumber,
-  formatDate
-}: { 
-  video: any; 
-  formatNumber: (n: number) => string;
-  formatDate: (s: string) => string;
-}) {
+function VideoRow({ video }: { video: any }) {
   return (
     <Link 
       href={`/video/${video.video_id}`}

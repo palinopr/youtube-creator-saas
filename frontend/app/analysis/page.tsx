@@ -18,8 +18,7 @@ import {
   CheckCircle,
   AlertTriangle,
 } from "lucide-react";
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+import { API_URL } from "@/lib/config";
 
 interface AnalysisData {
   analysis: {
@@ -47,6 +46,7 @@ interface AnalysisData {
     description_length: {
       all_videos_avg: number;
       top_performers_avg: number;
+      bottom_performers_avg: number;
       top_vs_bottom_diff_percent: number;
       recommendation: string;
     };
@@ -70,6 +70,7 @@ interface AnalysisData {
     has_hashtags: {
       all_videos_percent: number;
       top_performers_percent: number;
+      bottom_performers_percent: number;
       correlation: string;
     };
     top_performing_tags: Array<{

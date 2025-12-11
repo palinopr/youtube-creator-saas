@@ -112,6 +112,7 @@ class JobRepository:
         job_type: Optional[JobType] = None,
         status: Optional[JobStatus] = None,
         channel_id: Optional[str] = None,
+        video_id: Optional[str] = None,
         limit: int = 100,
     ) -> List[Dict[str, Any]]:
         """List jobs with optional filters."""
@@ -124,6 +125,8 @@ class JobRepository:
                 query = query.filter(Job.status == status)
             if channel_id:
                 query = query.filter(Job.channel_id == channel_id)
+            if video_id:
+                query = query.filter(Job.video_id == video_id)
             
             jobs = query.order_by(Job.created_at.desc()).limit(limit).all()
             return [job.to_dict() for job in jobs]

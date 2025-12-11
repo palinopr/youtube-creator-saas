@@ -21,8 +21,7 @@ import {
   Hash,
   Loader2,
 } from "lucide-react";
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+import { API_URL } from "@/lib/config";
 
 // Polling interval in milliseconds
 const POLL_INTERVAL = 5000;
@@ -73,7 +72,7 @@ interface DeepAnalysis {
 }
 
 interface JobStatus {
-  status: "pending" | "queued" | "processing" | "completed" | "failed";
+  status: "pending" | "queued" | "fetching" | "processing" | "completed" | "failed";
   progress: number;
   message: string;
   result?: DeepAnalysis;

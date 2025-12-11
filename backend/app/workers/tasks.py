@@ -16,21 +16,38 @@ def process_render_job(job_data: dict) -> dict:
     """
     Process a video rendering job.
     Runs ffmpeg operations in background thread.
+    
+    For SaaS mode, attempts OAuth download first if the user owns the video.
+    Falls back to yt-dlp for testing/unauthenticated users.
     """
     job_id = job_data["job_id"]
     video_id = job_data.get("video_id")
     clip_id = job_data.get("clip_id")
     input_data = job_data.get("input_data", {})
-    segments = input_data.get("segments", [])
+    raw_segments = input_data.get("segments", [])
+    prefer_oauth = input_data.get("prefer_oauth", True)  # SaaS mode by default
+    local_video_path = input_data.get("local_video_path")  # For uploaded videos
+    
+    # Convert segments from [{start, end}] dicts to [(start, end)] tuples
+    segments = []
+    for seg in raw_segments:
+        if isinstance(seg, dict):
+            start = seg.get("start", 0)
+            end = seg.get("end", 0)
+            segments.append((float(start), float(end)))
+        elif isinstance(seg, (list, tuple)) and len(seg) >= 2:
+            segments.append((float(seg[0]), float(seg[1])))
     
     print(f"[RENDER WORKER] Processing job {job_id} for video {video_id}")
+    print(f"[RENDER WORKER] Segments: {segments}")
+    print(f"[RENDER WORKER] prefer_oauth={prefer_oauth}, local_video_path={local_video_path}")
     
     # Update progress
     JobRepository.update_job(
         job_id=job_id,
         status=JobStatus.RENDERING,
         progress=10,
-        message="Downloading video..."
+        message="Preparing video source..."
     )
     
     try:
@@ -50,12 +67,23 @@ def process_render_job(job_data: dict) -> dict:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         
+        # Define progress callback
+        def progress_callback(progress: int, message: str):
+            JobRepository.update_job(
+                job_id=job_id,
+                progress=progress,
+                message=message
+            )
+        
         try:
             output_path = loop.run_until_complete(
                 renderer.render_clip(
                     video_id=video_id,
                     clip_id=clip_id,
-                    segments=segments
+                    segments=segments,
+                    local_video_path=local_video_path,
+                    prefer_oauth=prefer_oauth,
+                    progress_callback=progress_callback
                 )
             )
         finally:

@@ -99,8 +99,10 @@ class TranscriptAnalyzer:
                     tfmt='srt'  # Get as SRT format
                 ).execute()
                 
-                # Parse SRT to plain text
-                full_text = self._parse_srt_to_text(caption_response.decode('utf-8'))
+                # Parse SRT
+                srt_content = caption_response.decode('utf-8')
+                segments = self._parse_srt_to_segments(srt_content)
+                full_text = ' '.join(s["text"] for s in segments)
                 
                 if full_text:
                     return {
@@ -109,6 +111,7 @@ class TranscriptAnalyzer:
                         "language": language,
                         "is_generated": is_auto,
                         "full_text": full_text,
+                        "segments": segments,
                         "word_count": len(full_text.split()),
                         "source": "youtube_captions_api"
                     }
@@ -237,16 +240,18 @@ class TranscriptAnalyzer:
             
             data = cont_response.json()
             
-            # Extract transcript text from response
-            full_text = self._extract_transcript_text(data)
+            # Extract transcript segments
+            segments = self._extract_transcript_segments(data)
             
-            if full_text:
+            if segments:
+                full_text = ' '.join(s["text"] for s in segments)
                 return {
                     "video_id": video_id,
                     "status": "success",
                     "language": "es",
                     "is_generated": True,
                     "full_text": full_text,
+                    "segments": segments,
                     "word_count": len(full_text.split()),
                 }
             else:
@@ -272,34 +277,62 @@ class TranscriptAnalyzer:
                 "full_text": None
             }
     
+    def _parse_srt_to_segments(self, srt_content: str) -> List[Dict[str, Any]]:
+        """Parse SRT subtitle format to segments with timestamps."""
+        segments = []
+        try:
+            blocks = srt_content.strip().split('\n\n')
+            
+            for block in blocks:
+                lines = block.strip().split('\n')
+                if len(lines) < 3:
+                    continue
+                    
+                # Parse timestamp: 00:00:01,000 --> 00:00:04,000
+                time_line = lines[1]
+                if '-->' not in time_line:
+                    continue
+                    
+                start_str, end_str = time_line.split(' --> ')
+                
+                # Convert to seconds
+                def time_to_seconds(t_str):
+                    t_str = t_str.replace(',', '.')
+                    h, m, s = t_str.split(':')
+                    return int(h) * 3600 + int(m) * 60 + float(s)
+                
+                start = time_to_seconds(start_str)
+                end = time_to_seconds(end_str)
+                
+                # Join text lines
+                text = ' '.join(lines[2:])
+                text = re.sub(r'\s+', ' ', text).strip()
+                
+                if text:
+                    segments.append({
+                        "text": text,
+                        "start": start,
+                        "end": end
+                    })
+            
+            return segments
+        except Exception as e:
+            print(f"[TRANSCRIPT] SRT segment parse error: {e}")
+            return []
+
     def _parse_srt_to_text(self, srt_content: str) -> Optional[str]:
         """Parse SRT subtitle format to plain text."""
         try:
-            lines = srt_content.strip().split('\n')
-            text_lines = []
-            
-            for line in lines:
-                line = line.strip()
-                # Skip empty lines, numbers, and timestamps
-                if not line:
-                    continue
-                if line.isdigit():
-                    continue
-                if '-->' in line:
-                    continue
-                # This is actual text
-                text_lines.append(line)
-            
-            full_text = ' '.join(text_lines)
-            # Clean up whitespace
-            full_text = re.sub(r'\s+', ' ', full_text).strip()
+            segments = self._parse_srt_to_segments(srt_content)
+            full_text = ' '.join(s["text"] for s in segments)
             return full_text
         except Exception as e:
             print(f"[TRANSCRIPT] SRT parse error: {e}")
             return None
     
-    def _extract_transcript_text(self, data: Dict) -> Optional[str]:
-        """Extract text from YouTube transcript API response."""
+    def _extract_transcript_segments(self, data: Dict) -> List[Dict[str, Any]]:
+        """Extract segments from YouTube transcript API response."""
+        segments_out = []
         try:
             actions = data.get('actions', [])
             for action in actions:
@@ -311,19 +344,43 @@ class TranscriptAnalyzer:
                 segments = segment_list.get('initialSegments', [])
                 
                 if segments:
-                    texts = []
                     for seg in segments:
                         renderer = seg.get('transcriptSegmentRenderer', {})
+                        
+                        # Get timing
+                        start_ms = int(renderer.get('startMs', 0))
+                        end_ms = int(renderer.get('endMs', start_ms))
+                        
+                        # Get text
                         snippet = renderer.get('snippet', {})
+                        texts = []
                         for run in snippet.get('runs', []):
                             text = run.get('text', '').strip()
                             if text:
                                 texts.append(text)
-                    
-                    full_text = ' '.join(texts)
-                    full_text = re.sub(r'\s+', ' ', full_text)
-                    return full_text
+                        
+                        text = ' '.join(texts)
+                        text = re.sub(r'\s+', ' ', text).strip()
+                        
+                        if text:
+                            segments_out.append({
+                                "text": text,
+                                "start": start_ms / 1000.0,
+                                "end": end_ms / 1000.0
+                            })
             
+            return segments_out
+        except Exception as e:
+            print(f"[TRANSCRIPT] Segment extraction error: {e}")
+            return []
+
+    def _extract_transcript_text(self, data: Dict) -> Optional[str]:
+        """Extract text from YouTube transcript API response."""
+        try:
+            segments = self._extract_transcript_segments(data)
+            if segments:
+                full_text = ' '.join(s["text"] for s in segments)
+                return full_text
             return None
         except Exception:
             return None
@@ -506,41 +563,58 @@ class TranscriptAnalyzer:
     
     async def get_transcript_with_fallback(self, video_id: str, use_whisper_fallback: bool = True) -> Optional[Dict[str, Any]]:
         """
-        Get transcript with Whisper fallback if YouTube captions unavailable.
+        Get transcript with cache support.
         
-        Args:
-            video_id: YouTube video ID
-            use_whisper_fallback: Whether to use Whisper if YouTube transcript unavailable
-            
-        Returns:
-            Transcript dict with 'full_text' or 'text' field
+        1. Check cache first (FREE, instant)
+        2. If not cached, use YouTube Captions API (costs quota)
+        3. Cache result for future requests
         """
         print(f"[TRANSCRIPT] Starting get_transcript_with_fallback for {video_id}")
         
-        # Try YouTube transcript first (free, fast)
+        # STEP 1: Check cache first (transcripts never change)
+        try:
+            from ..db.models import TranscriptCache, get_db_session
+            with get_db_session() as session:
+                cached = session.query(TranscriptCache).filter_by(video_id=video_id).first()
+                if cached:
+                    print(f"[TRANSCRIPT] ✓ Cache HIT for {video_id}")
+                    return {
+                        "video_id": video_id,
+                        "status": "success",
+                        "full_text": cached.transcript_text,
+                        "segments": cached.transcript_segments or [],
+                        "language": cached.language,
+                        "source": "cache",
+                    }
+        except Exception as e:
+            print(f"[TRANSCRIPT] Cache check error: {e}")
+        
+        # STEP 2: Fetch from YouTube API
+        print(f"[TRANSCRIPT] Fetching from YouTube API for {video_id}")
         result = await self.get_transcript(video_id)
         
         if result and result.get("status") == "success" and result.get("full_text"):
-            print(f"[TRANSCRIPT] ✓ YouTube captions found for {video_id}")
-            result["source"] = "youtube_captions"
+            print(f"[TRANSCRIPT] ✓ YouTube API success for {video_id}")
+            
+            # STEP 3: Cache for future use
+            try:
+                from ..db.models import TranscriptCache, get_db_session
+                with get_db_session() as session:
+                    if not session.query(TranscriptCache).filter_by(video_id=video_id).first():
+                        session.add(TranscriptCache(
+                            video_id=video_id,
+                            transcript_text=result.get("full_text", ""),
+                            transcript_segments=result.get("segments", []),
+                            language=result.get("language", "es"),
+                            source="youtube_api",
+                        ))
+                        print(f"[TRANSCRIPT] ✓ Cached for future use")
+            except Exception as e:
+                print(f"[TRANSCRIPT] Cache save error: {e}")
+            
             return result
         
-        print(f"[TRANSCRIPT] No YouTube captions for {video_id}. Status: {result.get('status') if result else 'None'}")
-        
-        # Fallback to Whisper if enabled
-        if use_whisper_fallback:
-            print(f"[TRANSCRIPT] Attempting Whisper transcription for {video_id}...")
-            try:
-                whisper_result = await self.transcribe_with_whisper(video_id)
-                if whisper_result and whisper_result.get("status") == "success":
-                    print(f"[TRANSCRIPT] ✓ Whisper transcription successful for {video_id}")
-                else:
-                    print(f"[TRANSCRIPT] ✗ Whisper failed: {whisper_result.get('error') if whisper_result else 'Unknown error'}")
-                return whisper_result
-            except Exception as e:
-                print(f"[TRANSCRIPT] ✗ Whisper exception: {str(e)}")
-                return result
-        
+        print(f"[TRANSCRIPT] ✗ No transcript available for {video_id}")
         return result
     
     async def analyze_transcript_content(self, transcript: Dict[str, Any], video_data: Dict[str, Any]) -> Dict[str, Any]:
