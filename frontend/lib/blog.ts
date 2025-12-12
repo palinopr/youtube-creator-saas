@@ -512,8 +512,9 @@ export function getAllPosts(): BlogPost[] {
   return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const normalizedSlug = decodeURIComponent(slug).trim().toLowerCase();
+export function getPostBySlug(slug: string | string[]): BlogPost | undefined {
+  const rawSlug = Array.isArray(slug) ? slug.join("/") : slug;
+  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase();
   return blogPosts.find((post) => post.slug.trim().toLowerCase() === normalizedSlug);
 }
 
