@@ -3,7 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ConditionalAIChatPopup from "@/components/ConditionalAIChatPopup";
 import { ToastProvider } from "@/components/providers/ErrorProvider";
-import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { OrganizationJsonLd, SoftwareApplicationJsonLd } from "@/components/seo";
 
 const inter = Inter({
@@ -97,7 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <GoogleAnalytics />
+        <GoogleAnalytics gaId="G-FJJSVGFZFZ" />
         <OrganizationJsonLd />
         <SoftwareApplicationJsonLd />
       </head>
