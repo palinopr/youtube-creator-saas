@@ -260,7 +260,7 @@ Ongoing:
 
 **Content**
 - [x] Pillar pages live: `/features`, `/ai-youtube-tools`, `/viral-clips-generator`, `/alternatives`.
-- [x] 5 initial long‑form blog posts live.
+- [x] 7 initial long‑form blog posts live.
 - [x] Add `/youtube-analytics-tool`.
 - [x] Add `/youtube-seo-tool`.
 - [x] Add `/niches` hub.
@@ -282,6 +282,7 @@ Add entries with date + outcome.
 | Dec 12 | Trim env‑newline malformed login URL, llms spec rewrite, blog title vs H1 fix | Crawl error removed, AI‑search spec compliant |
 | Dec 12 | Shipped analytics/SEO pillars, niches hub + 10 niches, and 4 lite link‑magnet tools | IA expanded, link magnets live for outreach |
 | Dec 12 | Added webmanifest + fixed OG/Twitter/icon URLs; tightened AI-tools + clips claims to current features; added SEO checklist post | Reduced 404 noise, improved internal linking + trust, expanded SEO coverage |
+| Dec 12 | Added landing “Resources” section, fixed support email, and published Shorts analytics + tag generator posts | More internal links to tools/posts, more TOFU coverage for tracked keywords |
 
 ---
 

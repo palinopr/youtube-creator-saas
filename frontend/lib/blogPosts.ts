@@ -3,6 +3,211 @@ import type { BlogPost } from "./blog";
 // Static blog posts - can be replaced with CMS later
 export const blogPosts: BlogPost[] = [
   {
+    slug: "youtube-shorts-analytics-2025",
+    title: "YouTube Shorts Analytics in 2025: Metrics That Matter + Fixes",
+    description:
+      "A 2025 guide to YouTube Shorts analytics: what to track (retention, swipes, replays), what to ignore, and how to improve your next Shorts.",
+    category: "Analytics",
+    date: "2025-12-12T08:00:00Z",
+    readTime: "11 min read",
+    author: {
+      name: "TubeGrow Team",
+    },
+    content: `
+## Why Shorts Analytics Feels Confusing (and What to Focus On)
+
+Shorts can explode overnight — and then die just as fast. The difference is almost always **viewer behavior**.
+
+In 2025, YouTube Shorts discovery is driven by:
+
+- **Swipe behavior** (did viewers stay or leave immediately?)
+- **Retention** (did they watch all the way through?)
+- **Replays** (did they loop it?)
+- **Satisfaction signals** (likes, comments, shares, follows)
+
+This guide is a practical way to read Shorts analytics and turn it into improvements you can repeat.
+
+## The 6 Shorts Metrics That Actually Matter
+
+### 1) Viewed vs Swiped Away
+
+This is your *hook score*. If people swipe away, YouTube stops testing the Short.
+
+Fixes:
+- Put the payoff in the first second (don’t warm up)
+- Start with an outcome (“Here’s the fastest way to…”) not context
+- Use a strong first frame (big text + clear visual)
+
+### 2) Average View Duration (AVD)
+
+AVD is a reality check: are viewers staying long enough to get value?
+
+Fixes:
+- Cut pauses and transitions aggressively
+- Add pattern interrupts every 1–2 seconds (camera change, text, b-roll)
+- Make each sentence earn its place
+
+### 3) Audience Retention Curve
+
+Retention tells you where you lose attention.
+
+Fixes:
+- If the first 1–2 seconds drop hard: your hook is weak
+- If there’s a mid‑clip drop: you over-explained or delayed the payoff
+- If retention climbs at the end: your ending is strong — reuse that structure
+
+### 4) Replays / Looping
+
+Shorts that loop smoothly get rewatched — and YouTube loves that.
+
+Fixes:
+- End on a line that connects to the start
+- Avoid long outros
+- Keep the last frame visually similar to the first frame
+
+### 5) Likes, Comments, Shares
+
+These are “did this feel worth reacting to?” signals.
+
+Fixes:
+- Ask a single specific question in the last 2 seconds
+- Make a claim people can agree/disagree with (without being clickbait)
+- Add a tiny CTA: “Comment ‘template’ and I’ll share it”
+
+### 6) Subscriber Gain per View
+
+This tells you whether Shorts viewers *convert* into fans.
+
+Fixes:
+- Make your niche obvious in the first 2 seconds
+- Repeat your promise and who it’s for (“If you’re a new creator…”)
+- End with what’s next (“Part 2: …”)
+
+## What to Ignore (Most of the Time)
+
+- **Raw views** without context
+- “Best time to post” guesses (until you have enough data)
+- Over-optimizing hashtags
+
+Views are output. Your job is to improve the inputs: hook, retention, pacing, and topic.
+
+## A Repeatable Shorts Workflow
+
+If you publish long videos, the fastest path to consistent Shorts is repurposing:
+
+1. Identify 3–5 moments per long video that can stand alone
+2. Rewrite each into a clear hook + payoff in under 45 seconds
+3. Edit for pacing and readability (captions)
+4. Track Viewed vs Swiped Away + retention and iterate
+
+Try our free lite tool to speed up step 1:
+
+- **Shorts Clip Finder (Lite)**: /tools/shorts-clip-finder
+
+## How TubeGrow Helps (Waitlist‑Only)
+
+TubeGrow’s analytics dashboard (early access) is built to make these patterns obvious:
+
+- Which Shorts hooks are working
+- Which topics lead to replays and follows
+- Which long videos consistently produce the best Shorts
+
+Learn more:
+- /youtube-analytics-tool
+- /viral-clips-generator
+`,
+  },
+  {
+    slug: "youtube-tag-generator-2025",
+    title: "YouTube Tag Generator in 2025: Tags + Hashtags That Help",
+    description:
+      "A 2025 guide to YouTube tags and hashtags: what they do, how to pick them, and a tag generator workflow you can reuse for every video.",
+    category: "SEO",
+    date: "2025-12-12T06:00:00Z",
+    readTime: "10 min read",
+    author: {
+      name: "TubeGrow Team",
+    },
+    content: `
+## Do YouTube Tags Still Matter in 2025?
+
+Tags are not the biggest ranking factor — but they still help YouTube understand your topic when:
+
+- your title uses slang or abbreviations
+- your topic has common misspellings
+- your video sits in a crowded niche with similar wording
+
+Think of tags as **topic clarification**, not a magic growth hack.
+
+## The 3 Types of Tags You Should Use
+
+### 1) Exact Keyword Tag (1)
+
+Use one tag that matches the primary query you want to rank for.
+
+Example:
+- youtube seo optimization
+
+### 2) Close Variants (3–6)
+
+Use natural variations and intent-adjacent phrases.
+
+Examples:
+- youtube seo tool
+- optimize youtube title
+- youtube description template
+
+### 3) Context Tags (3–5)
+
+These help classification and recommendations:
+- your niche (“fitness”, “personal finance”, “gaming”)
+- format (“tutorial”, “checklist”, “case study”)
+- series name (if you have one)
+
+## Hashtags: Keep It Tight
+
+Hashtags are visible and can look spammy if you overdo it.
+
+Best practice:
+- Use **2–3** hashtags that match your topic
+- Avoid unrelated trending tags
+
+## A Simple Tag Generator Workflow
+
+Use this repeatable process for every upload:
+
+1. Pick one primary keyword + intent
+2. Write the title first (clear promise)
+3. Generate tags: exact match → variants → context
+4. Add 2–3 hashtags that match the niche and topic
+5. Publish, then iterate based on search impressions and CTR
+
+If you want a fast starting point, use our free lite generator:
+
+- **Metadata Generator (Lite)**: /tools/youtube-metadata-generator
+
+## Common Tag Mistakes
+
+- Copying huge tag lists from other channels
+- Using unrelated tags (“mrbeast”, “shorts”, “viral”) on everything
+- Keyword stuffing the description instead of writing for humans
+
+Tags work best when the rest of the video package is strong: hook, title, thumbnail, and retention.
+
+## How TubeGrow Approaches Tags (Waitlist‑Only)
+
+TubeGrow’s SEO workflow focuses on outcomes:
+
+- Align metadata to **real search intent**
+- Improve the title and first lines of the description
+- Use tags/hashtags to clarify, not to spam
+
+Learn more:
+- /youtube-seo-tool
+- /tools/youtube-seo-score
+`,
+  },
+  {
     slug: "youtube-seo-optimization-2025-checklist",
     title: "YouTube SEO Optimization in 2025: Title, Description, Tags Checklist",
     description:

@@ -8,6 +8,7 @@ import HowItWorksTabs from "@/components/landing/HowItWorksTabs";
 import SocialProofSection from "@/components/landing/SocialProofSection";
 import TestimonialCarousel from "@/components/landing/TestimonialCarousel";
 import FAQSection from "@/components/landing/FAQSection";
+import ResourcesSection from "@/components/landing/ResourcesSection";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
 
@@ -28,6 +29,7 @@ export default function HomePage() {
       <HowItWorksTabs />
       <SocialProofSection />
       <TestimonialCarousel />
+      <ResourcesSection />
       <FAQSection />
       <FinalCTA />
       <Footer />

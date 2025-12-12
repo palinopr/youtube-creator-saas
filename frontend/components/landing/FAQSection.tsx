@@ -156,7 +156,7 @@ export default function FAQSection() {
             Still have questions?
           </p>
           <a
-            href="mailto:support@tubegrow.com"
+            href="mailto:support@tubegrow.io"
             className="text-brand-500 hover:text-brand-400 font-medium transition-colors"
           >
             Contact our support team →
