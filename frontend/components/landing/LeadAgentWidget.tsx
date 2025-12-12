@@ -7,7 +7,7 @@ import { Bot, X, Send, Loader2, Sparkles, Mail, AlertCircle, User } from "lucide
 type AgentResult = {
   title?: string;
   answer?: string;
-  next_steps?: string[];
+  next_steps?: string[] | string;
   suggested_pages?: { label: string; url: string }[];
   disclaimer?: string;
 };
@@ -156,6 +156,12 @@ export default function LeadAgentWidget() {
     void ask(question);
   };
 
+  const normalizeNextSteps = (value: AgentResult["next_steps"]): string[] => {
+    if (Array.isArray(value)) return value.filter(Boolean);
+    if (typeof value === "string" && value.trim()) return [value.trim()];
+    return [];
+  };
+
   return (
     <>
       {/* Launcher */}
@@ -294,16 +300,17 @@ export default function LeadAgentWidget() {
                     }
 
                     const r = item.result || {};
+                    const nextSteps = normalizeNextSteps(r.next_steps);
                     return (
                       <div key={idx} className="flex justify-start">
                         <div className="max-w-[85%] rounded-2xl bg-black/30 border border-white/10 px-3 py-2 text-white text-sm space-y-2">
                           {r.title ? <div className="font-semibold">{r.title}</div> : null}
                           {r.answer ? <div className="text-white/80 leading-relaxed whitespace-pre-wrap">{r.answer}</div> : null}
-                          {r.next_steps?.length ? (
+                          {nextSteps.length ? (
                             <div className="pt-1">
                               <div className="text-white/60 text-xs mb-1">Next steps</div>
                               <ul className="space-y-1">
-                                {r.next_steps.slice(0, 6).map((s) => (
+                                {nextSteps.slice(0, 6).map((s) => (
                                   <li key={s} className="text-white/80 text-sm">
                                     • {s}
                                   </li>

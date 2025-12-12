@@ -453,6 +453,66 @@ def _simple_retrieve(chunks: List[Dict[str, str]], query: str, k: int = 4) -> Li
     return [c for s, c in scored[:k] if s > 0] or chunks[:k]
 
 
+def _normalize_public_url(url: str) -> str:
+    u = (url or "").strip()
+    if not u:
+        return ""
+    # Normalize canonical host.
+    u = u.replace("https://tubegrow.io", "https://www.tubegrow.io")
+    u = u.replace("http://tubegrow.io", "https://www.tubegrow.io")
+    return u
+
+
+def _normalize_agent_payload(payload: Any) -> Dict[str, Any]:
+    """
+    Ensure the public agent response matches the expected shape.
+    This prevents frontend crashes when the model returns strings instead of arrays, etc.
+    """
+    if not isinstance(payload, dict):
+        return {
+            "title": "TubeGrow AI Agent",
+            "answer": "I couldn't format an answer for that. Please try again.",
+            "next_steps": [],
+            "suggested_pages": [],
+            "disclaimer": "Waitlist-only early access.",
+        }
+
+    title = payload.get("title") if isinstance(payload.get("title"), str) else "TubeGrow AI Agent"
+    answer = payload.get("answer") if isinstance(payload.get("answer"), str) else ""
+    disclaimer = payload.get("disclaimer") if isinstance(payload.get("disclaimer"), str) else ""
+
+    next_steps_raw = payload.get("next_steps")
+    if isinstance(next_steps_raw, list):
+        next_steps = [str(s).strip() for s in next_steps_raw if str(s).strip()]
+    elif isinstance(next_steps_raw, str):
+        next_steps = [next_steps_raw.strip()] if next_steps_raw.strip() else []
+    else:
+        next_steps = []
+
+    suggested_pages_raw = payload.get("suggested_pages")
+    suggested_pages: List[Dict[str, str]] = []
+    if isinstance(suggested_pages_raw, list):
+        for item in suggested_pages_raw:
+            if not isinstance(item, dict):
+                continue
+            label = item.get("label")
+            url = item.get("url")
+            if not isinstance(label, str) or not isinstance(url, str):
+                continue
+            url = _normalize_public_url(url)
+            if not url.startswith("https://www.tubegrow.io/"):
+                continue
+            suggested_pages.append({"label": label.strip()[:80], "url": url})
+
+    return {
+        "title": title.strip()[:120],
+        "answer": answer.strip(),
+        "next_steps": next_steps[:8],
+        "suggested_pages": suggested_pages[:6],
+        "disclaimer": (disclaimer.strip() or "Waitlist-only early access. Answers are guidance, not guarantees.")[:240],
+    }
+
+
 def _upsert_lead(email: str, name: Optional[str], source: str, request: Request) -> str:
     now = datetime.utcnow()
     ip = get_remote_address(request)
@@ -548,7 +608,7 @@ async def public_agent_ask(request: Request, body: PublicAskRequest):
         "If the user asks anything outside this scope, refuse briefly and redirect to tubegrow.io pages.\n"
         "You must be truthful: if something is not in the provided context, say you’re not sure.\n"
         "TubeGrow is waitlist-only early access; do not mention pricing.\n"
-        "Return a JSON object with keys: title, answer, next_steps, suggested_pages, disclaimer.\n"
+        "Return a JSON object with keys: title (string), answer (string), next_steps (array of strings), suggested_pages (array of {label,url}), disclaimer (string).\n"
         "suggested_pages must be an array of {label,url} and should point to tubegrow.io public pages.\n"
     )
 
@@ -574,7 +634,7 @@ Grounding context (facts you can rely on):
             ],
         )
         content = resp.choices[0].message.content or "{}"
-        payload = json.loads(content)
+        payload = _normalize_agent_payload(json.loads(content))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI error: {e}")
 
