@@ -260,7 +260,7 @@ Ongoing:
 
 **Content**
 - [x] Pillar pages live: `/features`, `/ai-youtube-tools`, `/viral-clips-generator`, `/alternatives`.
-- [x] 7 initial long‑form blog posts live.
+- [x] 8 initial long‑form blog posts live.
 - [x] Add `/youtube-analytics-tool`.
 - [x] Add `/youtube-seo-tool`.
 - [x] Add `/niches` hub.
@@ -284,6 +284,7 @@ Add entries with date + outcome.
 | Dec 12 | Added webmanifest + fixed OG/Twitter/icon URLs; tightened AI-tools + clips claims to current features; added SEO checklist post | Reduced 404 noise, improved internal linking + trust, expanded SEO coverage |
 | Dec 12 | Added landing “Resources” section, fixed support email, and published Shorts analytics + tag generator posts | More internal links to tools/posts, more TOFU coverage for tracked keywords |
 | Dec 12 | Removed “free plan”/vanity stats claims from marketing pages (About/Features) | Copy now matches waitlist‑only status |
+| Dec 12 | Added `/rss.xml` and published “optimize YouTube video for SEO” guide | Better discovery + stronger SEO cluster coverage |
 
 ---
 

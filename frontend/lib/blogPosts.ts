@@ -3,6 +3,137 @@ import type { BlogPost } from "./blog";
 // Static blog posts - can be replaced with CMS later
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-optimize-youtube-video-for-seo-2025",
+    title: "How to Optimize a YouTube Video for SEO in 2025 (Step-by-Step)",
+    description:
+      "A step-by-step 2025 guide to optimizing a YouTube video for SEO: keyword intent, titles, descriptions, tags, hashtags, and how to measure results.",
+    category: "SEO",
+    date: "2025-12-12T10:00:00Z",
+    readTime: "13 min read",
+    author: {
+      name: "TubeGrow Team",
+    },
+    content: `
+## What “YouTube SEO” Means in 2025
+
+In 2025, YouTube SEO is about making it easy for YouTube to understand:
+
+- **What your video is about**
+- **Who it’s for**
+- **Which searches and suggested surfaces** it should show up in
+
+Great SEO isn’t keyword stuffing. It’s clarity + alignment between your topic, metadata, and the viewer’s intent.
+
+## Step 1: Pick One Primary Keyword (and One Intent)
+
+Before writing anything, choose one primary query you want to earn traffic from.
+
+Examples:
+- “youtube seo optimization”
+- “how to optimize youtube video for seo”
+- “youtube tags generator”
+
+Then pick the intent:
+- **Learn**: how-to, tutorial, guide
+- **Compare**: best, alternative, vs
+- **Do**: checklist, template, generator
+
+If you try to target multiple intents in one video, your title and description become vague — and YouTube can’t confidently place it.
+
+## Step 2: Write the Title (Keyword + Benefit)
+
+Use this checklist:
+
+- Put your primary keyword in the first half of the title (naturally)
+- Make the benefit obvious (“…step-by-step”, “…for beginners”, “…in 10 minutes”)
+- Keep it readable on mobile (often ~55–65 characters)
+- Avoid vague hype words unless you can back them up
+
+Title templates that work:
+
+- “How to [Outcome] in 2025 (Step-by-Step)”
+- “[Primary keyword]: The [simple benefit] Checklist”
+- “Stop Doing This: [Common mistake] (Fix in 5 minutes)”
+
+## Step 3: Build a Description That Ranks and Converts
+
+Your description is for YouTube *and* humans. A simple structure:
+
+~~~text
+Hook (1–2 lines, mention the keyword naturally)
+
+What you’ll learn (3–5 bullets)
+
+Chapters / key takeaways (optional)
+
+Related links (guides + tools)
+~~~
+
+Guidelines:
+- The first 2 lines are the snippet; make them strong
+- Add close keyword variants naturally (don’t stuff)
+- Link to your next best video to keep session time high
+
+## Step 4: Tags (Clarify, Don’t Spam)
+
+Tags help with topic clarification and misspellings. A practical setup:
+
+- 1 exact match tag (primary keyword)
+- 3–6 close variants (intent-adjacent)
+- 3–5 context tags (niche, format, series)
+
+Avoid copying giant tag lists or adding unrelated trending tags.
+
+## Step 5: Hashtags (2–3 Only)
+
+Hashtags are visible and can look spammy.
+
+Best practice:
+- Use 2–3 relevant hashtags
+- Keep them specific to the niche/topic
+
+## Step 6: Add Chapters (When It Helps)
+
+Chapters help viewers skim and can improve retention for longer videos.
+
+Use chapters when:
+- the video is 6+ minutes
+- you cover multiple subtopics
+
+Keep chapter titles descriptive, not clickbait.
+
+## Step 7: Measure SEO Impact (and Iterate)
+
+After publishing (or after a metadata refresh), track:
+
+- Impressions from **YouTube Search**
+- CTR for search traffic
+- Average view duration for search viewers
+- Ranking movement over time
+
+If retention is good but CTR is low: improve the title and thumbnail.
+If CTR is good but retention is low: tighten the intro and pacing.
+
+## Fast Workflow: Use the Lite Tools Before You Publish
+
+For quick feedback before you hit Publish:
+
+- **SEO Score (Lite)**: /tools/youtube-seo-score
+- **Metadata Generator (Lite)**: /tools/youtube-metadata-generator
+- **Full SEO workflow (waitlist‑only)**: /youtube-seo-tool
+
+## Biggest Win: Refresh Old Videos
+
+Old videos with proven watch time often respond quickly to SEO improvements:
+
+- tighten the title around one query
+- rewrite the first 2 description lines
+- clean up tags and add 2–3 relevant hashtags
+
+Do this consistently and you build a library that earns search traffic month after month.
+`,
+  },
+  {
     slug: "youtube-shorts-analytics-2025",
     title: "YouTube Shorts Analytics in 2025: Metrics That Matter + Fixes",
     description:
