@@ -383,3 +383,24 @@ async def require_admin(
             detail="Admin access required"
         )
     return user
+
+
+def verify_channel_ownership(user: User, channel_id: str) -> None:
+    """
+    Verify that the authenticated user owns or has access to the given channel_id.
+    Raises 404 if the user does not have access to the channel.
+
+    Usage:
+        verify_channel_ownership(user, request.channel_id)
+    """
+    with get_db_session() as session:
+        channel = session.query(YouTubeChannel).filter(
+            YouTubeChannel.id == channel_id,
+            YouTubeChannel.user_id == user.id,
+        ).first()
+
+        if not channel:
+            raise HTTPException(
+                status_code=404,
+                detail="Channel not found"
+            )
