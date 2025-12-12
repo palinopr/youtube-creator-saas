@@ -7,6 +7,15 @@ const nextConfig = {
   // Ensure serverless output tracing uses the same root as Turbopack.
   // This avoids missing dependencies in production builds on Vercel.
   outputFileTracingRoot: __dirname,
+  async redirects() {
+    return [
+      {
+        source: "/blog/best-times-to-post-youtube-2024",
+        destination: "/blog/best-times-to-post-youtube-2025",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

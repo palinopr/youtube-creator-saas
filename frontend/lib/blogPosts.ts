@@ -368,7 +368,7 @@ Start implementing these insights today and watch your channel grow!
     `,
   },
   {
-    slug: "best-times-to-post-youtube-2024",
+    slug: "best-times-to-post-youtube-2025",
     title: "Best Times to Post on YouTube in 2025",
     description:
       "Discover the optimal posting times for YouTube based on data from millions of videos. Maximize your views with strategic scheduling.",

@@ -16,7 +16,7 @@ const protectedRoutes = [
 ];
 
 // Public routes that don't require authentication
-const publicRoutes = ["/", "/login", "/pricing"];
+const publicRoutes = ["/", "/login"];
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

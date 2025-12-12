@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import ReactMarkdown, { type Components } from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Props {
   params: { slug: string } | Promise<{ slug: string }>;
@@ -79,6 +81,26 @@ export default async function BlogPostPage({ params }: Props) {
   const nextPost = allPosts[currentIndex + 1];
   const prevPost = allPosts[currentIndex - 1];
 
+  const markdown = normalizeMarkdown(post.content);
+
+  const markdownComponents: Components = {
+    h1: ({ node, ...props }) => <h2 {...props} />,
+    h2: ({ node, ...props }) => <h3 {...props} />,
+    h3: ({ node, ...props }) => <h4 {...props} />,
+    h4: ({ node, ...props }) => <h5 {...props} />,
+    a: ({ node, href, ...props }) => {
+      const isExternal = href?.startsWith("http");
+      return (
+        <a
+          href={href}
+          {...props}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        />
+      );
+    },
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -135,7 +157,9 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Content */}
       <section className="py-12">
         <article className="max-w-3xl mx-auto px-6 prose prose-invert prose-lg prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-white prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline prose-code:text-emerald-400 prose-code:bg-white/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[#111] prose-pre:border prose-pre:border-white/10">
-          <div dangerouslySetInnerHTML={{ __html: formatContent(post.content) }} />
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            {markdown}
+          </ReactMarkdown>
         </article>
       </section>
 
@@ -187,10 +211,10 @@ export default async function BlogPostPage({ params }: Props) {
             Put these strategies into action with TubeGrow's AI-powered analytics.
           </p>
           <Link
-            href="/api/auth/login"
+            href="/#waitlist"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"
           >
-            Get Started Free
+            Join Waitlist
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -199,23 +223,7 @@ export default async function BlogPostPage({ params }: Props) {
   );
 }
 
-// Simple markdown-like content formatter
-function formatContent(content: string): string {
-  // Strip a leading markdown H1 (post title is rendered above).
+function normalizeMarkdown(content: string): string {
   const withoutLeadingH1 = content.replace(/^\s*#\s+.*\n+/, "");
-
-  return withoutLeadingH1
-    // Demote headings to keep a single H1 on the page (the post title above).
-    .replace(/^# (.*$)/gim, "<h2>$1</h2>")
-    .replace(/^## (.*$)/gim, "<h3>$1</h3>")
-    .replace(/^### (.*$)/gim, "<h4>$1</h4>")
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/^\- (.*$)/gim, '<li>$1</li>')
-    .replace(/^(\d+)\. (.*$)/gim, '<li>$2</li>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/<li>/g, '<ul><li>')
-    .replace(/<\/li>\n(?!<li>)/g, '</li></ul>')
-    .replace(/<\/li><ul>/g, '</li>')
-    .replace(/^/, '<p>')
-    .replace(/$/, '</p>');
+  return withoutLeadingH1.trim();
 }

@@ -98,7 +98,7 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 - Pros and cons for each tool
 - Pricing comparison
 - FAQ section with keyword-rich answers
-- CTAs to pricing/features
+- CTAs to waitlist/features
 
 **Word Count**: ~1,500 words
 
@@ -184,28 +184,31 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 
 **File**: `frontend/app/sitemap.ts`
 
-### Before (5 pages)
+### Before (4 pages)
 ```
 /
-/pricing
 /features
 /about
 /blog
 ```
 
-### After (12 pages)
+### After (marketing + SEO pages)
 ```
 /
-/pricing
 /features
 /about
 /blog
 /alternatives (NEW - priority 0.9)
 /ai-youtube-tools (NEW - priority 0.9)
 /viral-clips-generator (NEW - priority 0.9)
+/youtube-analytics-tool (NEW - priority 0.9)
+/youtube-seo-tool (NEW - priority 0.9)
+/tools (NEW - priority 0.8)
+/niches (NEW - priority 0.8)
+/niches/[niche] (10 pages, NEW - priority 0.8)
 /blog/how-to-start-youtube-channel-beginners-guide (NEW - priority 0.8)
 /blog/how-to-use-youtube-analytics-grow-channel
-/blog/best-times-to-post-youtube-2024
+/blog/best-times-to-post-youtube-2025
 /blog/ai-changing-youtube-content-creation
 ```
 
