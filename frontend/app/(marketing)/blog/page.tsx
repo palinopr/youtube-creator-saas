@@ -48,6 +48,21 @@ export default function BlogPage() {
             Tips, strategies, and insights to help you grow your YouTube channel
             and create better content.
           </p>
+          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-4">
+            Start with our{" "}
+            <Link href="/ai-youtube-tools" className="text-emerald-400 hover:underline">
+              AI tools guide
+            </Link>
+            , learn how to{" "}
+            <Link href="/viral-clips-generator" className="text-emerald-400 hover:underline">
+              create viral Shorts
+            </Link>
+            , and explore{" "}
+            <Link href="/features" className="text-emerald-400 hover:underline">
+              TubeGrow features
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

@@ -49,7 +49,7 @@ const competitors = [
     highlight: true,
     logo: "🚀",
     tagline: "AI-Powered Growth",
-    price: "$19/mo",
+    price: "Waitlist only",
     features: {
       aiChat: true,
       viralClips: true,
@@ -66,7 +66,7 @@ const competitors = [
       "Automatic viral clip detection",
       "Modern, intuitive dashboard",
       "Real-time analytics",
-      "Affordable pricing",
+      "Built for the AI era",
     ],
     cons: ["Newer platform", "No browser extension yet"],
   },
@@ -75,7 +75,7 @@ const competitors = [
     highlight: false,
     logo: "📊",
     tagline: "YouTube Certified",
-    price: "$7.50-$415/mo",
+    price: "Paid plans (varies)",
     features: {
       aiChat: true,
       viralClips: false,
@@ -105,7 +105,7 @@ const competitors = [
     highlight: false,
     logo: "🔧",
     tagline: "Channel Management",
-    price: "$2.80-$49.80/mo",
+    price: "Paid plans (varies)",
     features: {
       aiChat: false,
       viralClips: false,
@@ -168,7 +168,7 @@ const faqs = [
   {
     question: "Is there a free VidIQ or TubeBuddy alternative?",
     answer:
-      "TubeGrow offers a free tier with basic analytics and limited AI queries. For creators who want AI-powered insights without a high monthly cost, TubeGrow's pricing is competitive with full VidIQ and TubeBuddy plans.",
+      "TubeGrow is currently in waitlist-only early access. Join the waitlist to get access as we open the beta, and you’ll be the first to hear about launch plans.",
   },
 ];
 
@@ -407,15 +407,15 @@ export default function AlternativesPage() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-green-400" />
+              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
+                <Sparkles className="w-6 h-6 text-cyan-400" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
-                Simple Pricing
+                Early Access Waitlist
               </h3>
               <p className="text-gray-400 text-sm">
-                No confusing tiers or hidden features. Get full AI capabilities
-                at one affordable price. No $415/month enterprise plans needed.
+                TubeGrow is launching in phases. Join the waitlist to be among
+                the first creators to get access when beta opens.
               </p>
             </div>
           </div>
@@ -441,6 +441,47 @@ export default function AlternativesPage() {
                 <p className="text-gray-400">{faq.answer}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 border-t border-white/10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Learn More About TubeGrow
+          </h2>
+          <p className="text-gray-400 mb-8">
+            Explore our AI tools and growth guides before you join the waitlist.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4 text-left">
+            <Link
+              href="/features"
+              className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Features Overview</h3>
+              <p className="text-gray-400 text-sm">
+                A full tour of analytics, SEO, clips, and AI chat.
+              </p>
+            </Link>
+            <Link
+              href="/ai-youtube-tools"
+              className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">AI Tools Guide</h3>
+              <p className="text-gray-400 text-sm">
+                How TubeGrow uses AI to grow your channel.
+              </p>
+            </Link>
+            <Link
+              href="/blog/how-to-use-youtube-analytics-grow-channel"
+              className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">YouTube Analytics Guide</h3>
+              <p className="text-gray-400 text-sm">
+                Learn how to read your data and act on it.
+              </p>
+            </Link>
           </div>
         </div>
       </section>

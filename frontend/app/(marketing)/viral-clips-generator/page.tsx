@@ -427,6 +427,47 @@ export default function ViralClipsGeneratorPage() {
         </div>
       </section>
 
+      {/* Related Resources */}
+      <section className="py-16 px-4 bg-zinc-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
+            Related Resources
+          </h2>
+          <p className="text-zinc-400 text-center mb-8">
+            Keep learning with our AI tools and Shorts growth guides.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/ai-youtube-tools"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-red-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">AI Tools for Creators</h3>
+              <p className="text-zinc-400 text-sm">
+                See how TubeGrow uses AI across analytics, SEO, and clips.
+              </p>
+            </Link>
+            <Link
+              href="/features"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-red-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">All Features</h3>
+              <p className="text-zinc-400 text-sm">
+                Explore everything included in TubeGrow.
+              </p>
+            </Link>
+            <Link
+              href="/blog/ai-changing-youtube-content-creation"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-red-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">AI + YouTube Guide</h3>
+              <p className="text-zinc-400 text-sm">
+                Learn how AI is reshaping content creation.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

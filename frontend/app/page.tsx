@@ -6,7 +6,6 @@ import FeaturesTabs from "@/components/landing/FeaturesTabs";
 import HowItWorksTabs from "@/components/landing/HowItWorksTabs";
 import SocialProofSection from "@/components/landing/SocialProofSection";
 import TestimonialCarousel from "@/components/landing/TestimonialCarousel";
-import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
@@ -22,11 +21,9 @@ export default function HomePage() {
       <HowItWorksTabs />
       <SocialProofSection />
       <TestimonialCarousel />
-      <PricingSection />
       <FAQSection />
       <FinalCTA />
       <Footer />
     </main>
   );
 }
-

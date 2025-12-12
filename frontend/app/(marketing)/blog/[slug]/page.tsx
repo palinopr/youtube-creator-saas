@@ -194,9 +194,10 @@ export default async function BlogPostPage({ params }: Props) {
 // Simple markdown-like content formatter
 function formatContent(content: string): string {
   return content
-    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+    // Demote headings to keep a single H1 on the page (the post title above).
+    .replace(/^# (.*$)/gim, "<h2>$1</h2>")
+    .replace(/^## (.*$)/gim, "<h3>$1</h3>")
+    .replace(/^### (.*$)/gim, "<h4>$1</h4>")
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/^\- (.*$)/gim, '<li>$1</li>')
     .replace(/^(\d+)\. (.*$)/gim, '<li>$2</li>')

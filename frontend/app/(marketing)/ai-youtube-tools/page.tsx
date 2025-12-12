@@ -304,6 +304,47 @@ export default function AIYouTubeToolsPage() {
         </div>
       </section>
 
+      {/* Related Resources */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
+            Related Resources
+          </h2>
+          <p className="text-zinc-400 text-center mb-8">
+            Explore more guides and tools to grow your channel with AI.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/features"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">All TubeGrow Features</h3>
+              <p className="text-zinc-400 text-sm">
+                See everything you can do inside the platform.
+              </p>
+            </Link>
+            <Link
+              href="/viral-clips-generator"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Viral Clips Generator</h3>
+              <p className="text-zinc-400 text-sm">
+                Turn long videos into Shorts with AI moment detection.
+              </p>
+            </Link>
+            <Link
+              href="/blog/how-to-start-youtube-channel-beginners-guide"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Beginner’s Growth Guide</h3>
+              <p className="text-zinc-400 text-sm">
+                A step‑by‑step guide to starting and growing a channel.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
