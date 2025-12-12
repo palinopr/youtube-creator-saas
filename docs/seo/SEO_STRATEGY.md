@@ -4,6 +4,8 @@
 
 This document tracks all SEO work done for tubegrow.io to improve Google Search rankings and organic traffic.
 
+**Master plan**: see `docs/seo/SEO_MASTER_PLAN.md` for the living SEO roadmap, constraints, and progress checklist.
+
 ---
 
 ## Tools Used
