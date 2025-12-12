@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tubegrow.io";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tubegrow.io";
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {

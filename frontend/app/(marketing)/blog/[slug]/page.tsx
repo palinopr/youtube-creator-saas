@@ -8,6 +8,9 @@ interface Props {
   params: { slug: string };
 }
 
+// Force runtime rendering to avoid static prerendering to 404 on Vercel.
+export const dynamic = "force-dynamic";
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
