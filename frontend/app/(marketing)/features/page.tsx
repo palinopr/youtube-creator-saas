@@ -343,10 +343,10 @@ export default function FeaturesPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/pricing"
+              href="/#waitlist"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold text-lg transition-all"
             >
-              View Pricing
+              Join Waitlist
             </Link>
           </div>
         </div>

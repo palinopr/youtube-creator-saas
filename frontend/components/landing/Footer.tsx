@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const productLinks = [
   { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/ai-youtube-tools", label: "AI YouTube Tools" },
   { href: "/viral-clips-generator", label: "Viral Clips Generator" },
   { href: "/alternatives", label: "Alternatives" },

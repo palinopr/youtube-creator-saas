@@ -427,7 +427,7 @@ export default function OnboardingPage() {
 
               <div className="text-center">
                 <Link
-                  href="/pricing"
+                  href="/#waitlist"
                   className="text-sm text-purple-400 hover:text-purple-300"
                 >
                   Compare all plans in detail →

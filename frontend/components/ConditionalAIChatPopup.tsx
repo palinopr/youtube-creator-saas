@@ -8,7 +8,6 @@ import { api } from "@/lib/api";
 // Routes where the AI chat should NOT appear (even for authenticated users)
 const EXCLUDED_ROUTES = [
   "/login",
-  "/pricing",
   "/features",
   "/about",
   "/blog",
