@@ -1,19 +1,37 @@
 ---
 title: System Architecture
-description: End-to-end architecture for the YouTube Creator SaaS.
+description: End-to-end architecture for TubeGrow (tubegrow.io).
 ---
 
-# YouTube Creator SaaS – Architecture
+# TubeGrow – Architecture
 
 Frontend runs on Vercel (Next.js App Router).  
 Backend runs on Railway (FastAPI + background workers).  
-Primary external services: Google OAuth/YouTube APIs, OpenAI, Stripe, optional SerpBear, optional Supabase (waitlist).
+Primary external services: Google OAuth/YouTube APIs, OpenAI, Stripe (disabled during waitlist-only), optional SerpBear, optional Supabase (waitlist).
+
+**Status context (Dec 2025):** waitlist-only early access. Public UX must not show pricing.
 
 ## High-level module map
 
 ```mermaid
 mindmap
-  root((youtube-saas))
+  root((tubegrow.io))
+    frontend(Next.js 16)
+      marketing(Public marketing)
+        pages(Landing + pillars + niches)
+        blog(/blog + /blog/[slug])
+        tools(/tools/* lite)
+        seo(robots.txt + sitemap.xml + rss.xml + llms.txt)
+      app(Authenticated product)
+        dashboard(/dashboard + insights)
+        analysis(/analysis + deep-analysis)
+        settings(/settings/*)
+        onboarding(/onboarding)
+      admin(Internal panel /admin/*)
+      lib(ApiClient + blogPosts)
+      hooks(Auth + data loaders)
+      components(UI)
+      public(icons + manifest + llms.txt)
     backend(FastAPI)
       auth(OAuth + JWT cookies)
       routers(/api/*)
@@ -22,15 +40,8 @@ mindmap
       scripts(Local CLIs e.g. seo_report)
       workers(DB-backed async jobs)
       db(Postgres/SQLite models + repos)
-      billing(Stripe)
+      billing(Stripe - disabled during waitlist-only)
       services(SerpBear)
-    frontend(Next.js)
-      marketing(Landing + pillars + niches + blog)
-      app(Dashboard + tools)
-      admin(Internal panel)
-      lib(ApiClient + utils)
-      hooks(Auth + data loaders)
-      components(UI)
     supabase(Optional waitlist)
 ```
 
@@ -39,18 +50,20 @@ mindmap
 ```mermaid
 flowchart LR
   U[User Browser]
+  C[Search/AI Crawlers<br/>Googlebot + LLM crawlers]
   V[Vercel Frontend<br/>Next.js]
   R[Railway Backend<br/>FastAPI]
   PG[(Railway Postgres)]
   G[Google OAuth + YouTube APIs]
   GA[GA4 + Search Console APIs<br/>(internal SEO reporting)]
   OAI[OpenAI API]
-  S[Stripe API]
+  S[Stripe API<br/>(billing disabled while waitlist-only)]
   SB[SerpBear API<br/>(optional)]
   SUP[Supabase<br/>(optional waitlist)]
   CLI[SEO Report CLI<br/>(local)]
 
   U --> V
+  C -->|crawl: sitemap.xml, robots.txt, rss.xml, llms.txt| V
   V -->|HTTPS + cookies| R
   R --> PG
   R --> G
@@ -181,10 +194,11 @@ erDiagram
   - `SECRET_KEY` (JWT signing)
   - `TOKEN_ENCRYPTION_KEY` (Fernet)
   - `OPENAI_API_KEY`
-  - Stripe vars if billing enabled.
+  - Stripe vars only if billing is enabled (waitlist-only keeps billing UI off).
 - Vercel env:
-  - `NEXT_PUBLIC_API_URL=https://api.tubegrow.io`
-  - `NEXT_PUBLIC_GA_ID` (and/or measurement id)
+  - `NEXT_PUBLIC_SITE_URL=https://www.tubegrow.io`
+  - `NEXT_PUBLIC_API_URL` (Railway backend URL, e.g. `https://<railway-service>.up.railway.app`)
+  - `NEXT_PUBLIC_GA_ID` (GA4 measurement id)
   - Supabase waitlist vars if used.
 
 Local-only (internal) SEO reporting:

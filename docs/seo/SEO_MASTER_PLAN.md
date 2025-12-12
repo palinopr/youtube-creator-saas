@@ -50,8 +50,6 @@ Public pillars already live:
 - `/viral-clips-generator`
 - `/alternatives`
 - `/blog`
-
-Planned pillars to add:
 - `/youtube-analytics-tool`
 - `/youtube-seo-tool`
 
@@ -288,6 +286,7 @@ Add entries with date + outcome.
 | Dec 12 | Added `/rss.xml` and published “optimize YouTube video for SEO” guide | Better discovery + stronger SEO cluster coverage |
 | Dec 12 | Removed fake JSON-LD price/ratings defaults; aligned org/app URLs to `www` | Structured data now matches waitlist-only reality |
 | Dec 12 | Removed in-app pricing surfaces (onboarding plan step + billing page) while waitlist-only | No public prices visible anywhere |
+| Dec 12 | Updated `docs/ARCHITECTURE.md` Mermaid diagrams to match current SEO + waitlist-only system | Docs stay aligned with shipped routes + constraints |
 
 ---
 
