@@ -60,7 +60,7 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 
 ---
 
-## Site Audit Results (Semrush - Dec 2024)
+## Site Audit Results (Semrush - Dec 2025)
 
 ### Initial Audit
 - **Site Health Score**: 89%
@@ -150,7 +150,7 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 
 ## Blog Posts Created
 
-### 1. How to Start a YouTube Channel (2024 Guide)
+### 1. How to Start a YouTube Channel (2025 Guide)
 **File**: `frontend/lib/blog.ts` (slug: how-to-start-youtube-channel-beginners-guide)
 
 **Target Keywords**:
@@ -235,7 +235,7 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 
 ## Deployment
 
-**Date**: December 11, 2024
+**Date**: December 11, 2025
 
 **Commit**: `e565aa3`
 ```
@@ -275,7 +275,7 @@ feat: Add SEO landing pages for keyword targeting
 - "YouTube SEO: Complete Guide to Ranking Videos"
 - "How to Make YouTube Shorts That Go Viral"
 - "YouTube Analytics Explained: Every Metric You Need to Know"
-- "Best YouTube Tools for Creators in 2024"
+- "Best YouTube Tools for Creators in 2025"
 - "How to Monetize Your YouTube Channel"
 
 ---
@@ -304,4 +304,4 @@ feat: Add SEO landing pages for keyword targeting
 
 ---
 
-*Last Updated: December 11, 2024*
+*Last Updated: December 12, 2025*

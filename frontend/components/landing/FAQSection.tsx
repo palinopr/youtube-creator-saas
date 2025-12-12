@@ -26,23 +26,23 @@ const faqCategories = [
     ],
   },
   {
-    id: "billing",
-    label: "Billing",
+    id: "access",
+    label: "Access",
     questions: [
       {
-        question: "Is there a free trial?",
+        question: "How do I get access to TubeGrow?",
         answer:
-          "Yes! All plans come with a 14-day free trial. No credit card required to start. You'll have full access to all features during the trial period.",
+          "TubeGrow is currently in waitlist-only early access. Join the waitlist on the homepage, and we’ll invite creators in waves as we open the beta.",
       },
       {
-        question: "Can I cancel anytime?",
+        question: "When will pricing be available?",
         answer:
-          "Yes, you can cancel your subscription at any time from your account settings. If you cancel, you'll retain access until the end of your current billing period.",
+          "We’ll share pricing when the public beta opens. Waitlist members will get early access and first notice of launch details.",
       },
       {
-        question: "What payment methods do you accept?",
+        question: "Will TubeGrow have a free plan?",
         answer:
-          "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for annual Enterprise plans.",
+          "We’re finalizing launch plans now. The waitlist is the best way to get early access and learn what’s included at launch.",
       },
     ],
   },
@@ -53,17 +53,17 @@ const faqCategories = [
       {
         question: "Can I connect multiple YouTube channels?",
         answer:
-          "Yes! The number of channels you can connect depends on your plan. Starter includes 1 channel, Pro includes 3 channels, and Agency includes unlimited channels.",
+          "Yes. TubeGrow supports multiple channels per account. Limits (if any) will be announced during beta as we scale access.",
       },
       {
-        question: "How do I upgrade or downgrade my plan?",
+        question: "How do I connect my channel?",
         answer:
-          "You can change your plan at any time from your account settings. Upgrades take effect immediately, and downgrades will apply at the start of your next billing cycle.",
+          "Once you’re invited to the beta, you connect through secure Google OAuth in one click. TubeGrow only requests the permissions needed to read your analytics and optimize your content.",
       },
       {
         question: "Can I export my data?",
         answer:
-          "Yes, you can export your analytics data, reports, and insights at any time. Pro and Agency plans also include API access for custom integrations.",
+          "Yes. You can export analytics and insights from your dashboard. We’re expanding export formats as we roll out the beta.",
       },
     ],
   },

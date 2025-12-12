@@ -4,17 +4,17 @@ import type { BlogPost } from "./blog";
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-youtube-channel-beginners-guide",
-    title: "How to Start a YouTube Channel in 2024: Complete Beginner's Guide",
+    title: "How to Start a YouTube Channel in 2025: Complete Beginner's Guide",
     description:
       "Learn how to start a YouTube channel from scratch. This step-by-step guide covers everything from niche selection to your first upload, equipment recommendations, and growth strategies.",
     category: "Growth",
-    date: "2024-12-10",
+    date: "2025-12-10",
     readTime: "15 min read",
     author: {
       name: "TubeGrow Team",
     },
     content: `
-# How to Start a YouTube Channel in 2024: Complete Beginner's Guide
+# How to Start a YouTube Channel in 2025: Complete Beginner's Guide
 
 Starting a YouTube channel can change your life. Whether you want to build a personal brand, share your expertise, create a side income, or eventually become a full-time creator, YouTube offers incredible opportunities. This comprehensive guide will walk you through everything you need to know to start your YouTube journey the right way.
 
@@ -41,7 +41,7 @@ Ask yourself:
 - What unique knowledge or perspective do I have?
 - Is there an audience searching for this content?
 
-### Popular YouTube Niches in 2024
+### Popular YouTube Niches in 2025
 
 - **Tech reviews and tutorials**
 - **Personal finance and investing**
@@ -300,7 +300,7 @@ Here's your action plan:
 
 Don't wait until everything is perfect. Your first videos won't be your best—and that's okay. Every successful YouTuber started exactly where you are now.
 
-Ready to accelerate your YouTube growth? TubeGrow's AI-powered analytics can help you understand your audience, optimize your content, and grow faster. Start your free trial today.
+Ready to accelerate your YouTube growth? TubeGrow's AI-powered analytics can help you understand your audience, optimize your content, and grow faster. Join the waitlist today.
     `,
   },
   {
@@ -309,7 +309,7 @@ Ready to accelerate your YouTube growth? TubeGrow's AI-powered analytics can hel
     description:
       "Learn how to leverage YouTube Analytics to understand your audience, optimize your content strategy, and accelerate channel growth.",
     category: "Analytics",
-    date: "2024-12-01",
+    date: "2025-12-01",
     readTime: "8 min read",
     author: {
       name: "TubeGrow Team",
@@ -369,17 +369,17 @@ Start implementing these insights today and watch your channel grow!
   },
   {
     slug: "best-times-to-post-youtube-2024",
-    title: "Best Times to Post on YouTube in 2024",
+    title: "Best Times to Post on YouTube in 2025",
     description:
       "Discover the optimal posting times for YouTube based on data from millions of videos. Maximize your views with strategic scheduling.",
     category: "Growth",
-    date: "2024-11-28",
+    date: "2025-11-28",
     readTime: "6 min read",
     author: {
       name: "TubeGrow Team",
     },
     content: `
-# Best Times to Post on YouTube in 2024
+# Best Times to Post on YouTube in 2025
 
 Timing can significantly impact your video's initial performance. While the "best time" depends on your specific audience, here's what the data shows.
 
@@ -430,7 +430,7 @@ Remember: Great content beats perfect timing every time. Focus on quality first,
     description:
       "Explore how artificial intelligence is revolutionizing content creation, from analytics to editing, and how creators can leverage these tools.",
     category: "AI",
-    date: "2024-11-25",
+    date: "2025-11-25",
     readTime: "10 min read",
     author: {
       name: "TubeGrow Team",
@@ -494,4 +494,3 @@ The creators who thrive will be those who effectively combine AI capabilities wi
     `,
   },
 ];
-
