@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 
 interface Props {
-  params: { slug: string };
+  params: { slug: string } | Promise<{ slug: string }>;
 }
 
 // Force runtime rendering to avoid static prerendering to 404 on Vercel.
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const resolvedParams = await params;
+  const post = getPostBySlug(resolvedParams.slug);
 
   if (!post) {
     return {
@@ -56,15 +57,17 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
   Clips: { bg: "bg-pink-500/10", text: "text-pink-400" },
 };
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
   const allPosts = getAllPosts();
-  const currentIndex = allPosts.findIndex((p) => p.slug === params.slug);
+  const currentIndex = allPosts.findIndex((p) => p.slug === slug);
   const nextPost = allPosts[currentIndex + 1];
   const prevPost = allPosts[currentIndex - 1];
 
