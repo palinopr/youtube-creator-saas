@@ -166,8 +166,33 @@ export default function WhyItWorksPage() {
     }
   }, []);
 
+  // Load cached analysis first, then run background job if needed.
   useEffect(() => {
-    fetchCausalAnalysis();
+    let cancelled = false;
+
+    const loadCachedOrRun = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const cached = await api.getCachedCausalAnalysis();
+        if (!cancelled && cached?.cached && cached?.data) {
+          setAnalysis(cached.data as any);
+          setLoading(false);
+          return;
+        }
+      } catch {
+        // Ignore cache errors and fall back to live analysis.
+      }
+
+      if (!cancelled) {
+        fetchCausalAnalysis();
+      }
+    };
+
+    loadCachedOrRun();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const fetchCausalAnalysis = async () => {

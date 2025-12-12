@@ -13,7 +13,7 @@ from ..auth.dependencies import get_current_user, check_usage
 from ..config import get_settings
 from ..db.models import User
 from ..db.models import JobType
-from ..db.repository import JobRepository
+from ..db.repository import JobRepository, AnalyticsCacheRepository
 from ..tools.channel_analyzer import ChannelAnalyzer
 from ..tools.deep_analytics import DeepAnalytics
 from ..tools.causal_analytics import CausalAnalytics
@@ -48,6 +48,16 @@ limiter = Limiter(key_func=get_remote_address)
 
 
 # ========== ASYNC ANALYSIS ENDPOINTS (POLLING SUPPORT) ==========
+
+def _get_current_channel_id() -> str:
+    """Resolve the authenticated user's YouTube channel id."""
+    youtube = get_authenticated_service("youtube", "v3")
+    channel_resp = youtube.channels().list(part="id", mine=True).execute()
+    items = channel_resp.get("items", [])
+    if not items:
+        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
+    return items[0]["id"]
+
 
 @router.post("/deep/start")
 @limiter.limit("3/minute")
@@ -100,6 +110,29 @@ async def start_deep_analysis(
     }
 
 
+@router.get("/deep/cached")
+async def get_cached_deep_analysis(user: User = Depends(get_current_user)):
+    """Return the latest cached deep analysis for the user, if available."""
+    try:
+        channel_id = _get_current_channel_id()
+        cache = AnalyticsCacheRepository.get_cache(channel_id, "deep_analysis")
+        if not cache:
+            return {"cached": False}
+        return {
+            "cached": True,
+            "data": cache.get("data"),
+            "video_count": cache.get("video_count"),
+            "last_sync_at": cache.get("last_sync_at"),
+            "is_syncing": cache.get("is_syncing"),
+            "sync_error": cache.get("sync_error"),
+            "expires_at": cache.get("expires_at"),
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.get("/deep/status/{job_id}")
 async def get_deep_analysis_status(job_id: str, user: User = Depends(get_current_user)):
     """
@@ -126,7 +159,7 @@ async def get_deep_analysis_status(job_id: str, user: User = Depends(get_current
     
     if job.get("status") == "failed" and job.get("error_message"):
         response["error"] = job["error_message"]
-    
+
     return response
 
 
@@ -531,6 +564,29 @@ async def run_causal_analysis(
         
         return analysis
         
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/causal/cached")
+async def get_cached_causal_analysis(user: User = Depends(get_current_user)):
+    """Return the latest cached causal analysis for the user, if available."""
+    try:
+        channel_id = _get_current_channel_id()
+        cache = AnalyticsCacheRepository.get_cache(channel_id, "causal_analysis")
+        if not cache:
+            return {"cached": False}
+        return {
+            "cached": True,
+            "data": cache.get("data"),
+            "video_count": cache.get("video_count"),
+            "last_sync_at": cache.get("last_sync_at"),
+            "is_syncing": cache.get("is_syncing"),
+            "sync_error": cache.get("sync_error"),
+            "expires_at": cache.get("expires_at"),
+        }
     except HTTPException:
         raise
     except Exception as e:

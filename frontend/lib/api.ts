@@ -215,6 +215,10 @@ class ApiClient {
     return this.request(`/api/analysis/causal/status/${jobId}`);
   }
 
+  async getCachedCausalAnalysis(): Promise<any> {
+    return this.request(`/api/analysis/causal/cached`);
+  }
+
   async getAdvancedAnalysis(maxVideos: number = 5000): Promise<any> {
     return this.request(`/api/analysis/advanced?max_videos=${maxVideos}`);
   }
@@ -229,6 +233,10 @@ class ApiClient {
 
   async getDeepAnalysis(maxVideos: number = 500): Promise<any> {
     return this.request(`/api/analysis/deep?max_videos=${maxVideos}`);
+  }
+
+  async getCachedDeepAnalysis(): Promise<any> {
+    return this.request(`/api/analysis/deep/cached`);
   }
 
   // Content Optimizer

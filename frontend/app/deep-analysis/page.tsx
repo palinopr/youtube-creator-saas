@@ -81,7 +81,7 @@ interface JobStatus {
 
 export default function DeepAnalysisPage() {
   const [analysis, setAnalysis] = useState<DeepAnalysis | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [jobId, setJobId] = useState<string | null>(null);
   const [jobStatus, setJobStatus] = useState<JobStatus | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -185,9 +185,33 @@ export default function DeepAnalysisPage() {
     }
   };
 
-  // Auto-start on mount
+  // Load cached analysis first, then run background job if needed.
   useEffect(() => {
-    startDeepAnalysis();
+    let cancelled = false;
+
+    const loadCachedOrRun = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const cached = await api.getCachedDeepAnalysis();
+        if (!cancelled && cached?.cached && cached?.data) {
+          setAnalysis(cached.data as any);
+          setLoading(false);
+          return;
+        }
+      } catch {
+        // Ignore cache errors and fall back to live analysis.
+      }
+
+      if (!cancelled) {
+        startDeepAnalysis();
+      }
+    };
+
+    loadCachedOrRun();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const formatNumber = (num: number) => {
