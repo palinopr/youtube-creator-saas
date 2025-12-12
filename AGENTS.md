@@ -25,6 +25,30 @@ Key docs:
 - **Avoid spam/doorway SEO tactics** (no “city pages” or fake backlink schemes).
 - **Always commit + push to `main`** after meaningful changes.
 
+## Deploy + Verification Rules
+
+- **Always push** changes to GitHub `main` (Vercel/Railway deploys should follow).
+- After a deploy, **watch for errors**:
+  - Vercel CLI: `vercel ls`, `vercel deployments`, `vercel logs <deployment-url-or-id>`
+  - Railway CLI: `railway status`, `railway logs`
+- **Smoke-check production after ~1 minute** (or once deploy completes):
+  - Use Playwright to load key pages and confirm the change is live.
+  - Always validate the “waitlist-only” constraint (no prices visible anywhere public).
+- If a deploy fails or changes don’t appear:
+  - Check logs first (Vercel/Railway).
+  - Record what happened + how it was fixed in the progress log (below).
+
+## Progress Logging + Keeping Docs In Sync
+
+- Every meaningful change must update the running log in:
+  - `docs/seo/SEO_MASTER_PLAN.md`
+- If a change impacts architecture/routes/pages/tools, update the diagrams/docs too:
+  - `docs/ARCHITECTURE.md` (Mermaid must match current reality)
+- Keep “source of truth” consistent:
+  - product status (waitlist-only)
+  - public feature claims
+  - internal docs + diagrams
+
 ## SEO: Current State (as of Dec 12, 2025)
 
 Already shipped:
@@ -57,4 +81,3 @@ Expected Semrush warning:
 
 There is an internal CLI at `backend/scripts/seo_report.py` used to pull GA4/GSC metrics.
 Keep OAuth credentials and tokens local in `backend/.env` and cache directories. Never commit them.
-
