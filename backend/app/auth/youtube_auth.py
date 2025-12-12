@@ -263,6 +263,7 @@ async def callback(code: str, state: str, error: Optional[str] = None):
             raise HTTPException(status_code=400, detail="Google profile missing required fields")
 
         user: Optional[User] = None
+        user_id: Optional[str] = None
         with get_db_session() as session:
             # Find existing user by google_id or email
             user = session.query(User).filter(
@@ -305,10 +306,14 @@ async def callback(code: str, state: str, error: Optional[str] = None):
                 logger.info(f"[AUTH] Created new user: {email}")
 
             session.commit()
+            user_id = str(user.id)
             session.expunge(user)
 
+        if not settings.single_user_mode and not user_id:
+            raise HTTPException(status_code=500, detail="Failed to resolve user id after OAuth")
+
         # Save credentials to the correct tenant record
-        token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+        token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user_id
         save_credentials(credentials, token_key=token_key_for_creds)
 
         # Clean up temporary state record in multi-tenant mode
@@ -320,7 +325,7 @@ async def callback(code: str, state: str, error: Optional[str] = None):
         response = RedirectResponse(url=redirect_url)
 
         if not settings.single_user_mode:
-            session_token = create_session_token(user.id)
+            session_token = create_session_token(user_id)
             is_https_frontend = settings.frontend_url.startswith("https://")
             response.set_cookie(
                 key=settings.session_cookie_name,
