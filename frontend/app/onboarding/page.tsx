@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { PlanCard } from "@/components/billing";
 import { api } from "@/lib/api";
 import {
   Youtube,
@@ -12,23 +11,12 @@ import {
   ArrowLeft,
   Check,
   CheckCircle2,
-  Circle,
   Loader2,
   BarChart3,
   Zap,
   Video,
   AlertCircle,
 } from "lucide-react";
-
-interface Plan {
-  id: string;
-  name: string;
-  description: string;
-  price_monthly: number;
-  features: Record<string, boolean | number>;
-  highlights: string[];
-  is_current: boolean;
-}
 
 interface AuthStatus {
   authenticated: boolean;
@@ -39,12 +27,11 @@ interface AuthStatus {
   };
 }
 
-type OnboardingStep = "welcome" | "connect" | "plan" | "complete";
+type OnboardingStep = "welcome" | "connect" | "complete";
 
 const steps: { id: OnboardingStep; label: string }[] = [
   { id: "welcome", label: "Welcome" },
   { id: "connect", label: "Connect" },
-  { id: "plan", label: "Choose Plan" },
   { id: "complete", label: "Complete" },
 ];
 
@@ -52,10 +39,8 @@ export default function OnboardingPage() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("welcome");
   const [authStatus, setAuthStatus] = useState<AuthStatus | null>(null);
-  const [plans, setPlans] = useState<Plan[]>([]);
   const [loading, setLoading] = useState(true);
   const [connecting, setConnecting] = useState(false);
-  const [processingPlan, setProcessingPlan] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -73,14 +58,10 @@ export default function OnboardingPage() {
         return;
       }
 
-      // If channel is connected, skip to plan selection
+      // If channel is connected, complete onboarding
       if (data.channel_connected) {
-        setCurrentStep("plan");
+        setCurrentStep("complete");
       }
-
-      // Fetch plans
-      const plansData = await api.getPlans();
-      setPlans(plansData.plans);
     } catch (err) {
       setError("Failed to check authentication status");
     } finally {
@@ -92,30 +73,6 @@ export default function OnboardingPage() {
     setConnecting(true);
     // Redirect to YouTube OAuth with onboarding return URL
     window.location.href = `${api.getLoginUrl()}?redirect=/onboarding`;
-  };
-
-  const handleSelectPlan = async (planId: string) => {
-    setProcessingPlan(planId);
-    setError(null);
-
-    try {
-      if (planId === "free") {
-        // Free plan - just complete onboarding
-        setCurrentStep("complete");
-      } else {
-        // Paid plan - redirect to checkout
-        const data = await api.createCheckoutSession(
-          planId,
-          `${window.location.origin}/onboarding?step=complete`,
-          `${window.location.origin}/onboarding?step=plan`
-        );
-        window.location.href = data.checkout_url;
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Unknown error");
-    } finally {
-      setProcessingPlan(null);
-    }
   };
 
   const handleGoToDashboard = () => {
@@ -155,7 +112,7 @@ export default function OnboardingPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Youtube className="w-8 h-8 text-red-500" />
-              <span className="text-xl font-bold">CreatorSaaS</span>
+              <span className="text-xl font-bold">TubeGrow</span>
             </div>
             <Link
               href="/"
@@ -230,7 +187,11 @@ export default function OnboardingPage() {
                 <Sparkles className="w-10 h-10 text-purple-400" />
               </div>
               <h1 className="text-3xl font-bold text-white mb-4">
-                Welcome to CreatorSaaS{authStatus?.user?.name ? `, ${authStatus.user.name.split(" ")[0]}` : ""}!
+                Welcome to TubeGrow
+                {authStatus?.user?.name
+                  ? `, ${authStatus.user.name.split(" ")[0]}`
+                  : ""}
+                !
               </h1>
               <p className="text-gray-400 text-lg mb-8">
                 Let&apos;s get your account set up in just a few steps. You&apos;ll be
@@ -345,93 +306,6 @@ export default function OnboardingPage() {
                     </>
                   )}
                 </button>
-              </div>
-            </div>
-          )}
-
-          {/* Choose Plan Step */}
-          {currentStep === "plan" && (
-            <div>
-              <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-4">
-                  Choose Your Plan
-                </h1>
-                <p className="text-gray-400 text-lg">
-                  Start free and upgrade whenever you&apos;re ready. All plans include
-                  a 14-day trial.
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                {plans.slice(0, 4).map((plan) => (
-                  <div
-                    key={plan.id}
-                    className={`relative rounded-xl border p-5 cursor-pointer transition-all ${
-                      plan.id === "pro"
-                        ? "border-purple-500 bg-purple-500/5 hover:bg-purple-500/10"
-                        : "border-white/10 bg-white/5 hover:bg-white/10"
-                    }`}
-                    onClick={() => handleSelectPlan(plan.id)}
-                  >
-                    {plan.id === "pro" && (
-                      <div className="absolute -top-2.5 left-4">
-                        <span className="bg-purple-500 text-white text-xs font-medium px-2 py-0.5 rounded-full">
-                          Popular
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="font-bold text-white">{plan.name}</h3>
-                        <p className="text-sm text-gray-400">{plan.description}</p>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-2xl font-bold text-white">
-                          {plan.price_monthly === 0 ? "Free" : `$${plan.price_monthly}`}
-                        </span>
-                        {plan.price_monthly > 0 && (
-                          <span className="text-sm text-gray-400">/mo</span>
-                        )}
-                      </div>
-                    </div>
-
-                    <ul className="space-y-2 mb-4">
-                      {plan.highlights.slice(0, 3).map((highlight, index) => (
-                        <li key={index} className="flex items-center gap-2 text-sm">
-                          <Check className="w-4 h-4 text-emerald-400" />
-                          <span className="text-gray-300">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <button
-                      disabled={processingPlan === plan.id}
-                      className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
-                        plan.id === "pro"
-                          ? "bg-purple-500 hover:bg-purple-600 text-white"
-                          : "bg-white/10 hover:bg-white/20 text-white"
-                      }`}
-                    >
-                      {processingPlan === plan.id ? (
-                        <Loader2 className="w-5 h-5 animate-spin mx-auto" />
-                      ) : plan.price_monthly === 0 ? (
-                        "Continue Free"
-                      ) : (
-                        "Select Plan"
-                      )}
-                    </button>
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-center">
-                <Link
-                  href="/#waitlist"
-                  className="text-sm text-purple-400 hover:text-purple-300"
-                >
-                  Compare all plans in detail →
-                </Link>
               </div>
             </div>
           )}

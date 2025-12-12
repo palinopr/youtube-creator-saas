@@ -254,6 +254,7 @@ Ongoing:
 - [x] Titles trimmed on marketing pages.
 - [x] H1 hierarchy fixed on blog posts.
 - [x] Pricing removed from marketing UI.
+- [x] Billing/plan UI disabled in-app (waitlist-only).
 - [x] `llms.txt` added and converted to spec format.
 - [x] Canonical host aligned to `www`.
 - [ ] Add canonical for no‑www orphan if Semrush persists (monitor).
@@ -286,6 +287,7 @@ Add entries with date + outcome.
 | Dec 12 | Removed “free plan”/vanity stats claims from marketing pages (About/Features) | Copy now matches waitlist‑only status |
 | Dec 12 | Added `/rss.xml` and published “optimize YouTube video for SEO” guide | Better discovery + stronger SEO cluster coverage |
 | Dec 12 | Removed fake JSON-LD price/ratings defaults; aligned org/app URLs to `www` | Structured data now matches waitlist-only reality |
+| Dec 12 | Removed in-app pricing surfaces (onboarding plan step + billing page) while waitlist-only | No public prices visible anywhere |
 
 ---
 
