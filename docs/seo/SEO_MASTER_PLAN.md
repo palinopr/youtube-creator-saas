@@ -180,18 +180,36 @@ Expected Semrush warnings we ignore:
 
 ### 7.1 Reporting setup (internal)
 
-We track SEO impact with weekly GA4 + Search Console pulls (internal only).
+We track SEO impact with weekly GA4 + Search Console pulls (internal only) using the local CLI at `backend/scripts/seo_report.py`.
 
-Environment keys (store locally in `backend/.env`, never commit):
+**Environment keys** (store locally in `backend/.env`, never commit):
 - `SEO_OAUTH_CLIENT_ID`
 - `SEO_OAUTH_CLIENT_SECRET`
-- `SEO_OAUTH_CLIENT_JSON_PATH`
+- `SEO_OAUTH_CLIENT_JSON_PATH` (path to Desktop OAuth JSON)
 - `GA4_PROPERTY_ID`
 - `GSC_PROPERTY`
+- Optional: `SEO_OAUTH_TOKEN_PATH` (defaults to `backend/.cache/seo-token.json`)
 
-Run (local):
-`backend/venv/bin/python backend/scripts/seo_report.py --out docs/seo/reports/YYYY-MM-DD.md`
-(never commit reports with private data).
+**How the CLI works**
+1. Loads `backend/.env`, reads the OAuth JSON path + GA4/GSC targets.
+2. First run opens a browser consent (Desktop OAuth). After you approve, tokens cache to `backend/.cache/seo-token.json`.
+3. Pulls:
+   - GA4 totals for last `--ga4-days` (default 7): sessions, activeUsers, newUsers, engagedSessions.
+   - GA4 sessions by channel + top organic landing pages.
+   - Search Console totals for last `--gsc-days` (default 28) + top queries + top pages.
+4. Outputs Markdown by default, or raw JSON with `--json`. Use `--out` to write a file.
+
+**Run (local)**
+`backend/venv/bin/python backend/scripts/seo_report.py --out docs/seo/reports/2025-12-12.md`
+
+Flags:
+- `--ga4-days N`
+- `--gsc-days N`
+- `--json`
+- `--out path`
+
+**Security**
+- Never commit the OAuth JSON, cached token, or reports containing private metrics.
 
 ---
 
