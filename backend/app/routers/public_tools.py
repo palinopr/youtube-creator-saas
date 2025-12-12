@@ -453,7 +453,7 @@ def _simple_retrieve(chunks: List[Dict[str, str]], query: str, k: int = 4) -> Li
     return [c for s, c in scored[:k] if s > 0] or chunks[:k]
 
 
-def _upsert_lead(email: str, name: Optional[str], source: str, request: Request) -> MarketingLead:
+def _upsert_lead(email: str, name: Optional[str], source: str, request: Request) -> str:
     now = datetime.utcnow()
     ip = get_remote_address(request)
     ua = request.headers.get("user-agent", "")[:300] if request else ""
@@ -471,7 +471,7 @@ def _upsert_lead(email: str, name: Optional[str], source: str, request: Request)
             session.add(lead)
             session.flush()
             session.refresh(lead)
-            return lead
+            return lead.id
 
         lead = MarketingLead(
             email=email_norm,
@@ -485,7 +485,7 @@ def _upsert_lead(email: str, name: Optional[str], source: str, request: Request)
         session.add(lead)
         session.flush()
         session.refresh(lead)
-        return lead
+        return lead.id
 
 
 @router.post("/lead")
@@ -498,8 +498,8 @@ async def create_public_lead(request: Request, body: PublicLeadRequest):
     if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
         raise HTTPException(status_code=400, detail="Invalid email address.")
 
-    lead = _upsert_lead(email=email, name=body.name, source=body.source, request=request)
-    return {"ok": True, "lead_id": lead.id}
+    lead_id = _upsert_lead(email=email, name=body.name, source=body.source, request=request)
+    return {"ok": True, "lead_id": lead_id}
 
 
 @router.post("/agent/ask")
@@ -517,12 +517,12 @@ async def public_agent_ask(request: Request, body: PublicAskRequest):
     if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
         raise HTTPException(status_code=400, detail="Invalid email address.")
 
-    lead = _upsert_lead(email=email, name=None, source="landing_agent", request=request)
+    lead_id = _upsert_lead(email=email, name=None, source="landing_agent", request=request)
 
     # Per-email daily cap (extra protection beyond IP throttling).
     today = datetime.utcnow().date().isoformat()
     with get_db_session() as session:
-        lead_db = session.query(MarketingLead).filter(MarketingLead.id == lead.id).first()
+        lead_db = session.query(MarketingLead).filter(MarketingLead.id == lead_id).first()
         if not lead_db:
             raise HTTPException(status_code=500, detail="Lead not found.")
 
@@ -587,7 +587,7 @@ Grounding context (facts you can rely on):
     # Optional: log the ask (helps improve prompts + see what users want).
     with get_db_session() as session:
         ask = MarketingAgentAsk(
-            lead_id=lead.id,
+            lead_id=lead_id,
             email=email,
             page_url=body.page_url,
             question=body.question,
@@ -596,4 +596,4 @@ Grounding context (facts you can rely on):
         )
         session.add(ask)
 
-    return {"ok": True, "lead_id": lead.id, "result": payload}
+    return {"ok": True, "lead_id": lead_id, "result": payload}
