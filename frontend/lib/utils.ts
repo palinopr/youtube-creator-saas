@@ -1,5 +1,5 @@
 /**
- * Shared utility functions for the YouTube Creator SaaS
+ * Shared utility functions for TubeGrow
  * Used across multiple components for consistent formatting
  */
 

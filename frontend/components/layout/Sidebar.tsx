@@ -147,7 +147,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
             <Youtube className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="font-bold text-white">CreatorSaaS</h1>
+            <h1 className="font-bold text-white">TubeGrow</h1>
             <p className="text-xs text-gray-500">YouTube Analytics</p>
           </div>
         </Link>

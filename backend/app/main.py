@@ -37,7 +37,7 @@ limiter = Limiter(key_func=get_remote_address)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan handler."""
-    print("🚀 YouTube Creator SaaS API starting up...")
+    print("🚀 TubeGrow API starting up...")
     print(f"📍 Backend URL: {settings.backend_url}")
     print(f"🌐 Frontend URL: {settings.frontend_url}")
     
@@ -57,11 +57,11 @@ async def lifespan(app: FastAPI):
     
     # Shutdown workers
     stop_workers()
-    print("👋 YouTube Creator SaaS API shutting down...")
+    print("👋 TubeGrow API shutting down...")
 
 
 app = FastAPI(
-    title="YouTube Creator SaaS API",
+    title="TubeGrow API",
     description="AI-powered analytics dashboard for YouTube creators",
     version="1.0.0",
     lifespan=lifespan,
@@ -126,7 +126,7 @@ app.include_router(public_tools_router)
 async def root():
     """Root endpoint with API info."""
     return {
-        "name": "YouTube Creator SaaS API",
+        "name": "TubeGrow API",
         "version": "1.0.0",
         "docs": "/docs",
         "endpoints": {

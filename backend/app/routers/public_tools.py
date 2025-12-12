@@ -463,6 +463,39 @@ def _normalize_public_url(url: str) -> str:
     return u
 
 
+PUBLIC_SUGGESTED_URL_ALLOWLIST = {
+    "https://www.tubegrow.io/",
+    "https://www.tubegrow.io/#waitlist",
+    "https://www.tubegrow.io/about",
+    "https://www.tubegrow.io/features",
+    "https://www.tubegrow.io/blog",
+    "https://www.tubegrow.io/tools",
+    "https://www.tubegrow.io/youtube-analytics-tool",
+    "https://www.tubegrow.io/youtube-seo-tool",
+    "https://www.tubegrow.io/viral-clips-generator",
+    "https://www.tubegrow.io/ai-youtube-tools",
+    "https://www.tubegrow.io/alternatives",
+    "https://www.tubegrow.io/privacy",
+    "https://www.tubegrow.io/terms",
+}
+
+
+def _sanitize_public_copy(text: str) -> str:
+    """
+    Extra safety layer: remove phrasing that should never appear in public agent outputs.
+    """
+    t = (text or "").strip()
+    if not t:
+        return ""
+    t = re.sub(r"\bYouTube creator\s+SaaS\b", "AI-powered YouTube growth platform", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bSaaS\b", "platform", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bLangGraph\b", "AI", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bOpenAI\b", "AI", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bGPT[- ]?[0-9a-zA-Z.]+\b", "AI", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bmodel\b", "AI system", t, flags=re.IGNORECASE)
+    return t.strip()
+
+
 def _normalize_agent_payload(payload: Any) -> Dict[str, Any]:
     """
     Ensure the public agent response matches the expected shape.
@@ -483,9 +516,9 @@ def _normalize_agent_payload(payload: Any) -> Dict[str, Any]:
 
     next_steps_raw = payload.get("next_steps")
     if isinstance(next_steps_raw, list):
-        next_steps = [str(s).strip() for s in next_steps_raw if str(s).strip()]
+        next_steps = [_sanitize_public_copy(str(s)) for s in next_steps_raw if str(s).strip()]
     elif isinstance(next_steps_raw, str):
-        next_steps = [next_steps_raw.strip()] if next_steps_raw.strip() else []
+        next_steps = [_sanitize_public_copy(next_steps_raw)] if next_steps_raw.strip() else []
     else:
         next_steps = []
 
@@ -502,14 +535,20 @@ def _normalize_agent_payload(payload: Any) -> Dict[str, Any]:
             url = _normalize_public_url(url)
             if not url.startswith("https://www.tubegrow.io/"):
                 continue
+            if url.startswith("https://www.tubegrow.io/waitlist"):
+                url = "https://www.tubegrow.io/#waitlist"
+            if url not in PUBLIC_SUGGESTED_URL_ALLOWLIST:
+                continue
             suggested_pages.append({"label": label.strip()[:80], "url": url})
 
     return {
-        "title": title.strip()[:120],
-        "answer": answer.strip(),
+        "title": _sanitize_public_copy(title)[:120] or "TubeGrow AI Agent",
+        "answer": _sanitize_public_copy(answer),
         "next_steps": next_steps[:8],
         "suggested_pages": suggested_pages[:6],
-        "disclaimer": (disclaimer.strip() or "Waitlist-only early access. Answers are guidance, not guarantees.")[:240],
+        "disclaimer": (
+            _sanitize_public_copy(disclaimer) or "Waitlist-only early access. Answers are guidance, not guarantees."
+        )[:240],
     }
 
 
@@ -607,9 +646,22 @@ async def public_agent_ask(request: Request, body: PublicAskRequest):
         "You ONLY answer questions about TubeGrow and YouTube creator growth (analytics, SEO, Shorts/clips).\n"
         "If the user asks anything outside this scope, refuse briefly and redirect to tubegrow.io pages.\n"
         "You must be truthful: if something is not in the provided context, say you’re not sure.\n"
+        "Do NOT describe TubeGrow as a 'SaaS'. Use 'AI-powered YouTube growth platform' instead.\n"
+        "Do NOT reveal implementation details or internal technology (e.g., LangGraph, OpenAI, model names, backend, database, APIs).\n"
+        "If asked about internal implementation, say you can’t share details and focus on what the platform does.\n"
         "TubeGrow is waitlist-only early access; do not mention pricing.\n"
         "Return a JSON object with keys: title (string), answer (string), next_steps (array of strings), suggested_pages (array of {label,url}), disclaimer (string).\n"
-        "suggested_pages must be an array of {label,url} and should point to tubegrow.io public pages.\n"
+        "suggested_pages must be an array of {label,url} and MUST use only these URLs:\n"
+        "- https://www.tubegrow.io/\n"
+        "- https://www.tubegrow.io/#waitlist\n"
+        "- https://www.tubegrow.io/features\n"
+        "- https://www.tubegrow.io/blog\n"
+        "- https://www.tubegrow.io/tools\n"
+        "- https://www.tubegrow.io/youtube-analytics-tool\n"
+        "- https://www.tubegrow.io/youtube-seo-tool\n"
+        "- https://www.tubegrow.io/viral-clips-generator\n"
+        "- https://www.tubegrow.io/ai-youtube-tools\n"
+        "- https://www.tubegrow.io/alternatives\n"
     )
 
     user = f"""User question:

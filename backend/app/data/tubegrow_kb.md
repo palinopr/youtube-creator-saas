@@ -7,7 +7,7 @@ This file is used to ground the public “Ask TubeGrow” agent so it can answer
 
 ## What TubeGrow Is
 
-- TubeGrow is a YouTube creator SaaS that helps creators grow using analytics, SEO tooling, and Shorts/clip workflows.
+- TubeGrow is an AI-powered YouTube growth platform that helps creators improve performance using analytics, SEO tooling, and Shorts/clip workflows.
 - TubeGrow uses AI to summarize insights and propose next actions, but results depend on the channel, niche, content quality, and consistency.
 
 ## What TubeGrow Can Do (High-Level)
@@ -28,6 +28,7 @@ This file is used to ground the public “Ask TubeGrow” agent so it can answer
 Use these pages as references in answers:
 
 - Home: https://www.tubegrow.io/
+- Join waitlist: https://www.tubegrow.io/#waitlist
 - Blog: https://www.tubegrow.io/blog
 - Free tools: https://www.tubegrow.io/tools
 - YouTube Analytics Tool: https://www.tubegrow.io/youtube-analytics-tool
@@ -41,4 +42,3 @@ Use these pages as references in answers:
 - Answer questions about TubeGrow and YouTube growth/SEO/Shorts workflows.
 - Give structured outputs: short diagnosis + a step-by-step plan + recommended pages/tools.
 - If asked something outside TubeGrow/YouTube creator growth, it should politely refuse and redirect.
-

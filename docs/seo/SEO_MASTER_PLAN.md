@@ -290,6 +290,7 @@ Add entries with date + outcome.
 | Dec 12 | CRO pass on homepage: added AI Agent section, fixed misleading OAuth “read-only” claim, strengthened hero messaging + CTAs | Landing better matches real product capabilities and should convert better |
 | Dec 12 | Added public “Ask TubeGrow” lead-agent widget (email gate) + backend `/public/agent/ask` grounded by `backend/app/data/tubegrow_kb.md` | New lead capture channel across all marketing pages |
 | Dec 12 | Landing agent lead form: require name + improved email validation copy | Fewer bad submissions, clearer UX |
+| Dec 12 | Public agent guardrails: no “SaaS”/no internal tech; sanitize outputs; suggested pages allowlist (uses `/#waitlist`) | Prevents accidental stack disclosure and avoids linking to 404 routes |
 
 ---
 

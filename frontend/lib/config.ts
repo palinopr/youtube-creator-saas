@@ -83,7 +83,7 @@ export const USER_ENDPOINTS = {
 
 // App configuration
 export const APP_CONFIG = {
-  APP_NAME: "YouTube Creator SaaS",
+  APP_NAME: "TubeGrow",
   DEFAULT_VIDEO_LIMIT: 10,
   DEFAULT_ANALYTICS_DAYS: 30,
 } as const;
