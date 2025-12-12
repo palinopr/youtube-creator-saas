@@ -187,6 +187,14 @@ class ApiClient {
     return this.request(`/api/videos/${videoId}`);
   }
 
+  async startVideoSync(maxVideos: number = 5000): Promise<{ success: boolean; job_id: string; message: string }> {
+    return this.request(`/api/videos/sync/start?max_videos=${maxVideos}`, { method: "POST" });
+  }
+
+  async getVideoSyncStatus(jobId: string): Promise<any> {
+    return this.request(`/api/videos/sync/status/${jobId}`);
+  }
+
   // Analytics
   async getAnalyticsOverview(days: number = 30): Promise<any> {
     return this.request(`/api/analytics/overview?days=${days}`);

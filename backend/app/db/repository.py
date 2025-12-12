@@ -337,9 +337,28 @@ class VideoCacheRepository:
     def upsert_videos(channel_id: str, videos: List[Dict[str, Any]]) -> int:
         """Insert or update multiple videos."""
         count = 0
+
+        core_keys = {
+            "video_id",
+            "title",
+            "description",
+            "pub_date",
+            "published_at",
+            "duration_seconds",
+            "view_count",
+            "like_count",
+            "comment_count",
+            "like_ratio",
+            "engagement_score",
+            "content_type",
+        }
         
         with get_db_session() as session:
             for video_data in videos:
+                metadata_input = video_data.get("metadata")
+                if metadata_input is None:
+                    metadata_input = {k: v for k, v in video_data.items() if k not in core_keys}
+
                 existing = session.query(VideoCache).filter(
                     VideoCache.video_id == video_data["video_id"]
                 ).first()
@@ -353,7 +372,7 @@ class VideoCacheRepository:
                     existing.like_ratio = video_data.get("like_ratio", existing.like_ratio)
                     existing.engagement_score = video_data.get("engagement_score", existing.engagement_score)
                     existing.content_type = video_data.get("content_type", existing.content_type)
-                    existing.metadata = video_data.get("metadata", existing.metadata)
+                    existing.video_metadata = metadata_input
                     existing.updated_at = datetime.utcnow()
                 else:
                     # Insert new
@@ -370,7 +389,7 @@ class VideoCacheRepository:
                         like_ratio=video_data.get("like_ratio", 0),
                         engagement_score=video_data.get("engagement_score", 0),
                         content_type=video_data.get("content_type"),
-                        metadata=video_data.get("metadata", {}),
+                        video_metadata=metadata_input,
                     )
                     session.add(video)
                     count += 1
@@ -402,7 +421,7 @@ class VideoCacheRepository:
                     "like_ratio": v.like_ratio,
                     "engagement_score": v.engagement_score,
                     "content_type": v.content_type,
-                    "metadata": v.metadata,
+                    "metadata": v.video_metadata,
                 }
                 for v in videos
             ]
@@ -424,4 +443,3 @@ class VideoCacheRepository:
             ).order_by(VideoCache.published_at.desc()).first()
             
             return video.published_at if video else None
-

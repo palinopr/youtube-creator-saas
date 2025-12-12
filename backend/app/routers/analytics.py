@@ -7,12 +7,50 @@ from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
 from ..auth.dependencies import get_current_user, check_usage
+from ..auth.youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
+from ..config import get_settings
 from ..db.models import User
+from ..db.models import JobType
+from ..db.repository import AnalyticsCacheRepository, VideoCacheRepository, JobRepository
 from ..tools.youtube_tools import YouTubeTools
+from ..tools.youtube_channel import resolve_mine_channel_id
 from ..agents.analytics_agent import AnalyticsAgent
+from ..workers.manager import get_worker_manager
 
 router = APIRouter(prefix="/api", tags=["analytics"])
 limiter = Limiter(key_func=get_remote_address)
+settings = get_settings()
+
+
+def _maybe_queue_video_sync(channel_id: str, user: User) -> Optional[str]:
+    """Queue a background VIDEO_SYNC job if cache is missing/stale."""
+    try:
+        cache = AnalyticsCacheRepository.get_cache(channel_id, "videos")
+        if cache and cache.get("is_syncing"):
+            return None
+
+        if cache and not AnalyticsCacheRepository.is_cache_stale(channel_id, "videos", max_age_hours=6):
+            return None
+
+        token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+        credentials_data = load_credentials(token_key=token_key_for_creds)
+        if not credentials_data:
+            return None
+        credentials_data = {**credentials_data, "client_secret": settings.google_client_secret}
+
+        worker_manager = get_worker_manager()
+        job_data = worker_manager.submit_job(
+            job_type=JobType.VIDEO_SYNC,
+            channel_id=channel_id,
+            input_data={"credentials": credentials_data},
+            max_videos=5000,
+        )
+
+        # Create/mark placeholder so we don't spam jobs.
+        AnalyticsCacheRepository.set_syncing(channel_id, "videos", True)
+        return job_data.get("job_id")
+    except Exception:
+        return None
 
 
 class AgentQuery(BaseModel):
@@ -99,13 +137,96 @@ async def get_recent_videos(
     """Get recent videos with their statistics."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
+        channel_id = resolve_mine_channel_id(youtube)
+
+        # Serve from cache if fresh.
+        cache = AnalyticsCacheRepository.get_cache(channel_id, "videos")
+        if cache and not cache.get("is_syncing"):
+            cached_videos = VideoCacheRepository.get_videos(channel_id=channel_id, limit=limit)
+            if cached_videos:
+                return [
+                    {
+                        "video_id": v["video_id"],
+                        "title": v["title"],
+                        "published_at": v.get("published_at") or "",
+                        "view_count": v.get("view_count", 0),
+                        "like_count": v.get("like_count", 0),
+                        "comment_count": v.get("comment_count", 0),
+                        "thumbnail_url": (v.get("metadata") or {}).get("thumbnail_url", ""),
+                    }
+                    for v in cached_videos
+                ]
+
+        # Cache missing or stale: queue a background sync and fall back to real-time.
+        _maybe_queue_video_sync(channel_id, user)
+
         tools = YouTubeTools(youtube)
-        videos = tools.get_recent_videos(limit=limit)
-        return videos
+        return tools.get_recent_videos(limit=limit)
     except HTTPException:
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/videos/sync/start")
+@limiter.limit("2/minute")
+async def start_video_sync(
+    request: Request,
+    max_videos: int = 5000,
+    user: User = Depends(get_current_user),
+):
+    """Start a background sync of all videos into the ETL cache."""
+    max_videos = min(max_videos, 5000)
+    youtube = get_authenticated_service("youtube", "v3")
+    channel_id = resolve_mine_channel_id(youtube)
+
+    token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+    credentials_data = load_credentials(token_key=token_key_for_creds)
+    if not credentials_data:
+        raise HTTPException(status_code=401, detail="Not authenticated. Please login first.")
+    credentials_data = {**credentials_data, "client_secret": settings.google_client_secret}
+
+    worker_manager = get_worker_manager()
+    job_data = worker_manager.submit_job(
+        job_type=JobType.VIDEO_SYNC,
+        channel_id=channel_id,
+        input_data={"credentials": credentials_data},
+        max_videos=max_videos,
+    )
+    AnalyticsCacheRepository.set_syncing(channel_id, "videos", True)
+
+    return {
+        "success": True,
+        "job_id": job_data["job_id"],
+        "message": "Video sync started. Poll /api/videos/sync/status/{job_id} for updates.",
+    }
+
+
+@router.get("/videos/sync/status/{job_id}")
+async def get_video_sync_status(job_id: str, user: User = Depends(get_current_user)):
+    """Get polling status for a video sync job."""
+    job = JobRepository.get_job(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Sync job not found")
+
+    youtube = get_authenticated_service("youtube", "v3")
+    channel_id = resolve_mine_channel_id(youtube)
+    if job.get("channel_id") and job.get("channel_id") != channel_id:
+        raise HTTPException(status_code=404, detail="Sync job not found")
+
+    response = {
+        "job_id": job_id,
+        "status": job.get("status"),
+        "progress": job.get("progress", 0),
+        "message": job.get("message", ""),
+    }
+
+    if job.get("status") == "completed" and job.get("output_data"):
+        response["result"] = job["output_data"]
+    if job.get("status") == "failed" and job.get("error_message"):
+        response["error"] = job["error_message"]
+
+    return response
 
 
 @router.get("/videos/{video_id}")
@@ -185,4 +306,3 @@ async def get_quick_insights(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-

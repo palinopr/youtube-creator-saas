@@ -19,6 +19,7 @@ from ..tools.deep_analytics import DeepAnalytics
 from ..tools.causal_analytics import CausalAnalytics
 from ..tools.advanced_causal import AdvancedCausalAnalytics
 from ..tools.content_optimizer import ContentOptimizer
+from ..tools.youtube_channel import resolve_mine_channel_id
 from ..workers.manager import get_worker_manager
 
 settings = get_settings()
@@ -49,15 +50,6 @@ limiter = Limiter(key_func=get_remote_address)
 
 # ========== ASYNC ANALYSIS ENDPOINTS (POLLING SUPPORT) ==========
 
-def _get_current_channel_id() -> str:
-    """Resolve the authenticated user's YouTube channel id."""
-    youtube = get_authenticated_service("youtube", "v3")
-    channel_resp = youtube.channels().list(part="id", mine=True).execute()
-    items = channel_resp.get("items", [])
-    if not items:
-        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
-    return items[0]["id"]
-
 
 @router.post("/deep/start")
 @limiter.limit("3/minute")
@@ -80,13 +72,8 @@ async def start_deep_analysis(
     """
     max_videos = min(max_videos, 5000)
 
-    # Resolve channel id
     youtube = get_authenticated_service("youtube", "v3")
-    channel_resp = youtube.channels().list(part="id", mine=True).execute()
-    items = channel_resp.get("items", [])
-    if not items:
-        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
-    channel_id = items[0]["id"]
+    channel_id = resolve_mine_channel_id(youtube)
 
     # Load OAuth credentials to pass into background job
     token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
@@ -114,7 +101,8 @@ async def start_deep_analysis(
 async def get_cached_deep_analysis(user: User = Depends(get_current_user)):
     """Return the latest cached deep analysis for the user, if available."""
     try:
-        channel_id = _get_current_channel_id()
+        youtube = get_authenticated_service("youtube", "v3")
+        channel_id = resolve_mine_channel_id(youtube)
         cache = AnalyticsCacheRepository.get_cache(channel_id, "deep_analysis")
         if not cache:
             return {"cached": False}
@@ -574,7 +562,8 @@ async def run_causal_analysis(
 async def get_cached_causal_analysis(user: User = Depends(get_current_user)):
     """Return the latest cached causal analysis for the user, if available."""
     try:
-        channel_id = _get_current_channel_id()
+        youtube = get_authenticated_service("youtube", "v3")
+        channel_id = resolve_mine_channel_id(youtube)
         cache = AnalyticsCacheRepository.get_cache(channel_id, "causal_analysis")
         if not cache:
             return {"cached": False}
@@ -615,11 +604,7 @@ async def start_causal_analysis(
     max_videos = min(max_videos, 5000)
 
     youtube = get_authenticated_service("youtube", "v3")
-    channel_resp = youtube.channels().list(part="id", mine=True).execute()
-    items = channel_resp.get("items", [])
-    if not items:
-        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
-    channel_id = items[0]["id"]
+    channel_id = resolve_mine_channel_id(youtube)
 
     token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
     credentials_data = load_credentials(token_key=token_key_for_creds)
