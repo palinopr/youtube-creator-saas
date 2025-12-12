@@ -1,6 +1,7 @@
-import { ShieldCheck } from "lucide-react";
+"use client";
+
+import { Play, Users } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
-import { AUTH_ENDPOINTS } from "@/lib/config";
 
 export default function HeroSection() {
   return (
@@ -11,40 +12,28 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
         {/* Trust badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-          <ShieldCheck size={16} className="text-brand-500" />
-          <span className="text-sm text-white/80">Read-only Google OAuth • No posting • Encrypted tokens</span>
+          <Users size={16} className="text-brand-500" />
+          <span className="text-sm text-white/80">
+            Join creators getting <span className="text-white font-semibold">early access</span>
+          </span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-white leading-tight max-w-4xl mx-auto mb-6">
-          Grow faster with{" "}
-          <span className="text-gradient">AI-powered</span> YouTube analytics
+          Get Early Access to{" "}
+          <span className="text-gradient">AI-Powered</span>
+          {" "}YouTube Growth
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Connect your channel, sync your videos, and get clear recommendations on what to fix next—titles,
-          thumbnails, SEO, and content strategy.
+          Be first to try the easiest way to analyze your channel, find viral opportunities,
+          and optimize every video for maximum reach and engagement.
         </p>
 
-        {/* Primary CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
-          <a href={AUTH_ENDPOINTS.LOGIN} className="btn-cta-primary w-full sm:w-auto">
-            Start free with Google
-          </a>
-          <a href="#pricing" className="btn-cta w-full sm:w-auto">
-            See pricing
-          </a>
-        </div>
-
-        {/* Secondary CTA (waitlist) */}
+        {/* Waitlist Form */}
         <div className="mb-16">
-          <div className="text-white/50 text-sm mb-4">
-            Want launch updates instead? Join the waitlist.
-          </div>
-          <div className="flex justify-center">
-            <WaitlistForm variant="inline" anchorId="waitlist" />
-          </div>
+          <WaitlistForm variant="hero" />
         </div>
 
         {/* Product screenshot/video placeholder */}
@@ -134,13 +123,19 @@ export default function HeroSection() {
                 </div>
               </div>
 
+              {/* "Coming Soon" overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[1px]">
+                <div className="text-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-500/30">
+                    <Play size={32} className="text-white ml-1" />
+                  </div>
+                  <p className="text-white font-semibold text-lg md:text-xl mb-1">Demo Video Coming Soon</p>
+                  <p className="text-white/60 text-sm">Join the waitlist for early access</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <p className="text-white/30 text-xs mt-6">
-          Preview is illustrative. Sign in to see your real data.
-        </p>
       </div>
     </section>
   );
