@@ -509,11 +509,12 @@ The creators who thrive will be those who effectively combine AI capabilities wi
 ];
 
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug);
+  const normalizedSlug = decodeURIComponent(slug).trim().toLowerCase();
+  return blogPosts.find((post) => post.slug.trim().toLowerCase() === normalizedSlug);
 }
 
 export function getPostsByCategory(category: string): BlogPost[] {
