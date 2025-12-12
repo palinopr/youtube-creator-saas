@@ -19,12 +19,13 @@ mindmap
       routers(/api/*)
       tools(Domain logic)
       agents(AI orchestration)
+      scripts(Local CLIs e.g. seo_report)
       workers(DB-backed async jobs)
       db(Postgres/SQLite models + repos)
       billing(Stripe)
       services(SerpBear)
     frontend(Next.js)
-      marketing(Landing/blog/pricing)
+      marketing(Landing + pillars + niches + blog)
       app(Dashboard + tools)
       admin(Internal panel)
       lib(ApiClient + utils)
@@ -42,15 +43,18 @@ flowchart LR
   R[Railway Backend<br/>FastAPI]
   PG[(Railway Postgres)]
   G[Google OAuth + YouTube APIs]
+  GA[GA4 + Search Console APIs<br/>(internal SEO reporting)]
   OAI[OpenAI API]
   S[Stripe API]
   SB[SerpBear API<br/>(optional)]
   SUP[Supabase<br/>(optional waitlist)]
+  CLI[SEO Report CLI<br/>(local)]
 
   U --> V
   V -->|HTTPS + cookies| R
   R --> PG
   R --> G
+  CLI -.-> GA
   R --> OAI
   R --> S
   R -.-> SB
@@ -183,6 +187,10 @@ erDiagram
   - `NEXT_PUBLIC_GA_ID` (and/or measurement id)
   - Supabase waitlist vars if used.
 
+Local-only (internal) SEO reporting:
+- Uses Desktop OAuth env vars `SEO_OAUTH_CLIENT_JSON_PATH`, `GA4_PROPERTY_ID`, `GSC_PROPERTY`.
+- Runs via `backend/scripts/seo_report.py` on a developer machine and is not deployed to Vercel/Railway.
+
 ## Where to look
 
 - Backend API surface: `backend/app/routers/*`
@@ -190,4 +198,3 @@ erDiagram
 - Jobs/ETL: `backend/app/workers/*`, `backend/app/db/repository.py`
 - Frontend pages: `frontend/app/*`
 - Shared API client: `frontend/lib/api.ts`
-
