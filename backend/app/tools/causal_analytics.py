@@ -160,7 +160,7 @@ class CausalAnalytics:
         self.entity_extractor = EntityExtractor(openai_api_key)
         self._videos_cache: List[Dict] = []
     
-    def get_videos_with_full_data(self, max_videos: int = 500) -> List[Dict[str, Any]]:
+    def get_videos_with_full_data(self, max_videos: int = 500, real_time: bool = True) -> List[Dict[str, Any]]:
         """
         Get videos with comprehensive data for causal analysis.
         
@@ -168,7 +168,10 @@ class CausalAnalytics:
         For full analysis, use the async ETL pattern.
         """
         # Safety cap
-        max_videos = min(max_videos, 500)
+        if real_time:
+            max_videos = min(max_videos, 500)
+        else:
+            max_videos = min(max_videos, 5000)
         
         # Get uploads playlist
         channel_response = self.youtube.channels().list(
@@ -782,7 +785,7 @@ class CausalAnalytics:
     
     # ========== FULL CAUSAL ANALYSIS ==========
     
-    def run_full_causal_analysis(self, max_videos: int = 500) -> Dict[str, Any]:
+    def run_full_causal_analysis(self, max_videos: int = 500, real_time: bool = True) -> Dict[str, Any]:
         """
         Run comprehensive causal analysis on videos.
         
@@ -790,10 +793,13 @@ class CausalAnalytics:
         For full analysis of larger datasets, use the async ETL endpoints.
         """
         # Safety cap
-        max_videos = min(max_videos, 500)
+        if real_time:
+            max_videos = min(max_videos, 500)
+        else:
+            max_videos = min(max_videos, 5000)
         
         # Get all videos with full data
-        videos = self.get_videos_with_full_data(max_videos=max_videos)
+        videos = self.get_videos_with_full_data(max_videos=max_videos, real_time=real_time)
         
         if len(videos) < 20:
             return {"error": f"Need at least 20 videos, found {len(videos)}"}

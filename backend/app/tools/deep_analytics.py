@@ -34,7 +34,8 @@ class DeepAnalytics:
     def get_all_videos_extended(
         self, 
         max_videos: int = 500,
-        progress_callback: Optional[callable] = None
+        progress_callback: Optional[callable] = None,
+        real_time: bool = True,
     ) -> List[Dict[str, Any]]:
         """
         Get all videos with extended metadata for deep analysis.
@@ -47,7 +48,10 @@ class DeepAnalytics:
             progress_callback: Optional callback(current, total) for progress updates
         """
         # Safety cap for real-time requests
-        max_videos = min(max_videos, 500)
+        if real_time:
+            max_videos = min(max_videos, 500)
+        else:
+            max_videos = min(max_videos, 5000)
         
         # Get uploads playlist
         channel_response = self.youtube.channels().list(
@@ -616,7 +620,7 @@ class DeepAnalytics:
     
     # ========== FULL DEEP ANALYSIS ==========
     
-    def run_full_analysis(self, max_videos: int = 500) -> Dict[str, Any]:
+    def run_full_analysis(self, max_videos: int = 500, real_time: bool = True) -> Dict[str, Any]:
         """
         Run comprehensive deep analysis on all videos.
         
@@ -624,10 +628,13 @@ class DeepAnalytics:
         For full analysis of 5k+ videos, use the async ETL pattern via /api/analysis/deep/start
         """
         # Cap for real-time requests
-        max_videos = min(max_videos, 500)
+        if real_time:
+            max_videos = min(max_videos, 500)
+        else:
+            max_videos = min(max_videos, 5000)
         
         # Get all videos
-        videos = self.get_all_videos_extended(max_videos=max_videos)
+        videos = self.get_all_videos_extended(max_videos=max_videos, real_time=real_time)
         
         if len(videos) < 10:
             return {"error": f"Need at least 10 videos, found {len(videos)}"}

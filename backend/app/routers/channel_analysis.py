@@ -3,28 +3,25 @@
 from fastapi import APIRouter, HTTPException, Request, Depends
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel
-import uuid
-import asyncio
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
+from ..auth.youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
 from ..auth.dependencies import get_current_user, check_usage
+from ..config import get_settings
 from ..db.models import User
+from ..db.models import JobType
+from ..db.repository import JobRepository
 from ..tools.channel_analyzer import ChannelAnalyzer
 from ..tools.deep_analytics import DeepAnalytics
 from ..tools.causal_analytics import CausalAnalytics
 from ..tools.advanced_causal import AdvancedCausalAnalytics
 from ..tools.content_optimizer import ContentOptimizer
+from ..workers.manager import get_worker_manager
 
-# In-memory storage for analysis jobs (in production, use Redis/DB)
-# This is a simple implementation - the clips module shows how to use SQLite for persistence
-analysis_jobs: Dict[str, Dict[str, Any]] = {}
-
-# Thread pool for running blocking analysis in background
-_executor = ThreadPoolExecutor(max_workers=2)
+settings = get_settings()
 
 
 class GenerateTitleRequest(BaseModel):
@@ -52,46 +49,6 @@ limiter = Limiter(key_func=get_remote_address)
 
 # ========== ASYNC ANALYSIS ENDPOINTS (POLLING SUPPORT) ==========
 
-def _run_deep_analysis_sync(job_id: str, max_videos: int):
-    """
-    Run deep analysis synchronously in a background thread.
-    Updates the job status as it progresses.
-    """
-    try:
-        analysis_jobs[job_id]["status"] = "processing"
-        analysis_jobs[job_id]["progress"] = 10
-        analysis_jobs[job_id]["message"] = "Authenticating with YouTube..."
-        
-        youtube = get_authenticated_service("youtube", "v3")
-        deep = DeepAnalytics(youtube)
-        
-        analysis_jobs[job_id]["progress"] = 20
-        analysis_jobs[job_id]["message"] = "Fetching video data..."
-        
-        # Run the analysis
-        analysis = deep.run_full_analysis(max_videos=max_videos)
-        
-        analysis_jobs[job_id]["progress"] = 90
-        analysis_jobs[job_id]["message"] = "Finalizing results..."
-        
-        if "error" in analysis:
-            analysis_jobs[job_id]["status"] = "failed"
-            analysis_jobs[job_id]["error"] = analysis["error"]
-            analysis_jobs[job_id]["message"] = f"Analysis failed: {analysis['error']}"
-        else:
-            analysis_jobs[job_id]["status"] = "completed"
-            analysis_jobs[job_id]["progress"] = 100
-            analysis_jobs[job_id]["result"] = analysis
-            analysis_jobs[job_id]["message"] = "Analysis complete!"
-        
-        analysis_jobs[job_id]["completed_at"] = datetime.utcnow().isoformat()
-        
-    except Exception as e:
-        analysis_jobs[job_id]["status"] = "failed"
-        analysis_jobs[job_id]["error"] = str(e)
-        analysis_jobs[job_id]["message"] = f"Analysis failed: {str(e)}"
-
-
 @router.post("/deep/start")
 @limiter.limit("3/minute")
 async def start_deep_analysis(
@@ -111,29 +68,34 @@ async def start_deep_analysis(
     Returns:
         job_id for polling status
     """
-    # Cap max_videos for safety
-    max_videos = min(max_videos, 500)
-    
-    # Create job
-    job_id = str(uuid.uuid4())[:12]
-    analysis_jobs[job_id] = {
-        "job_id": job_id,
-        "status": "queued",
-        "progress": 0,
-        "message": "Analysis job queued...",
-        "max_videos": max_videos,
-        "created_at": datetime.utcnow().isoformat(),
-        "result": None,
-        "error": None,
-    }
-    
-    # Start analysis in background thread
-    loop = asyncio.get_event_loop()
-    loop.run_in_executor(_executor, _run_deep_analysis_sync, job_id, max_videos)
-    
+    max_videos = min(max_videos, 5000)
+
+    # Resolve channel id
+    youtube = get_authenticated_service("youtube", "v3")
+    channel_resp = youtube.channels().list(part="id", mine=True).execute()
+    items = channel_resp.get("items", [])
+    if not items:
+        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
+    channel_id = items[0]["id"]
+
+    # Load OAuth credentials to pass into background job
+    token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+    credentials_data = load_credentials(token_key=token_key_for_creds)
+    if not credentials_data:
+        raise HTTPException(status_code=401, detail="Not authenticated. Please login first.")
+    credentials_data = {**credentials_data, "client_secret": settings.google_client_secret}
+
+    worker_manager = get_worker_manager()
+    job_data = worker_manager.submit_job(
+        job_type=JobType.DEEP_ANALYSIS,
+        channel_id=channel_id,
+        input_data={"credentials": credentials_data},
+        max_videos=max_videos,
+    )
+
     return {
         "success": True,
-        "job_id": job_id,
+        "job_id": job_data["job_id"],
         "message": "Deep analysis started. Poll /api/analysis/deep/status/{job_id} for updates.",
     }
 
@@ -148,23 +110,22 @@ async def get_deep_analysis_status(job_id: str, user: User = Depends(get_current
     Returns:
         Current job status, progress, and result (if completed)
     """
-    if job_id not in analysis_jobs:
+    job = JobRepository.get_job(job_id)
+    if not job:
         raise HTTPException(status_code=404, detail="Analysis job not found")
-    
-    job = analysis_jobs[job_id]
-    
+
     response = {
         "job_id": job_id,
-        "status": job["status"],
-        "progress": job["progress"],
-        "message": job["message"],
+        "status": job.get("status"),
+        "progress": job.get("progress", 0),
+        "message": job.get("message", ""),
     }
     
-    if job["status"] == "completed" and job["result"]:
-        response["result"] = job["result"]
+    if job.get("status") == "completed" and job.get("output_data"):
+        response["result"] = job["output_data"]
     
-    if job["status"] == "failed" and job["error"]:
-        response["error"] = job["error"]
+    if job.get("status") == "failed" and job.get("error_message"):
+        response["error"] = job["error_message"]
     
     return response
 
@@ -176,10 +137,9 @@ async def cancel_deep_analysis(job_id: str, user: User = Depends(get_current_use
     
     Note: Cannot cancel in-progress analysis, but removes the job record.
     """
-    if job_id not in analysis_jobs:
+    deleted = JobRepository.delete_job(job_id)
+    if not deleted:
         raise HTTPException(status_code=404, detail="Analysis job not found")
-    
-    del analysis_jobs[job_id]
     
     return {"success": True, "message": "Job record removed"}
 
@@ -379,11 +339,12 @@ async def deep_channel_analysis(
     Returns:
         Complete deep analysis of your channel
     """
+    max_videos = min(max_videos, 500)
     try:
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        analysis = deep.run_full_analysis(max_videos=max_videos)
+        analysis = deep.run_full_analysis(max_videos=max_videos, real_time=True)
         
         if "error" in analysis:
             raise HTTPException(status_code=400, detail=analysis["error"])
@@ -411,7 +372,7 @@ async def analyze_posting_times(max_videos: int = 5000, user: User = Depends(get
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        videos = deep.get_all_videos_extended(max_videos=max_videos)
+        videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=True)
         time_analysis = deep.analyze_posting_times(videos)
         
         return {
@@ -440,7 +401,7 @@ async def analyze_title_patterns(max_videos: int = 5000, user: User = Depends(ge
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        videos = deep.get_all_videos_extended(max_videos=max_videos)
+        videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=True)
         title_analysis = deep.analyze_title_patterns(videos)
         
         return {
@@ -468,7 +429,7 @@ async def analyze_engagement(max_videos: int = 5000, user: User = Depends(get_cu
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        videos = deep.get_all_videos_extended(max_videos=max_videos)
+        videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=True)
         engagement_analysis = deep.analyze_engagement(videos)
         
         return {
@@ -495,7 +456,7 @@ async def analyze_content_types(max_videos: int = 5000, user: User = Depends(get
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        videos = deep.get_all_videos_extended(max_videos=max_videos)
+        videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=True)
         content_analysis = deep.analyze_content_types(videos)
         
         return {
@@ -523,7 +484,7 @@ async def analyze_growth_trends(max_videos: int = 5000, user: User = Depends(get
         youtube = get_authenticated_service("youtube", "v3")
         deep = DeepAnalytics(youtube)
         
-        videos = deep.get_all_videos_extended(max_videos=max_videos)
+        videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=True)
         growth_analysis = deep.analyze_growth_trends(videos)
         
         return {
@@ -558,11 +519,12 @@ async def run_causal_analysis(
     
     Returns comprehensive insights on what actually drives video success.
     """
+    max_videos = min(max_videos, 500)
     try:
         youtube = get_authenticated_service("youtube", "v3")
         causal = CausalAnalytics(youtube)
         
-        analysis = causal.run_full_causal_analysis(max_videos=max_videos)
+        analysis = causal.run_full_causal_analysis(max_videos=max_videos, real_time=True)
         
         if "error" in analysis:
             raise HTTPException(status_code=400, detail=analysis["error"])
@@ -573,6 +535,88 @@ async def run_causal_analysis(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/causal/start")
+@limiter.limit("3/minute")
+async def start_causal_analysis(
+    request: Request,
+    max_videos: int = 500,
+    user: User = Depends(check_usage("ai_queries_per_month"))
+):
+    """
+    Start an async causal analysis job.
+
+    Returns a job_id that can be used to poll for status.
+    This endpoint returns immediately while analysis runs in background.
+
+    Args:
+        max_videos: Maximum videos to analyze (default 500, capped for performance)
+
+    Returns:
+        job_id for polling status
+    """
+    max_videos = min(max_videos, 5000)
+
+    youtube = get_authenticated_service("youtube", "v3")
+    channel_resp = youtube.channels().list(part="id", mine=True).execute()
+    items = channel_resp.get("items", [])
+    if not items:
+        raise HTTPException(status_code=400, detail="No YouTube channel found for user")
+    channel_id = items[0]["id"]
+
+    token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+    credentials_data = load_credentials(token_key=token_key_for_creds)
+    if not credentials_data:
+        raise HTTPException(status_code=401, detail="Not authenticated. Please login first.")
+    credentials_data = {**credentials_data, "client_secret": settings.google_client_secret}
+
+    worker_manager = get_worker_manager()
+    job_data = worker_manager.submit_job(
+        job_type=JobType.CAUSAL_ANALYSIS,
+        channel_id=channel_id,
+        input_data={"credentials": credentials_data},
+        max_videos=max_videos,
+    )
+
+    return {
+        "success": True,
+        "job_id": job_data["job_id"],
+        "message": "Causal analysis started. Poll /api/analysis/causal/status/{job_id} for updates.",
+    }
+
+
+@router.get("/causal/status/{job_id}")
+async def get_causal_analysis_status(job_id: str, user: User = Depends(get_current_user)):
+    """Get polling status for a causal analysis job."""
+    job = JobRepository.get_job(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Analysis job not found")
+
+    response = {
+        "job_id": job_id,
+        "status": job.get("status"),
+        "progress": job.get("progress", 0),
+        "message": job.get("message", ""),
+    }
+
+    if job.get("status") == "completed" and job.get("output_data"):
+        response["result"] = job["output_data"]
+
+    if job.get("status") == "failed" and job.get("error_message"):
+        response["error"] = job["error_message"]
+
+    return response
+
+
+@router.delete("/causal/job/{job_id}")
+async def cancel_causal_analysis(job_id: str, user: User = Depends(get_current_user)):
+    """Delete a causal analysis job record."""
+    deleted = JobRepository.delete_job(job_id)
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Analysis job not found")
+
+    return {"success": True, "message": "Job record removed"}
 
 
 @router.get("/celebrity-impact")
@@ -589,7 +633,7 @@ async def analyze_celebrity_impact(max_videos: int = 5000, user: User = Depends(
         youtube = get_authenticated_service("youtube", "v3")
         causal = CausalAnalytics(youtube)
         
-        videos = causal.get_videos_with_full_data(max_videos=max_videos)
+        videos = causal.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         celebrity_analysis = causal.analyze_celebrity_impact(videos)
         
         return {
@@ -614,7 +658,7 @@ async def analyze_success_factors(max_videos: int = 5000, user: User = Depends(g
         youtube = get_authenticated_service("youtube", "v3")
         causal = CausalAnalytics(youtube)
         
-        videos = causal.get_videos_with_full_data(max_videos=max_videos)
+        videos = causal.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         success_analysis = causal.analyze_success_factors(videos)
         
         return {
@@ -644,7 +688,7 @@ async def analyze_description_impact(max_videos: int = 5000, user: User = Depend
         youtube = get_authenticated_service("youtube", "v3")
         causal = CausalAnalytics(youtube)
         
-        videos = causal.get_videos_with_full_data(max_videos=max_videos)
+        videos = causal.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         description_analysis = causal.analyze_description_impact(videos)
         
         return {
@@ -669,7 +713,7 @@ async def analyze_title_vs_content(max_videos: int = 5000, user: User = Depends(
         youtube = get_authenticated_service("youtube", "v3")
         causal = CausalAnalytics(youtube)
         
-        videos = causal.get_videos_with_full_data(max_videos=max_videos)
+        videos = causal.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         analysis = causal.analyze_title_vs_content(videos)
         
         return {
@@ -700,6 +744,7 @@ async def run_advanced_analysis(
     - Content type + celebrity matrix
     - Celebrity title pattern analysis
     """
+    max_videos = min(max_videos, 500)
     try:
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
@@ -722,7 +767,7 @@ async def analyze_combo_effects(max_videos: int = 5000, user: User = Depends(get
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_factor_combinations(videos)
         
     except HTTPException:
@@ -740,7 +785,7 @@ async def analyze_celebrity_trends(max_videos: int = 5000, user: User = Depends(
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_celebrity_trends(videos)
         
     except HTTPException:
@@ -758,7 +803,7 @@ async def analyze_multi_celebrity(max_videos: int = 5000, user: User = Depends(g
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_multi_celebrity_effect(videos)
         
     except HTTPException:
@@ -776,7 +821,7 @@ async def analyze_engagement_quality(max_videos: int = 5000, user: User = Depend
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_engagement_quality(videos)
         
     except HTTPException:
@@ -794,7 +839,7 @@ async def analyze_controversy_celebrity(max_videos: int = 5000, user: User = Dep
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_controversy_celebrity(videos)
         
     except HTTPException:
@@ -813,7 +858,7 @@ async def analyze_celebrity_title_patterns(max_videos: int = 5000, user: User = 
         youtube = get_authenticated_service("youtube", "v3")
         advanced = AdvancedCausalAnalytics(youtube)
         
-        videos = advanced.get_videos_with_full_data(max_videos=max_videos)
+        videos = advanced.get_videos_with_full_data(max_videos=max_videos, real_time=True)
         return advanced.analyze_celebrity_title_patterns(videos)
         
     except HTTPException:
@@ -1198,4 +1243,3 @@ async def get_video_transcript(video_id: str, user: User = Depends(get_current_u
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-

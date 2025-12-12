@@ -227,7 +227,7 @@ def _run_deep_analysis(youtube, channel_id: str, max_videos: int, job_id: str) -
         message="Running deep analysis..."
     )
     
-    result = deep.run_full_analysis(max_videos=max_videos)
+    result = deep.run_full_analysis(max_videos=max_videos, real_time=False)
     
     JobRepository.update_job(
         job_id=job_id,
@@ -250,7 +250,7 @@ def _run_causal_analysis(youtube, channel_id: str, max_videos: int, job_id: str)
         message="Running causal analysis..."
     )
     
-    result = causal.run_full_causal_analysis(max_videos=max_videos)
+    result = causal.run_full_causal_analysis(max_videos=max_videos, real_time=False)
     
     JobRepository.update_job(
         job_id=job_id,
@@ -274,8 +274,8 @@ def _run_video_sync(youtube, channel_id: str, max_videos: int, job_id: str) -> d
         message="Fetching videos from YouTube..."
     )
     
-    # Fetch videos
-    videos = deep.get_all_videos_extended(max_videos=max_videos)
+    # Fetch videos (background ETL, allow larger batches)
+    videos = deep.get_all_videos_extended(max_videos=max_videos, real_time=False)
     
     JobRepository.update_job(
         job_id=job_id,

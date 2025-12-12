@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -106,11 +106,65 @@ interface CausalAnalysis {
   };
 }
 
+type JobStatus = {
+  job_id?: string;
+  status: string;
+  progress: number;
+  message: string;
+  result?: any;
+  error?: string;
+};
+
+const POLL_INTERVAL = 5000;
+
 export default function WhyItWorksPage() {
   const [analysis, setAnalysis] = useState<CausalAnalysis | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"celebrity" | "factors" | "description" | "content">("celebrity");
+  const [jobStatus, setJobStatus] = useState<JobStatus | null>(null);
+  const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isPollingRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current);
+      }
+    };
+  }, []);
+
+  const pollJobStatus = useCallback(async (currentJobId: string) => {
+    if (!currentJobId || isPollingRef.current) return;
+    isPollingRef.current = true;
+
+    try {
+      const status: JobStatus = await api.getCausalAnalysisStatus(currentJobId);
+      setJobStatus(status);
+
+      if (status.status === "completed" && status.result) {
+        setAnalysis(status.result);
+        setLoading(false);
+
+        if (pollIntervalRef.current) {
+          clearInterval(pollIntervalRef.current);
+          pollIntervalRef.current = null;
+        }
+      } else if (status.status === "failed") {
+        setError(status.error || "Analysis failed. Please try again.");
+        setLoading(false);
+
+        if (pollIntervalRef.current) {
+          clearInterval(pollIntervalRef.current);
+          pollIntervalRef.current = null;
+        }
+      }
+    } catch (err) {
+      console.error("Polling error:", err);
+    } finally {
+      isPollingRef.current = false;
+    }
+  }, []);
 
   useEffect(() => {
     fetchCausalAnalysis();
@@ -119,10 +173,40 @@ export default function WhyItWorksPage() {
   const fetchCausalAnalysis = async () => {
     setLoading(true);
     setError(null);
-    
+    setJobStatus(null);
+    setAnalysis(null);
+
+    if (pollIntervalRef.current) {
+      clearInterval(pollIntervalRef.current);
+      pollIntervalRef.current = null;
+    }
+
     try {
-      const data = await api.getCausalAnalysis(5000);
+      let startData: any = null;
+      try {
+        startData = await api.startCausalAnalysis(500);
+      } catch {
+        startData = null;
+      }
+
+      if (startData?.job_id) {
+        setJobStatus({
+          status: "queued",
+          progress: 0,
+          message: "Analysis job queued...",
+        });
+
+        pollIntervalRef.current = setInterval(() => {
+          pollJobStatus(startData.job_id);
+        }, POLL_INTERVAL);
+
+        pollJobStatus(startData.job_id);
+        return;
+      }
+
+      const data = await api.getCausalAnalysis(500);
       setAnalysis(data);
+      setLoading(false);
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Failed to fetch analysis";
       if (msg.toLowerCase().includes("not authenticated")) {
@@ -130,7 +214,6 @@ export default function WhyItWorksPage() {
       } else {
         setError(msg);
       }
-    } finally {
       setLoading(false);
     }
   };
@@ -142,13 +225,24 @@ export default function WhyItWorksPage() {
   };
 
   if (loading) {
+    const progressPercent = jobStatus?.progress || 0;
+    const statusMessage = jobStatus?.message || "Running Causal Analysis...";
     return (
       <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-          <p className="text-xl text-gray-300 mb-2">Running Causal Analysis...</p>
-          <p className="text-sm text-gray-500">Analyzing ALL your videos (up to 5,000)</p>
-          <p className="text-xs text-gray-600 mt-2">This may take 2-5 minutes for large channels</p>
+          <p className="text-xl text-gray-300 mb-2">{statusMessage}</p>
+          {jobStatus ? (
+            <>
+              <p className="text-sm text-gray-500">{progressPercent}% complete</p>
+              <p className="text-xs text-gray-600 mt-2">This may take a few minutes for large channels</p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-gray-500">Analyzing your recent videos</p>
+              <p className="text-xs text-gray-600 mt-2">This may take a moment</p>
+            </>
+          )}
         </div>
       </div>
     );

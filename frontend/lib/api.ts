@@ -205,6 +205,16 @@ class ApiClient {
     return this.request(`/api/analysis/causal?max_videos=${maxVideos}`);
   }
 
+  async startCausalAnalysis(
+    maxVideos: number = 500
+  ): Promise<{ success: boolean; job_id: string; message: string }> {
+    return this.request(`/api/analysis/causal/start?max_videos=${maxVideos}`, { method: "POST" });
+  }
+
+  async getCausalAnalysisStatus(jobId: string): Promise<any> {
+    return this.request(`/api/analysis/causal/status/${jobId}`);
+  }
+
   async getAdvancedAnalysis(maxVideos: number = 5000): Promise<any> {
     return this.request(`/api/analysis/advanced?max_videos=${maxVideos}`);
   }
