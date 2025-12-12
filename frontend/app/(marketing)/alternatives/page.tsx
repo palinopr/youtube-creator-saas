@@ -17,7 +17,7 @@ import {
 import WaitlistForm from "@/components/landing/WaitlistForm";
 
 export const metadata: Metadata = {
-  title: "VidIQ Alternative & TubeBuddy Alternative - Compare YouTube Tools",
+  title: "VidIQ Alternative & TubeBuddy Alternative",
   description:
     "Looking for a VidIQ alternative or TubeBuddy alternative? TubeGrow offers AI-powered YouTube analytics, SEO optimization, and viral clip generation at a better price. Compare features now.",
   alternates: {

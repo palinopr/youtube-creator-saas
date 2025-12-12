@@ -20,7 +20,7 @@ import {
 import WaitlistForm from "@/components/landing/WaitlistForm";
 
 export const metadata: Metadata = {
-  title: "Viral Clips Generator - Turn Videos into YouTube Shorts & TikToks",
+  title: "Viral Clips Generator for YouTube Shorts & TikTok",
   description:
     "AI-powered viral clips generator that finds the best moments in your YouTube videos. Create engaging YouTube Shorts, TikToks, and Instagram Reels automatically. Free clip finder tool.",
   alternates: {
