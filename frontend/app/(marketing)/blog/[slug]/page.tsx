@@ -28,8 +28,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const suffix = " | TubeGrow";
+  const makeSeoTitle = (title: string) => {
+    if (title.length + suffix.length <= 70) return `${title}${suffix}`;
+    const maxBase = 70 - suffix.length;
+    const trimmed = title.slice(0, maxBase).replace(/\s+\S*$/, "").trim();
+    return `${trimmed}${suffix}`;
+  };
+
   return {
-    title: { absolute: post.title },
+    title: { absolute: makeSeoTitle(post.title) },
     description: post.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -193,7 +201,10 @@ export default async function BlogPostPage({ params }: Props) {
 
 // Simple markdown-like content formatter
 function formatContent(content: string): string {
-  return content
+  // Strip a leading markdown H1 (post title is rendered above).
+  const withoutLeadingH1 = content.replace(/^\s*#\s+.*\n+/, "");
+
+  return withoutLeadingH1
     // Demote headings to keep a single H1 on the page (the post title above).
     .replace(/^# (.*$)/gim, "<h2>$1</h2>")
     .replace(/^## (.*$)/gim, "<h3>$1</h3>")

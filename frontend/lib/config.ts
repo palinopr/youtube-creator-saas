@@ -4,7 +4,8 @@
  */
 
 // API Configuration
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Trim to avoid malformed URLs if env values include whitespace/newlines.
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").trim();
 
 // Auth endpoints
 export const AUTH_ENDPOINTS = {

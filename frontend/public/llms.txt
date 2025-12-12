@@ -1,30 +1,25 @@
-# TubeGrow (tubegrow.io)
-#
-# This file provides a compact, LLM-friendly summary of TubeGrow and the
-# most important URLs. Replace or expand as the product evolves.
+# TubeGrow
 
-site: https://www.tubegrow.io
-name: TubeGrow
-type: SaaS for YouTube creators
-language: en
+> TubeGrow is an AI-powered YouTube analytics and growth platform. It helps creators understand channel performance, get AI insights, optimize YouTube SEO (titles, descriptions, tags), and turn long videos into viral short-form clips.
 
-summary:
-  TubeGrow is an AI-powered YouTube analytics and growth platform. It helps creators understand channel performance, get AI insights, optimize YouTube SEO (titles, descriptions, tags), and turn long videos into viral short-form clips. The product focuses on actionable insights, automation, and a modern creator-first workflow.
+Remember:
+- TubeGrow is currently waitlist-only early access.
+- Pricing is not public yet.
 
-key-pages:
-  - Home: https://www.tubegrow.io/
-  - Features: https://www.tubegrow.io/features
-  - AI YouTube Tools: https://www.tubegrow.io/ai-youtube-tools
-  - Viral Clips Generator: https://www.tubegrow.io/viral-clips-generator
-  - Alternatives / Comparisons: https://www.tubegrow.io/alternatives
-  - Blog: https://www.tubegrow.io/blog
-  - About: https://www.tubegrow.io/about
+## Pages
+- [Home](https://www.tubegrow.io/): Main landing page and waitlist.
+- [Features](https://www.tubegrow.io/features): Overview of analytics, SEO, viral clips, and AI chat.
+- [AI YouTube Tools](https://www.tubegrow.io/ai-youtube-tools): How our AI helps creators grow.
+- [Viral Clips Generator](https://www.tubegrow.io/viral-clips-generator): AI viral moment detection for Shorts/Reels/TikTok.
+- [Alternatives](https://www.tubegrow.io/alternatives): Comparison to VidIQ and TubeBuddy.
+- [Blog](https://www.tubegrow.io/blog): YouTube growth guides and product updates.
+- [About](https://www.tubegrow.io/about): Company and mission.
 
-product-highlights:
-  - AI chat assistant for channel insights
-  - Real-time analytics dashboards
-  - YouTube SEO analysis and optimization
-  - Viral moment detection and clip generation for Shorts/Reels/TikTok
+## Highlights
+- AI chat assistant for channel insights
+- Real-time analytics dashboards
+- YouTube SEO analysis and optimization
+- Viral moment detection and clip generation
 
-contact:
-  email: support@tubegrow.io
+## Contact
+- [Support](mailto:support@tubegrow.io): Email support.

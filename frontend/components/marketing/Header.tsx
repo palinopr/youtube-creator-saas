@@ -7,6 +7,9 @@ import { Logo } from "@/components/ui/Logo";
 
 const navigation = [
   { name: "Features", href: "/features" },
+  { name: "AI Tools", href: "/ai-youtube-tools" },
+  { name: "Viral Clips", href: "/viral-clips-generator" },
+  { name: "Alternatives", href: "/alternatives" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];

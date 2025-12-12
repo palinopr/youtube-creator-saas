@@ -63,6 +63,13 @@ export default function BlogPage() {
             </Link>
             .
           </p>
+          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-4">
+            Inside the TubeGrow blog you’ll find practical tutorials and data‑driven strategies for
+            growing a YouTube channel. We cover how to read analytics, improve retention and CTR,
+            pick topics that match your audience, optimize titles/descriptions/tags for YouTube SEO,
+            and repurpose long videos into high‑performing Shorts. Every guide is built around
+            workflows you can use today and the tools we’re bringing to creators in TubeGrow.
+          </p>
         </div>
       </section>
 
