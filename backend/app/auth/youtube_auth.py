@@ -334,8 +334,11 @@ async def callback(code: str, state: str, error: Optional[str] = None):
 
         return response
 
+    except HTTPException:
+        # Preserve explicit auth failures (4xx) instead of masking as 500.
+        raise
     except Exception as e:
-        logger.error(f"[AUTH] Failed to complete authentication: {e}")
+        logger.exception("[AUTH] Failed to complete authentication", exc_info=e)
         raise HTTPException(
             status_code=500,
             detail=f"Failed to complete authentication: {str(e)}"
