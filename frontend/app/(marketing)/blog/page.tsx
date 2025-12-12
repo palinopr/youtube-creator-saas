@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Tips, strategies, and insights to help you grow your YouTube channel. Learn about analytics, SEO, content strategy, and more.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Blog | TubeGrow - YouTube Growth Tips & Strategies",
     description:

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "TubeGrow terms of service governing use of our AI-powered YouTube analytics and growth platform.",
+  alternates: {
+    canonical: "/terms",
+  },
   openGraph: {
     title: "Terms of Service | TubeGrow",
     description:
@@ -109,4 +112,3 @@ export default function TermsPage() {
     </div>
   );
 }
-

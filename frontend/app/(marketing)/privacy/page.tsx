@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Learn how TubeGrow collects, uses, and protects your information when you use our AI-powered YouTube analytics platform.",
+  alternates: {
+    canonical: "/privacy",
+  },
   openGraph: {
     title: "Privacy Policy | TubeGrow",
     description:
@@ -111,4 +114,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-

@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "AI Tools for YouTube Creators - AI-Powered YouTube Analytics",
   description:
     "Discover the best AI tools for YouTube creators. TubeGrow uses artificial intelligence to analyze your channel, optimize SEO, generate viral clips, and grow your audience faster.",
+  alternates: {
+    canonical: "/ai-youtube-tools",
+  },
   keywords: [
     "ai tools for youtube",
     "youtube ai tools",

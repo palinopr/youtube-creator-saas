@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           // Authenticated / app-only areas (prefix matches)
           "/dashboard",
+          "/command-center",
           "/videos",
           "/video",
           "/analysis",

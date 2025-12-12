@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "Viral Clips Generator - Turn Videos into YouTube Shorts & TikToks",
   description:
     "AI-powered viral clips generator that finds the best moments in your YouTube videos. Create engaging YouTube Shorts, TikToks, and Instagram Reels automatically. Free clip finder tool.",
+  alternates: {
+    canonical: "/viral-clips-generator",
+  },
   keywords: [
     "viral clips generator",
     "youtube shorts maker",

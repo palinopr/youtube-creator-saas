@@ -134,7 +134,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
 
   // Determine which nav item is active
   const isActive = (href: string) => {
-    if (href === "/") return currentPath === "/";
+    if (href === "/command-center") return currentPath === "/command-center";
     return currentPath.startsWith(href);
   };
 
@@ -142,7 +142,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
     <aside className="w-64 bg-[#111] border-r border-white/10 flex-shrink-0 hidden lg:flex flex-col h-screen sticky top-0">
       {/* Logo */}
       <div className="p-4 border-b border-white/10">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/command-center" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
             <Youtube className="w-6 h-6 text-white" />
           </div>
@@ -157,9 +157,9 @@ export default function Sidebar({ activePath }: SidebarProps) {
       <nav className="flex-1 p-3 space-y-1 overflow-y-auto min-h-0">
         <NavItem
           icon={<Home />}
-          label="Dashboard"
-          href="/"
-          active={isActive("/")}
+          label="Command Center"
+          href="/command-center"
+          active={isActive("/command-center")}
         />
         <NavItem
           icon={<Video />}

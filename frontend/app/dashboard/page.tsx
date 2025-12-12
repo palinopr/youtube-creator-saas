@@ -13,9 +13,9 @@ function DashboardRedirectContent() {
 
     if (authenticated === "true") {
       // Redirect to home with authenticated state
-      router.replace("/");
+      router.replace("/command-center");
     } else {
-      router.replace("/");
+      router.replace("/command-center");
     }
   }, [router, searchParams]);
 

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Features",
   description:
     "Explore TubeGrow's powerful features: AI-powered YouTube analytics, viral clip generator, SEO optimization, and more. Everything you need to grow your channel.",
+  alternates: {
+    canonical: "/features",
+  },
   openGraph: {
     title: "Features | TubeGrow - YouTube Analytics & Growth Tools",
     description:

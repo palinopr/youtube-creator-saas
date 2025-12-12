@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: `${post.title} | TubeGrow Blog`,
       description: post.description,

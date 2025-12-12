@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "VidIQ Alternative & TubeBuddy Alternative - Compare YouTube Tools",
   description:
     "Looking for a VidIQ alternative or TubeBuddy alternative? TubeGrow offers AI-powered YouTube analytics, SEO optimization, and viral clip generation at a better price. Compare features now.",
+  alternates: {
+    canonical: "/alternatives",
+  },
   keywords: [
     "vidiq alternative",
     "tubebuddy alternative",

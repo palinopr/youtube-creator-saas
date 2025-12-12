@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about TubeGrow - the AI-powered YouTube analytics platform helping creators grow their channels with actionable insights and data-driven strategies.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About TubeGrow | AI-Powered YouTube Growth",
     description:
