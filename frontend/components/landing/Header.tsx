@@ -67,8 +67,8 @@ export default function Header() {
             >
               Login
             </a>
-            <a href={AUTH_ENDPOINTS.LOGIN} className="btn-cta text-sm">
-              Start Free Trial
+            <a href="#waitlist" className="btn-cta text-sm">
+              Join Waitlist
             </a>
           </div>
 
@@ -103,8 +103,12 @@ export default function Header() {
                 >
                   Login
                 </a>
-                <a href={AUTH_ENDPOINTS.LOGIN} className="btn-cta-primary text-sm text-center">
-                  Start Free Trial
+                <a
+                  href="#waitlist"
+                  className="btn-cta-primary text-sm text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Join Waitlist
                 </a>
               </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -15,7 +15,9 @@ import {
   CheckCircle,
   ExternalLink,
   Shield,
+  Upload,
 } from "lucide-react";
+import { LineChart, Line, ResponsiveContainer, Tooltip } from "recharts";
 import { ADMIN_ENDPOINTS, API_URL } from "@/lib/config";
 
 interface KeywordRanking {
@@ -60,6 +62,15 @@ interface SuggestedKeywords {
   competitor_keywords: string[];
 }
 
+interface HistoryPoint {
+  date: string;
+  position: number;
+}
+
+interface KeywordHistory {
+  [keywordId: number]: HistoryPoint[];
+}
+
 export default function AdminSeoPage() {
   const [rankings, setRankings] = useState<RankingsData | null>(null);
   const [domains, setDomains] = useState<Domain[]>([]);
@@ -77,6 +88,53 @@ export default function AdminSeoPage() {
 
   // Filter
   const [searchFilter, setSearchFilter] = useState("");
+
+  // Keyword history for sparklines
+  const [keywordHistory, setKeywordHistory] = useState<KeywordHistory>({});
+  const [loadingHistory, setLoadingHistory] = useState(false);
+
+  // CSV Import
+  const [showImportModal, setShowImportModal] = useState(false);
+  const [importText, setImportText] = useState("");
+  const [importing, setImporting] = useState(false);
+
+  // Fetch history for all keywords
+  const fetchKeywordHistory = useCallback(async (domainId: number, keywords: KeywordRanking[]) => {
+    if (!domainId || keywords.length === 0) return;
+
+    setLoadingHistory(true);
+    const historyMap: KeywordHistory = {};
+
+    // Fetch history for each keyword (limit to first 20 to avoid too many requests)
+    const keywordsToFetch = keywords.slice(0, 20);
+
+    await Promise.all(
+      keywordsToFetch.map(async (kw) => {
+        try {
+          const res = await fetch(
+            `${API_URL}/api/admin/seo/domains/${domainId}/keywords/${kw.id}/history`,
+            { credentials: "include" }
+          );
+          if (res.ok) {
+            const data = await res.json();
+            // Transform history data for sparkline (last 30 days)
+            const history = (data.history || [])
+              .slice(-30)
+              .map((h: { date?: string; position?: number; updatedAt?: string }) => ({
+                date: h.date || h.updatedAt || "",
+                position: h.position || 0,
+              }));
+            historyMap[kw.id] = history;
+          }
+        } catch (err) {
+          console.error(`Failed to fetch history for keyword ${kw.id}:`, err);
+        }
+      })
+    );
+
+    setKeywordHistory(historyMap);
+    setLoadingHistory(false);
+  }, []);
 
   useEffect(() => {
     fetchData();
@@ -114,8 +172,9 @@ export default function AdminSeoPage() {
         credentials: "include",
       });
 
+      let rankingsData: RankingsData | null = null;
       if (rankingsRes.ok) {
-        const rankingsData = await rankingsRes.json();
+        rankingsData = await rankingsRes.json();
         setRankings(rankingsData);
       }
 
@@ -128,7 +187,13 @@ export default function AdminSeoPage() {
         const domainsData = await domainsRes.json();
         setDomains(domainsData.domains || []);
         if (domainsData.domains?.length > 0) {
-          setSelectedDomainId(domainsData.domains[0].id);
+          const domainId = domainsData.domains[0].id;
+          setSelectedDomainId(domainId);
+
+          // Fetch keyword history for sparklines
+          if (rankingsData?.keywords?.length) {
+            fetchKeywordHistory(domainId, rankingsData.keywords);
+          }
         }
       }
 
@@ -207,6 +272,108 @@ export default function AdminSeoPage() {
     } catch (err) {
       console.error("Failed to delete keyword:", err);
     }
+  };
+
+  const handleBulkImport = async () => {
+    if (!selectedDomainId || !importText.trim()) return;
+
+    setImporting(true);
+    try {
+      // Parse keywords from text (one per line or comma-separated)
+      const keywords = importText
+        .split(/[\n,]/)
+        .map(k => k.trim())
+        .filter(k => k.length > 0);
+
+      if (keywords.length === 0) {
+        alert("No valid keywords found");
+        return;
+      }
+
+      const res = await fetch(`${API_URL}/api/admin/seo/keywords/bulk`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          domain_id: selectedDomainId,
+          keywords: keywords,
+          device: "desktop",
+          country: "US",
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        alert(`Successfully added ${data.added} keywords`);
+        setImportText("");
+        setShowImportModal(false);
+        fetchData();
+      } else {
+        const error = await res.json();
+        alert(`Failed to import: ${error.detail || "Unknown error"}`);
+      }
+    } catch (err) {
+      console.error("Failed to bulk import:", err);
+      alert("Failed to import keywords");
+    } finally {
+      setImporting(false);
+    }
+  };
+
+  // Sparkline component for keyword history
+  const KeywordSparkline = ({ keywordId }: { keywordId: number }) => {
+    const history = keywordHistory[keywordId];
+
+    if (!history || history.length < 2) {
+      return (
+        <div className="w-24 h-8 flex items-center justify-center text-xs text-gray-500">
+          {loadingHistory ? "..." : "No data"}
+        </div>
+      );
+    }
+
+    // Invert positions for chart (lower position = higher on chart)
+    const chartData = history.map(h => ({
+      ...h,
+      displayPosition: h.position > 0 ? 101 - h.position : 0,
+    }));
+
+    // Determine trend color
+    const firstPos = history[0]?.position || 0;
+    const lastPos = history[history.length - 1]?.position || 0;
+    const improving = lastPos > 0 && firstPos > 0 && lastPos < firstPos;
+    const declining = lastPos > 0 && firstPos > 0 && lastPos > firstPos;
+
+    const strokeColor = improving ? "#4ade80" : declining ? "#f87171" : "#9ca3af";
+
+    return (
+      <div className="w-24 h-8">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={chartData}>
+            <Tooltip
+              content={({ active, payload }) => {
+                if (active && payload && payload.length) {
+                  const data = payload[0].payload as HistoryPoint & { displayPosition: number };
+                  return (
+                    <div className="bg-gray-900 border border-gray-700 px-2 py-1 rounded text-xs">
+                      <p>#{data.position}</p>
+                    </div>
+                  );
+                }
+                return null;
+              }}
+            />
+            <Line
+              type="monotone"
+              dataKey="displayPosition"
+              stroke={strokeColor}
+              strokeWidth={1.5}
+              dot={false}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    );
   };
 
   const filteredKeywords = rankings?.keywords?.filter(kw =>
@@ -370,6 +537,13 @@ export default function AdminSeoPage() {
                 />
               </div>
               <button
+                onClick={() => setShowImportModal(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              >
+                <Upload className="w-4 h-4" />
+                Import
+              </button>
+              <button
                 onClick={() => setShowAddForm(!showAddForm)}
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
               >
@@ -408,20 +582,25 @@ export default function AdminSeoPage() {
               filteredKeywords.map((kw) => (
                 <div key={kw.id} className="p-4 hover:bg-white/5 transition-colors">
                   <div className="flex items-center justify-between">
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <p className="font-medium">{kw.keyword}</p>
                       <p className="text-sm text-gray-400 truncate">
                         {kw.url || "Not ranking"}
                       </p>
                     </div>
-                    <div className="flex items-center gap-6">
-                      <div className="text-center">
+                    <div className="flex items-center gap-4">
+                      {/* Sparkline - 30 day trend */}
+                      <div className="hidden md:block">
+                        <KeywordSparkline keywordId={kw.id} />
+                        <p className="text-xs text-gray-500 text-center">30d trend</p>
+                      </div>
+                      <div className="text-center w-16">
                         <p className={`text-2xl font-bold ${getPositionColor(kw.position)}`}>
                           {kw.position || "-"}
                         </p>
                         <p className="text-xs text-gray-500">Position</p>
                       </div>
-                      <div className="flex items-center gap-1 w-20">
+                      <div className="flex items-center gap-1 w-16">
                         {getChangeIcon(kw.change.direction)}
                         <span className={`text-sm ${
                           kw.change.direction === "up" ? "text-green-400" :
@@ -431,7 +610,7 @@ export default function AdminSeoPage() {
                           {kw.change.value > 0 ? kw.change.value : "-"}
                         </span>
                       </div>
-                      <div className="text-sm text-gray-400 w-20">
+                      <div className="text-sm text-gray-400 w-20 hidden lg:block">
                         {kw.device} / {kw.country}
                       </div>
                       <button
@@ -522,6 +701,62 @@ export default function AdminSeoPage() {
           </div>
         )}
       </main>
+
+      {/* Bulk Import Modal */}
+      {showImportModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-900 border border-white/10 rounded-xl max-w-lg w-full p-6">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <Upload className="w-5 h-5 text-blue-400" />
+              Bulk Import Keywords
+            </h2>
+            <p className="text-gray-400 text-sm mb-4">
+              Paste your keywords below, one per line or comma-separated. You can export keywords from Semrush and paste them here.
+            </p>
+            <textarea
+              value={importText}
+              onChange={(e) => setImportText(e.target.value)}
+              placeholder="youtube analytics tool
+youtube seo tool
+viral clips generator
+vidiq alternative
+tubebuddy alternative"
+              className="w-full h-48 px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 text-sm font-mono resize-none"
+            />
+            <p className="text-xs text-gray-500 mt-2 mb-4">
+              {importText.split(/[\n,]/).filter(k => k.trim()).length} keywords detected
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => {
+                  setShowImportModal(false);
+                  setImportText("");
+                }}
+                className="px-4 py-2 text-gray-400 hover:text-white transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleBulkImport}
+                disabled={importing || !importText.trim()}
+                className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors disabled:opacity-50 flex items-center gap-2"
+              >
+                {importing ? (
+                  <>
+                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    Importing...
+                  </>
+                ) : (
+                  <>
+                    <Upload className="w-4 h-4" />
+                    Import Keywords
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

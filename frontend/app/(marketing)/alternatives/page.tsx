@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Search,
 } from "lucide-react";
+import WaitlistForm from "@/components/landing/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "VidIQ Alternative & TubeBuddy Alternative - Compare YouTube Tools",
@@ -197,10 +198,10 @@ export default function AlternativesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/pricing"
+              href="/#waitlist"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
             >
-              Try TubeGrow Free
+              Join Waitlist
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -448,23 +449,11 @@ export default function AlternativesPage() {
             Ready to Try the Best VidIQ & TubeBuddy Alternative?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join thousands of creators using TubeGrow's AI-powered tools to grow
-            their channels faster.
+            Be the first to access TubeGrow's AI-powered tools when we launch.
+            Join the waitlist for early access.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href="/features"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold text-lg transition-all"
-            >
-              See All Features
-            </Link>
+          <div className="max-w-md mx-auto">
+            <WaitlistForm variant="hero" />
           </div>
         </div>
       </section>

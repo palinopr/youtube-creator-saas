@@ -319,11 +319,63 @@ No test framework configured yet. Consider adding:
 
 ## Deployment
 
-Backend includes Dockerfile for container deployment.
-Frontend can deploy to Vercel (Next.js native).
+### Production URLs
+| Service | Platform | URL |
+|---------|----------|-----|
+| Frontend | Vercel | https://tubegrow.io |
+| Backend | Railway | https://api.tubegrow.io |
 
-Required production changes:
-1. Set DATABASE_URL for PostgreSQL
-2. Update FRONTEND_URL/BACKEND_URL
-3. Configure OAuth redirect URIs
-4. Set strong SECRET_KEY
+### Railway (Backend)
+- Project: `youtube-saas-backend`
+- Service: `api`
+- Dockerfile: `backend/Dockerfile`
+- Health endpoint: `/health`
+
+**Railway CLI Commands:**
+```bash
+# Check status
+railway status
+
+# View logs
+railway logs
+
+# Set environment variables
+railway variables --set "KEY=value"
+
+# View all variables
+railway variables --kv
+```
+
+**⚠️ IMPORTANT: How to Deploy to Railway**
+```bash
+# ALWAYS deploy via Git push (NOT railway up)
+git add .
+git commit -m "your message"
+git push origin main
+```
+**DO NOT use `railway up`** - it has a bug that passes `$PORT` as literal string instead of expanding it. Always deploy by pushing to GitHub - Railway auto-deploys from the connected repo.
+
+### Vercel (Frontend)
+- Auto-deploys from Git pushes
+- Environment variable: `NEXT_PUBLIC_API_URL=https://api.tubegrow.io`
+
+### Google OAuth Configuration
+- Client: `TubeGrow Production` (Web application)
+- Client ID: `1006336789698-utsh149brh430722r51bsou3emafmqig.apps.googleusercontent.com`
+- Authorized redirect URI: `https://api.tubegrow.io/auth/callback`
+
+### Railway Environment Variables
+```env
+GOOGLE_CLIENT_ID=1006336789698-utsh149brh430722r51bsou3emafmqig.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=<secret>
+OPENAI_API_KEY=<secret>
+SECRET_KEY=<secret>
+ENCRYPTION_KEY=<secret>
+FRONTEND_URL=https://tubegrow.io
+```
+
+### Required production changes:
+1. Set DATABASE_URL for PostgreSQL (optional - using SQLite currently)
+2. ~~Update FRONTEND_URL/BACKEND_URL~~ Done
+3. ~~Configure OAuth redirect URIs~~ Done
+4. ~~Set strong SECRET_KEY~~ Done

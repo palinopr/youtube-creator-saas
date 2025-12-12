@@ -17,6 +17,7 @@ import {
   MessageSquare,
   Target,
 } from "lucide-react";
+import WaitlistForm from "@/components/landing/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Viral Clips Generator - Turn Videos into YouTube Shorts & TikToks",
@@ -177,10 +178,10 @@ export default function ViralClipsGeneratorPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/pricing"
+                href="/#waitlist"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                Generate Clips Free <ArrowRight className="w-5 h-5" />
+                Join Waitlist <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/features"
@@ -429,24 +430,13 @@ export default function ViralClipsGeneratorPage() {
           <div className="bg-gradient-to-r from-red-500/10 to-purple-500/10 border border-red-500/20 rounded-2xl p-12">
             <Scissors className="w-16 h-16 text-red-400 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Start Generating Viral Clips Today
+              Be First to Generate Viral Clips
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Stop spending hours scrubbing through videos. Let AI find your best moments in minutes.
+              Join the waitlist for early access to our AI-powered viral clip generator. Stop spending hours scrubbing through videos.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/pricing"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
-                Try Free for 7 Days <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/ai-youtube-tools"
-                className="inline-flex items-center justify-center gap-2 bg-zinc-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-zinc-700 transition-colors"
-              >
-                Explore All AI Tools
-              </Link>
+            <div className="max-w-md mx-auto">
+              <WaitlistForm variant="hero" />
             </div>
           </div>
         </div>

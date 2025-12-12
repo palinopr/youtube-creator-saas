@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import WaitlistForm from "./WaitlistForm";
 
 export default function FinalCTA() {
   return (
@@ -18,22 +17,13 @@ export default function FinalCTA() {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl mx-auto">
-          Join 10,000+ creators using TubeGrow to maximize their reach
-          and engagement on YouTube.
+          Join the waitlist for early access to AI-powered YouTube analytics
+          that will help you maximize reach and engagement.
         </p>
 
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Link href="/dashboard" className="btn-cta-primary flex items-center gap-2">
-            Start Free Trial
-            <ArrowRight size={18} />
-          </Link>
-          <Link
-            href="#pricing"
-            className="text-white/70 hover:text-white transition-colors font-medium"
-          >
-            View pricing →
-          </Link>
+        {/* Waitlist Form */}
+        <div className="flex justify-center mb-8">
+          <WaitlistForm variant="inline" />
         </div>
 
         {/* Trust indicators */}
@@ -52,7 +42,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>14-day free trial</span>
+            <span>Early access benefits</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -68,7 +58,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>No credit card required</span>
+            <span>No spam, ever</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -84,7 +74,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>Cancel anytime</span>
+            <span>Unsubscribe anytime</span>
           </div>
         </div>
       </div>

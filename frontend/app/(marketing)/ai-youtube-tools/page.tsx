@@ -16,6 +16,7 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
+import WaitlistForm from "@/components/landing/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "AI Tools for YouTube Creators - AI-Powered YouTube Analytics",
@@ -137,10 +138,10 @@ export default function AIYouTubeToolsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/pricing"
+                href="/#waitlist"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                Try AI Tools Free <ArrowRight className="w-5 h-5" />
+                Join Waitlist <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/features"
@@ -309,21 +310,10 @@ export default function AIYouTubeToolsPage() {
               Ready to Let AI Grow Your Channel?
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join thousands of creators using AI to make smarter decisions, save time, and grow faster on YouTube.
+              Be the first to access AI-powered YouTube growth tools when we launch. Join the waitlist for early access.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/pricing"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
-                Start Free Trial <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/alternatives"
-                className="inline-flex items-center justify-center gap-2 bg-zinc-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-zinc-700 transition-colors"
-              >
-                Compare to VidIQ & TubeBuddy
-              </Link>
+            <div className="max-w-md mx-auto">
+              <WaitlistForm variant="hero" />
             </div>
           </div>
         </div>
