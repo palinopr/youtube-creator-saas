@@ -292,12 +292,27 @@ export default function ReviewPage() {
                 </div>
               )}
 
-              {result.metadata && Object.keys(result.metadata).length > 0 && (
+              {result.metadata && (result.metadata.compared_against || (result.metadata.notes && result.metadata.notes.length > 0)) && (
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-sm text-gray-400 mb-2">Metadata</p>
-                  <pre className="text-xs text-gray-400 bg-black/30 p-3 rounded overflow-x-auto">
-                    {JSON.stringify(result.metadata, null, 2)}
-                  </pre>
+                  <div className="bg-black/30 p-3 rounded space-y-2">
+                    {result.metadata.compared_against && (
+                      <p className="text-sm text-gray-300">
+                        <span className="text-gray-500">Compared against: </span>
+                        {result.metadata.compared_against}
+                      </p>
+                    )}
+                    {result.metadata.notes && result.metadata.notes.length > 0 && (
+                      <div>
+                        <p className="text-xs text-gray-500 mb-1">Notes:</p>
+                        <ul className="space-y-1">
+                          {result.metadata.notes.map((note, i) => (
+                            <li key={i} className="text-sm text-gray-400">• {note}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
