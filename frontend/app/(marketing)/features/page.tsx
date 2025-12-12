@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { AUTH_ENDPOINTS } from "@/lib/config";
 import {
   BarChart3,
   Sparkles,
@@ -330,24 +329,25 @@ export default function FeaturesPage() {
       <section className="py-20 border-t border-white/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Try These Features?
+            Want Early Access?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Start with our free plan and upgrade as you grow. No credit card required.
+            TubeGrow is waitlist‑only early access. Join the waitlist and we’ll invite you as we
+            open more spots.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={AUTH_ENDPOINTS.LOGIN}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
-            >
-              Get Started Free
-              <ArrowRight className="w-5 h-5" />
-            </a>
             <Link
               href="/#waitlist"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold text-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
             >
               Join Waitlist
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/tools"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold text-lg transition-all"
+            >
+              Try Free Tools
             </Link>
           </div>
         </div>

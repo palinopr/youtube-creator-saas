@@ -283,6 +283,7 @@ Add entries with date + outcome.
 | Dec 12 | Shipped analytics/SEO pillars, niches hub + 10 niches, and 4 lite link‑magnet tools | IA expanded, link magnets live for outreach |
 | Dec 12 | Added webmanifest + fixed OG/Twitter/icon URLs; tightened AI-tools + clips claims to current features; added SEO checklist post | Reduced 404 noise, improved internal linking + trust, expanded SEO coverage |
 | Dec 12 | Added landing “Resources” section, fixed support email, and published Shorts analytics + tag generator posts | More internal links to tools/posts, more TOFU coverage for tracked keywords |
+| Dec 12 | Removed “free plan”/vanity stats claims from marketing pages (About/Features) | Copy now matches waitlist‑only status |
 
 ---
 

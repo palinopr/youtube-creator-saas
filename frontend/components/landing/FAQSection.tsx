@@ -16,7 +16,7 @@ const faqCategories = [
       {
         question: "How does the AI analyze my channel?",
         answer:
-          "Our AI analyzes multiple data points including video performance metrics, thumbnail effectiveness, title optimization, description SEO, audience retention patterns, and engagement rates. It then provides personalized recommendations based on what's working in your niche.",
+          "Our AI analyzes key performance signals like views, watch time, audience retention, traffic sources, and your video metadata (titles/descriptions/tags). It turns those signals into prioritized recommendations you can apply to your next upload.",
       },
       {
         question: "Is my YouTube data secure?",

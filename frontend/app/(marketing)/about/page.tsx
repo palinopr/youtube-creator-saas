@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { AUTH_ENDPOINTS } from "@/lib/config";
 import {
   TrendingUp,
   Shield,
@@ -52,13 +51,6 @@ const values = [
   },
 ];
 
-const stats = [
-  { value: "10K+", label: "Creators" },
-  { value: "1M+", label: "Videos Analyzed" },
-  { value: "500M+", label: "Views Optimized" },
-  { value: "99.9%", label: "Uptime" },
-];
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -98,7 +90,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-400">
                 From understanding why certain videos perform better, to generating
-                viral clips automatically, to optimizing your SEO - we handle the
+                Shorts clip ideas from long videos, to improving your SEO - we handle the
                 data science so you can focus on creating.
               </p>
             </div>
@@ -123,7 +115,7 @@ export default function AboutPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-red-400 rounded-full" />
-                  Automatic viral clip detection
+                  Shorts moment discovery
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-red-400 rounded-full" />
@@ -131,22 +123,6 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -212,16 +188,16 @@ export default function AboutPage() {
             Ready to Grow Your Channel?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join thousands of creators using TubeGrow to optimize their content
-            and accelerate their growth.
+            TubeGrow is waitlist‑only early access. Join the waitlist and we’ll invite you as we
+            open more spots.
           </p>
-          <a
-            href={AUTH_ENDPOINTS.LOGIN}
+          <Link
+            href="/#waitlist"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
           >
-            Get Started Free
+            Join Waitlist
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
