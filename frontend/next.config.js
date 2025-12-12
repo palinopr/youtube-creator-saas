@@ -14,6 +14,36 @@ const nextConfig = {
         destination: "/blog/best-times-to-post-youtube-2025",
         permanent: true,
       },
+      {
+        source: "/opengraph-image.png",
+        destination: "/opengraph-image",
+        permanent: true,
+      },
+      {
+        source: "/twitter-image.png",
+        destination: "/twitter-image",
+        permanent: true,
+      },
+      {
+        source: "/favicon.ico",
+        destination: "/icon",
+        permanent: true,
+      },
+      {
+        source: "/favicon-16x16.png",
+        destination: "/icon",
+        permanent: true,
+      },
+      {
+        source: "/favicon-32x32.png",
+        destination: "/icon",
+        permanent: true,
+      },
+      {
+        source: "/apple-touch-icon.png",
+        destination: "/apple-icon",
+        permanent: true,
+      },
     ];
   },
   images: {

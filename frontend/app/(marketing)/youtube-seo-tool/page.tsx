@@ -266,7 +266,7 @@ export default function YouTubeSEOToolPage() {
           <p className="text-zinc-400 text-center mb-8">
             Build a complete growth system with TubeGrow.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/youtube-analytics-tool"
               className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
@@ -274,6 +274,15 @@ export default function YouTubeSEOToolPage() {
               <h3 className="text-white font-semibold mb-2">YouTube Analytics Tool</h3>
               <p className="text-zinc-400 text-sm">
                 Understand performance and growth drivers.
+              </p>
+            </Link>
+            <Link
+              href="/tools/youtube-seo-score"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Free SEO Score (Lite)</h3>
+              <p className="text-zinc-400 text-sm">
+                Get a quick SEO score and top fixes.
               </p>
             </Link>
             <Link
@@ -318,4 +327,3 @@ export default function YouTubeSEOToolPage() {
     </div>
   );
 }
-

@@ -22,7 +22,7 @@ import WaitlistForm from "@/components/landing/WaitlistForm";
 export const metadata: Metadata = {
   title: "Viral Clips Generator for YouTube Shorts & TikTok",
   description:
-    "AI-powered viral clips generator that finds the best moments in your YouTube videos. Create engaging YouTube Shorts, TikToks, and Instagram Reels automatically. Free clip finder tool.",
+    "AI-powered viral clips generator that finds the best moments in your YouTube videos. Get timestamped clip ideas for YouTube Shorts, TikTok, and Instagram Reels. Includes a free lite clip finder tool.",
   alternates: {
     canonical: "/viral-clips-generator",
   },
@@ -56,37 +56,37 @@ const features = [
     icon: Sparkles,
     title: "AI Viral Moment Detection",
     description:
-      "Our AI analyzes your video transcripts to identify hook moments, emotional peaks, controversial statements, and quotable content that perform best on short-form platforms.",
+      "Our AI analyzes transcripts to identify hook moments, emotional peaks, quotable lines, and educational nuggets that often perform well on short‑form platforms.",
   },
   {
     icon: Clock,
-    title: "Perfect Timing",
+    title: "Timestamped Clip List",
     description:
-      "Get precise timestamps for each viral moment. Our AI detects the optimal start and end points to maximize engagement and watch time.",
+      "Get precise timestamps for each suggested moment, including a recommended start/end window so you can clip fast.",
   },
   {
     icon: Film,
-    title: "Hook-Body-Loop Structure",
+    title: "Short‑Form Structure",
     description:
-      "Every clip suggestion follows the proven viral format: attention-grabbing hook, valuable content body, and seamless loop potential for replays.",
+      "Suggestions prioritize clips that open strong and deliver value quickly — the structure Shorts viewers reward.",
   },
   {
-    icon: MessageSquare,
-    title: "Caption Generation",
+    icon: Target,
+    title: "Platform Guidance",
     description:
-      "Get AI-generated captions optimized for each platform. Includes hashtag suggestions and engagement-driving CTAs.",
+      "See which moments fit Shorts‑style pacing and how to keep clips within typical platform limits.",
   },
   {
     icon: Share2,
-    title: "Multi-Platform Ready",
+    title: "Shareable Output",
     description:
-      "Export clips optimized for YouTube Shorts (60s), TikTok (60s), Instagram Reels (90s), and Twitter/X video with proper aspect ratios.",
+      "Copy a clean list of timestamps and clip titles to send to an editor or drop into your own workflow.",
   },
   {
-    icon: BarChart3,
-    title: "Viral Score Prediction",
+    icon: Video,
+    title: "Works on Public Captions",
     description:
-      "Each clip gets a viral potential score based on hook strength, content value, emotional impact, and trending topic alignment.",
+      "Analyze public videos that have captions available, or connect your own channel for deeper workflows (waitlist‑only).",
   },
 ];
 
@@ -106,13 +106,13 @@ const howItWorks = [
   {
     step: "3",
     title: "Review Suggestions",
-    description: "Get 5-15 clip suggestions with timestamps, viral scores, and platform recommendations",
+    description: "Get clip suggestions with timestamps and short explanations for why each moment stands out",
     icon: Target,
   },
   {
     step: "4",
-    title: "Export & Publish",
-    description: "Download clips or schedule directly to YouTube Shorts, TikTok, and Reels",
+    title: "Export & Edit",
+    description: "Export the timestamp list and turn moments into Shorts in your editor",
     icon: Share2,
   },
 ];
@@ -368,11 +368,11 @@ export default function ViralClipsGeneratorPage() {
               <h3 className="text-xl font-semibold text-white mb-6">TubeGrow AI</h3>
               <ul className="space-y-4">
                 {[
-                  "AI analyzes video in seconds",
-                  "Viral score predicts performance",
-                  "One-click export to all platforms",
-                  "AI-generated captions included",
-                  "Takes 5 minutes per video",
+                  "AI analyzes captions quickly",
+                  "Timestamped clip ideas you can trust",
+                  "Export a clean list for your editor",
+                  "Works with public captioned videos",
+                  "Repeatable workflow for every upload",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-white">
                     <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -395,15 +395,15 @@ export default function ViralClipsGeneratorPage() {
             {[
               {
                 q: "How does the AI find viral moments?",
-                a: "Our AI analyzes video transcripts using natural language processing to identify patterns that correlate with high engagement: strong hooks, emotional language, surprising statements, valuable insights, and controversial takes. It's trained on millions of viral short-form videos.",
+                a: "TubeGrow analyzes the video’s captions/transcript to spot moments that tend to translate well to Shorts: strong hooks, emotional peaks, quotable lines, and fast, valuable insights.",
               },
               {
                 q: "What video lengths work best?",
                 a: "The clips generator works with any video length, but videos between 10-60 minutes typically yield the best results with 5-15 clip suggestions. Shorter videos (under 5 minutes) usually produce 2-5 clips.",
               },
               {
-                q: "Can I customize the clips before exporting?",
-                a: "Yes! You can adjust the start and end timestamps, modify the AI-generated captions, select which platforms to export to, and choose vertical or square aspect ratios.",
+                q: "Does the tool edit my video for me?",
+                a: "The lite tool gives timestamped clip suggestions. You can take the timestamps into your editor (or send them to an editor) to cut the clips. TubeGrow is waitlist‑only early access for deeper workflows.",
               },
               {
                 q: "Does it work with any YouTube video?",
@@ -414,8 +414,8 @@ export default function ViralClipsGeneratorPage() {
                 a: "Viral shorts typically have: a hook in the first 1-2 seconds, high energy or emotional content, a clear payoff or insight, good loop potential (viewers rewatch), and native vertical framing. Our AI looks for all these elements.",
               },
               {
-                q: "How accurate is the viral score prediction?",
-                a: "Our viral score is based on content analysis, not a guarantee of performance. However, clips with scores above 80% have historically performed 3x better on average than clips selected manually. External factors like thumbnails, posting time, and trends also affect results.",
+                q: "What should I do after I get the timestamps?",
+                a: "Cut a tight vertical clip around the suggested window, add on-screen captions, and make sure the first second is a strong hook. Then test variants and use analytics to double down on what works.",
               },
             ].map((faq, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
@@ -436,7 +436,7 @@ export default function ViralClipsGeneratorPage() {
           <p className="text-zinc-400 text-center mb-8">
             Keep learning with our AI tools and Shorts growth guides.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/ai-youtube-tools"
               className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-red-500/50 transition-colors"
@@ -444,6 +444,15 @@ export default function ViralClipsGeneratorPage() {
               <h3 className="text-white font-semibold mb-2">AI Tools for Creators</h3>
               <p className="text-zinc-400 text-sm">
                 See how TubeGrow uses AI across analytics, SEO, and clips.
+              </p>
+            </Link>
+            <Link
+              href="/tools/shorts-clip-finder"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-red-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Free Shorts Clip Finder</h3>
+              <p className="text-zinc-400 text-sm">
+                Get 3–5 timestamped moments from captions.
               </p>
             </Link>
             <Link

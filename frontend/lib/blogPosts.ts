@@ -3,6 +3,134 @@ import type { BlogPost } from "./blog";
 // Static blog posts - can be replaced with CMS later
 export const blogPosts: BlogPost[] = [
   {
+    slug: "youtube-seo-optimization-2025-checklist",
+    title: "YouTube SEO Optimization in 2025: Title, Description, Tags Checklist",
+    description:
+      "A practical 2025 YouTube SEO checklist for creators: keyword intent, titles, descriptions, tags, Shorts hashtags, and how to measure results.",
+    category: "SEO",
+    date: "2025-12-12",
+    readTime: "12 min read",
+    author: {
+      name: "TubeGrow Team",
+    },
+    content: `
+## Why YouTube SEO Still Wins in 2025
+
+YouTube discovery is a mix of **Search** and **Recommendations** (Browse + Suggested + Shorts feed). SEO helps YouTube understand *what your video is about* and *who it’s for*, which improves both:
+
+- **Search ranking** for the exact queries you target
+- **Suggested/Browse placement** because your metadata and viewer behavior align with an identifiable topic
+
+This guide is a creator-friendly checklist you can run on every upload — and on older videos that need a refresh.
+
+## Step 1: Pick One Primary Keyword + One Intent
+
+Before you write anything, decide what your video should rank for.
+
+**Primary keyword** examples:
+- "youtube seo optimization"
+- "youtube seo tool"
+- "how to optimize a youtube video"
+
+**Intent** examples:
+- **Learn**: “how to…”, “what is…”
+- **Compare**: “best…”, “alternative…”
+- **Do**: “template”, “checklist”, “generator”
+
+If you try to target five different intents in one video, your title and description become vague — and YouTube can’t confidently place it.
+
+## Step 2: Title Optimization (Checklist)
+
+Your title is both a ranking signal and a click signal. A great SEO title does three things:
+
+1. Includes the keyword *naturally*
+2. Signals *clear value*
+3. Creates a *reason to click*
+
+Use this checklist:
+
+- Put the **primary keyword** in the first half of the title
+- Keep it readable on mobile (aim for ~55–65 characters)
+- Include a **benefit** (“…that increases CTR”, “…in 10 minutes”, “…for beginners”)
+- Avoid vague words (“Ultimate”, “Insane”) unless you can prove them
+- Match the viewer’s question exactly when possible (“How to optimize a YouTube video for SEO”)
+
+## Step 3: Description Optimization (Template)
+
+Descriptions help YouTube understand your topic and help viewers decide to watch. They also earn long‑tail discovery over time.
+
+A simple structure that works:
+
+~~~text
+1–2 sentence hook (repeat the keyword naturally)
+
+What you’ll learn (2–4 bullets)
+
+Chapters / key takeaways (optional)
+
+Helpful links (tools, related guides, your next video)
+~~~
+
+Guidelines:
+- Make the first 2 lines strong — they’re the snippet in many surfaces
+- Use keyword variants naturally (don’t stuff)
+- Add internal links to your own site when relevant
+
+## Step 4: Tags + Hashtags (What Matters, What Doesn’t)
+
+Tags are not the main ranking factor, but they still help with:
+- common misspellings
+- close variants
+- clarifying ambiguous topics
+
+Practical approach:
+- 1 exact keyword tag
+- 3–6 close variants
+- 3–5 niche/context tags (format, audience, series name)
+
+Hashtags (in the description):
+- Use 2–3 that match the topic and niche
+- Don’t add unrelated trending tags
+
+## Step 5: Shorts SEO (Different Surface, Same Clarity)
+
+Shorts rely heavily on viewer signals (swipes, retention, replays) — but metadata still helps classification.
+
+For Shorts:
+- Use a clear title (even if short)
+- Keep hashtags tight and relevant
+- Make the first second a hook and keep pacing high
+
+## Step 6: Measure SEO Impact (What to Track)
+
+After publishing or editing metadata, track:
+- Impressions from **YouTube Search**
+- Search click‑through rate (CTR)
+- Average view duration for search traffic
+- Ranking movement for your target query (over days/weeks)
+
+Then iterate: refresh titles/descriptions for videos that have good retention but low CTR.
+
+## Free Tools to Speed Up the Workflow
+
+If you want quick feedback before you publish:
+
+- **SEO Score (Lite)**: /tools/youtube-seo-score
+- **Metadata Generator (Lite)**: /tools/youtube-metadata-generator
+- **Full SEO product overview (waitlist‑only)**: /youtube-seo-tool
+
+## The Fastest Win: Refresh Old Videos
+
+New uploads take time to find an audience. Old videos with proven watch time often respond fast to SEO improvements:
+
+- Tighten the title around one query
+- Rewrite the first two description lines
+- Clean up tags and add 2–3 relevant hashtags
+
+Do this consistently and you build a library of videos that keeps earning search traffic month after month.
+`,
+  },
+  {
     slug: "how-to-start-youtube-channel-beginners-guide",
     title: "How to Start a YouTube Channel in 2025: Complete Beginner's Guide",
     description:

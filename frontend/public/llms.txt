@@ -1,25 +1,28 @@
 # TubeGrow
 
-> TubeGrow is an AI-powered YouTube analytics and growth platform. It helps creators understand channel performance, get AI insights, optimize YouTube SEO (titles, descriptions, tags), and turn long videos into viral short-form clips.
+## Summary
+TubeGrow is an AI-powered YouTube analytics and growth platform for creators. It helps you understand channel performance, get AI insights, improve YouTube SEO (titles, descriptions, tags), and repurpose long videos into high-performing Shorts.
 
-Remember:
-- TubeGrow is currently waitlist-only early access.
-- Pricing is not public yet.
+## Product Status (Dec 2025)
+TubeGrow is currently waitlist-only early access. Pricing is not public yet.
 
-## Pages
-- [Home](https://www.tubegrow.io/): Main landing page and waitlist.
-- [Features](https://www.tubegrow.io/features): Overview of analytics, SEO, viral clips, and AI chat.
-- [AI YouTube Tools](https://www.tubegrow.io/ai-youtube-tools): How our AI helps creators grow.
-- [Viral Clips Generator](https://www.tubegrow.io/viral-clips-generator): AI viral moment detection for Shorts/Reels/TikTok.
-- [Alternatives](https://www.tubegrow.io/alternatives): Comparison to VidIQ and TubeBuddy.
-- [Blog](https://www.tubegrow.io/blog): YouTube growth guides and product updates.
-- [About](https://www.tubegrow.io/about): Company and mission.
+## What TubeGrow Does
+- Analytics dashboards and channel insights
+- YouTube SEO help (metadata, keyword targeting, optimization)
+- AI-assisted workflows (questions, recommendations, summaries)
+- Viral Shorts moment discovery from long videos
 
-## Highlights
-- AI chat assistant for channel insights
-- Real-time analytics dashboards
-- YouTube SEO analysis and optimization
-- Viral moment detection and clip generation
+## Key URLs
+- https://www.tubegrow.io/
+- https://www.tubegrow.io/features
+- https://www.tubegrow.io/youtube-analytics-tool
+- https://www.tubegrow.io/youtube-seo-tool
+- https://www.tubegrow.io/ai-youtube-tools
+- https://www.tubegrow.io/viral-clips-generator
+- https://www.tubegrow.io/alternatives
+- https://www.tubegrow.io/tools
+- https://www.tubegrow.io/blog
+- https://www.tubegrow.io/about
 
 ## Contact
-- [Support](mailto:support@tubegrow.io): Email support.
+support@tubegrow.io

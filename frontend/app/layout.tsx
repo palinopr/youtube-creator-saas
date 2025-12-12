@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       "Grow your YouTube channel with AI-powered analytics, SEO optimization, and viral clip generation. Get actionable insights to maximize views, subscribers, and engagement.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "TubeGrow - AI-Powered YouTube Analytics",
@@ -76,13 +76,13 @@ export const metadata: Metadata = {
     title: "TubeGrow | AI-Powered YouTube Analytics & Growth Tools",
     description:
       "Grow your YouTube channel with AI-powered analytics, SEO optimization, and viral clip generation.",
-    images: ["/twitter-image.png"],
+    images: ["/twitter-image"],
     creator: "@tubegrow",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon",
+    shortcut: "/icon",
+    apple: "/apple-icon",
   },
   manifest: "/site.webmanifest",
 };

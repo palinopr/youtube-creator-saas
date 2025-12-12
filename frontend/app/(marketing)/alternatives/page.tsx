@@ -19,7 +19,7 @@ import WaitlistForm from "@/components/landing/WaitlistForm";
 export const metadata: Metadata = {
   title: "VidIQ Alternative & TubeBuddy Alternative",
   description:
-    "Looking for a VidIQ alternative or TubeBuddy alternative? TubeGrow offers AI-powered YouTube analytics, SEO optimization, and viral clip generation at a better price. Compare features now.",
+    "Looking for a VidIQ alternative or TubeBuddy alternative? Compare TubeGrow vs VidIQ vs TubeBuddy across analytics, SEO, and Shorts workflows.",
   alternates: {
     canonical: "/alternatives",
   },
@@ -56,7 +56,6 @@ const competitors = [
       seoOptimization: true,
       analytics: true,
       keywordResearch: true,
-      competitorAnalysis: true,
       thumbnailAnalysis: false,
       browserExtension: false,
       bulkEditing: false,
@@ -82,7 +81,6 @@ const competitors = [
       seoOptimization: true,
       analytics: true,
       keywordResearch: true,
-      competitorAnalysis: true,
       thumbnailAnalysis: true,
       browserExtension: true,
       bulkEditing: true,
@@ -112,7 +110,6 @@ const competitors = [
       seoOptimization: true,
       analytics: true,
       keywordResearch: true,
-      competitorAnalysis: true,
       thumbnailAnalysis: true,
       browserExtension: true,
       bulkEditing: true,
@@ -138,7 +135,6 @@ const featureList = [
   { key: "seoOptimization", name: "SEO Optimization", icon: Search },
   { key: "analytics", name: "Analytics Dashboard", icon: BarChart3 },
   { key: "keywordResearch", name: "Keyword Research", icon: TrendingUp },
-  { key: "competitorAnalysis", name: "Competitor Analysis", icon: Zap },
   { key: "thumbnailAnalysis", name: "Thumbnail Analysis", icon: Video },
   { key: "browserExtension", name: "Browser Extension", icon: Sparkles },
   { key: "bulkEditing", name: "Bulk Video Editing", icon: DollarSign },
@@ -196,8 +192,7 @@ export default function AlternativesPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Compare TubeGrow vs VidIQ vs TubeBuddy. See why thousands of creators
-            are switching to AI-powered YouTube analytics.
+            Compare TubeGrow vs VidIQ vs TubeBuddy. See which workflow fits how you want to grow in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -9,7 +9,6 @@ import {
   Lightbulb,
   BarChart3,
   Zap,
-  Target,
   Video,
   FileText,
   Clock,
@@ -84,11 +83,11 @@ const aiFeatures = [
     example: "Understand why certain videos go viral and replicate success",
   },
   {
-    icon: Target,
-    title: "AI Competitor Analysis",
+    icon: FileText,
+    title: "Metadata Generator (Lite Tool)",
     description:
-      "AI-powered analysis of competitor channels reveals their strategies, top keywords, and content gaps you can exploit.",
-    example: "Discover untapped keywords your competitors are ranking for",
+      "Generate YouTube titles, descriptions, tags, and hashtags for a topic or video. Export options you can paste into YouTube Studio.",
+    example: "Try it free: optimized metadata in one click",
   },
 ];
 
@@ -111,10 +110,10 @@ const useCases = [
 ];
 
 const stats = [
-  { value: "10x", label: "Faster Content Analysis" },
-  { value: "85%", label: "Time Saved on SEO" },
-  { value: "3x", label: "More Viral Clips Found" },
-  { value: "24/7", label: "AI Always Available" },
+  { value: "Faster", label: "Channel & video analysis" },
+  { value: "Clearer", label: "SEO recommendations" },
+  { value: "Repeatable", label: "Shorts clip workflows" },
+  { value: "Always‑On", label: "AI support when you need it" },
 ];
 
 export default function AIYouTubeToolsPage() {
@@ -169,6 +168,71 @@ export default function AIYouTubeToolsPage() {
                 <div className="text-zinc-400 mt-1">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Free Tools */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Try the Free Lite Tools
+            </h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Get a feel for TubeGrow’s workflows with our public lite tools. They’re designed for fast
+              checks and quick wins — and they link directly to deeper guides across the site.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              href="/tools/youtube-seo-score"
+              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <Search className="w-5 h-5 text-purple-400" />
+                <h3 className="text-white font-semibold">SEO Score</h3>
+              </div>
+              <p className="text-zinc-400 text-sm">Score a video’s metadata and get fixes.</p>
+            </Link>
+            <Link
+              href="/tools/youtube-metadata-generator"
+              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <FileText className="w-5 h-5 text-purple-400" />
+                <h3 className="text-white font-semibold">Metadata Generator</h3>
+              </div>
+              <p className="text-zinc-400 text-sm">Generate titles, descriptions, and tags.</p>
+            </Link>
+            <Link
+              href="/tools/shorts-clip-finder"
+              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <Sparkles className="w-5 h-5 text-purple-400" />
+                <h3 className="text-white font-semibold">Shorts Clip Finder</h3>
+              </div>
+              <p className="text-zinc-400 text-sm">Find timestamped Shorts moments fast.</p>
+            </Link>
+            <Link
+              href="/tools/youtube-channel-snapshot"
+              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <BarChart3 className="w-5 h-5 text-purple-400" />
+                <h3 className="text-white font-semibold">Channel Snapshot</h3>
+              </div>
+              <p className="text-zinc-400 text-sm">Quick public read on a channel.</p>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-2 text-purple-300 hover:text-white transition-colors font-medium"
+            >
+              Browse all free tools <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -272,7 +336,7 @@ export default function AIYouTubeToolsPage() {
             {[
               {
                 q: "What AI technology does TubeGrow use?",
-                a: "TubeGrow uses GPT-4 and custom machine learning models specifically trained on YouTube data. Our AI understands video performance patterns, SEO optimization, and content strategy better than generic AI tools.",
+                a: "TubeGrow uses modern language models and analytics-driven heuristics to summarize performance, suggest SEO improvements, and propose next steps. The exact models and approaches evolve over time as the product improves.",
               },
               {
                 q: "How is AI different from traditional YouTube analytics?",
@@ -284,7 +348,7 @@ export default function AIYouTubeToolsPage() {
               },
               {
                 q: "What can I ask the AI chat assistant?",
-                a: "Anything about your channel! Ask about best posting times, which topics perform best, why certain videos succeed, competitor analysis, content ideas, thumbnail feedback, and SEO recommendations. The AI has access to all your analytics data.",
+                a: "Ask about your channel performance, what topics are working, what to publish next, how to improve retention and CTR, and what SEO changes to make. The best questions are specific and tied to a goal (views, subscribers, or watch time).",
               },
               {
                 q: "Is my YouTube data safe with AI analysis?",

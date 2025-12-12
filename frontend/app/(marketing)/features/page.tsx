@@ -98,21 +98,21 @@ const features = [
           "Get AI-powered content suggestions based on trending topics in your niche and what works for similar channels.",
         highlights: [
           "Trending topics",
-          "Competitor analysis",
+          "Idea templates",
           "Idea scoring",
           "Title generation",
         ],
       },
       {
         icon: Target,
-        title: "Competitor Research",
+        title: "Repeatable Workflows",
         description:
-          "Learn from successful videos in your niche. Understand what strategies work and apply them to your content.",
+          "Run the same proven steps on every upload: plan topics, optimize metadata, and turn long videos into Shorts with a clear process.",
         highlights: [
-          "Niche analysis",
-          "Video comparisons",
-          "Strategy insights",
-          "Gap identification",
+          "Upload checklists",
+          "SEO refresh process",
+          "Shorts repurposing",
+          "Clear next steps",
         ],
       },
     ],
@@ -130,8 +130,8 @@ const features = [
         highlights: [
           "Auto-detection",
           "Hook identification",
-          "Loop optimization",
-          "One-click export",
+          "Timestamped moments",
+          "Clip ideas for Shorts",
         ],
       },
       {
@@ -148,14 +148,14 @@ const features = [
       },
       {
         icon: Zap,
-        title: "Quick Export",
+        title: "Exportable Results",
         description:
-          "Export clips in the perfect format for each platform. Ready to post in seconds, not hours.",
+          "Export a clean list of timestamps, titles, and next steps so you can edit faster (or send to an editor).",
         highlights: [
-          "Multiple formats",
-          "Platform optimization",
-          "Batch export",
-          "Quality control",
+          "Copy/paste outputs",
+          "Platform guidance",
+          "Batch workflows",
+          "Timestamp linking",
         ],
       },
     ],

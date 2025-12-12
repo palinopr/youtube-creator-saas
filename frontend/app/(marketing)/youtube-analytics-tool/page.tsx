@@ -282,7 +282,7 @@ export default function YouTubeAnalyticsToolPage() {
           <p className="text-zinc-400 text-center mb-8">
             Keep building your channel with TubeGrow.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/youtube-seo-tool"
               className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-blue-500/50 transition-colors"
@@ -290,6 +290,15 @@ export default function YouTubeAnalyticsToolPage() {
               <h3 className="text-white font-semibold mb-2">YouTube SEO Tool</h3>
               <p className="text-zinc-400 text-sm">
                 Optimize titles, descriptions, and tags with AI.
+              </p>
+            </Link>
+            <Link
+              href="/tools/youtube-channel-snapshot"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-blue-500/50 transition-colors"
+            >
+              <h3 className="text-white font-semibold mb-2">Channel Snapshot (Lite)</h3>
+              <p className="text-zinc-400 text-sm">
+                Quick public read on a channel.
               </p>
             </Link>
             <Link
@@ -334,4 +343,3 @@ export default function YouTubeAnalyticsToolPage() {
     </div>
   );
 }
-
