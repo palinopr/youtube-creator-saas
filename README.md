@@ -46,6 +46,11 @@ Edit `backend/.env` with your values:
 - `BACKEND_URL`: Your Railway backend domain (https)
 - `ENVIRONMENT`: Set to `production` on Railway
 
+Optional (local only): SEO reporting CLI env keys:
+- `SEO_OAUTH_CLIENT_JSON_PATH`: Desktop OAuth JSON download path
+- `GA4_PROPERTY_ID`: GA4 property number (e.g., `516202730`)
+- `GSC_PROPERTY`: Search Console property (e.g., `sc-domain:tubegrow.io`)
+
 ### 4. Backend Setup
 
 ```bash

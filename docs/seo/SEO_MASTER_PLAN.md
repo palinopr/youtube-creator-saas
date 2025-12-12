@@ -189,6 +189,10 @@ Environment keys (store locally in `backend/.env`, never commit):
 - `GA4_PROPERTY_ID`
 - `GSC_PROPERTY`
 
+Run (local):
+`backend/venv/bin/python backend/scripts/seo_report.py --out docs/seo/reports/YYYY-MM-DD.md`
+(never commit reports with private data).
+
 ---
 
 ## 8. Execution Timeline
