@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends
 from ..contracts.review import ReviewChangeInput, ReviewChangeOutput
 from ..repos.change_review_repo import ChangeReviewRepository
 from ..services.review_service import ReviewService
-from ...auth.dependencies import get_current_user
+from ...auth.dependencies import get_current_user, verify_channel_ownership
 from ...db.models import User
 
 router = APIRouter()
@@ -18,9 +18,10 @@ def get_review_service() -> ReviewService:
 @router.post("/review", response_model=ReviewChangeOutput)
 async def review_change(
     request: ReviewChangeInput,
-    _: User = Depends(get_current_user),
+    user: User = Depends(get_current_user),
     service: ReviewService = Depends(get_review_service),
 ) -> ReviewChangeOutput:
+    verify_channel_ownership(user, request.channel_id)
     output = service.review_change(request)
 
     review_id = str(uuid.uuid4())

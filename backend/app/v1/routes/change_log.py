@@ -2,7 +2,7 @@ from typing import Any, Optional
 
 from fastapi import APIRouter, Depends, Query
 
-from ...auth.dependencies import get_current_user
+from ...auth.dependencies import get_current_user, verify_channel_ownership
 from ...db.models import User
 from ..contracts.change_log import ChangeLogEntry, ObjectType, OutcomeStatus, VideoFields
 from ..contracts.review import Confidence, ReviewVerdict, RiskLevel
@@ -48,8 +48,9 @@ def _to_change_log_entry(record: dict[str, Any]) -> ChangeLogEntry:
 async def list_change_log(
     channel_id: str = Query(..., min_length=1),
     limit: int = Query(default=50, ge=1, le=200),
-    _: User = Depends(get_current_user),
+    user: User = Depends(get_current_user),
 ) -> list[ChangeLogEntry]:
+    verify_channel_ownership(user, channel_id)
     records = ChangeReviewRepository.list_by_channel(channel_id=channel_id, limit=limit)
     return [_to_change_log_entry(r) for r in records]
 
