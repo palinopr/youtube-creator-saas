@@ -29,8 +29,8 @@ import {
 import Link from "next/link";
 import { ChartSkeleton } from "@/components/dashboard";
 import { useDashboardData, formatNumber, formatDate } from "@/hooks/useDashboardData";
-import { API_URL, AUTH_ENDPOINTS } from "@/lib/config";
 import { api } from "@/lib/api";
+import { useAuth } from "@/hooks/useAuth";
 import { Logo } from "@/components/ui/Logo";
 import Sidebar from "@/components/layout/Sidebar";
 // Landing page components (new Sandcastles-inspired design)
@@ -61,42 +61,7 @@ const SubscriberChart = dynamic(
 );
 
 export default function HomePage() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    checkAuthStatus();
-  }, []);
-
-  const checkAuthStatus = async () => {
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-      const response = await fetch(AUTH_ENDPOINTS.STATUS, {
-        credentials: "include",
-        signal: controller.signal,
-      });
-      clearTimeout(timeoutId);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      setIsAuthenticated(data.authenticated);
-    } catch (error) {
-      console.error("Auth check failed:", error);
-      // Default to not authenticated on error
-      setIsAuthenticated(false);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleLogin = () => {
-    window.location.href = AUTH_ENDPOINTS.LOGIN;
-  };
+  const { isAuthenticated, isLoading, login } = useAuth();
 
   if (isLoading) {
     return (
@@ -113,7 +78,7 @@ export default function HomePage() {
     return <Dashboard />;
   }
 
-  return <LandingPage onLogin={handleLogin} />;
+  return <LandingPage onLogin={login} />;
 }
 
 function LandingPage({ onLogin }: { onLogin: () => void }) {
@@ -140,10 +105,11 @@ function Dashboard() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
 
   const handleLogout = async () => {
-    await fetch(`${API_URL}/auth/logout`, {
-      method: "POST",
-      credentials: "include",
-    });
+    try {
+      await api.logout();
+    } catch {
+      // ignore logout failures
+    }
     window.location.reload();
   };
 

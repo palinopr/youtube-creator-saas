@@ -22,6 +22,9 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 
 from ..auth.youtube_auth import get_youtube_credentials, get_authenticated_service
+from ..config import get_settings
+
+settings = get_settings()
 
 
 @dataclass
@@ -68,19 +71,40 @@ class YouTubeAPIClient:
     bot detection or legal issues.
     """
     
-    def __init__(self, temp_dir: Optional[str] = None):
+    def __init__(self, temp_dir: Optional[str] = None, credentials_data: Optional[Dict[str, Any]] = None):
         """
         Initialize the YouTube API client.
         
         Args:
             temp_dir: Directory for downloaded videos. Defaults to system temp.
+            credentials_data: Optional OAuth credentials dict for background jobs.
         """
         self.temp_dir = temp_dir or tempfile.gettempdir()
         os.makedirs(self.temp_dir, exist_ok=True)
+        self._credentials: Optional[Credentials] = None
+        self._service = None
+        if credentials_data:
+            try:
+                self._credentials = Credentials(
+                    token=credentials_data.get("token"),
+                    refresh_token=credentials_data.get("refresh_token"),
+                    token_uri=credentials_data.get("token_uri", "https://oauth2.googleapis.com/token"),
+                    client_id=credentials_data.get("client_id"),
+                    client_secret=credentials_data.get("client_secret"),
+                    scopes=credentials_data.get("scopes"),
+                )
+            except Exception as e:
+                print(f"[YOUTUBE API] Invalid credentials_data: {e}")
+                self._credentials = None
     
     def _get_service(self):
         """Get authenticated YouTube Data API service."""
-        return get_authenticated_service("youtube", "v3")
+        if self._service is None:
+            if self._credentials:
+                self._service = build("youtube", "v3", credentials=self._credentials)
+            else:
+                self._service = get_authenticated_service("youtube", "v3")
+        return self._service
     
     def get_channel_info(self) -> Optional[Dict[str, Any]]:
         """
@@ -477,10 +501,18 @@ class YouTubeAPIClient:
 _youtube_client: Optional[YouTubeAPIClient] = None
 
 
-def get_youtube_client() -> YouTubeAPIClient:
-    """Get or create the YouTube API client singleton."""
+def get_youtube_client(credentials_data: Optional[Dict[str, Any]] = None) -> YouTubeAPIClient:
+    """
+    Get a YouTube API client.
+
+    - If credentials_data is provided, returns a fresh client for that user/job.
+    - Otherwise, returns a process-wide singleton (request context).
+    """
     global _youtube_client
+    # In multi-tenant mode, never reuse a singleton across users.
+    if credentials_data or not settings.single_user_mode:
+        return YouTubeAPIClient(credentials_data=credentials_data)
+
     if _youtube_client is None:
         _youtube_client = YouTubeAPIClient()
     return _youtube_client
-

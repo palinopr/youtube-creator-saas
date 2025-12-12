@@ -17,6 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tubegrow.io";
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -97,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <GoogleAnalytics gaId="G-FJJSVGFZFZ" />
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
         <OrganizationJsonLd />
         <SoftwareApplicationJsonLd />
       </head>

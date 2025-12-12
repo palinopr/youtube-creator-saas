@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { API_URL } from "@/lib/config";
+import { api } from "@/lib/api";
 
 interface ChannelStats {
   title: string;
@@ -84,50 +84,31 @@ export function useDashboardData(): DashboardData {
     setError(null);
 
     try {
-      // Parallel fetch for better performance - includes analytics overview for charts
-      const [statsRes, videosRes, topVideoRes, analyticsRes] = await Promise.all([
-        fetch(`${API_URL}/api/channel/stats`, {
-          credentials: "include",
-        }).catch(() => null),
-        fetch(`${API_URL}/api/videos/recent?limit=6`, {
-          credentials: "include",
-        }).catch(() => null),
-        fetch(`${API_URL}/api/analysis/top-videos?limit=1`, {
-          credentials: "include",
-        }).catch(() => null),
-        fetch(`${API_URL}/api/analytics/overview?days=30`, {
-          credentials: "include",
-        }).catch(() => null),
+      const [statsRes, videosRes, topVideoRes, analyticsRes] = await Promise.allSettled([
+        api.getChannelStats(),
+        api.getRecentVideos(6),
+        api.getTopVideos(1),
+        api.getAnalyticsOverview(30),
       ]);
 
-      // Process channel stats
-      if (statsRes?.ok) {
-        const statsData = await statsRes.json();
-        setChannelStats(statsData);
+      if (statsRes.status === "fulfilled") {
+        setChannelStats(statsRes.value as any);
       }
 
-      // Process recent videos
-      if (videosRes?.ok) {
-        const videosData = await videosRes.json();
+      if (videosRes.status === "fulfilled") {
+        const videosData = videosRes.value as any;
         setRecentVideos(Array.isArray(videosData) ? videosData : []);
       }
 
-      // Process top video
-      if (topVideoRes?.ok) {
-        const topVideoData = await topVideoRes.json();
-        // API returns { top_videos: [...] }
-        if (topVideoData?.top_videos && Array.isArray(topVideoData.top_videos) && topVideoData.top_videos.length > 0) {
-          setTopVideo(topVideoData.top_videos[0]);
-        } else if (Array.isArray(topVideoData) && topVideoData.length > 0) {
-          setTopVideo(topVideoData[0]);
-        } else if (topVideoData && !Array.isArray(topVideoData) && !topVideoData.top_videos) {
-          setTopVideo(topVideoData);
+      if (topVideoRes.status === "fulfilled") {
+        const topVideos = (topVideoRes.value as any)?.top_videos;
+        if (Array.isArray(topVideos) && topVideos.length > 0) {
+          setTopVideo(topVideos[0]);
         }
       }
 
-      // Process analytics overview for charts
-      if (analyticsRes?.ok) {
-        const analyticsData = await analyticsRes.json();
+      if (analyticsRes.status === "fulfilled") {
+        const analyticsData = analyticsRes.value as any;
         if (analyticsData && !analyticsData.error) {
           setAnalyticsOverview(analyticsData);
         }

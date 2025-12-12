@@ -23,7 +23,8 @@ import {
   DollarSign,
   MessageSquare,
 } from "lucide-react";
-import { API_URL, ADMIN_ENDPOINTS, USER_ENDPOINTS, BILLING_ENDPOINTS } from "@/lib/config";
+import { ADMIN_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 
 interface NavItemProps {
   icon: React.ReactNode;
@@ -96,19 +97,13 @@ export default function Sidebar({ activePath }: SidebarProps) {
     // Fetch user profile
     const fetchProfile = async () => {
       try {
-        const res = await fetch(USER_ENDPOINTS.PROFILE, {
-          credentials: "include",
-        });
-        if (res.ok) {
-          const data = await res.json();
-          setUserProfile(data);
-          // Get primary channel (first connected channel)
-          if (data.channels && data.channels.length > 0) {
-            setPrimaryChannel({
-              title: data.channels[0].title,
-              thumbnail: data.channels[0].thumbnail_url,
-            });
-          }
+        const data: any = await api.getProfile();
+        setUserProfile(data);
+        if (data.channels && data.channels.length > 0) {
+          setPrimaryChannel({
+            title: data.channels[0].title,
+            thumbnail: data.channels[0].thumbnail_url,
+          });
         }
       } catch {
         // Failed to fetch profile
@@ -119,13 +114,8 @@ export default function Sidebar({ activePath }: SidebarProps) {
     // Fetch subscription
     const fetchSubscription = async () => {
       try {
-        const res = await fetch(BILLING_ENDPOINTS.SUBSCRIPTION, {
-          credentials: "include",
-        });
-        if (res.ok) {
-          const data = await res.json();
-          setSubscription(data);
-        }
+        const data: any = await api.getSubscription();
+        setSubscription(data);
       } catch {
         // No subscription or not authenticated
       }
@@ -134,7 +124,11 @@ export default function Sidebar({ activePath }: SidebarProps) {
   }, []);
 
   const handleLogout = async () => {
-    await fetch(`${API_URL}/auth/logout`, { method: "POST", credentials: "include" });
+    try {
+      await api.logout();
+    } catch {
+      // ignore logout failures
+    }
     window.location.href = "/";
   };
 

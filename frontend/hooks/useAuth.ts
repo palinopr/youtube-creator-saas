@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { AUTH_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -33,17 +33,8 @@ export function useAuth(options: UseAuthOptions = {}) {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      const response = await fetch(AUTH_ENDPOINTS.STATUS, {
-        credentials: "include",
-        signal: controller.signal,
-      });
+      const data = await api.getAuthStatus({ signal: controller.signal });
       clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
       const isAuthenticated = data.authenticated === true;
 
       setState({
@@ -79,15 +70,12 @@ export function useAuth(options: UseAuthOptions = {}) {
     if (pathname !== "/") {
       sessionStorage.setItem("auth_redirect", pathname);
     }
-    window.location.href = AUTH_ENDPOINTS.LOGIN;
+    window.location.href = api.getLoginUrl();
   }, [pathname]);
 
   const logout = useCallback(async () => {
     try {
-      await fetch(AUTH_ENDPOINTS.LOGOUT, {
-        method: "POST",
-        credentials: "include",
-      });
+      await api.logout();
     } catch (error) {
       // Logout failed, but continue with local cleanup
     }

@@ -40,6 +40,11 @@ Edit `backend/.env` with your values:
 - `GOOGLE_CLIENT_ID`: From OAuth credentials
 - `GOOGLE_CLIENT_SECRET`: From OAuth credentials
 - `OPENAI_API_KEY`: Your OpenAI API key (for AI insights)
+- `SECRET_KEY`: Random 32+ char secret for signing sessions
+- `TOKEN_ENCRYPTION_KEY`: Fernet key to encrypt OAuth tokens (required in production)
+- `FRONTEND_URL`: Your Vercel domain (https)
+- `BACKEND_URL`: Your Railway backend domain (https)
+- `ENVIRONMENT`: Set to `production` on Railway
 
 ### 4. Backend Setup
 
@@ -94,4 +99,3 @@ Frontend runs at: http://localhost:3000
 | `/api/channel/stats` | GET | Get channel statistics |
 | `/api/videos/recent` | GET | Get recent videos |
 | `/api/agent/query` | POST | Ask AI agent a question |
-

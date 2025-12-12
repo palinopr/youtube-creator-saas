@@ -27,6 +27,9 @@ out/
 dist/
 build/
 *.egg-info/
+*.tsbuildinfo/
+*.db
+*.sqlite3
 
 # Logs
 *.log
@@ -55,4 +58,3 @@ ehthumbs.db
 # Temporary files
 /tmp/
 temp/
-

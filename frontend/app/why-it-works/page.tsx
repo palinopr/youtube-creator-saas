@@ -23,7 +23,7 @@ import {
   ThumbsUp,
   Play,
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
+import { api } from "@/lib/api";
 
 interface CausalAnalysis {
   summary: {
@@ -121,22 +121,15 @@ export default function WhyItWorksPage() {
     setError(null);
     
     try {
-      const response = await fetch(`${API_URL}/api/analysis/causal?max_videos=5000`, {
-        credentials: "include",
-      });
-      
-      if (!response.ok) {
-        if (response.status === 401) {
-          setError("Please authenticate first");
-          return;
-        }
-        throw new Error("Failed to fetch analysis");
-      }
-      
-      const data = await response.json();
+      const data = await api.getCausalAnalysis(5000);
       setAnalysis(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch analysis");
+      const msg = err instanceof Error ? err.message : "Failed to fetch analysis";
+      if (msg.toLowerCase().includes("not authenticated")) {
+        setError("Please authenticate first");
+      } else {
+        setError(msg);
+      }
     } finally {
       setLoading(false);
     }
@@ -547,4 +540,3 @@ export default function WhyItWorksPage() {
     </div>
   );
 }
-

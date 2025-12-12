@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { PlanCard } from "@/components/billing";
-import { AUTH_ENDPOINTS, BILLING_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 import {
   ArrowLeft,
   Check,
@@ -123,20 +123,13 @@ export default function PricingPage() {
   const checkAuthAndFetchPlans = async () => {
     try {
       // Check authentication status
-      const authRes = await fetch(AUTH_ENDPOINTS.STATUS, { credentials: "include" });
-      const authData: AuthStatus = await authRes.json();
+      const authData: AuthStatus = await api.getAuthStatus();
       setIsAuthenticated(authData.authenticated);
 
       // Try to fetch plans from API
       try {
-        const plansRes = await fetch(BILLING_ENDPOINTS.PLANS, { credentials: "include" });
-        if (plansRes.ok) {
-          const plansData = await plansRes.json();
-          setPlans(plansData.plans);
-        } else {
-          // API returned error, use fallback plans
-          setPlans(fallbackPlans);
-        }
+        const plansData = await api.getPlans();
+        setPlans(plansData.plans);
       } catch {
         // API unreachable, use fallback plans
         setPlans(fallbackPlans);
@@ -152,8 +145,9 @@ export default function PricingPage() {
 
   const handleSelectPlan = async (planId: string) => {
     if (!isAuthenticated) {
-      // Redirect to login, then back to pricing
-      router.push("/api/auth/login?redirect=/pricing");
+      // Store redirect and go to backend OAuth
+      sessionStorage.setItem("auth_redirect", "/pricing");
+      window.location.href = api.getLoginUrl();
       return;
     }
 
@@ -166,39 +160,17 @@ export default function PricingPage() {
     try {
       if (planId === "free") {
         // Downgrade to free
-        const res = await fetch(BILLING_ENDPOINTS.DOWNGRADE, {
-          method: "POST",
-          credentials: "include",
-        });
-        const data = await res.json();
+        const data = await api.downgradeToFree();
 
         if (data.action === "redirect_to_portal") {
-          const portalRes = await fetch(BILLING_ENDPOINTS.PORTAL, {
-            method: "POST",
-            credentials: "include",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({}),
-          });
-          const portalData = await portalRes.json();
+          const portalData = await api.createBillingPortal();
           window.location.href = portalData.portal_url;
         } else if (data.status === "success") {
           router.push("/settings/billing?success=true");
         }
       } else {
         // Upgrade to paid plan
-        const res = await fetch(BILLING_ENDPOINTS.CHECKOUT, {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ plan_id: planId }),
-        });
-
-        if (!res.ok) {
-          const data = await res.json();
-          throw new Error(data.detail || "Failed to create checkout session");
-        }
-
-        const data = await res.json();
+        const data = await api.createCheckoutSession(planId);
         window.location.href = data.checkout_url;
       }
     } catch (err) {

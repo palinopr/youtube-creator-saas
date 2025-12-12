@@ -18,6 +18,7 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
+from ..auth.youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
 from ..auth.dependencies import get_current_user, check_usage, require_feature
 from ..db.models import User
 from ..tools.clips_generator import FrankenBiteDetector, ClipRenderer
@@ -25,10 +26,12 @@ from ..tools.transcript_analyzer import TranscriptAnalyzer
 from ..db.models import JobStatus, JobType
 from ..db.repository import JobRepository
 from ..workers.manager import get_worker_manager
+from ..config import get_settings
 
 
 router = APIRouter(prefix="/api/clips", tags=["clips"])
 limiter = Limiter(key_func=get_remote_address)
+settings = get_settings()
 
 
 @router.get("/test")
@@ -277,7 +280,6 @@ async def generate_clips_stream(
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
-            "Access-Control-Allow-Origin": "*",
         }
     )
 
@@ -519,6 +521,10 @@ async def render_clip(
 
         # Submit job to worker queue (non-blocking)
         worker_manager = get_worker_manager()
+        token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+        credentials_data = load_credentials(token_key=token_key_for_creds)
+        if credentials_data:
+            credentials_data = {**credentials_data, "client_secret": settings.google_client_secret}
         job_data = worker_manager.submit_job(
             job_type=JobType.RENDER_CLIP,
             video_id=render_request.video_id,
@@ -529,6 +535,7 @@ async def render_clip(
                 "prefer_oauth": render_request.prefer_oauth,
                 "local_video_path": render_request.local_video_path,
                 "aspect_ratio": render_request.aspect_ratio,
+                "credentials": credentials_data,
             }
         )
         

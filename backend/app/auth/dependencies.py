@@ -22,8 +22,12 @@ from datetime import datetime
 import logging
 
 from ..db.models import User, YouTubeChannel, Subscription, get_db_session, PlanTier, SessionLocal
+from ..config import get_settings
+from .session import decode_session_token
+from .context import set_current_token_key
 
 logger = logging.getLogger(__name__)
+settings = get_settings()
 
 
 def get_db():
@@ -51,47 +55,64 @@ async def get_current_user_optional(request: Request) -> Optional[User]:
     For multi-tenant mode, this checks the session/cookie for user_id.
     Currently supports single-user mode by checking if credentials exist.
     """
-    # In single-user mode, we check for stored credentials
-    # In multi-tenant mode, this would check session cookies
-    from .youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
+    # Multi-tenant: read session token from cookie or Authorization header
+    token = request.cookies.get(settings.session_cookie_name)
+    if not token:
+        auth_header = request.headers.get("authorization") or request.headers.get("Authorization")
+        if auth_header and auth_header.lower().startswith("bearer "):
+            token = auth_header.split(" ", 1)[1].strip()
 
-    cred_data = load_credentials(DEFAULT_TOKEN_KEY)
+    if token:
+        user_id = decode_session_token(token)
+        if user_id:
+            with get_db_session() as session:
+                user = session.query(User).filter(User.id == user_id).first()
+                if user:
+                    set_current_token_key(user.id)
+                    session.expunge(user)
+                    return user
 
-    if not cred_data:
-        return None
+    # Single-user fallback (optional)
+    if settings.single_user_mode:
+        from .youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
 
-    # For now, return a mock user in single-user mode
-    # In full multi-tenant mode, we'd look up the user from the session
-    with get_db_session() as session:
-        # Try to find existing user - first look for admin, then any active user
-        user = session.query(User).filter(User.is_admin == True, User.is_active == True).first()
+        cred_data = load_credentials(DEFAULT_TOKEN_KEY)
+        if not cred_data:
+            return None
 
-        if not user:
-            # Fall back to any active user
-            user = session.query(User).filter(User.is_active == True).first()
+        with get_db_session() as session:
+            # Try to find existing user - first look for admin, then any active user
+            user = session.query(User).filter(User.is_admin == True, User.is_active == True).first()
 
-        if not user:
-            # Create default user for single-user mode migration
-            user = User(
-                email="default@local",
-                google_id="local-default",
-                name="Default User",
-                is_active=True,
-            )
-            session.add(user)
-            session.commit()
-            session.refresh(user)
+            if not user:
+                # Fall back to any active user
+                user = session.query(User).filter(User.is_active == True).first()
 
-            # Also create a free subscription for the user
-            subscription = Subscription(
-                user_id=user.id,
-                plan_id=PlanTier.FREE,
-            )
-            session.add(subscription)
-            session.commit()
+            if not user:
+                # Create default user for single-user mode migration
+                user = User(
+                    email="default@local",
+                    google_id="local-default",
+                    name="Default User",
+                    is_active=True,
+                )
+                session.add(user)
+                session.commit()
+                session.refresh(user)
 
-        session.expunge(user)
-        return user
+                # Also create a free subscription for the user
+                subscription = Subscription(
+                    user_id=user.id,
+                    plan_id=PlanTier.FREE,
+                )
+                session.add(subscription)
+                session.commit()
+
+            set_current_token_key(DEFAULT_TOKEN_KEY)
+            session.expunge(user)
+            return user
+
+    return None
 
 
 async def get_current_user(request: Request) -> User:

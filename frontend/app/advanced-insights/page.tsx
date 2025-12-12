@@ -27,8 +27,8 @@ import {
   Crown,
   Combine,
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import { api } from "@/lib/api";
 
 interface AdvancedData {
   summary: {
@@ -167,13 +167,7 @@ export default function AdvancedInsightsPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${API_URL}/api/analysis/advanced?max_videos=5000`, {
-        credentials: "include",
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const result = await response.json();
+      const result = await api.getAdvancedAnalysis(5000);
       setData(result);
     } catch (e: any) {
       setError(e.message);
@@ -639,4 +633,3 @@ export default function AdvancedInsightsPage() {
     </DashboardLayout>
   );
 }
-

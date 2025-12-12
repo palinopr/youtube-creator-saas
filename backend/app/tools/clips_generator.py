@@ -593,19 +593,20 @@ class ClipRenderer:
     3. Local File: Process pre-downloaded/uploaded files
     """
     
-    def __init__(self):
+    def __init__(self, credentials_data: Optional[Dict[str, Any]] = None):
         settings = get_settings()
         self.openai_client = OpenAI(api_key=settings.openai_api_key)
         self.temp_dir = tempfile.gettempdir()
         self.renders_dir = os.path.join(self.temp_dir, "clip_renders")
         os.makedirs(self.renders_dir, exist_ok=True)
         self._youtube_client: Optional[YouTubeAPIClient] = None
+        self._credentials_data = credentials_data
     
     @property
     def youtube_client(self) -> YouTubeAPIClient:
         """Get YouTube API client (lazy initialization)."""
         if self._youtube_client is None:
-            self._youtube_client = get_youtube_client()
+            self._youtube_client = get_youtube_client(credentials_data=self._credentials_data)
         return self._youtube_client
     
     async def download_video_oauth(self, video_id: str) -> Optional[str]:
@@ -1829,4 +1830,3 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                         os.remove(filepath)
                     except:
                         pass
-

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { API_URL } from "@/lib/config";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import { api } from "@/lib/api";
 
 interface QuickWin {
   action: string;
@@ -73,15 +73,11 @@ export default function OptimizePage() {
   const loadBlueprint = async () => {
     setLoading(true);
     try {
-      const [blueprintRes, quickWinsRes, nextVideoRes] = await Promise.all([
-        fetch(`${API_URL}/api/analysis/optimize`),
-        fetch(`${API_URL}/api/analysis/optimize/quick-wins`),
-        fetch(`${API_URL}/api/analysis/optimize/next-video`),
+      const [blueprintData, quickWinsData, nextVideoData] = await Promise.all([
+        api.getOptimizationBlueprint(),
+        api.getOptimizationQuickWins(),
+        api.getOptimizationNextVideo(),
       ]);
-      
-      const blueprintData = await blueprintRes.json();
-      const quickWinsData = await quickWinsRes.json();
-      const nextVideoData = await nextVideoRes.json();
       
       setBlueprint(blueprintData.optimization_blueprint);
       setQuickWins(quickWinsData.quick_wins || []);
@@ -96,16 +92,11 @@ export default function OptimizePage() {
     if (!scoreTitle) return;
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/api/analysis/optimize/score`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          title: scoreTitle,
-          description: scoreDescription,
-          celebrities: scoreCelebrities.split(",").map(c => c.trim()).filter(c => c),
-        }),
+      const data = await api.scoreOptimizationVideo({
+        title: scoreTitle,
+        description: scoreDescription,
+        celebrities: scoreCelebrities.split(",").map(c => c.trim()).filter(c => c),
       });
-      const data = await res.json();
       setScoreResult(data);
     } catch (error) {
       console.error("Error scoring video:", error);
@@ -117,15 +108,10 @@ export default function OptimizePage() {
     if (!generateTopic) return;
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/api/analysis/optimize/generate-title`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          topic: generateTopic,
-          celebrities: generateCelebrities.split(",").map(c => c.trim()).filter(c => c),
-        }),
+      const data = await api.generateOptimizationTitles({
+        topic: generateTopic,
+        celebrities: generateCelebrities.split(",").map(c => c.trim()).filter(c => c),
       });
-      const data = await res.json();
       // Parse the JSON from the generated_titles string
       try {
         const parsed = JSON.parse(data.generated_titles.replace(/```json\n?|```/g, ""));
@@ -625,4 +611,3 @@ export default function OptimizePage() {
     </DashboardLayout>
   );
 }
-

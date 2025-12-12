@@ -20,8 +20,8 @@ import {
   Hash,
   Loader2,
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import { api } from "@/lib/api";
 
 // Polling interval in milliseconds
 const POLL_INTERVAL = 5000;
@@ -106,25 +106,7 @@ export default function DeepAnalysisPage() {
     isPollingRef.current = true;
     
     try {
-      const response = await fetch(`${API_URL}/api/analysis/deep/status/${currentJobId}`, {
-        credentials: "include",
-      });
-      
-      if (!response.ok) {
-        if (response.status === 404) {
-          // Job not found, stop polling
-          if (pollIntervalRef.current) {
-            clearInterval(pollIntervalRef.current);
-            pollIntervalRef.current = null;
-          }
-          setError("Analysis job not found. Please try again.");
-          setLoading(false);
-          return;
-        }
-        throw new Error("Failed to fetch job status");
-      }
-      
-      const status: JobStatus = await response.json();
+      const status: JobStatus = await api.getDeepAnalysisStatus(currentJobId);
       setJobStatus(status);
       
       if (status.status === "completed" && status.result) {
@@ -171,51 +153,31 @@ export default function DeepAnalysisPage() {
     }
     
     try {
-      // First, try the async endpoint to start a background job
-      const startResponse = await fetch(`${API_URL}/api/analysis/deep/start?max_videos=500`, {
-        method: "POST",
-        credentials: "include",
-      });
-      
-      if (startResponse.ok) {
-        const startData = await startResponse.json();
-        
-        if (startData.job_id) {
-          // Async job started, begin polling
-          setJobId(startData.job_id);
-          setJobStatus({
-            status: "queued",
-            progress: 0,
-            message: "Analysis job queued...",
-          });
-          
-          // Start polling for status
-          pollIntervalRef.current = setInterval(() => {
-            pollJobStatus(startData.job_id);
-          }, POLL_INTERVAL);
-          
-          // Also poll immediately
+      let startData: any = null;
+      try {
+        startData = await api.startDeepAnalysis(500);
+      } catch {
+        startData = null;
+      }
+
+      if (startData?.job_id) {
+        setJobId(startData.job_id);
+        setJobStatus({
+          status: "queued",
+          progress: 0,
+          message: "Analysis job queued...",
+        });
+
+        pollIntervalRef.current = setInterval(() => {
           pollJobStatus(startData.job_id);
-          return;
-        }
+        }, POLL_INTERVAL);
+
+        pollJobStatus(startData.job_id);
+        return;
       }
-      
-      // Fallback to synchronous endpoint if async not available
-      const response = await fetch(`${API_URL}/api/analysis/deep?max_videos=500`, {
-        credentials: "include",
-      });
-      
-      if (!response.ok) {
-        if (response.status === 401) {
-          setError("Please authenticate first");
-          setLoading(false);
-          return;
-        }
-        throw new Error("Failed to fetch analysis");
-      }
-      
-      const data = await response.json();
-      setAnalysis(data);
+
+      const data = await api.getDeepAnalysis(500);
+      setAnalysis(data as any);
       setLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to start analysis");

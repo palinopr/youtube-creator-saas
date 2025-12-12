@@ -7,7 +7,7 @@ AI-powered YouTube analytics dashboard for content creators. Uses LangGraph agen
 ## Architecture
 
 ```
-Frontend (Next.js 14)     Backend (FastAPI)           External APIs
+Frontend (Next.js 16)     Backend (FastAPI)           External APIs
 ├── app/                  ├── app/                    ├── YouTube Data API v3
 │   ├── page.tsx          │   ├── main.py             ├── YouTube Analytics API
 │   ├── dashboard/        │   ├── routers/            ├── OpenAI GPT-4o
@@ -23,7 +23,7 @@ Frontend (Next.js 14)     Backend (FastAPI)           External APIs
 ## Tech Stack
 
 ### Frontend
-- **Framework**: Next.js 14.2.5 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Charts**: Recharts

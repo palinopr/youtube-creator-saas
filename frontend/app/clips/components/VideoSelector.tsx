@@ -8,7 +8,8 @@ import {
   ThumbsUp,
   Loader2,
 } from "lucide-react";
-import { VideoItem, formatNumber, formatISODuration, API_URL } from "../types";
+import { VideoItem, formatNumber, formatISODuration } from "../types";
+import { api } from "@/lib/api";
 
 interface VideoSelectorProps {
   videos: VideoItem[];
@@ -37,14 +38,8 @@ export function VideoSelector({
     const timer = setTimeout(async () => {
       setSearching(true);
       try {
-        const res = await fetch(
-          `${API_URL}/api/youtube/videos/search?q=${encodeURIComponent(searchQuery)}&max_results=50`,
-          { credentials: "include" }
-        );
-        if (res.ok) {
-          const data = await res.json();
-          setSearchResults(data.videos || []);
-        }
+        const data = await api.searchYouTubeVideos(searchQuery, 50);
+        setSearchResults(data.videos || []);
       } catch (error) {
         console.error("Search error:", error);
       }
@@ -157,4 +152,3 @@ function VideoListItem({
     </button>
   );
 }
-

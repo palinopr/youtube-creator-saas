@@ -1,10 +1,12 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.exception_handlers import http_exception_handler as fastapi_http_exception_handler
 from contextlib import asynccontextmanager
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
+import logging
 
 from .auth import auth_router
 from .routers.analytics import router as analytics_router
@@ -25,6 +27,7 @@ from .workers.manager import start_workers, stop_workers
 from .db.models import init_db
 
 settings = get_settings()
+logger = logging.getLogger(__name__)
 
 # Initialize rate limiter
 limiter = Limiter(key_func=get_remote_address)
@@ -66,6 +69,22 @@ app = FastAPI(
 # Attach rate limiter to app
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# Sanitize server errors in production while preserving 4xx details.
+@app.exception_handler(HTTPException)
+async def custom_http_exception_handler(request: Request, exc: HTTPException):
+    if exc.status_code >= 500 and not settings.debug:
+        logger.exception("Server HTTPException", exc_info=exc)
+        return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+    return await fastapi_http_exception_handler(request, exc)
+
+
+@app.exception_handler(Exception)
+async def unhandled_exception_handler(request: Request, exc: Exception):
+    logger.exception("Unhandled exception", exc_info=exc)
+    if settings.debug:
+        return JSONResponse(status_code=500, content={"detail": str(exc)})
+    return JSONResponse(status_code=500, content={"detail": "Internal server error"})
 
 # CORS middleware
 app.add_middleware(

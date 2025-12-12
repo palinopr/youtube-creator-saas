@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: {
+    // Ensure Turbopack treats this folder as the project root
+    root: __dirname,
+  },
   images: {
     remotePatterns: [
       {
@@ -15,4 +19,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-

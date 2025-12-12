@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { PlanCard } from "@/components/billing";
-import { AUTH_ENDPOINTS, BILLING_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 import {
   Youtube,
   Sparkles,
@@ -64,8 +64,7 @@ export default function OnboardingPage() {
 
   const checkAuthStatus = async () => {
     try {
-      const res = await fetch(AUTH_ENDPOINTS.STATUS, { credentials: "include" });
-      const data = await res.json();
+      const data = await api.getAuthStatus();
       setAuthStatus(data);
 
       // If not authenticated, redirect to login
@@ -80,11 +79,8 @@ export default function OnboardingPage() {
       }
 
       // Fetch plans
-      const plansRes = await fetch(BILLING_ENDPOINTS.PLANS, { credentials: "include" });
-      if (plansRes.ok) {
-        const plansData = await plansRes.json();
-        setPlans(plansData.plans);
-      }
+      const plansData = await api.getPlans();
+      setPlans(plansData.plans);
     } catch (err) {
       setError("Failed to check authentication status");
     } finally {
@@ -95,7 +91,7 @@ export default function OnboardingPage() {
   const handleConnectYouTube = () => {
     setConnecting(true);
     // Redirect to YouTube OAuth with onboarding return URL
-    window.location.href = `${AUTH_ENDPOINTS.LOGIN}?redirect=/onboarding`;
+    window.location.href = `${api.getLoginUrl()}?redirect=/onboarding`;
   };
 
   const handleSelectPlan = async (planId: string) => {
@@ -108,23 +104,11 @@ export default function OnboardingPage() {
         setCurrentStep("complete");
       } else {
         // Paid plan - redirect to checkout
-        const res = await fetch(BILLING_ENDPOINTS.CHECKOUT, {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            plan_id: planId,
-            success_url: `${window.location.origin}/onboarding?step=complete`,
-            cancel_url: `${window.location.origin}/onboarding?step=plan`,
-          }),
-        });
-
-        if (!res.ok) {
-          const data = await res.json();
-          throw new Error(data.detail || "Failed to create checkout session");
-        }
-
-        const data = await res.json();
+        const data = await api.createCheckoutSession(
+          planId,
+          `${window.location.origin}/onboarding?step=complete`,
+          `${window.location.origin}/onboarding?step=plan`
+        );
         window.location.href = data.checkout_url;
       }
     } catch (err) {

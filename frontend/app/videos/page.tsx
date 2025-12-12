@@ -14,11 +14,11 @@ import {
   ArrowUpDown,
   Loader2,
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
 import { formatNumber, formatDate } from "@/lib/utils";
 import Sidebar from "@/components/layout/Sidebar";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/components/providers/ErrorProvider";
+import { api } from "@/lib/api";
 
 interface VideoItem {
   video_id: string;
@@ -49,15 +49,8 @@ export default function VideosPage() {
 
   const loadVideos = async () => {
     try {
-      const res = await fetch(`${API_URL}/api/videos/recent?limit=100`, {
-        credentials: "include",
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setVideos(Array.isArray(data) ? data : data.videos || []);
-      } else {
-        showError("Failed to load videos");
-      }
+      const data = await api.getRecentVideos(100);
+      setVideos(data as any);
     } catch (error) {
       showError("Failed to load videos. Please try again.");
     }

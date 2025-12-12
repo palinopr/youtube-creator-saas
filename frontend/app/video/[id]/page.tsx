@@ -20,6 +20,7 @@ import TitleEditor from "@/components/video/TitleEditor";
 import DescriptionEditor from "@/components/video/DescriptionEditor";
 import TagsEditor from "@/components/video/TagsEditor";
 import { useToast } from "@/components/providers/ErrorProvider";
+import { api } from "@/lib/api";
 
 interface VideoData {
   video_id: string;
@@ -115,28 +116,20 @@ export default function VideoDetailPage() {
   const loadVideo = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/api/seo/video/${videoId}`, {
-        credentials: "include",
-      });
-      if (res.ok) {
-        const data = await res.json();
+      try {
+        const data = await api.getSeoVideo(videoId);
         setVideo(data);
         setEditTitle(data.title || "");
         setEditDescription(data.description || "");
         setEditTags(data.tags || []);
-      } else {
-        const basicRes = await fetch(`${API_URL}/api/videos/recent?limit=50`, {
-          credentials: "include",
-        });
-        if (basicRes.ok) {
-          const videos = await basicRes.json();
-          const found = videos.find((v: any) => v.video_id === videoId);
-          if (found) {
-            setVideo(found);
-            setEditTitle(found.title || "");
-            setEditDescription(found.description || "");
-            setEditTags(found.tags || []);
-          }
+      } catch {
+        const videos = await api.getRecentVideos(50);
+        const found = (videos as any[]).find((v: any) => v.video_id === videoId);
+        if (found) {
+          setVideo(found);
+          setEditTitle(found.title || "");
+          setEditDescription(found.description || "");
+          setEditTags(found.tags || []);
         }
       }
     } catch (error) {
@@ -432,37 +425,26 @@ export default function VideoDetailPage() {
     setSaveError(null);
 
     try {
-      const res = await fetch(`${API_URL}/api/seo/update`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({
-          video_id: video.video_id,
-          title: editTitle,
-          description: editDescription,
-          tags: editTags,
-        }),
+      await api.updateVideoMetadata({
+        video_id: video.video_id,
+        title: editTitle,
+        description: editDescription,
+        tags: editTags,
       });
 
-      if (res.ok) {
-        setSaveSuccess(true);
-        setVideo({
-          ...video,
-          title: editTitle,
-          description: editDescription,
-          tags: editTags,
-        });
-        showSuccess("Changes saved to YouTube!");
-        setTimeout(() => setSaveSuccess(false), 3000);
-      } else {
-        const errorData = await res.json();
-        const errorMsg = errorData.detail || "Failed to save changes";
-        setSaveError(errorMsg);
-        showError(errorMsg);
-      }
+      setSaveSuccess(true);
+      setVideo({
+        ...video,
+        title: editTitle,
+        description: editDescription,
+        tags: editTags,
+      });
+      showSuccess("Changes saved to YouTube!");
+      setTimeout(() => setSaveSuccess(false), 3000);
     } catch (error) {
-      setSaveError("Network error - please try again");
-      showError("Network error - please try again");
+      const msg = error instanceof Error ? error.message : "Network error - please try again";
+      setSaveError(msg);
+      showError(msg);
     }
     setSaving(false);
   };

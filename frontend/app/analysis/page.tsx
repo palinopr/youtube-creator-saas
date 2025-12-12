@@ -17,8 +17,8 @@ import {
   CheckCircle,
   AlertTriangle,
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import { api } from "@/lib/api";
 
 interface AnalysisData {
   analysis: {
@@ -115,22 +115,15 @@ export default function AnalysisPage() {
     setError(null);
     
     try {
-      const response = await fetch(`${API_URL}/api/analysis/patterns?max_videos=500`, {
-        credentials: "include",
-      });
-      
-      if (!response.ok) {
-        if (response.status === 401) {
-          setError("Please authenticate first");
-          return;
-        }
-        throw new Error("Failed to fetch analysis");
-      }
-      
-      const data = await response.json();
+      const data = await api.getAnalysisPatterns(500);
       setAnalysis(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch analysis");
+      const msg = err instanceof Error ? err.message : "Failed to fetch analysis";
+      if (msg.toLowerCase().includes("not authenticated")) {
+        setError("Please authenticate first");
+      } else {
+        setError(msg);
+      }
     } finally {
       setLoading(false);
     }
@@ -140,14 +133,8 @@ export default function AnalysisPage() {
     setLoadingVideos(true);
     
     try {
-      const response = await fetch(`${API_URL}/api/analysis/top-videos?limit=20`, {
-        credentials: "include",
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        setTopVideos(data.top_videos);
-      }
+      const data = await api.getTopVideos(20);
+      setTopVideos(data.top_videos || []);
     } catch (err) {
       console.error("Failed to fetch top videos:", err);
     } finally {
@@ -661,4 +648,3 @@ function BooleanFactorCard({
     </div>
   );
 }
-

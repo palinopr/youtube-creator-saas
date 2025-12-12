@@ -12,7 +12,7 @@ import {
   Minimize2,
   Trash2
 } from "lucide-react";
-import { API_URL } from "@/lib/config";
+import { api } from "@/lib/api";
 
 interface Message {
   id: string;
@@ -59,31 +59,14 @@ export default function AIChatPopup() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_URL}/api/agent/query`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ question: userMessage.content }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const assistantMessage: Message = {
-          id: (Date.now() + 1).toString(),
-          role: "assistant",
-          content: data.answer,
-          timestamp: new Date(),
-        };
-        setMessages(prev => [...prev, assistantMessage]);
-      } else {
-        const errorMessage: Message = {
-          id: (Date.now() + 1).toString(),
-          role: "assistant",
-          content: "Sorry, I couldn't process that request. Please try again.",
-          timestamp: new Date(),
-        };
-        setMessages(prev => [...prev, errorMessage]);
-      }
+      const data = await api.queryAgent(userMessage.content);
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: "assistant",
+        content: data.answer,
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -280,4 +263,3 @@ export default function AIChatPopup() {
     </>
   );
 }
-

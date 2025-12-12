@@ -5,7 +5,6 @@ import Link from "next/link";
 import Sidebar from "@/components/layout/Sidebar";
 import SettingsNav from "@/components/settings/SettingsNav";
 import { PlanBadge, UsageBar } from "@/components/billing";
-import { BILLING_ENDPOINTS } from "@/lib/config";
 import { api, UserProfile } from "@/lib/api";
 import {
   Settings,
@@ -50,10 +49,7 @@ export default function SettingsPage() {
   const fetchData = async () => {
     try {
       const [subRes, profileData] = await Promise.all([
-        fetch(BILLING_ENDPOINTS.SUBSCRIPTION, { credentials: "include" }).then(r => {
-          if (!r.ok) throw new Error("Failed to fetch subscription");
-          return r.json();
-        }),
+        api.getSubscription(),
         api.getProfile(),
       ]);
       setSubscription(subRes);

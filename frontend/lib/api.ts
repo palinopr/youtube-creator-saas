@@ -161,8 +161,8 @@ class ApiClient {
   }
 
   // Auth
-  async getAuthStatus(): Promise<{ authenticated: boolean }> {
-    return this.request("/auth/status");
+  async getAuthStatus(options?: RequestInit): Promise<any> {
+    return this.request("/auth/status", options);
   }
 
   async logout(): Promise<void> {
@@ -190,6 +190,70 @@ class ApiClient {
   // Analytics
   async getAnalyticsOverview(days: number = 30): Promise<any> {
     return this.request(`/api/analytics/overview?days=${days}`);
+  }
+
+  // Channel Analysis / Insights
+  async getAnalysisPatterns(maxVideos: number = 500): Promise<any> {
+    return this.request(`/api/analysis/patterns?max_videos=${maxVideos}`);
+  }
+
+  async getTopVideos(limit: number = 20): Promise<{ top_videos: any[] }> {
+    return this.request(`/api/analysis/top-videos?limit=${limit}`);
+  }
+
+  async getCausalAnalysis(maxVideos: number = 5000): Promise<any> {
+    return this.request(`/api/analysis/causal?max_videos=${maxVideos}`);
+  }
+
+  async getAdvancedAnalysis(maxVideos: number = 5000): Promise<any> {
+    return this.request(`/api/analysis/advanced?max_videos=${maxVideos}`);
+  }
+
+  async startDeepAnalysis(maxVideos: number = 500): Promise<{ success: boolean; job_id: string; message: string }> {
+    return this.request(`/api/analysis/deep/start?max_videos=${maxVideos}`, { method: "POST" });
+  }
+
+  async getDeepAnalysisStatus(jobId: string): Promise<any> {
+    return this.request(`/api/analysis/deep/status/${jobId}`);
+  }
+
+  async getDeepAnalysis(maxVideos: number = 500): Promise<any> {
+    return this.request(`/api/analysis/deep?max_videos=${maxVideos}`);
+  }
+
+  // Content Optimizer
+  async getOptimizationBlueprint(): Promise<any> {
+    return this.request(`/api/analysis/optimize`);
+  }
+
+  async getOptimizationQuickWins(): Promise<any> {
+    return this.request(`/api/analysis/optimize/quick-wins`);
+  }
+
+  async getOptimizationNextVideo(): Promise<any> {
+    return this.request(`/api/analysis/optimize/next-video`);
+  }
+
+  async scoreOptimizationVideo(data: { title: string; description?: string; celebrities?: string[] }): Promise<any> {
+    return this.request(`/api/analysis/optimize/score`, {
+      method: "POST",
+      body: JSON.stringify({
+        title: data.title,
+        description: data.description ?? "",
+        celebrities: data.celebrities ?? [],
+      }),
+    });
+  }
+
+  async generateOptimizationTitles(data: { topic: string; celebrities?: string[]; transcript?: string | null }): Promise<any> {
+    return this.request(`/api/analysis/optimize/generate-title`, {
+      method: "POST",
+      body: JSON.stringify({
+        topic: data.topic,
+        celebrities: data.celebrities ?? [],
+        transcript: data.transcript ?? undefined,
+      }),
+    });
   }
 
   // Agent
@@ -256,6 +320,94 @@ class ApiClient {
 
   async getNextBilling(): Promise<NextBilling> {
     return this.request("/api/billing/next-billing");
+  }
+
+  // Billing - Plans/Subscription
+  async getPlans(): Promise<{ plans: any[] }> {
+    return this.request("/api/billing/plans");
+  }
+
+  async getSubscription(): Promise<any> {
+    return this.request("/api/billing/subscription");
+  }
+
+  async createCheckoutSession(planId: string, successUrl?: string, cancelUrl?: string): Promise<{ checkout_url: string }> {
+    return this.request("/api/billing/checkout", {
+      method: "POST",
+      body: JSON.stringify({
+        plan_id: planId,
+        success_url: successUrl,
+        cancel_url: cancelUrl,
+      }),
+    });
+  }
+
+  async createBillingPortal(returnUrl?: string): Promise<{ portal_url: string }> {
+    return this.request("/api/billing/portal", {
+      method: "POST",
+      body: JSON.stringify({ return_url: returnUrl }),
+    });
+  }
+
+  async downgradeToFree(): Promise<any> {
+    return this.request("/api/billing/downgrade", { method: "POST" });
+  }
+
+  async getUsage(): Promise<any> {
+    return this.request("/api/billing/usage");
+  }
+
+  // SEO Optimizer
+  async getSeoVideo(videoId: string): Promise<any> {
+    return this.request(`/api/seo/video/${videoId}`);
+  }
+
+  async updateVideoMetadata(data: { video_id: string; title?: string; description?: string; tags?: string[] }): Promise<any> {
+    return this.request(`/api/seo/update`, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  }
+
+  async analyzeVideoSeo(videoId: string): Promise<any> {
+    return this.request(`/api/seo/analyze/${videoId}`);
+  }
+
+  async auditChannelSeo(limit: number = 10): Promise<any> {
+    return this.request(`/api/seo/audit?limit=${limit}`);
+  }
+
+  async researchSeoKeywords(topic: string, limit: number = 10): Promise<any> {
+    return this.request(`/api/seo/research`, {
+      method: "POST",
+      body: JSON.stringify({ topic, limit }),
+    });
+  }
+
+  async generateSeoMetadata(data: { topic: string; current_title?: string | null; current_description?: string | null }): Promise<any> {
+    return this.request(`/api/seo/generate`, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getSeoVideosForOptimization(limit: number = 20): Promise<any> {
+    return this.request(`/api/seo/videos?limit=${limit}`);
+  }
+
+  // YouTube Videos (OAuth)
+  async listYouTubeVideos(maxResults: number = 25, pageToken?: string): Promise<any> {
+    const params = new URLSearchParams({ max_results: maxResults.toString() });
+    if (pageToken) params.set("page_token", pageToken);
+    return this.request(`/api/youtube/videos?${params.toString()}`);
+  }
+
+  async searchYouTubeVideos(query: string, maxResults: number = 25): Promise<any> {
+    const params = new URLSearchParams({
+      q: query,
+      max_results: maxResults.toString(),
+    });
+    return this.request(`/api/youtube/videos/search?${params.toString()}`);
   }
 
   // Audience Intelligence
@@ -381,4 +533,3 @@ class ApiClient {
 }
 
 export const api = new ApiClient(API_URL);
-

@@ -7,9 +7,10 @@ import {
   AlertCircle,
 } from "lucide-react";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import { api } from "@/lib/api";
 
 // Types and utilities
-import { VideoItem, API_URL } from "./types";
+import { VideoItem } from "./types";
 
 // Components
 import {
@@ -49,13 +50,8 @@ export default function ClipsPage() {
 
   const loadVideos = async () => {
     try {
-      const res = await fetch(`${API_URL}/api/youtube/videos?max_results=50`, {
-        credentials: "include",
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setVideos(data.videos || []);
-      }
+      const data = await api.listYouTubeVideos(50);
+      setVideos(data.videos || []);
     } catch (error) {
       console.error("Error loading videos:", error);
     }
@@ -206,4 +202,3 @@ function EmptyState({ hasSelectedVideo }: { hasSelectedVideo: boolean }) {
     </div>
   );
 }
-

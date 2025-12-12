@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import AIChatPopup from "./AIChatPopup";
-import { AUTH_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 
 // Routes where the AI chat should NOT appear (even for authenticated users)
 const EXCLUDED_ROUTES = [
@@ -27,15 +27,8 @@ export default function ConditionalAIChatPopup() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch(AUTH_ENDPOINTS.STATUS, {
-          credentials: "include",
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setIsAuthenticated(data.authenticated === true);
-        } else {
-          setIsAuthenticated(false);
-        }
+        const data = await api.getAuthStatus();
+        setIsAuthenticated(data.authenticated === true);
       } catch {
         setIsAuthenticated(false);
       } finally {

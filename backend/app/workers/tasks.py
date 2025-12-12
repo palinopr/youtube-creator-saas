@@ -28,6 +28,7 @@ def process_render_job(job_data: dict) -> dict:
     prefer_oauth = input_data.get("prefer_oauth", True)  # SaaS mode by default
     local_video_path = input_data.get("local_video_path")  # For uploaded videos
     aspect_ratio = input_data.get("aspect_ratio", "9:16")  # Default 9:16 for vertical
+    credentials_data = input_data.get("credentials")
     
     # Convert segments from [{start, end}] dicts to [(start, end)] tuples
     segments = []
@@ -55,7 +56,7 @@ def process_render_job(job_data: dict) -> dict:
         # Import here to avoid circular imports
         from ..tools.clips_generator import ClipRenderer
         
-        renderer = ClipRenderer()
+        renderer = ClipRenderer(credentials_data=credentials_data)
         
         # Update progress
         JobRepository.update_job(
@@ -292,4 +293,3 @@ def _run_video_sync(youtube, channel_id: str, max_videos: int, job_id: str) -> d
         },
         "sync_time": datetime.utcnow().isoformat(),
     }
-

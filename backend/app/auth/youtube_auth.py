@@ -3,8 +3,8 @@ YouTube OAuth authentication with secure database-backed token storage.
 Tokens are encrypted at rest using Fernet symmetric encryption.
 """
 
-from fastapi import APIRouter, HTTPException
-from fastapi.responses import RedirectResponse
+from fastapi import APIRouter, HTTPException, Request
+from fastapi.responses import RedirectResponse, JSONResponse
 from google_auth_oauthlib.flow import Flow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request as GoogleRequest
@@ -16,6 +16,8 @@ import logging
 from ..config import get_settings
 from ..db.models import UserToken, User, Subscription, PlanTier, get_db_session
 from .token_encryption import encrypt_credentials, decrypt_credentials
+from .context import get_current_token_key
+from .session import create_session_token, decode_session_token
 import requests
 
 logger = logging.getLogger(__name__)
@@ -57,6 +59,17 @@ def get_oauth_flow() -> Flow:
         redirect_uri=f"{settings.backend_url}/auth/callback"
     )
     return flow
+
+
+def delete_token_record(token_key: str):
+    """Delete a token record (used to clean up temporary OAuth state records)."""
+    with get_db_session() as session:
+        token_record = session.query(UserToken).filter(
+            UserToken.token_key == token_key
+        ).first()
+        if token_record:
+            session.delete(token_record)
+            session.commit()
 
 
 def get_or_create_token_record(token_key: str = DEFAULT_TOKEN_KEY) -> UserToken:
@@ -191,7 +204,11 @@ async def login():
     )
 
     # Store state for CSRF verification
-    save_oauth_state(state)
+    if settings.single_user_mode:
+        save_oauth_state(state)
+    else:
+        # Store by state to support multiple concurrent logins
+        save_oauth_state(state, token_key=state)
 
     return RedirectResponse(url=authorization_url)
 
@@ -203,7 +220,9 @@ async def callback(code: str, state: str, error: Optional[str] = None):
         logger.error(f"[AUTH] OAuth error: {error}")
         raise HTTPException(status_code=400, detail=f"OAuth error: {error}")
 
-    stored_state = get_oauth_state()
+    stored_state = get_oauth_state(
+        token_key=DEFAULT_TOKEN_KEY if settings.single_user_mode else state
+    )
 
     if state != stored_state:
         logger.warning("[AUTH] Invalid state parameter - possible CSRF attack")
@@ -217,7 +236,6 @@ async def callback(code: str, state: str, error: Optional[str] = None):
         flow.fetch_token(code=code)
 
         credentials = flow.credentials
-        save_credentials(credentials)
 
         # Fetch user info from Google
         user_info = None
@@ -233,51 +251,88 @@ async def callback(code: str, state: str, error: Optional[str] = None):
             logger.warning(f"[AUTH] Failed to fetch user info: {e}")
 
         # Create or update user record with Google profile
-        if user_info:
-            with get_db_session() as session:
-                google_id = user_info.get("sub")
-                email = user_info.get("email")
-                name = user_info.get("name")
-                picture = user_info.get("picture")
+        if not user_info:
+            raise HTTPException(status_code=400, detail="Failed to fetch user profile from Google")
 
-                # Find existing user by google_id or email
-                user = session.query(User).filter(
-                    (User.google_id == google_id) | (User.email == email)
-                ).first()
+        google_id = user_info.get("sub")
+        email = user_info.get("email")
+        name = user_info.get("name")
+        picture = user_info.get("picture")
 
-                if user:
-                    # Update existing user
-                    user.name = name or user.name
-                    user.avatar_url = picture
-                    user.google_id = google_id
-                    user.last_login_at = datetime.utcnow()
-                    logger.info(f"[AUTH] Updated user: {email}, avatar: {picture}")
-                else:
-                    # Create new user
-                    user = User(
-                        email=email,
-                        google_id=google_id,
-                        name=name,
-                        avatar_url=picture,
-                        is_active=True,
-                        is_admin=True,  # First user is admin in single-user mode
-                    )
-                    session.add(user)
-                    session.commit()
-                    session.refresh(user)
+        if not google_id or not email:
+            raise HTTPException(status_code=400, detail="Google profile missing required fields")
 
-                    # Create free subscription
-                    subscription = Subscription(
-                        user_id=user.id,
-                        plan_id=PlanTier.FREE,
-                    )
-                    session.add(subscription)
-                    logger.info(f"[AUTH] Created new user: {email}")
+        user: Optional[User] = None
+        with get_db_session() as session:
+            # Find existing user by google_id or email
+            user = session.query(User).filter(
+                (User.google_id == google_id) | (User.email == email)
+            ).first()
 
+            if user:
+                # Update existing user
+                user.name = name or user.name
+                user.avatar_url = picture
+                user.google_id = google_id
+                user.last_login_at = datetime.utcnow()
+                logger.info(f"[AUTH] Updated user: {email}")
+            else:
+                # Determine admin status (single-user first user only)
+                is_first_admin = False
+                if settings.single_user_mode:
+                    existing_admin = session.query(User).filter(User.is_admin == True).first()
+                    is_first_admin = existing_admin is None
+
+                # Create new user
+                user = User(
+                    email=email,
+                    google_id=google_id,
+                    name=name,
+                    avatar_url=picture,
+                    is_active=True,
+                    is_admin=is_first_admin,
+                )
+                session.add(user)
                 session.commit()
+                session.refresh(user)
+
+                # Create free subscription
+                subscription = Subscription(
+                    user_id=user.id,
+                    plan_id=PlanTier.FREE,
+                )
+                session.add(subscription)
+                logger.info(f"[AUTH] Created new user: {email}")
+
+            session.commit()
+            session.expunge(user)
+
+        # Save credentials to the correct tenant record
+        token_key_for_creds = DEFAULT_TOKEN_KEY if settings.single_user_mode else user.id
+        save_credentials(credentials, token_key=token_key_for_creds)
+
+        # Clean up temporary state record in multi-tenant mode
+        if not settings.single_user_mode:
+            delete_token_record(state)
 
         logger.info("[AUTH] OAuth callback successful, redirecting to frontend")
-        return RedirectResponse(url=f"{settings.frontend_url}?authenticated=true")
+        redirect_url = f"{settings.frontend_url}?authenticated=true"
+        response = RedirectResponse(url=redirect_url)
+
+        if not settings.single_user_mode:
+            session_token = create_session_token(user.id)
+            is_https_frontend = settings.frontend_url.startswith("https://")
+            response.set_cookie(
+                key=settings.session_cookie_name,
+                value=session_token,
+                httponly=True,
+                secure=is_https_frontend,
+                samesite="none" if is_https_frontend else "lax",
+                max_age=settings.session_max_age_days * 24 * 60 * 60,
+                path="/",
+            )
+
+        return response
 
     except Exception as e:
         logger.error(f"[AUTH] Failed to complete authentication: {e}")
@@ -288,29 +343,44 @@ async def callback(code: str, state: str, error: Optional[str] = None):
 
 
 @router.get("/status")
-async def auth_status():
+async def auth_status(request: Request):
     """Check if user is authenticated."""
+    if not settings.single_user_mode:
+        token = request.cookies.get(settings.session_cookie_name)
+        user_id = decode_session_token(token) if token else None
+        if user_id:
+            cred_data = load_credentials(token_key=user_id)
+            if cred_data:
+                return {"authenticated": True, "user_id": user_id}
+
     cred_data = load_credentials()
-
-    if not cred_data:
-        return {"authenticated": False}
-
-    return {"authenticated": True}
+    return {"authenticated": bool(cred_data)}
 
 
 @router.post("/logout")
-async def logout():
-    """Clear stored credentials."""
-    clear_credentials()
-    return {"message": "Logged out successfully"}
+async def logout(request: Request):
+    """Clear stored credentials and session."""
+    response = JSONResponse({"message": "Logged out successfully"})
+
+    if settings.single_user_mode:
+        clear_credentials()
+    else:
+        token = request.cookies.get(settings.session_cookie_name)
+        user_id = decode_session_token(token) if token else None
+        if user_id:
+            clear_credentials(token_key=user_id)
+        response.delete_cookie(settings.session_cookie_name, path="/")
+
+    return response
 
 
-def get_youtube_credentials() -> Optional[Credentials]:
+def get_youtube_credentials(token_key: Optional[str] = None) -> Optional[Credentials]:
     """
     Get stored YouTube credentials with automatic token refresh.
     Returns None if not authenticated.
     """
-    cred_data = load_credentials()
+    effective_key = token_key or get_current_token_key()
+    cred_data = load_credentials(token_key=effective_key)
 
     if not cred_data:
         return None
@@ -331,7 +401,7 @@ def get_youtube_credentials() -> Optional[Credentials]:
             credentials.refresh(GoogleRequest())
 
             # Save refreshed credentials
-            save_credentials(credentials)
+            save_credentials(credentials, token_key=effective_key)
             logger.info("[AUTH] Token refreshed successfully")
 
         except Exception as e:
@@ -342,9 +412,9 @@ def get_youtube_credentials() -> Optional[Credentials]:
     return credentials
 
 
-def get_authenticated_service(api_name: str, api_version: str):
+def get_authenticated_service(api_name: str, api_version: str, token_key: Optional[str] = None):
     """Get authenticated Google API service."""
-    credentials = get_youtube_credentials()
+    credentials = get_youtube_credentials(token_key=token_key)
 
     if not credentials:
         raise HTTPException(

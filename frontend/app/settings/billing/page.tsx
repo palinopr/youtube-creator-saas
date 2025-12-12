@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Sidebar from "@/components/layout/Sidebar";
 import { PlanBadge, UsageBar, PlanCard } from "@/components/billing";
-import { BILLING_ENDPOINTS } from "@/lib/config";
+import { api } from "@/lib/api";
 import {
   CreditCard,
   ArrowLeft,
@@ -75,19 +75,13 @@ function BillingPageContent() {
 
   const fetchData = async () => {
     try {
-      const [plansRes, subRes] = await Promise.all([
-        fetch(BILLING_ENDPOINTS.PLANS, { credentials: "include" }),
-        fetch(BILLING_ENDPOINTS.SUBSCRIPTION, { credentials: "include" }),
+      const [plansData, subData] = await Promise.all([
+        api.getPlans(),
+        api.getSubscription(),
       ]);
 
-      if (!plansRes.ok) throw new Error("Failed to fetch plans");
-      if (!subRes.ok) throw new Error("Failed to fetch subscription");
-
-      const plansData = await plansRes.json();
-      const subData = await subRes.json();
-
       setPlans(plansData.plans);
-      setSubscription(subData);
+      setSubscription(subData as any);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Unknown error");
     } finally {
@@ -104,11 +98,7 @@ function BillingPageContent() {
     try {
       // If downgrading to free, use the downgrade endpoint
       if (planId === "free") {
-        const res = await fetch(BILLING_ENDPOINTS.DOWNGRADE, {
-          method: "POST",
-          credentials: "include",
-        });
-        const data = await res.json();
+        const data = await api.downgradeToFree();
 
         if (data.action === "redirect_to_portal") {
           // Open portal for cancellation
@@ -119,19 +109,7 @@ function BillingPageContent() {
         }
       } else {
         // Upgrade to paid plan
-        const res = await fetch(BILLING_ENDPOINTS.CHECKOUT, {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ plan_id: planId }),
-        });
-
-        if (!res.ok) {
-          const data = await res.json();
-          throw new Error(data.detail || "Failed to create checkout session");
-        }
-
-        const data = await res.json();
+        const data = await api.createCheckoutSession(planId);
         // Redirect to Stripe Checkout
         window.location.href = data.checkout_url;
       }
@@ -144,19 +122,7 @@ function BillingPageContent() {
 
   const handleManageSubscription = async () => {
     try {
-      const res = await fetch(BILLING_ENDPOINTS.PORTAL, {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({}),
-      });
-
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.detail || "Failed to create portal session");
-      }
-
-      const data = await res.json();
+      const data = await api.createBillingPortal();
       // Open Stripe Customer Portal
       window.location.href = data.portal_url;
     } catch (err) {
