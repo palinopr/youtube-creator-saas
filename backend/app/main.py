@@ -22,6 +22,7 @@ from .routers.traffic import router as traffic_router
 from .routers.revenue import router as revenue_router
 from .routers.comments import router as comments_router
 from .routers.alerts import router as alerts_router
+from .routers.public_tools import router as public_tools_router
 from .config import get_settings
 from .workers.manager import start_workers, stop_workers
 from .db.models import init_db
@@ -118,6 +119,7 @@ app.include_router(traffic_router)
 app.include_router(revenue_router)
 app.include_router(comments_router)
 app.include_router(alerts_router)
+app.include_router(public_tools_router)
 
 
 @app.get("/")

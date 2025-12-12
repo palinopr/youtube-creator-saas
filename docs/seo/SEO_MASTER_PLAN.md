@@ -149,6 +149,12 @@ Each tool:
 - CTA: “Join waitlist for full access.”
 - Gets a dedicated landing page + schema.
 
+Live lite tools:
+- `/tools/youtube-seo-score`
+- `/tools/youtube-metadata-generator`
+- `/tools/shorts-clip-finder`
+- `/tools/youtube-channel-snapshot`
+
 Backlink cadence:
 - 1 tool launch/month → PR push to creator newsletters, AI tool directories, YouTube growth blogs, “VidIQ alternative” roundups.
 - Target: 5–10 relevant backlinks/month.
@@ -255,16 +261,16 @@ Ongoing:
 **Content**
 - [x] Pillar pages live: `/features`, `/ai-youtube-tools`, `/viral-clips-generator`, `/alternatives`.
 - [x] 4 initial long‑form blog posts live.
-- [ ] Add `/youtube-analytics-tool`.
-- [ ] Add `/youtube-seo-tool`.
-- [ ] Add `/niches` hub.
-- [ ] Add first 10 niches.
+- [x] Add `/youtube-analytics-tool`.
+- [x] Add `/youtube-seo-tool`.
+- [x] Add `/niches` hub.
+- [x] Add first 10 niches.
 
 **Link Magnets**
-- [ ] Free SEO score checker.
-- [ ] Free metadata generator.
-- [ ] Free Shorts clip finder lite.
-- [ ] Free channel snapshot.
+- [x] Free SEO score checker (lite).
+- [x] Free metadata generator (lite).
+- [x] Free Shorts clip finder lite.
+- [x] Free channel snapshot (lite).
 
 ### 9.2 Running log
 
@@ -274,6 +280,7 @@ Add entries with date + outcome.
 |---|---|---|
 | Dec 11–12 | Fixed 4xx blog slugs, canonicals, removed pricing, llms.txt, H1 cleanup | Semrush errors → only expected warnings |
 | Dec 12 | Trim env‑newline malformed login URL, llms spec rewrite, blog title vs H1 fix | Crawl error removed, AI‑search spec compliant |
+| Dec 12 | Shipped analytics/SEO pillars, niches hub + 10 niches, and 4 lite link‑magnet tools | IA expanded, link magnets live for outreach |
 
 ---
 
