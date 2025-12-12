@@ -178,6 +178,17 @@ Must stay green:
 Expected Semrush warnings we ignore:
 - Low text‑to‑HTML ratio (modern Next.js behavior).
 
+### 7.1 Reporting setup (internal)
+
+We track SEO impact with weekly GA4 + Search Console pulls (internal only).
+
+Environment keys (store locally in `backend/.env`, never commit):
+- `SEO_OAUTH_CLIENT_ID`
+- `SEO_OAUTH_CLIENT_SECRET`
+- `SEO_OAUTH_CLIENT_JSON_PATH`
+- `GA4_PROPERTY_ID`
+- `GSC_PROPERTY`
+
 ---
 
 ## 8. Execution Timeline
@@ -249,4 +260,3 @@ Add entries with date + outcome.
 - Every SEO‑relevant PR adds a short line to **9.2 Running log**.
 - Every week we update **9.1 Current status**.
 - If scope changes (new pillar, new tool), update sections 2–8 first, then tracking.
-
