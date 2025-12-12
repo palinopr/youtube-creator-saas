@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ConditionalAIChatPopup from "@/components/ConditionalAIChatPopup";
+import ConditionalLeadAgentWidget from "@/components/landing/ConditionalLeadAgentWidget";
 import { ToastProvider } from "@/components/providers/ErrorProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { OrganizationJsonLd, SoftwareApplicationJsonLd } from "@/components/seo";
@@ -103,6 +104,7 @@ export default function RootLayout({
         <ToastProvider>
           {children}
           <ConditionalAIChatPopup />
+          <ConditionalLeadAgentWidget />
         </ToastProvider>
       </body>
     </html>

@@ -816,6 +816,54 @@ def track_api_usage(
     return usage
 
 
+class MarketingLead(Base):
+    """
+    Marketing leads captured from public pages (e.g., the landing AI agent).
+
+    This is intentionally separate from the waitlist flow: it is a general lead
+    capture channel that can be used for follow-ups and product feedback.
+    """
+
+    __tablename__ = "marketing_leads"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    email = Column(String(255), unique=True, nullable=False, index=True)
+    name = Column(String(200), nullable=True)
+    source = Column(String(100), default="landing_agent")
+
+    ask_count_total = Column(Integer, default=0)
+    ask_count_day = Column(Integer, default=0)
+    ask_day = Column(String(10), nullable=True)  # YYYY-MM-DD (UTC)
+    last_ask_at = Column(DateTime, nullable=True)
+
+    ip_last = Column(String(64), nullable=True)
+    user_agent_last = Column(String(300), nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class MarketingAgentAsk(Base):
+    """
+    Optional logging of questions asked on public pages.
+    Keep answers small (truncated) to avoid storing sensitive/large content.
+    """
+
+    __tablename__ = "marketing_agent_asks"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    lead_id = Column(String(36), ForeignKey("marketing_leads.id"), nullable=True, index=True)
+    email = Column(String(255), nullable=False, index=True)
+    page_url = Column(String(500), nullable=True)
+    question = Column(Text, nullable=False)
+    answer_preview = Column(Text, nullable=True)
+    model = Column(String(100), nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    lead = relationship("MarketingLead", lazy="joined")
+
+
 def init_db():
     """Initialize database tables."""
     Base.metadata.create_all(bind=engine)
@@ -855,4 +903,3 @@ def get_db_session() -> Session:
 
 # Initialize database on import
 init_db()
-

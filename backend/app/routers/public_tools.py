@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, HTTPException, Request
@@ -21,6 +23,7 @@ from youtube_transcript_api._errors import NoTranscriptFound, TranscriptsDisable
 import yt_dlp
 
 from ..config import get_settings
+from ..db.models import MarketingLead, MarketingAgentAsk, get_db_session
 
 
 router = APIRouter(prefix="/public", tags=["public-tools"])
@@ -385,3 +388,212 @@ async def public_channel_snapshot(request: Request, body: PublicChannelRequest):
         "recent_videos": recent_videos,
         "insights": insights,
     }
+
+
+class PublicLeadRequest(BaseModel):
+    email: str = Field(..., min_length=3, max_length=255)
+    name: Optional[str] = Field(default=None, max_length=200)
+    source: str = Field(default="landing_agent", max_length=100)
+
+
+class PublicAskRequest(BaseModel):
+    email: str = Field(..., min_length=3, max_length=255)
+    lead_id: Optional[str] = Field(default=None, max_length=36)
+    question: str = Field(..., min_length=1, max_length=1200)
+    page_url: Optional[str] = Field(default=None, max_length=500)
+
+
+def _normalize_email(email: str) -> str:
+    return (email or "").strip().lower()
+
+
+def _load_kb_chunks() -> List[Dict[str, str]]:
+    """
+    Load the TubeGrow KB and split into coarse chunks.
+    Lightweight retrieval (no vector DB).
+    """
+    kb_path = Path(__file__).resolve().parents[1] / "data" / "tubegrow_kb.md"
+    try:
+        text = kb_path.read_text(encoding="utf-8")
+    except Exception:
+        return []
+
+    # Split on H2 headings so each chunk is coherent.
+    parts = re.split(r"(?m)^## ", text)
+    chunks: List[Dict[str, str]] = []
+
+    # First part contains the title/intro.
+    if parts and parts[0].strip():
+        chunks.append({"title": "Intro", "text": parts[0].strip()[:2000]})
+
+    for part in parts[1:]:
+        lines = part.splitlines()
+        heading = (lines[0] or "").strip()
+        body = "\n".join(lines[1:]).strip()
+        if not body:
+            continue
+        chunks.append({"title": heading[:80], "text": body[:2400]})
+
+    return chunks
+
+
+def _simple_retrieve(chunks: List[Dict[str, str]], query: str, k: int = 4) -> List[Dict[str, str]]:
+    query = (query or "").lower()
+    tokens = [t for t in re.findall(r"[a-z0-9]{3,}", query) if t not in {"the", "and", "for", "with", "what", "how", "does", "tube", "grow"}]
+    if not tokens:
+        return chunks[:k]
+
+    scored: List[tuple[int, Dict[str, str]]] = []
+    for c in chunks:
+        hay = (c.get("title", "") + "\n" + c.get("text", "")).lower()
+        score = sum(1 for t in tokens if t in hay)
+        scored.append((score, c))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [c for s, c in scored[:k] if s > 0] or chunks[:k]
+
+
+def _upsert_lead(email: str, name: Optional[str], source: str, request: Request) -> MarketingLead:
+    now = datetime.utcnow()
+    ip = get_remote_address(request)
+    ua = request.headers.get("user-agent", "")[:300] if request else ""
+    email_norm = _normalize_email(email)
+
+    with get_db_session() as session:
+        lead = session.query(MarketingLead).filter(MarketingLead.email == email_norm).first()
+        if lead:
+            if name and not lead.name:
+                lead.name = name.strip()[:200]
+            lead.source = lead.source or (source or "landing_agent")
+            lead.ip_last = ip
+            lead.user_agent_last = ua
+            lead.updated_at = now
+            session.add(lead)
+            session.flush()
+            session.refresh(lead)
+            return lead
+
+        lead = MarketingLead(
+            email=email_norm,
+            name=(name.strip()[:200] if name else None),
+            source=(source or "landing_agent")[:100],
+            ip_last=ip,
+            user_agent_last=ua,
+            created_at=now,
+            updated_at=now,
+        )
+        session.add(lead)
+        session.flush()
+        session.refresh(lead)
+        return lead
+
+
+@router.post("/lead")
+@limiter.limit("10/minute")
+async def create_public_lead(request: Request, body: PublicLeadRequest):
+    """
+    Capture a marketing lead (email required) for the public landing AI agent.
+    """
+    email = _normalize_email(body.email)
+    if not re.fullmatch(r"[^\\s@]+@[^\\s@]+\\.[^\\s@]+", email):
+        raise HTTPException(status_code=400, detail="Invalid email address.")
+
+    lead = _upsert_lead(email=email, name=body.name, source=body.source, request=request)
+    return {"ok": True, "lead_id": lead.id}
+
+
+@router.post("/agent/ask")
+@limiter.limit("6/minute")
+async def public_agent_ask(request: Request, body: PublicAskRequest):
+    """
+    Public (no-auth) TubeGrow agent.
+
+    Requires an email (lead capture). Scoped to TubeGrow + YouTube creator growth topics.
+    """
+    if not settings.openai_api_key:
+        raise HTTPException(status_code=503, detail="AI is not configured.")
+
+    email = _normalize_email(body.email)
+    if not re.fullmatch(r"[^\\s@]+@[^\\s@]+\\.[^\\s@]+", email):
+        raise HTTPException(status_code=400, detail="Invalid email address.")
+
+    lead = _upsert_lead(email=email, name=None, source="landing_agent", request=request)
+
+    # Per-email daily cap (extra protection beyond IP throttling).
+    today = datetime.utcnow().date().isoformat()
+    with get_db_session() as session:
+        lead_db = session.query(MarketingLead).filter(MarketingLead.id == lead.id).first()
+        if not lead_db:
+            raise HTTPException(status_code=500, detail="Lead not found.")
+
+        if lead_db.ask_day != today:
+            lead_db.ask_day = today
+            lead_db.ask_count_day = 0
+
+        if (lead_db.ask_count_day or 0) >= 20:
+            raise HTTPException(status_code=429, detail="Daily limit reached. Please try again tomorrow.")
+
+        lead_db.ask_count_day = (lead_db.ask_count_day or 0) + 1
+        lead_db.ask_count_total = (lead_db.ask_count_total or 0) + 1
+        lead_db.last_ask_at = datetime.utcnow()
+        session.add(lead_db)
+
+    chunks = _load_kb_chunks()
+    retrieved = _simple_retrieve(chunks, body.question, k=4)
+    context = "\n\n".join([f"### {c['title']}\n{c['text']}" for c in retrieved if c.get("text")])
+
+    system = (
+        "You are the public TubeGrow AI agent for tubegrow.io.\n"
+        "You ONLY answer questions about TubeGrow and YouTube creator growth (analytics, SEO, Shorts/clips).\n"
+        "If the user asks anything outside this scope, refuse briefly and redirect to tubegrow.io pages.\n"
+        "You must be truthful: if something is not in the provided context, say you’re not sure.\n"
+        "TubeGrow is waitlist-only early access; do not mention pricing.\n"
+        "Return a JSON object with keys: title, answer, next_steps, suggested_pages, disclaimer.\n"
+        "suggested_pages must be an array of {label,url} and should point to tubegrow.io public pages.\n"
+    )
+
+    user = f"""User question:
+{body.question}
+
+Grounding context (facts you can rely on):
+{context}
+"""
+
+    try:
+        from openai import OpenAI
+
+        client = OpenAI(api_key=settings.openai_api_key)
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            temperature=0.3,
+            max_tokens=900,
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        )
+        content = resp.choices[0].message.content or "{}"
+        payload = json.loads(content)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"AI error: {e}")
+
+    answer_preview = ""
+    try:
+        answer_preview = (payload.get("answer") or "")[:2000]
+    except Exception:
+        answer_preview = ""
+
+    # Optional: log the ask (helps improve prompts + see what users want).
+    with get_db_session() as session:
+        ask = MarketingAgentAsk(
+            lead_id=lead.id,
+            email=email,
+            page_url=body.page_url,
+            question=body.question,
+            answer_preview=answer_preview,
+            model="gpt-4o-mini",
+        )
+        session.add(ask)
+
+    return {"ok": True, "lead_id": lead.id, "result": payload}
