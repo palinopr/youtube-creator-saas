@@ -495,7 +495,7 @@ async def create_public_lead(request: Request, body: PublicLeadRequest):
     Capture a marketing lead (email required) for the public landing AI agent.
     """
     email = _normalize_email(body.email)
-    if not re.fullmatch(r"[^\\s@]+@[^\\s@]+\\.[^\\s@]+", email):
+    if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
         raise HTTPException(status_code=400, detail="Invalid email address.")
 
     lead = _upsert_lead(email=email, name=body.name, source=body.source, request=request)
@@ -514,7 +514,7 @@ async def public_agent_ask(request: Request, body: PublicAskRequest):
         raise HTTPException(status_code=503, detail="AI is not configured.")
 
     email = _normalize_email(body.email)
-    if not re.fullmatch(r"[^\\s@]+@[^\\s@]+\\.[^\\s@]+", email):
+    if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
         raise HTTPException(status_code=400, detail="Invalid email address.")
 
     lead = _upsert_lead(email=email, name=None, source="landing_agent", request=request)
