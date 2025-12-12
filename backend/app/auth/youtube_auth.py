@@ -262,6 +262,9 @@ async def callback(code: str, state: str, error: Optional[str] = None):
         if not google_id or not email:
             raise HTTPException(status_code=400, detail="Google profile missing required fields")
 
+        normalized_email = str(email).strip().lower()
+        is_admin_by_config = normalized_email in settings.admin_email_set
+
         user: Optional[User] = None
         user_id: Optional[str] = None
         with get_db_session() as session:
@@ -276,6 +279,8 @@ async def callback(code: str, state: str, error: Optional[str] = None):
                 user.avatar_url = picture
                 user.google_id = google_id
                 user.last_login_at = datetime.utcnow()
+                if is_admin_by_config and not user.is_admin:
+                    user.is_admin = True
                 logger.info(f"[AUTH] Updated user: {email}")
             else:
                 # Determine admin status (single-user first user only)
@@ -291,7 +296,7 @@ async def callback(code: str, state: str, error: Optional[str] = None):
                     name=name,
                     avatar_url=picture,
                     is_active=True,
-                    is_admin=is_first_admin,
+                    is_admin=is_admin_by_config or is_first_admin,
                 )
                 session.add(user)
                 session.commit()

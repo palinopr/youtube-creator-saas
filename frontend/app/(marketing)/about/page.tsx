@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { AUTH_ENDPOINTS } from "@/lib/config";
 import {
   TrendingUp,
   Shield,
@@ -214,13 +215,13 @@ export default function AboutPage() {
             Join thousands of creators using TubeGrow to optimize their content
             and accelerate their growth.
           </p>
-          <Link
-            href="/api/auth/login"
+          <a
+            href={AUTH_ENDPOINTS.LOGIN}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
           >
             Get Started Free
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

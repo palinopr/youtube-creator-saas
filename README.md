@@ -33,7 +33,7 @@ An AI-powered analytics dashboard for YouTube creators using LangGraph agents.
 Copy the example env file and fill in your credentials:
 
 ```bash
-cp backend/.env.example backend/.env
+cp backend/env.example backend/.env
 ```
 
 Edit `backend/.env` with your values:
@@ -42,9 +42,11 @@ Edit `backend/.env` with your values:
 - `OPENAI_API_KEY`: Your OpenAI API key (for AI insights)
 - `SECRET_KEY`: Random 32+ char secret for signing sessions
 - `TOKEN_ENCRYPTION_KEY`: Fernet key to encrypt OAuth tokens (required in production)
+- `ADMIN_EMAILS`: Comma-separated emails with admin access
 - `FRONTEND_URL`: Your Vercel domain (https)
 - `BACKEND_URL`: Your Railway backend domain (https)
 - `ENVIRONMENT`: Set to `production` on Railway
+- `DATABASE_URL`: Postgres connection string (required for production persistence)
 
 Optional (local only): SEO reporting CLI env keys:
 - `SEO_OAUTH_CLIENT_JSON_PATH`: Desktop OAuth JSON download path

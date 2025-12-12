@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { AUTH_ENDPOINTS } from "@/lib/config";
 
 const productLinks = [
   { href: "/features", label: "Features" },
@@ -15,7 +16,7 @@ const companyLinks = [
   { href: "mailto:support@tubegrow.io", label: "Contact Us" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
-  { href: "/api/auth/login", label: "Login" },
+  { href: AUTH_ENDPOINTS.LOGIN, label: "Login" },
 ];
 
 const socialLinks = [
@@ -113,7 +114,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  {link.href.startsWith("mailto:") ? (
+                  {link.href.startsWith("mailto:") || link.href.startsWith("http") ? (
                     <a
                       href={link.href}
                       className="text-white/50 hover:text-white text-sm transition-colors"

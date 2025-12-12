@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 from pydantic import model_validator
 from functools import lru_cache
-from typing import Optional
+from typing import Optional, Set
 
 
 class Settings(BaseSettings):
@@ -21,6 +21,11 @@ class Settings(BaseSettings):
     secret_key: str = "your-secret-key-change-in-production"
     frontend_url: str = "http://localhost:3000"
     backend_url: str = "http://localhost:8000"
+
+    # Admin bootstrap
+    # Comma-separated list of emails that should be treated as admins on login.
+    # Example: "founder@tubegrow.io,ops@tubegrow.io"
+    admin_emails: str = ""
 
     # Session cookies (multi-tenant)
     session_cookie_name: str = "tubegrow_session"
@@ -60,6 +65,10 @@ class Settings(BaseSettings):
             if not self.token_encryption_key:
                 raise ValueError("TOKEN_ENCRYPTION_KEY is required in production")
         return self
+
+    @property
+    def admin_email_set(self) -> Set[str]:
+        return {e.strip().lower() for e in (self.admin_emails or "").split(",") if e.strip()}
 
 
 @lru_cache()
