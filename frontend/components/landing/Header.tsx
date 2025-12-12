@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "header-glass" : "bg-transparent"
+        isScrolled || isMobileMenuOpen ? "header-glass" : "bg-transparent"
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 py-4">
@@ -94,16 +94,17 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
-            <div className="flex flex-col gap-4">
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+          <div className="md:hidden mt-4">
+            <div className="rounded-2xl bg-[#040E22] border border-white/10 p-4 shadow-lg shadow-black/30">
+              <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 link.href.startsWith("#") ? (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                    className="text-white/80 hover:text-white transition-colors text-sm font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -112,7 +113,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                    className="text-white/80 hover:text-white transition-colors text-sm font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -122,7 +123,7 @@ export default function Header() {
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                 <a
                   href={AUTH_ENDPOINTS.LOGIN}
-                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-medium"
                 >
                   Login
                 </a>
@@ -134,6 +135,7 @@ export default function Header() {
                   Join Waitlist
                 </a>
               </div>
+            </div>
             </div>
           </div>
         )}
