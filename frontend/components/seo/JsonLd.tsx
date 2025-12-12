@@ -7,8 +7,8 @@ interface OrganizationJsonLdProps {
 
 export function OrganizationJsonLd({
   name = "TubeGrow",
-  url = "https://tubegrow.io",
-  logo = "https://tubegrow.io/logo.png",
+  url = "https://www.tubegrow.io",
+  logo = "https://www.tubegrow.io/icon",
   description = "AI-powered YouTube analytics and growth tools for creators",
 }: OrganizationJsonLdProps) {
   const jsonLd = {
@@ -42,15 +42,20 @@ interface SoftwareApplicationJsonLdProps {
     price: string;
     priceCurrency: string;
   };
+  aggregateRating?: {
+    ratingValue: string;
+    ratingCount: string;
+  };
 }
 
 export function SoftwareApplicationJsonLd({
   name = "TubeGrow",
   description = "AI-powered YouTube analytics platform that helps creators grow their channels with actionable insights",
-  url = "https://tubegrow.io",
+  url = "https://www.tubegrow.io",
   applicationCategory = "BusinessApplication",
   operatingSystem = "Web",
-  offers = { price: "0", priceCurrency: "USD" },
+  offers,
+  aggregateRating,
 }: SoftwareApplicationJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -60,15 +65,22 @@ export function SoftwareApplicationJsonLd({
     url,
     applicationCategory,
     operatingSystem,
-    offers: {
-      "@type": "Offer",
-      ...offers,
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "1250",
-    },
+    ...(offers
+      ? {
+          offers: {
+            "@type": "Offer",
+            ...offers,
+          },
+        }
+      : {}),
+    ...(aggregateRating
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ...aggregateRating,
+          },
+        }
+      : {}),
   };
 
   return (
@@ -127,7 +139,7 @@ export function ArticleJsonLd({
   dateModified,
   authorName,
   publisherName = "TubeGrow",
-  publisherLogo = "https://tubegrow.io/logo.png",
+  publisherLogo = "https://www.tubegrow.io/icon",
 }: ArticleJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",

@@ -1,53 +1,45 @@
-"use client";
-
 import { Check } from "lucide-react";
-import Link from "next/link";
+import { AUTH_ENDPOINTS } from "@/lib/config";
 
 const plans = [
   {
-    name: "Starter",
-    description: "For hobbyist creators getting started",
-    features: [
-      "1 YouTube channel",
-      "Basic analytics dashboard",
-      "SEO score analysis",
-      "5 AI queries per day",
-      "Weekly email reports",
-      "Community support",
-    ],
-    cta: "Join Waitlist",
+    id: "free",
+    name: "Free",
+    description: "Get started with basic analytics",
+    price: "$0",
+    cadence: "/mo",
+    features: ["10 video analyses/month", "20 AI queries/month", "Basic channel stats", "Community support"],
+    cta: "Start free",
     popular: false,
   },
   {
+    id: "starter",
+    name: "Starter",
+    description: "For growing creators",
+    price: "$19",
+    cadence: "/mo",
+    features: ["50 video analyses/month", "100 AI queries/month", "10 viral clips/month", "SEO optimization", "Transcript analysis"],
+    cta: "Start starter",
+    popular: false,
+  },
+  {
+    id: "pro",
     name: "Pro",
-    description: "For growing creators who want to scale",
-    features: [
-      "3 YouTube channels",
-      "Advanced analytics & insights",
-      "Full SEO optimization suite",
-      "Unlimited AI queries",
-      "Viral clips generator",
-      "Audience insights",
-      "Priority support",
-      "Daily email reports",
-    ],
-    cta: "Join Waitlist",
+    description: "For serious content creators",
+    price: "$49",
+    cadence: "/mo",
+    features: ["Unlimited video analyses", "500 AI queries/month", "50 viral clips/month", "Deep analysis + causal analytics", "Export reports", "Priority support"],
+    cta: "Start pro",
     popular: true,
   },
   {
+    id: "agency",
     name: "Agency",
-    description: "For agencies managing multiple channels",
-    features: [
-      "Unlimited channels",
-      "Everything in Pro",
-      "White-label reports",
-      "Team collaboration",
-      "API access",
-      "Dedicated account manager",
-      "Custom integrations",
-      "SLA guarantee",
-    ],
-    cta: "Contact Sales",
+    description: "For teams and agencies",
+    price: "$149",
+    cadence: "/mo",
+    features: ["Everything in Pro", "Unlimited AI queries", "Unlimited viral clips", "API access", "Dedicated support"],
+    cta: "Contact sales",
     popular: false,
   },
 ];
@@ -65,7 +57,7 @@ export default function PricingSection() {
             Choose the right plan for you
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Join our waitlist to get early access and exclusive launch pricing.
+            Start on Free. Upgrade anytime when you’re ready.
           </p>
         </div>
 
@@ -93,6 +85,10 @@ export default function PricingSection() {
                   {plan.name}
                 </h3>
                 <p className="text-white/50 text-sm">{plan.description}</p>
+                <div className="mt-4 flex items-baseline justify-center gap-1">
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-white/50">{plan.cadence}</span>
+                </div>
               </div>
 
               {/* Features */}
@@ -111,23 +107,36 @@ export default function PricingSection() {
               </ul>
 
               {/* CTA */}
-              <Link
-                href="#waitlist"
-                className={`block w-full text-center py-3 rounded-full font-semibold transition-all ${
-                  plan.popular
-                    ? "btn-cta-primary"
-                    : "bg-white/5 text-white hover:bg-white/10"
-                }`}
-              >
-                {plan.cta}
-              </Link>
+              {plan.id === "agency" ? (
+                <a
+                  href="mailto:sales@tubegrow.io"
+                  className={`block w-full text-center py-3 rounded-full font-semibold transition-all ${
+                    plan.popular
+                      ? "btn-cta-primary"
+                      : "bg-white/5 text-white hover:bg-white/10"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              ) : (
+                <a
+                  href={AUTH_ENDPOINTS.LOGIN}
+                  className={`block w-full text-center py-3 rounded-full font-semibold transition-all ${
+                    plan.popular
+                      ? "btn-cta-primary"
+                      : "bg-white/5 text-white hover:bg-white/10"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>
 
         {/* Trust note */}
         <p className="text-center text-white/40 text-sm mt-8">
-          Join our waitlist for early access and exclusive launch pricing.
+          No credit card required for Free. Cancel anytime on paid plans.
         </p>
       </div>
     </section>

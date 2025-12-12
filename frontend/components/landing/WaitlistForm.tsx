@@ -11,7 +11,6 @@ interface WaitlistFormProps {
 }
 
 export default function WaitlistForm({ variant = "hero", anchorId }: WaitlistFormProps) {
-  const resolvedAnchorId = anchorId ?? "waitlist";
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -65,7 +64,7 @@ export default function WaitlistForm({ variant = "hero", anchorId }: WaitlistFor
   // Hero variant - larger, centered
   if (variant === "hero") {
     return (
-      <div id={resolvedAnchorId} className="w-full max-w-md mx-auto">
+      <div id={anchorId} className="w-full max-w-md mx-auto">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div className="relative">
             <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
@@ -113,7 +112,7 @@ export default function WaitlistForm({ variant = "hero", anchorId }: WaitlistFor
 
   // Inline variant - horizontal, compact
   return (
-    <div id={resolvedAnchorId} className="w-full max-w-lg">
+    <div id={anchorId} className="w-full max-w-lg">
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
           <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">

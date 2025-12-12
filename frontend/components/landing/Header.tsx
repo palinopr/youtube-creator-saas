@@ -8,8 +8,9 @@ import { AUTH_ENDPOINTS } from "@/lib/config";
 const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#how-it-works", label: "How it works" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
-  { href: "/tools", label: "Free Tools" },
+  { href: "#resources", label: "Free Tools" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -74,12 +75,12 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href={AUTH_ENDPOINTS.LOGIN}
-              className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+              className="btn-cta-primary text-sm"
             >
-              Login
+              Start free
             </a>
             <a href="#waitlist" className="btn-cta text-sm">
-              Join Waitlist
+              Get updates
             </a>
           </div>
 
@@ -121,16 +122,16 @@ export default function Header() {
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                 <a
                   href={AUTH_ENDPOINTS.LOGIN}
-                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                  className="btn-cta-primary text-sm text-center"
                 >
-                  Login
+                  Start free
                 </a>
                 <a
                   href="#waitlist"
                   className="btn-cta-primary text-sm text-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Join Waitlist
+                  Get updates
                 </a>
               </div>
             </div>

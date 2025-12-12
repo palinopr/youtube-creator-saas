@@ -285,6 +285,7 @@ Add entries with date + outcome.
 | Dec 12 | Added landing “Resources” section, fixed support email, and published Shorts analytics + tag generator posts | More internal links to tools/posts, more TOFU coverage for tracked keywords |
 | Dec 12 | Removed “free plan”/vanity stats claims from marketing pages (About/Features) | Copy now matches waitlist‑only status |
 | Dec 12 | Added `/rss.xml` and published “optimize YouTube video for SEO” guide | Better discovery + stronger SEO cluster coverage |
+| Dec 12 | Removed fake JSON-LD price/ratings defaults; aligned org/app URLs to `www` | Structured data now matches waitlist-only reality |
 
 ---
 
