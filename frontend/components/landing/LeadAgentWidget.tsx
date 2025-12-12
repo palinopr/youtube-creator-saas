@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { API_URL } from "@/lib/config";
-import { Bot, X, Send, Loader2, Sparkles, Mail, AlertCircle } from "lucide-react";
+import { Bot, X, Send, Loader2, Sparkles, Mail, AlertCircle, User } from "lucide-react";
 
 type AgentResult = {
   title?: string;
@@ -70,9 +70,15 @@ export default function LeadAgentWidget() {
 
   const createLead = async () => {
     setError(null);
+    const cleanedName = name.trim();
+    if (!cleanedName) {
+      setError("Enter your name to continue.");
+      return;
+    }
+
     const emailNorm = email.trim().toLowerCase();
     if (!validateEmail(emailNorm)) {
-      setError("Enter a valid email to continue.");
+      setError("Enter a valid email address to continue.");
       return;
     }
 
@@ -83,7 +89,7 @@ export default function LeadAgentWidget() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: emailNorm,
-          name: name.trim() || null,
+          name: cleanedName,
           source: "landing_agent",
         }),
       });
@@ -95,7 +101,7 @@ export default function LeadAgentWidget() {
       if (!newLeadId) throw new Error("No lead id returned.");
 
       localStorage.setItem(STORAGE_EMAIL, emailNorm);
-      localStorage.setItem(STORAGE_NAME, name.trim());
+      localStorage.setItem(STORAGE_NAME, cleanedName);
       localStorage.setItem(STORAGE_LEAD_ID, newLeadId);
       setLeadId(newLeadId);
       setStep("chat");
@@ -206,6 +212,20 @@ export default function LeadAgentWidget() {
                   <div className="space-y-3">
                     <div className="relative">
                       <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                        <User className="w-4 h-4 text-white/40" />
+                      </div>
+                      <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Name"
+                        className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
+                        type="text"
+                        autoComplete="name"
+                      />
+                    </div>
+
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                         <Mail className="w-4 h-4 text-white/40" />
                       </div>
                       <input
@@ -217,15 +237,6 @@ export default function LeadAgentWidget() {
                         autoComplete="email"
                       />
                     </div>
-
-                    <input
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Name (optional)"
-                      className="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
-                      type="text"
-                      autoComplete="name"
-                    />
 
                     <button
                       type="button"
@@ -374,4 +385,3 @@ export default function LeadAgentWidget() {
     </>
   );
 }
-

@@ -289,6 +289,7 @@ Add entries with date + outcome.
 | Dec 12 | Updated `docs/ARCHITECTURE.md` Mermaid diagrams to match current SEO + waitlist-only system | Docs stay aligned with shipped routes + constraints |
 | Dec 12 | CRO pass on homepage: added AI Agent section, fixed misleading OAuth “read-only” claim, strengthened hero messaging + CTAs | Landing better matches real product capabilities and should convert better |
 | Dec 12 | Added public “Ask TubeGrow” lead-agent widget (email gate) + backend `/public/agent/ask` grounded by `backend/app/data/tubegrow_kb.md` | New lead capture channel across all marketing pages |
+| Dec 12 | Landing agent lead form: require name + improved email validation copy | Fewer bad submissions, clearer UX |
 
 ---
 
