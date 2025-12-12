@@ -866,6 +866,12 @@ class MarketingAgentAsk(Base):
 
 def init_db():
     """Initialize database tables."""
+    # Ensure V1 model modules are imported so they register with SQLAlchemy metadata
+    # before `create_all` runs (this repo doesn't currently use Alembic).
+    from app.v1.models import channel_memory as _channel_memory  # noqa: F401
+    from app.v1.models import change_review as _change_review  # noqa: F401
+    from app.v1.models import review_outcome as _review_outcome  # noqa: F401
+
     Base.metadata.create_all(bind=engine)
     
     if IS_SQLITE:
