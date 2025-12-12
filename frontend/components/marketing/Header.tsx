@@ -7,6 +7,8 @@ import { Logo } from "@/components/ui/Logo";
 
 const navigation = [
   { name: "Features", href: "/features" },
+  { name: "Analytics Tool", href: "/youtube-analytics-tool" },
+  { name: "SEO Tool", href: "/youtube-seo-tool" },
   { name: "AI Tools", href: "/ai-youtube-tools" },
   { name: "Viral Clips", href: "/viral-clips-generator" },
   { name: "Alternatives", href: "/alternatives" },
@@ -46,10 +48,10 @@ export function MarketingHeader() {
               Sign In
             </Link>
             <Link
-              href="/api/auth/login"
+              href="/#waitlist"
               className="px-4 py-2 bg-gradient-to-r from-brand-500 to-accent-500 hover:from-brand-600 hover:to-accent-600 text-white rounded-lg text-sm font-medium transition-all"
             >
-              Get Started Free
+              Join Waitlist
             </Link>
           </div>
 
@@ -85,11 +87,11 @@ export function MarketingHeader() {
                   Sign In
                 </Link>
                 <Link
-                  href="/api/auth/login"
+                  href="/#waitlist"
                   className="px-4 py-2 bg-gradient-to-r from-brand-500 to-accent-500 text-white rounded-lg text-sm font-medium text-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Started Free
+                  Join Waitlist
                 </Link>
               </div>
             </div>

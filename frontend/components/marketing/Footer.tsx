@@ -4,6 +4,11 @@ import { Logo } from "@/components/ui/Logo";
 const footerLinks = {
   product: [
     { name: "Features", href: "/features" },
+    { name: "YouTube Analytics Tool", href: "/youtube-analytics-tool" },
+    { name: "YouTube SEO Tool", href: "/youtube-seo-tool" },
+    { name: "Niches", href: "/niches" },
+    { name: "AI Tools", href: "/ai-youtube-tools" },
+    { name: "Viral Clips", href: "/viral-clips-generator" },
     { name: "Blog", href: "/blog" },
   ],
   company: [
