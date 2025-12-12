@@ -4,6 +4,9 @@ const nextConfig = {
     // Ensure Turbopack treats this folder as the project root
     root: __dirname,
   },
+  // Ensure serverless output tracing uses the same root as Turbopack.
+  // This avoids missing dependencies in production builds on Vercel.
+  outputFileTracingRoot: __dirname,
   images: {
     remotePatterns: [
       {
