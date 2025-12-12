@@ -2,6 +2,7 @@ import HomeRedirect from "@/components/home/HomeRedirect";
 import type { Metadata } from "next";
 import Header from "@/components/landing/Header";
 import HeroSection from "@/components/landing/HeroSection";
+import AIAgentSection from "@/components/landing/AIAgentSection";
 import LogoCarousel from "@/components/landing/LogoCarousel";
 import FeaturesTabs from "@/components/landing/FeaturesTabs";
 import HowItWorksTabs from "@/components/landing/HowItWorksTabs";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <HomeRedirect />
       <Header />
       <HeroSection />
+      <AIAgentSection />
       <LogoCarousel />
       <FeaturesTabs />
       <HowItWorksTabs />

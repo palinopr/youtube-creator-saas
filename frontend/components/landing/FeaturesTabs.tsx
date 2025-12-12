@@ -10,7 +10,6 @@ import {
   ChevronRight,
   Eye,
   ThumbsUp,
-  MessageSquare,
   Clock,
   ArrowUpRight,
   ArrowDownRight,
@@ -22,7 +21,6 @@ import {
   Globe,
   Smartphone,
   Monitor,
-  Calendar,
   Sparkles,
 } from "lucide-react";
 
@@ -39,7 +37,7 @@ const features = [
     icon: Search,
     title: "SEO Optimizer",
     description:
-      "Rank higher in search with AI-generated titles, descriptions, and tags. Analyze competitor keywords and discover untapped opportunities.",
+      "Rank higher in search with SEO scoring and AI-generated titles, descriptions, and tags—with a prioritized fix list.",
   },
   {
     id: "clips",
@@ -58,9 +56,9 @@ const features = [
   {
     id: "growth",
     icon: TrendingUp,
-    title: "Growth Predictions",
+    title: "Next Video Optimizer",
     description:
-      "AI-powered forecasting that predicts your channel's growth trajectory. Set goals and get personalized recommendations to hit your targets.",
+      "Score video ideas before you publish and get recommendations to improve hooks, clarity, and search intent.",
   },
 ];
 
@@ -377,15 +375,10 @@ function AudienceMockup() {
 
 // Growth Predictions Mockup - Forecasting and goals
 function GrowthMockup() {
-  const predictions = [
-    { metric: "Subscribers", current: "124K", predicted: "156K", timeline: "30 days" },
-    { metric: "Monthly Views", current: "2.4M", predicted: "3.1M", timeline: "30 days" },
-  ];
-
-  const milestones = [
-    { target: "100K Subs", progress: 100, status: "Achieved" },
-    { target: "150K Subs", progress: 83, status: "On track" },
-    { target: "200K Subs", progress: 45, status: "3 months" },
+  const fixes = [
+    "Move the keyword earlier in the title",
+    "Add a number + make the outcome specific",
+    "Tighten the title to ~55 characters",
   ];
 
   return (
@@ -394,78 +387,52 @@ function GrowthMockup() {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <TrendingUp size={16} className="text-brand-500" />
-          <span className="text-white text-sm font-medium">Growth Predictions</span>
+          <span className="text-white text-sm font-medium">Next Video Optimizer</span>
         </div>
-        <div className="flex items-center gap-1 bg-green-500/20 px-2 py-0.5 rounded-full">
-          <ArrowUpRight size={12} className="text-green-400" />
-          <span className="text-green-400 text-xs">Growing</span>
+        <div className="flex items-center gap-1 bg-brand-500/20 px-2 py-0.5 rounded-full">
+          <Target size={12} className="text-brand-400" />
+          <span className="text-brand-400 text-xs">Idea score</span>
         </div>
       </div>
 
-      {/* Prediction cards */}
-      <div className="grid grid-cols-2 gap-3 mb-4">
-        {predictions.map((p) => (
-          <div key={p.metric} className="bg-white/5 rounded-xl p-3">
-            <p className="text-white/50 text-xs mb-1">{p.metric}</p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-white font-bold">{p.current}</span>
-              <span className="text-white/30">→</span>
-              <span className="text-green-400 font-bold">{p.predicted}</span>
-            </div>
-            <p className="text-white/30 text-[10px] mt-1">In {p.timeline}</p>
+      {/* Score */}
+      <div className="bg-white/5 rounded-xl p-4 mb-4">
+        <p className="text-white/50 text-xs mb-2">Title idea</p>
+        <p className="text-white text-sm font-medium mb-3 line-clamp-2">
+          How to Optimize YouTube Video SEO in 2025 (Step-by-Step)
+        </p>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-white/40 text-[10px] mb-1">Score</p>
+            <p className="text-white font-bold text-xl">78/100</p>
           </div>
-        ))}
+          <div className="text-right">
+            <p className="text-white/40 text-[10px] mb-1">Intent</p>
+            <p className="text-green-400 font-semibold text-sm">High</p>
+          </div>
+        </div>
       </div>
 
-      {/* Growth chart visualization */}
+      {/* Suggestions */}
       <div className="bg-white/5 rounded-xl p-3 mb-4">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-white/60 text-xs">Projected Growth</span>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-brand-500" />
-              <span className="text-white/40 text-[10px]">Actual</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-brand-500/40" />
-              <span className="text-white/40 text-[10px]">Predicted</span>
-            </div>
-          </div>
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-white/60 text-xs">Top improvements</span>
+          <span className="text-brand-400 text-xs font-medium">3 suggestions</span>
         </div>
-        <div className="h-16 flex items-end gap-1">
-          {[40, 45, 52, 48, 55, 62, 58, 65, 72, 78].map((h, i) => (
-            <div
-              key={i}
-              className={`flex-1 rounded-t ${i > 6 ? "bg-brand-500/40" : "bg-brand-500"}`}
-              style={{ height: `${h}%` }}
-            />
+        <div className="space-y-2">
+          {fixes.map((fix) => (
+            <div key={fix} className="flex items-start gap-2">
+              <CheckCircle2 size={14} className="text-green-400 mt-0.5" />
+              <span className="text-white/70 text-xs leading-relaxed">{fix}</span>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* Milestones */}
       <div className="flex-1">
-        <p className="text-white/60 text-xs mb-2">Milestones</p>
-        <div className="space-y-2">
-          {milestones.map((m) => (
-            <div key={m.target} className="flex items-center gap-2">
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-white/70 text-xs">{m.target}</span>
-                  <span className={`text-xs ${m.progress === 100 ? "text-green-400" : "text-white/40"}`}>
-                    {m.status}
-                  </span>
-                </div>
-                <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full rounded-full ${m.progress === 100 ? "bg-green-500" : "bg-gradient-to-r from-brand-500 to-accent-500"}`}
-                    style={{ width: `${m.progress}%` }}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <p className="text-white/40 text-[10px] leading-relaxed">
+          Preview example. Actual results depend on your channel, niche, and video topic.
+        </p>
       </div>
     </div>
   );

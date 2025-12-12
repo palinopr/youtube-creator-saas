@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { AUTH_ENDPOINTS } from "@/lib/config";
 
 const navLinks = [
+  { href: "#agent", label: "AI Agent" },
   { href: "#features", label: "Features" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#faq", label: "FAQ" },

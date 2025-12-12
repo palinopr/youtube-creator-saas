@@ -2,8 +2,9 @@ import { ShieldCheck, LockKeyhole, Eye, Cpu } from "lucide-react";
 
 const items = [
   {
-    title: "Read-only OAuth",
-    description: "Secure Google OAuth. TubeGrow never posts on your behalf.",
+    title: "Secure OAuth",
+    description:
+      "Connect via Google OAuth. TubeGrow never uploads or posts content automatically.",
     icon: ShieldCheck,
   },
   {
@@ -17,8 +18,9 @@ const items = [
     icon: Cpu,
   },
   {
-    title: "Privacy-first",
-    description: "We use the minimum required permissions to analyze performance.",
+    title: "You control changes",
+    description:
+      "If you choose to update SEO metadata, it only happens when you click apply.",
     icon: Eye,
   },
 ];

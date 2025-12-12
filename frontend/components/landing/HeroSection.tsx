@@ -1,6 +1,7 @@
 "use client";
 
-import { Play, Users } from "lucide-react";
+import Link from "next/link";
+import { Users } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
 
 export default function HeroSection() {
@@ -20,20 +21,35 @@ export default function HeroSection() {
 
         {/* Main headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-white leading-tight max-w-4xl mx-auto mb-6">
-          Get Early Access to{" "}
-          <span className="text-gradient">AI-Powered</span>
-          {" "}YouTube Growth
+          Meet your{" "}
+          <span className="text-gradient">AI agent</span>
+          {" "}for YouTube analytics, SEO, and Shorts
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Be first to try the easiest way to analyze your channel, find viral opportunities,
-          and optimize every video for maximum reach and engagement.
+          Connect your channel, ask questions about your performance, get SEO fixes for every video,
+          and generate timestamped Shorts clip ideas.
         </p>
 
         {/* Waitlist Form */}
         <div className="mb-16">
-          <WaitlistForm variant="hero" />
+          <WaitlistForm variant="hero" anchorId="waitlist" />
+          <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+            <Link
+              href="/tools"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              Try free tools
+            </Link>
+            <span className="text-white/20">•</span>
+            <a
+              href="#agent"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              See the AI agent
+            </a>
+          </div>
         </div>
 
         {/* Product screenshot/video placeholder */}
@@ -41,9 +57,15 @@ export default function HeroSection() {
           {/* Glow behind the image */}
           <div className="absolute -inset-4 bg-gradient-to-r from-brand-500/20 via-accent-500/20 to-brand-500/20 rounded-3xl blur-3xl opacity-50" />
 
-          {/* Dashboard preview - mockup */}
+          {/* Dashboard preview - illustration */}
           <div className="relative landing-card overflow-hidden">
             <div className="aspect-video bg-gradient-to-br from-[#0f0f0f] to-[#1a1a2e] p-4 md:p-6">
+              <div className="absolute top-4 right-4">
+                <span className="text-[11px] text-white/60 bg-black/40 border border-white/10 px-2 py-1 rounded-full">
+                  Product preview (illustration)
+                </span>
+              </div>
+
               {/* Window controls */}
               <div className="absolute top-4 left-4 flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-500/70" />
@@ -120,17 +142,6 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* "Coming Soon" overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[1px]">
-                <div className="text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-500/30">
-                    <Play size={32} className="text-white ml-1" />
-                  </div>
-                  <p className="text-white font-semibold text-lg md:text-xl mb-1">Demo Video Coming Soon</p>
-                  <p className="text-white/60 text-sm">Join the waitlist for early access</p>
                 </div>
               </div>
             </div>
