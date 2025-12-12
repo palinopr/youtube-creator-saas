@@ -1,0 +1,333 @@
+import { Metadata } from "next";
+import Link from "next/link";
+import {
+  Brain,
+  Sparkles,
+  MessageSquare,
+  TrendingUp,
+  Search,
+  Lightbulb,
+  BarChart3,
+  Zap,
+  Target,
+  Video,
+  FileText,
+  Clock,
+  ArrowRight,
+  Check,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "AI Tools for YouTube Creators - AI-Powered YouTube Analytics",
+  description:
+    "Discover the best AI tools for YouTube creators. TubeGrow uses artificial intelligence to analyze your channel, optimize SEO, generate viral clips, and grow your audience faster.",
+  keywords: [
+    "ai tools for youtube",
+    "youtube ai tools",
+    "ai youtube analytics",
+    "artificial intelligence youtube",
+    "ai video optimization",
+    "youtube ai assistant",
+    "ai content ideas youtube",
+    "youtube automation ai",
+    "ai seo youtube",
+    "youtube growth ai",
+    "ai powered youtube",
+    "machine learning youtube",
+  ],
+  openGraph: {
+    title: "AI Tools for YouTube Creators | TubeGrow",
+    description:
+      "Use AI to grow your YouTube channel faster. Intelligent analytics, automated SEO optimization, and AI-powered viral clip detection.",
+    type: "website",
+  },
+};
+
+const aiFeatures = [
+  {
+    icon: MessageSquare,
+    title: "AI Chat Assistant",
+    description:
+      "Ask questions about your channel in plain English. Get instant insights about your best performing content, audience demographics, and growth opportunities.",
+    example: '"What video topics should I focus on based on my analytics?"',
+  },
+  {
+    icon: Sparkles,
+    title: "AI Viral Clip Detection",
+    description:
+      "Our AI analyzes your video transcripts to identify the most engaging moments perfect for YouTube Shorts and social media clips.",
+    example: "Automatically finds hook moments, emotional peaks, and quotable segments",
+  },
+  {
+    icon: Search,
+    title: "AI SEO Optimization",
+    description:
+      "Get AI-generated titles, descriptions, and tags optimized for YouTube's algorithm. Our AI analyzes top-ranking videos to suggest winning metadata.",
+    example: "AI writes SEO-optimized descriptions that rank higher in search",
+  },
+  {
+    icon: Lightbulb,
+    title: "AI Content Ideas",
+    description:
+      "Stuck on what to create next? Our AI analyzes your best performing videos and trending topics to suggest video ideas tailored to your audience.",
+    example: "Get 10 video ideas based on what's working for your channel",
+  },
+  {
+    icon: TrendingUp,
+    title: "AI Performance Predictions",
+    description:
+      "Our AI analyzes patterns in your data to predict which videos will perform best and identifies opportunities you might be missing.",
+    example: "Understand why certain videos go viral and replicate success",
+  },
+  {
+    icon: Target,
+    title: "AI Competitor Analysis",
+    description:
+      "AI-powered analysis of competitor channels reveals their strategies, top keywords, and content gaps you can exploit.",
+    example: "Discover untapped keywords your competitors are ranking for",
+  },
+];
+
+const useCases = [
+  {
+    title: "For New YouTubers",
+    description: "Get AI guidance on channel setup, niche selection, and your first 1000 subscribers strategy",
+    icon: Video,
+  },
+  {
+    title: "For Growing Channels",
+    description: "Use AI to identify what's working, optimize your content strategy, and scale faster",
+    icon: TrendingUp,
+  },
+  {
+    title: "For Established Creators",
+    description: "Automate analytics, generate clips at scale, and focus on creating content",
+    icon: Zap,
+  },
+];
+
+const stats = [
+  { value: "10x", label: "Faster Content Analysis" },
+  { value: "85%", label: "Time Saved on SEO" },
+  { value: "3x", label: "More Viral Clips Found" },
+  { value: "24/7", label: "AI Always Available" },
+];
+
+export default function AIYouTubeToolsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950">
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-blue-500/10" />
+        <div className="max-w-6xl mx-auto relative">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
+              <Brain className="w-4 h-4 text-purple-400" />
+              <span className="text-purple-300 text-sm font-medium">AI-Powered YouTube Growth</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Tools for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                YouTube Creators
+              </span>
+            </h1>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto mb-8">
+              Stop guessing, start growing. TubeGrow uses artificial intelligence to analyze your channel,
+              optimize your content, and uncover viral opportunities other tools miss.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              >
+                Try AI Tools Free <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex items-center justify-center gap-2 bg-zinc-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-zinc-700 transition-colors"
+              >
+                See All Features
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 border-y border-zinc-800">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                  {stat.value}
+                </div>
+                <div className="text-zinc-400 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Features Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              How AI Supercharges Your YouTube Growth
+            </h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Our AI tools work 24/7 to analyze your data, find opportunities, and help you make smarter decisions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {aiFeatures.map((feature) => (
+              <div
+                key={feature.title}
+                className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-colors"
+              >
+                <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-zinc-400 mb-4">{feature.description}</p>
+                <div className="bg-zinc-800/50 rounded-lg px-4 py-3 text-sm text-zinc-500 italic">
+                  {feature.example}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 px-4 bg-zinc-900/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI YouTube Tools for Every Creator
+            </h2>
+            <p className="text-zinc-400">
+              Whether you're just starting or have millions of subscribers, our AI adapts to your needs.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {useCases.map((useCase) => (
+              <div
+                key={useCase.title}
+                className="bg-zinc-900 border border-zinc-800 rounded-xl p-8 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-zinc-400">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              How Our AI YouTube Tools Work
+            </h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Connect your channel and let our AI get to work analyzing your content and opportunities.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "1", title: "Connect Channel", desc: "One-click Google OAuth connection" },
+              { step: "2", title: "AI Analyzes Data", desc: "Processes videos, transcripts, analytics" },
+              { step: "3", title: "Get AI Insights", desc: "Ask questions, get recommendations" },
+              { step: "4", title: "Grow Faster", desc: "Apply insights, track results" },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-zinc-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-zinc-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+            AI YouTube Tools FAQ
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "What AI technology does TubeGrow use?",
+                a: "TubeGrow uses GPT-4 and custom machine learning models specifically trained on YouTube data. Our AI understands video performance patterns, SEO optimization, and content strategy better than generic AI tools.",
+              },
+              {
+                q: "How is AI different from traditional YouTube analytics?",
+                a: "Traditional analytics show you numbers. AI analytics tell you what to do about them. Our AI can answer questions like 'Why did this video underperform?' and 'What should my next video be about?' - things dashboards can't tell you.",
+              },
+              {
+                q: "Can AI really help my YouTube channel grow?",
+                a: "Yes! AI helps by analyzing patterns humans miss, optimizing SEO automatically, identifying viral potential in your content, and providing data-driven recommendations. Creators using AI tools typically see faster growth because they make better decisions.",
+              },
+              {
+                q: "What can I ask the AI chat assistant?",
+                a: "Anything about your channel! Ask about best posting times, which topics perform best, why certain videos succeed, competitor analysis, content ideas, thumbnail feedback, and SEO recommendations. The AI has access to all your analytics data.",
+              },
+              {
+                q: "Is my YouTube data safe with AI analysis?",
+                a: "Absolutely. We use secure OAuth connections, never store your YouTube credentials, and only analyze the data you authorize. Your data is encrypted and never shared with third parties.",
+              },
+              {
+                q: "Do I need technical knowledge to use AI tools?",
+                a: "Not at all! Our AI is designed to be conversational. Just ask questions in plain English and get actionable answers. No data science or technical background required.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-zinc-400">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-2xl p-12">
+            <Brain className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Let AI Grow Your Channel?
+            </h2>
+            <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
+              Join thousands of creators using AI to make smarter decisions, save time, and grow faster on YouTube.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              >
+                Start Free Trial <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/alternatives"
+                className="inline-flex items-center justify-center gap-2 bg-zinc-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-zinc-700 transition-colors"
+              >
+                Compare to VidIQ & TubeBuddy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
