@@ -1,0 +1,31 @@
+# TubeGrow (tubegrow.io)
+#
+# This file provides a compact, LLM-friendly summary of TubeGrow and the
+# most important URLs. Replace or expand as the product evolves.
+
+site: https://www.tubegrow.io
+name: TubeGrow
+type: SaaS for YouTube creators
+language: en
+
+summary:
+TubeGrow is an AI-powered YouTube analytics and growth platform. It helps creators understand channel performance, get AI insights, optimize YouTube SEO (titles, descriptions, tags), and turn long videos into viral short-form clips. The product focuses on actionable insights, automation, and a modern creator-first workflow.
+
+key-pages:
+- Home: https://www.tubegrow.io/
+- Features: https://www.tubegrow.io/features
+- Pricing: https://www.tubegrow.io/pricing
+- AI YouTube Tools: https://www.tubegrow.io/ai-youtube-tools
+- Viral Clips Generator: https://www.tubegrow.io/viral-clips-generator
+- Alternatives / Comparisons: https://www.tubegrow.io/alternatives
+- Blog: https://www.tubegrow.io/blog
+- About: https://www.tubegrow.io/about
+
+product-highlights:
+- AI chat assistant for channel insights
+- Real-time analytics dashboards
+- YouTube SEO analysis and optimization
+- Viral moment detection and clip generation for Shorts/Reels/TikTok
+
+contact:
+email: support@tubegrow.io

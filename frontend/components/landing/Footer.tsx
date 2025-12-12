@@ -3,17 +3,20 @@
 import Link from "next/link";
 
 const productLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/features", label: "Features" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/ai-youtube-tools", label: "AI YouTube Tools" },
+  { href: "/viral-clips-generator", label: "Viral Clips Generator" },
+  { href: "/alternatives", label: "Alternatives" },
 ];
 
 const companyLinks = [
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact Us" },
-  { href: "/tutorials", label: "Tutorials" },
-  { href: "/dashboard", label: "Login" },
+  { href: "/about", label: "About" },
+  { href: "mailto:support@tubegrow.io", label: "Contact Us" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/api/auth/login", label: "Login" },
 ];
 
 const socialLinks = [
@@ -111,12 +114,21 @@ export default function Footer() {
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/50 hover:text-white text-sm transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith("mailto:") ? (
+                    <a
+                      href={link.href}
+                      className="text-white/50 hover:text-white text-sm transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-white/50 hover:text-white text-sm transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
