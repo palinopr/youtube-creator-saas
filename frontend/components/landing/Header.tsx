@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#faq", label: "FAQ" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Header() {
@@ -48,13 +49,23 @@ export default function Header() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-white/70 hover:text-white transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
 
@@ -86,14 +97,25 @@ export default function Header() {
           <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/70 hover:text-white transition-colors text-sm font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                link.href.startsWith("#") ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                 <a
