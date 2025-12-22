@@ -167,6 +167,15 @@ class YouTubeAnalyticsService(YouTubeBaseService):
         start_date, end_date = self._get_date_range(days)
 
         try:
+            # First, get total views for calculating estimated view counts
+            views_response = self.analytics.reports().query(
+                ids=f"channel=={self.channel_id}",
+                startDate=start_date,
+                endDate=end_date,
+                metrics="views"
+            ).execute()
+            total_views = views_response.get("rows", [[0]])[0][0] if views_response.get("rows") else 0
+
             # Get age group breakdown
             age_response = self.analytics.reports().query(
                 ids=f"channel=={self.channel_id}",
@@ -179,9 +188,12 @@ class YouTubeAnalyticsService(YouTubeBaseService):
 
             age_groups = []
             for row in age_response.get("rows", []):
+                percentage = round(row[1], 2)
+                estimated_views = int(total_views * percentage / 100) if total_views > 0 else 0
                 age_groups.append({
                     "age_group": row[0],
-                    "percentage": round(row[1], 2)
+                    "views": estimated_views,  # Frontend expects views field
+                    "percentage": percentage
                 })
 
             # Get gender breakdown
@@ -195,6 +207,7 @@ class YouTubeAnalyticsService(YouTubeBaseService):
             ).execute()
 
             genders = []
+            gender_obj = {}  # Object format for frontend compatibility
             for row in gender_response.get("rows", []):
                 gender_label = row[0]
                 if gender_label == "male":
@@ -203,10 +216,20 @@ class YouTubeAnalyticsService(YouTubeBaseService):
                     gender_label = "Female"
                 else:
                     gender_label = "Other"
+
+                percentage = round(row[1], 2)
+                estimated_views = int(total_views * percentage / 100) if total_views > 0 else 0
+
                 genders.append({
                     "gender": gender_label,
-                    "percentage": round(row[1], 2)
+                    "percentage": percentage
                 })
+
+                # Build object format: { male: { views, percentage }, female: {...} }
+                gender_obj[gender_label.lower()] = {
+                    "views": estimated_views,
+                    "percentage": percentage
+                }
 
             # Get combined age-gender breakdown for detailed analysis
             combined_response = self.analytics.reports().query(
@@ -231,8 +254,10 @@ class YouTubeAnalyticsService(YouTubeBaseService):
                 "start_date": start_date,
                 "end_date": end_date,
                 "age_groups": age_groups,
-                "genders": genders,
+                "genders": genders,  # Keep array format for compatibility
+                "gender": gender_obj,  # Object format for frontend
                 "combined": combined[:10],  # Top 10 segments
+                "total_views": total_views,  # Include total views
             }
 
         except Exception as e:
@@ -326,9 +351,11 @@ class YouTubeAnalyticsService(YouTubeBaseService):
 
                 countries.append({
                     "country_code": country_code,
-                    "country_name": COUNTRY_NAMES.get(country_code, country_code),
+                    "country": COUNTRY_NAMES.get(country_code, country_code),  # Frontend expects "country"
+                    "country_name": COUNTRY_NAMES.get(country_code, country_code),  # Keep for compatibility
                     "views": views,
-                    "watch_time_minutes": round(watch_time, 1),
+                    "watch_time_hours": round(watch_time / 60, 2),  # Frontend expects hours
+                    "watch_time_minutes": round(watch_time, 1),  # Keep for compatibility
                     "avg_view_duration_seconds": round(avg_duration, 1),
                 })
 
@@ -384,7 +411,8 @@ class YouTubeAnalyticsService(YouTubeBaseService):
                     "device_name": DEVICE_LABELS.get(device_type, device_type),
                     "icon": DEVICE_ICONS.get(device_type, "❓"),
                     "views": views,
-                    "watch_time_minutes": round(watch_time, 1),
+                    "watch_time_hours": round(watch_time / 60, 2),  # Frontend expects hours
+                    "watch_time_minutes": round(watch_time, 1),  # Keep for compatibility
                     "avg_view_duration_seconds": round(avg_duration, 1),
                 })
 
