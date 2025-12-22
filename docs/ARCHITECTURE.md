@@ -1,7 +1,7 @@
 ---
 title: System Architecture
 description: End-to-end architecture for TubeGrow (tubegrow.io).
----
+---you tell me I think should only be tubegrow if not I feel people will abuse it and on widget how ever you think is Best But we need name and email first idk if we need a database or or supa base
 
 # TubeGrow – Architecture
 

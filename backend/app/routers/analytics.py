@@ -12,7 +12,7 @@ from ..config import get_settings
 from ..db.models import User
 from ..db.models import JobType
 from ..db.repository import AnalyticsCacheRepository, VideoCacheRepository, JobRepository
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 from ..tools.youtube_channel import resolve_mine_channel_id
 from ..agents.analytics_agent import AnalyticsAgent
 from ..workers.manager import get_worker_manager

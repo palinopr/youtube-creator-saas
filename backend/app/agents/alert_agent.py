@@ -16,7 +16,7 @@ from googleapiclient.discovery import Resource
 from sqlalchemy.orm import Session
 
 from ..config import get_settings
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 from ..db.models import Alert, AlertType, AlertPriority, SessionLocal
 
 settings = get_settings()

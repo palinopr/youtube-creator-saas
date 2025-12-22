@@ -1,29 +1,25 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { api } from "@/lib/api";
+import { api, ChannelStats as ApiChannelStats, VideoStats } from "@/lib/api";
 
-interface ChannelStats {
-  title: string;
-  subscriber_count: number;
-  view_count: number;
-  video_count: number;
+// Re-export API types with dashboard-specific extensions
+interface ChannelStats extends ApiChannelStats {
   custom_url?: string;
-  thumbnail_url?: string;
 }
 
-interface Video {
-  video_id: string;
-  title: string;
-  thumbnail_url: string;
-  view_count: number;
-  like_count: number;
-  comment_count: number;
-  published_at: string;
+interface Video extends VideoStats {
+  // Video extends VideoStats from API
 }
 
 interface TopVideo extends Video {
   rank?: number;
+}
+
+// Response types for API calls
+interface TopVideosResponse {
+  top_videos: TopVideo[];
+  total_analyzed?: number;
 }
 
 // Analytics daily data from YouTube Analytics API
@@ -92,23 +88,22 @@ export function useDashboardData(): DashboardData {
       ]);
 
       if (statsRes.status === "fulfilled") {
-        setChannelStats(statsRes.value as any);
+        setChannelStats(statsRes.value as ChannelStats);
       }
 
       if (videosRes.status === "fulfilled") {
-        const videosData = videosRes.value as any;
-        setRecentVideos(Array.isArray(videosData) ? videosData : []);
+        setRecentVideos(Array.isArray(videosRes.value) ? videosRes.value : []);
       }
 
       if (topVideoRes.status === "fulfilled") {
-        const topVideos = (topVideoRes.value as any)?.top_videos;
-        if (Array.isArray(topVideos) && topVideos.length > 0) {
-          setTopVideo(topVideos[0]);
+        const topVideosResponse = topVideoRes.value as TopVideosResponse;
+        if (Array.isArray(topVideosResponse?.top_videos) && topVideosResponse.top_videos.length > 0) {
+          setTopVideo(topVideosResponse.top_videos[0]);
         }
       }
 
       if (analyticsRes.status === "fulfilled") {
-        const analyticsData = analyticsRes.value as any;
+        const analyticsData = analyticsRes.value as AnalyticsOverview;
         if (analyticsData && !analyticsData.error) {
           setAnalyticsOverview(analyticsData);
         }

@@ -174,7 +174,7 @@ class AnalyticsCache(Base):
     # TTL management
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    expires_at = Column(DateTime, nullable=True)
+    expires_at = Column(DateTime, nullable=True, index=True)  # Index for cache expiry queries
 
 
 class TranscriptCache(Base):
@@ -211,6 +211,42 @@ class TranscriptCache(Base):
             "source": self.source,
             "word_timestamps": self.word_timestamps,
             "created_at": self.created_at.isoformat() if self.created_at else None,
+        }
+
+
+class LLMCache(Base):
+    """
+    Cache for LLM responses to reduce API costs.
+    Stores prompt hashes and responses for reuse.
+    """
+    __tablename__ = "llm_cache"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    prompt_hash = Column(String(64), unique=True, nullable=False, index=True)  # SHA-256 hash
+    model = Column(String(50), nullable=False, index=True)
+
+    # Cached response
+    response = Column(Text, nullable=False)
+
+    # Request metadata
+    prompt_tokens = Column(Integer, default=0)
+    completion_tokens = Column(Integer, default=0)
+
+    # TTL management
+    created_at = Column(DateTime, default=datetime.utcnow)
+    expires_at = Column(DateTime, nullable=True, index=True)
+    hit_count = Column(Integer, default=0)  # Track cache hits
+
+    def to_dict(self) -> dict:
+        return {
+            "prompt_hash": self.prompt_hash,
+            "model": self.model,
+            "response": self.response,
+            "prompt_tokens": self.prompt_tokens,
+            "completion_tokens": self.completion_tokens,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "expires_at": self.expires_at.isoformat() if self.expires_at else None,
+            "hit_count": self.hit_count,
         }
 
 

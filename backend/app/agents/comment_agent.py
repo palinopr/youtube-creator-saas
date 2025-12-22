@@ -19,7 +19,7 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from googleapiclient.discovery import Resource
 
 from ..config import get_settings
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 
 settings = get_settings()
 logger = logging.getLogger(__name__)

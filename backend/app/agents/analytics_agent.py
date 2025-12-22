@@ -10,7 +10,7 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from googleapiclient.discovery import Resource
 
 from ..config import get_settings
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 
 settings = get_settings()
 

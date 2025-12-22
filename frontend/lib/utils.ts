@@ -120,3 +120,54 @@ export function isTagsWithinLimit(tags: string[]): boolean {
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
 }
+
+/**
+ * Format date string to short label for chart axes
+ * @example formatDateLabel("2024-01-15") => "Jan 15"
+ */
+export function formatDateLabel(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+/**
+ * Format a decimal as percentage string
+ * @example formatPercentage(0.1234) => "12.3%"
+ * @example formatPercentage(0.5, 0) => "50%"
+ */
+export function formatPercentage(value: number, decimals: number = 1): string {
+  return `${(value * 100).toFixed(decimals)}%`;
+}
+
+/**
+ * Format relative time (e.g., "2 hours ago", "3 days ago")
+ * @example formatRelativeTime("2024-01-15T10:30:00Z") => "2 hours ago"
+ */
+export function formatRelativeTime(dateString: string): string {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffSecs = Math.floor(diffMs / 1000);
+  const diffMins = Math.floor(diffSecs / 60);
+  const diffHours = Math.floor(diffMins / 60);
+  const diffDays = Math.floor(diffHours / 24);
+  const diffWeeks = Math.floor(diffDays / 7);
+  const diffMonths = Math.floor(diffDays / 30);
+
+  if (diffSecs < 60) return "just now";
+  if (diffMins < 60) return `${diffMins} minute${diffMins !== 1 ? "s" : ""} ago`;
+  if (diffHours < 24) return `${diffHours} hour${diffHours !== 1 ? "s" : ""} ago`;
+  if (diffDays < 7) return `${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+  if (diffWeeks < 4) return `${diffWeeks} week${diffWeeks !== 1 ? "s" : ""} ago`;
+  return `${diffMonths} month${diffMonths !== 1 ? "s" : ""} ago`;
+}
+
+/**
+ * Calculate percentage change between two values
+ * @example calculateTrend(120, 100) => 20 (20% increase)
+ * @example calculateTrend(80, 100) => -20 (20% decrease)
+ */
+export function calculateTrend(current: number, previous: number): number {
+  if (previous === 0) return current > 0 ? 100 : 0;
+  return Math.round(((current - previous) / previous) * 100);
+}
