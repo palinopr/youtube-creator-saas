@@ -17,19 +17,31 @@ logger = logging.getLogger(__name__)
 
 # SerpBear configuration
 SERPBEAR_URL = os.getenv("SERPBEAR_URL", "http://localhost:3005")
-SERPBEAR_API_KEY = os.getenv("SERPBEAR_API_KEY", "tubegrow_api_key_5saedXklbslhnapihe2pihp3pih4fdnakhjwq5")
+SERPBEAR_API_KEY = os.getenv("SERPBEAR_API_KEY")
+
+# Validate required config at import time (fail fast)
+if not SERPBEAR_API_KEY:
+    logger.warning("SERPBEAR_API_KEY not set - SerpBear SEO tracking will be unavailable")
 
 
 class SerpBearClient:
     """Client for SerpBear rank tracking API."""
 
-    def __init__(self, base_url: str = SERPBEAR_URL, api_key: str = SERPBEAR_API_KEY):
-        self.base_url = base_url.rstrip("/")
+    def __init__(self, base_url: str = SERPBEAR_URL, api_key: Optional[str] = SERPBEAR_API_KEY):
+        self.base_url = base_url.rstrip("/") if base_url else ""
         self.api_key = api_key
+        self.enabled = bool(api_key)
         self.headers = {
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": f"Bearer {api_key}" if api_key else "",
             "Content-Type": "application/json"
         }
+
+    def _check_enabled(self) -> bool:
+        """Check if SerpBear is configured."""
+        if not self.enabled:
+            logger.debug("SerpBear not configured - skipping operation")
+            return False
+        return True
 
     async def _request(self, method: str, endpoint: str, **kwargs) -> dict:
         """Make an HTTP request to SerpBear API."""
@@ -54,6 +66,8 @@ class SerpBearClient:
 
     async def get_domains(self) -> list:
         """Get all tracked domains."""
+        if not self._check_enabled():
+            return []
         try:
             data = await self._request("GET", "/domains")
             return data.get("domains", [])
@@ -63,6 +77,8 @@ class SerpBearClient:
 
     async def get_domain(self, domain_id: int) -> Optional[dict]:
         """Get a specific domain by ID."""
+        if not self._check_enabled():
+            return None
         try:
             data = await self._request("GET", f"/domains/{domain_id}")
             return data.get("domain")
@@ -72,6 +88,8 @@ class SerpBearClient:
 
     async def add_domain(self, domain: str) -> Optional[dict]:
         """Add a new domain to track."""
+        if not self._check_enabled():
+            return None
         try:
             data = await self._request("POST", "/domains", json={"domain": domain})
             return data.get("domain")
@@ -81,6 +99,8 @@ class SerpBearClient:
 
     async def get_keywords(self, domain_id: int) -> list:
         """Get all keywords for a domain."""
+        if not self._check_enabled():
+            return []
         try:
             data = await self._request("GET", f"/domains/{domain_id}/keywords")
             return data.get("keywords", [])
@@ -90,6 +110,8 @@ class SerpBearClient:
 
     async def add_keyword(self, domain_id: int, keyword: str, device: str = "desktop", country: str = "US") -> Optional[dict]:
         """Add a keyword to track for a domain."""
+        if not self._check_enabled():
+            return None
         try:
             data = await self._request(
                 "POST",
@@ -107,6 +129,8 @@ class SerpBearClient:
 
     async def add_keywords_bulk(self, domain_id: int, keywords: list[str], device: str = "desktop", country: str = "US") -> list:
         """Add multiple keywords at once."""
+        if not self._check_enabled():
+            return []
         results = []
         for keyword in keywords:
             result = await self.add_keyword(domain_id, keyword, device, country)
@@ -116,6 +140,8 @@ class SerpBearClient:
 
     async def get_keyword_history(self, domain_id: int, keyword_id: int) -> list:
         """Get ranking history for a keyword."""
+        if not self._check_enabled():
+            return []
         try:
             data = await self._request("GET", f"/domains/{domain_id}/keywords/{keyword_id}/history")
             return data.get("history", [])
@@ -125,6 +151,8 @@ class SerpBearClient:
 
     async def refresh_keywords(self, domain_id: int) -> bool:
         """Trigger a refresh of keyword rankings."""
+        if not self._check_enabled():
+            return False
         try:
             await self._request("POST", f"/domains/{domain_id}/refresh")
             return True
@@ -134,6 +162,8 @@ class SerpBearClient:
 
     async def delete_keyword(self, domain_id: int, keyword_id: int) -> bool:
         """Delete a keyword from tracking."""
+        if not self._check_enabled():
+            return False
         try:
             await self._request("DELETE", f"/domains/{domain_id}/keywords/{keyword_id}")
             return True
@@ -143,6 +173,8 @@ class SerpBearClient:
 
     async def get_rankings_summary(self, domain_id: int) -> dict:
         """Get a summary of all rankings for a domain."""
+        if not self._check_enabled():
+            return {"error": "SerpBear not configured", "total_keywords": 0, "keywords": []}
         keywords = await self.get_keywords(domain_id)
 
         if not keywords:

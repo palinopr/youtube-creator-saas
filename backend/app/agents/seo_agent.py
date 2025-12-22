@@ -13,7 +13,7 @@ import os
 from dotenv import load_dotenv
 import logging
 
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 from ..config import get_settings
 
 # Load environment variables

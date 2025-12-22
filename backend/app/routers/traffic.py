@@ -12,7 +12,7 @@ import logging
 from ..auth import get_authenticated_service
 from ..auth.dependencies import get_current_user
 from ..db.models import User
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/traffic", tags=["traffic"])

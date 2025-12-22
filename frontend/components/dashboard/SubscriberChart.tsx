@@ -12,22 +12,12 @@ import {
 import { Users, TrendingUp, TrendingDown } from "lucide-react";
 import { ChartSkeleton } from "./ChartSkeleton";
 import { DailyAnalytics } from "@/hooks/useDashboardData";
+import { formatNumber, formatDateLabel } from "@/lib/utils";
 
 interface SubscriberChartProps {
   dailyData?: DailyAnalytics[];
   currentSubscribers?: number;
   isLoading?: boolean;
-}
-
-function formatNumber(num: number): string {
-  if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
-  if (num >= 1000) return (num / 1000).toFixed(1) + "K";
-  return num.toString();
-}
-
-function formatDateLabel(dateStr: string): string {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
 export function SubscriberChart({

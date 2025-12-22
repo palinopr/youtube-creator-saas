@@ -10,7 +10,7 @@ from ..auth import get_authenticated_service
 from ..auth.dependencies import get_current_user, check_usage
 from ..db.models import User
 from ..agents.seo_agent import SEOAgent
-from ..tools.youtube_tools import YouTubeTools
+from ..services.youtube import YouTubeTools
 from ..tools.description_generator import DescriptionGenerator
 from ..tools.transcript_analyzer import TranscriptAnalyzer
 
