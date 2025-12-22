@@ -8,9 +8,11 @@ interface WaitlistFormProps {
   variant?: "hero" | "inline";
   /** Optional anchor id for #waitlist navigation */
   anchorId?: string;
+  /** Optional source for tracking where signup came from */
+  source?: string;
 }
 
-export default function WaitlistForm({ variant = "hero", anchorId }: WaitlistFormProps) {
+export default function WaitlistForm({ variant = "hero", anchorId, source }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -31,7 +33,7 @@ export default function WaitlistForm({ variant = "hero", anchorId }: WaitlistFor
 
     const { data, error: signupError } = await submitWaitlistSignup({
       email,
-      referral_source: typeof window !== "undefined" ? document.referrer || "direct" : "direct",
+      referral_source: source || (typeof window !== "undefined" ? document.referrer || "direct" : "direct"),
     });
 
     setIsLoading(false);
