@@ -11,13 +11,16 @@ Frontend (Next.js 16)     Backend (FastAPI)           External APIs
 ├── app/                  ├── app/                    ├── YouTube Data API v3
 │   ├── page.tsx          │   ├── main.py             ├── YouTube Analytics API
 │   ├── dashboard/        │   ├── routers/            ├── OpenAI GPT-4o
-│   ├── video/[id]/       │   ├── agents/             └── youtube_transcript_api
-│   ├── analysis/         │   ├── tools/
-│   ├── optimize/         │   ├── db/
-│   ├── clips/            │   ├── auth/
-│   └── deep-analysis/    │   └── workers/
-├── components/           └── data/
-└── lib/api.ts                └── youtube_saas.db
+│   ├── video/[id]/       │   │   ├── admin/          └── youtube_transcript_api
+│   ├── analysis/         │   │   └── analysis/
+│   ├── optimize/         │   ├── services/
+│   ├── clips/            │   │   ├── youtube/
+│   └── deep-analysis/    │   │   └── clips/
+├── components/           │   ├── agents/
+├── hooks/                │   ├── utils/
+└── lib/                  │   ├── db/
+    ├── api.ts            │   └── workers/
+    └── types.ts          └── data/
 ```
 
 ## Tech Stack
@@ -81,22 +84,53 @@ youtube-saas/
 │   │   │   ├── analytics.py     # /api/channel, /api/videos, /api/agent
 │   │   │   ├── seo.py           # /api/seo endpoints
 │   │   │   ├── clips.py         # /api/clips endpoints
-│   │   │   ├── channel_analysis.py  # /api/analysis endpoints
-│   │   │   └── youtube_videos.py    # /api/youtube endpoints
+│   │   │   ├── channel_analysis.py  # Re-exports from analysis/
+│   │   │   ├── admin.py         # Re-exports from admin/
+│   │   │   ├── admin/           # Modular admin endpoints
+│   │   │   │   ├── __init__.py  # Main admin router
+│   │   │   │   ├── users.py     # User management
+│   │   │   │   ├── seo.py       # SEO tracking (SerpBear)
+│   │   │   │   ├── analytics.py # API costs, metrics
+│   │   │   │   └── subscriptions.py # Billing admin
+│   │   │   └── analysis/        # Modular analysis endpoints
+│   │   │       ├── __init__.py  # Main analysis router
+│   │   │       ├── deep.py      # Deep analysis
+│   │   │       ├── patterns.py  # Pattern detection
+│   │   │       ├── causal.py    # Causal analytics
+│   │   │       └── insights.py  # Content optimizer, transcripts
+│   │   ├── services/
+│   │   │   ├── youtube/         # Modular YouTube API services
+│   │   │   │   ├── __init__.py  # YouTubeTools unified class
+│   │   │   │   ├── base.py      # Base service, retry decorator
+│   │   │   │   ├── video_service.py     # Video operations
+│   │   │   │   ├── analytics_service.py # Demographics, traffic
+│   │   │   │   ├── seo_service.py       # SEO analysis
+│   │   │   │   └── comment_service.py   # Comments
+│   │   │   ├── clips/           # Modular clip services
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── detector.py  # Clip detection
+│   │   │   │   ├── renderer.py  # FFmpeg rendering
+│   │   │   │   └── types.py     # Clip data types
+│   │   │   └── serpbear.py      # SerpBear SEO tracking client
 │   │   ├── agents/
 │   │   │   ├── analytics_agent.py   # LangGraph analytics agent
 │   │   │   ├── seo_agent.py         # SEO optimization agent
-│   │   │   └── clips_agent.py       # Viral clips agent
+│   │   │   ├── clips_agent.py       # Viral clips agent
+│   │   │   ├── comment_agent.py     # Comment analysis agent
+│   │   │   └── alert_agent.py       # Channel alert agent
+│   │   ├── utils/               # Shared utilities
+│   │   │   ├── __init__.py
+│   │   │   ├── error_handling.py    # Error handler decorator
+│   │   │   └── llm_utils.py         # LLM helpers, JSON extraction
 │   │   ├── tools/
-│   │   │   ├── youtube_tools.py     # YouTube API wrapper
-│   │   │   ├── youtube_api.py       # Low-level API helpers
-│   │   │   ├── clips_generator.py   # Clip detection/rendering
+│   │   │   ├── clips_generator.py   # Re-exports from services/clips
 │   │   │   ├── transcript_analyzer.py
 │   │   │   ├── deep_analytics.py
 │   │   │   └── content_optimizer.py
 │   │   ├── db/
-│   │   │   ├── models.py        # SQLAlchemy models (Job, Cache, Transcript)
-│   │   │   └── repository.py    # Database operations
+│   │   │   ├── models.py            # SQLAlchemy models
+│   │   │   ├── repository.py        # Database operations
+│   │   │   └── llm_cache_repository.py  # LLM response caching
 │   │   └── workers/
 │   │       ├── manager.py       # Background job manager
 │   │       └── tasks.py         # Async task definitions
@@ -115,13 +149,35 @@ youtube-saas/
 │   │   ├── analysis/            # Channel analysis
 │   │   ├── optimize/            # SEO optimization
 │   │   ├── clips/               # Clips generator
+│   │   ├── audience/            # Audience demographics
+│   │   ├── comments/            # Comment analysis
 │   │   ├── deep-analysis/       # Advanced analytics
 │   │   ├── why-it-works/        # Causal analysis
-│   │   └── advanced-insights/   # AI insights
+│   │   ├── advanced-insights/   # AI insights
+│   │   └── (marketing)/         # Landing pages
+│   │       ├── tubebuddy-alternative/
+│   │       └── vidiq-alternative/
 │   ├── components/
-│   │   └── AIChatPopup.tsx      # Global AI chat widget
+│   │   ├── landing/
+│   │   │   └── WaitlistForm.tsx # Email waitlist form
+│   │   ├── dashboard/
+│   │   │   ├── ViewsTrendChart.tsx
+│   │   │   └── SubscriberChart.tsx
+│   │   └── layout/
+│   │       └── Sidebar.tsx
+│   ├── hooks/
+│   │   ├── index.ts             # Hook exports
+│   │   ├── useAuth.ts           # Authentication hook
+│   │   ├── useAsync.ts          # Async state management
+│   │   ├── useForm.ts           # Form handling
+│   │   ├── useLocalStorage.ts   # LocalStorage hook
+│   │   └── useDashboardData.ts  # Dashboard data fetching
 │   ├── lib/
-│   │   └── api.ts               # API client class
+│   │   ├── api.ts               # API client class
+│   │   ├── config.ts            # Frontend configuration
+│   │   ├── types.ts             # Consolidated TypeScript types
+│   │   ├── utils.ts             # Utility functions (formatNumber, etc.)
+│   │   └── supabase.ts          # Supabase client (waitlist)
 │   ├── package.json
 │   ├── tailwind.config.ts
 │   └── tsconfig.json
@@ -252,12 +308,15 @@ LANGCHAIN_PROJECT=
 - Use `@youtube_api_retry` decorator for API calls (handles rate limits)
 - Logging with `logger = logging.getLogger(__name__)`
 - JSON extraction from LLM responses uses `_extract_json_from_response()` helper
+- Import YouTubeTools from `services.youtube` (NOT `tools.youtube_tools`)
 
 ### TypeScript (Frontend)
 - Functional components with hooks
 - `"use client"` directive for client components
 - API calls through `lib/api.ts` client class
 - Credentials included in fetch requests (`credentials: "include"`)
+- Shared types in `lib/types.ts`
+- Utility functions in `lib/utils.ts` (formatNumber, formatDate, etc.)
 
 ### LangGraph Agents
 - State defined as TypedDict
@@ -288,6 +347,12 @@ Normalized video data
 - Computed fields: like_ratio, engagement_score
 - Updated during background sync
 
+### LLMCache
+Caches LLM responses to reduce API costs
+- Keyed by SHA-256 hash of prompt
+- TTL-based expiration
+- Hit count tracking for analytics
+
 ## Important Notes
 
 ### YouTube API Quotas
@@ -305,11 +370,16 @@ Normalized video data
 - `tenacity` library handles retries automatically
 - Max 5 attempts with 1-60s wait
 
-### CORS
-Frontend origins whitelisted:
-- http://localhost:3000
-- http://127.0.0.1:3000
-- Production frontend URL (from settings)
+### CORS Configuration
+Frontend origins whitelisted in `backend/app/main.py`:
+- `https://tubegrow.io`
+- `https://www.tubegrow.io`
+- `http://localhost:3000`
+- `http://localhost:3001`
+- `http://127.0.0.1:3000`
+- `http://127.0.0.1:3001`
+
+**IMPORTANT:** Frontend must call `https://api.tubegrow.io`, NOT the Railway internal URL.
 
 ## Testing
 
@@ -356,8 +426,26 @@ git push origin main
 **DO NOT use `railway up`** - it has a bug that passes `$PORT` as literal string instead of expanding it. Always deploy by pushing to GitHub - Railway auto-deploys from the connected repo.
 
 ### Vercel (Frontend)
-- Auto-deploys from Git pushes
-- Environment variable: `NEXT_PUBLIC_API_URL=https://api.tubegrow.io`
+- Auto-deploys from Git pushes to `main` branch
+- Project: `frontend` in `palinos-projects`
+
+**Vercel CLI Commands:**
+```bash
+cd frontend
+
+# List environment variables
+vercel env ls
+
+# Update environment variable
+echo "https://api.tubegrow.io" | vercel env add NEXT_PUBLIC_API_URL production --force
+
+# Trigger redeploy (via empty commit if CLI deploy fails)
+git commit --allow-empty -m "chore: trigger redeploy" && git push origin main
+```
+
+**Environment Variables (Vercel):**
+- `NEXT_PUBLIC_API_URL` = `https://api.tubegrow.io` (MUST be api.tubegrow.io, NOT Railway internal URL)
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` = Google Analytics ID
 
 ### Google OAuth Configuration
 - Client: `TubeGrow Production` (Web application)
@@ -373,6 +461,29 @@ SECRET_KEY=<secret>
 ENCRYPTION_KEY=<secret>
 FRONTEND_URL=https://tubegrow.io
 ```
+
+## Common Issues & Fixes
+
+### CORS Errors
+**Symptom:** `Access-Control-Allow-Origin` errors in browser console
+**Cause:** Frontend calling wrong backend URL or origin not whitelisted
+**Fix:**
+1. Ensure `NEXT_PUBLIC_API_URL` on Vercel is `https://api.tubegrow.io`
+2. Check CORS origins in `backend/app/main.py`
+
+### 403 Forbidden Errors
+**Symptom:** API returns 403 for authenticated endpoints
+**Cause:** Session expired or cookies not being sent
+**Fix:** Sign out and sign back in with Google OAuth
+
+### Import Errors After Refactor
+**Symptom:** `ModuleNotFoundError: No module named 'app.tools.youtube_tools'`
+**Cause:** Old import path used after youtube_tools was split
+**Fix:** Change imports from `..tools.youtube_tools` to `..services.youtube`
+
+### Build Failures (TypeScript)
+**Symptom:** Type errors during `npm run build`
+**Fix:** Check that all component props match their interfaces, especially for shared components like `WaitlistForm`
 
 ### Required production changes:
 1. Set DATABASE_URL for PostgreSQL (optional - using SQLite currently)
