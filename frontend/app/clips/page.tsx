@@ -56,8 +56,14 @@ export default function ClipsPage() {
 
   const loadVideos = async () => {
     try {
-      const data = await api.listYouTubeVideos(50);
-      setVideos(data.videos || []);
+      // Use same endpoint as /videos page which is known to work
+      const data = await api.getRecentVideos(100);
+      // Map to VideoItem format (add duration field if missing)
+      const mapped = (data as any[]).map((v: any) => ({
+        ...v,
+        duration: v.duration || "",
+      }));
+      setVideos(mapped);
     } catch (error) {
       console.error("Error loading videos:", error);
     }
