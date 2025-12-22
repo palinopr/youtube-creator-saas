@@ -4,9 +4,9 @@ import type { BlogPost } from "./blog";
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-optimize-youtube-video-for-seo-2025",
-    title: "How to Optimize a YouTube Video for SEO in 2025 (Step-by-Step)",
+    title: "YouTube SEO in 2025: The 7-Step Ranking Checklist (With Templates)",
     description:
-      "A step-by-step 2025 guide to optimizing a YouTube video for SEO: keyword intent, titles, descriptions, tags, hashtags, and how to measure results.",
+      "Get more views with this proven YouTube SEO checklist. Title formulas, description templates, and tag strategies that actually work in 2025.",
     category: "SEO",
     date: "2025-12-12T10:00:00Z",
     readTime: "13 min read",
