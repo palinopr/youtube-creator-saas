@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import { api } from "@/lib/api";
+import { useAuth } from "@/hooks/useAuth";
 
 // Types and utilities
 import { VideoItem } from "./types";
@@ -24,6 +25,9 @@ import {
 import { useClipGeneration, useRenderQueue } from "./hooks";
 
 export default function ClipsPage() {
+  // Auth state - wait for authentication before loading videos
+  const { isAuthenticated } = useAuth({ requireAuth: true });
+
   // Video list state
   const [videos, setVideos] = useState<VideoItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -43,10 +47,12 @@ export default function ClipsPage() {
   // Render queue hook
   const { renderJobs, renderClip, downloadClip, clearJobs } = useRenderQueue();
 
-  // Load videos on mount
+  // Load videos when authenticated
   useEffect(() => {
-    loadVideos();
-  }, []);
+    if (isAuthenticated) {
+      loadVideos();
+    }
+  }, [isAuthenticated]);
 
   const loadVideos = async () => {
     try {
