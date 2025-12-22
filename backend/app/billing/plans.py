@@ -19,10 +19,10 @@ PLANS: dict[str, dict[str, Any]] = {
             # Usage limits (-1 = unlimited)
             "videos_per_month": 10,
             "ai_queries_per_month": 20,
-            "clips_per_month": 5,  # Allow some clips for free users
+            "clips_per_month": 0,
 
             # Feature flags
-            "clips_generation": True,
+            "clips_generation": False,
             "seo_optimization": False,
             "deep_analysis": False,
             "causal_analysis": False,
@@ -34,8 +34,8 @@ PLANS: dict[str, dict[str, Any]] = {
         "highlights": [
             "10 video analyses/month",
             "20 AI queries/month",
-            "5 AI clips/month",
             "Basic channel stats",
+            "Community support",
         ],
     },
     "starter": {
