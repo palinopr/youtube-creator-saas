@@ -118,7 +118,7 @@ export default function AIChatPopup() {
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
+                <MessageCircle className="w-5 h-5 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold text-white text-sm">AI Assistant</h3>
