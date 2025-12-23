@@ -346,21 +346,59 @@ function Dashboard() {
     };
   }, [analyticsOverview]);
 
-  // Identify underperforming videos
+  // Top performing videos - sorted by views (highest first)
+  const topPerformingVideos = useMemo(() => {
+    if (!recentVideos || recentVideos.length === 0) return [];
+
+    return [...recentVideos]
+      .filter(v => (v.view_count || 0) > 0) // Only videos with actual views
+      .sort((a, b) => (b.view_count || 0) - (a.view_count || 0))
+      .slice(0, 3);
+  }, [recentVideos]);
+
+  // Identify underperforming videos - videos with significantly fewer views than expected
   const underperformingVideos = useMemo(() => {
     if (!recentVideos || recentVideos.length === 0) return [];
+
+    // Calculate average views per hour for the channel (based on videos with views)
+    const videosWithViews = recentVideos.filter(v => (v.view_count || 0) > 0);
+    if (videosWithViews.length === 0) return [];
+
+    const avgViewsPerVideo = videosWithViews.reduce((sum, v) => sum + (v.view_count || 0), 0) / videosWithViews.length;
 
     return recentVideos
       .filter(v => {
         const publishDate = new Date(v.published_at);
         const hoursSince = (Date.now() - publishDate.getTime()) / 3600000;
-        // Recent videos (last 7 days) that are below average
+
+        // Only check videos from last 7 days
         if (hoursSince > 168) return false;
-        const velocity = trendingVideos.find(t => t.id === v.video_id)?.velocity_multiplier || 0;
-        return velocity < 0.8; // Below 80% of expected views
+
+        // Skip very new videos (less than 6 hours) - they need time to get views
+        if (hoursSince < 6) return false;
+
+        const viewCount = v.view_count || 0;
+
+        // Calculate expected views based on age
+        // Older videos should have more views
+        const ageMultiplier = Math.min(hoursSince / 24, 7); // Max 7 days factor
+        const expectedViews = avgViewsPerVideo * (ageMultiplier / 7);
+
+        // Flag if views are less than 60% of expected
+        return viewCount < expectedViews * 0.6 && expectedViews > 100;
       })
+      .map(v => {
+        const publishDate = new Date(v.published_at);
+        const hoursSince = (Date.now() - publishDate.getTime()) / 3600000;
+        const ageMultiplier = Math.min(hoursSince / 24, 7);
+        const expectedViews = avgViewsPerVideo * (ageMultiplier / 7);
+        const velocityPercent = expectedViews > 0 ? ((v.view_count || 0) / expectedViews) * 100 : 0;
+
+        return { ...v, velocityPercent: Math.round(velocityPercent) };
+      })
+      .sort((a, b) => a.velocityPercent - b.velocityPercent) // Worst first
       .slice(0, 3);
-  }, [recentVideos, trendingVideos]);
+  }, [recentVideos]);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex">
@@ -558,28 +596,35 @@ function Dashboard() {
                         <div className="h-3 bg-white/10 rounded w-1/2" />
                       </div>
                     ))
-                  ) : recentVideos.slice(0, 3).map((video, index) => (
-                    <Link
-                      key={video.video_id}
-                      href={`/video/${video.video_id}`}
-                      className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
-                    >
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                        index === 0 ? 'bg-yellow-500/20 text-yellow-400' :
-                        index === 1 ? 'bg-gray-400/20 text-gray-300' :
-                        'bg-orange-700/20 text-orange-400'
-                      }`}>
-                        {index + 1}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium truncate">{video.title}</p>
-                        <p className="text-xs text-white/40">
-                          {formatNumber(video.view_count)} views
-                        </p>
-                      </div>
-                      <ChevronRight className="w-4 h-4 text-white/20" />
-                    </Link>
-                  ))}
+                  ) : topPerformingVideos.length > 0 ? (
+                    topPerformingVideos.map((video, index) => (
+                      <Link
+                        key={video.video_id}
+                        href={`/video/${video.video_id}`}
+                        className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                      >
+                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                          index === 0 ? 'bg-yellow-500/20 text-yellow-400' :
+                          index === 1 ? 'bg-gray-400/20 text-gray-300' :
+                          'bg-orange-700/20 text-orange-400'
+                        }`}>
+                          {index + 1}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium truncate">{video.title}</p>
+                          <p className="text-xs text-white/40">
+                            {formatNumber(video.view_count)} views
+                          </p>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-white/20" />
+                      </Link>
+                    ))
+                  ) : (
+                    <div className="p-8 text-center">
+                      <TrendingUp className="w-8 h-8 text-white/20 mx-auto mb-2" />
+                      <p className="text-sm text-white/60">No video data yet</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -600,27 +645,24 @@ function Dashboard() {
                       </div>
                     ))
                   ) : underperformingVideos.length > 0 ? (
-                    underperformingVideos.map((video) => {
-                      const velocity = trendingVideos.find(t => t.id === video.video_id)?.velocity_multiplier || 0;
-                      return (
-                        <Link
-                          key={video.video_id}
-                          href={`/video/${video.video_id}`}
-                          className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
-                        >
-                          <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
-                            <TrendingDown className="w-3 h-3 text-red-400" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium truncate">{video.title}</p>
-                            <p className="text-xs text-red-400">
-                              {(velocity * 100).toFixed(0)}% of expected views
-                            </p>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-white/20" />
-                        </Link>
-                      );
-                    })
+                    underperformingVideos.map((video) => (
+                      <Link
+                        key={video.video_id}
+                        href={`/video/${video.video_id}`}
+                        className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                      >
+                        <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
+                          <TrendingDown className="w-3 h-3 text-red-400" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium truncate">{video.title}</p>
+                          <p className="text-xs text-red-400">
+                            {video.velocityPercent}% of expected views
+                          </p>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-white/20" />
+                      </Link>
+                    ))
                   ) : (
                     <div className="p-8 text-center">
                       <Check className="w-8 h-8 text-green-400 mx-auto mb-2" />
