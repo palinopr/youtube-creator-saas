@@ -297,12 +297,15 @@ class AlertAgent:
         try:
             session = SessionLocal()
             try:
-                existing = session.query(Alert).filter(
+                # Fetch all milestone alerts and filter in Python
+                existing_alerts = session.query(Alert).filter(
                     Alert.user_id == self.user_id,
-                    Alert.alert_type == AlertType.MILESTONE,
-                    Alert.data["milestone"].astext.cast(int) == milestone
-                ).first()
-                return existing is not None
+                    Alert.alert_type == AlertType.MILESTONE
+                ).all()
+                for alert in existing_alerts:
+                    if alert.data and alert.data.get("milestone") == milestone:
+                        return True
+                return False
             finally:
                 session.close()
         except Exception as e:
@@ -375,12 +378,17 @@ class AlertAgent:
             if alert_type == AlertType.MILESTONE:
                 milestone = data.get("milestone")
                 if milestone:
-                    existing = session.query(Alert).filter(
+                    # Fetch all milestone alerts for user and filter in Python
+                    # This avoids database-specific JSON query syntax issues
+                    existing_alerts = session.query(Alert).filter(
                         Alert.user_id == self.user_id,
-                        Alert.alert_type == AlertType.MILESTONE,
-                        Alert.data["milestone"].astext.cast(int) == milestone
-                    ).first()
-                    return existing is not None
+                        Alert.alert_type == AlertType.MILESTONE
+                    ).all()
+
+                    for alert in existing_alerts:
+                        if alert.data and alert.data.get("milestone") == milestone:
+                            return True
+                    return False
 
             # For other alerts, check if same title exists in last 24 hours
             # (allows similar alerts after a day passes)
