@@ -15,6 +15,8 @@ import logging
 
 from ..services.youtube import YouTubeTools
 from ..config import get_settings
+from ..db.models import AgentType
+from ..utils.cost_tracking import create_cost_tracking_callback
 
 # Load environment variables
 load_dotenv()
@@ -57,13 +59,27 @@ Provide specific, actionable recommendations. Be concise but thorough.
 Always format your recommendations clearly with bullet points or numbered lists.
 Include the EXACT suggested title/description/tags when making recommendations."""
 
-    def __init__(self, youtube_service: Resource, analytics_service: Optional[Resource] = None):
+    def __init__(
+        self,
+        youtube_service: Resource,
+        analytics_service: Optional[Resource] = None,
+        user_id: Optional[str] = None,
+    ):
         self.tools = YouTubeTools(youtube_service, analytics_service)
         settings = get_settings()
+
+        # Create cost tracking callback
+        self.cost_callback = create_cost_tracking_callback(
+            agent_type=AgentType.SEO,
+            user_id=user_id,
+            endpoint="/api/seo",
+        )
+
         self.llm = ChatOpenAI(
             model="gpt-4o",
             temperature=0,  # Deterministic: same video = same suggestions
-            api_key=settings.openai_api_key
+            api_key=settings.openai_api_key,
+            callbacks=[self.cost_callback],
         )
 
     def _extract_json_from_response(self, content: str) -> Optional[Dict[str, Any]]:

@@ -20,6 +20,8 @@ from googleapiclient.discovery import Resource
 
 from ..config import get_settings
 from ..services.youtube import YouTubeTools
+from ..db.models import AgentType
+from ..utils.cost_tracking import create_cost_tracking_callback
 
 settings = get_settings()
 logger = logging.getLogger(__name__)
@@ -44,12 +46,26 @@ class CommentAgent:
     Identifies notable commenters (channels with 1K+ subscribers) for collaboration opportunities.
     """
 
-    def __init__(self, youtube_service: Resource, analytics_service: Optional[Resource] = None):
+    def __init__(
+        self,
+        youtube_service: Resource,
+        analytics_service: Optional[Resource] = None,
+        user_id: Optional[str] = None,
+    ):
         self.youtube_tools = YouTubeTools(youtube_service, analytics_service)
+
+        # Create cost tracking callback
+        self.cost_callback = create_cost_tracking_callback(
+            agent_type=AgentType.COMMENTS,
+            user_id=user_id,
+            endpoint="/api/comments",
+        )
+
         self.llm = ChatOpenAI(
             model="gpt-4o",  # Use full GPT-4o for better sentiment analysis
             api_key=settings.openai_api_key,
-            temperature=0.3  # Slightly creative but mostly consistent
+            temperature=0.3,  # Slightly creative but mostly consistent
+            callbacks=[self.cost_callback],
         )
 
     async def analyze_comments(

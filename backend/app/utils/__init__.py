@@ -22,6 +22,10 @@ from .llm_utils import (
     LLMRateLimitError,
     LLMTimeoutError,
 )
+from .cost_tracking import (
+    CostTrackingCallback,
+    create_cost_tracking_callback,
+)
 
 __all__ = [
     # Error handling
@@ -42,4 +46,7 @@ __all__ = [
     "JSONExtractionError",
     "LLMRateLimitError",
     "LLMTimeoutError",
+    # Cost tracking
+    "CostTrackingCallback",
+    "create_cost_tracking_callback",
 ]

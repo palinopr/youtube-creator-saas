@@ -11,6 +11,8 @@ from langgraph.graph import StateGraph, END
 
 from ..config import get_settings
 from ..tools.clips_generator import ClipSuggestion, ClipSegment
+from ..db.models import AgentType
+from ..utils.cost_tracking import create_cost_tracking_callback
 
 # Define the state for the graph
 class ClipState(TypedDict):
@@ -33,12 +35,21 @@ class ViralClipsAgent:
     Workflow: Finder -> Refiner -> END
     """
 
-    def __init__(self):
+    def __init__(self, user_id: Optional[str] = None):
         settings = get_settings()
+
+        # Create cost tracking callback
+        self.cost_callback = create_cost_tracking_callback(
+            agent_type=AgentType.CLIPS,
+            user_id=user_id,
+            endpoint="/api/clips",
+        )
+
         self.llm = ChatOpenAI(
             model="gpt-4o",
             temperature=0.3,  # Lower temp for more consistent viral patterns
-            api_key=settings.openai_api_key
+            api_key=settings.openai_api_key,
+            callbacks=[self.cost_callback],
         )
         self.workflow = self._build_graph()
 

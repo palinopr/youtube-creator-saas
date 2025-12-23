@@ -11,6 +11,8 @@ from googleapiclient.discovery import Resource
 
 from ..config import get_settings
 from ..services.youtube import YouTubeTools
+from ..db.models import AgentType
+from ..utils.cost_tracking import create_cost_tracking_callback
 
 settings = get_settings()
 
@@ -23,13 +25,27 @@ class AgentState(TypedDict):
 
 class AnalyticsAgent:
     """LangGraph-powered analytics agent for YouTube channels."""
-    
-    def __init__(self, youtube_service: Resource, analytics_service: Optional[Resource] = None):
+
+    def __init__(
+        self,
+        youtube_service: Resource,
+        analytics_service: Optional[Resource] = None,
+        user_id: Optional[str] = None,
+    ):
         self.youtube_tools = YouTubeTools(youtube_service, analytics_service)
+
+        # Create cost tracking callback
+        self.cost_callback = create_cost_tracking_callback(
+            agent_type=AgentType.ANALYTICS,
+            user_id=user_id,
+            endpoint="/api/agent",
+        )
+
         self.llm = ChatOpenAI(
             model="gpt-4o-mini",
             api_key=settings.openai_api_key,
-            temperature=0  # Deterministic: same input = same output
+            temperature=0,  # Deterministic: same input = same output
+            callbacks=[self.cost_callback],
         )
         self.graph = self._build_graph()
     
