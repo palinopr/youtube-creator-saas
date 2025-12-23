@@ -129,7 +129,8 @@ export default function AdminAPICostsPage() {
     }
   };
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: number | null | undefined) => {
+    if (amount == null) return "$0.00";
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
@@ -138,11 +139,13 @@ export default function AdminAPICostsPage() {
     }).format(amount);
   };
 
-  const formatNumber = (num: number) => {
+  const formatNumber = (num: number | null | undefined) => {
+    if (num == null) return "0";
     return new Intl.NumberFormat("en-US").format(num);
   };
 
-  const formatPercent = (value: number) => {
+  const formatPercent = (value: number | null | undefined) => {
+    if (value == null) return "+0.0%";
     return `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`;
   };
 
@@ -233,13 +236,13 @@ export default function AdminAPICostsPage() {
         <div className="bg-gradient-to-br from-cyan-600/20 to-cyan-800/10 border border-cyan-500/30 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
             <DollarSign className="w-8 h-8 text-cyan-400" />
-            <div className={`flex items-center gap-1 text-sm ${summary.trends.month_change <= 0 ? "text-green-400" : "text-red-400"}`}>
-              {summary.trends.month_change <= 0 ? (
+            <div className={`flex items-center gap-1 text-sm ${(summary.trends?.month_change ?? 0) <= 0 ? "text-green-400" : "text-red-400"}`}>
+              {(summary.trends?.month_change ?? 0) <= 0 ? (
                 <TrendingDown className="w-4 h-4" />
               ) : (
                 <TrendingUp className="w-4 h-4" />
               )}
-              {formatPercent(summary.trends.month_change)}
+              {formatPercent(summary.trends?.month_change)}
             </div>
           </div>
           <p className="text-3xl font-bold">{formatCurrency(summary.total_cost)}</p>
@@ -250,16 +253,16 @@ export default function AdminAPICostsPage() {
         <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/10 border border-blue-500/30 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
             <Clock className="w-8 h-8 text-blue-400" />
-            <div className={`flex items-center gap-1 text-sm ${summary.trends.today_change <= 0 ? "text-green-400" : "text-red-400"}`}>
-              {summary.trends.today_change <= 0 ? (
+            <div className={`flex items-center gap-1 text-sm ${(summary.trends?.today_change ?? 0) <= 0 ? "text-green-400" : "text-red-400"}`}>
+              {(summary.trends?.today_change ?? 0) <= 0 ? (
                 <TrendingDown className="w-4 h-4" />
               ) : (
                 <TrendingUp className="w-4 h-4" />
               )}
-              {formatPercent(summary.trends.today_change)}
+              {formatPercent(summary.trends?.today_change)}
             </div>
           </div>
-          <p className="text-3xl font-bold">{formatCurrency(summary.trends.today)}</p>
+          <p className="text-3xl font-bold">{formatCurrency(summary.trends?.today)}</p>
           <p className="text-sm text-gray-400">Today&apos;s Cost</p>
         </div>
 
@@ -286,20 +289,20 @@ export default function AdminAPICostsPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="bg-white/5 border border-white/10 rounded-xl p-4">
           <p className="text-sm text-gray-400">Yesterday</p>
-          <p className="text-xl font-bold">{formatCurrency(summary.trends.yesterday)}</p>
+          <p className="text-xl font-bold">{formatCurrency(summary.trends?.yesterday)}</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-xl p-4">
           <p className="text-sm text-gray-400">This Week</p>
-          <p className="text-xl font-bold">{formatCurrency(summary.trends.this_week)}</p>
-          <p className={`text-xs ${summary.trends.week_change <= 0 ? "text-green-400" : "text-red-400"}`}>
-            {formatPercent(summary.trends.week_change)} vs last week
+          <p className="text-xl font-bold">{formatCurrency(summary.trends?.this_week)}</p>
+          <p className={`text-xs ${(summary.trends?.week_change ?? 0) <= 0 ? "text-green-400" : "text-red-400"}`}>
+            {formatPercent(summary.trends?.week_change)} vs last week
           </p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-xl p-4">
           <p className="text-sm text-gray-400">This Month</p>
-          <p className="text-xl font-bold">{formatCurrency(summary.trends.this_month)}</p>
-          <p className={`text-xs ${summary.trends.month_change <= 0 ? "text-green-400" : "text-red-400"}`}>
-            {formatPercent(summary.trends.month_change)} vs last month
+          <p className="text-xl font-bold">{formatCurrency(summary.trends?.this_month)}</p>
+          <p className={`text-xs ${(summary.trends?.month_change ?? 0) <= 0 ? "text-green-400" : "text-red-400"}`}>
+            {formatPercent(summary.trends?.month_change)} vs last month
           </p>
         </div>
       </div>
@@ -309,7 +312,7 @@ export default function AdminAPICostsPage() {
         <div className="bg-white/5 border border-white/10 rounded-xl p-6">
           <h2 className="text-lg font-semibold mb-6">Cost by Agent Type</h2>
           <div className="space-y-4">
-            {summary.by_agent.map((item) => {
+            {(summary.by_agent || []).map((item) => {
               const percentage = summary.total_cost > 0 ? (item.cost / summary.total_cost) * 100 : 0;
               return (
                 <div key={item.agent}>
@@ -321,7 +324,7 @@ export default function AdminAPICostsPage() {
                     </div>
                     <div className="text-right">
                       <span className="font-medium">{formatCurrency(item.cost)}</span>
-                      <span className="text-gray-500 ml-2">({percentage.toFixed(1)}%)</span>
+                      <span className="text-gray-500 ml-2">({(percentage ?? 0).toFixed(1)}%)</span>
                     </div>
                   </div>
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -340,7 +343,7 @@ export default function AdminAPICostsPage() {
         <div className="bg-white/5 border border-white/10 rounded-xl p-6">
           <h2 className="text-lg font-semibold mb-6">Cost by Model</h2>
           <div className="space-y-4">
-            {summary.by_model.map((item) => {
+            {(summary.by_model || []).map((item) => {
               const percentage = summary.total_cost > 0 ? (item.cost / summary.total_cost) * 100 : 0;
               return (
                 <div key={item.model}>
@@ -352,7 +355,7 @@ export default function AdminAPICostsPage() {
                     </div>
                     <div className="text-right">
                       <span className="font-medium">{formatCurrency(item.cost)}</span>
-                      <span className="text-gray-500 ml-2">({percentage.toFixed(1)}%)</span>
+                      <span className="text-gray-500 ml-2">({(percentage ?? 0).toFixed(1)}%)</span>
                     </div>
                   </div>
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -370,7 +373,7 @@ export default function AdminAPICostsPage() {
           <div className="mt-6 pt-6 border-t border-white/10">
             <p className="text-sm text-gray-400 mb-3">Current Pricing (per 1M tokens)</p>
             <div className="grid grid-cols-2 gap-2 text-xs">
-              {Object.entries(summary.pricing).map(([model, prices]) => (
+              {Object.entries(summary.pricing || {}).map(([model, prices]) => (
                 <div key={model} className="bg-white/5 rounded px-2 py-1">
                   <span className="text-gray-300">{model}:</span>
                   <span className="text-green-400 ml-1">${prices.input}</span>
