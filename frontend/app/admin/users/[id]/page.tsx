@@ -49,7 +49,7 @@ interface UserDetails {
   };
   channels: Array<{
     id: string;
-    title: string;
+    channel_name: string | null;
     subscriber_count: number;
     video_count: number;
   }>;
