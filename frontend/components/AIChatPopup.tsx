@@ -9,7 +9,8 @@ import {
   User,
   Maximize2,
   Minimize2,
-  Trash2
+  Trash2,
+  MessageCircle,
 } from "lucide-react";
 import { api } from "@/lib/api";
 
@@ -97,7 +98,7 @@ export default function AIChatPopup() {
         onClick={() => setIsOpen(true)}
         className={`fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full shadow-lg shadow-purple-500/30 flex items-center justify-center hover:scale-110 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
       >
-        <Bot className="w-6 h-6 text-white" />
+        <MessageCircle className="w-6 h-6 text-white" />
         {/* Pulse animation */}
         <span className="absolute inset-0 rounded-full bg-purple-500 animate-ping opacity-30" />
       </button>
