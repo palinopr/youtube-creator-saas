@@ -50,6 +50,11 @@ const SubscriberChart = dynamic(
   { loading: () => <ChartSkeleton />, ssr: false }
 );
 
+const EngagementChart = dynamic(
+  () => import("@/components/dashboard/EngagementChart").then((mod) => ({ default: mod.EngagementChart })),
+  { loading: () => <ChartSkeleton />, ssr: false }
+);
+
 export default function CommandCenterPage() {
   const { isAuthenticated, isLoading } = useAuth({
     requireAuth: true,
@@ -556,17 +561,25 @@ function Dashboard() {
             </div>
           </div>
 
-          {/* Middle Row: Performance Chart + Viral Radar */}
+          {/* Middle Row: Performance Charts + Viral Radar */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4">
-            {/* Performance Chart - Takes 2 columns */}
-            <div className="lg:col-span-2">
+            {/* Views Trend Chart */}
+            <div className="lg:col-span-1">
               <ViewsTrendChart
                 dailyData={analyticsOverview?.daily_data}
                 isLoading={isLoading}
               />
             </div>
 
-            {/* Viral Radar - Takes 1 column */}
+            {/* Engagement Chart (Likes/Comments/Shares) */}
+            <div className="lg:col-span-1">
+              <EngagementChart
+                dailyData={analyticsOverview?.daily_data}
+                isLoading={isLoading}
+              />
+            </div>
+
+            {/* Viral Radar */}
             <div className="lg:col-span-1">
               <ViralRadar
                 videos={trendingVideos}

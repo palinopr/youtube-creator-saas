@@ -4,3 +4,4 @@ export { ChartSkeleton } from "./ChartSkeleton";
 export { ViewsTrendChart } from "./ViewsTrendChart";
 export { SubscriberChart } from "./SubscriberChart";
 export { VideoSpotlight } from "./VideoSpotlight";
+export { EngagementChart } from "./EngagementChart";
