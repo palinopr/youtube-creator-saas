@@ -23,6 +23,7 @@ from .routers.revenue import router as revenue_router
 from .routers.comments import router as comments_router
 from .routers.alerts import router as alerts_router
 from .routers.public_tools import router as public_tools_router
+from .routers.waitlist import router as waitlist_router
 from .v1.routes import router as v1_router
 from .config import get_settings
 from .workers.manager import start_workers, stop_workers
@@ -121,6 +122,7 @@ app.include_router(revenue_router)
 app.include_router(comments_router)
 app.include_router(alerts_router)
 app.include_router(public_tools_router)
+app.include_router(waitlist_router)
 app.include_router(v1_router)
 
 
