@@ -26,6 +26,7 @@ import {
   DollarSign,
   AlertTriangle,
   RefreshCw,
+  Activity,
 } from "lucide-react";
 import Link from "next/link";
 import { ChartSkeleton } from "@/components/dashboard";
@@ -34,7 +35,6 @@ import { api } from "@/lib/api";
 import { useAuth } from "@/hooks/useAuth";
 import { Logo } from "@/components/ui/Logo";
 import Sidebar from "@/components/layout/Sidebar";
-import HealthScore from "@/components/dashboard/HealthScore";
 import AlertsPanel, { Alert } from "@/components/dashboard/AlertsPanel";
 import ViralRadar, { TrendingVideo, calculateVideoVelocity } from "@/components/dashboard/ViralRadar";
 import { InlineToast } from "@/components/ui/Toast";
@@ -482,63 +482,75 @@ function Dashboard() {
             </div>
           )}
 
-          {/* Top Row: Health Score + Quick Stats */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-4">
-            {/* Health Score - Takes 1 column */}
-            <div className="lg:col-span-1">
-              <HealthScore metrics={healthMetrics} loading={isLoading} />
-            </div>
-
-            {/* Quick Stats - Compact Horizontal Bar */}
-            <div className="lg:col-span-3 bg-white/5 border border-white/10 rounded-xl p-3 flex items-center">
-              <div className="flex items-center divide-x divide-white/10 w-full">
-                {/* Views Today */}
-                <div className="flex items-center gap-3 px-4 flex-1">
-                  <Eye className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs text-gray-400">Views Today</p>
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg font-bold text-white">
-                        {isLoading ? "—" : formatNumber(todayStats.views)}
-                      </span>
-                      {!isLoading && todayStats.viewsChange !== 0 && (
-                        <span className={`flex items-center gap-0.5 text-xs ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                          {todayStats.viewsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
-                          {todayStats.viewsChange >= 0 ? '+' : ''}{todayStats.viewsChange}%
-                        </span>
-                      )}
-                    </div>
+          {/* Top Row: Unified Stats Bar with Mini Health Gauge */}
+          <div className="bg-white/5 border border-white/10 rounded-xl p-3 mb-4">
+            <div className="flex items-center divide-x divide-white/10">
+              {/* Mini Health Score */}
+              <div className="flex items-center gap-3 px-4 pr-5">
+                <MiniHealthGauge
+                  score={healthMetrics ? calculateHealthScore(healthMetrics) : 0}
+                  loading={isLoading}
+                />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <Activity className="w-3.5 h-3.5 text-white/40" />
+                    <p className="text-xs text-gray-400">Health</p>
                   </div>
+                  <span
+                    className="text-sm font-semibold"
+                    style={{ color: getHealthColor(healthMetrics ? calculateHealthScore(healthMetrics) : 0) }}
+                  >
+                    {isLoading ? "—" : getHealthLabel(healthMetrics ? calculateHealthScore(healthMetrics) : 0)}
+                  </span>
                 </div>
+              </div>
 
-                {/* Subscribers Today */}
-                <div className="flex items-center gap-3 px-4 flex-1">
-                  <Users className="w-4 h-4 text-red-400 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs text-gray-400">Subs Today</p>
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg font-bold text-white">
-                        {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
-                      </span>
-                      {!isLoading && todayStats.subsChange !== 0 && (
-                        <span className={`flex items-center gap-0.5 text-xs ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                          {todayStats.subsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
-                          {todayStats.subsChange >= 0 ? '+' : ''}{todayStats.subsChange}%
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Watch Time Today */}
-                <div className="flex items-center gap-3 px-4 flex-1">
-                  <Clock className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs text-gray-400">Watch Time</p>
+              {/* Views Today */}
+              <div className="flex items-center gap-3 px-4 flex-1">
+                <Eye className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-xs text-gray-400">Views Today</p>
+                  <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-white">
-                      {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
+                      {isLoading ? "—" : formatNumber(todayStats.views)}
                     </span>
+                    {!isLoading && todayStats.viewsChange !== 0 && (
+                      <span className={`flex items-center gap-0.5 text-xs ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {todayStats.viewsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+                        {todayStats.viewsChange >= 0 ? '+' : ''}{todayStats.viewsChange}%
+                      </span>
+                    )}
                   </div>
+                </div>
+              </div>
+
+              {/* Subscribers Today */}
+              <div className="flex items-center gap-3 px-4 flex-1">
+                <Users className="w-4 h-4 text-red-400 flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-xs text-gray-400">Subs Today</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-white">
+                      {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
+                    </span>
+                    {!isLoading && todayStats.subsChange !== 0 && (
+                      <span className={`flex items-center gap-0.5 text-xs ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {todayStats.subsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+                        {todayStats.subsChange >= 0 ? '+' : ''}{todayStats.subsChange}%
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Watch Time Today */}
+              <div className="flex items-center gap-3 px-4 flex-1">
+                <Clock className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-xs text-gray-400">Watch Time</p>
+                  <span className="text-lg font-bold text-white">
+                    {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
+                  </span>
                 </div>
               </div>
             </div>
@@ -777,7 +789,7 @@ function NavItem({
 
 function VideoRow({ video }: { video: any }) {
   return (
-    <Link 
+    <Link
       href={`/video/${video.video_id}`}
       className="flex gap-4 p-4 hover:bg-white/5 transition-colors group"
     >
@@ -818,5 +830,94 @@ function VideoRow({ video }: { video: any }) {
         <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" />
       </div>
     </Link>
+  );
+}
+
+// Health score calculation (copied from HealthScore component)
+interface HealthMetrics {
+  viewVelocity: number;
+  subscriberGrowth: number;
+  engagementTrend: number;
+  uploadConsistency: number;
+}
+
+function calculateHealthScore(metrics: HealthMetrics): number {
+  const weights = {
+    viewVelocity: 0.30,
+    subscriberGrowth: 0.25,
+    engagementTrend: 0.25,
+    uploadConsistency: 0.20,
+  };
+
+  const normalizedViewVelocity = Math.min(100, Math.max(0, 50 + metrics.viewVelocity / 2));
+  const normalizedSubGrowth = Math.min(100, Math.max(0, 50 + metrics.subscriberGrowth * 5));
+  const normalizedEngagement = Math.min(100, Math.max(0, 50 + metrics.engagementTrend));
+  const normalizedUploadConsistency = metrics.uploadConsistency;
+
+  const score =
+    normalizedViewVelocity * weights.viewVelocity +
+    normalizedSubGrowth * weights.subscriberGrowth +
+    normalizedEngagement * weights.engagementTrend +
+    normalizedUploadConsistency * weights.uploadConsistency;
+
+  return Math.round(score);
+}
+
+function getHealthColor(score: number): string {
+  if (score >= 80) return "#22c55e";
+  if (score >= 60) return "#3b82f6";
+  if (score >= 40) return "#eab308";
+  if (score >= 20) return "#f97316";
+  return "#ef4444";
+}
+
+function getHealthLabel(score: number): string {
+  if (score >= 80) return "Excellent";
+  if (score >= 60) return "Good";
+  if (score >= 40) return "Fair";
+  if (score >= 20) return "Needs Work";
+  return "Critical";
+}
+
+// Mini circular health gauge component
+function MiniHealthGauge({ score, loading }: { score: number; loading?: boolean }) {
+  const radius = 18;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = loading ? circumference : circumference - (score / 100) * circumference;
+  const color = getHealthColor(score);
+
+  return (
+    <div className="relative flex-shrink-0">
+      <svg width="44" height="44" className="-rotate-90">
+        {/* Background circle */}
+        <circle
+          cx="22"
+          cy="22"
+          r={radius}
+          stroke="rgba(255,255,255,0.1)"
+          strokeWidth="4"
+          fill="none"
+        />
+        {/* Progress circle */}
+        <circle
+          cx="22"
+          cy="22"
+          r={radius}
+          stroke={loading ? "rgba(255,255,255,0.2)" : color}
+          strokeWidth="4"
+          fill="none"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          className="transition-all duration-700 ease-out"
+        />
+      </svg>
+      {/* Score in center */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-sm font-bold" style={{ color: loading ? "rgba(255,255,255,0.4)" : color }}>
+          {loading ? "—" : score}
+        </span>
+      </div>
+    </div>
   );
 }
