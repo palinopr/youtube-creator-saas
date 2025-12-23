@@ -108,9 +108,9 @@ export default function ViralRadar({
     (a, b) => b.velocity_multiplier - a.velocity_multiplier
   );
 
-  // Only show videos with multiplier >= 1.5 (above average)
-  const trendingVideos = sortedVideos.filter((v) => v.velocity_multiplier >= 1.5);
-  const displayedVideos = showAll ? trendingVideos : trendingVideos.slice(0, 3);
+  // Show videos at or above average performance
+  const trendingVideos = sortedVideos.filter((v) => v.velocity_multiplier >= 1.0);
+  const displayedVideos = showAll ? trendingVideos : trendingVideos.slice(0, 6);
   const hasViralVideo = trendingVideos.some((v) => v.velocity_multiplier >= 5);
 
   if (loading) {

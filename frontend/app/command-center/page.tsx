@@ -489,57 +489,57 @@ function Dashboard() {
               <HealthScore metrics={healthMetrics} loading={isLoading} />
             </div>
 
-            {/* Quick Stats - Takes 3 columns */}
-            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {/* Views Today */}
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="p-1.5 bg-blue-500/20 rounded-lg">
-                    <Eye className="w-4 h-4 text-blue-400" />
+            {/* Quick Stats - Compact Horizontal Bar */}
+            <div className="lg:col-span-3 bg-white/5 border border-white/10 rounded-xl p-3 flex items-center">
+              <div className="flex items-center divide-x divide-white/10 w-full">
+                {/* Views Today */}
+                <div className="flex items-center gap-3 px-4 flex-1">
+                  <Eye className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-xs text-gray-400">Views Today</p>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-bold text-white">
+                        {isLoading ? "—" : formatNumber(todayStats.views)}
+                      </span>
+                      {!isLoading && todayStats.viewsChange !== 0 && (
+                        <span className={`flex items-center gap-0.5 text-xs ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                          {todayStats.viewsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+                          {todayStats.viewsChange >= 0 ? '+' : ''}{todayStats.viewsChange}%
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  {!isLoading && todayStats.viewsChange !== 0 && (
-                    <span className={`flex items-center gap-1 text-sm ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {todayStats.viewsChange >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
-                      {todayStats.viewsChange >= 0 ? '+' : ''}{todayStats.viewsChange}%
-                    </span>
-                  )}
                 </div>
-                <p className="text-sm text-gray-400 mb-1">Views Today</p>
-                <p className="text-2xl font-bold text-white">
-                  {isLoading ? "—" : formatNumber(todayStats.views)}
-                </p>
-              </div>
 
-              {/* Subscribers Today */}
-              <div className="bg-gradient-to-br from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="p-1.5 bg-red-500/20 rounded-lg">
-                    <Users className="w-4 h-4 text-red-400" />
+                {/* Subscribers Today */}
+                <div className="flex items-center gap-3 px-4 flex-1">
+                  <Users className="w-4 h-4 text-red-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-xs text-gray-400">Subs Today</p>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-bold text-white">
+                        {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
+                      </span>
+                      {!isLoading && todayStats.subsChange !== 0 && (
+                        <span className={`flex items-center gap-0.5 text-xs ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                          {todayStats.subsChange >= 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+                          {todayStats.subsChange >= 0 ? '+' : ''}{todayStats.subsChange}%
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  {!isLoading && todayStats.subsChange !== 0 && (
-                    <span className={`flex items-center gap-1 text-sm ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {todayStats.subsChange >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
-                      {todayStats.subsChange >= 0 ? '+' : ''}{todayStats.subsChange}%
-                    </span>
-                  )}
                 </div>
-                <p className="text-sm text-gray-400 mb-1">Subs Today</p>
-                <p className="text-2xl font-bold text-white">
-                  {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
-                </p>
-              </div>
 
-              {/* Watch Time Today */}
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="p-1.5 bg-purple-500/20 rounded-lg">
-                    <Clock className="w-4 h-4 text-purple-400" />
+                {/* Watch Time Today */}
+                <div className="flex items-center gap-3 px-4 flex-1">
+                  <Clock className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-xs text-gray-400">Watch Time</p>
+                    <span className="text-lg font-bold text-white">
+                      {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
+                    </span>
                   </div>
                 </div>
-                <p className="text-sm text-gray-400 mb-1">Watch Time Today</p>
-                <p className="text-2xl font-bold text-white">
-                  {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
-                </p>
               </div>
             </div>
           </div>
