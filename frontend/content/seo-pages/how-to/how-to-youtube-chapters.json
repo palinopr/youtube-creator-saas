@@ -1,0 +1,71 @@
+{
+  "slug": "how-to-youtube-chapters",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube Chapters 2025: Timestamps Guide",
+    "description": "Learn to add chapters to YouTube videos. Timestamps that help viewers navigate and boost engagement.",
+    "keywords": ["youtube chapters", "how to add chapters youtube", "youtube timestamps", "video chapters", "youtube chapter markers"]
+  },
+  "hero": {
+    "badge": "Video Chapters",
+    "headline": "How to Add Chapters to YouTube Videos",
+    "subheadline": "Help viewers find what they need. Chapters improve navigation and engagement.",
+    "primaryKeyword": "youtube chapters"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube chapters break your video into navigable sections. Viewers can jump to specific topics, and chapters appear in search results. They improve user experience, increase watch time, and can boost SEO. Here's how to add them effectively."},
+    {"type": "steps", "title": "Adding Chapters Manually", "content": [
+      "Open YouTube Studio",
+      "Select video to edit",
+      "Click 'Details' tab",
+      "Scroll to description",
+      "Add timestamps in format 0:00 Chapter Name",
+      "First timestamp MUST be 0:00",
+      "Need minimum 3 chapters, 10+ seconds each",
+      "Save changes"
+    ]},
+    {"type": "features", "title": "Chapter Best Practices", "content": [
+      {"icon": "clock", "title": "Start at 0:00", "description": "First chapter must begin at 0:00 or chapters won't work."},
+      {"icon": "hash", "title": "Minimum 3 Chapters", "description": "YouTube requires at least 3 to enable the feature."},
+      {"icon": "type", "title": "Descriptive Names", "description": "Use keywords in chapter titles. They're searchable."}
+    ]},
+    {"type": "benefits", "title": "Why Chapters Matter", "content": [
+      "Viewers find content faster",
+      "Reduces bounce rate",
+      "Appears in Google search results",
+      "Shows video structure at a glance",
+      "Improves accessibility",
+      "Enables jump-to links for sharing",
+      "Professional appearance"
+    ]},
+    {"type": "steps", "title": "Auto-Generated Chapters", "content": [
+      "YouTube can auto-generate chapters",
+      "Enable in YouTube Studio settings",
+      "AI analyzes video content",
+      "Results vary in accuracy",
+      "Manual chapters override auto",
+      "Review auto-chapters before keeping",
+      "Manual usually better for SEO"
+    ]},
+    {"type": "checklist", "title": "Chapter Checklist", "content": [
+      "First timestamp is 0:00?",
+      "At least 3 chapters?",
+      "Each chapter 10+ seconds?",
+      "Titles are descriptive?",
+      "Keywords in chapter names?",
+      "Timestamps accurate?",
+      "Logical flow and order?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why aren't my chapters showing?", "answer": "Check: First timestamp must be 0:00. Need minimum 3 chapters. Each must be 10+ seconds. Format must be 0:00 Title (space after timestamp)."},
+    {"question": "Should I use auto chapters?", "answer": "Test them first. Auto-generated can be inaccurate or poorly named. Manual chapters with good keywords are better for SEO."},
+    {"question": "How many chapters should I have?", "answer": "Depends on video length. Generally one chapter per main topic. 5-10 chapters for a 15-20 minute video is typical."},
+    {"question": "Do chapters affect the algorithm?", "answer": "Indirectly. Chapters improve user experience, reduce bounce rate, and can increase watch time—all positive signals."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

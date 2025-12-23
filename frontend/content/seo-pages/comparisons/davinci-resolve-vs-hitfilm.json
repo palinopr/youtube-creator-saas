@@ -1,0 +1,67 @@
+{
+  "slug": "davinci-resolve-vs-hitfilm",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "DaVinci Resolve vs HitFilm 2025: Free Video Editors Compared",
+    "description": "Compare DaVinci Resolve and HitFilm free video editors. Which is better for YouTube creators?",
+    "keywords": ["davinci resolve vs hitfilm", "free video editor", "hitfilm vs resolve", "youtube video editing", "best free editor"]
+  },
+  "hero": {
+    "badge": "Editor Comparison",
+    "headline": "DaVinci Resolve vs HitFilm",
+    "subheadline": "Two powerful free editors. Different strengths for different creators.",
+    "primaryKeyword": "davinci resolve vs hitfilm"
+  },
+  "sections": [
+    {"type": "intro", "content": "DaVinci Resolve and HitFilm are the most capable free video editors available. Resolve excels at color grading and professional workflows. HitFilm shines with VFX and compositing. Both can produce professional YouTube content—here's how they compare."},
+    {"type": "comparison", "title": "Editor Comparison", "content": [
+      {"feature": "Price", "toolA": "Free (Studio $295)", "toolB": "Free (Pro $349)", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "Color grading", "toolB": "Visual effects", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Steep", "toolB": "Moderate", "tubeGrow": "N/A"},
+      {"feature": "System Requirements", "toolA": "High", "toolB": "Moderate", "tubeGrow": "N/A"},
+      {"feature": "Export Quality", "toolA": "Excellent", "toolB": "Very good", "tubeGrow": "N/A"},
+      {"feature": "Free Limitations", "toolA": "Minimal", "toolB": "More features locked", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "DaVinci Resolve Strengths", "content": [
+      {"icon": "palette", "title": "Color Grading", "description": "Industry-standard color tools. Hollywood-level grading free."},
+      {"icon": "music", "title": "Fairlight Audio", "description": "Full DAW built-in. Professional audio editing included."},
+      {"icon": "film", "title": "Fusion VFX", "description": "Node-based compositing. Powerful but complex."}
+    ]},
+    {"type": "features", "title": "HitFilm Strengths", "content": [
+      {"icon": "zap", "title": "VFX Presets", "description": "Easy-to-use visual effects. Quick results without deep learning."},
+      {"icon": "layers", "title": "Compositing", "description": "Layer-based workflow familiar to After Effects users."},
+      {"icon": "play", "title": "Tutorials Included", "description": "Built-in learning. Great for beginners to VFX."}
+    ]},
+    {"type": "benefits", "title": "Choose DaVinci Resolve If", "content": [
+      "Color grading is priority",
+      "Want professional audio tools",
+      "Have powerful computer",
+      "Learning investment is okay",
+      "Plan to go professional",
+      "Need minimal free limitations",
+      "Work with high-res footage"
+    ]},
+    {"type": "benefits", "title": "Choose HitFilm If", "content": [
+      "VFX and effects focus",
+      "Moderate computer specs",
+      "Want faster learning curve",
+      "After Effects-style workflow",
+      "Create sci-fi/action content",
+      "Need quick effect presets",
+      "Starting with visual effects"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which free version is more capable?", "answer": "DaVinci Resolve free has fewer limitations. Most features available free. HitFilm locks more behind paywall but still very capable."},
+    {"question": "Can my computer run DaVinci Resolve?", "answer": "Check GPU requirements carefully. Resolve is demanding. 16GB RAM minimum, dedicated GPU recommended. HitFilm runs on more modest systems."},
+    {"question": "Which is better for YouTube?", "answer": "Both work excellently. Resolve for polished, color-graded content. HitFilm for effects-heavy videos. Most YouTubers would be happy with either."},
+    {"question": "Is the learning curve worth it?", "answer": "For Resolve, yes if you're serious. Professional skills transfer to paid work. HitFilm easier to start but still capable."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "davinci-resolve",
+  "secondaryTool": "hitfilm"
+}

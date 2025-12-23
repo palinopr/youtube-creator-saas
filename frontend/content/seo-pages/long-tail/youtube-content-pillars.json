@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-content-pillars",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Content Pillars 2025: Build Your Content Strategy",
+    "description": "Define your content pillars. Create sustainable YouTube content strategy.",
+    "keywords": ["youtube content pillars", "content pillar strategy", "youtube content strategy", "video content pillars", "youtube channel themes"]
+  },
+  "hero": {
+    "badge": "Content Pillars",
+    "headline": "YouTube Content Pillars Strategy",
+    "subheadline": "Define your lane. Build consistent content themes.",
+    "primaryKeyword": "youtube content pillars"
+  },
+  "sections": [
+    {"type": "intro", "content": "Content pillars are the 3-5 core themes that define your channel. They give your content direction, help viewers understand what to expect, and make content planning easier. Instead of random videos, you have structured categories that work together. Here's how to define and use content pillars."},
+    {"type": "features", "title": "Why Pillars Matter", "content": [
+      {"icon": "compass", "title": "Direction", "description": "Know what to make."},
+      {"icon": "users", "title": "Audience Clarity", "description": "Viewers know what to expect."},
+      {"icon": "layers", "title": "Content Variety", "description": "Within defined scope."},
+      {"icon": "refresh-cw", "title": "Sustainability", "description": "Never run out of ideas."}
+    ]},
+    {"type": "features", "title": "Pillar Types", "content": [
+      {"icon": "book", "title": "Educational", "description": "Teach skills and knowledge."},
+      {"icon": "smile", "title": "Entertainment", "description": "Fun, personality-driven."},
+      {"icon": "trending-up", "title": "Trend/News", "description": "Timely, topical content."},
+      {"icon": "heart", "title": "Community", "description": "Q&A, collaborations, behind-scenes."}
+    ]},
+    {"type": "steps", "title": "Defining Your Pillars", "content": [
+      "List everything you could talk about",
+      "Group similar topics together",
+      "Identify 3-5 main categories",
+      "Ensure each pillar has depth (50+ video ideas)",
+      "Verify pillars appeal to same audience",
+      "Name each pillar clearly",
+      "Plan content ratio across pillars",
+      "Document and refer to regularly"
+    ]},
+    {"type": "features", "title": "Pillar Examples", "content": [
+      {"icon": "camera", "title": "Photography Channel", "description": "Tutorials, Gear Reviews, Editing, Photo Walks."},
+      {"icon": "dumbbell", "title": "Fitness Channel", "description": "Workouts, Nutrition, Motivation, Challenges."},
+      {"icon": "code", "title": "Tech Channel", "description": "Reviews, Tutorials, News, Comparisons."},
+      {"icon": "utensils", "title": "Cooking Channel", "description": "Recipes, Techniques, Kitchen Tours, Challenges."}
+    ]},
+    {"type": "benefits", "title": "Content Pillar Tips", "content": [
+      "3-5 pillars is ideal—not too narrow, not scattered",
+      "Each pillar should have endless ideas",
+      "Pillars can overlap in individual videos",
+      "Rotate through pillars for variety",
+      "One pillar often becomes your signature",
+      "Adjust pillars as channel evolves",
+      "Pillars help with content calendar planning"
+    ]},
+    {"type": "checklist", "title": "Pillar Definition Checklist", "content": [
+      "3-5 clear pillars defined?",
+      "Each pillar has 50+ video ideas?",
+      "Pillars appeal to same audience?",
+      "Named clearly for reference?",
+      "Content ratio planned?",
+      "Team/collaborators understand pillars?",
+      "Reviewed and updated periodically?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many pillars should I have?", "answer": "3-5 is the sweet spot. Fewer than 3 may feel limiting. More than 5 becomes scattered and confusing for audience. Start with 3, add as you grow and understand your content better."},
+    {"question": "Can pillars change over time?", "answer": "Yes—channels evolve. What works early may shift. Pay attention to what resonates with audience. Add pillars that gain traction, retire ones that don't. Annual review recommended."},
+    {"question": "What if my content doesn't fit pillars?", "answer": "Occasional off-pillar content is fine—but too much confuses audience. If you're consistently drawn outside your pillars, maybe they're wrong. Adjust pillars to match your actual interests and strengths."},
+    {"question": "How do pillars relate to playlists?", "answer": "Often 1:1—each pillar becomes a playlist. Makes organization natural. Helps viewers find more content they like. Also aids content planning—check which playlist needs new content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

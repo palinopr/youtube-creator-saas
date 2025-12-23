@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-analytics-basics",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Analytics 2025: Beginner's Guide",
+    "description": "Understand YouTube Analytics basics. Key metrics, where to find them, and what they mean.",
+    "keywords": ["youtube analytics", "youtube analytics tutorial", "youtube studio analytics", "understand youtube metrics", "youtube analytics beginners"]
+  },
+  "hero": {
+    "badge": "Analytics",
+    "headline": "How to Use YouTube Analytics",
+    "subheadline": "Data-driven growth. Understand what your numbers actually mean.",
+    "primaryKeyword": "youtube analytics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics tells you exactly how your channel is performing—but only if you know what to look at. Understanding your metrics helps you make better content decisions, double down on what works, and fix what doesn't. Here's your guide to the analytics dashboard."},
+    {"type": "features", "title": "Key Metrics Overview", "content": [
+      {"icon": "eye", "title": "Views", "description": "Total video plays. Basic but important. Shows reach."},
+      {"icon": "clock", "title": "Watch Time", "description": "Total hours watched. YouTube's most valued metric."},
+      {"icon": "users", "title": "Subscribers", "description": "Channel followers. Growth rate matters more than total."},
+      {"icon": "trending-up", "title": "Impressions & CTR", "description": "How often shown and how often clicked. Thumbnail effectiveness."}
+    ]},
+    {"type": "steps", "title": "Navigating YouTube Analytics", "content": [
+      "Go to YouTube Studio (studio.youtube.com)",
+      "Click 'Analytics' in left sidebar",
+      "Overview tab shows highlights",
+      "Content tab: per-video performance",
+      "Audience tab: who's watching",
+      "Research tab: search trends",
+      "Revenue tab: earnings (if monetized)",
+      "Use date picker to compare periods"
+    ]},
+    {"type": "features", "title": "Critical Metrics to Track", "content": [
+      {"icon": "percent", "title": "Average View Duration", "description": "How long viewers watch on average. Quality indicator."},
+      {"icon": "activity", "title": "Audience Retention", "description": "Where viewers leave. Find and fix drop-off points."},
+      {"icon": "share-2", "title": "Traffic Sources", "description": "How viewers find you. Optimize for top sources."},
+      {"icon": "repeat", "title": "Returning Viewers", "description": "Loyal audience percentage. Build community."}
+    ]},
+    {"type": "benefits", "title": "What to Do With Data", "content": [
+      "More of what gets views",
+      "Fix retention drop-off points",
+      "Optimize for top traffic sources",
+      "Post when audience is online",
+      "Improve CTR with thumbnail tests",
+      "Double down on subscriber-gaining content",
+      "Track trends over time, not just daily"
+    ]},
+    {"type": "checklist", "title": "Weekly Analytics Review Checklist", "content": [
+      "Views compared to previous week?",
+      "Watch time trend up or down?",
+      "Subscriber growth rate?",
+      "Top performing video this week?",
+      "Worst performing and why?",
+      "CTR on recent uploads?",
+      "Any unusual traffic sources?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I check analytics?", "answer": "Weekly for trends, not daily for obsession. Daily checking causes anxiety over normal fluctuations. Focus on patterns, not individual data points."},
+    {"question": "Which metric matters most?", "answer": "Watch time and retention for algorithm. CTR for thumbnails/titles. Subscribers for community. All matter—but watch time drives recommendations."},
+    {"question": "Why did my views suddenly drop?", "answer": "Check if traffic source changed. Seasonal patterns. Algorithm shifts. One viral video ending its run. Usually temporary unless content quality dropped."},
+    {"question": "What's a good retention rate?", "answer": "50%+ of video length is excellent. 30-50% is good. Below 30% needs improvement. First 30 seconds is most critical—hook viewers fast."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-info-cards",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube Info Cards 2025: Interactive Cards Guide",
+    "description": "Add info cards to YouTube videos. Interactive elements that boost engagement.",
+    "keywords": ["youtube info cards", "add cards youtube", "youtube cards", "interactive youtube video", "youtube card strategy"]
+  },
+  "hero": {
+    "badge": "Info Cards",
+    "headline": "How to Add YouTube Info Cards",
+    "subheadline": "Interactive prompts in your videos. Drive engagement where it matters.",
+    "primaryKeyword": "youtube info cards"
+  },
+  "sections": [
+    {"type": "intro", "content": "Info cards are interactive elements that appear during your video—promoting other videos, playlists, channels, or external links. Unlike end screens that only work in the final seconds, cards can appear anywhere in your video. Use them strategically to keep viewers in your content ecosystem."},
+    {"type": "steps", "title": "Adding Info Cards", "content": [
+      "Open YouTube Studio",
+      "Select video to edit",
+      "Click 'Editor' in left menu",
+      "Select 'Info cards' tab",
+      "Click 'Add card' at desired timestamp",
+      "Choose card type",
+      "Enter card details",
+      "Save when complete"
+    ]},
+    {"type": "features", "title": "Card Types", "content": [
+      {"icon": "video", "title": "Video Card", "description": "Link to specific video. Most commonly used."},
+      {"icon": "list", "title": "Playlist Card", "description": "Promote playlist for binge-watching."},
+      {"icon": "tv", "title": "Channel Card", "description": "Feature another channel (collabs, recommendations)."},
+      {"icon": "link", "title": "Link Card", "description": "External website (requires Partner Program)."}
+    ]},
+    {"type": "features", "title": "Strategic Placement", "content": [
+      {"icon": "clock", "title": "Relevant Moments", "description": "When you mention related content, add card."},
+      {"icon": "trending-down", "title": "Retention Dips", "description": "Place before drop-off points to redirect."},
+      {"icon": "message-circle", "title": "Verbal Callouts", "description": "Mention the card: 'Check out the card above.'"},
+      {"icon": "target", "title": "Content References", "description": "Link when discussing other videos or resources."}
+    ]},
+    {"type": "benefits", "title": "Card Best Practices", "content": [
+      "Don't overload—5 max recommended",
+      "Time cards when verbally relevant",
+      "Use custom text for context",
+      "Test card placement with analytics",
+      "Cards appear as 'i' icon, then expand",
+      "Mobile viewers see cards differently",
+      "Check card click-through rates"
+    ]},
+    {"type": "checklist", "title": "Card Checklist", "content": [
+      "Cards relevant to video content?",
+      "Timestamps match verbal mentions?",
+      "Custom teaser text added?",
+      "Not too many cards?",
+      "External links valid (if Partner)?",
+      "Tested on mobile?",
+      "CTR being tracked?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Maximum cards per video?", "answer": "YouTube allows 5 cards per video. Use them strategically at relevant moments. Too many feels spammy and reduces effectiveness."},
+    {"question": "Do cards work on all devices?", "answer": "Yes, but appearance varies. Desktop shows 'i' icon. Mobile shows as tappable overlay. Test on both platforms to understand experience."},
+    {"question": "Cards vs end screens?", "answer": "Both valuable, different uses. Cards work throughout video for timely suggestions. End screens are final call-to-action. Use both strategically."},
+    {"question": "Can I add external links?", "answer": "Only with YouTube Partner Program membership. Links must go to approved sites. Most creators link to their own website or merchandise."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

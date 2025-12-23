@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-community-posts",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Community Posts 2025: Complete Tab Guide",
+    "description": "Master YouTube Community tab. Engage subscribers between uploads effectively.",
+    "keywords": ["youtube community posts", "community tab youtube", "youtube community", "community post ideas", "youtube engagement"]
+  },
+  "hero": {
+    "badge": "Community Posts",
+    "headline": "How to Use YouTube Community Posts",
+    "subheadline": "Stay visible between uploads. Engage your audience directly.",
+    "primaryKeyword": "youtube community posts"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Community tab keeps you connected between uploads. Text, images, polls, and video shares appear in subscriber feeds and can reach non-subscribers through recommendations. Used strategically, community posts maintain momentum and boost channel engagement."},
+    {"type": "steps", "title": "Creating Community Posts", "content": [
+      "Go to YouTube Studio",
+      "Click 'Create' in top right",
+      "Select 'Create post'",
+      "Choose post type (text, image, poll, video)",
+      "Write engaging content",
+      "Add media if applicable",
+      "Click 'Post' to publish",
+      "Respond to comments"
+    ]},
+    {"type": "features", "title": "Post Types", "content": [
+      {"icon": "type", "title": "Text Posts", "description": "Updates, questions, behind-the-scenes thoughts."},
+      {"icon": "image", "title": "Image Posts", "description": "Photos, graphics, behind-the-scenes shots."},
+      {"icon": "bar-chart-2", "title": "Polls", "description": "Ask questions, let audience vote. High engagement."},
+      {"icon": "video", "title": "Video Shares", "description": "Highlight older videos, share other creators."}
+    ]},
+    {"type": "benefits", "title": "Community Tab Benefits", "content": [
+      "Stay visible between uploads",
+      "Direct line to subscribers",
+      "Polls gather audience input",
+      "Test video ideas before production",
+      "Build personal connection",
+      "Can reach new viewers through recommendations",
+      "Low effort, high engagement potential"
+    ]},
+    {"type": "features", "title": "High-Performing Post Ideas", "content": [
+      {"icon": "help-circle", "title": "Questions", "description": "Ask audience for opinions. Simple but effective."},
+      {"icon": "calendar", "title": "Video Teasers", "description": "Preview upcoming content to build anticipation."},
+      {"icon": "camera", "title": "Behind-the-Scenes", "description": "Show your process, workspace, daily life."},
+      {"icon": "award", "title": "Milestones", "description": "Celebrate achievements with your community."}
+    ]},
+    {"type": "checklist", "title": "Community Post Checklist", "content": [
+      "Post provides value or engagement?",
+      "Image/poll if applicable?",
+      "Question or call-to-action included?",
+      "Posted at good time for audience?",
+      "Plan to respond to comments?",
+      "Not over-posting (1-3/week)?",
+      "Consistent with channel brand?"
+    ]}
+  ],
+  "faq": [
+    {"question": "When do I get Community tab access?", "answer": "Available at 500 subscribers. Previously required 1000. Once unlocked, appears as tab on your channel page."},
+    {"question": "How often should I post?", "answer": "1-3 times per week is typical. More feels spammy, less loses momentum. Quality over quantity. Post when you have something valuable."},
+    {"question": "What posts get most engagement?", "answer": "Polls consistently perform best—low friction to participate. Questions that are easy to answer. Behind-the-scenes photos. Avoid pure self-promotion."},
+    {"question": "Do community posts help with algorithm?", "answer": "They maintain subscriber engagement which signals active channel. Posts can appear on home feeds. Not direct ranking factor but supports overall channel health."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

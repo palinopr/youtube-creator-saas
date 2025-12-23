@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-shorts-create",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Shorts 2025: Complete Short-Form Guide",
+    "description": "Create YouTube Shorts effectively. From filming to optimization for the Shorts feed.",
+    "keywords": ["youtube shorts", "create youtube shorts", "how to make shorts", "youtube shorts tutorial", "short form video"]
+  },
+  "hero": {
+    "badge": "YouTube Shorts",
+    "headline": "How to Create YouTube Shorts",
+    "subheadline": "Master short-form video. Reach new audiences through the Shorts feed.",
+    "primaryKeyword": "youtube shorts"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Shorts are vertical videos under 60 seconds, competing directly with TikTok and Instagram Reels. They appear in a dedicated feed with massive reach potential. The format requires different thinking than long-form—hook fast, deliver value quickly, and optimize for vertical viewing."},
+    {"type": "steps", "title": "Creating Shorts (Mobile)", "content": [
+      "Open YouTube app",
+      "Tap '+' then 'Create a Short'",
+      "Record or upload vertical video",
+      "Add music, text, filters",
+      "Set speed adjustments if needed",
+      "Write title (include #Shorts)",
+      "Add description",
+      "Choose visibility and post"
+    ]},
+    {"type": "features", "title": "Shorts Requirements", "content": [
+      {"icon": "smartphone", "title": "Vertical Format", "description": "9:16 aspect ratio. Portrait mode."},
+      {"icon": "clock", "title": "Under 60 Seconds", "description": "Maximum 60 seconds. 15-30 often optimal."},
+      {"icon": "hash", "title": "#Shorts Tag", "description": "Include in title or description for discovery."},
+      {"icon": "video", "title": "Square Works Too", "description": "1:1 aspect also accepted. Vertical preferred."}
+    ]},
+    {"type": "features", "title": "Creation Methods", "content": [
+      {"icon": "smartphone", "title": "YouTube App", "description": "Built-in tools, music library, easy posting."},
+      {"icon": "scissors", "title": "CapCut", "description": "Popular editor. Templates, effects, trending sounds."},
+      {"icon": "film", "title": "Repurpose Long-Form", "description": "Cut clips from existing videos. Efficient strategy."},
+      {"icon": "monitor", "title": "Desktop Upload", "description": "Edit in any software, upload as vertical video."}
+    ]},
+    {"type": "benefits", "title": "Shorts Best Practices", "content": [
+      "Hook in first 1-2 seconds",
+      "Get to value immediately",
+      "Loop potential increases replay",
+      "Trending sounds boost discovery",
+      "Captions for sound-off viewing",
+      "Consistent posting for algorithm",
+      "Drive to long-form content"
+    ]},
+    {"type": "checklist", "title": "Shorts Checklist", "content": [
+      "Vertical aspect ratio (9:16)?",
+      "Under 60 seconds?",
+      "#Shorts in title/description?",
+      "Hook in first 2 seconds?",
+      "Captions added?",
+      "Clean loop if applicable?",
+      "Thumbnail frame selected?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best length for Shorts?", "answer": "15-30 seconds often performs best. Long enough for value, short enough for replay. Under 60 is requirement. Test different lengths for your content."},
+    {"question": "Do I need #Shorts in title?", "answer": "Helps with discovery but not strictly required. YouTube recognizes vertical under-60s format. Including it doesn't hurt and may help."},
+    {"question": "Can I repurpose TikToks?", "answer": "Yes—but remove TikTok watermark. YouTube may deprioritize watermarked content. Re-export from original or use tools to remove."},
+    {"question": "How often should I post Shorts?", "answer": "Daily or several times weekly for best results. Consistency matters for algorithm. Quality still important—don't sacrifice for quantity."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-poll-create",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Community Polls 2025: Engage Your Audience",
+    "description": "Create polls in YouTube Community tab. Get audience feedback and boost engagement.",
+    "keywords": ["youtube poll", "youtube community poll", "create poll youtube", "youtube audience poll", "youtube engagement"]
+  },
+  "hero": {
+    "badge": "Community Polls",
+    "headline": "How to Create YouTube Community Polls",
+    "subheadline": "Get audience input. Boost engagement with polls.",
+    "primaryKeyword": "youtube poll"
+  },
+  "sections": [
+    {"type": "intro", "content": "Polls are engagement machines—easy for viewers to participate, valuable feedback for you. They appear in subscribers' feeds and on your Community tab, keeping your channel active between uploads. Here's how to create polls that drive engagement and inform your content strategy."},
+    {"type": "steps", "title": "Creating a Poll", "content": [
+      "Go to YouTube Studio",
+      "Click 'Create' button (camera icon)",
+      "Select 'Create post'",
+      "Click poll icon (bar chart)",
+      "Enter your question",
+      "Add 2-5 answer options",
+      "Preview and adjust",
+      "Click 'Post' to publish"
+    ]},
+    {"type": "features", "title": "Poll Requirements", "content": [
+      {"icon": "users", "title": "500 Subscribers", "description": "Minimum to access Community tab."},
+      {"icon": "list", "title": "2-5 Options", "description": "Answer choices you can add."},
+      {"icon": "clock", "title": "No Expiration", "description": "Polls stay open indefinitely."},
+      {"icon": "image", "title": "Add Images", "description": "Optional image with poll."}
+    ]},
+    {"type": "features", "title": "Poll Ideas", "content": [
+      {"icon": "video", "title": "Content Planning", "description": "What should I film next?"},
+      {"icon": "help-circle", "title": "Audience Preferences", "description": "Which format do you prefer?"},
+      {"icon": "message-circle", "title": "Fun Questions", "description": "Would you rather, this or that."},
+      {"icon": "bar-chart", "title": "Opinion Gathering", "description": "What do you think about X?"}
+    ]},
+    {"type": "features", "title": "Engagement Benefits", "content": [
+      {"icon": "trending-up", "title": "Algorithm Boost", "description": "Activity signals keep channel relevant."},
+      {"icon": "bell", "title": "Feed Presence", "description": "Appear in subscriber feeds."},
+      {"icon": "zap", "title": "Low Effort Interaction", "description": "One click to participate."},
+      {"icon": "users", "title": "Community Building", "description": "Audience feels heard."}
+    ]},
+    {"type": "benefits", "title": "Poll Best Practices", "content": [
+      "Make options genuinely interesting",
+      "Use polls to guide content decisions",
+      "Post regularly between uploads",
+      "Acknowledge poll results in videos",
+      "Mix fun polls with useful ones",
+      "Keep questions simple and clear",
+      "4 options usually works best"
+    ]},
+    {"type": "checklist", "title": "Poll Checklist", "content": [
+      "Question clear and engaging?",
+      "Options balanced and interesting?",
+      "Results will inform your content?",
+      "Posted at good engagement time?",
+      "Plan to follow up on results?",
+      "Image added if relevant?",
+      "Fits your channel's tone?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many subscribers needed for polls?", "answer": "500 subscribers minimum to access Community tab and post polls. This threshold was lowered from 1,000. Once unlocked, polls are a powerful engagement tool."},
+    {"question": "How often should I post polls?", "answer": "Weekly or bi-weekly works well. Don't spam—quality over quantity. Space between video uploads. Too many polls fatigue your audience."},
+    {"question": "Can I see who voted?", "answer": "No—poll responses are anonymous. You see total numbers and percentages only. This encourages honest participation without social pressure."},
+    {"question": "Do polls help the algorithm?", "answer": "Indirectly—engagement signals show active community. Polls keep your channel visible in feeds between uploads. Algorithm likes channels that maintain audience connection."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

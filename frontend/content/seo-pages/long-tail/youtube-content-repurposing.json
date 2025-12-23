@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-content-repurposing",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Content Repurposing 2025: Maximize Every Video",
+    "description": "Repurpose YouTube content across platforms. Extend reach without creating from scratch.",
+    "keywords": ["youtube content repurposing", "repurpose youtube videos", "content repurposing", "youtube to other platforms", "repurpose video content"]
+  },
+  "hero": {
+    "badge": "Repurposing",
+    "headline": "YouTube Content Repurposing Guide",
+    "subheadline": "One video, many platforms. Maximize your content investment.",
+    "primaryKeyword": "youtube content repurposing"
+  },
+  "sections": [
+    {"type": "intro", "content": "Content repurposing extracts maximum value from every video you create. A single long-form video can become Shorts, social posts, blog content, podcasts, and more. Smart repurposing expands reach without proportionally increasing work."},
+    {"type": "features", "title": "Repurposing Destinations", "content": [
+      {"icon": "video", "title": "YouTube Shorts", "description": "Clip best moments. Different audience, additional reach."},
+      {"icon": "smartphone", "title": "TikTok/Instagram Reels", "description": "Similar short clips. Cross-platform presence."},
+      {"icon": "twitter", "title": "Social Media Posts", "description": "Pull quotes, stats, key points. Text + clips."},
+      {"icon": "headphones", "title": "Podcast", "description": "Audio strip for podcast platforms. Extended reach."}
+    ]},
+    {"type": "steps", "title": "Repurposing Workflow", "content": [
+      "Identify clip-worthy moments while editing",
+      "Export Shorts/Reels clips (vertical)",
+      "Extract audio for podcast",
+      "Pull key quotes for social posts",
+      "Screenshot thumbnail moments for Instagram",
+      "Write blog post from transcript",
+      "Create tweet thread from key points",
+      "Schedule distribution across platforms"
+    ]},
+    {"type": "features", "title": "Platform-Specific Tips", "content": [
+      {"icon": "play", "title": "Shorts from Long-Form", "description": "Hook-heavy clips, complete thoughts. Don't just randomly clip."},
+      {"icon": "image", "title": "Instagram Carousels", "description": "Key points as slides. Educational content works well."},
+      {"icon": "file-text", "title": "Blog Posts", "description": "Transcript + expansion. Good for SEO and accessibility."},
+      {"icon": "linkedin", "title": "LinkedIn", "description": "Professional insights from content. Different angle for B2B."}
+    ]},
+    {"type": "benefits", "title": "Repurposing Benefits", "content": [
+      "Reaches people who don't use YouTube",
+      "Reinforces message through repetition",
+      "Drives traffic back to main content",
+      "Maximizes production investment",
+      "Builds presence on multiple platforms",
+      "Different formats suit different content",
+      "Compounds your content library"
+    ]},
+    {"type": "checklist", "title": "Repurposing Checklist", "content": [
+      "Best moments marked for clips?",
+      "Vertical clips exported?",
+      "Audio extracted for podcast?",
+      "Social posts drafted?",
+      "Blog post created?",
+      "Distribution scheduled?",
+      "Links back to original included?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does repurposing hurt original video?", "answer": "No—different platforms, different audiences. Clips can drive traffic to long-form. YouTube doesn't penalize for having content elsewhere."},
+    {"question": "How many Shorts from one video?", "answer": "Depends on content length. 10-20 minute video might yield 3-5 good Shorts. Don't force it—only clip genuinely strong moments."},
+    {"question": "Should I post same clip everywhere?", "answer": "Mostly yes. Each platform has different audience. Adjust aspect ratio and captions for platform conventions. Same content, platform-optimized."},
+    {"question": "Best tool for clip creation?", "answer": "CapCut, Opus Clip (AI-based), or manual editing in your NLE. AI tools speed up but miss context. Manual gives more control."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

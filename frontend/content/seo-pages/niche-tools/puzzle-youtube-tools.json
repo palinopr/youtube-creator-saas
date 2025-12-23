@@ -1,0 +1,66 @@
+{
+  "slug": "puzzle-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Puzzle YouTube Tools 2025: Jigsaw & Puzzle Channel Equipment",
+    "description": "Top tools for puzzle YouTube channels. Film puzzling and unboxing content.",
+    "keywords": ["puzzle youtube tools", "jigsaw puzzle channel", "puzzle video equipment", "puzzle content creation", "puzzling youtube"]
+  },
+  "hero": {
+    "badge": "Puzzle Tools",
+    "headline": "Best Puzzle YouTube Tools 2025",
+    "subheadline": "Document the process. Gear for puzzle enthusiasts.",
+    "primaryKeyword": "puzzle youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Puzzle content has found a dedicated audience—the satisfaction of sorting, building, and completing jigsaw puzzles is addictive viewing. Time-lapse completions, live puzzling sessions, and reviews all perform well. Overhead filming and good lighting are essential. Here's what puzzle YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "See full puzzle progress."},
+      {"icon": "clock", "title": "Time-Lapse Mode", "description": "Show hours in minutes."},
+      {"icon": "camera", "title": "Long Recording", "description": "Multi-hour capability."},
+      {"icon": "battery", "title": "AC Power", "description": "No battery worries."}
+    ]},
+    {"type": "features", "title": "Puzzle Table Lighting", "content": [
+      {"icon": "sun", "title": "Daylight LEDs", "description": "Accurate piece colors."},
+      {"icon": "layers", "title": "Even Coverage", "description": "No shadows across table."},
+      {"icon": "circle", "title": "Ring Light Option", "description": "Shadowless illumination."},
+      {"icon": "zap", "title": "Consistent Light", "description": "Time-lapse needs stable."}
+    ]},
+    {"type": "features", "title": "Table Setup", "content": [
+      {"icon": "maximize", "title": "Large Surface", "description": "Room for sorting."},
+      {"icon": "layers", "title": "Contrasting Color", "description": "Pieces stand out."},
+      {"icon": "grid", "title": "Puzzle Mat", "description": "Roll up for storage."},
+      {"icon": "move", "title": "Comfortable Height", "description": "Long sessions ergonomics."}
+    ]},
+    {"type": "benefits", "title": "Puzzle Content Tips", "content": [
+      "Time-lapse completions are satisfying",
+      "Real-time relaxing for background watching",
+      "Unboxing and first impressions content",
+      "Review image quality and cut quality",
+      "Thrift store finds are entertaining",
+      "Challenge videos drive engagement",
+      "Seasonal puzzles for timely content"
+    ]},
+    {"type": "checklist", "title": "Puzzle Video Checklist", "content": [
+      "Overhead camera secure?",
+      "Lighting consistent for time-lapse?",
+      "Table surface clean?",
+      "Camera powered for long session?",
+      "Time-lapse settings correct?",
+      "Box/image visible for context?",
+      "Final reveal shot planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long do puzzle videos take to make?", "answer": "Actual puzzling can be hours to days depending on piece count. Time-lapse condenses to 5-20 minutes. Some creators do multi-session videos. Plan for long capture times."},
+    {"question": "Best camera for puzzle time-lapse?", "answer": "Cameras with built-in intervalometer. GoPro works for simpler setups. DSLR/mirrorless with AC adapter for long sessions. Phone with time-lapse app possible for shorter puzzles."},
+    {"question": "Overhead mount for puzzle table?", "answer": "C-stand with boom arm most common. Wall-mounted arm works for dedicated space. Must be stable for time-lapse—any movement shows. Position to capture full table."},
+    {"question": "What puzzle content performs best?", "answer": "Satisfying time-lapse completions most viewed. Relaxing real-time for background watching. Reviews help purchase decisions. 'Impossible' or difficult puzzles create tension. Mix content types."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "puzzle"
+}

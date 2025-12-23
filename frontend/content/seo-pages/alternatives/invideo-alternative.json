@@ -1,0 +1,68 @@
+{
+  "slug": "invideo-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best InVideo Alternative 2025: Online Video Editors Compared",
+    "description": "Top InVideo alternatives for online video editing. Browser-based editors with templates.",
+    "keywords": ["invideo alternative", "online video editor", "invideo competitor", "browser video editor", "template video editor"]
+  },
+  "hero": {
+    "badge": "InVideo Alternative",
+    "headline": "Best InVideo Alternative 2025",
+    "subheadline": "Template-based editing without the limitations. Find your fit.",
+    "primaryKeyword": "invideo alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "InVideo offers browser-based editing with thousands of templates—great for quick social media content. At $15-30/month, it's affordable but has limitations in customization and export quality. These alternatives offer similar template-driven workflows with different strengths and pricing."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "layout", "title": "Canva Video", "description": "Design-focused. Huge template library."},
+      {"icon": "video", "title": "Kapwing", "description": "Full editor. Subtitle tools. Free tier."},
+      {"icon": "zap", "title": "Veed.io", "description": "Fast, simple. Auto-subtitles strong."},
+      {"icon": "film", "title": "FlexClip", "description": "Stock media included. Easy timeline."}
+    ]},
+    {"type": "comparison", "title": "InVideo vs Alternatives", "content": [
+      {"feature": "Price", "toolA": "$15-30/mo", "toolB": "$0-25/mo", "tubeGrow": "N/A"},
+      {"feature": "Templates", "toolA": "5000+", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Stock Media", "toolA": "Included", "toolB": "Most: Yes", "tubeGrow": "N/A"},
+      {"feature": "Export Quality", "toolA": "1080p", "toolB": "Up to 4K", "tubeGrow": "N/A"},
+      {"feature": "Watermark (Free)", "toolA": "Yes", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "AI Features", "toolA": "Some", "toolB": "Varies", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Free Options", "content": [
+      {"icon": "edit-3", "title": "Canva Free", "description": "Templates with watermark-free export."},
+      {"icon": "monitor", "title": "Clipchamp", "description": "Microsoft's free editor."},
+      {"icon": "film", "title": "Kapwing Free", "description": "Watermark on longer videos."},
+      {"icon": "smartphone", "title": "CapCut", "description": "Completely free desktop + mobile."}
+    ]},
+    {"type": "benefits", "title": "When to Switch", "content": [
+      "Need better export quality",
+      "Want more customization",
+      "Need specific AI features",
+      "Looking for free option",
+      "Want desktop app option",
+      "Need better subtitle tools",
+      "Different template styles"
+    ]},
+    {"type": "checklist", "title": "Selection Checklist", "content": [
+      "Budget determined?",
+      "Template style matches needs?",
+      "Export quality sufficient?",
+      "Stock media requirements met?",
+      "AI features needed identified?",
+      "Free tier tested?",
+      "Workflow matches your process?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is there a free InVideo alternative?", "answer": "Canva offers free video editing with templates. CapCut completely free without watermarks. Kapwing free tier watermarks longer videos. Clipchamp from Microsoft is free with Windows."},
+    {"question": "Best for social media content?", "answer": "Canva excellent for social—templates sized for each platform. Kapwing strong for repurposing. Veed.io fast for quick clips. InVideo itself is social-focused too."},
+    {"question": "InVideo vs Canva?", "answer": "InVideo: more video templates, video-focused features. Canva: design ecosystem, better for graphics+video combo. Canva simpler interface, InVideo more video editing depth. Personal preference."},
+    {"question": "Best alternative for YouTube specifically?", "answer": "CapCut offers full editing free. Kapwing has YouTube-specific features. For template-driven YouTube content, Canva and InVideo similar. Traditional editors (DaVinci) more powerful but steeper learning."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "InVideo"
+}

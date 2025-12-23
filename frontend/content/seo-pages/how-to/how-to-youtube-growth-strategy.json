@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-growth-strategy",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Growth Strategy 2025: Channel Growth Plan",
+    "description": "Build a YouTube growth strategy. Systematic approach to channel development.",
+    "keywords": ["youtube growth strategy", "youtube channel growth", "grow youtube channel", "youtube strategy", "channel growth plan"]
+  },
+  "hero": {
+    "badge": "Growth Strategy",
+    "headline": "How to Create YouTube Growth Strategy",
+    "subheadline": "Systematic growth. Build a plan that compounds over time.",
+    "primaryKeyword": "youtube growth strategy"
+  },
+  "sections": [
+    {"type": "intro", "content": "Random uploads don't build channels—strategy does. A growth strategy aligns your content, optimization, and effort toward specific goals. Without strategy, you're hoping. With strategy, you're building. Here's how to create yours."},
+    {"type": "features", "title": "Strategy Components", "content": [
+      {"icon": "target", "title": "Clear Goals", "description": "What does success look like? Subscribers, revenue, impact?"},
+      {"icon": "users", "title": "Target Audience", "description": "Who specifically are you creating for?"},
+      {"icon": "compass", "title": "Content Pillars", "description": "3-5 core topics you'll consistently cover."}
+    ]},
+    {"type": "steps", "title": "Building Your Strategy", "content": [
+      "Define specific, measurable goals",
+      "Identify your ideal viewer in detail",
+      "Research what that audience wants",
+      "Define your unique angle/value",
+      "Create 3-5 content pillars",
+      "Set sustainable upload schedule",
+      "Plan content calendar",
+      "Define success metrics to track",
+      "Schedule regular strategy reviews"
+    ]},
+    {"type": "features", "title": "Growth Levers", "content": [
+      {"icon": "search", "title": "Search (SEO)", "description": "Steady traffic from keywords. Evergreen growth."},
+      {"icon": "home", "title": "Browse (Algorithm)", "description": "Homepage and suggested. Requires existing engagement."},
+      {"icon": "share-2", "title": "External", "description": "Social media, collaborations. Drive outside traffic."},
+      {"icon": "video", "title": "Shorts", "description": "Discovery format. Can drive subscriber growth quickly."}
+    ]},
+    {"type": "benefits", "title": "Strategy Principles", "content": [
+      "Consistency beats intensity",
+      "Quality compounds over time",
+      "Niche first, expand later",
+      "Audience needs over creator wants",
+      "Data-informed, not data-obsessed",
+      "Patience is part of strategy",
+      "Iterate based on results"
+    ]},
+    {"type": "checklist", "title": "Strategy Checklist", "content": [
+      "Goals clearly defined?",
+      "Target audience specified?",
+      "Content pillars established?",
+      "Upload schedule sustainable?",
+      "Metrics identified?",
+      "Review schedule set?",
+      "Strategy documented?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I review strategy?", "answer": "Monthly for metrics, quarterly for strategy adjustments. Don't pivot too quickly—give changes time to show results. Big strategy reviews annually."},
+    {"question": "Should strategy be written down?", "answer": "Yes—document it. Notion, Google Doc, whatever works. Written strategy clarifies thinking and enables consistent execution."},
+    {"question": "What if strategy isn't working?", "answer": "Give it time first—3-6 months minimum. Then analyze what's not working specifically. Adjust tactics before changing strategy entirely."},
+    {"question": "Can I change my niche?", "answer": "Possible but costly. Existing audience may leave. Better to expand within niche than completely pivot. If you must pivot, consider new channel."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

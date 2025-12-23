@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-description-write",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Descriptions 2025: SEO-Optimized Guide",
+    "description": "Write YouTube descriptions that rank. SEO tips and templates for better visibility.",
+    "keywords": ["youtube description", "write youtube description", "video description seo", "youtube description template", "youtube seo"]
+  },
+  "hero": {
+    "badge": "Descriptions",
+    "headline": "How to Write YouTube Descriptions",
+    "subheadline": "Optimize for search. Get discovered by the right viewers.",
+    "primaryKeyword": "youtube description"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your description is prime SEO real estate—5,000 characters to help YouTube understand and rank your content. Most creators waste it. A well-written description improves search rankings, increases watch time through proper context, and drives traffic to your other content. Here's how to write descriptions that work."},
+    {"type": "steps", "title": "Description Structure", "content": [
+      "First 150 characters: Hook + keyword (shows in search)",
+      "Paragraph 2: Expand on video value, more keywords",
+      "Timestamps: Chapter markers if applicable",
+      "Links: Related videos, playlists, resources",
+      "Social links: Keep consistent across videos",
+      "Hashtags: 3-5 relevant tags at end",
+      "Default text: Channel info, posting schedule"
+    ]},
+    {"type": "features", "title": "SEO Elements", "content": [
+      {"icon": "search", "title": "Primary Keyword", "description": "Include target keyword in first sentence."},
+      {"icon": "type", "title": "Natural Language", "description": "Write for humans first, include variations."},
+      {"icon": "hash", "title": "Hashtags", "description": "3-5 relevant hashtags. First 3 appear above title."},
+      {"icon": "link", "title": "Internal Links", "description": "Link to related videos and playlists."}
+    ]},
+    {"type": "features", "title": "Content to Include", "content": [
+      {"icon": "clock", "title": "Timestamps", "description": "Chapter markers improve navigation and SEO."},
+      {"icon": "file-text", "title": "Resources", "description": "Links to tools, downloads, references mentioned."},
+      {"icon": "users", "title": "Credits", "description": "Music, collaborators, sources used."},
+      {"icon": "mail", "title": "Contact Info", "description": "Business inquiries, social links."}
+    ]},
+    {"type": "benefits", "title": "Description Best Practices", "content": [
+      "Front-load important information",
+      "Use keywords naturally, not stuffed",
+      "Include timestamps for longer videos",
+      "Update older video descriptions",
+      "Create description template",
+      "Test different formats",
+      "Monitor search traffic in analytics"
+    ]},
+    {"type": "checklist", "title": "Description Checklist", "content": [
+      "Keyword in first 150 characters?",
+      "Value proposition clear?",
+      "Timestamps added?",
+      "Relevant links included?",
+      "Hashtags appropriate?",
+      "Spelling and grammar checked?",
+      "Default template applied?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should descriptions be?", "answer": "Use available space—longer descriptions rank better. Minimum 200 words recommended. Front-load important info since only first 150 characters show in search. Don't pad with fluff."},
+    {"question": "Do descriptions affect rankings?", "answer": "Yes—YouTube uses descriptions to understand content and context. Keywords in descriptions help search ranking. Well-structured descriptions also improve click-through from search results."},
+    {"question": "What are timestamps/chapters?", "answer": "Format: 0:00 Introduction. Creates clickable chapters in video player. Improves user experience and SEO. YouTube may show in search results. Start at 0:00, minimum 3 timestamps, 10+ seconds each."},
+    {"question": "How many hashtags should I use?", "answer": "3-5 hashtags optimal. First 3 appear above video title clickable. Too many looks spammy. Use specific, relevant tags. Mix broad and niche hashtags."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

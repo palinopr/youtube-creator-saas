@@ -1,0 +1,63 @@
+{
+  "slug": "diy-crafts-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best DIY & Crafts YouTube Tools 2025: Craft Channel Equipment Guide",
+    "description": "Top tools for DIY and crafts YouTube channels. Overhead cameras, lighting, and production equipment.",
+    "keywords": ["diy youtube tools", "crafts youtube equipment", "craft channel tools", "diy content creator", "craft tutorial youtube"]
+  },
+  "hero": {
+    "badge": "DIY & Crafts Tools",
+    "headline": "Best DIY & Crafts YouTube Tools 2025",
+    "subheadline": "Show your creative process. Equipment for craft content creators.",
+    "primaryKeyword": "diy crafts youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "DIY and crafts content shows the creative process from start to finish. Viewers want to see every step clearly—your hands working, materials transforming, and the satisfying finished product. Here's what you need to capture crafts professionally."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "Overhead Camera Arm", "description": "Essential for crafts. Shows your workspace from above. Elgato, Neewer arms."},
+      {"icon": "video", "title": "Phone or Camera", "description": "Phone works great for overhead. 4K for detail. Camera for more control."},
+      {"icon": "layout", "title": "Second Angle", "description": "Front or side camera adds variety. Shows your face for personality."}
+    ]},
+    {"type": "features", "title": "Lighting for Crafts", "content": [
+      {"icon": "sun", "title": "Even Overhead Light", "description": "No shadows on workspace. Ring light or panel above work surface."},
+      {"icon": "lamp", "title": "Task Lighting", "description": "Illuminate details. Adjustable desk lamps help."},
+      {"icon": "sun", "title": "Natural Light Option", "description": "Window light works beautifully for crafts. Soft, even, free."}
+    ]},
+    {"type": "features", "title": "Audio & Editing", "content": [
+      {"icon": "mic", "title": "Lavalier Mic", "description": "Talk while working. Hands-free audio capture."},
+      {"icon": "volume-2", "title": "Voiceover Option", "description": "Record narration separately for cleaner audio. More control."},
+      {"icon": "fast-forward", "title": "Time-Lapse", "description": "Speed up repetitive steps. Show transformation satisfyingly."}
+    ]},
+    {"type": "benefits", "title": "Craft Content Best Practices", "content": [
+      "Materials list in description",
+      "Show every step clearly",
+      "Time-lapse repetitive sections",
+      "Finished product reveal is payoff",
+      "Multiple angles for complex steps",
+      "Close-ups on detailed work",
+      "Mistakes are relatable—show them"
+    ]},
+    {"type": "checklist", "title": "Craft Video Checklist", "content": [
+      "Overhead angle captures workspace?",
+      "Materials visible and organized?",
+      "Lighting even, no shadows on work?",
+      "Audio clear throughout?",
+      "All steps documented?",
+      "Satisfying finished product shot?",
+      "Materials list in description?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera angle for crafts?", "answer": "Overhead is primary—shows your hands and materials clearly. Add front angle for personality and reactions. Multi-camera elevates production."},
+    {"question": "How to film while crafting?", "answer": "Overhead camera on arm, hands-free lav mic, record continuously. Edit out mistakes. Alternatively, do voiceover in post for cleaner audio."},
+    {"question": "Should I talk while crafting?", "answer": "Either works. Talking adds personality but can be challenging while focusing. Voiceover gives more control. Many successful channels do both styles."},
+    {"question": "How long should craft tutorials be?", "answer": "Long enough to teach, short enough to maintain interest. 10-20 minutes typical. Time-lapse repetitive sections. Don't pad for watch time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "diy-crafts"
+}

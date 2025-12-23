@@ -1,0 +1,63 @@
+{
+  "slug": "yoga-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Yoga YouTube Tools 2025: Instructor Video Equipment Guide",
+    "description": "Top tools for yoga YouTube channels. Equipment for fitness and wellness content.",
+    "keywords": ["yoga youtube tools", "yoga channel equipment", "yoga instructor youtube", "wellness youtube gear", "yoga video setup"]
+  },
+  "hero": {
+    "badge": "Yoga Tools",
+    "headline": "Best Yoga YouTube Tools 2025",
+    "subheadline": "Share your practice beautifully. Tools for yoga and wellness creators.",
+    "primaryKeyword": "yoga youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Yoga content requires wide shots showing full body, excellent audio for instruction, and lighting that creates calm atmosphere. Your setup must capture the flow without interruption. From camera angles to peaceful aesthetics, here's what yoga YouTubers need."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "Wide Angle Camera", "description": "Full body in frame. Sony ZV-E10, Canon M50 with wide lens."},
+      {"icon": "video", "title": "Secondary Angle", "description": "Close-up for form details. Smartphone works as second camera."},
+      {"icon": "airplay", "title": "Flip Screen", "description": "Essential for self-filming. See framing while practicing."}
+    ]},
+    {"type": "features", "title": "Audio Solutions", "content": [
+      {"icon": "mic", "title": "Lavalier Microphone", "description": "Hands-free, move freely. Wireless essential for flow."},
+      {"icon": "radio", "title": "Room Mic Option", "description": "Shotgun mic for ambient feel. Capture breath sounds naturally."},
+      {"icon": "music", "title": "Background Music", "description": "Royalty-free calm tracks. Epidemic Sound, Artlist."}
+    ]},
+    {"type": "features", "title": "Atmosphere Creation", "content": [
+      {"icon": "sun", "title": "Natural Light", "description": "Best for yoga. Soft, diffused window light."},
+      {"icon": "bulb", "title": "LED Panels", "description": "For consistent lighting. Warm color temperature, dimmable."},
+      {"icon": "home", "title": "Background Setup", "description": "Clean, minimal space. Plants, natural elements popular."}
+    ]},
+    {"type": "benefits", "title": "Yoga Content Tips", "content": [
+      "Full body always visible",
+      "Mirror instruction (left becomes viewer's right)",
+      "Clear, calm voice throughout",
+      "Multiple angles show form better",
+      "Natural lighting most flattering",
+      "Minimal, calming background",
+      "Include modifications for all levels"
+    ]},
+    {"type": "checklist", "title": "Recording Checklist", "content": [
+      "Full body in frame?",
+      "Audio clear throughout space?",
+      "Lighting consistent and flattering?",
+      "Background clean and calming?",
+      "Wireless mic charged?",
+      "Flow sequence practiced?",
+      "Storage space sufficient?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film yoga alone?", "answer": "Flip screen camera on tripod is essential. Remote trigger or app control helps. Practice sequence first, then film. Wide angle captures full mat area."},
+    {"question": "Best lens for yoga videos?", "answer": "Wide angle (10-18mm on crop, 16-35mm on full frame) shows full body in smaller spaces. Ultra-wide can distort, test before committing."},
+    {"question": "How to handle background music?", "answer": "Add in post-editing for control. Use royalty-free sources. Some creators record with music playing but this limits editing. Separate is more flexible."},
+    {"question": "Should I mirror my instruction?", "answer": "Yes—when you say 'lift your right arm,' viewers' right arm should lift. Practice cueing in mirror. Or use post-flip if camera allows."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "yoga"
+}

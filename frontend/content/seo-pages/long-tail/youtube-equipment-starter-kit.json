@@ -1,0 +1,62 @@
+{
+  "slug": "youtube-equipment-starter-kit",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Equipment Starter Kit 2025: Beginner Creator Essentials",
+    "description": "Essential YouTube starter kit. Must-have equipment for new creators at every budget.",
+    "keywords": ["youtube starter kit", "youtube equipment beginner", "starter youtube setup", "youtube essentials", "new youtuber equipment"]
+  },
+  "hero": {
+    "badge": "Starter Kit",
+    "headline": "YouTube Equipment Starter Kit",
+    "subheadline": "Essential gear for new creators. Start with what matters, upgrade later.",
+    "primaryKeyword": "youtube starter kit"
+  },
+  "sections": [
+    {"type": "intro", "content": "Starting YouTube doesn't require thousands in equipment. In fact, many successful creators started with just a phone. The key is knowing what actually matters for video quality and what can wait. Here's your essential starter kit at every budget level."},
+    {"type": "features", "title": "$0 Starter Kit (Minimum Viable)", "content": [
+      {"icon": "smartphone", "title": "Smartphone Camera", "description": "Modern phones have excellent cameras. Better than many webcams."},
+      {"icon": "sun", "title": "Natural Light", "description": "Face a window. Free, beautiful lighting. Best light available."},
+      {"icon": "film", "title": "DaVinci Resolve", "description": "Free professional editing. More power than most need."}
+    ]},
+    {"type": "features", "title": "$100 Starter Kit", "content": [
+      {"icon": "mic", "title": "USB Microphone (~$50)", "description": "Fifine K669B or similar. Biggest quality upgrade available."},
+      {"icon": "sun", "title": "Ring Light (~$30)", "description": "Basic ring light with stand. Consistent face lighting."},
+      {"icon": "triangle", "title": "Phone Tripod (~$20)", "description": "Stable shots. Hands-free filming. Essential stability."}
+    ]},
+    {"type": "features", "title": "$500 Starter Kit", "content": [
+      {"icon": "camera", "title": "Canon/Sony Camera (~$300)", "description": "Sony ZV-E10 or Canon M50. Creator-focused features."},
+      {"icon": "mic", "title": "Rode VideoMic (~$100)", "description": "On-camera mic. Clean audio without complexity."},
+      {"icon": "sun", "title": "Softbox Lights (~$80)", "description": "Two-light kit. Professional, even lighting."}
+    ]},
+    {"type": "benefits", "title": "Priority Order for Upgrades", "content": [
+      "1. Audio (biggest perceived quality difference)",
+      "2. Lighting (makes any camera look better)",
+      "3. Tripod/stability (smooth, professional look)",
+      "4. Camera (last priority—phones are good)",
+      "5. Background (clean space costs nothing)",
+      "6. Editing software (free options are pro-grade)",
+      "7. Accessories (only when you know what you need)"
+    ]},
+    {"type": "checklist", "title": "New Creator Checklist", "content": [
+      "Camera (phone is fine)?",
+      "Audio solution in place?",
+      "Basic lighting arranged?",
+      "Stable mounting/tripod?",
+      "Editing software installed?",
+      "Clean background area?",
+      "Test recordings reviewed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I really start with just a phone?", "answer": "Absolutely. Many million-subscriber channels started with phones. Content quality matters far more than video quality."},
+    {"question": "What should I buy first?", "answer": "Microphone. Bad audio makes viewers leave immediately. Upgrade audio before camera every time."},
+    {"question": "When should I upgrade from phone?", "answer": "After 50-100 videos, when you know your style and specific needs. Many successful creators never upgrade."},
+    {"question": "Is webcam or phone better?", "answer": "Modern phones are usually better than most webcams. Only high-end webcams (Elgato Facecam) beat good phones."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

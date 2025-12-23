@@ -1,0 +1,68 @@
+{
+  "slug": "youtube-analytics-kpis",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Analytics KPIs 2025: Key Metrics Every Creator Should Track",
+    "description": "Essential YouTube KPIs and analytics metrics. Track what matters for channel growth.",
+    "keywords": ["youtube kpis", "youtube analytics metrics", "youtube key metrics", "youtube performance indicators", "youtube analytics guide"]
+  },
+  "hero": {
+    "badge": "KPIs",
+    "headline": "YouTube Analytics KPIs Guide",
+    "subheadline": "Measure what matters. The metrics that drive channel success.",
+    "primaryKeyword": "youtube kpis"
+  },
+  "sections": [
+    {"type": "intro", "content": "Not all metrics matter equally. YouTube Analytics shows dozens of data points, but a few KPIs actually drive growth. Understanding which metrics to prioritize—and which to ignore—prevents analysis paralysis and focuses effort where it counts."},
+    {"type": "features", "title": "Primary KPIs", "content": [
+      {"icon": "clock", "title": "Average View Duration", "description": "How long viewers watch. Quality signal that drives recommendations."},
+      {"icon": "percent", "title": "Click-Through Rate (CTR)", "description": "Impressions to views. Measures thumbnail and title effectiveness."},
+      {"icon": "activity", "title": "Audience Retention", "description": "When viewers leave. Shows where content loses interest."},
+      {"icon": "trending-up", "title": "Subscriber Growth Rate", "description": "New subs over time. Momentum indicator."}
+    ]},
+    {"type": "features", "title": "Secondary KPIs", "content": [
+      {"icon": "eye", "title": "Impressions", "description": "How often shown. Reach indicator."},
+      {"icon": "share-2", "title": "Traffic Sources", "description": "Where views come from. Optimization opportunities."},
+      {"icon": "repeat", "title": "Returning Viewers", "description": "Loyalty measure. Community strength."},
+      {"icon": "dollar-sign", "title": "Revenue per View", "description": "Monetization efficiency (if applicable)."}
+    ]},
+    {"type": "steps", "title": "Building KPI Dashboard", "content": [
+      "Identify your 3-5 most important metrics",
+      "Set benchmarks from your own data",
+      "Create tracking spreadsheet or use tool",
+      "Review weekly (not daily)",
+      "Compare to previous periods",
+      "Look for patterns across videos",
+      "Adjust strategy based on trends"
+    ]},
+    {"type": "benefits", "title": "What KPIs Tell You", "content": [
+      "AVD: Is content engaging enough?",
+      "CTR: Are thumbnails/titles working?",
+      "Retention: Where do you lose viewers?",
+      "Growth rate: Is momentum positive?",
+      "Traffic sources: Where to focus effort?",
+      "Returning viewers: Building community?",
+      "Combined: Overall channel health"
+    ]},
+    {"type": "checklist", "title": "KPI Tracking Checklist", "content": [
+      "Key metrics identified?",
+      "Benchmarks established?",
+      "Tracking system in place?",
+      "Weekly review scheduled?",
+      "Comparing to past performance?",
+      "Patterns being identified?",
+      "Actions taken based on data?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's the most important KPI?", "answer": "Average view duration. It directly signals to YouTube that content is worth recommending. High AVD videos get pushed more. Focus here."},
+    {"question": "How often should I check analytics?", "answer": "Weekly for trends. Daily checking creates anxiety over normal fluctuations. Focus on patterns over time, not individual data points."},
+    {"question": "What's a good CTR?", "answer": "4-10% is typical. Above 10% is excellent. Below 2% needs work. Compare to your own videos—external benchmarks vary by niche."},
+    {"question": "Should I track everything?", "answer": "No—focus on 3-5 key metrics. Too many metrics leads to paralysis. Master the important ones first, add complexity later."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

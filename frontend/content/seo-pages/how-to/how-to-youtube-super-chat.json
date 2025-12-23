@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-super-chat",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Enable YouTube Super Chat 2025: Live Stream Monetization",
+    "description": "Set up Super Chat and Super Stickers. Monetize your YouTube live streams.",
+    "keywords": ["youtube super chat", "enable super chat", "super chat setup", "youtube live monetization", "super stickers"]
+  },
+  "hero": {
+    "badge": "Super Chat",
+    "headline": "How to Enable YouTube Super Chat",
+    "subheadline": "Monetize live streams. Let viewers support you directly.",
+    "primaryKeyword": "youtube super chat"
+  },
+  "sections": [
+    {"type": "intro", "content": "Super Chat lets viewers pay to highlight their messages in your live stream chat. It's direct monetization during live interaction—viewers feel special, you earn revenue. Super Stickers add animated graphics to the mix. Here's how to set up and maximize these features."},
+    {"type": "steps", "title": "Enabling Super Chat", "content": [
+      "Be a YouTube Partner Program member",
+      "Go to YouTube Studio",
+      "Click 'Monetization' in left menu",
+      "Select 'Supers' tab",
+      "Click 'Get started'",
+      "Accept terms and conditions",
+      "Super Chat now enabled for live streams",
+      "Configure Super Stickers if desired"
+    ]},
+    {"type": "features", "title": "Requirements", "content": [
+      {"icon": "check", "title": "YPP Membership", "description": "Must be in YouTube Partner Program."},
+      {"icon": "user", "title": "18+ Years Old", "description": "Age requirement for monetization."},
+      {"icon": "globe", "title": "Available Country", "description": "Not all countries supported. Check eligibility."},
+      {"icon": "flag", "title": "No Strikes", "description": "Channel must be in good standing."}
+    ]},
+    {"type": "features", "title": "Super Chat Types", "content": [
+      {"icon": "message-circle", "title": "Super Chat", "description": "Highlighted message. $1-$500 range. Color by amount."},
+      {"icon": "star", "title": "Super Stickers", "description": "Animated stickers. Fun, visual support."},
+      {"icon": "heart", "title": "Super Thanks", "description": "Works on regular videos too. Not just live."}
+    ]},
+    {"type": "benefits", "title": "Maximizing Super Chats", "content": [
+      "Acknowledge every Super Chat by name",
+      "Read message aloud when appropriate",
+      "Create special moments for top supporters",
+      "Set up alerts for Super Chats",
+      "Thank supporters in special ways",
+      "Don't beg—let quality drive support",
+      "Engage authentically with your community"
+    ]},
+    {"type": "checklist", "title": "Super Chat Checklist", "content": [
+      "YPP requirements met?",
+      "Supers enabled in Studio?",
+      "Alerts configured?",
+      "Stream layout shows Super Chats?",
+      "Response plan for supporters?",
+      "Moderation active?",
+      "Thank you message prepared?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much does YouTube take from Super Chats?", "answer": "YouTube takes 30%, you keep 70%. This is after payment processing. Standard platform revenue share for direct supporter features."},
+    {"question": "Minimum viewers for Super Chat?", "answer": "No minimum viewers—if you're live and eligible, Super Chats are available. Even small streams can receive support from engaged community."},
+    {"question": "Can I refund Super Chats?", "answer": "Refunds are handled by YouTube support, not creators. Generally non-refundable except in specific circumstances. YouTube handles disputes."},
+    {"question": "Super Chat vs memberships?", "answer": "Super Chat: one-time during streams, visible to all. Memberships: recurring monthly, ongoing perks. Both valuable—Super Chat for engagement, memberships for stability."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

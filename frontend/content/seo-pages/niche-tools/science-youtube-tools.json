@@ -1,0 +1,67 @@
+{
+  "slug": "science-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Science YouTube Tools 2025: Educational Content Equipment",
+    "description": "Essential tools for science content creators. Animation software, lab equipment, and visualization tools for educational YouTube.",
+    "keywords": ["science youtube tools", "educational youtube equipment", "science content creation", "science channel tools", "educational video software"]
+  },
+  "hero": {
+    "badge": "Science Content",
+    "headline": "Essential Tools for Science YouTube Creators",
+    "subheadline": "Explain complex concepts clearly. Animation, visualization, and production tools for science communicators.",
+    "primaryKeyword": "science youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Science communication requires making complex concepts accessible and engaging. That means animations, clear visuals, and production quality that matches your expertise. Whether you're explaining quantum physics or backyard chemistry, here are the tools that top science YouTubers use to educate millions."},
+    {"type": "features", "title": "Animation & Visualization", "content": [
+      {"icon": "pen-tool", "title": "Manim", "description": "The engine behind 3Blue1Brown. Mathematical animations in Python. Free and powerful."},
+      {"icon": "layers", "title": "Blender", "description": "3D modeling and animation. Molecular structures, physics simulations, and more."},
+      {"icon": "edit", "title": "After Effects", "description": "2D motion graphics and visual explanations. Industry standard for animated diagrams."}
+    ]},
+    {"type": "features", "title": "Production Equipment", "content": [
+      {"icon": "camera", "title": "Macro Lens", "description": "Close-up shots of experiments, specimens, and small objects. Essential for lab content."},
+      {"icon": "video", "title": "High-Speed Camera", "description": "Slow motion for reactions and physics experiments. Chronos or smartphone slow-mo."},
+      {"icon": "pen-tool", "title": "Digital Whiteboard", "description": "iPad with Apple Pencil or Wacom tablet. Draw diagrams while explaining concepts."}
+    ]},
+    {"type": "steps", "title": "Science Video Production Flow", "content": [
+      "Research and script the concept",
+      "Create or source visual references",
+      "Record voice-over narration",
+      "Animate key visualizations",
+      "Film any live demonstrations",
+      "Edit and sync all elements",
+      "Add captions for accessibility"
+    ]},
+    {"type": "benefits", "title": "Popular Science Content Types", "content": [
+      "Concept explainers (physics, chemistry, biology)",
+      "Experiment demonstrations",
+      "Debunking misconceptions",
+      "Research paper breakdowns",
+      "History of science",
+      "Math problem solving",
+      "Science news and discoveries"
+    ]},
+    {"type": "checklist", "title": "Science Creator Essentials", "content": [
+      "Animation software (Manim, After Effects, or Blender)",
+      "Drawing tablet for diagrams",
+      "Quality microphone for narration",
+      "Macro lens for close-ups",
+      "Green screen for overlays",
+      "Reference materials and citations",
+      "Fact-checking process"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need to know programming for Manim?", "answer": "Basic Python helps. But tutorials can get you started quickly. The results are worth the learning curve for math and physics content."},
+    {"question": "What about simpler animation tools?", "answer": "Keynote/PowerPoint animations work for basics. Canva has simple animations. Start simple and upgrade as your skills grow."},
+    {"question": "How do I make science content engaging?", "answer": "Lead with curiosity and questions. Use analogies viewers understand. Keep explanations visual. Pause for key moments. Energy matters."},
+    {"question": "Should I film experiments or animate them?", "answer": "Both. Real experiments build credibility. Animation explains what's happening. Combine them for the best educational content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "science"
+}

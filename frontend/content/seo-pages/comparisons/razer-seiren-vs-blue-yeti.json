@@ -1,0 +1,58 @@
+{
+  "slug": "razer-seiren-vs-blue-yeti",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Razer Seiren vs Blue Yeti 2025: USB Microphone Comparison",
+    "description": "Compare Razer Seiren and Blue Yeti USB microphones. Audio quality, features, and which is best for YouTube.",
+    "keywords": ["razer seiren vs blue yeti", "usb microphone comparison", "razer seiren", "blue yeti", "youtube microphone"]
+  },
+  "hero": {
+    "badge": "USB Microphones",
+    "headline": "Razer Seiren vs Blue Yeti: USB Mic Showdown",
+    "subheadline": "Two popular USB microphones for content creators. Which delivers better audio?",
+    "primaryKeyword": "razer seiren vs blue yeti"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Blue Yeti is the classic choice for content creators. Razer Seiren lineup offers gaming-focused alternatives. Both deliver solid USB microphone performance, but they target different users. Here's how they compare for YouTube content creation."},
+    {"type": "comparison", "title": "Razer Seiren vs Blue Yeti Comparison", "content": [
+      {"feature": "Seiren Mini Price", "toolA": "~$50", "toolB": "-", "tubeGrow": "N/A"},
+      {"feature": "Seiren V2 Pro Price", "toolA": "~$150", "toolB": "-", "tubeGrow": "N/A"},
+      {"feature": "Blue Yeti Price", "toolA": "-", "toolB": "~$100-130", "tubeGrow": "N/A"},
+      {"feature": "Polar Patterns", "toolA": "Cardioid (most)", "toolB": "4 patterns", "tubeGrow": "N/A"},
+      {"feature": "Size", "toolA": "More compact", "toolB": "Larger footprint", "tubeGrow": "N/A"},
+      {"feature": "Gain Control", "toolA": "Varies by model", "toolB": "On-mic knob", "tubeGrow": "N/A"},
+      {"feature": "Software", "toolA": "Razer Synapse", "toolB": "Blue Vo!ce", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Razer Seiren Strengths", "content": [
+      {"icon": "box", "title": "Compact Design", "description": "Seiren Mini is impressively small. Less desk clutter."},
+      {"icon": "settings", "title": "Razer Synapse", "description": "Unified software if you use other Razer products."},
+      {"icon": "mic", "title": "Cardioid Focus", "description": "Simple, focused design for voice recording."}
+    ]},
+    {"type": "features", "title": "Blue Yeti Strengths", "content": [
+      {"icon": "sliders", "title": "4 Polar Patterns", "description": "Cardioid, stereo, omnidirectional, bidirectional. More versatile."},
+      {"icon": "volume-2", "title": "On-Mic Controls", "description": "Gain knob and mute button right on the mic. No software needed."},
+      {"icon": "headphones", "title": "Headphone Monitoring", "description": "Zero-latency headphone jack on mic. Real-time monitoring."}
+    ]},
+    {"type": "steps", "title": "Choosing Between Them", "content": [
+      "Choose Seiren Mini if: Budget and compact size matter",
+      "Choose Seiren V2 Pro if: You want premium Razer features",
+      "Choose Blue Yeti if: You need multiple polar patterns",
+      "Choose Blue Yeti if: On-mic controls are important",
+      "Both work well for: Standard YouTube voice recording",
+      "Consider alternatives if: You have room noise issues"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better audio quality?", "answer": "Very similar for voice recording. Blue Yeti slightly warmer, Seiren slightly crisper. Both are quality USB mics."},
+    {"question": "Are USB mics good enough for YouTube?", "answer": "Yes. Most viewers won't notice difference vs XLR. Focus on technique (distance, room treatment) over mic upgrades."},
+    {"question": "Do these pick up keyboard noise?", "answer": "Yes, both do. They're condenser mics. Use boom arm to position closer to mouth, or switch to dynamic mic for noisy rooms."},
+    {"question": "Which is better for streaming?", "answer": "Blue Yeti's mute button and monitoring are convenient for streams. Razer's software integrates with other Razer gear. Both work fine."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "razer-seiren",
+  "secondaryTool": "blue-yeti"
+}

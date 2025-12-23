@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-title-formulas",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Title Formulas 2025: Templates That Get Clicks",
+    "description": "Proven YouTube title formulas. Templates and structures for high-CTR titles.",
+    "keywords": ["youtube title formulas", "youtube title templates", "video title ideas", "youtube title structure", "clickable titles"]
+  },
+  "hero": {
+    "badge": "Title Formulas",
+    "headline": "YouTube Title Formulas That Work",
+    "subheadline": "Templates for better titles. Stop guessing, start clicking.",
+    "primaryKeyword": "youtube title formulas"
+  },
+  "sections": [
+    {"type": "intro", "content": "Great titles aren't creative accidents—they follow proven structures. The best YouTubers use formulas that trigger curiosity, promise value, and demand clicks. You don't need to reinvent the wheel; you need to master the patterns. Here are title formulas that consistently perform."},
+    {"type": "features", "title": "High-Performing Formulas", "content": [
+      {"icon": "help-circle", "title": "Question Format", "description": "Why Does [X] Happen? Opens curiosity loop."},
+      {"icon": "list", "title": "Number Lists", "description": "7 Ways to [Result]. Specific and scannable."},
+      {"icon": "target", "title": "How-To", "description": "How to [Achieve Result] in [Timeframe]."},
+      {"icon": "alert-circle", "title": "Mistake Format", "description": "Stop Making This [Topic] Mistake."}
+    ]},
+    {"type": "steps", "title": "Title Creation Process", "content": [
+      "Identify core value/promise of video",
+      "Choose appropriate formula for content type",
+      "Include target keyword naturally",
+      "Add specificity (numbers, timeframes)",
+      "Create curiosity gap if appropriate",
+      "Keep under 60 characters for full display",
+      "Test thumbnail + title combination",
+      "Check against competitors in search"
+    ]},
+    {"type": "features", "title": "More Formulas", "content": [
+      {"icon": "x", "title": "Negative/Avoid", "description": "What NOT to Do When [Topic]."},
+      {"icon": "trending-up", "title": "Result Focus", "description": "I [Did X] for [Time] - Here's What Happened."},
+      {"icon": "zap", "title": "Contrast", "description": "[Cheap] vs [Expensive] - Which Wins?"},
+      {"icon": "star", "title": "Superlative", "description": "The BEST Way to [Achieve Goal]."}
+    ]},
+    {"type": "features", "title": "Formula Elements", "content": [
+      {"icon": "hash", "title": "Numbers", "description": "Odd numbers (7, 11) outperform even."},
+      {"icon": "clock", "title": "Timeframes", "description": "In 30 Days, 10 Minutes, etc."},
+      {"icon": "user", "title": "Personal Stakes", "description": "I, My, What I Learned."},
+      {"icon": "type", "title": "Power Words", "description": "Secret, Ultimate, Complete, Proven."}
+    ]},
+    {"type": "benefits", "title": "Title Best Practices", "content": [
+      "Front-load important words",
+      "Keep keyword near beginning",
+      "Match title to thumbnail message",
+      "Don't repeat thumbnail text exactly",
+      "Avoid clickbait that doesn't deliver",
+      "Test different formulas for your niche",
+      "Study what works for competitors"
+    ]},
+    {"type": "checklist", "title": "Title Checklist", "content": [
+      "Value/promise clear?",
+      "Keyword included naturally?",
+      "Under 60 characters?",
+      "Creates curiosity?",
+      "Complements thumbnail?",
+      "Delivers on promise?",
+      "Tested against alternatives?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What title length is best?", "answer": "Under 60 characters displays fully in most places. Front-load key info since truncation happens. Shorter often better—punchier, more readable. Long titles can work but risky."},
+    {"question": "Should titles include keywords?", "answer": "Yes—for searchable content. Near beginning is best for SEO. Don't force awkwardly. Browse content can be more creative; search content needs keywords."},
+    {"question": "How important are numbers in titles?", "answer": "Very effective—numbers are specific and scannable. '7 Tips' outperforms 'Tips'. Odd numbers tend to perform slightly better than even. Specific numbers (347%) beat round numbers."},
+    {"question": "Is ALL CAPS clickbait?", "answer": "One or two CAPS words for emphasis is fine. Full caps titles look spammy. YouTube doesn't penalize but viewers may. Strategic caps on key word can improve CTR."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

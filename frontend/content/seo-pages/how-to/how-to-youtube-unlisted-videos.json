@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-unlisted-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make YouTube Videos Unlisted 2025: Privacy Settings Guide",
+    "description": "Make YouTube videos unlisted. Share privately without making public.",
+    "keywords": ["youtube unlisted video", "unlisted youtube", "youtube privacy settings", "share video privately", "youtube video visibility"]
+  },
+  "hero": {
+    "badge": "Unlisted Videos",
+    "headline": "How to Make YouTube Videos Unlisted",
+    "subheadline": "Share selectively. Control who sees your content.",
+    "primaryKeyword": "youtube unlisted video"
+  },
+  "sections": [
+    {"type": "intro", "content": "Unlisted videos are visible only to people with the direct link—they don't appear in search, recommendations, or your channel page. Perfect for sharing with specific audiences, client work, or content not ready for public. Here's how to use unlisted videos effectively."},
+    {"type": "features", "title": "Visibility Options", "content": [
+      {"icon": "globe", "title": "Public", "description": "Everyone can see and discover."},
+      {"icon": "link", "title": "Unlisted", "description": "Only people with link."},
+      {"icon": "lock", "title": "Private", "description": "Only you (and invited)."},
+      {"icon": "clock", "title": "Scheduled", "description": "Public at future time."}
+    ]},
+    {"type": "steps", "title": "Making Video Unlisted", "content": [
+      "Open YouTube Studio",
+      "Click Content in sidebar",
+      "Find video to change",
+      "Click visibility dropdown (or pencil icon)",
+      "Select 'Unlisted'",
+      "Save changes",
+      "Copy and share the video link",
+      "Only people with link can view"
+    ]},
+    {"type": "features", "title": "Unlisted Use Cases", "content": [
+      {"icon": "users", "title": "Client Work", "description": "Share with specific clients."},
+      {"icon": "book", "title": "Course Content", "description": "Paid access via link."},
+      {"icon": "settings", "title": "Testing", "description": "Review before public."},
+      {"icon": "gift", "title": "Exclusive Content", "description": "Special audience access."}
+    ]},
+    {"type": "features", "title": "Unlisted Limitations", "content": [
+      {"icon": "search", "title": "Not Searchable", "description": "Won't appear in search."},
+      {"icon": "trending-up", "title": "No Recommendations", "description": "Algorithm doesn't promote."},
+      {"icon": "share-2", "title": "Link Sharing", "description": "Anyone with link can share it."},
+      {"icon": "eye", "title": "Still Viewable", "description": "Not truly private."}
+    ]},
+    {"type": "benefits", "title": "Unlisted Best Practices", "content": [
+      "Unlisted ≠ private—link can be shared",
+      "Good for review/feedback before public",
+      "Ideal for embedded content on websites",
+      "Use for course/membership exclusives",
+      "Change to public when ready",
+      "Private is more restrictive option",
+      "Track who you share links with"
+    ]},
+    {"type": "checklist", "title": "Unlisted Video Checklist", "content": [
+      "Visibility set to Unlisted?",
+      "Link copied for sharing?",
+      "Shared with intended audience?",
+      "Understand link can be forwarded?",
+      "Embargo/public date planned?",
+      "Comments settings appropriate?",
+      "Embedding settings correct?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Difference between unlisted and private?", "answer": "Unlisted: anyone with the link can watch. Private: only you and up to 50 invited people (Google accounts). Private requires login, unlisted doesn't. Choose based on security need."},
+    {"question": "Can unlisted videos be found?", "answer": "Not through YouTube search or recommendations. But if someone shares the link, others can watch. Not truly secure for confidential content. Use private for sensitive material."},
+    {"question": "Do unlisted videos count for channel stats?", "answer": "Views count toward your total but don't contribute to public metrics visible to others. Watch time counts for YPP requirements. Good for testing content before public release."},
+    {"question": "Can I make public videos unlisted?", "answer": "Yes—change visibility anytime. Existing links still work. Video disappears from channel page and search. Comments remain. Views already counted remain in stats."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

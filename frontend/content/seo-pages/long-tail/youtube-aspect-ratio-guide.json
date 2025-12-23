@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-aspect-ratio-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Aspect Ratio Guide 2025: Optimal Sizes for All Formats",
+    "description": "Complete guide to YouTube aspect ratios. Standard videos, Shorts, thumbnails, and channel art dimensions.",
+    "keywords": ["youtube aspect ratio", "youtube video size", "youtube dimensions", "shorts aspect ratio", "youtube video format"]
+  },
+  "hero": {
+    "badge": "Aspect Ratios",
+    "headline": "YouTube Aspect Ratio Guide",
+    "subheadline": "Optimal dimensions for every YouTube format. Standard videos, Shorts, and more.",
+    "primaryKeyword": "youtube aspect ratio"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube supports various aspect ratios, but optimal choices depend on your content type. Standard videos use 16:9 horizontal, Shorts use 9:16 vertical, and YouTube handles different ratios with letterboxing. Here's everything you need to know about sizing your content correctly."},
+    {"type": "features", "title": "Main Aspect Ratios", "content": [
+      {"icon": "monitor", "title": "16:9 Standard", "description": "1920x1080 or 3840x2160. The default for regular YouTube videos."},
+      {"icon": "smartphone", "title": "9:16 Shorts", "description": "1080x1920 vertical. Required for YouTube Shorts."},
+      {"icon": "square", "title": "1:1 Square", "description": "1080x1080. Works but adds letterboxing on YouTube."}
+    ]},
+    {"type": "steps", "title": "Recommended Resolutions", "content": [
+      "Standard HD: 1920x1080 (16:9)",
+      "4K UHD: 3840x2160 (16:9)",
+      "Shorts: 1080x1920 (9:16)",
+      "Thumbnail: 1280x720 (16:9)",
+      "Channel Banner: 2560x1440 (various safe zones)",
+      "Profile Picture: 800x800 (1:1)",
+      "Watermark: 150x150 or 50x50"
+    ]},
+    {"type": "benefits", "title": "Format Best Practices", "content": [
+      "Film in highest resolution possible",
+      "Export at original or 1080p minimum",
+      "Match frame rate to content (24/30/60fps)",
+      "Use proper codec (H.264 or H.265)",
+      "Shorts must be under 60 seconds",
+      "Avoid letterboxing with black bars",
+      "Test on mobile before upload"
+    ]},
+    {"type": "checklist", "title": "Export Settings Checklist", "content": [
+      "Resolution: 1080p or 4K",
+      "Aspect ratio: 16:9 (standard) or 9:16 (Shorts)",
+      "Frame rate: Matches source footage",
+      "Codec: H.264 (compatible) or H.265 (efficient)",
+      "Bitrate: 8-12 Mbps for 1080p",
+      "Audio: AAC, 192-320 kbps",
+      "File format: MP4"
+    ]}
+  ],
+  "faq": [
+    {"question": "What happens if I upload non-16:9 video?", "answer": "YouTube adds letterboxing (black bars). Video still plays but looks unprofessional. Some ratios like 2:1 work for cinematic feel."},
+    {"question": "Should I upload 4K?", "answer": "If you have it, yes. YouTube compresses everything, but 4K gets higher bitrate allocation. Even 1080p viewers benefit from 4K upload."},
+    {"question": "What frame rate should I use?", "answer": "24fps for cinematic, 30fps for talking head, 60fps for gaming/action. Match your source footage. Don't upscale frame rates."},
+    {"question": "Can I upload square videos?", "answer": "Yes, but they'll have black bars on sides. Better to crop to 16:9 for standard or 9:16 for Shorts. Square was for Facebook."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

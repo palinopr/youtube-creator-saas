@@ -1,0 +1,56 @@
+{
+  "slug": "youtube-algorithm-explained",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Algorithm Explained 2025: How It Actually Works",
+    "description": "Understand how the YouTube algorithm works in 2025. Ranking factors, recommendations, and how to optimize for algorithmic success.",
+    "keywords": ["youtube algorithm", "youtube algorithm 2025", "how youtube algorithm works", "youtube recommendations", "youtube ranking factors"]
+  },
+  "hero": {
+    "badge": "Algorithm Guide",
+    "headline": "YouTube Algorithm Explained: How It Works in 2025",
+    "subheadline": "Stop guessing. Understand exactly how YouTube decides which videos to recommend.",
+    "primaryKeyword": "youtube algorithm explained"
+  },
+  "sections": [
+    {"type": "intro", "content": "The YouTube algorithm isn't one system - it's multiple systems working together to match viewers with videos they'll enjoy. Understanding these systems helps you create content that gets recommended, not just uploaded. This guide breaks down how the algorithm actually works."},
+    {"type": "features", "title": "Algorithm Components", "content": [
+      {"icon": "search", "title": "Search Algorithm", "description": "Matches videos to search queries. Ranking based on relevance, engagement, and authority. Traditional SEO still matters here."},
+      {"icon": "trending", "title": "Recommendation Engine", "description": "Suggests videos on homepage and sidebar. Based on viewer history, similar videos, and real-time engagement signals."},
+      {"icon": "video", "title": "Shorts Algorithm", "description": "Separate system for short-form content. Tests videos with small audiences, scales based on completion rate and engagement."}
+    ]},
+    {"type": "steps", "title": "Key Ranking Signals", "content": [
+      "Click-through rate (CTR) - do people click your thumbnail?",
+      "Watch time - do they stay and watch?",
+      "Engagement - likes, comments, shares, saves",
+      "Satisfaction signals - do they watch more after your video?",
+      "Session time - do they stay on YouTube?",
+      "Returning viewers - do subscribers come back?"
+    ]},
+    {"type": "benefits", "title": "What the Algorithm Rewards", "content": [
+      "Videos that keep viewers watching longer",
+      "Content that satisfies the click (delivers on promise)",
+      "Channels with consistent quality and engagement",
+      "Videos that spark exploration (more YouTube watching)",
+      "Content appropriate for broad or niche audiences"
+    ]},
+    {"type": "benefits", "title": "Common Algorithm Myths", "content": [
+      "Myth: Posting time dramatically affects reach (minor factor)",
+      "Myth: Tags are critical for ranking (minimal impact)",
+      "Myth: Longer videos always rank better (not true)",
+      "Myth: Algorithm suppresses certain topics (quality matters)",
+      "Myth: You need to post daily (consistency over frequency)"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does the algorithm punish new channels?", "answer": "No, but new channels lack the viewer history signals that established channels have. The algorithm tests new content with small audiences first, regardless of channel size."},
+    {"question": "How long until a video gets picked up?", "answer": "Videos can get recommended months or years after upload if they satisfy viewer needs. Evergreen content can have multiple growth phases."},
+    {"question": "Does changing titles/thumbnails reset the algorithm?", "answer": "No reset, but can trigger re-evaluation. If the new version improves CTR and watch time, performance can improve."},
+    {"question": "Why do some low-quality videos go viral?", "answer": "The algorithm measures viewer behavior, not our judgment of quality. If viewers click, watch, and engage, the algorithm promotes it."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

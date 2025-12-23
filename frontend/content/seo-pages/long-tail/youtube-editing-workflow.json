@@ -1,0 +1,80 @@
+{
+  "slug": "youtube-editing-workflow",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Editing Workflow 2025: Efficient Video Editing Process",
+    "description": "Optimize your YouTube editing workflow. Save time and improve quality.",
+    "keywords": ["youtube editing workflow", "video editing workflow", "youtube editing process", "efficient video editing", "editing tips youtube"]
+  },
+  "hero": {
+    "badge": "Editing Workflow",
+    "headline": "YouTube Editing Workflow Guide",
+    "subheadline": "Edit faster, edit smarter. Build your system.",
+    "primaryKeyword": "youtube editing workflow"
+  },
+  "sections": [
+    {"type": "intro", "content": "Editing can be the biggest time sink in content creation. A systematic workflow reduces hours per video while improving quality. The right organization, tools, and habits make editing sustainable for consistent uploads. Here's how to build an efficient editing process."},
+    {"type": "features", "title": "Workflow Phases", "content": [
+      {"icon": "folder", "title": "Organization", "description": "File structure and naming."},
+      {"icon": "scissors", "title": "Assembly", "description": "Rough cut and structure."},
+      {"icon": "sliders", "title": "Fine Cut", "description": "Pacing and polish."},
+      {"icon": "volume-2", "title": "Audio", "description": "Mix, music, sound effects."},
+      {"icon": "image", "title": "Graphics", "description": "Text, B-roll, effects."},
+      {"icon": "check", "title": "Export", "description": "Review and final render."}
+    ]},
+    {"type": "steps", "title": "Editing Process", "content": [
+      "Import and organize all footage",
+      "Review and mark best takes",
+      "Create rough assembly—story structure",
+      "Cut for pacing—remove dead air",
+      "Add B-roll and cutaways",
+      "Balance and clean audio",
+      "Add music and sound effects",
+      "Insert graphics and text",
+      "Color correct if needed",
+      "Review full video",
+      "Export in appropriate format"
+    ]},
+    {"type": "features", "title": "Time-Saving Tips", "content": [
+      {"icon": "keyboard", "title": "Keyboard Shortcuts", "description": "Learn and use constantly."},
+      {"icon": "copy", "title": "Templates", "description": "Reusable project files."},
+      {"icon": "layers", "title": "Presets", "description": "Save common effects."},
+      {"icon": "zap", "title": "Proxy Editing", "description": "Edit low-res, export full."}
+    ]},
+    {"type": "features", "title": "Organization System", "content": [
+      {"icon": "folder", "title": "Folder Structure", "description": "Consistent per project."},
+      {"icon": "tag", "title": "File Naming", "description": "Date-project-description."},
+      {"icon": "hard-drive", "title": "Asset Library", "description": "Music, effects, graphics."},
+      {"icon": "archive", "title": "Archive System", "description": "Store completed projects."}
+    ]},
+    {"type": "benefits", "title": "Workflow Best Practices", "content": [
+      "Same folder structure every project",
+      "Edit in passes, not all at once",
+      "Don't polish rough cuts too early",
+      "Keyboard shortcuts are mandatory",
+      "Build template projects",
+      "Sleep on edits before finalizing",
+      "Time yourself to improve"
+    ]},
+    {"type": "checklist", "title": "Editing Checklist", "content": [
+      "Footage organized and named?",
+      "Rough cut tells the story?",
+      "Pacing tight, no dead air?",
+      "Audio balanced and clean?",
+      "Graphics enhance not distract?",
+      "Music fits mood and timing?",
+      "Full review completed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should editing take?", "answer": "Varies wildly—hour of footage might take 2-10 hours to edit depending on complexity. Track your time to improve. 3-4 hours per 10-minute video is common for polished content."},
+    {"question": "Best editing software for YouTube?", "answer": "Premiere Pro industry standard. DaVinci Resolve free and powerful. Final Cut Pro for Mac users. CapCut for simple edits. Use what you know or are willing to learn deeply."},
+    {"question": "Should I edit myself or hire?", "answer": "Start yourself to understand the craft. Outsource when editing time prevents creating more content. Hiring frees time but costs money. Many successful creators still self-edit."},
+    {"question": "How to edit faster?", "answer": "Master keyboard shortcuts—biggest impact. Create templates and presets. Organize footage before editing. Edit in passes (structure, then pacing, then polish). Don't over-edit—done beats perfect."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

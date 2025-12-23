@@ -1,0 +1,66 @@
+{
+  "slug": "homesteading-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Homesteading YouTube Tools 2025: Farm & Self-Sufficiency Gear",
+    "description": "Top tools for homesteading YouTube channels. Document farm life and self-sufficiency.",
+    "keywords": ["homesteading youtube tools", "farm youtube equipment", "homestead channel", "self sufficiency content", "farm vlog gear"]
+  },
+  "hero": {
+    "badge": "Homesteading Tools",
+    "headline": "Best Homesteading YouTube Tools 2025",
+    "subheadline": "Document your homestead journey. Gear for farm creators.",
+    "primaryKeyword": "homesteading youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Homesteading content captures rural self-sufficiency—gardening, livestock, building, preserving, and daily farm life. It's shot in all weather conditions, often solo, across large properties. Equipment needs to be rugged, portable, and work in challenging environments. Here's what homestead YouTubers use."},
+    {"type": "features", "title": "Camera Options", "content": [
+      {"icon": "video", "title": "GoPro Hero 12", "description": "Weatherproof. POV farm work."},
+      {"icon": "camera", "title": "Sony A7C", "description": "Compact full-frame. Weather sealed."},
+      {"icon": "smartphone", "title": "iPhone", "description": "Always available. Quick captures."},
+      {"icon": "airplay", "title": "DJI Mini 4 Pro", "description": "Aerial property shots. Farm overview."}
+    ]},
+    {"type": "features", "title": "Audio Challenges", "content": [
+      {"icon": "mic", "title": "Wireless Lav", "description": "Hands-free while working."},
+      {"icon": "wind", "title": "Windscreens", "description": "Essential outdoors. Dead cats."},
+      {"icon": "volume-2", "title": "Shotgun Mic", "description": "Environmental sound. Animals."},
+      {"icon": "headphones", "title": "Voiceover", "description": "Clean narration in post."}
+    ]},
+    {"type": "features", "title": "Outdoor Essentials", "content": [
+      {"icon": "battery", "title": "Extra Batteries", "description": "Long days, no outlets nearby."},
+      {"icon": "sun", "title": "Solar Charger", "description": "Off-grid power solution."},
+      {"icon": "droplet", "title": "Weather Protection", "description": "Rain covers, dry bags."},
+      {"icon": "box", "title": "Rugged Case", "description": "Pelican case for transport."}
+    ]},
+    {"type": "benefits", "title": "Homesteading Content Tips", "content": [
+      "Document failures and successes",
+      "Seasonal content stays relevant",
+      "Process videos (planting to harvest)",
+      "Animal content draws views",
+      "Time-lapse building projects",
+      "Educational + entertaining mix",
+      "Authentic beats polished"
+    ]},
+    {"type": "checklist", "title": "Farm Filming Checklist", "content": [
+      "Batteries fully charged?",
+      "Weather protection packed?",
+      "Audio gear with windscreens?",
+      "Backup camera available?",
+      "SD cards formatted?",
+      "Drone batteries charged?",
+      "Lens cloths for dirt/dust?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for farm work?", "answer": "GoPro for hands-on work—mount and go. Sony A7C or similar for quality B-roll. iPhone for spontaneous moments. Rugged, weather-sealed important—farms are harsh on gear."},
+    {"question": "Filming while doing farm chores?", "answer": "Chest or head mount GoPro frees hands. Set up cameras on tripods for tasks. Wireless lav for narration. Accept that some footage will be shaky—authenticity matters."},
+    {"question": "How to handle outdoor audio?", "answer": "Wind is constant enemy—use dead cat windscreens always. Voiceover in post often cleaner. Embrace ambient farm sounds for atmosphere. Lav mics under clothing reduce wind."},
+    {"question": "Drone for farm content?", "answer": "Excellent for property overview, project progress, livestock counts. DJI Mini series portable and capable. Check FAA rules. Great for seasonal comparison shots."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "homesteading"
+}

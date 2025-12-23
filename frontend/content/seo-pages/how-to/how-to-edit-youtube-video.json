@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-edit-youtube-video",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Edit YouTube Videos 2025: Beginner's Guide",
+    "description": "Learn video editing basics for YouTube. Software options, essential techniques, and workflow tips.",
+    "keywords": ["how to edit youtube video", "video editing youtube", "edit youtube video", "youtube video editing tutorial", "editing for beginners"]
+  },
+  "hero": {
+    "badge": "Video Editing",
+    "headline": "How to Edit YouTube Videos",
+    "subheadline": "Video editing fundamentals. Transform raw footage into engaging content.",
+    "primaryKeyword": "edit youtube video"
+  },
+  "sections": [
+    {"type": "intro", "content": "Good editing makes average footage engaging and great footage exceptional. You don't need expensive software or years of experience to edit effective YouTube videos. Here's a beginner-friendly guide to video editing fundamentals."},
+    {"type": "features", "title": "Editing Software Options", "content": [
+      {"icon": "dollar-sign", "title": "Free Options", "description": "DaVinci Resolve, CapCut, iMovie. Capable for YouTube without cost."},
+      {"icon": "video", "title": "Paid Options", "description": "Premiere Pro, Final Cut. More features, subscription or one-time cost."},
+      {"icon": "smartphone", "title": "Mobile Editing", "description": "CapCut, VN Editor. Edit anywhere on phone or tablet."}
+    ]},
+    {"type": "steps", "title": "Basic Editing Workflow", "content": [
+      "Import footage into editing software",
+      "Create a new project/timeline",
+      "Arrange clips in rough order",
+      "Make rough cuts (remove bad takes)",
+      "Trim clips for pacing",
+      "Add B-roll and cutaways",
+      "Add music and sound effects",
+      "Color correct and grade",
+      "Add text and graphics",
+      "Export in YouTube-optimal settings"
+    ]},
+    {"type": "features", "title": "Essential Techniques", "content": [
+      {"icon": "scissors", "title": "J and L Cuts", "description": "Audio leads or trails video. Smooth, professional transitions."},
+      {"icon": "layers", "title": "B-Roll Coverage", "description": "Cutaway footage covers jump cuts. Visual variety."},
+      {"icon": "type", "title": "Text and Graphics", "description": "Lower thirds, call-outs, chapter titles. Enhance information delivery."}
+    ]},
+    {"type": "benefits", "title": "Editing Best Practices", "content": [
+      "Cut ruthlessly—shorter is usually better",
+      "Cut on action for smooth transitions",
+      "Use B-roll to hide jump cuts",
+      "Keep music under voice level",
+      "Watch for audio pops and clicks",
+      "Color match all footage",
+      "Save and back up frequently"
+    ]},
+    {"type": "checklist", "title": "Pre-Export Checklist", "content": [
+      "All footage color matched?",
+      "Audio levels balanced?",
+      "No awkward jumps or gaps?",
+      "Text readable and timed well?",
+      "Music fades smooth?",
+      "End screen time reserved?",
+      "Watch full video before export?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best free editing software?", "answer": "DaVinci Resolve for power users. CapCut for ease of use. iMovie for Mac users starting out. All produce professional results."},
+    {"question": "How long does editing take?", "answer": "Varies wildly. Simple talking head: 2-4x footage length. Complex edit: 10x or more. Efficiency improves with practice."},
+    {"question": "What export settings for YouTube?", "answer": "1080p or 4K, H.264 codec, 15-30 Mbps bitrate. Most software has YouTube preset. Higher quality = longer upload."},
+    {"question": "Should I learn keyboard shortcuts?", "answer": "Absolutely. Editing speed increases dramatically. Learn cut, ripple delete, playback controls first. Invest time upfront."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

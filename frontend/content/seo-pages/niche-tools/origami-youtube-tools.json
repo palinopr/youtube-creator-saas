@@ -1,0 +1,66 @@
+{
+  "slug": "origami-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Origami YouTube Tools 2025: Paper Folding Channel Equipment",
+    "description": "Top tools for origami YouTube channels. Film paper folding tutorials beautifully.",
+    "keywords": ["origami youtube tools", "paper folding channel", "origami video equipment", "paper craft youtube", "origami tutorial filming"]
+  },
+  "hero": {
+    "badge": "Origami Tools",
+    "headline": "Best Origami YouTube Tools 2025",
+    "subheadline": "Capture every fold. Gear for paper artists.",
+    "primaryKeyword": "origami youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Origami content is meditative and precise—each fold transforms simple paper into art. Viewers need to see folds clearly, understand orientation, and follow along. Overhead cameras, good lighting, and clear demonstrations are essential. Here's what successful origami YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Essential for fold visibility."},
+      {"icon": "camera", "title": "4K Resolution", "description": "Crisp fold lines."},
+      {"icon": "eye", "title": "Face Camera", "description": "Optional for explanations."},
+      {"icon": "move", "title": "Stable Mount", "description": "No shake during folds."}
+    ]},
+    {"type": "features", "title": "Lighting Paper", "content": [
+      {"icon": "sun", "title": "Even Illumination", "description": "No shadows on folds."},
+      {"icon": "layers", "title": "Side Lights", "description": "Show paper texture."},
+      {"icon": "circle", "title": "Ring Light", "description": "Shadowless option."},
+      {"icon": "moon", "title": "Paper Color Matters", "description": "White paper needs careful lighting."}
+    ]},
+    {"type": "features", "title": "Background & Surface", "content": [
+      {"icon": "grid", "title": "Contrasting Mat", "description": "Paper stands out."},
+      {"icon": "maximize", "title": "Clean Surface", "description": "No distractions."},
+      {"icon": "image", "title": "Consistent Look", "description": "Brand recognition."},
+      {"icon": "layers", "title": "Grid Mat", "description": "Helps with precision."}
+    ]},
+    {"type": "benefits", "title": "Origami Content Tips", "content": [
+      "Overhead view essential for tutorials",
+      "Slow, deliberate folds help learning",
+      "Paper choice affects final look",
+      "ASMR of paper folding is popular",
+      "Diagram overlays aid understanding",
+      "Beginner to advanced progression",
+      "Seasonal models drive traffic"
+    ]},
+    {"type": "checklist", "title": "Origami Video Checklist", "content": [
+      "Overhead camera positioned?",
+      "Lighting even across paper?",
+      "Contrasting background ready?",
+      "Paper pre-cut and prepared?",
+      "Folds practiced beforehand?",
+      "Audio capturing paper sounds?",
+      "Final model shots planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best overhead setup for origami?", "answer": "Copy stand most stable. C-stand with boom arm works well. Elgato arm for desk setup. Position camera directly overhead looking down. No angle—pure overhead for fold clarity."},
+    {"question": "What paper shows best on camera?", "answer": "Medium-weight paper with good contrast to background. Avoid very white paper under bright lights—can blow out. Colored paper often films better. Kami (origami paper) standard choice."},
+    {"question": "Should I use ASMR sounds?", "answer": "Paper folding sounds are naturally satisfying. Many viewers enjoy pure paper sounds without music. Consider separate ASMR versions. Good microphone placement captures folds beautifully."},
+    {"question": "How to show both hands and folds?", "answer": "Overhead camera shows hands naturally. Keep movements in frame. Practice fold sequence to avoid going out of frame. Some creators use face cam for complex explanations."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "origami"
+}

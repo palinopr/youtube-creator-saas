@@ -40,6 +40,9 @@ class Settings(BaseSettings):
     stripe_publishable_key: str = ""
     stripe_webhook_secret: str = ""
 
+    # Email (Resend)
+    resend_api_key: str = ""
+
     # YouTube Scopes
     youtube_readonly_scope: str = "https://www.googleapis.com/auth/youtube.readonly"
     youtube_analytics_scope: str = "https://www.googleapis.com/auth/yt-analytics.readonly"

@@ -1,0 +1,72 @@
+{
+  "slug": "outdoor-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Outdoor YouTube Tools 2025: Adventure Creator Equipment",
+    "description": "Essential gear for outdoor YouTube creators. Cameras, audio, and equipment for adventure content.",
+    "keywords": ["outdoor youtube tools", "adventure youtube gear", "outdoor content creator", "hiking youtube equipment", "nature video gear"]
+  },
+  "hero": {
+    "badge": "Outdoor Content",
+    "headline": "Essential Tools for Outdoor YouTube Creators",
+    "subheadline": "Capture adventures in any environment. Rugged gear for outdoor content.",
+    "primaryKeyword": "outdoor youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Outdoor content faces unique challenges—weather, weight, power, and durability. Whether you're hiking, camping, fishing, or exploring, you need equipment that can handle the elements. Here's the essential gear for outdoor YouTube creators."},
+    {"type": "features", "title": "Camera Options for Outdoors", "content": [
+      {"icon": "camera", "title": "Action Cameras", "description": "GoPro Hero, DJI Action. Waterproof, compact, stabilized."},
+      {"icon": "video", "title": "Mirrorless (Weather-Sealed)", "description": "Sony A7C, Panasonic GH6. Professional quality, field-ready."},
+      {"icon": "smartphone", "title": "Modern Smartphones", "description": "Backup camera, always available. Impressive quality."}
+    ]},
+    {"type": "features", "title": "Audio in the Elements", "content": [
+      {"icon": "wind", "title": "Wind Protection", "description": "Dead cats and foam essential. Wind destroys outdoor audio."},
+      {"icon": "mic", "title": "Lavalier Systems", "description": "Rode Wireless Go, DJI Mic. Consistent audio while moving."},
+      {"icon": "volume-2", "title": "Backup Recording", "description": "Camera audio as backup. Always have a fallback."}
+    ]},
+    {"type": "features", "title": "Power & Durability", "content": [
+      {"icon": "battery", "title": "Extra Batteries", "description": "Cold drains batteries fast. Bring 3x what you think you need."},
+      {"icon": "sun", "title": "Solar Chargers", "description": "Multi-day trips need power. Goal Zero, Anker solar panels."},
+      {"icon": "shield", "title": "Protective Cases", "description": "Pelican, Peak Design. Protect gear from drops and weather."}
+    ]},
+    {"type": "steps", "title": "Outdoor Filming Tips", "content": [
+      "Check weather forecast thoroughly",
+      "Test all gear before leaving",
+      "Bring backup for critical items",
+      "Protect batteries from cold",
+      "Use wind protection on all mics",
+      "Film establishing shots first",
+      "Capture natural audio/ambience"
+    ]},
+    {"type": "benefits", "title": "Outdoor Content Types", "content": [
+      "Hiking and backpacking",
+      "Camping and bushcraft",
+      "Fishing and hunting",
+      "Climbing and mountaineering",
+      "Kayaking and water sports",
+      "Wildlife and nature",
+      "Survival and outdoor skills"
+    ]},
+    {"type": "checklist", "title": "Outdoor Gear Checklist", "content": [
+      "Main camera (action or mirrorless)",
+      "Wind-protected microphone",
+      "Extra batteries (3-5)",
+      "Memory cards (multiple)",
+      "Protective case or bag",
+      "Portable power bank",
+      "Cleaning supplies for lens"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best all-around outdoor camera?", "answer": "GoPro Hero for versatility and durability. Add Sony ZV-E10 or similar for talking-head content. Combination covers most needs."},
+    {"question": "How do I get clean audio outdoors?", "answer": "Wind is the enemy. Use furry windscreens (dead cats) on all mics. Wireless lav close to mouth. Consider voiceover for windy days."},
+    {"question": "How many batteries do I need?", "answer": "Minimum 3 for day trips, more for cold weather. Cold cuts battery life by 50%+. Keep spares warm in pocket."},
+    {"question": "Best bag for outdoor filming?", "answer": "Peak Design Everyday or Lowepro weatherproof. Balance protection with accessibility. Quick-access pockets essential."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "outdoor"
+}

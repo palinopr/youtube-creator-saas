@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-verification",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get Verified on YouTube 2025: Verification Badge Guide",
+    "description": "Get the YouTube verification badge. Requirements and application process explained.",
+    "keywords": ["youtube verification", "youtube verified badge", "get verified youtube", "youtube checkmark", "youtube verification requirements"]
+  },
+  "hero": {
+    "badge": "Verification",
+    "headline": "How to Get Verified on YouTube",
+    "subheadline": "The checkmark that proves authenticity. What it takes to earn it.",
+    "primaryKeyword": "youtube verification"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube verification—the gray checkmark next to your channel name—signals authenticity to viewers and the algorithm. It's not about subscriber count alone; it's about proving your channel is the official presence of someone notable. Here's how verification actually works."},
+    {"type": "features", "title": "Verification Requirements", "content": [
+      {"icon": "users", "title": "100K+ Subscribers", "description": "Standard threshold. Below this, verification is rare."},
+      {"icon": "check-circle", "title": "Authentic Representation", "description": "Must represent a real creator, brand, or entity."},
+      {"icon": "shield", "title": "Active Channel", "description": "Regular uploads, completed profile, no community strikes."}
+    ]},
+    {"type": "steps", "title": "Verification Process", "content": [
+      "Reach 100,000 subscribers",
+      "Complete all channel sections (About, Banner, etc.)",
+      "Have no active community guidelines strikes",
+      "Go to YouTube Studio > Settings > Channel",
+      "Navigate to Feature eligibility",
+      "Look for verification badge option",
+      "Submit application if eligible",
+      "Wait for YouTube review (can take weeks)"
+    ]},
+    {"type": "features", "title": "What Verification Signals", "content": [
+      {"icon": "award", "title": "Authenticity", "description": "Viewers know this is the real creator/brand."},
+      {"icon": "shield", "title": "Trust", "description": "Less likely to be impersonator or scam channel."},
+      {"icon": "eye", "title": "Visibility", "description": "May appear more prominently in search results."},
+      {"icon": "lock", "title": "Protection", "description": "Harder for imposters to deceive your audience."}
+    ]},
+    {"type": "benefits", "title": "Verification Benefits", "content": [
+      "Credibility with new viewers",
+      "Protection against impersonation",
+      "Potential search visibility boost",
+      "Professional appearance",
+      "Brand partnership appeal",
+      "Audience confidence",
+      "Recognition of milestone"
+    ]},
+    {"type": "checklist", "title": "Pre-Application Checklist", "content": [
+      "100K+ subscribers reached?",
+      "Channel fully set up (banner, about)?",
+      "No active community strikes?",
+      "Regular upload history?",
+      "Channel represents real entity?",
+      "Ready for YouTube review?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I get verified under 100K?", "answer": "Extremely rare. Only for highly notable public figures with significant impersonation risk. For most creators, 100K is the threshold."},
+    {"question": "How long does verification take?", "answer": "Varies—days to weeks. YouTube reviews manually. No way to speed up the process. Continue creating while waiting."},
+    {"question": "Does verification help growth?", "answer": "Minimal direct impact on algorithm. Main benefit is credibility and impersonation protection. Don't expect growth spike from checkmark."},
+    {"question": "Can verification be removed?", "answer": "Yes—community guidelines strikes, channel abandonment, or found to be misrepresenting identity can result in removal."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

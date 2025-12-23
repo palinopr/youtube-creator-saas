@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-end-screens",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube End Screens 2025: Complete Setup Guide",
+    "description": "Set up YouTube end screens effectively. Keep viewers watching with strategic elements.",
+    "keywords": ["youtube end screens", "add end screen youtube", "youtube outro", "end screen elements", "youtube end card"]
+  },
+  "hero": {
+    "badge": "End Screens",
+    "headline": "How to Add YouTube End Screens",
+    "subheadline": "Keep viewers watching. Turn video endings into new beginnings.",
+    "primaryKeyword": "youtube end screens"
+  },
+  "sections": [
+    {"type": "intro", "content": "End screens appear in the last 5-20 seconds, promoting more content when viewers are most engaged. A well-designed end screen drives significant additional views. They're clickable, customizable, and essential for channel growth. Here's how to set them up effectively."},
+    {"type": "steps", "title": "Adding End Screens", "content": [
+      "Open video in YouTube Studio",
+      "Click 'Editor' in left menu",
+      "Select 'End screen' option",
+      "Choose element type to add",
+      "Position elements on screen",
+      "Adjust timing (last 5-20 seconds)",
+      "Preview end screen",
+      "Click 'Save' when satisfied"
+    ]},
+    {"type": "features", "title": "Element Types", "content": [
+      {"icon": "video", "title": "Video/Playlist", "description": "Promote specific or best-for-viewer content."},
+      {"icon": "bell", "title": "Subscribe Button", "description": "Circular subscribe prompt. Effective placement."},
+      {"icon": "tv", "title": "Channel", "description": "Promote another channel (collabs, second channel)."},
+      {"icon": "link", "title": "Link", "description": "External website (requires Partner Program)."}
+    ]},
+    {"type": "features", "title": "Best Practices", "content": [
+      {"icon": "layout", "title": "Design for End Screen", "description": "Leave space in your outro. Don't cover important visuals."},
+      {"icon": "clock", "title": "Optimal Duration", "description": "15-20 seconds gives time to click without dragging."},
+      {"icon": "target", "title": "Strategic Content", "description": "Promote related video. 'Best for viewer' often works well."},
+      {"icon": "maximize", "title": "Clear Placement", "description": "Don't cluster elements. Make them easy to click."}
+    ]},
+    {"type": "benefits", "title": "End Screen Strategy", "content": [
+      "Promote your best converting video",
+      "Use 'best for viewer' for algorithm picks",
+      "Include subscribe button always",
+      "Match to video content when relevant",
+      "Test different layouts",
+      "Design outro with elements in mind",
+      "Verbally point to end screen"
+    ]},
+    {"type": "checklist", "title": "End Screen Checklist", "content": [
+      "Video long enough? (25+ seconds)",
+      "Outro designed for end screen?",
+      "Elements don't cover important content?",
+      "Strategic video selection?",
+      "Subscribe button included?",
+      "Timing appropriate?",
+      "Verbal call-to-action recorded?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Minimum video length for end screens?", "answer": "25 seconds minimum. End screens can appear in last 5-20 seconds, so video must be at least 25 seconds. Shorts don't support end screens."},
+    {"question": "What's 'best for viewer'?", "answer": "Algorithm chooses video most likely to interest that specific viewer. Usually performs well. Alternative to manually selecting specific video."},
+    {"question": "Why aren't my end screens showing?", "answer": "Check: video over 25 seconds, not a Short, end screen properly saved. Some viewers have elements disabled. Mobile shows differently than desktop."},
+    {"question": "How many elements should I use?", "answer": "2-4 elements typical. One video/playlist, one subscribe button is minimum. Don't overcrowd—cluttered end screens get ignored."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -21,41 +21,129 @@ from ..config import get_settings
 
 class TranscriptAnalyzer:
     """Analyzes video transcripts to find what content actually drives views."""
-    
-    def __init__(self, youtube_service: Resource):
+
+    def __init__(self, youtube_service: Resource, channel_profile: Optional[Dict[str, Any]] = None):
+        """
+        Initialize the transcript analyzer.
+
+        Args:
+            youtube_service: Authenticated YouTube API service
+            channel_profile: Optional channel profile dict from profile_channel().
+                            Contains niche, language, common_tags, etc.
+        """
         self.youtube = youtube_service
+        self.channel_profile = channel_profile or {}
         settings = get_settings()
         self.llm = ChatOpenAI(
             model="gpt-4o",
             temperature=0,  # Deterministic: same transcript = same suggestions
             api_key=settings.openai_api_key
         )
-        
-        # Celebrity names to look for in transcripts
-        self.celebrity_keywords = [
-            "daddy yankee", "don omar", "bad bunny", "anuel", "ozuna", "residente",
-            "nicky jam", "wisin", "yandel", "pitbull", "j balvin", "maluma",
-            "arcangel", "farruko", "6ix9ine", "tekashi", "karol g", "becky g",
-            "alofoke", "pina", "gallo", "gringo", "molusco", "marc anthony",
-            "romeo santos", "prince royce", "shakira", "jennifer lopez", "jlo",
-            "ricky martin", "enrique iglesias", "chayanne", "luis fonsi",
-            "rauw alejandro", "myke towers", "sech", "el alfa", "tokischa",
-            "bryant myers", "noriel", "jhay cortez", "eladio carrion",
-            "feid", "ryan castro", "blessd", "ovy on the drums"
-        ]
-        
-        # Topic keywords to categorize content
-        self.topic_keywords = {
-            "drama": ["pelea", "problema", "conflicto", "drama", "tiraera", "beef", "responde", "ataca"],
-            "money": ["dinero", "millones", "contrato", "rico", "plata", "fortuna", "patrimonio"],
-            "relationships": ["novia", "novio", "esposa", "casado", "divorc", "amor", "relacion"],
-            "career": ["carrera", "disco", "album", "cancion", "concierto", "gira", "tour"],
-            "politics": ["politica", "gobierno", "trump", "biden", "eleccion", "partido"],
-            "crime": ["carcel", "demanda", "arresto", "federal", "caso", "juicio", "crimen"],
-            "personal": ["familia", "hijo", "padre", "madre", "vida", "historia", "infancia"],
-            "controversy": ["escandalo", "polemic", "contro", "viral", "revela", "secreto", "verdad"],
+
+        # Get channel-specific context
+        self.niche = self.channel_profile.get("niche", "general")
+        self.language = self.channel_profile.get("language", "en")
+        self.common_tags = self.channel_profile.get("common_tags", [])
+
+        # Build keyword lists dynamically from channel profile
+        # These are used for pattern detection in transcripts
+        self.content_keywords = self._build_content_keywords()
+
+        # Topic keywords - language-aware defaults with niche-specific additions
+        self.topic_keywords = self._build_topic_keywords()
+
+    def _build_content_keywords(self) -> List[str]:
+        """Build content keywords from channel's common tags and niche."""
+        keywords = []
+
+        # Add common tags from channel profile
+        keywords.extend(self.common_tags)
+
+        # Add niche-specific common terms
+        niche_terms = {
+            "gaming": ["game", "gameplay", "stream", "live", "win", "lose", "match", "round", "level"],
+            "music": ["song", "track", "beat", "album", "remix", "cover", "lyrics", "artist"],
+            "podcast": ["episode", "interview", "guest", "talk", "discuss", "story", "experience"],
+            "tech": ["review", "unbox", "specs", "features", "camera", "battery", "performance"],
+            "education": ["learn", "tutorial", "explain", "how to", "step", "guide", "tips"],
+            "cooking": ["recipe", "ingredient", "cook", "bake", "taste", "delicious", "chef"],
+            "fitness": ["workout", "exercise", "reps", "sets", "muscle", "cardio", "stretch"],
+            "vlog": ["day", "life", "routine", "travel", "experience", "adventure"],
+            "entertainment": ["funny", "reaction", "challenge", "prank", "comedy", "moments"],
+            "beauty": ["makeup", "skincare", "tutorial", "routine", "product", "review"],
         }
-    
+
+        if self.niche in niche_terms:
+            keywords.extend(niche_terms[self.niche])
+
+        return list(set(keywords))  # Remove duplicates
+
+    def _build_topic_keywords(self) -> Dict[str, List[str]]:
+        """Build topic keywords based on channel language and niche."""
+        # Universal topic categories with multi-language support
+        if self.language == "es":
+            return {
+                "drama": ["pelea", "problema", "conflicto", "drama", "beef", "responde", "ataca"],
+                "money": ["dinero", "millones", "contrato", "rico", "plata", "fortuna"],
+                "relationships": ["novia", "novio", "esposa", "casado", "amor", "relacion"],
+                "career": ["carrera", "disco", "album", "cancion", "concierto", "gira", "tour"],
+                "politics": ["politica", "gobierno", "eleccion", "partido", "presidente"],
+                "crime": ["carcel", "demanda", "arresto", "federal", "caso", "juicio", "crimen"],
+                "personal": ["familia", "hijo", "padre", "madre", "vida", "historia", "infancia"],
+                "controversy": ["escandalo", "polemico", "controversia", "viral", "revela", "secreto"],
+            }
+        else:
+            # English defaults
+            return {
+                "drama": ["fight", "problem", "conflict", "drama", "beef", "respond", "attack", "feud"],
+                "money": ["money", "million", "contract", "rich", "fortune", "salary", "worth"],
+                "relationships": ["girlfriend", "boyfriend", "wife", "husband", "married", "dating", "love"],
+                "career": ["career", "album", "song", "concert", "tour", "project", "release"],
+                "politics": ["politics", "government", "election", "party", "president", "vote"],
+                "crime": ["jail", "lawsuit", "arrest", "federal", "case", "trial", "crime", "charged"],
+                "personal": ["family", "son", "daughter", "father", "mother", "life", "story", "childhood"],
+                "controversy": ["scandal", "controversial", "viral", "reveal", "secret", "truth", "expose"],
+            }
+
+    def _build_channel_context(self) -> str:
+        """Build channel context string for AI prompts."""
+        niche_descriptions = {
+            "gaming": "This is a gaming channel focused on gameplay, streams, and gaming content.",
+            "music": "This is a music channel featuring songs, artists, and music-related content.",
+            "podcast": "This is a podcast channel with interviews, discussions, and conversations.",
+            "tech": "This is a tech channel with reviews, unboxings, and technology content.",
+            "education": "This is an educational channel with tutorials, guides, and learning content.",
+            "cooking": "This is a cooking/food channel with recipes and culinary content.",
+            "fitness": "This is a fitness channel with workouts, exercises, and health content.",
+            "vlog": "This is a vlog channel with personal stories, daily life, and lifestyle content.",
+            "entertainment": "This is an entertainment channel with comedy, reactions, and fun content.",
+            "beauty": "This is a beauty/fashion channel with makeup, skincare, and style content.",
+            "news": "This is a news/commentary channel covering current events and topics.",
+            "sports": "This is a sports channel covering games, highlights, and athletic content.",
+            "general": "This is a general content YouTube channel.",
+        }
+
+        niche_desc = niche_descriptions.get(self.niche, niche_descriptions["general"])
+
+        # Build title patterns info
+        title_patterns = self.channel_profile.get("title_patterns", [])
+        patterns_str = ", ".join(title_patterns) if title_patterns else "varied styles"
+
+        # Build common tags info
+        tags_str = ", ".join(self.common_tags[:10]) if self.common_tags else "various topics"
+
+        context = f"""CHANNEL CONTEXT:
+{niche_desc}
+- Content niche: {self.niche}
+- Primary language: {self.language}
+- Common title patterns: {patterns_str}
+- Frequently used tags: {tags_str}
+- Average title length: {self.channel_profile.get('avg_title_length', 50)} characters
+
+When optimizing, match this channel's existing style and language."""
+
+        return context
+
     async def get_transcript(self, video_id: str) -> Optional[Dict[str, Any]]:
         """
         Fetch transcript using the authenticated YouTube API (user's OAuth token).
@@ -620,43 +708,47 @@ class TranscriptAnalyzer:
     async def analyze_transcript_content(self, transcript: Dict[str, Any], video_data: Dict[str, Any]) -> Dict[str, Any]:
         """
         Analyze a single transcript to extract content insights.
+        Now channel-aware: uses channel profile for relevant keyword detection.
         """
         if not transcript.get("full_text"):
             return {"error": "No transcript available", "video_id": transcript.get("video_id")}
-        
+
         text = transcript["full_text"].lower()
-        
-        # 1. Find celebrities mentioned IN the transcript (not just title)
-        celebrities_mentioned = []
-        for celeb in self.celebrity_keywords:
-            count = text.count(celeb.lower())
+
+        # 1. Find content keywords mentioned IN the transcript
+        # Uses channel-specific keywords from profile (tags, niche terms)
+        keywords_mentioned = []
+        for keyword in self.content_keywords:
+            count = text.count(keyword.lower())
             if count > 0:
-                celebrities_mentioned.append({"name": celeb, "mentions": count})
-        
-        celebrities_mentioned = sorted(celebrities_mentioned, key=lambda x: x["mentions"], reverse=True)
-        
-        # 2. Categorize topics discussed
+                keywords_mentioned.append({"keyword": keyword, "mentions": count})
+
+        keywords_mentioned = sorted(keywords_mentioned, key=lambda x: x["mentions"], reverse=True)
+
+        # 2. Categorize topics discussed (language-aware)
         topics_found = {}
         for topic, keywords in self.topic_keywords.items():
             topic_count = sum(text.count(kw.lower()) for kw in keywords)
             if topic_count > 0:
                 topics_found[topic] = topic_count
-        
+
         topics_found = dict(sorted(topics_found.items(), key=lambda x: x[1], reverse=True))
-        
+
         # 3. Extract first 500 chars as opening hook
         opening_text = transcript["full_text"][:500]
-        
+
         return {
             "video_id": transcript["video_id"],
             "view_count": video_data.get("view_count", 0),
             "like_count": video_data.get("like_count", 0),
             "title": video_data.get("title", ""),
             "word_count": transcript.get("word_count", 0),
-            "celebrities_in_transcript": celebrities_mentioned[:10],
+            "keywords_in_transcript": keywords_mentioned[:15],
             "main_topics": topics_found,
             "opening_hook": opening_text,
             "is_auto_generated": transcript.get("is_generated", True),
+            "channel_niche": self.niche,
+            "channel_language": self.language,
         }
     
     async def deep_analyze_video_transcript(self, video_id: str) -> Dict[str, Any]:
@@ -710,51 +802,56 @@ class TranscriptAnalyzer:
         }
     
     async def _ai_analyze_transcript(self, text: str, video_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Use GPT-4 to deeply analyze transcript content."""
-        
+        """Use GPT-4 to deeply analyze transcript content. Channel-aware prompts."""
+
         # Truncate if too long (keep first 10000 chars for context)
         truncated_text = text[:10000] if len(text) > 10000 else text
-        
-        system_prompt = """You are an expert content analyst and SEO optimizer for MoluscoTV, a Puerto Rican entertainment YouTube channel with 2.8M subscribers.
+
+        # Build channel-aware context
+        channel_context = self._build_channel_context()
+
+        system_prompt = f"""You are an expert content analyst and SEO optimizer for a YouTube channel.
+
+{channel_context}
 
 Analyze this video transcript and provide:
 
 1. CONTENT ANALYSIS:
 - MAIN TOPICS: What are the main subjects discussed?
-- CELEBRITIES DISCUSSED: Who is mentioned and in what context?
+- KEY PEOPLE/ENTITIES: Who or what is mentioned and in what context?
 - EMOTIONAL HOOKS: What parts would grab viewer attention?
-- CONTROVERSY LEVEL: Rate 1-10 how controversial the content is
+- ENGAGEMENT LEVEL: Rate 1-10 how engaging the content is for the target audience
 - ENGAGEMENT TRIGGERS: What makes viewers want to comment/share?
-- CONTENT STRUCTURE: How is the conversation structured?
-- KEY QUOTES: Most impactful or viral-worthy quotes (in Spanish)
+- CONTENT STRUCTURE: How is the content structured?
+- KEY QUOTES: Most impactful or viral-worthy quotes
 - IMPROVEMENT SUGGESTIONS: How could this content be better?
 
 2. SEO OPTIMIZATION (based on what's ACTUALLY in the video):
-- OPTIMIZED TITLES: 5 title options (70-90 chars, use emojis 🔥💀😱, include celebrity names, create curiosity/controversy)
+- OPTIMIZED TITLES: 5 title options (70-90 chars, follow the channel's title patterns, create curiosity)
 - OPTIMIZED DESCRIPTION: A compelling description (200-500 chars) that summarizes the content, includes timestamps for key moments, and has calls to action
 - OPTIMIZED TAGS: 15-20 relevant tags based on the actual content discussed
 
 Respond in JSON format:
-{
+{{
     "main_topics": ["topic1", "topic2"],
-    "celebrities_discussed": [{"name": "...", "context": "..."}],
+    "key_entities": [{{"name": "...", "context": "..."}}],
     "emotional_hooks": ["hook1", "hook2"],
-    "controversy_score": 8,
+    "engagement_score": 8,
     "engagement_triggers": ["trigger1", "trigger2"],
     "content_structure": "...",
     "key_quotes": ["quote1", "quote2"],
     "improvement_suggestions": ["suggestion1"],
     "overall_content_rating": "A/B/C/D",
     "why_it_worked_or_didnt": "...",
-    "seo_optimization": {
+    "seo_optimization": {{
         "optimized_titles": [
-            {"title": "...", "why": "reason this title works"},
-            {"title": "...", "why": "..."}
+            {{"title": "...", "why": "reason this title works"}},
+            {{"title": "...", "why": "..."}}
         ],
         "optimized_description": "...",
         "optimized_tags": ["tag1", "tag2", "tag3"]
-    }
-}"""
+    }}
+}}"""
         
         human_msg = f"""Video Title: {video_data['title']}
 Views: {video_data['view_count']:,}
@@ -885,49 +982,50 @@ TRANSCRIPT:
     async def _aggregate_transcript_insights(self, analyzed_videos: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
         Aggregate insights from all analyzed transcripts.
+        Channel-aware: uses keywords instead of hardcoded celebrity names.
         """
         # Sort by views
         sorted_videos = sorted(analyzed_videos, key=lambda x: x.get("view_count", 0), reverse=True)
-        
+
         # Top performers vs average
         top_20_percent = sorted_videos[:len(sorted_videos) // 5] if len(sorted_videos) >= 5 else sorted_videos
         bottom_20_percent = sorted_videos[-(len(sorted_videos) // 5):] if len(sorted_videos) >= 5 else []
-        
-        # 1. Celebrity mentions correlation
-        top_celebrities = Counter()
+
+        # 1. Keyword mentions correlation (channel-specific keywords)
+        top_keywords = Counter()
         for video in top_20_percent:
-            for celeb in video.get("celebrities_in_transcript", []):
-                top_celebrities[celeb["name"]] += celeb["mentions"]
-        
-        bottom_celebrities = Counter()
+            for kw in video.get("keywords_in_transcript", []):
+                top_keywords[kw["keyword"]] += kw["mentions"]
+
+        bottom_keywords = Counter()
         for video in bottom_20_percent:
-            for celeb in video.get("celebrities_in_transcript", []):
-                bottom_celebrities[celeb["name"]] += celeb["mentions"]
-        
+            for kw in video.get("keywords_in_transcript", []):
+                bottom_keywords[kw["keyword"]] += kw["mentions"]
+
         # 2. Topic correlation
         top_topics = Counter()
         for video in top_20_percent:
             for topic, count in video.get("main_topics", {}).items():
                 top_topics[topic] += count
-        
+
         bottom_topics = Counter()
         for video in bottom_20_percent:
             for topic, count in video.get("main_topics", {}).items():
                 bottom_topics[topic] += count
-        
+
         # 3. Word count correlation
         avg_words_top = sum(v.get("word_count", 0) for v in top_20_percent) / len(top_20_percent) if top_20_percent else 0
         avg_words_bottom = sum(v.get("word_count", 0) for v in bottom_20_percent) / len(bottom_20_percent) if bottom_20_percent else 0
-        
+
         # 4. Find unique patterns in top performers
-        unique_to_top = set(top_celebrities.keys()) - set(bottom_celebrities.keys())
-        
+        unique_to_top = set(top_keywords.keys()) - set(bottom_keywords.keys())
+
         return {
-            "celebrity_content_impact": {
-                "celebrities_in_top_videos": top_celebrities.most_common(15),
-                "celebrities_in_bottom_videos": bottom_celebrities.most_common(15),
+            "keyword_content_impact": {
+                "keywords_in_top_videos": top_keywords.most_common(15),
+                "keywords_in_bottom_videos": bottom_keywords.most_common(15),
                 "unique_to_top_performers": list(unique_to_top),
-                "insight": "These celebrities DISCUSSED in content (not just titles) correlate with high views"
+                "insight": "These keywords DISCUSSED in content (not just titles) correlate with high views"
             },
             "topic_content_impact": {
                 "topics_in_top_videos": dict(top_topics.most_common(10)),
@@ -938,6 +1036,10 @@ TRANSCRIPT:
                 "avg_words_top_videos": round(avg_words_top),
                 "avg_words_bottom_videos": round(avg_words_bottom),
                 "insight": f"Top videos have {'more' if avg_words_top > avg_words_bottom else 'less'} content depth"
+            },
+            "channel_context": {
+                "niche": self.niche,
+                "language": self.language,
             },
         }
     
@@ -980,27 +1082,31 @@ TRANSCRIPT:
         comparison = {
             "top_videos": {
                 "avg_views": round(sum(v["view_count"] for v in top_transcripts) / len(top_transcripts)),
-                "common_celebrities": self._get_common_items([v.get("celebrities_in_transcript", []) for v in top_transcripts]),
+                "common_keywords": self._get_common_keywords([v.get("keywords_in_transcript", []) for v in top_transcripts]),
                 "common_topics": self._get_common_topics([v.get("main_topics", {}) for v in top_transcripts]),
                 "avg_word_count": round(sum(v.get("word_count", 0) for v in top_transcripts) / len(top_transcripts)),
             },
             "bottom_videos": {
                 "avg_views": round(sum(v["view_count"] for v in bottom_transcripts) / len(bottom_transcripts)),
-                "common_celebrities": self._get_common_items([v.get("celebrities_in_transcript", []) for v in bottom_transcripts]),
+                "common_keywords": self._get_common_keywords([v.get("keywords_in_transcript", []) for v in bottom_transcripts]),
                 "common_topics": self._get_common_topics([v.get("main_topics", {}) for v in bottom_transcripts]),
                 "avg_word_count": round(sum(v.get("word_count", 0) for v in bottom_transcripts) / len(bottom_transcripts)),
             },
+            "channel_context": {
+                "niche": self.niche,
+                "language": self.language,
+            },
         }
-        
+
         # Generate insights
         insights = []
-        
-        # Celebrity comparison
-        top_celebs = set(comparison["top_videos"]["common_celebrities"])
-        bottom_celebs = set(comparison["bottom_videos"]["common_celebrities"])
-        unique_to_top = top_celebs - bottom_celebs
+
+        # Keywords comparison
+        top_kws = set(comparison["top_videos"]["common_keywords"])
+        bottom_kws = set(comparison["bottom_videos"]["common_keywords"])
+        unique_to_top = top_kws - bottom_kws
         if unique_to_top:
-            insights.append(f"🌟 These celebrities appear MORE in top videos: {', '.join(unique_to_top)}")
+            insights.append(f"🌟 These keywords appear MORE in top videos: {', '.join(unique_to_top)}")
         
         # Topic comparison
         top_topics = set(comparison["top_videos"]["common_topics"])
@@ -1019,12 +1125,12 @@ TRANSCRIPT:
             "recommendation": "Focus on the celebrities and topics that appear in TOP videos but not in bottom videos"
         }
     
-    def _get_common_items(self, celebrity_lists: List[List[Dict]]) -> List[str]:
-        """Get most common celebrities across lists."""
+    def _get_common_keywords(self, keyword_lists: List[List[Dict]]) -> List[str]:
+        """Get most common keywords across lists."""
         counter = Counter()
-        for celebs in celebrity_lists:
-            for celeb in celebs:
-                counter[celeb.get("name", "")] += 1
+        for keywords in keyword_lists:
+            for kw in keywords:
+                counter[kw.get("keyword", "")] += 1
         return [name for name, _ in counter.most_common(10)]
     
     def _get_common_topics(self, topic_dicts: List[Dict]) -> List[str]:

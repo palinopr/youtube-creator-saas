@@ -57,6 +57,14 @@ export interface AnalyticsOverview {
   error?: string;
 }
 
+// Individual error states for each data source
+interface DataErrors {
+  channelStats: string | null;
+  recentVideos: string | null;
+  topVideo: string | null;
+  analyticsOverview: string | null;
+}
+
 interface DashboardData {
   channelStats: ChannelStats | null;
   recentVideos: Video[];
@@ -64,6 +72,8 @@ interface DashboardData {
   analyticsOverview: AnalyticsOverview | null;
   isLoading: boolean;
   error: string | null;
+  errors: DataErrors;  // Individual error states
+  lastUpdated: Date | null;  // When data was last fetched
   refetch: () => Promise<void>;
 }
 
@@ -74,10 +84,25 @@ export function useDashboardData(): DashboardData {
   const [analyticsOverview, setAnalyticsOverview] = useState<AnalyticsOverview | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [errors, setErrors] = useState<DataErrors>({
+    channelStats: null,
+    recentVideos: null,
+    topVideo: null,
+    analyticsOverview: null,
+  });
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
+
+    // Reset individual errors
+    const newErrors: DataErrors = {
+      channelStats: null,
+      recentVideos: null,
+      topVideo: null,
+      analyticsOverview: null,
+    };
 
     try {
       const [statsRes, videosRes, topVideoRes, analyticsRes] = await Promise.allSettled([
@@ -87,27 +112,63 @@ export function useDashboardData(): DashboardData {
         api.getAnalyticsOverview(30),
       ]);
 
+      // Handle channel stats
       if (statsRes.status === "fulfilled") {
         setChannelStats(statsRes.value as ChannelStats);
+      } else {
+        const errMsg = statsRes.reason?.message || "Failed to load channel stats";
+        newErrors.channelStats = errMsg;
+        console.error("Channel stats error:", errMsg);
       }
 
+      // Handle recent videos
       if (videosRes.status === "fulfilled") {
         setRecentVideos(Array.isArray(videosRes.value) ? videosRes.value : []);
+      } else {
+        const errMsg = videosRes.reason?.message || "Failed to load recent videos";
+        newErrors.recentVideos = errMsg;
+        console.error("Recent videos error:", errMsg);
       }
 
+      // Handle top video
       if (topVideoRes.status === "fulfilled") {
         const topVideosResponse = topVideoRes.value as TopVideosResponse;
         if (Array.isArray(topVideosResponse?.top_videos) && topVideosResponse.top_videos.length > 0) {
           setTopVideo(topVideosResponse.top_videos[0]);
         }
+      } else {
+        const errMsg = topVideoRes.reason?.message || "Failed to load top video";
+        newErrors.topVideo = errMsg;
+        console.error("Top video error:", errMsg);
       }
 
+      // Handle analytics overview
       if (analyticsRes.status === "fulfilled") {
         const analyticsData = analyticsRes.value as AnalyticsOverview;
         if (analyticsData && !analyticsData.error) {
           setAnalyticsOverview(analyticsData);
+        } else if (analyticsData?.error) {
+          newErrors.analyticsOverview = analyticsData.error;
         }
+      } else {
+        const errMsg = analyticsRes.reason?.message || "Failed to load analytics";
+        newErrors.analyticsOverview = errMsg;
+        console.error("Analytics error:", errMsg);
       }
+
+      // Update errors state
+      setErrors(newErrors);
+
+      // Check if any critical errors occurred
+      const hasErrors = Object.values(newErrors).some(e => e !== null);
+      if (hasErrors) {
+        const failedCount = Object.values(newErrors).filter(e => e !== null).length;
+        setError(`${failedCount} data source(s) failed to load`);
+      }
+
+      // Update last updated timestamp
+      setLastUpdated(new Date());
+
     } catch (err) {
       console.error("Failed to fetch dashboard data:", err);
       setError("Failed to load dashboard data");
@@ -127,6 +188,8 @@ export function useDashboardData(): DashboardData {
     analyticsOverview,
     isLoading,
     error,
+    errors,
+    lastUpdated,
     refetch: fetchData,
   };
 }

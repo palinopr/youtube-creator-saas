@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-hook-examples",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Hook Examples 2025: Start Videos That Grab Attention",
+    "description": "Master YouTube video hooks. Examples and techniques to grab viewers instantly.",
+    "keywords": ["youtube hook examples", "youtube intro hooks", "video hook examples", "grab attention youtube", "youtube opening hooks"]
+  },
+  "hero": {
+    "badge": "Hook Examples",
+    "headline": "YouTube Hook Examples That Work",
+    "subheadline": "First 30 seconds determine everything. Nail your hooks.",
+    "primaryKeyword": "youtube hook examples"
+  },
+  "sections": [
+    {"type": "intro", "content": "The first 30 seconds of your video decide whether viewers stay or leave. A strong hook captures attention, creates curiosity, and promises value. Most creators bury their best content—great hooks bring it to the front. Learning hook patterns lets you grab attention consistently."},
+    {"type": "features", "title": "Hook Types", "content": [
+      {"icon": "help-circle", "title": "Question Hook", "description": "Provoke curiosity."},
+      {"icon": "alert-circle", "title": "Bold Claim", "description": "Make them want proof."},
+      {"icon": "film", "title": "Teaser", "description": "Show the payoff first."},
+      {"icon": "zap", "title": "Problem", "description": "State their pain point."}
+    ]},
+    {"type": "features", "title": "Hook Elements", "content": [
+      {"icon": "target", "title": "Promise", "description": "What they'll learn/get."},
+      {"icon": "clock", "title": "Urgency", "description": "Why watch now."},
+      {"icon": "eye", "title": "Visual Interest", "description": "Something compelling on screen."},
+      {"icon": "mic", "title": "Energy", "description": "Enthusiasm that's contagious."}
+    ]},
+    {"type": "steps", "title": "Creating Strong Hooks", "content": [
+      "Identify the single biggest value point",
+      "Lead with outcome, not process",
+      "Create information gap (curiosity)",
+      "Show, don't just tell",
+      "Match energy to content type",
+      "Avoid long intros and logos",
+      "Get to the point in 5 seconds",
+      "Write hook last (when you know content)"
+    ]},
+    {"type": "benefits", "title": "Hook Best Practices", "content": [
+      "First 5 seconds must grab attention",
+      "Skip the intro—start with value",
+      "Question hooks create curiosity",
+      "Bold claims need delivery",
+      "Teasers show payoff coming",
+      "Problem hooks build relatability",
+      "High energy compensates for weak hook"
+    ]},
+    {"type": "checklist", "title": "Hook Checklist", "content": [
+      "Grabs attention in 5 seconds?",
+      "Creates curiosity or tension?",
+      "Promises specific value?",
+      "No long intro or logos first?",
+      "Energy matches content?",
+      "Visually interesting opening?",
+      "Tested with retention data?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should hooks be?", "answer": "5-30 seconds depending on content. Capture attention in first 5, complete hook by 30. Shorter is generally better. Get to value fast—you can expand after you've hooked them."},
+    {"question": "Should I skip channel intros?", "answer": "Yes—save branding for after hook. Viewers don't care who you are until you've given value. Long intros kill retention. Introduce yourself briefly after hook if at all."},
+    {"question": "How to practice hooks?", "answer": "Study retention graphs—where do people leave? Test different hook types. Watch successful creators in your niche. Write multiple hooks per video, choose best. Iterate based on data."},
+    {"question": "Can hooks be too clickbaity?", "answer": "Hook must deliver on promise. Clickbait = promise without delivery. Strong hook + great content = success. Strong hook + weak content = viewers leave and won't return."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

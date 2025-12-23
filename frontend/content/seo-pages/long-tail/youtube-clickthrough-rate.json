@@ -1,0 +1,76 @@
+{
+  "slug": "youtube-clickthrough-rate",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Click-Through Rate (CTR) 2025: How to Improve CTR",
+    "description": "Understand and improve YouTube CTR. Thumbnail and title optimization strategies.",
+    "keywords": ["youtube ctr", "click through rate youtube", "improve youtube ctr", "youtube ctr tips", "thumbnail ctr"]
+  },
+  "hero": {
+    "badge": "CTR",
+    "headline": "YouTube Click-Through Rate Guide",
+    "subheadline": "CTR determines if impressions become views. Optimize thumbnails and titles.",
+    "primaryKeyword": "youtube ctr"
+  },
+  "sections": [
+    {"type": "intro", "content": "Click-through rate (CTR) measures how often viewers click when they see your video. It's the conversion rate of impressions to views. Higher CTR = more views from the same impressions. Here's how to understand and improve your CTR."},
+    {"type": "features", "title": "Understanding CTR", "content": [
+      {"icon": "percent", "title": "What CTR Measures", "description": "Clicks divided by impressions. 5% CTR = 5 clicks per 100 impressions shown."},
+      {"icon": "bar-chart-2", "title": "Good CTR Range", "description": "2-10% is typical. Higher for niches, loyal audiences. Lower for broad content."},
+      {"icon": "eye", "title": "Where It Matters", "description": "Homepage, suggested, search. Different surfaces have different typical CTRs."}
+    ]},
+    {"type": "steps", "title": "Improving CTR", "content": [
+      "Analyze current CTR in YouTube Analytics",
+      "Identify low-CTR videos for improvement",
+      "A/B test thumbnail designs",
+      "Optimize titles for curiosity/value",
+      "Check CTR by traffic source",
+      "Update underperforming thumbnails",
+      "Study high-CTR competitors",
+      "Test and iterate continuously"
+    ]},
+    {"type": "features", "title": "Thumbnail Optimization", "content": [
+      {"icon": "image", "title": "Contrast & Color", "description": "Stand out from YouTube's white background. Bold, readable colors."},
+      {"icon": "user", "title": "Faces & Emotion", "description": "Human faces with expression perform well. Connection at a glance."},
+      {"icon": "type", "title": "Readable Text", "description": "3-5 words max. Large, legible at small sizes. Complement title."}
+    ]},
+    {"type": "benefits", "title": "Title Optimization", "content": [
+      "Create curiosity gap",
+      "Promise clear value",
+      "Use numbers when relevant",
+      "Include power words",
+      "Front-load important words",
+      "Match search intent",
+      "Don't duplicate thumbnail text"
+    ]},
+    {"type": "benefits", "title": "CTR Killers", "content": [
+      "Boring, generic thumbnails",
+      "Too much text on thumbnail",
+      "Misleading clickbait",
+      "Thumbnail/title mismatch",
+      "Poor contrast/colors",
+      "No clear subject/focus",
+      "Copying others exactly"
+    ]},
+    {"type": "checklist", "title": "CTR Optimization Checklist", "content": [
+      "Thumbnail stands out?",
+      "Clear focal point?",
+      "Readable at small size?",
+      "Title creates curiosity?",
+      "Value proposition clear?",
+      "Matches content delivered?",
+      "Tested alternatives?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good CTR?", "answer": "Varies by niche and audience size. 4-10% is solid for most creators. Small channels often have higher CTR (loyal audience), dropping as you grow."},
+    {"question": "Does CTR affect algorithm?", "answer": "Yes, CTR is a ranking signal. But it's balanced with retention. High CTR + low retention = clickbait signals. Need both."},
+    {"question": "How to check CTR?", "answer": "YouTube Studio > Analytics > Reach tab. See CTR by video, by traffic source. Filter by date range for trends."},
+    {"question": "Should I change old thumbnails?", "answer": "Yes, if CTR is low. Updating thumbnails can revive old videos. Test with your lowest-CTR content first."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

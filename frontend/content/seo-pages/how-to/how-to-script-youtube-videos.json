@@ -1,0 +1,61 @@
+{
+  "slug": "how-to-script-youtube-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Script YouTube Videos 2025: Writing Guide for Creators",
+    "description": "Learn to script YouTube videos that engage viewers. Hooks, structure, and writing techniques for better retention.",
+    "keywords": ["how to script youtube videos", "youtube video script", "writing youtube scripts", "video scripting", "youtube script template"]
+  },
+  "hero": {
+    "badge": "Video Scripting",
+    "headline": "How to Script YouTube Videos That Keep Viewers Watching",
+    "subheadline": "Master the art of scripting videos that hook viewers and hold attention through the end.",
+    "primaryKeyword": "script youtube videos"
+  },
+  "sections": [
+    {"type": "intro", "content": "A good script is the foundation of engaging content. It's not about reading word-for-word—it's about structuring your ideas for maximum impact. Great scripts have compelling hooks, clear structure, and strategic pacing. This guide teaches you to write scripts that keep viewers watching."},
+    {"type": "features", "title": "Script Components", "content": [
+      {"icon": "target", "title": "The Hook", "description": "First 30 seconds that promise value and create curiosity. Makes viewers stay."},
+      {"icon": "layers", "title": "The Structure", "description": "Logical flow that delivers value. Clear progression from problem to solution."},
+      {"icon": "flag", "title": "The Payoff", "description": "Deliver on the hook's promise. Satisfying conclusion that encourages more watching."}
+    ]},
+    {"type": "steps", "title": "Script Structure Template", "content": [
+      "Hook (0-30s): Bold statement, question, or preview",
+      "Context (30s-1m): Why this matters to the viewer",
+      "Content chunks: Break into digestible sections",
+      "Retention bumps: Re-engage with new hooks mid-video",
+      "Summary: Recap key points briefly",
+      "Call-to-action: What should viewers do next?"
+    ]},
+    {"type": "benefits", "title": "Hook Techniques That Work", "content": [
+      "Bold contrarian statement",
+      "Surprising statistic or fact",
+      "Promise specific outcome",
+      "Show the end result first",
+      "Ask a compelling question",
+      "Create a curiosity gap",
+      "Highlight the stakes"
+    ]},
+    {"type": "checklist", "title": "Script Checklist", "content": [
+      "Hook captures attention in 5 seconds",
+      "Value proposition clear within 30 seconds",
+      "Each section has a clear point",
+      "Transitions keep momentum",
+      "No rambling or filler content",
+      "Natural language (not stiff)",
+      "Call-to-action included",
+      "Read-through sounds conversational"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I read my script word-for-word?", "answer": "Depends on your style. Some creators memorize and deliver naturally. Others use teleprompters. Bullet-point outlines work for confident speakers. Find what sounds natural for you."},
+    {"question": "How long should a script be?", "answer": "Roughly 150-180 words per minute of video. A 10-minute video is about 1,500-1,800 words. Adjust for your speaking pace and visual content that doesn't need narration."},
+    {"question": "How do I make scripts sound natural?", "answer": "Write like you speak, not like you write. Use contractions. Short sentences. Read aloud while editing—if it sounds awkward, rewrite it."},
+    {"question": "Do all videos need scripts?", "answer": "Not necessarily. Vlogs and casual content work unscripted. Educational, tutorial, and narrative content benefit greatly from scripting. At minimum, have an outline."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

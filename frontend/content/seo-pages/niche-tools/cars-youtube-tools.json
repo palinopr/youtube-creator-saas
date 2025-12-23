@@ -1,0 +1,72 @@
+{
+  "slug": "cars-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Cars YouTube Tools 2025: Automotive Content Creator Equipment",
+    "description": "Essential tools for car YouTube channels. In-car filming, exterior shots, and engine audio.",
+    "keywords": ["cars youtube tools", "automotive youtube equipment", "car content creator", "car video setup", "automotive youtube"]
+  },
+  "hero": {
+    "badge": "Automotive Content",
+    "headline": "Essential Tools for Car YouTube Creators",
+    "subheadline": "Capture automotive excitement. In-car footage, exterior shots, and engine sounds.",
+    "primaryKeyword": "cars youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Automotive content requires equipment that captures speed, sound, and detail. In-car cameras, exterior tracking shots, and quality audio for engine sounds all matter. Whether reviews, builds, or car meets, here's what car YouTubers need."},
+    {"type": "features", "title": "Camera Options", "content": [
+      {"icon": "video", "title": "Action Cameras", "description": "GoPro, Insta360 for mounts. Wide angle, durable, stabilized."},
+      {"icon": "camera", "title": "Mirrorless/DSLR", "description": "Exterior shots, walk-arounds. Better image quality."},
+      {"icon": "smartphone", "title": "Suction Mounts", "description": "RAM Mount, Joby. Secure cameras inside and outside vehicle."}
+    ]},
+    {"type": "features", "title": "In-Car Setup", "content": [
+      {"icon": "mic", "title": "External Microphone", "description": "Capture exhaust note properly. Built-in camera mics are weak."},
+      {"icon": "layers", "title": "Multiple Angles", "description": "Driver, road, dash, exterior. More angles = better content."},
+      {"icon": "shield", "title": "Secure Mounting", "description": "Safety first. Cameras can't become projectiles."}
+    ]},
+    {"type": "features", "title": "Audio Priority", "content": [
+      {"icon": "volume-2", "title": "Engine/Exhaust Audio", "description": "Separate recorder for quality. Zoom H1n or similar."},
+      {"icon": "mic", "title": "Commentary Lav", "description": "Wireless lav for driving commentary. Reduces wind noise."},
+      {"icon": "headphones", "title": "Audio Sync", "description": "Multiple audio sources = sync in post. Clap for sync point."}
+    ]},
+    {"type": "steps", "title": "Automotive Content Tips", "content": [
+      "Multiple camera angles essential",
+      "Capture engine audio separately",
+      "Include driving dynamics, not just static",
+      "B-roll of details (interior, badges, engine bay)",
+      "Drive safely—no phone while driving",
+      "Consistent shooting style builds brand",
+      "Review local laws for camera mounts"
+    ]},
+    {"type": "benefits", "title": "Automotive Content Types", "content": [
+      "Car reviews",
+      "Build series",
+      "Modification tutorials",
+      "Car meets and events",
+      "Detailing content",
+      "Buyer's guides",
+      "Track day footage"
+    ]},
+    {"type": "checklist", "title": "Car Creator Setup", "content": [
+      "Action camera(s)",
+      "Secure mounting solutions",
+      "External audio recorder",
+      "Commentary microphone",
+      "Main camera for exteriors",
+      "Editing for multi-cam",
+      "Storage for high-bitrate footage"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for in-car?", "answer": "GoPro Hero or Insta360 for mounts. Wide angle, stabilized, durable. Multiple for different angles."},
+    {"question": "How to capture good engine sound?", "answer": "External recorder near exhaust (safely mounted). Car microphones exist specifically for this. Don't rely on camera mics."},
+    {"question": "Legal to mount cameras?", "answer": "Check local laws. Some places restrict windshield mounts. Dashboard or suction mounts usually fine. Know your jurisdiction."},
+    {"question": "How many camera angles?", "answer": "Minimum 2-3 for engaging content. Road view, driver, and one more (exterior, engine, etc.). More angles = more cutting options."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "cars"
+}

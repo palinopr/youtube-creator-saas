@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-ctr-optimization",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube CTR Optimization 2025: Boost Click-Through Rate",
+    "description": "Increase your YouTube CTR with proven thumbnail and title strategies. Data-driven tips for more clicks.",
+    "keywords": ["youtube ctr", "click through rate", "youtube ctr optimization", "improve ctr youtube", "thumbnail ctr"]
+  },
+  "hero": {
+    "badge": "CTR Optimization",
+    "headline": "YouTube CTR Optimization: Get More Clicks",
+    "subheadline": "CTR is the gateway metric. Better thumbnails and titles = more views from the same impressions.",
+    "primaryKeyword": "youtube ctr"
+  },
+  "sections": [
+    {"type": "intro", "content": "Click-through rate determines how many impressions convert to views. A 4% CTR means 96 out of 100 people who see your thumbnail scroll past. Improving to 6% increases views by 50% with no additional promotion. Here's how to optimize your CTR through better thumbnails and titles."},
+    {"type": "features", "title": "CTR Factors", "content": [
+      {"icon": "image", "title": "Thumbnail", "description": "First impression. Emotion, contrast, and clarity drive clicks."},
+      {"icon": "type", "title": "Title", "description": "Second factor. Curiosity, benefit, and specificity matter."},
+      {"icon": "users", "title": "Audience Match", "description": "Right viewers seeing your content. Mismatched audiences won't click."}
+    ]},
+    {"type": "steps", "title": "Thumbnail Best Practices", "content": [
+      "Use 3 or fewer words on thumbnail",
+      "Include expressive faces (when relevant)",
+      "High contrast colors that pop",
+      "Clean, uncluttered composition",
+      "Readable at mobile size",
+      "Don't duplicate title text",
+      "Test multiple versions"
+    ]},
+    {"type": "benefits", "title": "Title Optimization Tips", "content": [
+      "Front-load the key benefit",
+      "Use numbers when relevant",
+      "Create curiosity gaps",
+      "Keep under 60 characters",
+      "Avoid clickbait (breaks trust)",
+      "Include primary keyword naturally",
+      "Test different phrasings"
+    ]},
+    {"type": "checklist", "title": "CTR Improvement Checklist", "content": [
+      "Thumbnail readable at phone size?",
+      "Face visible with clear emotion?",
+      "Title creates curiosity or promises value?",
+      "Combination makes sense together?",
+      "Different from your other thumbnails?",
+      "Stands out in feed?",
+      "A/B test scheduled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good CTR on YouTube?", "answer": "4-10% is typical. Varies by content type and traffic source. Home page CTR is usually lower than search. Compare to your own average."},
+    {"question": "Does CTR affect algorithm?", "answer": "Yes. Higher CTR means more of your impressions convert. YouTube gives more impressions to videos that people click on."},
+    {"question": "Should I change thumbnails on old videos?", "answer": "Yes, if CTR is low. New thumbnails can revive underperforming videos. YouTube re-evaluates videos with new thumbnails."},
+    {"question": "How do I A/B test thumbnails?", "answer": "YouTube has native A/B testing in Studio (for eligible creators). Or manually swap thumbnails and compare CTR over time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

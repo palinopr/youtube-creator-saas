@@ -1,0 +1,63 @@
+{
+  "slug": "news-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best News YouTube Tools 2025: News Commentary Channel Equipment",
+    "description": "Top tools for news and commentary YouTube channels. Breaking news production equipment.",
+    "keywords": ["news youtube tools", "news commentary channel", "youtube news channel", "news content creator", "commentary channel equipment"]
+  },
+  "hero": {
+    "badge": "News Tools",
+    "headline": "Best News YouTube Tools 2025",
+    "subheadline": "Cover breaking news. Equipment for news and commentary creators.",
+    "primaryKeyword": "news youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "News commentary on YouTube demands speed, reliability, and the ability to go live at any moment. Whether covering breaking stories or providing daily analysis, you need a setup that's always ready. Here's what news-focused creators use."},
+    {"type": "features", "title": "Quick Production Setup", "content": [
+      {"icon": "camera", "title": "Always-Ready Camera", "description": "Webcam or mounted camera. Quick start essential for breaking news."},
+      {"icon": "mic", "title": "Desktop Microphone", "description": "Shure MV7 or Blue Yeti. Ready without setup time."},
+      {"icon": "sun", "title": "Consistent Lighting", "description": "Key light always positioned. No adjustment needed for quick videos."}
+    ]},
+    {"type": "features", "title": "News Research Tools", "content": [
+      {"icon": "rss", "title": "RSS Feeds", "description": "Feedly or similar. Aggregate news sources. Catch stories early."},
+      {"icon": "twitter", "title": "Twitter/X", "description": "Breaking news often hits Twitter first. Essential monitoring."},
+      {"icon": "alert-circle", "title": "Google Alerts", "description": "Topic monitoring. Automatic notifications for relevant stories."}
+    ]},
+    {"type": "features", "title": "Live Streaming Capability", "content": [
+      {"icon": "cast", "title": "Streaming Software", "description": "OBS or StreamYard. Ready for live breaking coverage."},
+      {"icon": "wifi", "title": "Reliable Internet", "description": "Wired connection preferred. Can't drop during live coverage."},
+      {"icon": "hard-drive", "title": "Quick Backup", "description": "Mobile hotspot ready. Redundancy for important streams."}
+    ]},
+    {"type": "benefits", "title": "News Content Best Practices", "content": [
+      "Speed matters—first coverage wins",
+      "Accuracy over speed though",
+      "Cite sources, show receipts",
+      "Commentary clearly labeled as opinion",
+      "Update videos when stories develop",
+      "Be prepared for live anytime",
+      "Build credibility through consistency"
+    ]},
+    {"type": "checklist", "title": "News Video Checklist", "content": [
+      "Sources verified?",
+      "Equipment ready for quick start?",
+      "Commentary vs news clearly labeled?",
+      "Sources cited?",
+      "Update plan if story develops?",
+      "Live streaming capability tested?",
+      "Internet connection stable?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How fast should I cover breaking news?", "answer": "Fast but accurate. First is good, wrong is disaster. Verify before posting. Being second with correct info beats being first with errors."},
+    {"question": "How to avoid copyright with news clips?", "answer": "Fair use allows commentary/criticism but isn't guaranteed. Use short clips with substantial commentary. Transform, don't just repost."},
+    {"question": "Should I go live or pre-record?", "answer": "Both. Live for breaking news and engagement. Pre-recorded for researched analysis. Match format to content type."},
+    {"question": "How to stay objective?", "answer": "Clearly separate news from opinion. Label commentary as your take. Present multiple perspectives on complex issues. Cite sources."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "news"
+}

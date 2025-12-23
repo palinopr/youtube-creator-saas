@@ -27,11 +27,11 @@ logger = logging.getLogger(__name__)
 
 class SEOAgent:
     """LangGraph-based SEO optimization agent for YouTube videos."""
-    
-    SYSTEM_PROMPT = """You are an expert YouTube SEO specialist. Your job is to analyze videos and provide actionable SEO recommendations to improve discoverability and engagement.
+
+    BASE_SYSTEM_PROMPT = """You are an expert YouTube SEO specialist. Your job is to analyze videos and provide actionable SEO recommendations to improve discoverability and engagement.
 
 When analyzing videos, consider:
-1. **Title Optimization**: 
+1. **Title Optimization**:
    - Ideal length: 50-60 characters
    - Include primary keyword early
    - Use power words and numbers when relevant
@@ -64,9 +64,14 @@ Include the EXACT suggested title/description/tags when making recommendations."
         youtube_service: Resource,
         analytics_service: Optional[Resource] = None,
         user_id: Optional[str] = None,
+        channel_profile: Optional[Dict[str, Any]] = None,
     ):
         self.tools = YouTubeTools(youtube_service, analytics_service)
+        self.channel_profile = channel_profile or {}
         settings = get_settings()
+
+        # Build channel-aware system prompt
+        self.SYSTEM_PROMPT = self._build_system_prompt()
 
         # Create cost tracking callback
         self.cost_callback = create_cost_tracking_callback(
@@ -81,6 +86,36 @@ Include the EXACT suggested title/description/tags when making recommendations."
             api_key=settings.openai_api_key,
             callbacks=[self.cost_callback],
         )
+
+    def _build_system_prompt(self) -> str:
+        """Build a channel-aware system prompt using channel profile."""
+        if not self.channel_profile:
+            return self.BASE_SYSTEM_PROMPT
+
+        # Extract channel context
+        niche = self.channel_profile.get("niche", "general")
+        language = self.channel_profile.get("language", "en")
+        title_patterns = self.channel_profile.get("title_patterns", [])
+        common_tags = self.channel_profile.get("common_tags", [])
+        avg_title_length = self.channel_profile.get("avg_title_length", 50)
+
+        # Build context section
+        patterns_str = ", ".join(title_patterns) if title_patterns else "varied styles"
+        tags_str = ", ".join(common_tags[:10]) if common_tags else "various topics"
+
+        channel_context = f"""
+
+**CHANNEL CONTEXT** (optimize for this specific channel):
+- Content niche: {niche}
+- Primary language: {language}
+- Typical title patterns: {patterns_str}
+- Common tags used: {tags_str}
+- Average title length: {avg_title_length} characters
+
+When making recommendations, match this channel's existing style and language.
+Suggestions should feel consistent with the channel's brand and audience expectations."""
+
+        return self.BASE_SYSTEM_PROMPT + channel_context
 
     def _extract_json_from_response(self, content: str) -> Optional[Dict[str, Any]]:
         """

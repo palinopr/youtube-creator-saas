@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-gaming",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Start a Gaming YouTube Channel 2025: Complete Guide",
+    "description": "Start a gaming YouTube channel. Equipment, games, and strategies for gaming content.",
+    "keywords": ["gaming youtube", "start gaming channel", "youtube gaming guide", "gaming content creator", "how to youtube gaming"]
+  },
+  "hero": {
+    "badge": "Gaming",
+    "headline": "How to Start a Gaming YouTube Channel",
+    "subheadline": "Turn gaming into content. Equipment, games, and strategies that work.",
+    "primaryKeyword": "gaming youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "Gaming is one of YouTube's biggest categories—but also most competitive. Success requires more than just playing games on camera. You need the right equipment, game selection strategy, and content approach. Here's how to start a gaming channel in 2025."},
+    {"type": "features", "title": "Essential Equipment", "content": [
+      {"icon": "monitor", "title": "Capture Card", "description": "Elgato HD60, AVerMedia for console capture. PC can use OBS directly."},
+      {"icon": "mic", "title": "Quality Microphone", "description": "USB or XLR mic. Clear commentary essential for gaming content."},
+      {"icon": "video", "title": "Facecam (Optional)", "description": "Webcam or camera for reactions. Not required but builds connection."}
+    ]},
+    {"type": "steps", "title": "Getting Started", "content": [
+      "Define your niche (game type, style, platform)",
+      "Set up capture software (OBS, Streamlabs)",
+      "Configure audio (game + voice balance)",
+      "Practice commentary while playing",
+      "Create consistent branding",
+      "Establish upload schedule",
+      "Learn basic editing for gaming content",
+      "Build community through engagement"
+    ]},
+    {"type": "features", "title": "Content Formats", "content": [
+      {"icon": "play", "title": "Let's Plays", "description": "Full gameplay with commentary. Series format builds audience."},
+      {"icon": "zap", "title": "Highlights/Montages", "description": "Best moments edited together. Higher production, wider appeal."},
+      {"icon": "book", "title": "Guides/Tutorials", "description": "How-to content. Evergreen search traffic. Helpful value."}
+    ]},
+    {"type": "benefits", "title": "Game Selection Strategy", "content": [
+      "Balance popular and niche games",
+      "New releases for trending traffic",
+      "Evergreen games for search",
+      "Games you genuinely enjoy",
+      "Consider competition level",
+      "Your unique angle on games",
+      "Community request games"
+    ]},
+    {"type": "benefits", "title": "Common Mistakes", "content": [
+      "Playing only saturated AAA games",
+      "Poor audio quality",
+      "No personality/commentary style",
+      "Inconsistent upload schedule",
+      "Ignoring community",
+      "No differentiation from others",
+      "Giving up too early"
+    ]},
+    {"type": "checklist", "title": "Gaming Channel Checklist", "content": [
+      "Capture method working?",
+      "Audio quality acceptable?",
+      "Niche defined?",
+      "Branding consistent?",
+      "Upload schedule set?",
+      "Editing workflow established?",
+      "Community engagement plan?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What games should I play?", "answer": "Mix of what you love and what has audience. Smaller games = less competition. New releases = trending traffic. Balance passion and strategy."},
+    {"question": "Do I need a facecam?", "answer": "Not required—many successful gaming channels don't show face. But facecam builds connection and shows reactions. Test what works for you."},
+    {"question": "How long should gaming videos be?", "answer": "Depends on format. Highlights: 10-15 minutes. Let's Plays: 20-40 minutes. Shorts: under 60 seconds. Match content to format."},
+    {"question": "Best games for new channels?", "answer": "Indie games, smaller titles with dedicated communities. Less competition than Fortnite/Minecraft. Build audience before going mainstream."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

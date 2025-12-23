@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-sponsorship-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Sponsorship Guide 2025: Get Brand Deals as Creator",
+    "description": "Land YouTube sponsorships. Negotiate deals and work with brands.",
+    "keywords": ["youtube sponsorship guide", "youtube brand deals", "get sponsors youtube", "youtube sponsorship tips", "creator brand partnerships"]
+  },
+  "hero": {
+    "badge": "Sponsorships",
+    "headline": "YouTube Sponsorship Guide",
+    "subheadline": "Land brand deals. Negotiate fair rates. Build partnerships.",
+    "primaryKeyword": "youtube sponsorship guide"
+  },
+  "sections": [
+    {"type": "intro", "content": "Sponsorships often pay more than ads, especially for smaller channels with engaged audiences. Brands want authentic integrations with creators their target audience trusts. Understanding how to pitch, price, and deliver helps you build sustainable sponsorship income."},
+    {"type": "features", "title": "Sponsorship Types", "content": [
+      {"icon": "video", "title": "Dedicated Video", "description": "Entire video about brand."},
+      {"icon": "layers", "title": "Integration", "description": "30-60 second segment."},
+      {"icon": "message-circle", "title": "Mention", "description": "Brief acknowledgment."},
+      {"icon": "link", "title": "Affiliate", "description": "Commission per sale."}
+    ]},
+    {"type": "features", "title": "Pricing Factors", "content": [
+      {"icon": "users", "title": "Subscriber Count", "description": "Baseline for rates."},
+      {"icon": "trending-up", "title": "View Average", "description": "More important than subs."},
+      {"icon": "target", "title": "Niche Value", "description": "Finance > vlogs typically."},
+      {"icon": "heart", "title": "Engagement Rate", "description": "Active audience premium."}
+    ]},
+    {"type": "steps", "title": "Landing Sponsorships", "content": [
+      "Build consistent, quality content first",
+      "Create media kit with stats and demographics",
+      "Join influencer platforms (Grapevine, etc.)",
+      "Reach out to brands you genuinely use",
+      "Start with smaller, relevant brands",
+      "Negotiate terms before accepting",
+      "Deliver quality integrations that convert",
+      "Build relationships for repeat deals"
+    ]},
+    {"type": "benefits", "title": "Sponsorship Best Practices", "content": [
+      "Only promote products you'd actually use",
+      "Disclose sponsorships clearly (FTC required)",
+      "Negotiate based on average views, not subscribers",
+      "Ask for creative control",
+      "Get everything in writing",
+      "Build rate sheet as you gain experience",
+      "Repeat sponsors are gold—overdeliver"
+    ]},
+    {"type": "checklist", "title": "Sponsorship Checklist", "content": [
+      "Media kit created and updated?",
+      "Know your CPM/rate expectations?",
+      "Product fits your audience?",
+      "Contract reviewed?",
+      "Deliverables clearly defined?",
+      "Disclosure included?",
+      "Tracking/promo codes set up?"
+    ]}
+  ],
+  "faq": [
+    {"question": "When can I get sponsorships?", "answer": "Technically any size—brands care about fit and engagement. Most sponsors want 10K+ subscribers minimum. Niche channels get sponsors earlier. Micro-influencers (10K-100K) often have better engagement rates."},
+    {"question": "How much should I charge?", "answer": "Common starting point: $20-50 per 1000 views (CPM). Dedicated videos worth more than integrations. Niche matters—finance, tech pay more. Always negotiate—first offer rarely best."},
+    {"question": "How to find sponsors?", "answer": "Join platforms: Grapevine, Aspire, CreatorIQ. Email brands you use directly. Media kit helps. As you grow, sponsors find you. Initial outreach is hustle but necessary."},
+    {"question": "Should I take every sponsorship?", "answer": "No—protect your audience trust. Reject products you don't believe in. Bad sponsorships hurt credibility and engagement. Better to decline than damage audience relationship. Long-term thinking wins."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

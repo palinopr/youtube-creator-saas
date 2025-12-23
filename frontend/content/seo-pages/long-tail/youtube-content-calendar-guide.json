@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-content-calendar-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Content Calendar 2025: Planning & Scheduling Strategy",
+    "description": "Create effective YouTube content calendar. Planning tools and scheduling strategies for creators.",
+    "keywords": ["youtube content calendar", "content calendar youtube", "youtube planning", "video content calendar", "youtube schedule planner"]
+  },
+  "hero": {
+    "badge": "Content Calendar",
+    "headline": "YouTube Content Calendar Guide",
+    "subheadline": "Plan ahead for consistency. Reduce stress and improve content quality.",
+    "primaryKeyword": "youtube content calendar"
+  },
+  "sections": [
+    {"type": "intro", "content": "A content calendar transforms chaotic 'what should I post?' panic into organized, strategic content creation. Planning ahead improves consistency, reduces burnout, and lets you create better content by thinking strategically rather than reactively."},
+    {"type": "features", "title": "Calendar Tools", "content": [
+      {"icon": "calendar", "title": "Notion", "description": "Flexible database. Content status tracking. Templates available. Free tier generous."},
+      {"icon": "check-square", "title": "Trello", "description": "Kanban boards for content pipeline. Visual workflow. Free for basics."},
+      {"icon": "table", "title": "Google Sheets", "description": "Simple and free. Customize completely. Share with team easily."}
+    ]},
+    {"type": "steps", "title": "Building Your Calendar", "content": [
+      "Decide posting frequency realistically",
+      "Choose calendar tool that fits your workflow",
+      "Plan content pillars (main topic categories)",
+      "Schedule tentative topics 4-8 weeks ahead",
+      "Include production milestones (script, film, edit)",
+      "Build buffer time for delays",
+      "Review and adjust weekly"
+    ]},
+    {"type": "features", "title": "What to Track", "content": [
+      {"icon": "file-text", "title": "Video Status", "description": "Idea, scripted, filmed, edited, published. Know where everything stands."},
+      {"icon": "calendar", "title": "Publish Date", "description": "Target date. May shift, but having target drives progress."},
+      {"icon": "tag", "title": "Content Type", "description": "Tutorial, review, vlog, etc. Balance your content mix."}
+    ]},
+    {"type": "benefits", "title": "Calendar Benefits", "content": [
+      "Reduces 'what to make' anxiety",
+      "Enables batch production",
+      "Maintains content balance",
+      "Catches gaps before they happen",
+      "Allows strategic timing",
+      "Improves work-life balance",
+      "Professional appearance to sponsors"
+    ]},
+    {"type": "checklist", "title": "Calendar Setup Checklist", "content": [
+      "Realistic posting frequency set?",
+      "Tool chosen and set up?",
+      "Content pillars defined?",
+      "Next month planned?",
+      "Production stages tracked?",
+      "Buffer time included?",
+      "Review cadence scheduled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How far ahead should I plan?", "answer": "4-8 weeks for topics, 2-4 weeks detailed production schedule. Too far ahead becomes rigid; too short creates stress."},
+    {"question": "Best free tool for content calendar?", "answer": "Notion is most powerful free option. Google Sheets simplest. Trello visual and intuitive. Pick what you'll actually use."},
+    {"question": "Should calendar be rigid?", "answer": "No—flexibility is key. Calendar is guide, not prison. Adapt to trends, energy, audience feedback. Planning enables spontaneity."},
+    {"question": "How to handle creative blocks with calendar?", "answer": "Planning ahead helps—always have backup topics. Keep 'rainy day' ideas list. Calendar pressure is motivation, not stress."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

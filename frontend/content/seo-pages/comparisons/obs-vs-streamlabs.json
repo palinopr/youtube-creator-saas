@@ -1,0 +1,79 @@
+{
+  "slug": "obs-vs-streamlabs",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "OBS vs Streamlabs 2025: Best Streaming Software for YouTube",
+    "description": "Compare OBS Studio and Streamlabs for YouTube streaming. Features, performance, ease of use, and which is better for your streaming setup.",
+    "keywords": ["obs vs streamlabs", "best streaming software", "youtube streaming software", "obs studio vs streamlabs", "free streaming software"]
+  },
+  "hero": {
+    "badge": "Streaming Tools",
+    "headline": "OBS vs Streamlabs: Which Streaming Software Wins?",
+    "subheadline": "Both are free, both are popular. Here's how to choose the right streaming software for your YouTube channel.",
+    "primaryKeyword": "obs vs streamlabs"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Streaming on YouTube requires reliable broadcasting software. OBS Studio and Streamlabs are the two most popular free options, but they serve different types of streamers. This comparison breaks down which tool fits your streaming style and technical comfort level."
+    },
+    {
+      "type": "comparison",
+      "title": "Feature Comparison",
+      "content": [
+        {"feature": "Price", "toolA": "Free", "toolB": "Free", "tubeGrow": "N/A"},
+        {"feature": "CPU Usage", "toolA": "Lower", "toolB": "Higher", "tubeGrow": "N/A"},
+        {"feature": "Built-in Widgets", "toolA": false, "toolB": true, "tubeGrow": "N/A"},
+        {"feature": "Alert System", "toolA": "Plugin", "toolB": "Built-in", "tubeGrow": "N/A"},
+        {"feature": "Customization", "toolA": "Unlimited", "toolB": "Limited", "tubeGrow": "N/A"},
+        {"feature": "Multi-platform", "toolA": true, "toolB": "Windows/Mac", "tubeGrow": "N/A"},
+        {"feature": "Learning Curve", "toolA": "Moderate", "toolB": "Easy", "tubeGrow": "N/A"},
+        {"feature": "Theme Store", "toolA": false, "toolB": true, "tubeGrow": "N/A"}
+      ]
+    },
+    {
+      "type": "features",
+      "title": "Key Differences",
+      "content": [
+        {"icon": "zap", "title": "Resource Usage", "description": "OBS is lighter on system resources. Streamlabs' extra features come at the cost of higher CPU and RAM usage."},
+        {"icon": "sparkles", "title": "Out-of-Box Experience", "description": "Streamlabs includes alerts, chat widgets, and themes built-in. OBS requires plugins for similar functionality."},
+        {"icon": "users", "title": "Community Support", "description": "OBS has a larger plugin ecosystem and community. Streamlabs has official support but less third-party development."}
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Choose OBS Studio If You...",
+      "content": [
+        "Have a lower-end computer or need maximum performance",
+        "Want complete control over every setting",
+        "Use Linux or prefer open-source software",
+        "Already know your way around streaming software",
+        "Need specific plugins not available in Streamlabs"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Choose Streamlabs If You...",
+      "content": [
+        "Want the easiest setup experience possible",
+        "Need built-in alerts, widgets, and overlays",
+        "Prefer a polished, all-in-one solution",
+        "Don't want to hunt for plugins and configure them",
+        "Stream primarily on Windows or Mac"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "Can I switch from Streamlabs to OBS?", "answer": "Yes, you can export Streamlabs scenes to OBS. However, Streamlabs-specific widgets won't transfer and will need to be replaced with OBS plugins or browser sources."},
+    {"question": "Which has better stream quality?", "answer": "Both can achieve identical stream quality since they use the same encoding technology. The difference is in features and resource usage, not output quality."},
+    {"question": "Is Streamlabs really just OBS with extras?", "answer": "Streamlabs was originally built on OBS but has diverged significantly. It adds proprietary features while OBS remains purely open-source with community plugins."},
+    {"question": "What about Streamlabs Ultra subscription?", "answer": "Streamlabs Ultra ($19/month) removes branding, adds premium themes, and includes extras. Most streamers don't need it - the free version is fully functional."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1,
+  "primaryTool": "obs",
+  "secondaryTool": "streamlabs"
+}

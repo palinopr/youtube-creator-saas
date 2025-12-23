@@ -1,0 +1,71 @@
+{
+  "slug": "youtube-algorithm-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Algorithm Tips 2025: How to Get Recommended",
+    "description": "Proven tips for working with the YouTube algorithm. Get more recommendations.",
+    "keywords": ["youtube algorithm tips", "youtube algorithm 2025", "get recommended youtube", "youtube algorithm hacks", "beat youtube algorithm"]
+  },
+  "hero": {
+    "badge": "Algorithm Tips",
+    "headline": "YouTube Algorithm Tips 2025",
+    "subheadline": "Work with the system. Get your videos recommended.",
+    "primaryKeyword": "youtube algorithm tips"
+  },
+  "sections": [
+    {"type": "intro", "content": "The YouTube algorithm isn't mysterious—it optimizes for viewer satisfaction. Videos that keep people watching and returning get recommended. Understanding these principles helps you create content that the algorithm naturally promotes. Here are actionable tips."},
+    {"type": "features", "title": "Core Algorithm Factors", "content": [
+      {"icon": "clock", "title": "Watch Time", "description": "Total minutes watched matters most."},
+      {"icon": "percent", "title": "Retention", "description": "How much of video people watch."},
+      {"icon": "mouse-pointer", "title": "CTR", "description": "Click-through from impressions."},
+      {"icon": "activity", "title": "Session Time", "description": "Do viewers watch more after?"}
+    ]},
+    {"type": "features", "title": "Thumbnail & Title Tips", "content": [
+      {"icon": "image", "title": "Clear Thumbnails", "description": "Readable at small sizes."},
+      {"icon": "type", "title": "Curiosity Titles", "description": "Create need to click."},
+      {"icon": "check", "title": "Deliver Promise", "description": "Match thumbnail/title to content."},
+      {"icon": "refresh-cw", "title": "Test Variations", "description": "Change if underperforming."}
+    ]},
+    {"type": "features", "title": "Retention Strategies", "content": [
+      {"icon": "zap", "title": "Hook First 30s", "description": "Capture attention immediately."},
+      {"icon": "list", "title": "Pattern Interrupts", "description": "Visuals, pace changes, segments."},
+      {"icon": "scissors", "title": "Cut Dead Time", "description": "No filler, no rambling."},
+      {"icon": "target", "title": "Strong Ending", "description": "Finish with purpose, not fade."}
+    ]},
+    {"type": "features", "title": "Session Building", "content": [
+      {"icon": "layers", "title": "Series Content", "description": "Next video natural step."},
+      {"icon": "link", "title": "End Screens", "description": "Point to related content."},
+      {"icon": "grid", "title": "Playlists", "description": "Group related videos."},
+      {"icon": "home", "title": "Channel Binging", "description": "Make viewers want more."}
+    ]},
+    {"type": "benefits", "title": "Algorithm-Friendly Practices", "content": [
+      "Consistency matters—regular uploads",
+      "Don't chase trends you can't deliver",
+      "Niche down before branching out",
+      "Satisfy viewers, not algorithm directly",
+      "Analyze your own top performers",
+      "Audience retention graph is your guide",
+      "Long-term audience building wins"
+    ]},
+    {"type": "checklist", "title": "Algorithm Optimization Checklist", "content": [
+      "Thumbnail tested for clarity?",
+      "Title creates curiosity?",
+      "First 30 seconds compelling?",
+      "Retention above 50%?",
+      "End screen added?",
+      "Video in relevant playlist?",
+      "Consistent upload schedule?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can you beat the algorithm?", "answer": "Wrong framing—work WITH it. Algorithm wants to show viewers content they'll enjoy. Make content viewers love, metrics follow, recommendations come. No tricks substitute for quality."},
+    {"question": "Does posting time matter?", "answer": "Somewhat—post when your audience is online. Analytics shows when subscribers watch. But great content performs regardless. Consistency of schedule matters more than specific time."},
+    {"question": "Why did my video stop getting views?", "answer": "Videos have lifecycles. Initial push tests CTR and retention. If metrics strong, continues. If weak, impressions slow. Evergreen content can resurge months later. New videos get new chances."},
+    {"question": "Do hashtags and tags help?", "answer": "Minimal impact on algorithm. Metadata helps categorization slightly. Title, thumbnail, and retention matter far more. Don't obsess over tags—focus on content quality."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

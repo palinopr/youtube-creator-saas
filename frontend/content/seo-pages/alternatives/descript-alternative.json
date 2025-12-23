@@ -1,0 +1,68 @@
+{
+  "slug": "descript-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Descript Alternative 2025: Text-Based Video Editing Options",
+    "description": "Top Descript alternatives for video editing. Text-based editing and transcription tools.",
+    "keywords": ["descript alternative", "text based video editor", "descript competitor", "transcription software", "ai video editor"]
+  },
+  "hero": {
+    "badge": "Descript Alternative",
+    "headline": "Best Descript Alternative 2025",
+    "subheadline": "Text-based editing alternatives. Find the right tool for your workflow.",
+    "primaryKeyword": "descript alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Descript pioneered text-based video editing—edit video by editing the transcript. At $12-24/month, it's powerful but pricey. These alternatives offer similar features, from AI transcription to text-based editing, at different price points and with unique strengths."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "video", "title": "Kapwing", "description": "Browser-based. Text-based editing. Free tier available."},
+      {"icon": "cpu", "title": "Riverside.fm", "description": "Recording + editing. High-quality remote interviews."},
+      {"icon": "type", "title": "Otter.ai", "description": "Transcription focus. Meeting and podcast transcripts."},
+      {"icon": "scissors", "title": "CapCut", "description": "Auto-captions, AI features. Free and powerful."}
+    ]},
+    {"type": "comparison", "title": "Descript vs Alternatives", "content": [
+      {"feature": "Price", "toolA": "$12-24/mo", "toolB": "$0-20/mo", "tubeGrow": "N/A"},
+      {"feature": "Text-Based Editing", "toolA": "Full", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Transcription", "toolA": "Excellent", "toolB": "Good-Excellent", "tubeGrow": "N/A"},
+      {"feature": "AI Features", "toolA": "Strong", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Moderate", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Export Quality", "toolA": "High", "toolB": "High", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Transcription-Focused", "content": [
+      {"icon": "type", "title": "Otter.ai", "description": "Best for transcription. Less video editing."},
+      {"icon": "headphones", "title": "Trint", "description": "Professional transcription. Team features."},
+      {"icon": "cpu", "title": "Rev", "description": "Human + AI transcription. High accuracy."},
+      {"icon": "volume-2", "title": "Sonix", "description": "30+ languages. Automatic translation."}
+    ]},
+    {"type": "benefits", "title": "When to Switch", "content": [
+      "Budget constraints",
+      "Need specific feature (recording, translation)",
+      "Prefer traditional editing workflow",
+      "Team collaboration requirements",
+      "Already using other tools in suite",
+      "Free tier sufficient for needs",
+      "Specialized use case (podcasts, meetings)"
+    ]},
+    {"type": "checklist", "title": "Selection Checklist", "content": [
+      "Primary use case defined?",
+      "Budget determined?",
+      "Text-based editing essential?",
+      "Recording needs considered?",
+      "Team collaboration needed?",
+      "AI features required?",
+      "Free tier tested?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is there a free Descript alternative?", "answer": "Kapwing offers text-based editing with free tier. CapCut is completely free with auto-captions. Neither matches Descript's full feature set, but capable for basic needs."},
+    {"question": "Best for podcasters?", "answer": "Riverside.fm if you need recording too. Descript still strong for podcast editing. Otter.ai for transcription-only. Depends on workflow needs."},
+    {"question": "Can I edit video by text elsewhere?", "answer": "Kapwing and Riverside offer text-based editing. Less refined than Descript but functional. Traditional editors with good transcription (Premiere) offer similar workflow."},
+    {"question": "Is Descript worth the price?", "answer": "For heavy podcast/video editing with text-based workflow, yes. For occasional use, free alternatives work. Evaluate based on time saved vs cost."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "Descript"
+}

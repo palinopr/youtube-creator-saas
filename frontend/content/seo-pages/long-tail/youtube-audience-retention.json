@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-audience-retention",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Audience Retention 2025: Keep Viewers Watching",
+    "description": "Improve YouTube audience retention. Techniques to keep viewers engaged longer.",
+    "keywords": ["youtube audience retention", "youtube retention rate", "keep viewers watching", "youtube watch time tips", "improve youtube retention"]
+  },
+  "hero": {
+    "badge": "Audience Retention",
+    "headline": "YouTube Audience Retention Guide",
+    "subheadline": "Keep them watching. The metric that matters most.",
+    "primaryKeyword": "youtube audience retention"
+  },
+  "sections": [
+    {"type": "intro", "content": "Audience retention—the percentage of your video people actually watch—is YouTube's most important metric. High retention signals valuable content, driving recommendations and growth. Understanding your retention graph and improving it systematically is key to channel success. Here's how."},
+    {"type": "features", "title": "Understanding Retention", "content": [
+      {"icon": "bar-chart", "title": "Retention Graph", "description": "Visual of when viewers leave."},
+      {"icon": "percent", "title": "Average % Viewed", "description": "Overall retention metric."},
+      {"icon": "clock", "title": "Average View Duration", "description": "Time watched in minutes."},
+      {"icon": "trending-down", "title": "Drop-Off Points", "description": "Where viewers leave."}
+    ]},
+    {"type": "features", "title": "Retention Killers", "content": [
+      {"icon": "clock", "title": "Long Intros", "description": "Get to the point."},
+      {"icon": "volume-x", "title": "Boring Segments", "description": "Pacing too slow."},
+      {"icon": "alert-triangle", "title": "False Promises", "description": "Title doesn't match content."},
+      {"icon": "layers", "title": "Tangents", "description": "Off-topic rambling."}
+    ]},
+    {"type": "features", "title": "Retention Boosters", "content": [
+      {"icon": "zap", "title": "Strong Hooks", "description": "Capture attention in 5 seconds."},
+      {"icon": "list", "title": "Pattern Interrupts", "description": "Visual and audio changes."},
+      {"icon": "message-circle", "title": "Open Loops", "description": "Promise payoff coming."},
+      {"icon": "fast-forward", "title": "Good Pacing", "description": "No wasted moments."}
+    ]},
+    {"type": "steps", "title": "Improving Retention", "content": [
+      "Study your retention graphs in Analytics",
+      "Identify where viewers commonly drop off",
+      "Note what's happening at those moments",
+      "Cut or improve low-retention segments",
+      "Add pattern interrupts every 30-60 seconds",
+      "Tease upcoming content to keep viewers watching",
+      "Test different intros and hooks",
+      "Compare retention across your videos"
+    ]},
+    {"type": "benefits", "title": "Retention Best Practices", "content": [
+      "First 30 seconds determines if viewers stay",
+      "Deliver value throughout, not just at end",
+      "Cut anything that doesn't serve viewer",
+      "Faster pacing usually improves retention",
+      "Preview what's coming to create anticipation",
+      "End before viewers want to leave",
+      "Study your best-retaining videos"
+    ]},
+    {"type": "checklist", "title": "Retention Checklist", "content": [
+      "Hook in first 5 seconds?",
+      "No long intro before value?",
+      "Pattern interrupts every minute?",
+      "Unnecessary tangents removed?",
+      "Open loops throughout?",
+      "Pacing feels engaging?",
+      "Retention graph reviewed post-publish?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good retention rate?", "answer": "Depends on video length—50%+ for 10-minute videos is solid. Shorter videos should have higher retention. Compare to YOUR averages, not others. Trending up is what matters. Industry averages vary widely."},
+    {"question": "Where do viewers typically drop off?", "answer": "First 30 seconds sees biggest drop—if you don't hook quickly. Long intros lose people. Slow segments mid-video. Right before end if you've signaled video is ending. Study your specific patterns."},
+    {"question": "How do pattern interrupts work?", "answer": "Changes in visual or audio prevent viewer fatigue. B-roll, graphics, angle changes, music shifts. Every 30-60 seconds works well. Doesn't need to be dramatic—subtle changes keep brain engaged."},
+    {"question": "Should I make shorter videos?", "answer": "Not necessarily—longer videos can have great retention if engaging throughout. Problem is filler, not length. Make videos as long as they need to be. Retention per minute matters more than total retention."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

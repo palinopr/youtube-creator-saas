@@ -1,0 +1,64 @@
+{
+  "slug": "youtube-shorts-vs-long-form",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Shorts vs Long-Form 2025: Which to Focus On",
+    "description": "Compare YouTube Shorts vs long-form videos. Strategy for each format and hybrid approaches.",
+    "keywords": ["youtube shorts vs long form", "shorts or long videos", "youtube shorts strategy", "youtube format strategy", "shorts vs regular videos"]
+  },
+  "hero": {
+    "badge": "Format Strategy",
+    "headline": "YouTube Shorts vs Long-Form",
+    "subheadline": "Different algorithms, different strategies. Choose your approach wisely.",
+    "primaryKeyword": "youtube shorts vs long form"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube now has two distinct content ecosystems—Shorts and long-form—with different algorithms, audiences, and monetization. Understanding when each format works helps you make strategic decisions. Most successful channels use both strategically."},
+    {"type": "features", "title": "Shorts Characteristics", "content": [
+      {"icon": "zap", "title": "Massive Reach", "description": "Algorithm pushes widely. Millions of views possible. Discovery-focused."},
+      {"icon": "dollar-sign", "title": "Lower RPM", "description": "Less revenue per view. Volume required for monetization."},
+      {"icon": "users", "title": "Different Audience", "description": "Often doesn't convert to long-form viewers. Separate audience segment."}
+    ]},
+    {"type": "features", "title": "Long-Form Characteristics", "content": [
+      {"icon": "trending-up", "title": "Higher Revenue", "description": "Better RPM, mid-roll ads possible. More sustainable monetization."},
+      {"icon": "heart", "title": "Deeper Connection", "description": "Builds loyal audience. Watch time creates relationship."},
+      {"icon": "search", "title": "Search Discovery", "description": "Evergreen content found through search. Long-term traffic."}
+    ]},
+    {"type": "comparison", "title": "Format Comparison", "content": [
+      {"feature": "Reach", "toolA": "Shorts: Very High", "toolB": "Long-Form: Moderate", "tubeGrow": "N/A"},
+      {"feature": "Revenue/View", "toolA": "Shorts: Low", "toolB": "Long-Form: Higher", "tubeGrow": "N/A"},
+      {"feature": "Audience Loyalty", "toolA": "Shorts: Lower", "toolB": "Long-Form: Higher", "tubeGrow": "N/A"},
+      {"feature": "Production Time", "toolA": "Shorts: Quick", "toolB": "Long-Form: Significant", "tubeGrow": "N/A"},
+      {"feature": "Evergreen Value", "toolA": "Shorts: Low", "toolB": "Long-Form: High", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Strategic Approaches", "content": [
+      "Shorts for discovery, long-form for depth",
+      "Repurpose long-form into Shorts clips",
+      "Different content styles for each",
+      "Track which format your audience prefers",
+      "Monetization favors long-form",
+      "Shorts builds subscriber count quickly",
+      "Both together is strongest strategy"
+    ]},
+    {"type": "checklist", "title": "Format Decision Checklist", "content": [
+      "Content works in short format?",
+      "Revenue or reach priority?",
+      "Production capacity for both?",
+      "Audience preference measured?",
+      "Repurposing workflow established?",
+      "Goals match format strengths?",
+      "Testing both formats?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I focus on one format?", "answer": "Most successful channels do both. Shorts for reach, long-form for revenue and loyalty. Pure Shorts channels struggle with monetization."},
+    {"question": "Do Shorts subscribers watch long-form?", "answer": "Often not—they're different behaviors. Don't expect Shorts audience to fully convert. Build both audiences."},
+    {"question": "Which pays more?", "answer": "Long-form significantly. Shorts Fund pays less than ad revenue on similar view counts. Long-form with mid-rolls is best for revenue."},
+    {"question": "Can I repurpose content between formats?", "answer": "Yes—clip best moments from long-form for Shorts. Design some long-form content with clips in mind. Efficient content strategy."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

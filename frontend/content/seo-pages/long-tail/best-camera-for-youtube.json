@@ -1,0 +1,60 @@
+{
+  "slug": "best-camera-for-youtube",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "Best Camera for YouTube 2025: Complete Buying Guide",
+    "description": "Find the perfect YouTube camera for your budget and content type. From phones to cinema cameras, everything you need to know.",
+    "keywords": ["best camera for youtube", "youtube camera", "best camera for youtube videos", "vlogging camera", "camera buying guide"]
+  },
+  "hero": {
+    "badge": "Video Gear",
+    "headline": "Best Camera for YouTube in 2025",
+    "subheadline": "From smartphones to cinema cameras, find the right video equipment for your content.",
+    "primaryKeyword": "best camera for youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "Camera choice depends on your content type, budget, and workflow. A talking-head creator has different needs than a travel vlogger. This guide covers every camera type, top picks at each price point, and how to choose based on your specific YouTube content."},
+    {"type": "features", "title": "Camera Types for YouTube", "content": [
+      {"icon": "smartphone", "title": "Smartphones", "description": "iPhone 15 Pro and Samsung S24 Ultra rival dedicated cameras. Perfect for starting out."},
+      {"icon": "video", "title": "Compact Cameras", "description": "Sony ZV-1, Canon G7X, DJI Pocket 3. Built for content creators with flip screens."},
+      {"icon": "camera", "title": "Mirrorless Cameras", "description": "Sony A7/ZV-E10, Canon R6/R7, Panasonic GH6. Professional quality, interchangeable lenses."}
+    ]},
+    {"type": "steps", "title": "Top Camera Picks by Budget", "content": [
+      "Under $500: Smartphone, DJI Osmo Pocket 3",
+      "$500-1000: Sony ZV-E10, Canon G7X III, DJI Pocket 3",
+      "$1000-1500: Sony A6700, Canon R10, Panasonic GH5 II",
+      "$1500-2500: Sony A7C II, Canon R6 II, Sony FX30",
+      "$2500-4000: Sony A7 IV, Canon R5, Sony FX3",
+      "$4000+: Sony A7S III, Canon R5C, RED Komodo"
+    ]},
+    {"type": "benefits", "title": "Choose Based on Content Type", "content": [
+      "Talking head/Studio: Any camera with good autofocus",
+      "Vlogging: Compact camera with flip screen (ZV-1, G7X)",
+      "Tech reviews: Mirrorless with 4K and good color (Sony, Canon)",
+      "Travel/Active: Compact or action cam (GoPro, DJI)",
+      "Cinematic: Large sensor mirrorless (A7S III, R5)",
+      "Streaming: Webcam, mirrorless, or camcorder"
+    ]},
+    {"type": "checklist", "title": "Camera Features Checklist", "content": [
+      "Resolution: 4K for future-proofing",
+      "Autofocus: Eye tracking for vlogging",
+      "Flip screen: Essential for self-recording",
+      "Image stabilization: IBIS for handheld",
+      "No record limit: For long-form content",
+      "Clean HDMI out: For streaming",
+      "Audio input: Mic jack for external audio",
+      "Battery life: Consider your shoot length"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I just use my phone?", "answer": "For starting out, absolutely. Modern phones have excellent video. Invest in lighting and audio first. Upgrade camera when you hit phone limitations."},
+    {"question": "What's the best budget YouTube camera?", "answer": "Sony ZV-E10 is hard to beat around $700. Great autofocus, flip screen, mic input, and interchangeable lenses for growth. The ZV-1 is solid for compact needs."},
+    {"question": "Do I need 4K for YouTube?", "answer": "Not required, but recommended. 4K gives you crop/zoom flexibility in editing and future-proofs your content. 1080p is still acceptable."},
+    {"question": "Mirrorless vs camcorder?", "answer": "Mirrorless offers better image quality and flexibility. Camcorders offer reliability and longer record times. For most YouTube content, mirrorless wins."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

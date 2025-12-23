@@ -1,0 +1,71 @@
+{
+  "slug": "youtube-analytics-metrics-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Analytics Metrics Guide 2025: Every Metric Explained",
+    "description": "Understand every YouTube analytics metric. What they mean and how to improve them.",
+    "keywords": ["youtube analytics metrics", "youtube metrics explained", "youtube analytics guide", "youtube stats meaning", "youtube performance metrics"]
+  },
+  "hero": {
+    "badge": "Analytics Guide",
+    "headline": "YouTube Analytics Metrics Guide",
+    "subheadline": "Know your numbers. Understand every metric that matters.",
+    "primaryKeyword": "youtube analytics metrics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics contains dozens of metrics—but which ones actually matter? Understanding what each metric measures and how they connect helps you make better content decisions. Here's a guide to every important metric and what it really tells you."},
+    {"type": "features", "title": "Reach Metrics", "content": [
+      {"icon": "eye", "title": "Impressions", "description": "Times thumbnail shown to viewers."},
+      {"icon": "percent", "title": "CTR", "description": "Clicks divided by impressions."},
+      {"icon": "users", "title": "Unique Viewers", "description": "Individual people who watched."},
+      {"icon": "trending-up", "title": "Views", "description": "Total video play initiations."}
+    ]},
+    {"type": "features", "title": "Engagement Metrics", "content": [
+      {"icon": "clock", "title": "Watch Time", "description": "Total minutes watched. Key metric."},
+      {"icon": "bar-chart", "title": "Average View Duration", "description": "How long viewers stay."},
+      {"icon": "percent", "title": "Average % Viewed", "description": "Portion of video watched."},
+      {"icon": "activity", "title": "Retention Graph", "description": "Where viewers drop off."}
+    ]},
+    {"type": "features", "title": "Audience Metrics", "content": [
+      {"icon": "users", "title": "Returning Viewers", "description": "Viewers who've watched before."},
+      {"icon": "user-plus", "title": "New Viewers", "description": "First-time channel visitors."},
+      {"icon": "bell", "title": "Subscribers", "description": "New subs from this video."},
+      {"icon": "pie-chart", "title": "Demographics", "description": "Age, gender, location data."}
+    ]},
+    {"type": "features", "title": "Revenue Metrics", "content": [
+      {"icon": "dollar-sign", "title": "RPM", "description": "Revenue per 1000 views (your cut)."},
+      {"icon": "dollar-sign", "title": "CPM", "description": "What advertisers pay per 1000."},
+      {"icon": "trending-up", "title": "Estimated Revenue", "description": "Total earnings per video."},
+      {"icon": "layers", "title": "Revenue Sources", "description": "Ads, memberships, Super Chats."}
+    ]},
+    {"type": "benefits", "title": "Metric Interpretation Tips", "content": [
+      "Watch time > views for algorithm",
+      "CTR without retention = clickbait",
+      "Compare to YOUR averages, not others",
+      "Returning viewers = loyal audience",
+      "RPM varies wildly by niche",
+      "Retention spikes = rewind moments",
+      "Trends matter more than absolutes"
+    ]},
+    {"type": "checklist", "title": "Analytics Review Checklist", "content": [
+      "CTR improving over time?",
+      "Retention holding above 50%?",
+      "Watch time trending up?",
+      "Subscriber growth steady?",
+      "Returning viewers increasing?",
+      "Revenue per video stable?",
+      "Traffic sources diversified?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Most important YouTube metric?", "answer": "Watch time—YouTube's stated priority. But CTR and retention together matter most for recommendations. High CTR with low retention hurts you. Moderate CTR with great retention wins long-term."},
+    {"question": "What's a good CTR?", "answer": "Channel-dependent, but 4-10% typical for most. Higher on subscribers' feeds, lower on Browse. Compare to your own averages. 2% on Browse can still drive millions of views with volume."},
+    {"question": "RPM vs CPM—what's the difference?", "answer": "CPM is what advertisers pay YouTube per 1000 impressions. RPM is what YOU receive per 1000 views after YouTube's 45% cut and non-monetized views factored. RPM is your actual revenue metric."},
+    {"question": "Why do metrics fluctuate?", "answer": "Normal—audience behavior varies by day, season, and content. New videos take time to stabilize. YouTube experiments with recommending to different audiences. Focus on trends over weeks, not days."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

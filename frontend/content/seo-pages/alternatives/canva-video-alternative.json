@@ -1,0 +1,61 @@
+{
+  "slug": "canva-video-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Canva Video Alternatives 2025: Easy Video Editors",
+    "description": "Looking for a Canva video alternative? Compare beginner-friendly video editors for YouTube.",
+    "keywords": ["canva video alternative", "canva alternative", "easy video editor", "simple video editor", "beginner video editor"]
+  },
+  "hero": {
+    "badge": "Easy Editing",
+    "headline": "Best Canva Video Editor Alternatives",
+    "subheadline": "Simple video editing without the complexity. Beginner-friendly tools.",
+    "primaryKeyword": "canva video alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Canva's video editor is great for beginners and quick edits. But some need more features, better export quality, or different workflows. Here are the best alternatives that keep things simple while offering more capability."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "video", "title": "CapCut", "description": "Free, powerful, TikTok-style editing. Best free alternative."},
+      {"icon": "film", "title": "InVideo", "description": "Template-based like Canva. Business and marketing focus."},
+      {"icon": "layout", "title": "Veed.io", "description": "Browser-based, subtitle-focused. Great for social content."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Canva Video", "toolA": "Free-$13/mo", "toolB": "Template focused", "tubeGrow": "N/A"},
+      {"feature": "CapCut", "toolA": "Free", "toolB": "Most features", "tubeGrow": "N/A"},
+      {"feature": "InVideo", "toolA": "$15-30/mo", "toolB": "Business templates", "tubeGrow": "N/A"},
+      {"feature": "Veed.io", "toolA": "Free-$24/mo", "toolB": "Subtitles focus", "tubeGrow": "N/A"},
+      {"feature": "Lumen5", "toolA": "$19-149/mo", "toolB": "AI video creation", "tubeGrow": "N/A"},
+      {"feature": "Kapwing", "toolA": "Free-$16/mo", "toolB": "Collaborative", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Reasons to Try Alternatives", "content": [
+      "Need more editing features",
+      "Want better export quality",
+      "Different template styles",
+      "Browser-based workflow",
+      "Better subtitle tools",
+      "Free without watermark",
+      "Specific feature needs"
+    ]},
+    {"type": "steps", "title": "Choosing Your Editor", "content": [
+      "Identify what Canva lacks for you",
+      "Try free versions first",
+      "Check export quality",
+      "Evaluate template selection",
+      "Consider learning curve",
+      "Test collaboration features",
+      "Compare pricing for your usage"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is CapCut really free?", "answer": "Yes, desktop and mobile versions are free with no watermark. Owned by ByteDance. Most features available free—it's remarkably capable."},
+    {"question": "Best for professional look?", "answer": "InVideo has polished business templates. Veed.io for clean social content. CapCut for trendy editing styles."},
+    {"question": "Which is easiest?", "answer": "Canva is hard to beat for ease. CapCut is intuitive if you've used TikTok. Veed.io is straightforward for subtitle work."},
+    {"question": "Best for YouTube specifically?", "answer": "CapCut handles YouTube formats well. Canva and InVideo better for thumbnails plus video combo. Depends on your workflow."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "canva"
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-green-screen-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Green Screen Guide 2025: Chroma Key for Creators",
+    "description": "Master green screen for YouTube. Set up and use chroma key effectively.",
+    "keywords": ["youtube green screen", "chroma key youtube", "green screen setup", "youtube background replacement", "green screen tips"]
+  },
+  "hero": {
+    "badge": "Green Screen",
+    "headline": "YouTube Green Screen Guide",
+    "subheadline": "Replace your background. Create any environment you want.",
+    "primaryKeyword": "youtube green screen"
+  },
+  "sections": [
+    {"type": "intro", "content": "Green screen (chroma key) lets you replace your background with anything—virtual sets, graphics, locations you can't visit. When done well, it looks professional and opens creative possibilities. When done poorly, it looks cheap. Here's how to get green screen right."},
+    {"type": "features", "title": "Green Screen Benefits", "content": [
+      {"icon": "image", "title": "Any Background", "description": "Virtual sets unlimited."},
+      {"icon": "home", "title": "Hide Space", "description": "Small space looks big."},
+      {"icon": "layers", "title": "Graphics Integration", "description": "Seamless visual effects."},
+      {"icon": "refresh-cw", "title": "Flexibility", "description": "Change look per video."}
+    ]},
+    {"type": "features", "title": "Setup Requirements", "content": [
+      {"icon": "square", "title": "Green Screen", "description": "Fabric, paper, or paint."},
+      {"icon": "sun", "title": "Even Lighting", "description": "No shadows on green."},
+      {"icon": "move", "title": "Distance", "description": "Subject away from screen."},
+      {"icon": "sliders", "title": "Software", "description": "Chroma key in editor."}
+    ]},
+    {"type": "steps", "title": "Green Screen Setup", "content": [
+      "Set up green screen with no wrinkles",
+      "Light green screen evenly (no hotspots)",
+      "Position subject 4-6 feet from screen",
+      "Light subject separately from background",
+      "Don't wear green clothing",
+      "Record with good exposure on green",
+      "Key out green in editing software",
+      "Fine-tune edges and spill removal"
+    ]},
+    {"type": "benefits", "title": "Green Screen Tips", "content": [
+      "Even lighting is everything",
+      "Distance prevents green spill",
+      "Wrinkles cause keying problems",
+      "Separate lights for screen and subject",
+      "Good key starts with good recording",
+      "Edge refinement in post matters",
+      "Practice before important shoots"
+    ]},
+    {"type": "checklist", "title": "Green Screen Checklist", "content": [
+      "Screen wrinkle-free?",
+      "Lighting even across screen?",
+      "Subject far enough from screen?",
+      "Subject lit separately?",
+      "No green clothing worn?",
+      "Exposure correct on green?",
+      "Keying software ready?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Green or blue screen?", "answer": "Green most common—works well for most situations. Blue better for blonde hair and outdoor scenes. Green requires less light. Most YouTube creators use green successfully."},
+    {"question": "What causes bad green screen?", "answer": "Usually uneven lighting, wrinkles in screen, subject too close (green spill), or poor keying settings. Good recording makes keying easy. Bad recording makes keying impossible."},
+    {"question": "Best budget green screen?", "answer": "Elgato collapsible screens popular and easy. Muslin fabric works but needs ironing. Paper backdrop wrinkles. Even cheap green screen works if lit properly."},
+    {"question": "What software for chroma key?", "answer": "Premiere Pro, DaVinci Resolve (free), Final Cut Pro all have good chroma key. OBS can do real-time keying for streaming. Most modern editors handle basic keying well."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

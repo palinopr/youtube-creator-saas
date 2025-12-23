@@ -1,0 +1,63 @@
+{
+  "slug": "woodworking-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Woodworking YouTube Tools 2025: Workshop Creator Equipment",
+    "description": "Top tools for woodworking YouTube channels. Filming gear for workshop content creators.",
+    "keywords": ["woodworking youtube tools", "workshop youtube equipment", "diy woodworking camera", "maker channel tools", "woodshop filming gear"]
+  },
+  "hero": {
+    "badge": "Woodworking Tools",
+    "headline": "Best Woodworking YouTube Tools 2025",
+    "subheadline": "Capture your craft professionally. Equipment built for dusty workshops.",
+    "primaryKeyword": "woodworking youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Woodworking YouTube has exploded—viewers love watching skilled hands transform raw wood into beautiful pieces. But filming in a workshop is challenging: dust everywhere, loud tools, lighting that changes constantly. Here's what actually works for woodworking creators."},
+    {"type": "features", "title": "Workshop Cameras", "content": [
+      {"icon": "camera", "title": "Canon EOS R50", "description": "Good autofocus, flip screen. Clean HDMI. Affordable entry into mirrorless."},
+      {"icon": "video", "title": "Sony ZV-E10", "description": "Creator-focused. Great for shop conditions. Flip screen essential."},
+      {"icon": "shield", "title": "GoPro for Dust", "description": "Sealed from sawdust. Great POV shots. Sacrifice some quality for durability."}
+    ]},
+    {"type": "features", "title": "Workshop Audio", "content": [
+      {"icon": "mic", "title": "Voiceover Recording", "description": "Most top woodworkers narrate later. Avoids tool noise entirely."},
+      {"icon": "headphones", "title": "Rode Wireless Go II", "description": "If filming live commentary. Stays on you while working."},
+      {"icon": "volume-x", "title": "Audio Booth Setup", "description": "Closet or treated corner for VO. Blue Yeti or Rode NT-USB suffices."}
+    ]},
+    {"type": "features", "title": "Workshop Lighting", "content": [
+      {"icon": "sun", "title": "LED Shop Lights", "description": "High CRI LED panels. Even lighting reduces shadows on work."},
+      {"icon": "zap", "title": "Portable LEDs", "description": "Aperture MC lights or similar. Move lighting to match shot."},
+      {"icon": "target", "title": "Task Lighting", "description": "Dedicated lights for close-up work. Detail shots need extra light."}
+    ]},
+    {"type": "benefits", "title": "Workshop Filming Tips", "content": [
+      "Film process in segments, narrate later",
+      "Multiple camera angles show technique",
+      "Dust covers for cameras between shots",
+      "Air compressor clears dust for clean shots",
+      "Time-lapses for long operations",
+      "Close-ups on joinery and details",
+      "Before/after reveals are satisfying"
+    ]},
+    {"type": "checklist", "title": "Project Video Checklist", "content": [
+      "Raw materials documented?",
+      "All cuts and joinery filmed?",
+      "Close-ups on technique?",
+      "Shop cleaned for final reveal?",
+      "VO recorded in quiet space?",
+      "Time-lapse of lengthy processes?",
+      "Final glamour shots captured?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to protect camera from sawdust?", "answer": "Keep in bag between shots. Air compressor to clean. GoPro for dustiest operations. Camera rain covers work for dust too."},
+    {"question": "Should I talk while working or voiceover?", "answer": "Most successful woodworking channels do voiceover—cleaner audio, more thoughtful explanations. On-camera talking for intros/outros."},
+    {"question": "Best way to show techniques clearly?", "answer": "Multiple angles—overhead, side, close-up. Show same cut from different perspectives. Slow motion for fast operations."},
+    {"question": "How long should woodworking videos be?", "answer": "Project builds: 15-25 minutes typically. Quick tips: 5-10 minutes. Let content dictate—don't pad, don't rush."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "woodworking"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "youtube-end-screen-template",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube End Screen Template 2025: Sizes, Timing & Best Practices",
+    "description": "Create effective YouTube end screens. Templates, dimensions, timing, and strategies to keep viewers watching.",
+    "keywords": ["youtube end screen template", "end screen dimensions", "youtube outro", "end screen best practices", "youtube end card"]
+  },
+  "hero": {
+    "badge": "End Screens",
+    "headline": "YouTube End Screen Templates & Best Practices",
+    "subheadline": "Keep viewers on your channel with effective end screens that drive subscriptions and views.",
+    "primaryKeyword": "youtube end screen template"
+  },
+  "sections": [
+    {"type": "intro", "content": "End screens appear in the last 5-20 seconds of your video. They can include video links, subscribe buttons, channel links, and external links (if eligible). Effective end screens keep viewers watching more of your content and convert them to subscribers."},
+    {"type": "features", "title": "End Screen Elements", "content": [
+      {"icon": "video", "title": "Video Elements", "description": "Link to specific videos or let YouTube suggest best match. Up to 4 elements total."},
+      {"icon": "users", "title": "Subscribe Button", "description": "Prominent subscribe prompt. Include in every end screen."},
+      {"icon": "link", "title": "External Link", "description": "Link to approved external sites. Requires YPP membership."}
+    ]},
+    {"type": "steps", "title": "End Screen Specifications", "content": [
+      "Duration: 5-20 seconds at video end",
+      "Maximum elements: 4",
+      "Minimum video length: 25 seconds",
+      "Video element size: 296 x 166 pixels",
+      "Subscribe button size: 150 x 150 pixels",
+      "Channel element size: 150 x 150 pixels",
+      "Safe zone: Keep clear space for elements"
+    ]},
+    {"type": "benefits", "title": "End Screen Best Practices", "content": [
+      "Design video outro with element placement in mind",
+      "Include subscribe button on every video",
+      "Link to relevant next video",
+      "Use 'best for viewer' video option strategically",
+      "Create visual hierarchy directing to elements",
+      "Don't stack elements on top of each other",
+      "Verbally call out what to click"
+    ]},
+    {"type": "checklist", "title": "End Screen Checklist", "content": [
+      "End screen designed into video",
+      "Clear space for clickable elements",
+      "Subscribe button included",
+      "Relevant video link added",
+      "Elements not blocking each other",
+      "Verbal call-to-action in video",
+      "Tested on mobile display",
+      "Applied to all videos"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should end screens be?", "answer": "10-20 seconds is ideal. Long enough for viewers to click, short enough not to tank retention. 5 seconds minimum is too short."},
+    {"question": "Should I use 'best for viewer' or specific videos?", "answer": "Mix both. 'Best for viewer' lets YouTube optimize. Specific videos work for series or related content. Test what works."},
+    {"question": "Do end screens hurt retention?", "answer": "Yes, slightly. Viewers who leave during end screen count against average view duration. But the trade-off for continued viewing is worth it."},
+    {"question": "Can I add end screens after uploading?", "answer": "Yes. Add or edit end screens anytime in YouTube Studio. You can also apply end screen templates across multiple videos."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

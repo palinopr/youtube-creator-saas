@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-studio-app",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Studio App 2025: Mobile Channel Management",
+    "description": "Master YouTube Studio mobile app. Manage your channel from anywhere.",
+    "keywords": ["youtube studio app", "youtube mobile app", "manage youtube channel mobile", "youtube studio mobile", "youtube creator app"]
+  },
+  "hero": {
+    "badge": "Studio App",
+    "headline": "How to Use YouTube Studio App",
+    "subheadline": "Manage your channel from anywhere. Full control on mobile.",
+    "primaryKeyword": "youtube studio app"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Studio app gives you full channel management on your phone. Monitor analytics, respond to comments, manage videos, and even upload content directly from mobile. Essential for staying connected to your channel when away from your computer."},
+    {"type": "features", "title": "Studio App Features", "content": [
+      {"icon": "bar-chart-2", "title": "Real-Time Analytics", "description": "Views, watch time, revenue."},
+      {"icon": "message-circle", "title": "Comment Management", "description": "Reply, filter, moderate."},
+      {"icon": "upload", "title": "Mobile Upload", "description": "Post videos from phone."},
+      {"icon": "edit", "title": "Video Editing", "description": "Titles, descriptions, thumbnails."}
+    ]},
+    {"type": "steps", "title": "Getting Started", "content": [
+      "Download YouTube Studio from App Store/Play Store",
+      "Sign in with your Google account",
+      "Grant necessary permissions",
+      "Dashboard shows channel overview",
+      "Tap Content to manage videos",
+      "Tap Analytics for performance data",
+      "Tap Comments for engagement",
+      "Enable notifications for important alerts"
+    ]},
+    {"type": "features", "title": "Mobile Analytics", "content": [
+      {"icon": "trending-up", "title": "Overview", "description": "Quick performance snapshot."},
+      {"icon": "users", "title": "Audience", "description": "Who's watching you."},
+      {"icon": "play", "title": "Reach", "description": "How viewers find you."},
+      {"icon": "dollar-sign", "title": "Revenue", "description": "Earnings tracking."}
+    ]},
+    {"type": "benefits", "title": "Studio App Tips", "content": [
+      "Check analytics multiple times daily",
+      "Respond to comments quickly from anywhere",
+      "Enable push notifications for comments",
+      "Upload shorts directly from phone",
+      "Edit titles based on performance",
+      "Monitor new video performance early",
+      "Desktop still better for deep analysis"
+    ]},
+    {"type": "checklist", "title": "Studio App Checklist", "content": [
+      "App downloaded and updated?",
+      "Signed into correct account?",
+      "Notifications configured?",
+      "Know where key features are?",
+      "Using for comment management?",
+      "Checking analytics regularly?",
+      "Mobile uploads set up?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is YouTube Studio app free?", "answer": "Yes, completely free for all creators. Available on iOS and Android. Some features require Partner Program membership (like revenue tracking). Core features available to everyone."},
+    {"question": "Can I upload videos from the app?", "answer": "Yes—full upload capability including titles, descriptions, tags, and thumbnails. Good for mobile-shot content and Shorts. May want desktop for complex uploads with end screens and cards."},
+    {"question": "Studio app vs main YouTube app?", "answer": "YouTube app is for watching. Studio app is for managing your channel. Separate apps with different purposes. Creators need both. Studio has analytics and management tools."},
+    {"question": "What notifications should I enable?", "answer": "Comments on recent videos useful for engagement. Subscriber milestones for celebration. Performance alerts for unusual activity. Revenue notifications if monetized. Customize to avoid notification fatigue."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

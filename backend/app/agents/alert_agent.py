@@ -310,27 +310,44 @@ class AlertAgent:
             return False
 
     def _save_alerts(self, alerts: List[Dict[str, Any]]) -> None:
-        """Save alerts to the database."""
+        """Save alerts to the database with deduplication."""
         if not self.user_id:
             return
 
         try:
             session = SessionLocal()
             try:
+                saved_count = 0
                 for alert_data in alerts:
+                    alert_type = alert_data.get("alert_type")
+                    title = alert_data.get("title", "")
+                    data = alert_data.get("data", {})
+
+                    # Check for existing duplicate alert
+                    existing = self._check_duplicate_alert(
+                        session, alert_type, title, data
+                    )
+
+                    if existing:
+                        logger.debug(f"Skipping duplicate alert: {title}")
+                        continue
+
                     alert = Alert(
                         user_id=self.user_id,
-                        alert_type=alert_data.get("alert_type"),
+                        alert_type=alert_type,
                         priority=alert_data.get("priority", AlertPriority.MEDIUM),
-                        title=alert_data.get("title", ""),
+                        title=title,
                         message=alert_data.get("message", ""),
                         video_id=alert_data.get("video_id"),
                         video_title=alert_data.get("video_title"),
-                        data=alert_data.get("data", {}),
+                        data=data,
                     )
                     session.add(alert)
+                    saved_count += 1
+
                 session.commit()
-                logger.info(f"Saved {len(alerts)} new alerts for user {self.user_id}")
+                if saved_count > 0:
+                    logger.info(f"Saved {saved_count} new alerts for user {self.user_id}")
             except Exception as e:
                 session.rollback()
                 logger.error(f"Error saving alerts: {e}")
@@ -338,6 +355,50 @@ class AlertAgent:
                 session.close()
         except Exception as e:
             logger.error(f"Error creating session for alerts: {e}")
+
+    def _check_duplicate_alert(
+        self,
+        session: Session,
+        alert_type: AlertType,
+        title: str,
+        data: Dict[str, Any]
+    ) -> bool:
+        """
+        Check if a similar alert already exists.
+
+        For milestones: check by milestone value in data
+        For viral/drops: check by title (includes date context)
+        For others: check by title match
+        """
+        try:
+            # For milestone alerts, check by the specific milestone value
+            if alert_type == AlertType.MILESTONE:
+                milestone = data.get("milestone")
+                if milestone:
+                    existing = session.query(Alert).filter(
+                        Alert.user_id == self.user_id,
+                        Alert.alert_type == AlertType.MILESTONE,
+                        Alert.data["milestone"].astext.cast(int) == milestone
+                    ).first()
+                    return existing is not None
+
+            # For other alerts, check if same title exists in last 24 hours
+            # (allows similar alerts after a day passes)
+            from datetime import timedelta
+            cutoff = datetime.utcnow() - timedelta(hours=24)
+
+            existing = session.query(Alert).filter(
+                Alert.user_id == self.user_id,
+                Alert.alert_type == alert_type,
+                Alert.title == title,
+                Alert.created_at >= cutoff
+            ).first()
+
+            return existing is not None
+
+        except Exception as e:
+            logger.error(f"Error checking duplicate alert: {e}")
+            return False  # Allow saving on error to avoid losing alerts
 
     @staticmethod
     def _format_number(num: int) -> str:
@@ -494,4 +555,62 @@ def delete_old_alerts(days: int = 30) -> int:
             session.close()
     except Exception as e:
         logger.error(f"Error deleting old alerts: {e}")
+        return 0
+
+
+def cleanup_duplicate_alerts(user_id: str) -> int:
+    """
+    Remove duplicate milestone alerts for a user, keeping only the oldest one.
+    Also removes duplicate non-milestone alerts with identical titles.
+
+    Returns count of deleted duplicates.
+    """
+    try:
+        session = SessionLocal()
+        try:
+            deleted_count = 0
+
+            # 1. Clean up duplicate milestone alerts
+            # Get all milestone alerts grouped by milestone value
+            milestone_alerts = session.query(Alert).filter(
+                Alert.user_id == user_id,
+                Alert.alert_type == AlertType.MILESTONE
+            ).order_by(Alert.created_at.asc()).all()
+
+            seen_milestones = set()
+            for alert in milestone_alerts:
+                milestone = alert.data.get("milestone") if alert.data else None
+                if milestone in seen_milestones:
+                    # This is a duplicate, delete it
+                    session.delete(alert)
+                    deleted_count += 1
+                else:
+                    seen_milestones.add(milestone)
+
+            # 2. Clean up duplicate non-milestone alerts with same title
+            # (keep oldest of each title per alert_type)
+            for alert_type in [AlertType.VIRAL, AlertType.DROP, AlertType.ENGAGEMENT,
+                              AlertType.COMMENT_SURGE, AlertType.OPPORTUNITY, AlertType.WARNING]:
+                alerts = session.query(Alert).filter(
+                    Alert.user_id == user_id,
+                    Alert.alert_type == alert_type
+                ).order_by(Alert.created_at.asc()).all()
+
+                seen_titles = set()
+                for alert in alerts:
+                    if alert.title in seen_titles:
+                        session.delete(alert)
+                        deleted_count += 1
+                    else:
+                        seen_titles.add(alert.title)
+
+            session.commit()
+            if deleted_count > 0:
+                logger.info(f"Cleaned up {deleted_count} duplicate alerts for user {user_id}")
+            return deleted_count
+
+        finally:
+            session.close()
+    except Exception as e:
+        logger.error(f"Error cleaning up duplicate alerts: {e}")
         return 0

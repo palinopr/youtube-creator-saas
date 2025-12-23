@@ -1,0 +1,74 @@
+{
+  "slug": "how-to-youtube-handle-hate",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Handle YouTube Hate Comments 2025: Creator Mental Health Guide",
+    "description": "Deal with hate comments and criticism on YouTube. Protect your mental health.",
+    "keywords": ["youtube hate comments", "deal with haters youtube", "youtube criticism", "youtube mental health", "negative comments youtube"]
+  },
+  "hero": {
+    "badge": "Handling Criticism",
+    "headline": "How to Handle YouTube Hate Comments",
+    "subheadline": "Protect your peace. Don't let negativity win.",
+    "primaryKeyword": "youtube hate comments"
+  },
+  "sections": [
+    {"type": "intro", "content": "Every successful YouTuber faces criticism, trolls, and hate comments. It's not a matter of if, but when. How you handle negativity affects both your mental health and your channel's community culture. Here's how experienced creators deal with the dark side of visibility."},
+    {"type": "features", "title": "Types of Negative Comments", "content": [
+      {"icon": "message-circle", "title": "Constructive Criticism", "description": "Actually helpful. Consider it."},
+      {"icon": "thumbs-down", "title": "Disagree Comments", "description": "Different opinion. Not hate."},
+      {"icon": "alert-triangle", "title": "Trolls", "description": "Want reaction. Don't engage."},
+      {"icon": "x-circle", "title": "Genuine Hate", "description": "Personal attacks. Delete/block."}
+    ]},
+    {"type": "steps", "title": "Healthy Response Process", "content": [
+      "Don't respond immediately—wait for emotion to pass",
+      "Categorize: constructive, disagree, troll, or hate",
+      "Constructive: consider the feedback objectively",
+      "Disagree: decide if worth engaging respectfully",
+      "Trolls: ignore completely, don't feed them",
+      "Hate: delete, block if needed, report if severe",
+      "Move on—don't dwell on negative minority"
+    ]},
+    {"type": "features", "title": "Protection Tools", "content": [
+      {"icon": "filter", "title": "Word Filters", "description": "Auto-hide known hate terms."},
+      {"icon": "shield", "title": "Hold for Review", "description": "Approve comments before public."},
+      {"icon": "users", "title": "Moderators", "description": "Trusted members help filter."},
+      {"icon": "eye-off", "title": "Hide Comments", "description": "Take breaks from reading."}
+    ]},
+    {"type": "features", "title": "Mental Health Strategies", "content": [
+      {"icon": "clock", "title": "Limit Exposure", "description": "Set time boundaries for comments."},
+      {"icon": "heart", "title": "Focus on Positive", "description": "10 good comments vs 1 bad."},
+      {"icon": "users", "title": "Creator Community", "description": "Talk to others who understand."},
+      {"icon": "coffee", "title": "Take Breaks", "description": "Step away when needed."}
+    ]},
+    {"type": "benefits", "title": "Perspective Reminders", "content": [
+      "Hate comments are tiny minority",
+      "Successful = more hate (it's a sign)",
+      "Trolls want your reaction—deny them",
+      "Your community culture is your choice",
+      "Block freely—it's your space",
+      "Not everyone will like you (that's ok)",
+      "Long-term creators develop thick skin"
+    ]},
+    {"type": "checklist", "title": "Hate Management Checklist", "content": [
+      "Word filter list updated?",
+      "Comments held for review if needed?",
+      "Trusted moderators assigned?",
+      "Time limits on comment reading?",
+      "Support system in place?",
+      "Taking breaks when needed?",
+      "Blocking trolls without guilt?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I respond to hate comments?", "answer": "Almost never—trolls want engagement. Responding gives them power and encourages more. Delete, block, move on. Exception: factual corrections that help other viewers, delivered calmly."},
+    {"question": "Does deleting comments look bad?", "answer": "No—it's your channel, your community. You set the culture. Most viewers never see deleted comments. Curating a positive space attracts positive people. Delete freely."},
+    {"question": "How to handle false accusations?", "answer": "Consider once if there's any truth to learn from. If genuinely false, don't engage with every accusation—it amplifies. Address calmly once if needed for your community, then move on."},
+    {"question": "When to take a break?", "answer": "When negativity affects your mood, creativity, or motivation. When you dread checking comments. When one bad comment ruins your day. Breaks are healthy and necessary—the channel will survive."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

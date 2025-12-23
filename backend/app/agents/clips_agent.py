@@ -35,8 +35,15 @@ class ViralClipsAgent:
     Workflow: Finder -> Refiner -> END
     """
 
-    def __init__(self, user_id: Optional[str] = None):
+    def __init__(
+        self,
+        user_id: Optional[str] = None,
+        channel_profile: Optional[Dict[str, Any]] = None,
+    ):
         settings = get_settings()
+        self.channel_profile = channel_profile or {}
+        self.niche = self.channel_profile.get("niche", "general")
+        self.language = self.channel_profile.get("language", "en")
 
         # Create cost tracking callback
         self.cost_callback = create_cost_tracking_callback(
@@ -52,6 +59,50 @@ class ViralClipsAgent:
             callbacks=[self.cost_callback],
         )
         self.workflow = self._build_graph()
+
+    def _build_channel_context(self) -> str:
+        """Build a channel-aware context section for the viral clips prompt."""
+        if not self.channel_profile:
+            return ""
+
+        niche = self.niche
+        language = self.language
+        title_patterns = self.channel_profile.get("title_patterns", [])
+        common_tags = self.channel_profile.get("common_tags", [])
+
+        # Niche-specific guidance
+        niche_guidance = {
+            "gaming": "Focus on epic plays, funny moments, rage quits, clutch victories, and game reveals. Gaming audiences love high-energy reactions and skill demonstrations.",
+            "podcast": "Focus on controversial takes, wisdom nuggets, personal stories, and debate moments. Podcast clips work best with clear, quotable statements.",
+            "music": "Focus on behind-the-scenes moments, artist reactions, lyric explanations, and music industry insights. Music fans love authentic artist moments.",
+            "comedy": "Focus on jokes with clear punchlines, funny stories, and unexpected reactions. The payoff must be clearly delivered.",
+            "education": "Focus on mind-blowing facts, counterintuitive insights, and 'aha' moments. Educational content needs complete explanations.",
+            "tech": "Focus on product reveals, tech comparisons, predictions, and hot takes about the industry. Tech audiences love informed opinions.",
+            "fitness": "Focus on transformation reveals, workout challenges, nutrition myths debunked, and motivational moments.",
+            "beauty": "Focus on product reveals, transformation moments, tips that challenge common practices, and honest reviews.",
+            "news": "Focus on breaking analysis, hot takes, expert predictions, and moments that challenge mainstream narratives.",
+            "entertainment": "Focus on celebrity stories, drama reveals, industry insights, and behind-the-scenes moments.",
+        }
+
+        guidance = niche_guidance.get(niche, "Focus on the most engaging, shareable moments that match this channel's typical content style.")
+
+        patterns_str = ", ".join(title_patterns[:5]) if title_patterns else "varied styles"
+        tags_str = ", ".join(common_tags[:10]) if common_tags else "various topics"
+
+        return f"""
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 CHANNEL-SPECIFIC CONTEXT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is a {niche.upper()} channel. Content language: {language.upper()}
+
+{guidance}
+
+Typical title patterns on this channel: {patterns_str}
+Common topics/tags: {tags_str}
+
+When finding viral clips, match the style and tone that works for this specific niche.
+"""
 
     def _build_graph(self):
         """Build the simplified LangGraph workflow."""
@@ -92,7 +143,7 @@ class ViralClipsAgent:
             "word_timestamps": word_timestamps,
             "transcript_segments": transcript_segments,  # Pass original segments for better boundaries
             "max_clips": max_clips,
-            "language": "es",  # Default, will be detected
+            "language": self.language,  # From channel profile
             "candidates": [],
             "final_clips": []
         }
@@ -137,7 +188,10 @@ class ViralClipsAgent:
 
             print(f"🔵 [FINDER] Analyzing chunk {chunk_idx + 1} (chars {chunk_start}-{chunk_start + len(chunk)})...")
 
-            prompt = f"""You are an Elite Viral Clip Editor trained on 60 real viral shorts from top podcast channels.
+            # Get channel-specific context
+            channel_context = self._build_channel_context()
+
+            prompt = f"""You are an Elite Viral Clip Editor trained on 60 real viral shorts.
 Find {max_clips} CONTIGUOUS clips that will STOP THE SCROLL.
 
 DURATION: 20-90 SECONDS - Let the content decide!
@@ -145,7 +199,7 @@ DURATION: 20-90 SECONDS - Let the content decide!
 - Story with payoff? 40-60s
 - Complex explanation? 60-90s
 NEVER cut arbitrarily - END AT NATURAL CONCLUSION!
-
+{channel_context}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🎯 HOOK PATTERNS - RANKED BY REAL VIRAL DATA (60 clips analyzed)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -526,12 +580,13 @@ async def stream_clips_generation(
     transcript: str,
     video_title: str,
     word_timestamps: List[Dict],
-    max_clips: int = 5
+    max_clips: int = 5,
+    channel_profile: Optional[Dict[str, Any]] = None,
 ):
     """
     Stream clip generation events for real-time UI updates.
     """
-    agent = ViralClipsAgent()
+    agent = ViralClipsAgent(channel_profile=channel_profile)
 
     # Use the compiled workflow with streaming
     initial_state = {
@@ -539,7 +594,7 @@ async def stream_clips_generation(
         "transcript": transcript,
         "word_timestamps": word_timestamps,
         "max_clips": max_clips,
-        "language": "es",
+        "language": agent.language,  # From channel profile
         "candidates": [],
         "final_clips": []
     }

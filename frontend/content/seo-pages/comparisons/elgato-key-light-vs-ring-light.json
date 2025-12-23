@@ -1,0 +1,67 @@
+{
+  "slug": "elgato-key-light-vs-ring-light",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Elgato Key Light vs Ring Light 2025: Best YouTube Lighting",
+    "description": "Compare Elgato Key Light to ring lights for YouTube. Which lighting solution is better for your content?",
+    "keywords": ["elgato key light vs ring light", "youtube lighting", "elgato key light", "ring light for youtube", "streaming lights"]
+  },
+  "hero": {
+    "badge": "Lighting Comparison",
+    "headline": "Elgato Key Light vs Ring Light",
+    "subheadline": "Premium panel lighting vs affordable ring lights. Find the right YouTube lighting solution.",
+    "primaryKeyword": "elgato key light vs ring light"
+  },
+  "sections": [
+    {"type": "intro", "content": "Lighting makes or breaks video quality. Elgato Key Light offers premium panel lighting with app control, while ring lights provide affordable, flattering illumination. Both have their place—here's how to decide."},
+    {"type": "comparison", "title": "Lighting Comparison", "content": [
+      {"feature": "Price", "toolA": "$179-199", "toolB": "$30-100", "tubeGrow": "N/A"},
+      {"feature": "Light Type", "toolA": "Edge-lit panel", "toolB": "Ring of LEDs", "tubeGrow": "N/A"},
+      {"feature": "Eye Catchlight", "toolA": "Natural square", "toolB": "Ring reflection", "tubeGrow": "N/A"},
+      {"feature": "Adjustability", "toolA": "App + temp control", "toolB": "Manual dial", "tubeGrow": "N/A"},
+      {"feature": "Space Required", "toolA": "Side placement", "toolB": "Behind camera", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "Streaming, desk setup", "toolB": "Beauty, talking head", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Elgato Key Light Strengths", "content": [
+      {"icon": "sliders", "title": "App Control", "description": "Adjust brightness and temperature from phone. Stream Deck integration."},
+      {"icon": "sun", "title": "Diffused Light", "description": "Soft, even illumination without harsh shadows."},
+      {"icon": "wifi", "title": "Smart Home Ready", "description": "WiFi connected, integrates with streaming setups."}
+    ]},
+    {"type": "features", "title": "Ring Light Strengths", "content": [
+      {"icon": "dollar-sign", "title": "Budget Friendly", "description": "Quality lighting under $50 possible. Great value."},
+      {"icon": "eye", "title": "Catchlight Effect", "description": "Distinctive ring reflection in eyes. Popular for beauty content."},
+      {"icon": "smartphone", "title": "Phone Mount", "description": "Many include phone holders. All-in-one solution."}
+    ]},
+    {"type": "benefits", "title": "Choose Elgato Key Light If", "content": [
+      "You stream regularly",
+      "Want app-controlled lighting",
+      "Prefer natural-looking light",
+      "Have desk setup space",
+      "Value build quality",
+      "Use Stream Deck ecosystem",
+      "Budget isn't primary concern"
+    ]},
+    {"type": "benefits", "title": "Choose Ring Light If", "content": [
+      "Budget is limited",
+      "Like the ring eye effect",
+      "Create beauty/makeup content",
+      "Need portable solution",
+      "Want phone mount included",
+      "Recording with smartphone",
+      "Starting out on YouTube"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is Elgato Key Light worth $180+?", "answer": "For serious streamers, yes. App control, consistent quality, and integration make it worthwhile. Casual creators can get good results with cheaper options."},
+    {"question": "Do ring lights look professional?", "answer": "They can. Quality ring lights produce excellent results. The distinctive catchlight is preference—some love it, others prefer natural light reflections."},
+    {"question": "Can I use both together?", "answer": "Yes. Ring light as fill, Key Light as key. Or Key Light pair for main lighting. Combining lights gives more control."},
+    {"question": "What size ring light is best?", "answer": "18-inch for full face coverage. 12-inch works for close-ups. Bigger ring = softer, more flattering light."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "elgato-key-light",
+  "secondaryTool": "ring-light"
+}

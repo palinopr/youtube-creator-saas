@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-niche-selection",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "How to Choose a YouTube Niche 2025: Find Your Perfect Topic",
+    "description": "Pick the right YouTube niche for your channel. Balance passion, demand, and competition.",
+    "keywords": ["youtube niche", "choose youtube niche", "youtube niche ideas", "best youtube niche", "youtube topic selection"]
+  },
+  "hero": {
+    "badge": "Channel Strategy",
+    "headline": "How to Choose Your YouTube Niche",
+    "subheadline": "Find your perfect topic. Where passion meets opportunity.",
+    "primaryKeyword": "youtube niche"
+  },
+  "sections": [
+    {"type": "intro", "content": "Niche selection determines your growth trajectory. Too broad and you compete with everyone. Too narrow and there's no audience. The sweet spot balances your interests, audience demand, and achievable competition. Here's how to find it."},
+    {"type": "features", "title": "Niche Evaluation Factors", "content": [
+      {"icon": "heart", "title": "Passion/Knowledge", "description": "Can you make 100+ videos on this? Interest sustains long-term."},
+      {"icon": "users", "title": "Audience Size", "description": "Enough people interested? Too small = limited growth ceiling."},
+      {"icon": "trending-up", "title": "Competition Level", "description": "Can you compete? Saturated niches need differentiation."}
+    ]},
+    {"type": "steps", "title": "Niche Selection Process", "content": [
+      "List topics you know well and enjoy",
+      "Research audience demand (search volume, existing channels)",
+      "Analyze competition (who's successful, how saturated)",
+      "Find sub-niche opportunities",
+      "Test with 10-20 videos",
+      "Analyze what resonates",
+      "Refine and commit"
+    ]},
+    {"type": "features", "title": "Good Niche Characteristics", "content": [
+      {"icon": "dollar-sign", "title": "Monetizable", "description": "Sponsors exist, products to promote. RPM matters."},
+      {"icon": "repeat", "title": "Evergreen Potential", "description": "Content stays relevant. Not just trending moments."},
+      {"icon": "layers", "title": "Depth", "description": "Hundreds of video ideas possible. Not exhausted quickly."}
+    ]},
+    {"type": "benefits", "title": "Niche Red Flags", "content": [
+      "Can't imagine 100 video ideas",
+      "All top channels are massive",
+      "Topic too seasonal or trendy",
+      "No clear monetization path",
+      "You'd get bored quickly",
+      "Audience doesn't buy/click",
+      "Too dependent on news/events"
+    ]},
+    {"type": "checklist", "title": "Niche Validation Checklist", "content": [
+      "Genuinely interested in topic?",
+      "Audience actively searching?",
+      "Small channels can succeed?",
+      "Multiple content formats possible?",
+      "Monetization opportunities exist?",
+      "Can commit for 1-2 years?",
+      "Sub-niche differentiation found?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I change niches later?", "answer": "Yes, but it's hard. Existing audience may leave. Better to sub-niche or expand gradually. Choose wisely upfront."},
+    {"question": "How specific should my niche be?", "answer": "Specific enough to stand out, broad enough to sustain content. 'Tech reviews' is too broad. 'Budget Android phones' is better."},
+    {"question": "What niches make most money?", "answer": "Finance, business, tech, health have high CPMs. But competition is fierce. Balance earning potential with achievability."},
+    {"question": "Should I follow passion or profit?", "answer": "Both matter. Passion sustains you through hard times. Profit validates demand. Find overlap."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-collab-strategy",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Collaboration Strategy 2025: Grow Through Partnerships",
+    "description": "Strategic YouTube collaborations. Find partners and grow together effectively.",
+    "keywords": ["youtube collaboration", "youtube collab strategy", "collab with youtubers", "youtube partnership", "creator collaborations"]
+  },
+  "hero": {
+    "badge": "Collaboration",
+    "headline": "YouTube Collaboration Strategy",
+    "subheadline": "Grow together. Strategic partnerships that benefit both channels.",
+    "primaryKeyword": "youtube collaboration"
+  },
+  "sections": [
+    {"type": "intro", "content": "Collaborations expose you to new audiences who already trust the recommending creator. One successful collab can bring months of organic growth. But bad partnerships waste time. Strategic collaboration—finding the right partners and executing well—accelerates growth dramatically."},
+    {"type": "features", "title": "Finding Partners", "content": [
+      {"icon": "users", "title": "Similar Audience Size", "description": "10x difference is max. Equal benefit important."},
+      {"icon": "target", "title": "Complementary Content", "description": "Related but not identical. Shared audience interest."},
+      {"icon": "heart", "title": "Genuine Connection", "description": "Watch their content. Real relationship matters."},
+      {"icon": "trending-up", "title": "Active Growth", "description": "Partner with channels on upward trajectory."}
+    ]},
+    {"type": "steps", "title": "Outreach Process", "content": [
+      "Research potential partners thoroughly",
+      "Engage with their content genuinely first",
+      "Craft personalized outreach (not template)",
+      "Propose specific collaboration idea",
+      "Explain mutual benefit clearly",
+      "Make it easy to say yes",
+      "Follow up once, then move on",
+      "Build relationship before asking"
+    ]},
+    {"type": "features", "title": "Collaboration Types", "content": [
+      {"icon": "video", "title": "Guest Appearances", "description": "Appear on each other's channels. Most common format."},
+      {"icon": "message-circle", "title": "Interview/Podcast", "description": "Expert positioning. Lower production barrier."},
+      {"icon": "refresh-cw", "title": "Content Swap", "description": "Create content for each other's channels."},
+      {"icon": "share-2", "title": "Cross-Promotion", "description": "Shoutouts, community posts. Lowest effort entry point."}
+    ]},
+    {"type": "benefits", "title": "Collaboration Benefits", "content": [
+      "Access to established audiences",
+      "Credibility by association",
+      "Content variety for viewers",
+      "Industry relationship building",
+      "Learning from other creators",
+      "Potential ongoing partnership",
+      "Algorithm boost from engagement"
+    ]},
+    {"type": "checklist", "title": "Collaboration Checklist", "content": [
+      "Partner thoroughly researched?",
+      "Mutual benefit clear?",
+      "Content idea specific?",
+      "Timeline agreed?",
+      "Promotion plan coordinated?",
+      "Both channels get fair value?",
+      "Follow-up relationship maintained?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to reach out to bigger creators?", "answer": "Don't ask for collab immediately. Provide value first—thoughtful comments, share their content, help in their community. Build genuine relationship over months."},
+    {"question": "Should I collab with smaller channels?", "answer": "Yes—growing together creates lasting partnerships. Today's small channel might be tomorrow's big collaborator. Quality over size."},
+    {"question": "What if they say no?", "answer": "Common and normal. Don't take it personally. Thank them, stay friendly, try again later with better offer. Many successful collabs happen on second or third ask."},
+    {"question": "How often should I collab?", "answer": "Monthly is sustainable for most creators. More frequent can overwhelm your core content. Less frequent may not build enough relationships. Find your rhythm."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

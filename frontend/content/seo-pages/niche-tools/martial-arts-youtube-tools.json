@@ -1,0 +1,66 @@
+{
+  "slug": "martial-arts-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Martial Arts YouTube Tools 2025: Training Channel Equipment",
+    "description": "Top tools for martial arts YouTube channels. Film techniques and training content.",
+    "keywords": ["martial arts youtube tools", "martial arts channel equipment", "mma youtube gear", "training video equipment", "fight content"]
+  },
+  "hero": {
+    "badge": "Martial Arts Tools",
+    "headline": "Best Martial Arts YouTube Tools 2025",
+    "subheadline": "Capture technique clearly. Gear for martial arts creators.",
+    "primaryKeyword": "martial arts youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Martial arts content requires capturing fast movements clearly, showing technique from multiple angles, and often filming in gym environments with challenging acoustics. From tutorials to sparring footage, the right equipment makes the difference between helpful instruction and unwatchable blur."},
+    {"type": "features", "title": "Camera Options", "content": [
+      {"icon": "video", "title": "Sony A7 IV", "description": "Fast autofocus. Tracks movement well."},
+      {"icon": "camera", "title": "Canon R6 II", "description": "Excellent in low light gyms."},
+      {"icon": "zap", "title": "GoPro", "description": "POV training. First-person drills."},
+      {"icon": "film", "title": "High Frame Rate", "description": "60-120fps for technique breakdown."}
+    ]},
+    {"type": "features", "title": "Multi-Angle Setup", "content": [
+      {"icon": "eye", "title": "Front Angle", "description": "See full technique and form."},
+      {"icon": "move", "title": "Side Profile", "description": "Shows footwork and distance."},
+      {"icon": "user", "title": "POV Camera", "description": "What practitioner sees."},
+      {"icon": "circle", "title": "Overhead", "description": "Ground work and positioning."}
+    ]},
+    {"type": "features", "title": "Gym Challenges", "content": [
+      {"icon": "sun", "title": "Lighting", "description": "Gyms often poorly lit. Add portable lights."},
+      {"icon": "volume-2", "title": "Audio", "description": "Echo in large spaces. Use lav mics."},
+      {"icon": "target", "title": "Space", "description": "Camera placement around mats."},
+      {"icon": "shield", "title": "Protection", "description": "Keep gear safe from stray hits."}
+    ]},
+    {"type": "benefits", "title": "Martial Arts Content Tips", "content": [
+      "Slow motion reveals technique details",
+      "Multiple angles are essential for teaching",
+      "Clear demonstrations before full speed",
+      "Partner work shows application",
+      "Drill-focused content is evergreen",
+      "Breakdown popular techniques for views",
+      "Show progression for motivation"
+    ]},
+    {"type": "checklist", "title": "Training Video Checklist", "content": [
+      "Gym lighting acceptable?",
+      "Multiple camera angles planned?",
+      "Audio capture for instruction?",
+      "Slow motion settings ready?",
+      "Space cleared for demonstration?",
+      "Partner available if needed?",
+      "Safety considerations covered?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for martial arts?", "answer": "Fast autofocus critical—Sony and Canon excel. High frame rate for slow motion technique breakdowns. If gym is dark, prioritize low-light performance. Multiple cheaper cameras often better than one expensive."},
+    {"question": "How many camera angles?", "answer": "Minimum 2 for tutorials—front and side. 3-4 angles ideal for complex techniques. POV adds immersion. Edit between angles to show technique completely. Single angle limits instructional value."},
+    {"question": "Filming in gyms with poor lighting?", "answer": "Portable LED panels help significantly. Increase ISO if needed. Open aperture lenses (f/1.8-2.8) gather more light. Position near windows if available. Some gyms allow temporary lighting."},
+    {"question": "Slow motion for technique?", "answer": "Essential for martial arts—60fps minimum, 120fps+ ideal. Shows details invisible at full speed. Use for key moments, not entire video. Combine with real-time for context."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "martial-arts"
+}

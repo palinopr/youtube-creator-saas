@@ -1,0 +1,59 @@
+{
+  "slug": "logitech-c920-vs-c922",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Logitech C920 vs C922 2025: Webcam Comparison",
+    "description": "Compare Logitech C920 and C922 webcams. Features, image quality, and which is best for YouTube creators.",
+    "keywords": ["logitech c920 vs c922", "webcam comparison", "c920 vs c922", "best webcam youtube", "logitech webcam"]
+  },
+  "hero": {
+    "badge": "Webcams",
+    "headline": "Logitech C920 vs C922: Which Webcam to Choose?",
+    "subheadline": "Two popular webcams, one big question. Here's the complete comparison.",
+    "primaryKeyword": "logitech c920 vs c922"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Logitech C920 and C922 look nearly identical but have key differences. The C922 adds better low-light performance and background replacement for streaming. But is the price difference worth it? Here's a detailed comparison for YouTube creators and streamers."},
+    {"type": "comparison", "title": "C920 vs C922 Comparison", "content": [
+      {"feature": "Price", "toolA": "~$70", "toolB": "~$100", "tubeGrow": "N/A"},
+      {"feature": "Resolution", "toolA": "1080p/30fps", "toolB": "1080p/30fps, 720p/60fps", "tubeGrow": "N/A"},
+      {"feature": "Low Light", "toolA": "Standard", "toolB": "Enhanced", "tubeGrow": "N/A"},
+      {"feature": "Background Replace", "toolA": "No", "toolB": "Yes (software)", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"},
+      {"feature": "Field of View", "toolA": "78°", "toolB": "78°", "tubeGrow": "N/A"},
+      {"feature": "Microphone", "toolA": "Dual stereo", "toolB": "Dual stereo", "tubeGrow": "N/A"},
+      {"feature": "Tripod Mount", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "C920 Advantages", "content": [
+      {"icon": "dollar-sign", "title": "Lower Price", "description": "$30 cheaper for nearly identical core specs. Great budget choice."},
+      {"icon": "check", "title": "Proven Track Record", "description": "Years of reliable performance. The classic YouTube webcam."},
+      {"icon": "package", "title": "Widely Available", "description": "Easy to find everywhere. Consistent availability."}
+    ]},
+    {"type": "features", "title": "C922 Advantages", "content": [
+      {"icon": "moon", "title": "Better Low Light", "description": "Improved sensor performance in dim conditions. Visible difference."},
+      {"icon": "zap", "title": "720p/60fps Option", "description": "Smoother motion for streaming at 720p. Good for fast movement."},
+      {"icon": "image", "title": "Background Replacement", "description": "Built-in green screen effect without actual green screen."}
+    ]},
+    {"type": "steps", "title": "Which Should You Choose?", "content": [
+      "Choose C920 if: Budget is priority",
+      "Choose C920 if: Good lighting in your space",
+      "Choose C920 if: Recording primarily (not streaming)",
+      "Choose C922 if: Low light is common",
+      "Choose C922 if: You stream live content",
+      "Choose C922 if: You want background replacement"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is the C922 worth $30 more?", "answer": "For streamers and low-light situations, yes. For well-lit recording, probably not. The core image quality is very similar."},
+    {"question": "Should I just get a better camera?", "answer": "If budget allows, dedicated cameras beat webcams. But for starting out or face cams, both Logitechs are solid choices."},
+    {"question": "Do the built-in mics work well?", "answer": "Acceptable for basic use. Dedicated microphones sound much better. Use the webcam mic as backup only."},
+    {"question": "Is the background replacement any good?", "answer": "Works okay with good lighting. Not as clean as actual green screen. Useful in a pinch but has visible edges."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "logitech-c920",
+  "secondaryTool": "logitech-c922"
+}

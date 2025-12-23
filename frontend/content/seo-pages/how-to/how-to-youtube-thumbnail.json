@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-thumbnail",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make YouTube Thumbnails 2025: Design Guide",
+    "description": "Create click-worthy YouTube thumbnails. Design principles, tools, and templates that boost CTR.",
+    "keywords": ["youtube thumbnail", "make youtube thumbnail", "thumbnail design", "create thumbnail", "youtube thumbnail tips"]
+  },
+  "hero": {
+    "badge": "Thumbnails",
+    "headline": "How to Make YouTube Thumbnails",
+    "subheadline": "Design thumbnails that get clicks. Principles and tools for high CTR.",
+    "primaryKeyword": "youtube thumbnail"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your thumbnail is your video's billboard. It competes against hundreds of others for viewer attention. A compelling thumbnail can double or triple your click-through rate. Here's how to create thumbnails that stand out and get clicks."},
+    {"type": "features", "title": "Thumbnail Tools", "content": [
+      {"icon": "layout", "title": "Canva", "description": "Easy templates, free tier. Most popular for YouTube creators."},
+      {"icon": "pen-tool", "title": "Photoshop", "description": "Professional control. Industry standard for serious creators."},
+      {"icon": "smartphone", "title": "Mobile Apps", "description": "Snapseed, PicsArt. Quick edits on the go."}
+    ]},
+    {"type": "steps", "title": "Thumbnail Design Process", "content": [
+      "Start with strong image or photo",
+      "Remove/change background if needed",
+      "Add 2-4 words of text maximum",
+      "Use bold, readable font",
+      "Increase contrast and saturation",
+      "Test at small size (mobile preview)",
+      "A/B test different versions"
+    ]},
+    {"type": "features", "title": "Design Principles", "content": [
+      {"icon": "eye", "title": "Single Focal Point", "description": "One main subject. Don't crowd the frame. Clarity wins."},
+      {"icon": "type", "title": "Minimal Text", "description": "3-4 words max. Complement title, don't repeat it."},
+      {"icon": "contrast", "title": "High Contrast", "description": "Bright colors, clear subjects. Must pop at small size."}
+    ]},
+    {"type": "benefits", "title": "What Makes Thumbnails Click", "content": [
+      "Faces showing emotion",
+      "Bright, contrasting colors",
+      "Clear subject at small size",
+      "Curiosity gap (want to know more)",
+      "Consistent brand style",
+      "Text that adds context",
+      "Professional quality appearance"
+    ]},
+    {"type": "checklist", "title": "Thumbnail Checklist", "content": [
+      "Readable at mobile size?",
+      "Clear single focal point?",
+      "Text 3-4 words or less?",
+      "Colors pop and contrast?",
+      "Different from title (complementary)?",
+      "Consistent with channel brand?",
+      "Tested A/B variations?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What size should thumbnails be?", "answer": "1280x720 pixels minimum, 16:9 aspect ratio. 1920x1080 even better. Under 2MB file size."},
+    {"question": "Should I always show my face?", "answer": "Not always, but faces with emotion typically get highest CTR. Test for your niche. Gaming and tutorial content may not need faces."},
+    {"question": "How important are thumbnails really?", "answer": "Extremely. Same video with better thumbnail can get 2-3x more clicks. It's your first impression. Worth investing time."},
+    {"question": "Can I change thumbnails after posting?", "answer": "Yes. Go to YouTube Studio, edit video details. Many creators update thumbnails to improve performance."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

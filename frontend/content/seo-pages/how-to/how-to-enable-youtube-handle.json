@@ -1,0 +1,61 @@
+{
+  "slug": "how-to-enable-youtube-handle",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get a YouTube Handle 2025: Setup Guide",
+    "description": "Set up your YouTube handle (@username). Requirements, choosing your handle, and customization tips.",
+    "keywords": ["youtube handle", "youtube username", "youtube @handle", "set youtube handle", "youtube channel handle"]
+  },
+  "hero": {
+    "badge": "YouTube Handle",
+    "headline": "How to Get Your YouTube Handle",
+    "subheadline": "Claim your @username on YouTube. Your unique identifier across the platform.",
+    "primaryKeyword": "youtube handle"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube handles are unique @usernames that identify your channel. They appear in comments, Shorts, and your channel URL. Choose carefully—they're harder to change than display names. Here's how to claim and customize your handle."},
+    {"type": "steps", "title": "How to Set Your Handle", "content": [
+      "Go to YouTube Studio",
+      "Click 'Customization' in left menu",
+      "Select 'Basic info' tab",
+      "Find 'Handle' section",
+      "Enter your desired handle",
+      "Check availability (green check = available)",
+      "Click 'Publish' to save"
+    ]},
+    {"type": "features", "title": "Handle Requirements", "content": [
+      {"icon": "check", "title": "Character Limits", "description": "3-30 characters. Letters, numbers, underscores, periods only."},
+      {"icon": "lock", "title": "Uniqueness", "description": "Must be unique across all of YouTube. First come, first served."},
+      {"icon": "clock", "title": "Change Limits", "description": "Can change twice per 14 days. Choose wisely."}
+    ]},
+    {"type": "benefits", "title": "Choosing Your Handle", "content": [
+      "Match your channel name if available",
+      "Keep it short and memorable",
+      "Avoid numbers unless part of brand",
+      "Check availability on other platforms",
+      "Consider future growth and pivots",
+      "Easy to type and share",
+      "Professional and appropriate"
+    ]},
+    {"type": "checklist", "title": "Handle Checklist", "content": [
+      "Matches your brand?",
+      "Easy to remember?",
+      "Short enough to share?",
+      "Available on other platforms?",
+      "No confusing characters?",
+      "Professional appearance?",
+      "Works for long-term growth?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What if my handle is taken?", "answer": "Try variations: add underscores, abbreviate, use 'TV' or 'Official' suffix. Some handles are reserved—check different options."},
+    {"question": "Can I change my handle later?", "answer": "Yes, but limited to twice per 14 days. Your old handle becomes available immediately. Think carefully before changing."},
+    {"question": "Is handle same as channel name?", "answer": "No. Channel name is your display name (can include spaces, emoji). Handle is your @username (limited characters). They can differ."},
+    {"question": "Do I need a handle?", "answer": "YouTube assigns one if you don't choose. But claiming yours early ensures you get what you want before it's taken."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

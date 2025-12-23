@@ -42,14 +42,28 @@ export interface UserProfile {
   channels_count: number;
 }
 
+export interface ChannelProfile {
+  niche: string;
+  language: string;
+  content_types: string[];
+  title_patterns: string[];
+  avg_title_length: number;
+  avg_description_length: number;
+  common_tags: string[];
+  analyzed_at: string;
+}
+
 export interface YouTubeChannel {
   id: string;
-  channel_id: string;
-  title: string;
+  user_id: string;
+  channel_name: string | null;
   thumbnail_url: string | null;
   subscriber_count: number;
-  video_count: number;
   is_active: boolean;
+  is_primary: boolean;
+  created_at: string | null;
+  last_sync_at: string | null;
+  channel_profile: ChannelProfile | null;
 }
 
 export interface UserSettings {
@@ -319,6 +333,10 @@ class ApiClient {
     return this.request("/api/user/channels");
   }
 
+  async selectPrimaryChannel(channelId: string): Promise<{ message: string; channel: YouTubeChannel }> {
+    return this.request(`/api/user/channels/${channelId}/select`, { method: "POST" });
+  }
+
   // Data Management (GDPR)
   async requestDataExport(): Promise<{ message: string; requested_at: string }> {
     return this.request("/api/user/export-data", { method: "POST" });
@@ -555,6 +573,10 @@ class ApiClient {
 
   async getAlertPriorities(): Promise<{ priorities: AlertPriorityInfo[] }> {
     return this.request("/api/alerts/priorities");
+  }
+
+  async cleanupDuplicateAlerts(): Promise<{ success: boolean; deleted_count: number; message: string }> {
+    return this.request("/api/alerts/cleanup", { method: "POST" });
   }
 }
 

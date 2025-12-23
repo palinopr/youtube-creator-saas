@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-playlists",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Playlists 2025: Organization & SEO Guide",
+    "description": "Create and optimize YouTube playlists. Organize content and boost watch time.",
+    "keywords": ["youtube playlists", "create playlist youtube", "playlist strategy youtube", "organize youtube videos", "playlist seo"]
+  },
+  "hero": {
+    "badge": "Playlists",
+    "headline": "How to Create YouTube Playlists",
+    "subheadline": "Organize content strategically. Boost watch time with smart playlists.",
+    "primaryKeyword": "youtube playlists"
+  },
+  "sections": [
+    {"type": "intro", "content": "Playlists do more than organize—they increase watch time through autoplay, improve SEO through additional ranking opportunities, and help viewers navigate your content. Strategic playlist creation can significantly impact channel growth. Here's how to use them effectively."},
+    {"type": "steps", "title": "Creating a Playlist", "content": [
+      "Go to YouTube Studio",
+      "Click 'Playlists' in left menu",
+      "Click 'New playlist'",
+      "Enter playlist title (SEO-optimized)",
+      "Set visibility (Public, Unlisted, Private)",
+      "Add description with keywords",
+      "Add videos to playlist",
+      "Arrange video order strategically"
+    ]},
+    {"type": "features", "title": "Playlist Types", "content": [
+      {"icon": "book-open", "title": "Series Playlist", "description": "Sequential content. Courses, tutorials, storylines."},
+      {"icon": "folder", "title": "Topic Playlist", "description": "Group by subject. All videos on specific topic."},
+      {"icon": "star", "title": "Best Of Playlist", "description": "Curated highlights. Best performing content."},
+      {"icon": "clock", "title": "New Viewer Playlist", "description": "Introduction to channel. Best starting point."}
+    ]},
+    {"type": "features", "title": "Playlist SEO", "content": [
+      {"icon": "search", "title": "Title Optimization", "description": "Include keywords. Clear, searchable titles."},
+      {"icon": "type", "title": "Description Keywords", "description": "Write full description. Include relevant keywords."},
+      {"icon": "hash", "title": "Playlist as Rank Target", "description": "Playlists can rank in search independently."},
+      {"icon": "link", "title": "Share Playlist Links", "description": "Link to playlists, not just videos. Increases session time."}
+    ]},
+    {"type": "benefits", "title": "Playlist Strategy Tips", "content": [
+      "Put strongest video first (hook viewers)",
+      "Create playlists around search keywords",
+      "Add new videos to relevant playlists",
+      "Use playlists in end screens",
+      "Feature playlists on channel page",
+      "Link playlists in video descriptions",
+      "Create playlist for every content series"
+    ]},
+    {"type": "checklist", "title": "Playlist Checklist", "content": [
+      "Title includes target keyword?",
+      "Description optimized?",
+      "Videos in logical order?",
+      "Strongest video first?",
+      "All relevant videos included?",
+      "Featured on channel page?",
+      "Promoted in video descriptions?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do playlists help with YouTube algorithm?", "answer": "Yes—playlists increase session watch time through autoplay. More watch time signals quality content. Playlists also rank in search independently."},
+    {"question": "How many playlists should I have?", "answer": "Create one for each distinct topic or series. Quality over quantity. Empty or sparse playlists look unprofessional. 5-15 well-organized playlists typical."},
+    {"question": "Should I include other creators' videos?", "answer": "Can help viewers and build relationships, but prioritize your content for watch time. Mixed playlists can be useful for curated topic collections."},
+    {"question": "Best video order for playlists?", "answer": "For series: chronological. For topics: best video first to hook viewers, then by relevance or recency. Test different orders."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

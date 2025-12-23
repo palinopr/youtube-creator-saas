@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-content-calendar",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create a YouTube Content Calendar 2025: Planning Guide",
+    "description": "Build a YouTube content calendar. Plan, batch, and maintain consistency.",
+    "keywords": ["youtube content calendar", "youtube upload schedule", "youtube planning", "content calendar youtube", "youtube posting schedule"]
+  },
+  "hero": {
+    "badge": "Content Calendar",
+    "headline": "How to Create a YouTube Content Calendar",
+    "subheadline": "Plan ahead. Never scramble for content ideas.",
+    "primaryKeyword": "youtube content calendar"
+  },
+  "sections": [
+    {"type": "intro", "content": "A content calendar transforms chaotic uploading into strategic content creation. Instead of wondering what to post, you have a roadmap. Planning ahead enables batching, maintains consistency, and reduces stress. Here's how to build and maintain an effective YouTube content calendar."},
+    {"type": "features", "title": "Calendar Benefits", "content": [
+      {"icon": "check", "title": "Consistency", "description": "Never miss upload days."},
+      {"icon": "layers", "title": "Batching", "description": "Film multiple videos at once."},
+      {"icon": "calendar", "title": "Seasonal Planning", "description": "Prepare for holidays and events."},
+      {"icon": "brain", "title": "Reduced Stress", "description": "Know what's coming."}
+    ]},
+    {"type": "steps", "title": "Building Your Calendar", "content": [
+      "Decide upload frequency (weekly, 2x week, etc.)",
+      "Choose calendar tool (Notion, Google Calendar, Trello)",
+      "Set upload days and times",
+      "Brainstorm 50+ video ideas",
+      "Assign ideas to dates (4-8 weeks ahead)",
+      "Mark seasonal/timely content",
+      "Include production milestones",
+      "Review and adjust weekly"
+    ]},
+    {"type": "features", "title": "Planning Timeframes", "content": [
+      {"icon": "eye", "title": "Monthly Overview", "description": "See the big picture."},
+      {"icon": "list", "title": "Weekly Details", "description": "What's being filmed/edited."},
+      {"icon": "calendar", "title": "Quarterly Themes", "description": "Major series and campaigns."},
+      {"icon": "clock", "title": "Daily Tasks", "description": "Specific action items."}
+    ]},
+    {"type": "features", "title": "Calendar Components", "content": [
+      {"icon": "video", "title": "Video Title/Topic", "description": "What's the content?"},
+      {"icon": "settings", "title": "Status", "description": "Idea, filming, editing, scheduled."},
+      {"icon": "calendar", "title": "Publish Date", "description": "When it goes live."},
+      {"icon": "user", "title": "Assigned To", "description": "Who's responsible (if team)."}
+    ]},
+    {"type": "benefits", "title": "Calendar Best Practices", "content": [
+      "Plan 4-8 weeks ahead minimum",
+      "Build in buffer for flexibility",
+      "Mark seasonal content early",
+      "Review calendar weekly",
+      "Adjust for what's working",
+      "Don't overcommit—sustainable pace",
+      "Leave room for trending topics"
+    ]},
+    {"type": "checklist", "title": "Calendar Checklist", "content": [
+      "Upload frequency decided?",
+      "Calendar tool chosen?",
+      "4+ weeks planned ahead?",
+      "Seasonal content marked?",
+      "Status tracking in place?",
+      "Weekly review scheduled?",
+      "Flexibility built in?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best tool for content calendar?", "answer": "Notion for flexibility and customization. Trello for kanban-style workflow. Google Calendar for simplicity. Airtable for database features. Use what you'll actually maintain—best tool is one you use."},
+    {"question": "How far ahead to plan?", "answer": "Minimum 4 weeks for consistent uploading. 8-12 weeks ideal for batching and stress reduction. Quarterly for major campaigns. Some successful creators plan 3-6 months ahead for major content."},
+    {"question": "What if I want to post trending content?", "answer": "Build flexibility into calendar—don't fill every slot. 'Trending topic' placeholder can be recurring. Some creators have 80% planned, 20% reactive. Balance consistency with relevance."},
+    {"question": "How to handle falling behind?", "answer": "Don't stress—adjust the calendar, not yourself. Move things rather than rushing. Reduce frequency temporarily if needed. Calendar serves you, not the other way around. Sustainable pace wins long-term."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "how-to-make-youtube-thumbnails",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make YouTube Thumbnails That Get Clicks in 2025",
+    "description": "Learn how to create eye-catching YouTube thumbnails that boost CTR. Design tips, tools, and templates for thumbnails that convert.",
+    "keywords": ["youtube thumbnail design", "how to make thumbnails", "youtube thumbnail tips", "thumbnail maker", "create youtube thumbnails"]
+  },
+  "hero": {
+    "badge": "Thumbnail Design",
+    "headline": "How to Make YouTube Thumbnails That Get Clicks",
+    "subheadline": "Design thumbnails that stop the scroll and drive clicks, even if you're not a graphic designer.",
+    "primaryKeyword": "make youtube thumbnails"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Your thumbnail is often the difference between a click and a scroll-past. It's your video's first impression, billboard, and sales pitch all in one. This guide teaches you how to create thumbnails that capture attention and drive clicks, whether you're a design beginner or looking to level up."
+    },
+    {
+      "type": "features",
+      "title": "Thumbnail Design Fundamentals",
+      "content": [
+        {"icon": "target", "title": "Visual Hierarchy", "description": "Guide the viewer's eye with a clear focal point. One main element should dominate - don't clutter with too many elements."},
+        {"icon": "sparkles", "title": "Emotional Faces", "description": "Faces showing strong emotion dramatically increase CTR. Surprise, excitement, and curiosity are the most effective expressions."},
+        {"icon": "zap", "title": "Contrast & Color", "description": "Thumbnails compete against dozens of others. High contrast and bold colors help your video stand out in the feed."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Thumbnail Creation Process",
+      "content": [
+        "Capture the thumbnail shot during filming (don't rely on video frames)",
+        "Choose your design tool: Canva (easy), Photoshop (advanced), or Figma (flexible)",
+        "Start with a 1280x720 canvas (16:9 aspect ratio)",
+        "Place your focal point (face or main visual) prominently",
+        "Add 3 words or fewer of text if needed",
+        "Apply contrast and color adjustments to make it pop",
+        "Test at mobile size - most views come from small thumbnails"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Thumbnail Checklist",
+      "content": [
+        "Clear at mobile size (check at 100x56 pixels)",
+        "Strong focal point with visual hierarchy",
+        "Text is large, readable, and adds value",
+        "Colors contrast with YouTube's white/dark backgrounds",
+        "Emotion is visible if using faces",
+        "Doesn't duplicate title information",
+        "Consistent with channel brand style"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Quick Thumbnail Improvements",
+      "content": [
+        "Add a border or outline to make faces pop",
+        "Use complementary colors for text and background",
+        "Include motion blur or action to suggest movement",
+        "Apply a slight vignette to focus attention",
+        "Use arrows or visual cues to guide the eye"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "What size should YouTube thumbnails be?", "answer": "1280x720 pixels (16:9 aspect ratio) is the recommended size. This gives you full resolution while maintaining the correct proportions. Minimum is 640x360."},
+    {"question": "Should I use text on thumbnails?", "answer": "Only if it adds value beyond the title. 3 words or fewer works best. Text should be large enough to read on mobile. Don't duplicate your video title."},
+    {"question": "Do I need Photoshop for good thumbnails?", "answer": "No, Canva's free version is enough for professional thumbnails. The design principles matter more than the software. Many successful YouTubers use Canva exclusively."},
+    {"question": "How important is consistency in thumbnails?", "answer": "Very important for brand recognition. Use consistent colors, fonts, and style so viewers recognize your videos instantly. This builds trust and increases CTR over time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

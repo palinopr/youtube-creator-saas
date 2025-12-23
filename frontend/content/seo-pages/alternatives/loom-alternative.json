@@ -1,0 +1,61 @@
+{
+  "slug": "loom-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Loom Alternatives 2025: Screen Recording Tools",
+    "description": "Looking for a Loom alternative? Compare screen recording tools for tutorials and async communication.",
+    "keywords": ["loom alternative", "screen recording", "loom competitor", "video recording tool", "screen capture software"]
+  },
+  "hero": {
+    "badge": "Screen Recording",
+    "headline": "Best Loom Alternatives",
+    "subheadline": "Screen recording and async video beyond Loom. More features, different pricing.",
+    "primaryKeyword": "loom alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Loom popularized quick screen recordings for async communication. But its pricing has increased, and alternatives have matured. Whether you need more editing, longer recordings, or just better value, here are the best Loom alternatives."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "monitor", "title": "ScreenPal (Screencast-O-Matic)", "description": "Established player, good free tier. More editing than Loom."},
+      {"icon": "video", "title": "Tella.tv", "description": "Beautiful recordings, modern interface. Creator-focused."},
+      {"icon": "layout", "title": "OBS Studio", "description": "Free, powerful. More complex but unlimited capability."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Loom", "toolA": "$15/mo", "toolB": "Simple, fast", "tubeGrow": "N/A"},
+      {"feature": "ScreenPal", "toolA": "Free-$6/mo", "toolB": "More editing", "tubeGrow": "N/A"},
+      {"feature": "Tella.tv", "toolA": "$19/mo", "toolB": "Beautiful output", "tubeGrow": "N/A"},
+      {"feature": "Vimeo Record", "toolA": "$12/mo", "toolB": "Vimeo integration", "tubeGrow": "N/A"},
+      {"feature": "CloudApp (Zight)", "toolA": "$10/mo", "toolB": "Fast sharing", "tubeGrow": "N/A"},
+      {"feature": "OBS Studio", "toolA": "Free", "toolB": "Unlimited power", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Reasons to Switch", "content": [
+      "Loom pricing too high",
+      "Need longer recordings",
+      "Want more editing options",
+      "Different hosting needs",
+      "Privacy/self-hosting preference",
+      "Better free tier",
+      "Specific features missing"
+    ]},
+    {"type": "steps", "title": "Choosing Your Recorder", "content": [
+      "Identify your primary use case",
+      "Check video length limits",
+      "Evaluate editing needs",
+      "Consider hosting/sharing workflow",
+      "Test free versions",
+      "Check team features if needed",
+      "Compare long-term costs"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best free Loom alternative?", "answer": "OBS Studio for power users. ScreenPal free tier for simpler needs. Built-in tools (Windows Xbox Bar, Mac Screenshot) work for basics."},
+    {"question": "Which has best editing?", "answer": "ScreenPal has solid editing built in. Tella.tv produces beautiful output. OBS is raw recording—need separate editor."},
+    {"question": "Best for teams?", "answer": "Loom still strong for teams. Vimeo Record integrates with Vimeo hosting. CloudApp (Zight) good for quick team sharing."},
+    {"question": "Can I self-host recordings?", "answer": "OBS recordings are local files—host anywhere. Most cloud services require their hosting. Some enterprise plans offer custom hosting."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "loom"
+}

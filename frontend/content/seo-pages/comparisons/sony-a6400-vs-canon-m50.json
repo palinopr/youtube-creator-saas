@@ -1,0 +1,65 @@
+{
+  "slug": "sony-a6400-vs-canon-m50",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Sony A6400 vs Canon M50 2025: Best Entry-Level YouTube Camera",
+    "description": "Compare Sony A6400 and Canon M50 for YouTube. Autofocus, video quality, and which camera is better for creators.",
+    "keywords": ["sony a6400 vs canon m50", "best youtube camera", "a6400 vs m50", "entry level youtube camera", "vlogging camera comparison"]
+  },
+  "hero": {
+    "badge": "YouTube Cameras",
+    "headline": "Sony A6400 vs Canon M50: Entry-Level Camera Showdown",
+    "subheadline": "Two popular YouTube cameras with different strengths. Find your perfect entry-level match.",
+    "primaryKeyword": "sony a6400 vs canon m50"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Sony A6400 and Canon M50 are two of the most recommended entry-level cameras for YouTube creators. Both offer excellent autofocus, flip screens, and great video quality at accessible prices. This comparison helps you choose between Sony's autofocus champion and Canon's user-friendly favorite."},
+    {"type": "comparison", "title": "Camera Comparison", "content": [
+      {"feature": "Price (Body)", "toolA": "$900", "toolB": "$650", "tubeGrow": "N/A"},
+      {"feature": "Sensor", "toolA": "APS-C 24.2MP", "toolB": "APS-C 24.1MP", "tubeGrow": "N/A"},
+      {"feature": "4K Video", "toolA": "4K30 no crop", "toolB": "4K24 with crop", "tubeGrow": "N/A"},
+      {"feature": "1080p", "toolA": "120fps", "toolB": "60fps", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "Real-time Eye AF", "toolB": "Dual Pixel AF", "tubeGrow": "N/A"},
+      {"feature": "Flip Screen", "toolA": "180° tilt", "toolB": "Fully articulating", "tubeGrow": "N/A"},
+      {"feature": "Battery Life", "toolA": "410 shots", "toolB": "370 shots", "tubeGrow": "N/A"},
+      {"feature": "Mic Input", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Sony A6400 Advantages", "content": [
+      {"icon": "target", "title": "Superior Autofocus", "description": "Real-time Eye AF is industry-leading. Never worry about focus during vlogging."},
+      {"icon": "video", "title": "Better 4K", "description": "Full sensor readout 4K with no crop. 120fps slow motion in 1080p."},
+      {"icon": "camera", "title": "Lens Ecosystem", "description": "Sony E-mount has excellent native lenses and third-party options."}
+    ]},
+    {"type": "features", "title": "Canon M50 Advantages", "content": [
+      {"icon": "dollar", "title": "Lower Price", "description": "Significantly cheaper body leaves budget for lenses and accessories."},
+      {"icon": "rotate", "title": "Fully Articulating Screen", "description": "Better for awkward angles compared to Sony's tilt-only screen."},
+      {"icon": "smile", "title": "User-Friendly", "description": "Canon's menus and interface are more intuitive for beginners."}
+    ]},
+    {"type": "benefits", "title": "Choose Sony A6400 If", "content": [
+      "Autofocus reliability is crucial",
+      "You need uncropped 4K video",
+      "You want 120fps slow motion",
+      "Long-term lens investment matters",
+      "Budget can stretch to $900"
+    ]},
+    {"type": "benefits", "title": "Choose Canon M50 If", "content": [
+      "Budget is limited",
+      "You prefer easier menus",
+      "Fully articulating screen matters",
+      "You shoot primarily in 1080p",
+      "You value Canon's color science"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better autofocus?", "answer": "Sony A6400 wins clearly. Real-time Eye AF is significantly more reliable than Canon's Dual Pixel AF, especially during movement."},
+    {"question": "Is the Canon M50 4K usable?", "answer": "Yes, but with limitations. 1.6x crop and no Dual Pixel AF in 4K. For 4K, Sony is better. For 1080p, Canon is excellent."},
+    {"question": "What about Canon's EF-M lens situation?", "answer": "Canon has discontinued the EF-M mount. Existing lenses work fine, but no new development. Consider this for long-term investment."},
+    {"question": "Which is better for streaming?", "answer": "Both work as webcams with clean HDMI output. Sony has a webcam utility. Canon has EOS Webcam software. Both capable."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "sony-a6400",
+  "secondaryTool": "canon-m50"
+}

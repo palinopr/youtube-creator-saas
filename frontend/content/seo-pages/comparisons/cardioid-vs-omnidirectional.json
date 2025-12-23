@@ -1,0 +1,67 @@
+{
+  "slug": "cardioid-vs-omnidirectional",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Cardioid vs Omnidirectional Microphone 2025: Best for YouTube",
+    "description": "Compare cardioid and omnidirectional microphones. Pickup patterns explained for YouTubers.",
+    "keywords": ["cardioid vs omnidirectional", "microphone pickup pattern", "cardioid mic youtube", "omnidirectional mic", "mic pattern comparison"]
+  },
+  "hero": {
+    "badge": "Pickup Patterns",
+    "headline": "Cardioid vs Omnidirectional Microphone",
+    "subheadline": "Pickup pattern determines what your mic hears. Choose based on your recording environment.",
+    "primaryKeyword": "cardioid vs omnidirectional"
+  },
+  "sections": [
+    {"type": "intro", "content": "Microphone pickup patterns determine which directions the mic captures sound from. Cardioid mics focus on what's in front. Omnidirectional mics pick up everything equally. The right choice depends on your recording situation."},
+    {"type": "comparison", "title": "Pickup Pattern Comparison", "content": [
+      {"feature": "Direction", "toolA": "Cardioid: Front-focused", "toolB": "Omni: All directions", "tubeGrow": "N/A"},
+      {"feature": "Room Rejection", "toolA": "Cardioid: Good", "toolB": "Omni: None", "tubeGrow": "N/A"},
+      {"feature": "Proximity Effect", "toolA": "Cardioid: Yes (bass boost)", "toolB": "Omni: Minimal", "tubeGrow": "N/A"},
+      {"feature": "Off-Axis Sound", "toolA": "Cardioid: Rejected", "toolB": "Omni: Captured", "tubeGrow": "N/A"},
+      {"feature": "Multiple Speakers", "toolA": "Cardioid: Need positioning", "toolB": "Omni: Picks up all", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "Cardioid: Solo, noisy rooms", "toolB": "Omni: Groups, treated rooms", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Cardioid Advantages", "content": [
+      {"icon": "target", "title": "Noise Rejection", "description": "Ignores sounds from sides and rear. Focuses on speaker."},
+      {"icon": "mic", "title": "Proximity Warmth", "description": "Bass boost when close. Rich, intimate vocal sound."},
+      {"icon": "shield", "title": "Room Isolation", "description": "Less room sound in recording. Forgiving in untreated spaces."}
+    ]},
+    {"type": "features", "title": "Omnidirectional Advantages", "content": [
+      {"icon": "circle", "title": "Natural Sound", "description": "Picks up room ambience naturally. Open, spacious feel."},
+      {"icon": "users", "title": "Multi-Person Recording", "description": "One mic captures group. Round-table discussions."},
+      {"icon": "volume-2", "title": "Consistent Sound", "description": "Less positioning sensitivity. Move without volume changes."}
+    ]},
+    {"type": "benefits", "title": "Choose Cardioid If", "content": [
+      "Recording solo",
+      "Untreated room",
+      "Background noise present",
+      "Want focused voice capture",
+      "Most YouTube recording",
+      "Podcasting solo",
+      "Noisy environment"
+    ]},
+    {"type": "benefits", "title": "Choose Omnidirectional If", "content": [
+      "Recording groups",
+      "Treated/quiet room",
+      "Want natural room sound",
+      "Interview situations",
+      "Ambience recording",
+      "Movement during recording",
+      "Musical performances"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which is better for YouTube?", "answer": "Cardioid for most YouTubers. Better noise rejection, focused on single speaker. Omni only for specific multi-person situations."},
+    {"question": "What about lavalier mics?", "answer": "Lavs come in both patterns. Omni lavs are common (more forgiving), but cardioid lavs exist for noisy environments."},
+    {"question": "Can I switch patterns?", "answer": "Some mics have switchable patterns (multi-pattern). Blue Yeti, high-end condensers offer multiple pickup options."},
+    {"question": "Does pattern affect sound quality?", "answer": "Not quality—character. Cardioid has proximity effect (bass boost close up). Omni sounds more natural and open."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "cardioid",
+  "secondaryTool": "omnidirectional"
+}

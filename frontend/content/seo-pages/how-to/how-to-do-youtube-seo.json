@@ -1,0 +1,63 @@
+{
+  "slug": "how-to-do-youtube-seo",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Do YouTube SEO 2025: Complete Optimization Guide",
+    "description": "Master YouTube SEO to rank higher in search. Titles, descriptions, tags, and optimization strategies that work.",
+    "keywords": ["youtube seo", "how to do youtube seo", "youtube optimization", "youtube search ranking", "youtube seo tips"]
+  },
+  "hero": {
+    "badge": "YouTube SEO",
+    "headline": "How to Do YouTube SEO: Rank Higher in Search",
+    "subheadline": "Optimize your videos to be discovered through YouTube and Google search results.",
+    "primaryKeyword": "youtube seo"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube is the second largest search engine. Videos that rank well get consistent views for months or years. SEO isn't about gaming the system—it's about helping YouTube understand your content and match it with the right audience. This guide covers everything you need to rank."},
+    {"type": "features", "title": "SEO Ranking Factors", "content": [
+      {"icon": "search", "title": "Relevance", "description": "Does your video match what the user searched for? Titles, descriptions, and actual content matter."},
+      {"icon": "clock", "title": "Watch Time", "description": "How long do people watch? Videos that keep viewers watching rank higher."},
+      {"icon": "thumbs-up", "title": "Engagement", "description": "Likes, comments, and shares signal quality content worth recommending."}
+    ]},
+    {"type": "steps", "title": "SEO Optimization Checklist", "content": [
+      "Research keywords before creating content",
+      "Use primary keyword in title (front-load if possible)",
+      "Write detailed description (200+ words)",
+      "Include keywords naturally in description",
+      "Add relevant tags (primary first)",
+      "Create custom thumbnail with text",
+      "Add timestamps/chapters to description",
+      "Say keywords in video (YouTube transcribes)",
+      "Encourage engagement at end of video"
+    ]},
+    {"type": "benefits", "title": "Title Optimization Tips", "content": [
+      "Include primary keyword naturally",
+      "Front-load important words",
+      "Keep under 60 characters",
+      "Create curiosity or promise value",
+      "Use numbers when relevant",
+      "Match search intent",
+      "A/B test variations"
+    ]},
+    {"type": "benefits", "title": "Description Optimization Tips", "content": [
+      "First 2-3 sentences are critical (visible before expand)",
+      "Include keywords in first paragraph",
+      "Write 200-500 words minimum",
+      "Add timestamps with keywords",
+      "Include relevant links",
+      "Use call-to-action",
+      "Don't keyword stuff"
+    ]}
+  ],
+  "faq": [
+    {"question": "How important are tags for YouTube SEO?", "answer": "Less important than before. YouTube says tags have 'minimal' impact. Still worth using—put your primary keyword first, add 5-10 relevant variations."},
+    {"question": "Does speaking keywords help SEO?", "answer": "Yes. YouTube transcribes audio and uses it for understanding content. Naturally mentioning your topic helps YouTube categorize your video."},
+    {"question": "How long until SEO kicks in?", "answer": "Videos can rank immediately or take months. Initial performance often improves as YouTube learns more about your video's audience fit."},
+    {"question": "Should I optimize old videos?", "answer": "Yes. Updating titles, thumbnails, and descriptions can revive underperforming videos. Monitor for improvements after changes."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

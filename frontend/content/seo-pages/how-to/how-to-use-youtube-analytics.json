@@ -1,0 +1,62 @@
+{
+  "slug": "how-to-use-youtube-analytics",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Analytics 2025: Complete Data Guide",
+    "description": "Master YouTube Analytics to grow your channel. Understand metrics, find insights, and make data-driven decisions.",
+    "keywords": ["youtube analytics", "how to use youtube analytics", "youtube data", "youtube metrics", "youtube analytics guide"]
+  },
+  "hero": {
+    "badge": "Analytics Guide",
+    "headline": "How to Use YouTube Analytics to Grow Your Channel",
+    "subheadline": "Turn data into decisions with a complete understanding of YouTube Analytics.",
+    "primaryKeyword": "youtube analytics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics tells the story of your channel's performance. Understanding these metrics helps you make better content decisions, double down on what works, and fix what doesn't. This guide explains every important metric and how to use them for growth."},
+    {"type": "features", "title": "Key Metric Categories", "content": [
+      {"icon": "eye", "title": "Reach", "description": "Impressions, CTR, and traffic sources. How people discover your content."},
+      {"icon": "clock", "title": "Engagement", "description": "Watch time, average view duration, and retention. How people consume your content."},
+      {"icon": "users", "title": "Audience", "description": "Who watches, when they watch, and subscriber behavior. Who your viewers are."}
+    ]},
+    {"type": "steps", "title": "Essential Metrics to Track", "content": [
+      "Watch time: Total minutes watched (most important)",
+      "Average view duration: How long people watch",
+      "Click-through rate: Thumbnail/title effectiveness",
+      "Impressions: How often you appear in feeds",
+      "Retention graphs: Where viewers drop off",
+      "Traffic sources: How viewers find you",
+      "Subscriber growth: Net subscriber changes",
+      "Revenue (if monetized): Earnings breakdown"
+    ]},
+    {"type": "benefits", "title": "Actionable Insights to Find", "content": [
+      "Which videos bring new subscribers",
+      "What content your audience watches longest",
+      "When your audience is online",
+      "Which topics perform best",
+      "What thumbnails/titles underperform",
+      "Where your traffic comes from",
+      "How new vs returning viewers behave"
+    ]},
+    {"type": "checklist", "title": "Weekly Analytics Review", "content": [
+      "Check recent video performance vs average",
+      "Review retention graphs for new uploads",
+      "Monitor subscriber trend (growth or decline)",
+      "Identify top-performing content this week",
+      "Note traffic source changes",
+      "Compare CTR across recent videos",
+      "Check real-time for current video performance"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's more important: views or watch time?", "answer": "Watch time. YouTube prioritizes videos that keep people watching. High view count with low watch time signals poor content. Aim for both, prioritize watch time."},
+    {"question": "How often should I check analytics?", "answer": "Weekly for most creators. Daily for new uploads. Don't obsess over hourly fluctuations. Look for patterns over time, not single data points."},
+    {"question": "What's a good click-through rate?", "answer": "4-10% is typical. Higher is better but varies by content type and traffic source. Compare your CTR to your own average, not others."},
+    {"question": "Why do my impressions fluctuate?", "answer": "YouTube tests content with audiences. Low early engagement means fewer impressions. Strong performance expands reach. It's normal and algorithmic."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

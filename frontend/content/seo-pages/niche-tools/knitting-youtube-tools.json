@@ -1,0 +1,63 @@
+{
+  "slug": "knitting-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Knitting YouTube Tools 2025: Craft Channel Equipment Guide",
+    "description": "Top tools for knitting YouTube channels. Filming close-up stitch work effectively.",
+    "keywords": ["knitting youtube tools", "knitting channel equipment", "craft youtube", "yarn youtube", "crochet youtube tools"]
+  },
+  "hero": {
+    "badge": "Knitting Tools",
+    "headline": "Best Knitting YouTube Tools 2025",
+    "subheadline": "Share your fiber arts beautifully. Tools for knitting and crochet creators.",
+    "primaryKeyword": "knitting youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Knitting content thrives on YouTube—tutorials, pattern reviews, podcast-style crafting vlogs, and satisfying stitch-work clips. Capturing the detail of yarn work requires good lighting and camera positioning. Here's what successful fiber arts YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "DSLR/Mirrorless", "description": "Canon M50, Sony A6400. Good for talking head and overhead."},
+      {"icon": "smartphone", "title": "Phone for Overhead", "description": "iPhone on arm mount. Quick detail shots."},
+      {"icon": "maximize", "title": "Macro Capability", "description": "Close-up stitch detail. Extension tubes or macro lens."}
+    ]},
+    {"type": "features", "title": "Overhead Filming", "content": [
+      {"icon": "move", "title": "Articulating Arm", "description": "Elgato Multi Mount, camera arm. Hands-free overhead view."},
+      {"icon": "monitor", "title": "External Monitor", "description": "See framing while working. Flip screen alternative."},
+      {"icon": "sun", "title": "Even Lighting", "description": "No shadows on work. Ring light or dual LED panels."}
+    ]},
+    {"type": "features", "title": "Audio Setup", "content": [
+      {"icon": "mic", "title": "Lavalier Mic", "description": "Hands-free narration while knitting."},
+      {"icon": "headphones", "title": "Room Mic Option", "description": "Shotgun for ambient talk. Captures needle sounds."},
+      {"icon": "music", "title": "Background Audio", "description": "Calming music for relaxing craft vibes."}
+    ]},
+    {"type": "benefits", "title": "Knitting Content Tips", "content": [
+      "Overhead angle shows stitch work clearly",
+      "Good lighting reveals yarn texture",
+      "Slow demonstrations for tutorials",
+      "Podcast format popular for community",
+      "Show finished objects beautifully",
+      "Pattern reviews valuable content",
+      "Knit-along series build engagement"
+    ]},
+    {"type": "checklist", "title": "Filming Checklist", "content": [
+      "Overhead camera positioned?",
+      "Lighting even on work?",
+      "Hands visible and clear?",
+      "Audio capturing voice?",
+      "Pattern/notes visible if needed?",
+      "Yarn colors accurate?",
+      "Background uncluttered?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera angle for tutorials?", "answer": "Overhead looking down at work is standard for stitch tutorials. Add front-facing for personality. Two angles ideal—overhead for hands, face for talking."},
+    {"question": "How to show stitch detail clearly?", "answer": "Good lighting is key—eliminate shadows. Macro lens for extreme close-up. Light colored yarn shows better on camera. Slow your pace for clarity."},
+    {"question": "Should I talk while knitting?", "answer": "Popular styles include: narrated tutorials, podcast-style chatting while working, or voiceover added later. Find what feels natural for you."},
+    {"question": "Best lighting for yarn colors?", "answer": "Daylight-balanced LED panels. Avoid warm light that shifts colors. Film in consistent lighting. Show yarn in natural light briefly for accuracy."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "knitting"
+}

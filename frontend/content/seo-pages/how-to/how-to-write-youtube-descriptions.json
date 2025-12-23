@@ -1,0 +1,79 @@
+{
+  "slug": "how-to-write-youtube-descriptions",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Descriptions That Rank in 2025",
+    "description": "Master YouTube video descriptions for SEO and engagement. Templates, best practices, and tips for descriptions that drive clicks.",
+    "keywords": ["youtube description", "how to write youtube description", "video description seo", "youtube description template", "youtube description tips"]
+  },
+  "hero": {
+    "badge": "Description Writing",
+    "headline": "How to Write YouTube Descriptions That Rank",
+    "subheadline": "Turn your description box into an SEO powerhouse with proven templates and strategies.",
+    "primaryKeyword": "youtube description"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Your YouTube description does more than describe your video. It's prime real estate for SEO, driving search rankings and giving viewers context before they click. Most creators waste this space with generic text. This guide shows you how to write descriptions that rank and convert."
+    },
+    {
+      "type": "features",
+      "title": "Description Optimization Basics",
+      "content": [
+        {"icon": "search", "title": "First 150 Characters", "description": "This is what shows in search results. Front-load your keyword and make it compelling - it's your elevator pitch."},
+        {"icon": "chart", "title": "Keyword Integration", "description": "Natural keyword usage throughout helps YouTube understand your content. Don't stuff - write for humans first."},
+        {"icon": "zap", "title": "Links & CTAs", "description": "The description is your only clickable real estate. Use it to drive subscribers, website visits, and affiliate sales."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Description Structure Template",
+      "content": [
+        "Line 1-2: Compelling hook with primary keyword",
+        "Lines 3-5: Expanded summary with secondary keywords",
+        "Timestamp chapters (if applicable)",
+        "Links to mentioned resources",
+        "Social media and website links",
+        "Relevant hashtags (3 maximum)",
+        "Standard channel outro/about section"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Description Best Practices",
+      "content": [
+        "Write 200+ words for SEO value",
+        "Include your primary keyword in the first sentence",
+        "Add timestamps for longer videos (improves watch time)",
+        "Link to 2-3 related videos for internal linking",
+        "Include a clear call-to-action to subscribe"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Description Checklist",
+      "content": [
+        "Primary keyword in first line",
+        "Compelling hook in first 150 characters",
+        "200+ words of actual content",
+        "Timestamp chapters added",
+        "Subscribe CTA included",
+        "Relevant links added",
+        "3 hashtags maximum",
+        "Social links included"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "How long should YouTube descriptions be?", "answer": "Aim for 200-300 words minimum. Use all available space for SEO benefit, but make it readable. Quality content beats keyword-stuffed fluff."},
+    {"question": "Do YouTube descriptions affect ranking?", "answer": "Yes. YouTube scans descriptions for keywords and context. Well-optimized descriptions improve search ranking and help YouTube understand what your video covers."},
+    {"question": "Should I use hashtags in descriptions?", "answer": "Use 3-5 relevant hashtags maximum. More than that looks spammy and doesn't help. Put them at the end of your description."},
+    {"question": "Can I update descriptions on old videos?", "answer": "Absolutely. Updating descriptions with better optimization can improve search ranking for existing videos. It's a great low-effort way to revive old content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

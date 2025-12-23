@@ -1,0 +1,63 @@
+{
+  "slug": "documentary-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Documentary YouTube Tools 2025: Doc Filmmaker Equipment Guide",
+    "description": "Top tools for documentary YouTube channels. Cinematic equipment for doc creators.",
+    "keywords": ["documentary youtube tools", "doc filmmaking youtube", "documentary channel equipment", "youtube documentary", "documentary creator tools"]
+  },
+  "hero": {
+    "badge": "Documentary Tools",
+    "headline": "Best Documentary YouTube Tools 2025",
+    "subheadline": "Tell important stories cinematically. Equipment for doc creators.",
+    "primaryKeyword": "documentary youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Documentary filmmaking on YouTube ranges from investigative journalism to personal essays. The format demands professional audio, B-roll flexibility, and often remote or challenging shooting conditions. Here's what documentary creators need."},
+    {"type": "features", "title": "Camera Systems", "content": [
+      {"icon": "camera", "title": "Sony A7 Series", "description": "Full-frame, great low light. Documentary workhorse."},
+      {"icon": "video", "title": "Blackmagic Pocket 6K", "description": "Cinema-quality color. More post flexibility."},
+      {"icon": "smartphone", "title": "iPhone 15 Pro", "description": "Surprisingly capable. Log profile available. Ultimate portability."}
+    ]},
+    {"type": "features", "title": "Audio Equipment", "content": [
+      {"icon": "mic", "title": "Shotgun Microphone", "description": "Rode NTG series, Sennheiser. Essential for interviews."},
+      {"icon": "radio", "title": "Wireless Lavs", "description": "Rode Wireless Go, Deity. Backup audio always."},
+      {"icon": "headphones", "title": "Field Recorder", "description": "Zoom F6 or similar. Professional audio capture."}
+    ]},
+    {"type": "features", "title": "Field Production", "content": [
+      {"icon": "sun", "title": "Portable Lighting", "description": "LED panels, Aputure. Control light in any location."},
+      {"icon": "move", "title": "Travel Tripod", "description": "Sturdy but portable. Peak Design, Manfrotto."},
+      {"icon": "battery", "title": "Power Solutions", "description": "Extra batteries, portable chargers. Field requires redundancy."}
+    ]},
+    {"type": "benefits", "title": "Documentary Best Practices", "content": [
+      "Audio is half the documentary",
+      "B-roll tells the visual story",
+      "Interviews need proper lighting",
+      "Always record backup audio",
+      "Portable gear for field work",
+      "Plan for long shooting days",
+      "Respect subjects and stories"
+    ]},
+    {"type": "checklist", "title": "Documentary Shoot Checklist", "content": [
+      "Cameras charged and ready?",
+      "Audio equipment tested?",
+      "Backup audio recording?",
+      "Portable lights packed?",
+      "Extra batteries/storage?",
+      "Interview questions prepared?",
+      "Release forms if needed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I make documentaries with a phone?", "answer": "Yes—Tangerine was shot on iPhone. Modern phones are capable. Audio is where you need to invest. External mic essential."},
+    {"question": "Most important equipment?", "answer": "Audio equipment. Bad audio ruins documentaries. Camera can be basic if audio is professional. Invest in mics and recording."},
+    {"question": "How to get good interviews?", "answer": "Proper lighting, good audio, comfortable subject. Position camera at eye level. Create safe space. Listen more than direct."},
+    {"question": "What about releases and rights?", "answer": "Get signed releases from subjects. Clear music and archival footage. Fair use for commentary but not guaranteed. Consult lawyer for sensitive topics."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "documentary"
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "cosplay-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Cosplay YouTube Tools 2025: Costume Creation Equipment",
+    "description": "Top tools for cosplay YouTube channels. Film builds, tutorials, and transformations.",
+    "keywords": ["cosplay youtube tools", "cosplay channel equipment", "costume build video", "cosplay tutorial gear", "prop making youtube"]
+  },
+  "hero": {
+    "badge": "Cosplay Tools",
+    "headline": "Best Cosplay YouTube Tools 2025",
+    "subheadline": "Document your builds. Essential gear for cosplay creators.",
+    "primaryKeyword": "cosplay youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Cosplay content combines craftsmanship tutorials, transformation reveals, and convention coverage. Each requires different filming approaches—workshop process, glamour shots of finished pieces, and mobile convention filming. Here's what successful cosplay YouTubers use to capture their creative journey."},
+    {"type": "features", "title": "Workshop Cameras", "content": [
+      {"icon": "video", "title": "Overhead Rig", "description": "Capture workspace. Pattern cutting, detail work."},
+      {"icon": "camera", "title": "Side Angle", "description": "Sewing, foam work. Show technique."},
+      {"icon": "smartphone", "title": "Phone Camera", "description": "Quick progress shots. Time-lapse."},
+      {"icon": "eye", "title": "Macro Lens", "description": "Detail shots. Weathering, textures."}
+    ]},
+    {"type": "features", "title": "Final Shoot Gear", "content": [
+      {"icon": "aperture", "title": "Portrait Lens", "description": "85mm. Beautiful bokeh for glamour."},
+      {"icon": "sun", "title": "Studio Lighting", "description": "Controlled environment. Dramatic shots."},
+      {"icon": "image", "title": "Backdrop", "description": "Green screen or themed backgrounds."},
+      {"icon": "zap", "title": "Flash/Strobe", "description": "Outdoor shoots. Overpower sun."}
+    ]},
+    {"type": "features", "title": "Convention Gear", "content": [
+      {"icon": "video", "title": "Compact Camera", "description": "Sony ZV-E10. Portable quality."},
+      {"icon": "move", "title": "Gimbal", "description": "Smooth walking shots. DJI RS series."},
+      {"icon": "mic", "title": "Wireless Mic", "description": "Interview audio in crowds."},
+      {"icon": "battery", "title": "Spare Batteries", "description": "Long days. No outlets."}
+    ]},
+    {"type": "benefits", "title": "Cosplay Content Tips", "content": [
+      "Document process from start",
+      "Time-lapse long builds",
+      "Before/after transformations popular",
+      "Explain materials and techniques",
+      "Show failures and fixes",
+      "Final glamour shots essential",
+      "Convention footage adds variety"
+    ]},
+    {"type": "checklist", "title": "Cosplay Video Checklist", "content": [
+      "Build progress documented?",
+      "Techniques explained?",
+      "Materials listed?",
+      "Final photos/video taken?",
+      "Transformation footage captured?",
+      "Convention coverage planned?",
+      "Lighting flatters costume?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for cosplay builds?", "answer": "Overhead setup for workspace most important. Phone works for progress. Sony ZV-E10 or similar for talking head tutorials. Final glamour shots benefit from mirrorless with portrait lens."},
+    {"question": "How to film transformation videos?", "answer": "Fixed camera for consistency. Before footage in same position as after. Time-lapse of makeup/costume process. Reveal moment is the payoff—make it dramatic."},
+    {"question": "Convention filming tips?", "answer": "Portable setup essential. Gimbal for smooth hall walks. Wireless mic for interviews in crowds. Extra batteries—no charging opportunities. SD cards cleared and ready."},
+    {"question": "Lighting for costume photography?", "answer": "Studio setup gives most control—2-3 light setup. Outdoor with flash/reflector for natural light. Match lighting to character mood. Colored gels for dramatic effect."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "cosplay"
+}

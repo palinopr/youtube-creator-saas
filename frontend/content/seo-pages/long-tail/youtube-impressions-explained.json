@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-impressions-explained",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Impressions Explained 2025: What They Mean",
+    "description": "Understand YouTube impressions. What they are, why they matter, and how to get more.",
+    "keywords": ["youtube impressions", "impressions youtube analytics", "what are youtube impressions", "youtube impression ctr", "increase impressions"]
+  },
+  "hero": {
+    "badge": "Analytics",
+    "headline": "YouTube Impressions Explained",
+    "subheadline": "Understand how YouTube measures your reach. Impressions are your growth potential.",
+    "primaryKeyword": "youtube impressions"
+  },
+  "sections": [
+    {"type": "intro", "content": "Impressions count how many times your thumbnail was shown to potential viewers. High impressions mean YouTube is testing your content. High CTR (click-through rate) on those impressions signals your thumbnail and title work. Understanding this metric is key to growth."},
+    {"type": "features", "title": "What Counts as an Impression", "content": [
+      {"icon": "eye", "title": "Thumbnail Views", "description": "Thumbnail shown for 1+ second, 50%+ visible. Home, search, suggested."},
+      {"icon": "x", "title": "Not Counted", "description": "External sites, notifications, end screens, email. Only in-platform browse."},
+      {"icon": "bar-chart", "title": "Where They Happen", "description": "Home feed, search, suggested, playlists. Each location tracked separately."}
+    ]},
+    {"type": "steps", "title": "Impressions to Views Pipeline", "content": [
+      "YouTube shows your thumbnail (impression)",
+      "Viewer decides to click (or not)",
+      "Click = view, no click = lost opportunity",
+      "CTR measures this conversion",
+      "High CTR = more impressions given",
+      "Low CTR = YouTube reduces reach",
+      "Cycle reinforces success or failure"
+    ]},
+    {"type": "features", "title": "Improving Impressions", "content": [
+      {"icon": "image", "title": "Better Thumbnails", "description": "CTR determines future impressions. Compelling thumbnails get more reach."},
+      {"icon": "type", "title": "Strong Titles", "description": "Title + thumbnail work together. Clear value proposition."},
+      {"icon": "clock", "title": "Consistency", "description": "Regular uploads build momentum. Subscribers see more impressions."}
+    ]},
+    {"type": "benefits", "title": "Healthy Impression Metrics", "content": [
+      "CTR 4-10% is typical",
+      "Higher for subscriber-heavy audience",
+      "New videos get initial push",
+      "Trending videos see impression spike",
+      "CTR often drops as reach expands",
+      "Focus on absolute views, not just CTR",
+      "Compare against your own averages"
+    ]},
+    {"type": "checklist", "title": "Impression Audit Checklist", "content": [
+      "Check impressions trend over time",
+      "Compare CTR across videos",
+      "Identify your best-performing thumbnails",
+      "Note impression sources (home, search, etc.)",
+      "Track CTR drop-off as videos age",
+      "Test thumbnail variations",
+      "Monitor new video 48-hour performance"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good impression count?", "answer": "Varies wildly by channel size. Focus on trend direction and CTR percentage rather than absolute numbers. More impressions over time = growth."},
+    {"question": "Why are my impressions low?", "answer": "New channel, low CTR on previous videos, or content not matching audience. Improve thumbnails/titles, post consistently, and be patient."},
+    {"question": "Can I get impressions from external traffic?", "answer": "External views don't count as impressions but can signal to YouTube your content is valuable, potentially increasing in-platform impressions."},
+    {"question": "Why does CTR drop over time?", "answer": "Initial impressions go to subscribers (high CTR). As video expands to new audiences, CTR naturally drops. This is normal and healthy."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "how-to-youtube-seo",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Do YouTube SEO 2025: Complete Guide",
+    "description": "Master YouTube SEO. Keyword research, optimization, and ranking strategies that work.",
+    "keywords": ["youtube seo", "youtube seo guide", "video seo", "youtube search optimization", "rank on youtube"]
+  },
+  "hero": {
+    "badge": "SEO",
+    "headline": "How to Do YouTube SEO",
+    "subheadline": "Get found in search. Optimize videos to rank higher and get discovered.",
+    "primaryKeyword": "youtube seo"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube is the second-largest search engine. SEO helps your videos get discovered by people actively searching for your content. While watch time and engagement matter most, proper optimization gives your videos the best chance to rank."},
+    {"type": "features", "title": "SEO Elements", "content": [
+      {"icon": "type", "title": "Title Optimization", "description": "Primary keyword near beginning. Compelling, searchable, click-worthy."},
+      {"icon": "file-text", "title": "Description", "description": "Detailed, keyword-rich description. First 150 chars critical."},
+      {"icon": "hash", "title": "Tags & Hashtags", "description": "Relevant keywords. Help YouTube understand content context."}
+    ]},
+    {"type": "steps", "title": "SEO Process", "content": [
+      "Research keywords before filming",
+      "Choose primary keyword (search volume + competition)",
+      "Create content that matches search intent",
+      "Optimize title with keyword",
+      "Write detailed description (200+ words)",
+      "Add relevant tags (5-15)",
+      "Design click-worthy thumbnail",
+      "Add chapters/timestamps",
+      "Encourage engagement (comments, likes)"
+    ]},
+    {"type": "features", "title": "Keyword Research", "content": [
+      {"icon": "search", "title": "YouTube Autosuggest", "description": "Type topic, see suggestions. Real searches people make."},
+      {"icon": "bar-chart-2", "title": "TubeBuddy/vidIQ", "description": "Search volume, competition scores. Data-driven decisions."},
+      {"icon": "users", "title": "Competitor Analysis", "description": "What keywords do successful videos target? Learn from what works."}
+    ]},
+    {"type": "benefits", "title": "SEO Best Practices", "content": [
+      "Target keywords you can rank for",
+      "Match content to search intent",
+      "Optimize thumbnail for CTR",
+      "Front-load keywords in title",
+      "Natural keyword use (not stuffing)",
+      "Consistent upload schedule",
+      "Build watch time and engagement"
+    ]},
+    {"type": "benefits", "title": "Common SEO Mistakes", "content": [
+      "Targeting impossible keywords",
+      "Optimizing after filming",
+      "Keyword stuffing",
+      "Ignoring search intent",
+      "Clickbait that doesn't deliver",
+      "Neglecting thumbnails",
+      "No keyword research at all"
+    ]},
+    {"type": "checklist", "title": "Video SEO Checklist", "content": [
+      "Keyword researched?",
+      "Title includes keyword?",
+      "Description optimized?",
+      "Tags added (5-15)?",
+      "Thumbnail compelling?",
+      "Chapters/timestamps?",
+      "Content matches search intent?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How important is SEO for YouTube?", "answer": "Important for discoverability, but not everything. Watch time, CTR, and engagement are ranking factors too. SEO gets you in the game."},
+    {"question": "How long to see SEO results?", "answer": "YouTube videos can rank over time—not instant like web pages. Some videos rank after months. Evergreen content benefits most."},
+    {"question": "Should I change titles after posting?", "answer": "Yes, if performance is poor. Wait 48-72 hours for initial data. A/B test titles if views are low but impressions exist."},
+    {"question": "Do tags really matter?", "answer": "Minor factor, but easy to do. Tags help with misspellings and context. Title and description matter more."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

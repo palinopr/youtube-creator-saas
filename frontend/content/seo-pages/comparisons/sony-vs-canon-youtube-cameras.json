@@ -1,0 +1,48 @@
+{
+  "slug": "sony-vs-canon-youtube-cameras",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Sony vs Canon Cameras for YouTube 2025: Complete Comparison",
+    "description": "Compare Sony and Canon cameras for YouTube content creation. Autofocus, video quality, and which brand suits your content style.",
+    "keywords": ["sony vs canon youtube", "best camera for youtube", "sony a7c vs canon r8", "youtube camera comparison", "vlog camera sony canon"]
+  },
+  "hero": {
+    "badge": "Camera Comparison",
+    "headline": "Sony vs Canon: Which Camera Brand Wins for YouTube?",
+    "subheadline": "The ultimate showdown between two camera giants for content creators.",
+    "primaryKeyword": "sony vs canon youtube cameras"
+  },
+  "sections": [
+    {"type": "intro", "content": "Sony and Canon dominate the YouTube camera market for good reason. Both offer excellent video quality, reliable autofocus, and creator-focused features. But they take different approaches. This comparison helps you choose the right brand for your content style and budget."},
+    {"type": "comparison", "title": "Popular YouTube Models", "content": [
+      {"feature": "Compact Vlog", "toolA": "ZV-E10 II $999", "toolB": "R50 $679", "tubeGrow": "N/A"},
+      {"feature": "Full Frame Entry", "toolA": "A7C II $2,198", "toolB": "R8 $1,499", "tubeGrow": "N/A"},
+      {"feature": "Pro Hybrid", "toolA": "A7S III $3,498", "toolB": "R5 $3,899", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "Excellent", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "Flip Screen", "toolA": "Most Models", "toolB": "Most Models", "tubeGrow": "N/A"},
+      {"feature": "4K 60fps", "toolA": "All Current", "toolB": "All Current", "tubeGrow": "N/A"},
+      {"feature": "Lens Selection", "toolA": "Excellent", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "Low Light", "toolA": "Excellent", "toolB": "Very Good", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Key Differences", "content": [
+      {"icon": "video", "title": "Color Science", "description": "Canon is known for pleasing skin tones out of camera. Sony offers more flexibility in post with S-Log."},
+      {"icon": "target", "title": "Eye Autofocus", "description": "Both are excellent. Sony pioneered it and has slight edge. Canon's Dual Pixel AF is incredibly reliable."},
+      {"icon": "zap", "title": "Low Light Performance", "description": "Sony's larger pixels and dedicated video sensors give edge in challenging lighting conditions."}
+    ]},
+    {"type": "benefits", "title": "Choose Sony If...", "content": ["Low light performance is critical", "You want leading autofocus technology", "You plan to color grade extensively", "You need compact full-frame options", "You value firmware updates adding features"]},
+    {"type": "benefits", "title": "Choose Canon If...", "content": ["You want beautiful colors straight from camera", "You're coming from Canon DSLRs", "You prioritize user-friendly menus", "You want excellent value (R8, R50)", "You value the RF lens ecosystem"]}
+  ],
+  "faq": [
+    {"question": "Which has better autofocus for vlogging?", "answer": "Both are excellent for vlogging. Canon's face/eye tracking is slightly more intuitive. Sony's is slightly faster. You can't go wrong with either for solo content."},
+    {"question": "Is full-frame necessary for YouTube?", "answer": "No. APS-C cameras like Sony ZV-E10 or Canon R50 are excellent for YouTube. Full-frame helps with low light and depth of field but isn't required."},
+    {"question": "What about lens costs?", "answer": "Both systems have affordable and expensive options. Sony E-mount has more third-party lenses. Canon RF is growing quickly. Budget for at least one good lens."},
+    {"question": "Can I start with a cheaper model?", "answer": "Absolutely. The Sony ZV-E10 and Canon R50 are excellent starting points. Upgrade when you understand what features you actually need."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "sony",
+  "secondaryTool": "canon"
+}

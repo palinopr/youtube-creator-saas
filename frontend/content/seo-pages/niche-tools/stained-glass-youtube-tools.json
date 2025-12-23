@@ -1,0 +1,66 @@
+{
+  "slug": "stained-glass-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Stained Glass YouTube Tools 2025: Glass Art Channel Equipment",
+    "description": "Top tools for stained glass YouTube channels. Film cutting, soldering, and finished pieces.",
+    "keywords": ["stained glass youtube tools", "glass art channel", "stained glass video", "glass cutting youtube", "glass craft content"]
+  },
+  "hero": {
+    "badge": "Stained Glass Tools",
+    "headline": "Best Stained Glass YouTube Tools 2025",
+    "subheadline": "Capture the light. Gear for glass artists.",
+    "primaryKeyword": "stained glass youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Stained glass content showcases a timeless craft—cutting, grinding, foiling, and soldering transform flat glass into luminous art. Viewers want to see technique details and the magical moment when light passes through finished work. Here's what glass artists use for YouTube."},
+    {"type": "features", "title": "Camera Challenges", "content": [
+      {"icon": "sun", "title": "Exposure Control", "description": "Glass transmits and reflects light."},
+      {"icon": "video", "title": "Multiple Angles", "description": "Overhead + side for technique."},
+      {"icon": "eye", "title": "Detail Shots", "description": "Close-ups of cutting, foiling."},
+      {"icon": "camera", "title": "Backlit Results", "description": "Show finished piece with light."}
+    ]},
+    {"type": "features", "title": "Lighting Setup", "content": [
+      {"icon": "layers", "title": "Work Lighting", "description": "See technique clearly."},
+      {"icon": "sun", "title": "Backlight Box", "description": "Show glass color and flaws."},
+      {"icon": "circle", "title": "Product Shots", "description": "Light through finished piece."},
+      {"icon": "zap", "title": "Natural Light", "description": "Best for final reveal shots."}
+    ]},
+    {"type": "features", "title": "Safety Considerations", "content": [
+      {"icon": "shield", "title": "Safety Glasses", "description": "Wear and mention on camera."},
+      {"icon": "wind", "title": "Ventilation", "description": "For soldering segments."},
+      {"icon": "volume-x", "title": "Grinding Noise", "description": "Audio challenge from grinder."},
+      {"icon": "alert-triangle", "title": "Sharp Edges", "description": "Handle carefully on camera."}
+    ]},
+    {"type": "benefits", "title": "Glass Content Tips", "content": [
+      "Light through finished piece is hero shot",
+      "Breaking/cutting glass is satisfying",
+      "Show the planning/pattern stage",
+      "Time-lapse for long projects",
+      "Pattern downloads add value",
+      "Beginner tutorials welcome newcomers",
+      "Seasonal pieces drive seasonal traffic"
+    ]},
+    {"type": "checklist", "title": "Glass Video Checklist", "content": [
+      "Work area lighting adequate?",
+      "Camera avoiding reflections?",
+      "Safety gear visible?",
+      "Audio handling grinder noise?",
+      "Backlight ready for reveal?",
+      "Pattern visible if teaching?",
+      "Final light-through shot planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film glass without glare?", "answer": "Angle lights to avoid direct reflection. Polarizing filter can help. Diffused lighting reduces hot spots. Position camera carefully. Some reflection shows glass quality—balance control with realism."},
+    {"question": "Best way to show finished pieces?", "answer": "Natural light through the piece is magical. Light box from behind shows colors. Window installation shots ideal. Rotate piece to show light catching different angles. Golden hour natural light stunning."},
+    {"question": "Audio challenges in glass work?", "answer": "Grinder is loud—may need ADR/voiceover for those sections. Cutting glass has nice sounds. Soldering relatively quiet. Consider ASMR versions without grinder segments. Quality lavalier helps with voice."},
+    {"question": "What content works for stained glass?", "answer": "Full project tutorials most popular. Pattern design and creation. Technique breakdowns (cutting curves, soldering tips). Material reviews. Restoration content has audience too."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "stained-glass"
+}

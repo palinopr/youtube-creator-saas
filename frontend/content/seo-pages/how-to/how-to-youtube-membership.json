@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-membership",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Set Up YouTube Channel Memberships 2025: Complete Guide",
+    "description": "Launch YouTube Memberships. Pricing strategies, perks, and retention tactics for creators.",
+    "keywords": ["youtube membership", "channel membership", "youtube join button", "youtube membership perks", "youtube subscriber membership"]
+  },
+  "hero": {
+    "badge": "Memberships",
+    "headline": "How to Set Up YouTube Memberships",
+    "subheadline": "Create recurring revenue with channel memberships. Strategy and setup guide.",
+    "primaryKeyword": "youtube membership"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Memberships let your biggest fans support you monthly in exchange for exclusive perks. It's recurring revenue that doesn't depend on views. But success requires strategy—the right price points, valuable perks, and consistent delivery. Here's how to launch and grow memberships."},
+    {"type": "features", "title": "Membership Requirements", "content": [
+      {"icon": "users", "title": "1,000 Subscribers", "description": "Minimum threshold for eligibility. Same as monetization."},
+      {"icon": "shield", "title": "Good Standing", "description": "No community strikes. Active monetization enabled."},
+      {"icon": "map-pin", "title": "Available Location", "description": "Not available in all countries. Check eligibility in Studio."}
+    ]},
+    {"type": "steps", "title": "Setting Up Memberships", "content": [
+      "Go to YouTube Studio → Monetization",
+      "Click Memberships (if eligible)",
+      "Set pricing tiers (up to 5 levels)",
+      "Create perks for each tier",
+      "Design member badges and emoji",
+      "Write welcome message",
+      "Publish and promote"
+    ]},
+    {"type": "features", "title": "Effective Perks Ideas", "content": [
+      {"icon": "video", "title": "Early Access", "description": "Members see videos first. Easy to deliver, highly valued."},
+      {"icon": "message-circle", "title": "Members-Only Posts", "description": "Exclusive Community Tab content. Behind-the-scenes, polls."},
+      {"icon": "users", "title": "Discord Access", "description": "Private community. Direct interaction. Strong retention perk."}
+    ]},
+    {"type": "benefits", "title": "Pricing Strategy", "content": [
+      "$0.99-$1.99: Badge and emoji only—entry tier",
+      "$4.99: Most popular price point—main perks",
+      "$9.99+: Premium tier—serious fans",
+      "Start with 2-3 tiers, add more later",
+      "Don't promise what you can't deliver",
+      "YouTube takes 30%—price accordingly",
+      "Monthly commitment—perks must justify"
+    ]},
+    {"type": "checklist", "title": "Membership Launch Checklist", "content": [
+      "Perks clearly defined?",
+      "Custom badges designed?",
+      "Discord/community ready (if promised)?",
+      "Welcome message written?",
+      "Announcement video planned?",
+      "Ongoing delivery capacity?",
+      "Member recognition plan?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What percentage does YouTube take?", "answer": "YouTube takes 30% of membership revenue. Plan pricing accordingly. Still better than most platforms."},
+    {"question": "How many tiers should I have?", "answer": "Start with 2-3 tiers. Too many confuses people. Most members join lowest or second tier regardless of options."},
+    {"question": "Best perks for retention?", "answer": "Community access (Discord) has highest retention. Early access is easy. Behind-the-scenes is popular. Avoid perks requiring individual attention at scale."},
+    {"question": "How to promote memberships?", "answer": "Dedicated announcement video. Regular reminders in videos (not annoying). Shoutouts to members. Show member benefits in action."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

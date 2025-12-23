@@ -1,0 +1,71 @@
+{
+  "slug": "how-to-create-youtube-shorts",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Shorts 2025: Complete Guide",
+    "description": "Learn to create YouTube Shorts that get views. Filming, editing, and optimization tips for vertical video.",
+    "keywords": ["youtube shorts", "create youtube shorts", "how to make shorts", "youtube shorts tutorial", "vertical video youtube"]
+  },
+  "hero": {
+    "badge": "YouTube Shorts",
+    "headline": "How to Create YouTube Shorts",
+    "subheadline": "Master vertical video. Create Shorts that hook viewers and grow your channel.",
+    "primaryKeyword": "create youtube shorts"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Shorts are vertical videos under 60 seconds. They're YouTube's fastest-growing format and can rapidly build subscribers. Creating effective Shorts requires different techniques than long-form—here's everything you need to know."},
+    {"type": "steps", "title": "Creating Your First Short", "content": [
+      "Open YouTube app (mobile)",
+      "Tap '+' then 'Create a Short'",
+      "Record or upload vertical video",
+      "Trim to under 60 seconds",
+      "Add text, music, or filters",
+      "Write engaging title (under 100 chars)",
+      "Add #Shorts to title or description",
+      "Publish your Short"
+    ]},
+    {"type": "features", "title": "Shorts Best Practices", "content": [
+      {"icon": "clock", "title": "Hook Fast", "description": "First 1-2 seconds critical. Start with action or intrigue."},
+      {"icon": "repeat", "title": "Loop Potential", "description": "End where you began. Seamless loops boost watch time."},
+      {"icon": "type", "title": "Text On Screen", "description": "Many watch without sound. Captions and text essential."}
+    ]},
+    {"type": "benefits", "title": "Content Ideas for Shorts", "content": [
+      "Quick tips in your niche",
+      "Behind-the-scenes clips",
+      "Reactions and responses",
+      "Tutorial snippets",
+      "Before/after transformations",
+      "Trending audio clips",
+      "Repurposed long-form highlights"
+    ]},
+    {"type": "steps", "title": "Editing Tips for Shorts", "content": [
+      "Use CapCut or YouTube app",
+      "Vertical 9:16 aspect ratio",
+      "Fast cuts maintain attention",
+      "Add captions for accessibility",
+      "Use trending sounds strategically",
+      "Keep text in safe zones",
+      "Test different thumbnail frames"
+    ]},
+    {"type": "checklist", "title": "Shorts Checklist", "content": [
+      "Under 60 seconds?",
+      "Vertical format (9:16)?",
+      "Strong hook in first second?",
+      "Text/captions added?",
+      "#Shorts in title/description?",
+      "Engaging title?",
+      "Calls viewer to action?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need #Shorts in the title?", "answer": "Not required anymore but helps initially. YouTube now auto-detects vertical videos under 60 seconds. Including it doesn't hurt."},
+    {"question": "Can Shorts be monetized?", "answer": "Yes. Shorts Fund pays creators. Also drives subscribers to your monetized long-form. Shorts increasingly part of RPM calculations."},
+    {"question": "Best length for Shorts?", "answer": "15-45 seconds often performs best. Long enough to deliver value, short enough to rewatch. Under 60 seconds required."},
+    {"question": "Should I repurpose TikToks?", "answer": "Yes, but remove TikTok watermark. YouTube may suppress watermarked content. Re-export from original or use editing app."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-shorts",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Shorts 2025: Complete Guide",
+    "description": "Create effective YouTube Shorts. Format, strategy, and optimization for short-form success.",
+    "keywords": ["youtube shorts", "create youtube shorts", "shorts tutorial", "youtube short video", "how to make shorts"]
+  },
+  "hero": {
+    "badge": "Shorts",
+    "headline": "How to Create YouTube Shorts",
+    "subheadline": "Master short-form content. Vertical videos that capture attention fast.",
+    "primaryKeyword": "youtube shorts"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Shorts are vertical videos under 60 seconds designed for quick consumption. They're a massive discovery opportunity—billions of views daily. Whether repurposing long-form or creating original shorts, here's how to make them work."},
+    {"type": "features", "title": "Shorts Requirements", "content": [
+      {"icon": "smartphone", "title": "Vertical Format", "description": "9:16 aspect ratio. 1080x1920 optimal resolution."},
+      {"icon": "clock", "title": "60 Seconds Max", "description": "Under 60 seconds to qualify as Short. Shorter often better."},
+      {"icon": "hash", "title": "#Shorts Tag", "description": "Include in title or description. Helps YouTube categorize."}
+    ]},
+    {"type": "steps", "title": "Creating Shorts", "content": [
+      "Record vertical (9:16) video",
+      "Keep under 60 seconds",
+      "Hook viewers in first 1-2 seconds",
+      "Add captions (accessibility + muted viewing)",
+      "Include #Shorts hashtag",
+      "Write engaging title",
+      "Upload from app or desktop",
+      "Add relevant thumbnail (for shelf)"
+    ]},
+    {"type": "features", "title": "Content Strategy", "content": [
+      {"icon": "scissors", "title": "Clip Long-Form", "description": "Best moments from full videos. Repurpose existing content."},
+      {"icon": "zap", "title": "Original Shorts", "description": "Quick tips, reactions, trends. Made specifically for format."},
+      {"icon": "repeat", "title": "Series Format", "description": "Part 1, 2, 3 structure. Build anticipation across Shorts."}
+    ]},
+    {"type": "benefits", "title": "Shorts Best Practices", "content": [
+      "Immediate hook (first 1-2 seconds)",
+      "Fast pacing throughout",
+      "Text overlays for context",
+      "Trending sounds/music",
+      "Clear value quickly",
+      "End with satisfaction or loop",
+      "Consistent posting schedule"
+    ]},
+    {"type": "benefits", "title": "Common Mistakes", "content": [
+      "Slow starts that lose viewers",
+      "Horizontal content cropped",
+      "No captions/text",
+      "Too long (aim for 15-30 seconds)",
+      "No clear point or value",
+      "Ignoring trending content",
+      "Inconsistent posting"
+    ]},
+    {"type": "checklist", "title": "Shorts Checklist", "content": [
+      "Vertical 9:16 format?",
+      "Under 60 seconds?",
+      "Hook in first 2 seconds?",
+      "Captions added?",
+      "#Shorts included?",
+      "Engaging thumbnail?",
+      "Clear value delivered?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do Shorts help channel growth?", "answer": "Yes for reach and subscribers. Shorts get massive impressions. But watch time from Shorts doesn't count toward YPP watch hours (separate path)."},
+    {"question": "Can I repurpose TikToks?", "answer": "Yes, but remove TikTok watermarks. YouTube may limit reach of watermarked content. Re-edit or use original files."},
+    {"question": "How often should I post Shorts?", "answer": "1-3 per day is common for growth. Consistency matters more than volume. Find sustainable cadence for you."},
+    {"question": "Shorts vs long-form—which matters more?", "answer": "Both have value. Shorts for discovery and reach. Long-form for watch time and deeper engagement. Many creators do both."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

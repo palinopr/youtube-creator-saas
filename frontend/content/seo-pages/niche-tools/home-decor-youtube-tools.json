@@ -1,0 +1,63 @@
+{
+  "slug": "home-decor-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Home Decor YouTube Tools 2025: Interior Design Channel Equipment",
+    "description": "Top tools for home decor and interior design YouTube channels. Filming beautiful spaces.",
+    "keywords": ["home decor youtube tools", "interior design youtube", "home tour equipment", "decor channel tools", "home styling youtube"]
+  },
+  "hero": {
+    "badge": "Home Decor Tools",
+    "headline": "Best Home Decor YouTube Tools 2025",
+    "subheadline": "Showcase beautiful spaces. Equipment for home and design content.",
+    "primaryKeyword": "home decor youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Home decor content sells the aesthetic—beautiful spaces, thoughtful styling, and aspirational living. The visuals need to match the content quality, showcasing rooms at their best. Here's what home decor creators use to capture interior beauty."},
+    {"type": "features", "title": "Camera Equipment", "content": [
+      {"icon": "camera", "title": "Wide Angle Lens", "description": "Essential for interiors. 16-35mm or similar. Capture full rooms."},
+      {"icon": "aperture", "title": "Full Frame Camera", "description": "Sony A7 or Canon R series. Better low light, shallower depth."},
+      {"icon": "move", "title": "Gimbal/Slider", "description": "Smooth room reveals. DJI RS or similar for walk-throughs."}
+    ]},
+    {"type": "features", "title": "Lighting for Interiors", "content": [
+      {"icon": "sun", "title": "Natural Light Timing", "description": "Golden hour transforms spaces. Plan shoots around light."},
+      {"icon": "lamp", "title": "Practical Lights", "description": "Use lamps in shot. Warm, inviting atmosphere."},
+      {"icon": "zap", "title": "Bounce Boards", "description": "Reflect window light. Fill shadows naturally."}
+    ]},
+    {"type": "features", "title": "Production Elements", "content": [
+      {"icon": "film", "title": "Editing Software", "description": "Color grading matters. Warm, cohesive aesthetic."},
+      {"icon": "music", "title": "Lifestyle Music", "description": "Calm, aspirational tracks. Match the vibe of content."},
+      {"icon": "layout", "title": "B-Roll Details", "description": "Close-ups on styling, textures, arrangements."}
+    ]},
+    {"type": "benefits", "title": "Home Decor Best Practices", "content": [
+      "Clean and style before every shoot",
+      "Natural light is your best friend",
+      "Wide shots establish, details immerse",
+      "Slow camera movements feel luxurious",
+      "Warm color grading for cozy feel",
+      "Show real spaces, not just perfection",
+      "Before/after reveals perform well"
+    ]},
+    {"type": "checklist", "title": "Home Video Checklist", "content": [
+      "Space cleaned and styled?",
+      "Natural light optimal?",
+      "Wide angle lens ready?",
+      "Gimbal for smooth movement?",
+      "B-roll details captured?",
+      "Color grading consistent?",
+      "Music matches atmosphere?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best lens for interior filming?", "answer": "Wide angle—16-35mm range. Rooms look bigger, more inviting. Standard 50mm often too tight for interiors."},
+    {"question": "How to light dark rooms?", "answer": "Open all curtains, shoot during day, use bounce boards. Add practical lamps in frame. Avoid harsh artificial lighting."},
+    {"question": "Should I stage my home?", "answer": "Light styling yes—declutter, arrange thoughtfully. But authenticity matters too. Overly staged can feel fake."},
+    {"question": "How to do smooth room reveals?", "answer": "Gimbal is ideal. Walk slowly, keep movement smooth. Slider for static reveals. Stabilization in post helps too."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "home-decor"
+}

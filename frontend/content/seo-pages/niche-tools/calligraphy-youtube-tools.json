@@ -1,0 +1,66 @@
+{
+  "slug": "calligraphy-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Calligraphy YouTube Tools 2025: Hand Lettering Channel Equipment",
+    "description": "Top tools for calligraphy YouTube channels. Film beautiful lettering and pen work.",
+    "keywords": ["calligraphy youtube tools", "hand lettering channel", "calligraphy video equipment", "lettering content", "penmanship youtube"]
+  },
+  "hero": {
+    "badge": "Calligraphy Tools",
+    "headline": "Best Calligraphy YouTube Tools 2025",
+    "subheadline": "Capture every stroke. Gear for lettering artists.",
+    "primaryKeyword": "calligraphy youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Calligraphy content is hypnotic—the flow of ink, the formation of letters, the satisfying result. Viewers want to see technique clearly: pen angle, pressure variation, and ink flow. The meditative quality of calligraphy has ASMR appeal. Here's what successful calligraphy YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Essential—bird's eye view of page."},
+      {"icon": "camera", "title": "Detail Camera", "description": "Close-up of nib and strokes."},
+      {"icon": "eye", "title": "4K Resolution", "description": "Fine line detail preserved."},
+      {"icon": "move", "title": "Stable Mount", "description": "No shake during writing."}
+    ]},
+    {"type": "features", "title": "Overhead Rig Options", "content": [
+      {"icon": "maximize", "title": "Copy Stand", "description": "Rock solid for flat work."},
+      {"icon": "grid", "title": "C-Stand + Arm", "description": "Professional studio setup."},
+      {"icon": "box", "title": "Desk Mount", "description": "Elgato arm. Adjustable."},
+      {"icon": "layers", "title": "Phone Mount", "description": "Budget overhead solution."}
+    ]},
+    {"type": "features", "title": "Lighting for Paper", "content": [
+      {"icon": "sun", "title": "Diffused Light", "description": "No harsh shadows on page."},
+      {"icon": "circle", "title": "Angle Matters", "description": "Side light shows ink sheen."},
+      {"icon": "zap", "title": "LED Panels", "description": "Consistent, adjustable."},
+      {"icon": "eye-off", "title": "Avoid Glare", "description": "Position to prevent reflection."}
+    ]},
+    {"type": "benefits", "title": "Calligraphy Content Tips", "content": [
+      "Overhead is absolutely essential",
+      "Real-time writing is satisfying",
+      "Include tool setup and ink prep",
+      "ASMR of pen on paper popular",
+      "Time-lapse for longer pieces",
+      "Show mistakes and how to fix",
+      "Supply recommendations add value"
+    ]},
+    {"type": "checklist", "title": "Calligraphy Video Checklist", "content": [
+      "Overhead camera positioned correctly?",
+      "Paper secured and flat?",
+      "Lighting even across page?",
+      "No hand shadows on work?",
+      "Audio capturing pen sounds?",
+      "Ink loaded and flowing well?",
+      "Practice piece done first?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best overhead setup for calligraphy?", "answer": "Copy stand most stable for flat work. C-stand with boom arm for larger setups. Elgato arm for desk-mounted solutions. Key is zero movement while writing. Position camera directly overhead."},
+    {"question": "How to avoid hand shadows?", "answer": "Dual light sources from opposite sides. Diffused lights reduce harsh shadows. LED panels at 45-degree angles work well. Test with your actual writing position before filming."},
+    {"question": "Should I include pen sounds?", "answer": "Yes—calligraphy sounds are ASMR gold. Nib scratching on paper, ink flow, satisfying strokes. Quiet room and close microphone placement. Many viewers watch specifically for the sounds."},
+    {"question": "Real-time or sped up?", "answer": "Both have audiences. Real-time is meditative and educational. Time-lapse shows longer pieces efficiently. Many creators do both—real-time process, time-lapse for complex pieces."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "calligraphy"
+}

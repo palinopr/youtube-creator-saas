@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/components/landing/Header";
 import HeroSection from "@/components/landing/HeroSection";
 import AIAgentSection from "@/components/landing/AIAgentSection";
+import YouTubeCapabilitiesSection from "@/components/landing/YouTubeCapabilitiesSection";
 import LogoCarousel from "@/components/landing/LogoCarousel";
 import FeaturesTabs from "@/components/landing/FeaturesTabs";
 import HowItWorksTabs from "@/components/landing/HowItWorksTabs";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <AIAgentSection />
+      <YouTubeCapabilitiesSection />
       <LogoCarousel />
       <FeaturesTabs />
       <HowItWorksTabs />

@@ -1,0 +1,66 @@
+{
+  "slug": "aquascaping-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Aquascaping YouTube Tools 2025: Aquarium Channel Equipment",
+    "description": "Top tools for aquascaping YouTube channels. Film underwater worlds beautifully.",
+    "keywords": ["aquascaping youtube tools", "aquarium channel equipment", "fish tank filming", "planted tank youtube", "aquascape content"]
+  },
+  "hero": {
+    "badge": "Aquascaping Tools",
+    "headline": "Best Aquascaping YouTube Tools 2025",
+    "subheadline": "Capture underwater beauty. Gear for aquascape creators.",
+    "primaryKeyword": "aquascaping youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Aquascaping content showcases living art—planted tanks, reef setups, and underwater landscapes. Filming through glass presents challenges: reflections, color accuracy, and capturing movement. Successful aquascaping YouTubers master these technical hurdles. Here's the gear that works."},
+    {"type": "features", "title": "Camera Considerations", "content": [
+      {"icon": "video", "title": "Manual White Balance", "description": "Accurate colors under tank lights."},
+      {"icon": "camera", "title": "Macro Capability", "description": "Detail shots of plants and fish."},
+      {"icon": "eye", "title": "4K Resolution", "description": "Capture intricate details."},
+      {"icon": "settings", "title": "Manual Focus", "description": "Control through glass challenges AF."}
+    ]},
+    {"type": "features", "title": "Lighting Challenges", "content": [
+      {"icon": "sun", "title": "Tank Lighting", "description": "Balance with room light."},
+      {"icon": "moon", "title": "Room Darkness", "description": "Black out room for best shots."},
+      {"icon": "x-circle", "title": "Reflection Control", "description": "Minimize glass reflections."},
+      {"icon": "layers", "title": "Color Accuracy", "description": "LED spectrums affect footage."}
+    ]},
+    {"type": "features", "title": "Filming Techniques", "content": [
+      {"icon": "maximize", "title": "Black Background", "description": "Eliminates back reflections."},
+      {"icon": "grid", "title": "Angle Selection", "description": "Straight-on minimizes distortion."},
+      {"icon": "move", "title": "Slider Shots", "description": "Reveal tank depth slowly."},
+      {"icon": "clock", "title": "Time-Lapse", "description": "Show plant growth over time."}
+    ]},
+    {"type": "benefits", "title": "Aquascaping Content Tips", "content": [
+      "Build videos document entire process",
+      "Time-lapse plant growth is satisfying",
+      "ASMR of bubbles and water flow",
+      "Fish behavior captures attention",
+      "Before/after transformations perform well",
+      "Equipment reviews help beginners",
+      "Maintenance routines are useful content"
+    ]},
+    {"type": "checklist", "title": "Aquascaping Video Checklist", "content": [
+      "Glass cleaned inside and out?",
+      "Room lights off for filming?",
+      "White balance set correctly?",
+      "Reflections minimized?",
+      "Tank lights at filming brightness?",
+      "Fish calm and not hiding?",
+      "Time-lapse capturing?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to avoid glass reflections?", "answer": "Dark room, matte black cloth around camera, lens hood pressed close to glass. Polarizing filter helps some situations. Film at slight angle if straight-on reflects. Test before full shoot."},
+    {"question": "Best time to film aquarium?", "answer": "When fish are active and plants pearling (producing oxygen bubbles). Avoid right after feeding—cloudy water. Morning light plus tank light can work. Consistent tank lighting preferred."},
+    {"question": "Camera for aquarium filming?", "answer": "Sony A6400 or similar with manual controls popular. Macro lens for detail shots. 4K for cropping flexibility. Manual white balance essential—auto WB fights tank lights constantly."},
+    {"question": "How to capture accurate colors?", "answer": "Custom white balance with white card in tank. Post-processing adjustment often needed. Different LED spectrums (planted vs reef) require different settings. Test and adjust per tank."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "aquascaping"
+}

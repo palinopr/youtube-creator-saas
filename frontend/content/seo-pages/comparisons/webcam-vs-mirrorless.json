@@ -1,0 +1,67 @@
+{
+  "slug": "webcam-vs-mirrorless",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Webcam vs Mirrorless Camera 2025: Best for YouTube",
+    "description": "Compare webcams and mirrorless cameras for YouTube. Quality, convenience, and value.",
+    "keywords": ["webcam vs mirrorless", "webcam vs camera youtube", "best camera youtube", "webcam or mirrorless", "youtube camera choice"]
+  },
+  "hero": {
+    "badge": "Camera Choice",
+    "headline": "Webcam vs Mirrorless Camera",
+    "subheadline": "Convenience vs quality. Which camera approach fits your YouTube?",
+    "primaryKeyword": "webcam vs mirrorless"
+  },
+  "sections": [
+    {"type": "intro", "content": "Webcams are plug-and-play simple. Mirrorless cameras offer dramatically better quality. Both work for YouTube—the right choice depends on your content type, budget, and how much quality matters to your audience."},
+    {"type": "comparison", "title": "Camera Comparison", "content": [
+      {"feature": "Price", "toolA": "Webcam: $100-300", "toolB": "Mirrorless: $500-2500+", "tubeGrow": "N/A"},
+      {"feature": "Quality", "toolA": "Webcam: Good", "toolB": "Mirrorless: Excellent", "tubeGrow": "N/A"},
+      {"feature": "Setup", "toolA": "Webcam: Plug and play", "toolB": "Mirrorless: More complex", "tubeGrow": "N/A"},
+      {"feature": "Low Light", "toolA": "Webcam: Weak", "toolB": "Mirrorless: Strong", "tubeGrow": "N/A"},
+      {"feature": "Background Blur", "toolA": "Webcam: Digital/none", "toolB": "Mirrorless: Natural bokeh", "tubeGrow": "N/A"},
+      {"feature": "Streaming", "toolA": "Webcam: Native", "toolB": "Mirrorless: Needs capture card", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Webcam Advantages", "content": [
+      {"icon": "plug", "title": "Simplicity", "description": "USB connection. Works immediately. No setup complexity."},
+      {"icon": "dollar-sign", "title": "Budget Friendly", "description": "Logitech C920 under $100. Great value for quality."},
+      {"icon": "video", "title": "Streaming Ready", "description": "Native support in OBS, Zoom, etc. No additional hardware."}
+    ]},
+    {"type": "features", "title": "Mirrorless Advantages", "content": [
+      {"icon": "aperture", "title": "Depth of Field", "description": "Natural background blur. Professional, cinematic look."},
+      {"icon": "moon", "title": "Low Light Performance", "description": "Large sensors excel in dim conditions. No grainy footage."},
+      {"icon": "camera", "title": "Versatility", "description": "Interchangeable lenses. Use for photos, B-roll too."}
+    ]},
+    {"type": "benefits", "title": "Choose Webcam If", "content": [
+      "Budget is limited",
+      "Simplicity is priority",
+      "Streaming is main use",
+      "Office lighting is good",
+      "Background blur not critical",
+      "Starting out on YouTube",
+      "Video calls also important"
+    ]},
+    {"type": "benefits", "title": "Choose Mirrorless If", "content": [
+      "Quality is brand differentiator",
+      "Budget allows investment",
+      "Low light shooting needed",
+      "Want cinematic look",
+      "Also need camera for B-roll",
+      "Professional appearance matters",
+      "Willing to learn setup"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is the quality difference noticeable?", "answer": "Yes, especially in depth of field and low light. Mirrorless looks more 'cinematic'. But good webcams are surprisingly capable."},
+    {"question": "Can I use mirrorless as webcam?", "answer": "Yes, but needs capture card (Elgato Cam Link) or camera with native USB webcam mode. Some newer cameras support this."},
+    {"question": "Best budget option?", "answer": "Logitech C920 or C922 for webcam. Sony ZV-E10 for mirrorless entry point. Both excellent for their category."},
+    {"question": "Does my audience care?", "answer": "Content matters more than quality past a threshold. But professional appearance builds trust. Depends on your niche and audience."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "webcam",
+  "secondaryTool": "mirrorless"
+}

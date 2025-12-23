@@ -1,0 +1,61 @@
+{
+  "slug": "how-to-grow-youtube-subscriber",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Grow YouTube Subscribers 2025: Proven Strategies",
+    "description": "Grow your YouTube subscriber count with proven tactics. Real strategies that convert viewers into subscribers.",
+    "keywords": ["grow youtube subscribers", "get more subscribers", "youtube subscriber growth", "increase youtube subscribers", "youtube growth"]
+  },
+  "hero": {
+    "badge": "Subscriber Growth",
+    "headline": "How to Grow Your YouTube Subscribers",
+    "subheadline": "Turn viewers into subscribers. Proven tactics that actually work in 2025.",
+    "primaryKeyword": "grow youtube subscribers"
+  },
+  "sections": [
+    {"type": "intro", "content": "Subscribers matter because they return. They watch more videos, engage more, and help your content get recommended. But gaining subscribers requires earning trust through consistent value. Here are proven strategies that convert viewers into loyal subscribers."},
+    {"type": "features", "title": "Core Growth Strategies", "content": [
+      {"icon": "target", "title": "Clear Value Proposition", "description": "Viewers subscribe when they know what to expect. Be specific about your niche."},
+      {"icon": "zap", "title": "Consistency", "description": "Regular uploads build expectations. Subscribers know when to return."},
+      {"icon": "users", "title": "Community Building", "description": "Respond to comments. Create connection. Subscribers stay for the creator, not just content."}
+    ]},
+    {"type": "steps", "title": "Subscriber Conversion Tactics", "content": [
+      "Ask for subscription (yes, it works)",
+      "Explain why to subscribe",
+      "End screens with subscribe element",
+      "Pin subscribe comment on videos",
+      "Create content worth returning for",
+      "Develop recognizable style",
+      "Deliver on your title's promise"
+    ]},
+    {"type": "benefits", "title": "What Earns Subscriptions", "content": [
+      "Unique perspective or expertise",
+      "Consistent quality over time",
+      "Personality viewers connect with",
+      "Content they can't find elsewhere",
+      "Series that build anticipation",
+      "Value that compounds (tutorials, guides)",
+      "Entertainment they want more of"
+    ]},
+    {"type": "checklist", "title": "Subscriber Growth Audit", "content": [
+      "Channel page communicates value clearly?",
+      "Videos include subscribe ask?",
+      "End screens have subscribe element?",
+      "Comment engagement active?",
+      "Upload schedule consistent?",
+      "Content has clear niche focus?",
+      "Quality improving over time?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does asking people to subscribe actually work?", "answer": "Yes. Studies show CTAs increase subscriptions. Many viewers don't think to subscribe. A simple ask converts."},
+    {"question": "How long does it take to reach 1,000 subscribers?", "answer": "Varies wildly. Some take months, others years. Focus on making better content, not the number. Growth often accelerates after critical mass."},
+    {"question": "Should I buy subscribers?", "answer": "Absolutely not. Fake subscribers don't watch, hurt engagement metrics, and can get your channel banned. There are no shortcuts."},
+    {"question": "What's more important: subscribers or views?", "answer": "Views drive revenue. Subscribers drive loyalty. Best content strategy optimizes for both. Subscribers who watch are most valuable."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

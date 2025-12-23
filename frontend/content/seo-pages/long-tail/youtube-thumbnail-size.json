@@ -1,0 +1,59 @@
+{
+  "slug": "youtube-thumbnail-size",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Thumbnail Size 2025: Dimensions, Resolution & Specs",
+    "description": "The exact YouTube thumbnail size and dimensions you need. Resolution, aspect ratio, file size limits, and design tips.",
+    "keywords": ["youtube thumbnail size", "thumbnail dimensions", "youtube thumbnail resolution", "thumbnail specs", "youtube thumbnail requirements"]
+  },
+  "hero": {
+    "badge": "Thumbnail Specs",
+    "headline": "YouTube Thumbnail Size & Dimensions in 2025",
+    "subheadline": "The exact specifications for perfect YouTube thumbnails, every time.",
+    "primaryKeyword": "youtube thumbnail size"
+  },
+  "sections": [
+    {"type": "intro", "content": "Getting your YouTube thumbnail size right is crucial for quality and upload success. Wrong dimensions lead to cropping, blurriness, or upload errors. This guide provides the exact specifications YouTube requires and tips for optimal thumbnail design."},
+    {"type": "features", "title": "Official Thumbnail Specifications", "content": [
+      {"icon": "ruler", "title": "Dimensions", "description": "1280 x 720 pixels. This is the standard HD resolution that YouTube recommends."},
+      {"icon": "maximize", "title": "Aspect Ratio", "description": "16:9 aspect ratio. Matches standard video dimensions for consistent display."},
+      {"icon": "file", "title": "File Size", "description": "Under 2MB. JPG, PNG, or GIF format. PNG offers best quality for graphics."}
+    ]},
+    {"type": "checklist", "title": "Thumbnail Requirements Checklist", "content": [
+      "Resolution: 1280 x 720 pixels (minimum 640px width)",
+      "Aspect ratio: 16:9",
+      "File size: Under 2MB",
+      "Format: JPG, PNG, GIF, or BMP",
+      "Content: No misleading imagery",
+      "Text: Readable at small sizes",
+      "Branding: Consistent with channel identity"
+    ]},
+    {"type": "steps", "title": "Designing Effective Thumbnails", "content": [
+      "Start with 1280x720 canvas in your design tool",
+      "Use high-contrast colors for visibility",
+      "Keep text to 3-4 words maximum",
+      "Include faces with expressive emotions",
+      "Check readability at mobile size (100px tall)",
+      "Export as PNG for graphics, JPG for photos",
+      "Compress if over 2MB file size limit"
+    ]},
+    {"type": "benefits", "title": "Why Thumbnail Size Matters", "content": [
+      "Wrong size causes quality loss and cropping",
+      "Blurry thumbnails reduce click-through rate",
+      "Mobile viewers see thumbnails very small",
+      "Consistent sizing maintains professional appearance",
+      "YouTube may reject thumbnails over 2MB"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I use a different aspect ratio?", "answer": "You can upload other ratios, but YouTube will add black bars or crop to fit 16:9. For best results, design at 16:9 from the start."},
+    {"question": "What's the minimum thumbnail size?", "answer": "Minimum width is 640 pixels. But always use 1280x720 for sharp display on all devices including TVs."},
+    {"question": "PNG or JPG for thumbnails?", "answer": "PNG for graphics, text overlays, and transparent elements. JPG for photographic thumbnails with many colors."},
+    {"question": "Why does my thumbnail look blurry?", "answer": "Usually compression from uploading a low-resolution image. Always design at 1280x720, export at high quality, and check file size."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "epidemic-sound-vs-artlist",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Epidemic Sound vs Artlist 2025: Best Music for YouTube Creators",
+    "description": "Compare Epidemic Sound and Artlist for royalty-free music. Pricing, library size, licensing, and which is best for YouTubers.",
+    "keywords": ["epidemic sound vs artlist", "royalty free music youtube", "best music for youtube", "youtube background music", "music licensing youtube"]
+  },
+  "hero": {
+    "badge": "Music Licensing",
+    "headline": "Epidemic Sound vs Artlist: Best Music for YouTubers",
+    "subheadline": "Never worry about copyright claims again. Compare the top two music libraries for content creators.",
+    "primaryKeyword": "epidemic sound vs artlist"
+  },
+  "sections": [
+    {"type": "intro", "content": "Music makes or breaks YouTube content. Copyright claims can demonetize videos or force takedowns. Epidemic Sound and Artlist both offer worry-free licensing, but their approaches differ significantly. This comparison helps you choose the right music partner."},
+    {"type": "comparison", "title": "Platform Comparison", "content": [
+      {"feature": "Monthly Price", "toolA": "$15/mo", "toolB": "$17/mo", "tubeGrow": "N/A"},
+      {"feature": "Track Count", "toolA": "40,000+", "toolB": "25,000+", "tubeGrow": "N/A"},
+      {"feature": "Sound Effects", "toolA": "90,000+", "toolB": "Separate", "tubeGrow": "N/A"},
+      {"feature": "Social License", "toolA": true, "toolB": true, "tubeGrow": "N/A"},
+      {"feature": "Lifetime License", "toolA": false, "toolB": true, "tubeGrow": "N/A"},
+      {"feature": "Team Plans", "toolA": true, "toolB": true, "tubeGrow": "N/A"},
+      {"feature": "Mobile App", "toolA": true, "toolB": true, "tubeGrow": "N/A"},
+      {"feature": "Stems Available", "toolA": true, "toolB": "Limited", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Key Differences", "content": [
+      {"icon": "sparkles", "title": "Licensing Model", "description": "Epidemic Sound licenses while subscribed. Artlist offers lifetime license for downloads during subscription."},
+      {"icon": "video", "title": "Sound Effects", "description": "Epidemic includes SFX in subscription. Artlist requires separate Artlist SFX subscription."},
+      {"icon": "chart", "title": "Music Discovery", "description": "Both have excellent search and mood-based browsing. Epidemic's AI recommendations are slightly better."}
+    ]},
+    {"type": "benefits", "title": "Choose Epidemic Sound If...", "content": ["You need sound effects included", "You want the largest music library", "You prefer subscription licensing", "You need stems for custom edits", "You value AI-powered discovery"]},
+    {"type": "benefits", "title": "Choose Artlist If...", "content": ["You want lifetime license for downloads", "You prefer annual payment for simplicity", "Quality over quantity matters more", "You already have sound effects covered", "You want to keep music rights if you cancel"]}
+  ],
+  "faq": [
+    {"question": "What happens if I cancel my subscription?", "answer": "Epidemic Sound: You must remove their music from new content. Artlist: You keep lifetime rights to anything downloaded during subscription. This is a major difference."},
+    {"question": "Will I get copyright claims with these services?", "answer": "Both services whitelist your channel. You may see Content ID matches but they get cleared automatically. No monetization impact."},
+    {"question": "Can I use this music on multiple platforms?", "answer": "Yes, both cover YouTube, TikTok, Instagram, podcasts, and more. Check specific terms for commercial use outside social media."},
+    {"question": "Is the music quality professional?", "answer": "Both libraries feature professional, production-quality music. Many tracks are created by established artists and composers."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "epidemic-sound",
+  "secondaryTool": "artlist"
+}

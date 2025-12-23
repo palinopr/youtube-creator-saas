@@ -1,0 +1,67 @@
+{
+  "slug": "canon-r6-vs-r8",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Canon R6 vs R8 2025: Best Canon Camera for YouTube",
+    "description": "Compare Canon R6 and R8 for YouTube. Which full-frame mirrorless fits your content creation needs?",
+    "keywords": ["canon r6 vs r8", "r6 vs r8", "canon youtube camera", "best canon for video", "canon r8 youtube"]
+  },
+  "hero": {
+    "badge": "Canon Cameras",
+    "headline": "Canon R6 vs R8",
+    "subheadline": "Pro features vs budget-friendly full-frame. Which Canon fits your YouTube needs?",
+    "primaryKeyword": "canon r6 vs r8"
+  },
+  "sections": [
+    {"type": "intro", "content": "Canon's R6 and R8 both offer full-frame video quality for YouTube. The R6 (and R6 II) has more professional features and better build. The R8 brings core features at a lower price. Both produce excellent YouTube content—here's the comparison."},
+    {"type": "comparison", "title": "Camera Comparison", "content": [
+      {"feature": "Price", "toolA": "R6 II ~$2,500", "toolB": "R8 ~$1,500", "tubeGrow": "N/A"},
+      {"feature": "IBIS", "toolA": "Yes, excellent", "toolB": "No", "tubeGrow": "N/A"},
+      {"feature": "Video", "toolA": "4K60 full-frame", "toolB": "4K60 (slight crop)", "tubeGrow": "N/A"},
+      {"feature": "Build", "toolA": "Weather-sealed", "toolB": "Basic build", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "Slightly newer", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "Card Slots", "toolA": "Dual", "toolB": "Single", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "R6 / R6 II Strengths", "content": [
+      {"icon": "anchor", "title": "In-Body Stabilization", "description": "IBIS is huge for video. Smooth handheld without gimbal."},
+      {"icon": "shield", "title": "Weather Sealing", "description": "Shoot in rain, dust. Professional durability."},
+      {"icon": "layers", "title": "Dual Card Slots", "description": "Backup recording. Never lose footage."}
+    ]},
+    {"type": "features", "title": "R8 Strengths", "content": [
+      {"icon": "dollar-sign", "title": "Price", "description": "$1,000+ savings vs R6 II. Money for lenses instead."},
+      {"icon": "package", "title": "Lighter Weight", "description": "No IBIS = lighter body. Better for travel."},
+      {"icon": "video", "title": "Same Sensor", "description": "Core image quality very similar. Same great video."}
+    ]},
+    {"type": "benefits", "title": "Choose R6/R6 II If", "content": [
+      "Handheld video is priority",
+      "Need IBIS stabilization",
+      "Shoot in challenging conditions",
+      "Want backup card slot",
+      "Professional reliability needed",
+      "Budget allows",
+      "Gimbal-free workflow wanted"
+    ]},
+    {"type": "benefits", "title": "Choose R8 If", "content": [
+      "Budget is primary concern",
+      "Use gimbal or tripod often",
+      "Controlled studio environment",
+      "Want to invest in lenses instead",
+      "Lighter weight matters",
+      "Starting out in YouTube",
+      "Single card acceptable"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is IBIS worth the extra cost?", "answer": "For handheld video, absolutely. Game-changing for vlogging, walking shots. If you use tripod/gimbal primarily, less essential."},
+    {"question": "Same image quality?", "answer": "Very similar. Same sensor and processor family. R8 is not a downgrade in image output—just fewer features."},
+    {"question": "Best for YouTube beginners?", "answer": "R8 offers incredible value. Use savings for quality lens (like RF 35mm 1.8). Can upgrade body later."},
+    {"question": "R6 vs R6 II worth the difference?", "answer": "R6 II has improved autofocus and video features. R6 (original) often found at discount. Both excellent for YouTube."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "canon-r6",
+  "secondaryTool": "canon-r8"
+}

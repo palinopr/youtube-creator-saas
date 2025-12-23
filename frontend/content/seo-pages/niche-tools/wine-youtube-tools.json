@@ -1,0 +1,66 @@
+{
+  "slug": "wine-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Wine YouTube Tools 2025: Wine Channel Equipment",
+    "description": "Top tools for wine YouTube channels. Film tastings and vineyard content.",
+    "keywords": ["wine youtube tools", "wine channel equipment", "wine tasting video", "sommelier youtube", "wine content creation"]
+  },
+  "hero": {
+    "badge": "Wine Tools",
+    "headline": "Best Wine YouTube Tools 2025",
+    "subheadline": "Capture the pour beautifully. Gear for wine creators.",
+    "primaryKeyword": "wine youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Wine content combines education with lifestyle—tastings, vineyard tours, pairing guides, and industry insights. Visual presentation matters: the color of wine, the pour, the glassware. Successful wine YouTubers create an aspirational yet accessible atmosphere. Here's what they use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Good Low Light", "description": "Wine cellars and restaurants."},
+      {"icon": "camera", "title": "Sony A7C", "description": "Full frame. Portable."},
+      {"icon": "eye", "title": "Prime Lens", "description": "50mm for beautiful bokeh."},
+      {"icon": "smartphone", "title": "iPhone Pro", "description": "Quick social content."}
+    ]},
+    {"type": "features", "title": "Lighting Wine", "content": [
+      {"icon": "sun", "title": "Backlight Glass", "description": "Shows wine color beautifully."},
+      {"icon": "circle", "title": "Side Light", "description": "Creates depth and mood."},
+      {"icon": "moon", "title": "Warm Tones", "description": "Cozy, inviting atmosphere."},
+      {"icon": "zap", "title": "Portable LED", "description": "For restaurant shoots."}
+    ]},
+    {"type": "features", "title": "Audio Considerations", "content": [
+      {"icon": "mic", "title": "Lavalier Mic", "description": "Clear speech in any environment."},
+      {"icon": "volume-2", "title": "Ambient Sound", "description": "Pour, swirl, toast sounds."},
+      {"icon": "volume-x", "title": "Noise Control", "description": "Restaurants can be loud."},
+      {"icon": "headphones", "title": "Monitor Audio", "description": "Check levels on location."}
+    ]},
+    {"type": "benefits", "title": "Wine Content Tips", "content": [
+      "Backlight glasses to show color",
+      "Explain for beginners and enthusiasts",
+      "Vineyard tours add variety",
+      "Food pairing content performs well",
+      "Budget wine reviews accessible",
+      "Blind tastings create engagement",
+      "Seasonal content works (holiday pairings)"
+    ]},
+    {"type": "checklist", "title": "Wine Video Checklist", "content": [
+      "Glasses clean and spotless?",
+      "Lighting shows wine color?",
+      "Audio clear for tasting notes?",
+      "Background attractive?",
+      "Wine at proper temperature?",
+      "Labels visible if reviewing?",
+      "Ambient atmosphere captured?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film wine color?", "answer": "Backlight is key—light source behind the glass shows wine color beautifully. White background or napkin helps. Side angle shows depth. Avoid direct front lighting that flattens."},
+    {"question": "Best location for wine content?", "answer": "Varies—home studio for consistency and control. Restaurants/wineries for atmosphere and variety. Vineyards for production content. Multiple locations keep content fresh."},
+    {"question": "Handle restaurant filming?", "answer": "Always ask permission first. Portable LED for consistent lighting. Lavalier mic essential in noisy environments. Shoot during quiet hours if possible. Be respectful of other diners."},
+    {"question": "How to describe wine on camera?", "answer": "Balance accessible and educational. Avoid pretension. Use relatable descriptors. Show your genuine reaction. Educational without being condescending. Practice tasting notes off-camera first."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "wine"
+}

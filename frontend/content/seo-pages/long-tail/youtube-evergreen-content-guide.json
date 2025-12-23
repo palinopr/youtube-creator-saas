@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-evergreen-content-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Evergreen Content Guide 2025: Videos That Keep Getting Views",
+    "description": "Create evergreen YouTube content. Videos that generate views for years.",
+    "keywords": ["youtube evergreen content", "evergreen youtube videos", "long term youtube views", "timeless youtube content", "youtube passive views"]
+  },
+  "hero": {
+    "badge": "Evergreen Content",
+    "headline": "YouTube Evergreen Content Guide",
+    "subheadline": "Create once, earn views forever. The power of timeless content.",
+    "primaryKeyword": "youtube evergreen content"
+  },
+  "sections": [
+    {"type": "intro", "content": "Evergreen content keeps generating views months and years after upload. Unlike news or trend content that spikes and dies, evergreen videos build passive traffic. Your best evergreen videos can become assets that work for you indefinitely."},
+    {"type": "features", "title": "Evergreen Content Types", "content": [
+      {"icon": "book", "title": "Tutorials/How-To", "description": "People always need to learn. Skills don't expire quickly."},
+      {"icon": "help-circle", "title": "FAQ/Common Problems", "description": "Questions people keep asking. Searchable problems."},
+      {"icon": "list", "title": "Comparison/Reviews", "description": "Product research is ongoing. Update annually if needed."}
+    ]},
+    {"type": "steps", "title": "Creating Evergreen Videos", "content": [
+      "Target keywords with consistent search volume",
+      "Avoid date-specific references",
+      "Focus on principles, not just current tools",
+      "Use 'year' in title only if you'll update",
+      "Make content comprehensive—be THE resource",
+      "Optimize heavily for search (SEO focus)",
+      "Update thumbnails/titles if performance drops"
+    ]},
+    {"type": "features", "title": "Evergreen vs Trending", "content": [
+      {"icon": "trending-up", "title": "Trending", "description": "Spikes high, dies fast. Good for subscriber acquisition. Needs volume."},
+      {"icon": "activity", "title": "Evergreen", "description": "Steady views over time. Search traffic. Compounds over catalog."},
+      {"icon": "shuffle", "title": "Hybrid Approach", "description": "Mix both. Trending for growth, evergreen for stability."}
+    ]},
+    {"type": "benefits", "title": "Evergreen Benefits", "content": [
+      "Passive traffic for years",
+      "Less pressure to constantly upload",
+      "Compounds as catalog grows",
+      "Search traffic is consistent",
+      "Less competition than trending topics",
+      "Assets you can update and improve",
+      "More predictable revenue"
+    ]},
+    {"type": "checklist", "title": "Evergreen Checklist", "content": [
+      "Topic has consistent search volume?",
+      "Content won't be outdated quickly?",
+      "Date references avoided?",
+      "Comprehensive enough to be THE answer?",
+      "SEO optimized for discovery?",
+      "Can be updated if needed?",
+      "Thumbnail/title search-focused?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should all content be evergreen?", "answer": "No—mix is best. Trending content can drive subscribers who then watch evergreen. Both have roles in growth strategy."},
+    {"question": "How to make tutorials evergreen?", "answer": "Focus on principles over specific tool versions. Update when major changes happen. Use 'Updated 2025' in title if refreshed."},
+    {"question": "Do evergreen videos need promotion?", "answer": "Less than trending—they're designed for search. But initial push helps. Share, embed, link. Search picks up over time."},
+    {"question": "How often update evergreen content?", "answer": "When information becomes outdated or performance drops. Annual review for 'year' videos. Some true evergreen needs no updates."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

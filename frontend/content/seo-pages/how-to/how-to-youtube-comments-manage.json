@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-comments-manage",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Manage YouTube Comments 2025: Complete Moderation Guide",
+    "description": "Master YouTube comment management. Moderation tools, filters, and community building.",
+    "keywords": ["manage youtube comments", "youtube comment moderation", "youtube comment filter", "moderate comments youtube", "youtube community management"]
+  },
+  "hero": {
+    "badge": "Comment Management",
+    "headline": "How to Manage YouTube Comments",
+    "subheadline": "Build community. Moderate effectively. Handle growth.",
+    "primaryKeyword": "manage youtube comments"
+  },
+  "sections": [
+    {"type": "intro", "content": "Comments build community—but they also require management. As channels grow, moderation becomes essential. YouTube provides tools for filtering spam, holding comments for review, and empowering trusted community members. Here's how to manage comments at any scale."},
+    {"type": "steps", "title": "Setting Up Comment Filters", "content": [
+      "Go to YouTube Studio",
+      "Click Settings in left sidebar",
+      "Select 'Community' tab",
+      "Configure 'Defaults' for new videos",
+      "Set up blocked words list",
+      "Enable 'Hold potentially inappropriate' if needed",
+      "Add moderators if applicable",
+      "Save settings"
+    ]},
+    {"type": "features", "title": "Moderation Options", "content": [
+      {"icon": "check", "title": "Allow All", "description": "No filtering. Small channels only."},
+      {"icon": "filter", "title": "Hold for Review", "description": "Approve before publishing."},
+      {"icon": "shield", "title": "Increased Strictness", "description": "More auto-holding."},
+      {"icon": "x-circle", "title": "Disable Comments", "description": "Nuclear option. Use sparingly."}
+    ]},
+    {"type": "features", "title": "Blocked Words & Links", "content": [
+      {"icon": "type", "title": "Word Blocklist", "description": "Auto-hide comments with these words."},
+      {"icon": "link", "title": "Block Links", "description": "Reduce spam and phishing."},
+      {"icon": "users", "title": "Hidden Users", "description": "Individual user blocking."},
+      {"icon": "list", "title": "Approved Users", "description": "Bypass filters for trusted commenters."}
+    ]},
+    {"type": "features", "title": "Scaling Moderation", "content": [
+      {"icon": "users", "title": "Add Moderators", "description": "Trusted community members help."},
+      {"icon": "heart", "title": "Heart Comments", "description": "Highlight quality quickly."},
+      {"icon": "message-circle", "title": "Pin Comments", "description": "Set conversation direction."},
+      {"icon": "settings", "title": "Studio App", "description": "Moderate on mobile."}
+    ]},
+    {"type": "benefits", "title": "Comment Management Tips", "content": [
+      "Respond to early comments personally",
+      "Heart comments you can't reply to",
+      "Pin your own comment for context",
+      "Don't feed trolls—delete and move on",
+      "Build blocklist over time",
+      "Moderators multiply your presence",
+      "Positive community attracts more positivity"
+    ]},
+    {"type": "checklist", "title": "Moderation Checklist", "content": [
+      "Comment settings reviewed?",
+      "Blocked words list updated?",
+      "Link blocking enabled?",
+      "Held comments cleared regularly?",
+      "Moderators added if needed?",
+      "Community Guidelines comment pinned?",
+      "Responding to comments regularly?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I disable comments?", "answer": "Almost never—comments drive engagement signals. Even controversial topics can have moderated discussions. Disable only for specific sensitive videos, not channel-wide. YouTube may also limit features on channels with disabled comments."},
+    {"question": "How to handle negative comments?", "answer": "Legitimate criticism: respond thoughtfully or ignore. Trolls: delete and/or block, don't engage. Spam: delete. Hate speech: report and delete. Your comment section, your rules. Don't let negativity consume you."},
+    {"question": "When to add moderators?", "answer": "When you can't keep up with comments yourself. Trusted community members who understand your values. Start with one, add as needed. Give clear guidelines. Review their actions occasionally."},
+    {"question": "Do comments affect the algorithm?", "answer": "Yes—engagement signals include comments. Videos with discussion perform better. Quality of engagement matters too. Building genuine community helps more than comment count alone."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

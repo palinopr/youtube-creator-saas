@@ -1,0 +1,63 @@
+{
+  "slug": "art-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Art YouTube Tools 2025: Artist Creator Equipment Guide",
+    "description": "Top tools for art YouTube channels. Equipment for drawing, painting, and digital art creators.",
+    "keywords": ["art youtube tools", "artist youtube equipment", "drawing youtube", "digital art youtube", "painting channel tools"]
+  },
+  "hero": {
+    "badge": "Art Tools",
+    "headline": "Best Art YouTube Tools 2025",
+    "subheadline": "Capture your creative process. Equipment for traditional and digital artists.",
+    "primaryKeyword": "art youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Art YouTube showcases the creative process—viewers want to see technique, hear your thought process, and watch transformations happen. Whether you work traditionally or digitally, the right setup captures detail without disrupting your flow."},
+    {"type": "features", "title": "Camera Solutions", "content": [
+      {"icon": "camera", "title": "Overhead Camera Arm", "description": "Elgato Multi-Mount or similar. Capture work surface from above."},
+      {"icon": "video", "title": "Sony ZV-E10", "description": "Great for artist setups. Flip screen for self-monitoring."},
+      {"icon": "monitor", "title": "Screen Recording", "description": "OBS for digital art. Capture Procreate/Photoshop directly."}
+    ]},
+    {"type": "features", "title": "Audio Setup", "content": [
+      {"icon": "mic", "title": "USB Microphone", "description": "Commentary while working. Position out of frame."},
+      {"icon": "headphones", "title": "Voiceover Option", "description": "Record narration separately. More control, cleaner audio."},
+      {"icon": "music", "title": "Background Music", "description": "Many art videos use music. Royalty-free sources essential."}
+    ]},
+    {"type": "features", "title": "Time-Lapse & Editing", "content": [
+      {"icon": "fast-forward", "title": "Time-Lapse", "description": "Speed up hours of work. Standard art video format."},
+      {"icon": "film", "title": "DaVinci Resolve", "description": "Free editing. Speed ramping for dramatic reveals."},
+      {"icon": "play", "title": "Procreate Recording", "description": "Built-in time-lapse. Digital artists have it easy."}
+    ]},
+    {"type": "benefits", "title": "Art Video Best Practices", "content": [
+      "Capture entire process—raw footage is content",
+      "Multiple angles add production value",
+      "Close-ups on detailed technique",
+      "Speed up boring parts, slow for technique",
+      "Commentary adds value over just music",
+      "Show reference and planning process",
+      "Before/after reveals are satisfying"
+    ]},
+    {"type": "checklist", "title": "Art Video Checklist", "content": [
+      "Recording started before beginning?",
+      "Good overhead angle?",
+      "Audio solution ready?",
+      "Lighting consistent?",
+      "Hands and detail visible?",
+      "Commentary or VO planned?",
+      "Final piece well photographed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best way to film overhead?", "answer": "Articulating arm (Elgato, Amazon basics) attached to desk. Position camera directly above work. Mount needs to be sturdy."},
+    {"question": "Talk while working or voiceover?", "answer": "Both work. Talking while working is more authentic but challenging. Voiceover gives more control. Many do hybrid."},
+    {"question": "How long should art videos be?", "answer": "5-15 minutes for time-lapse with commentary. Full real-time for ASMR/relaxation content. Match format to audience expectation."},
+    {"question": "Do I need expensive camera for art?", "answer": "Phone with overhead mount works well. Lighting matters more. Detail comes from positioning, not camera cost."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "art"
+}

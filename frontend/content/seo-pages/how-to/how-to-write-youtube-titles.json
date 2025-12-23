@@ -1,0 +1,63 @@
+{
+  "slug": "how-to-write-youtube-titles",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Titles 2025: Formula for Click-Worthy Titles",
+    "description": "Learn to write YouTube titles that get clicks. Title formulas, power words, and strategies for higher CTR.",
+    "keywords": ["how to write youtube titles", "youtube title tips", "title formula", "click worthy titles", "youtube title strategy"]
+  },
+  "hero": {
+    "badge": "Title Writing",
+    "headline": "How to Write YouTube Titles That Get Clicked",
+    "subheadline": "Master the art of titles that create curiosity, promise value, and drive clicks.",
+    "primaryKeyword": "write youtube titles"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your title works with your thumbnail to convince viewers to click. Great titles create curiosity, promise specific value, and stand out in crowded feeds. This guide covers the psychology and formulas behind titles that consistently drive high click-through rates."},
+    {"type": "features", "title": "Title Psychology", "content": [
+      {"icon": "help-circle", "title": "Curiosity Gap", "description": "Create a gap between what viewers know and what they want to know. They click to close the gap."},
+      {"icon": "target", "title": "Specific Value", "description": "Promise a clear outcome. Viewers click when they know exactly what they'll get."},
+      {"icon": "clock", "title": "Urgency/Timeliness", "description": "Current, trending, or time-sensitive topics get priority attention."}
+    ]},
+    {"type": "steps", "title": "Effective Title Formulas", "content": [
+      "How I [achieved result] in [timeframe]",
+      "X Things You're Doing Wrong with [topic]",
+      "[Number] [adjective] Ways to [desired outcome]",
+      "The Truth About [controversial topic]",
+      "Why [common belief] Is Wrong",
+      "[Famous person/thing] vs [comparison]",
+      "I Tried [thing] for [time period]. Here's What Happened",
+      "[Year] Guide to [topic]: Everything You Need"
+    ]},
+    {"type": "benefits", "title": "Power Words That Boost CTR", "content": [
+      "Ultimate, Complete, Definitive (comprehensiveness)",
+      "Secret, Hidden, Unknown (exclusivity)",
+      "Proven, Guaranteed, Actual (credibility)",
+      "Easy, Simple, Quick (accessibility)",
+      "New, Updated, 2025 (freshness)",
+      "Free, Affordable, Budget (value)",
+      "Best, Top, Greatest (quality)"
+    ]},
+    {"type": "checklist", "title": "Title Optimization Checklist", "content": [
+      "Under 60 characters for full display",
+      "Front-load most important words",
+      "Include primary keyword naturally",
+      "Create curiosity or promise value",
+      "Works with thumbnail (don't repeat)",
+      "Specific numbers when applicable",
+      "Tested multiple variations",
+      "Mobile preview checked"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should YouTube titles be?", "answer": "Under 60 characters to avoid truncation. Put the most important words first. Longer titles work if the crucial info is at the beginning."},
+    {"question": "Should I put keywords at the start?", "answer": "Yes for SEO, but balance with click appeal. 'How to' or compelling hooks can come first, with keywords naturally integrated."},
+    {"question": "Is clickbait bad?", "answer": "Misleading clickbait is bad (damages trust and retention). Compelling titles that deliver on promise are good. Never promise what you don't deliver."},
+    {"question": "Can I change titles after publishing?", "answer": "Yes. Changing titles can improve performance on underperforming videos. YouTube may re-evaluate the video with new title/thumbnail."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "youtube-video-description-template",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video Description Template 2025: Copy-Paste Examples",
+    "description": "Optimize your YouTube descriptions with proven templates. SEO-friendly structures that boost discoverability.",
+    "keywords": ["youtube description template", "video description template", "youtube description", "youtube description examples", "video description seo"]
+  },
+  "hero": {
+    "badge": "Description Templates",
+    "headline": "YouTube Video Description Templates That Work",
+    "subheadline": "Copy-paste description structures optimized for SEO and viewer engagement.",
+    "primaryKeyword": "youtube description template"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your video description helps YouTube understand your content and gives viewers important context. A well-structured description improves discoverability, provides value to viewers, and supports your overall SEO strategy. These templates make description writing fast and effective."},
+    {"type": "features", "title": "Description Components", "content": [
+      {"icon": "type", "title": "Above the Fold", "description": "First 2-3 lines visible before 'Show more'. Most critical for SEO and click-through."},
+      {"icon": "clock", "title": "Timestamps", "description": "Chapter markers that improve navigation and appear in search results."},
+      {"icon": "link", "title": "Links & CTAs", "description": "Subscribe, social links, affiliate links, and related content."}
+    ]},
+    {"type": "steps", "title": "Basic Description Template", "content": [
+      "Line 1: Hook sentence with primary keyword",
+      "Line 2-3: What this video covers (value proposition)",
+      "Line 4: Call-to-action (subscribe, comment)",
+      "[Blank line]",
+      "TIMESTAMPS:",
+      "0:00 Introduction",
+      "1:30 First topic",
+      "[Continue timestamps]",
+      "[Blank line]",
+      "LINKS:",
+      "Subscribe: [link]",
+      "Related video: [link]",
+      "[Blank line]",
+      "#hashtags (2-3 relevant)"
+    ]},
+    {"type": "checklist", "title": "Description Best Practices", "content": [
+      "Include primary keyword in first sentence",
+      "Write 200+ words for SEO value",
+      "Front-load important information",
+      "Add timestamps for navigation",
+      "Include relevant links",
+      "Use 2-3 relevant hashtags",
+      "Add call-to-action",
+      "Update older descriptions periodically"
+    ]},
+    {"type": "benefits", "title": "What to Include", "content": [
+      "Summary of video content",
+      "Key takeaways or topics covered",
+      "Timestamps with keyword-rich titles",
+      "Subscribe and notification reminder",
+      "Social media links",
+      "Affiliate links (with disclosure)",
+      "Related video suggestions",
+      "Contact information if relevant"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should descriptions be?", "answer": "Minimum 200 words for SEO. 300-500 words is ideal. Quality matters more than length. Don't keyword stuff."},
+    {"question": "Do hashtags in descriptions matter?", "answer": "Somewhat. First 3 hashtags appear above your title. Use 2-3 relevant hashtags. More can look spammy."},
+    {"question": "Should I include affiliate links?", "answer": "Yes, if relevant. Include proper disclosure. Don't overload with links. Place them logically after content description."},
+    {"question": "Can I copy the same description to multiple videos?", "answer": "No. Each description should be unique to the video content. Duplicate descriptions look spammy and miss SEO opportunities."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

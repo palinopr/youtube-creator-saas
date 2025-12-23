@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-branding-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Channel Branding Guide 2025: Complete Visual Identity",
+    "description": "Create cohesive YouTube channel branding. Logo, banner, thumbnails, and visual identity.",
+    "keywords": ["youtube branding", "channel branding", "youtube visual identity", "youtube channel design", "youtube brand guide"]
+  },
+  "hero": {
+    "badge": "Branding",
+    "headline": "YouTube Channel Branding Guide",
+    "subheadline": "Create recognizable visual identity. Stand out in the feed.",
+    "primaryKeyword": "youtube channel branding"
+  },
+  "sections": [
+    {"type": "intro", "content": "Strong branding makes your content recognizable at a glance. When viewers scroll, your thumbnails should be identifiable as yours before they read the title. Consistent visual identity builds trust and recognition over time."},
+    {"type": "features", "title": "Branding Elements", "content": [
+      {"icon": "circle", "title": "Channel Logo", "description": "Profile picture. 800x800px. Works at small sizes."},
+      {"icon": "image", "title": "Channel Banner", "description": "2560x1440px. Communicates channel value. Updates seasonally."},
+      {"icon": "grid", "title": "Thumbnail Style", "description": "Consistent colors, fonts, layout. Recognizable pattern."}
+    ]},
+    {"type": "steps", "title": "Creating Brand Identity", "content": [
+      "Define your channel's personality",
+      "Choose 2-3 brand colors",
+      "Select consistent fonts (1-2 max)",
+      "Design logo that works small",
+      "Create thumbnail template",
+      "Design channel banner",
+      "Document in simple brand guide"
+    ]},
+    {"type": "features", "title": "Consistency Elements", "content": [
+      {"icon": "droplet", "title": "Color Palette", "description": "2-3 colors max. Use consistently. Stand out from competition."},
+      {"icon": "type", "title": "Typography", "description": "One or two fonts. Bold for thumbnails. Consistent across content."},
+      {"icon": "layout", "title": "Layout Patterns", "description": "Thumbnail composition. Recurring visual elements. Recognizable format."}
+    ]},
+    {"type": "benefits", "title": "Branding Benefits", "content": [
+      "Instant recognition in feed",
+      "Professional appearance",
+      "Trust signal for new viewers",
+      "Content looks intentional",
+      "Faster thumbnail creation",
+      "Stronger brand recall",
+      "Marketable beyond YouTube"
+    ]},
+    {"type": "checklist", "title": "Branding Checklist", "content": [
+      "Logo works at profile size?",
+      "Banner communicates value?",
+      "Color palette defined?",
+      "Fonts chosen?",
+      "Thumbnail template created?",
+      "Consistent across all videos?",
+      "Brand guide documented?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need professional design?", "answer": "No—Canva is sufficient for most. Consistency matters more than complexity. Clean and simple beats elaborate and inconsistent."},
+    {"question": "How often update branding?", "answer": "Rarely change core elements. Update banner for seasons/milestones. Major rebrands only when necessary. Consistency builds recognition."},
+    {"question": "Best colors for YouTube thumbnails?", "answer": "Contrast with YouTube's white/red. Yellow, blue, green pop. Avoid red unless intentional. Test what works in your niche."},
+    {"question": "Does branding affect algorithm?", "answer": "Indirectly—recognizable thumbnails get more clicks from subscribers. Brand recognition increases CTR. Algorithm notices click patterns."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

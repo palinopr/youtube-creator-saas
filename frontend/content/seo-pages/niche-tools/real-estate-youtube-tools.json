@@ -1,0 +1,65 @@
+{
+  "slug": "real-estate-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Real Estate YouTube Tools 2025: Video & Virtual Tour Gear",
+    "description": "Essential tools for real estate YouTubers. Property video equipment, virtual tour software, and marketing tools.",
+    "keywords": ["real estate youtube tools", "real estate video equipment", "property tour camera", "real estate content creator", "real estate youtube setup"]
+  },
+  "hero": {
+    "badge": "Real Estate Niche",
+    "headline": "Best YouTube Tools for Real Estate Creators in 2025",
+    "subheadline": "Create stunning property videos and virtual tours with professional real estate equipment.",
+    "primaryKeyword": "real estate youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Real estate video content showcases properties, builds personal brands, and attracts clients. From listing walkthroughs to market analysis videos, real estate creators need equipment that captures spaces beautifully. This guide covers the tools for professional real estate content."},
+    {"type": "features", "title": "Essential Real Estate Tools", "content": [
+      {"icon": "video", "title": "Wide-Angle Camera", "description": "Full-frame or wide-angle lenses to capture entire rooms. Sony, Canon, or smartphone gimbals."},
+      {"icon": "rotate-3d", "title": "Gimbal Stabilizer", "description": "DJI RS series or Zhiyun for smooth walkthrough footage without shake."},
+      {"icon": "drone", "title": "Drone", "description": "DJI Mini or Mavic for aerial property and neighborhood shots."}
+    ]},
+    {"type": "checklist", "title": "Real Estate Creator Toolkit", "content": [
+      "Camera with wide-angle lens (12-24mm)",
+      "Gimbal stabilizer for walkthroughs",
+      "Drone for aerial footage (Part 107 if commercial)",
+      "LED lighting for dark interiors",
+      "Tripod for static shots",
+      "Wireless microphone for narration",
+      "360 camera for virtual tours (optional)",
+      "Video editing software",
+      "Thumbnail templates",
+      "CRM for lead capture"
+    ]},
+    {"type": "steps", "title": "Filming Property Videos", "content": [
+      "Arrive early for decluttering and staging",
+      "Open blinds for natural light",
+      "Use wide lens to make spaces feel larger",
+      "Smooth gimbal movements at walking pace",
+      "Capture exterior from multiple angles",
+      "Get drone footage of property and area",
+      "Record voice-over or on-camera host",
+      "Edit with music that matches property style"
+    ]},
+    {"type": "benefits", "title": "Real Estate Content Advantages", "content": [
+      "Direct business lead generation",
+      "Personal brand building for agents",
+      "Local SEO benefits",
+      "Differentiation from competition",
+      "Content repurposable for listings",
+      "Authority building in local market"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need a drone license?", "answer": "For commercial real estate work, yes. FAA Part 107 certification is required in the US. Recreational use has different rules. Check local regulations."},
+    {"question": "What's the best wide-angle lens?", "answer": "12-24mm range works well. Sony 12-24mm f/2.8, Canon RF 14-35mm, or even smartphone ultra-wide can work. Avoid fisheye distortion."},
+    {"question": "Should I use 360 cameras?", "answer": "Virtual tours with 360 cameras like Ricoh Theta or Matterport are valuable for listings. For YouTube content, traditional video is more engaging."},
+    {"question": "How do I handle dark interiors?", "answer": "Portable LED panels help. Shoot toward windows for backlighting. Some pros use HDR bracketing. Post-production can only do so much."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "real-estate"
+}

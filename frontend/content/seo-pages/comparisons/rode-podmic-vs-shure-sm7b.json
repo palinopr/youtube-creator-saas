@@ -1,0 +1,65 @@
+{
+  "slug": "rode-podmic-vs-shure-sm7b",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Rode PodMic vs Shure SM7B 2025: Podcast Microphone Comparison",
+    "description": "Compare Rode PodMic and Shure SM7B for YouTube and podcasting. Sound quality, price, and which mic is right for your setup.",
+    "keywords": ["rode podmic vs shure sm7b", "podcast microphone comparison", "best podcast mic", "youtube microphone", "sm7b vs podmic"]
+  },
+  "hero": {
+    "badge": "Podcast Mics",
+    "headline": "Rode PodMic vs Shure SM7B: Which Mic Wins?",
+    "subheadline": "Budget-friendly contender vs the legendary broadcast standard. Which deserves your desk space?",
+    "primaryKeyword": "rode podmic vs shure sm7b"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Shure SM7B is the industry standard podcast microphone, but the Rode PodMic delivers impressive sound at a fraction of the price. Both are dynamic microphones designed for voice, but they target different budgets and needs. This comparison helps you decide."},
+    {"type": "comparison", "title": "Microphone Comparison", "content": [
+      {"feature": "Price", "toolA": "$99", "toolB": "$399", "tubeGrow": "N/A"},
+      {"feature": "Type", "toolA": "Dynamic", "toolB": "Dynamic", "tubeGrow": "N/A"},
+      {"feature": "Polar Pattern", "toolA": "Cardioid", "toolB": "Cardioid", "tubeGrow": "N/A"},
+      {"feature": "Gain Required", "toolA": "Moderate", "toolB": "High", "tubeGrow": "N/A"},
+      {"feature": "Built-in Processing", "toolA": false, "toolB": false, "tubeGrow": "N/A"},
+      {"feature": "Background Rejection", "toolA": "Good", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "USB Version", "toolA": "PodMic USB", "toolB": "SM7dB", "tubeGrow": "N/A"},
+      {"feature": "Weight", "toolA": "937g", "toolB": "765g", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Rode PodMic Advantages", "content": [
+      {"icon": "dollar", "title": "Incredible Value", "description": "Professional broadcast sound at $99. Hard to beat price-to-performance ratio."},
+      {"icon": "plug", "title": "USB Option", "description": "PodMic USB provides no-interface-needed simplicity."},
+      {"icon": "tool", "title": "Built-in Shock Mount", "description": "Internal shock mounting reduces handling noise out of box."}
+    ]},
+    {"type": "features", "title": "Shure SM7B Advantages", "content": [
+      {"icon": "award", "title": "Industry Standard", "description": "The mic used by professionals worldwide. Proven broadcast quality."},
+      {"icon": "shield", "title": "Superior Rejection", "description": "Exceptional background noise and electromagnetic interference rejection."},
+      {"icon": "music", "title": "Vocal Versatility", "description": "Also used for music vocals. More flexible for mixed content."}
+    ]},
+    {"type": "benefits", "title": "Choose Rode PodMic If", "content": [
+      "You're on a budget",
+      "You want great value for money",
+      "You need USB simplicity (PodMic USB)",
+      "You're starting your podcast journey",
+      "You don't need legendary status"
+    ]},
+    {"type": "benefits", "title": "Choose Shure SM7B If", "content": [
+      "Budget isn't the primary concern",
+      "You want the industry standard",
+      "You're in a noisy environment",
+      "You also record vocals for music",
+      "You want the confidence of proven gear"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is the SM7B really worth 4x the price?", "answer": "For most podcasters, probably not. The PodMic gets you 85-90% of the quality. The SM7B excels in difficult recording environments and for its legendary status."},
+    {"question": "Does the SM7B need a Cloudlifter?", "answer": "Often yes. It requires significant gain. A Cloudlifter or FetHead helps, adding ~$100-150 to the cost. Some interfaces have enough gain built-in."},
+    {"question": "Which is better for untreated rooms?", "answer": "Both are good due to dynamic design. SM7B has slightly better background rejection. But neither replaces proper acoustic treatment."},
+    {"question": "Can I use these with a basic USB interface?", "answer": "PodMic works with most interfaces. SM7B may need an interface with high gain or a preamp like Cloudlifter. Check your interface's gain specs."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "rode-podmic",
+  "secondaryTool": "shure-sm7b"
+}

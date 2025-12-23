@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-copyright",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Handle YouTube Copyright 2025: Fair Use & Claims Guide",
+    "description": "Navigate YouTube copyright. Understand claims, fair use, and how to avoid strikes.",
+    "keywords": ["youtube copyright", "copyright claim youtube", "youtube fair use", "copyright strike", "content id youtube"]
+  },
+  "hero": {
+    "badge": "Copyright",
+    "headline": "How to Handle YouTube Copyright",
+    "subheadline": "Understand claims, fair use, and strikes. Protect your channel.",
+    "primaryKeyword": "youtube copyright"
+  },
+  "sections": [
+    {"type": "intro", "content": "Copyright on YouTube is complex—automatic systems, manual claims, and legal frameworks all interact. Understanding the difference between claims and strikes, what fair use actually means, and how to respond can save your channel. Here's what every creator needs to know."},
+    {"type": "features", "title": "Types of Copyright Issues", "content": [
+      {"icon": "alert-circle", "title": "Content ID Claim", "description": "Automatic detection. Usually monetization goes to claimant. Not a strike."},
+      {"icon": "alert-triangle", "title": "Copyright Strike", "description": "Manual takedown. Serious. Three strikes = channel termination."},
+      {"icon": "shield", "title": "Manual Claim", "description": "Claimant manually flags content. Can be monetization or removal."}
+    ]},
+    {"type": "steps", "title": "Handling Claims", "content": [
+      "Don't panic—claims are common, not always valid",
+      "Review the claim details in Studio",
+      "Determine if claim is valid",
+      "If invalid, dispute with evidence",
+      "If valid, options: remove content, share revenue, or accept",
+      "Track dispute timeline (30 days typically)",
+      "Learn from the experience"
+    ]},
+    {"type": "features", "title": "Fair Use Considerations", "content": [
+      {"icon": "book", "title": "Transformative Use", "description": "Commentary, criticism, parody. Adding significant new value. Case-by-case."},
+      {"icon": "scissors", "title": "Amount Used", "description": "Less is safer. Brief clips better than extended use. Context matters."},
+      {"icon": "dollar-sign", "title": "Market Impact", "description": "Does your use harm original's market? Reviews differ from reuploads."}
+    ]},
+    {"type": "benefits", "title": "Avoiding Copyright Issues", "content": [
+      "Use royalty-free music (YouTube Audio Library)",
+      "Get explicit permission when possible",
+      "Create original content when feasible",
+      "Keep clips short and transformative",
+      "Add substantial commentary to clips",
+      "Understand fair use isn't automatic protection",
+      "Consider copyright before uploading, not after"
+    ]},
+    {"type": "checklist", "title": "Copyright Safety Checklist", "content": [
+      "Music properly licensed?",
+      "Video clips transformative use?",
+      "Images rights cleared?",
+      "Sound effects licensed?",
+      "Permission documented?",
+      "Fair use argument solid?",
+      "Original content where possible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Claim vs strike difference?", "answer": "Claims affect monetization. Strikes can remove videos and threaten channel. Claims are common; strikes are serious."},
+    {"question": "Is fair use guaranteed protection?", "answer": "No—fair use is a legal defense, not automatic permission. It's determined case-by-case, sometimes only in court. Be cautious."},
+    {"question": "Can I use 10 seconds of music?", "answer": "No magic number exists. Content ID can detect very short clips. Even seconds can be claimed. Safer to use royalty-free."},
+    {"question": "What if claim is wrong?", "answer": "Dispute it with evidence. Explain why use is fair or why you have rights. Claimant has 30 days to respond. Be prepared."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

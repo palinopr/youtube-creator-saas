@@ -1,0 +1,59 @@
+{
+  "slug": "how-to-start-youtube-channel",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Start a YouTube Channel in 2025: Complete Beginner Guide",
+    "description": "Step-by-step guide to starting a YouTube channel in 2025. From setup to first upload, everything beginners need to know.",
+    "keywords": ["how to start youtube channel", "start youtube channel 2025", "create youtube channel", "youtube for beginners", "new youtube channel tips"]
+  },
+  "hero": {
+    "badge": "Beginner Guide",
+    "headline": "How to Start a YouTube Channel in 2025",
+    "subheadline": "Everything you need to know to launch your channel, create your first video, and start building an audience.",
+    "primaryKeyword": "start youtube channel"
+  },
+  "sections": [
+    {"type": "intro", "content": "Starting a YouTube channel has never been more accessible. In 2025, creators have access to powerful free tools, built-in audiences through Shorts, and multiple monetization paths. This guide walks you through everything from channel creation to your first upload and beyond."},
+    {"type": "steps", "title": "Channel Setup Process", "content": [
+      "Create a Google account dedicated to your channel",
+      "Go to YouTube and click 'Create a channel'",
+      "Choose your channel name carefully (can be changed later)",
+      "Add a profile picture and banner (Canva has free templates)",
+      "Write a channel description with keywords",
+      "Add links to your social media and website",
+      "Create a channel trailer introducing yourself"
+    ]},
+    {"type": "features", "title": "First Steps After Setup", "content": [
+      {"icon": "target", "title": "Define Your Niche", "description": "What specific topics will you cover? Who is your ideal viewer? Clarity here guides all content decisions."},
+      {"icon": "video", "title": "Plan Your First Videos", "description": "Start with 5-10 video ideas. Research what's working in your niche. Balance trends with evergreen topics."},
+      {"icon": "chart", "title": "Set Up Analytics", "description": "Familiarize yourself with YouTube Studio. Understand basic metrics before you need them."}
+    ]},
+    {"type": "checklist", "title": "Pre-Launch Checklist", "content": [
+      "Channel art created and uploaded",
+      "About section complete with keywords",
+      "5+ video ideas planned",
+      "Basic recording setup ready",
+      "Thumbnail template designed",
+      "First video scripted or outlined",
+      "Understood basic YouTube SEO"
+    ]},
+    {"type": "benefits", "title": "Common Beginner Mistakes to Avoid", "content": [
+      "Waiting for perfect equipment (start with what you have)",
+      "Copying successful creators instead of finding your voice",
+      "Ignoring SEO and discoverability",
+      "Inconsistent upload schedule",
+      "Not engaging with early comments and community"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much does it cost to start a YouTube channel?", "answer": "Zero to start. Your phone is enough to begin. Invest in better gear only after you've validated your content idea and commitment."},
+    {"question": "How long until I get monetized?", "answer": "Requirements: 1,000 subscribers + 4,000 watch hours (or 10M Shorts views). Timeline varies wildly - some achieve it in months, others take years. Focus on content, not milestones."},
+    {"question": "Should I show my face?", "answer": "Not required. Many successful channels are faceless (tutorials, compilations, animations). But face-to-camera content often builds stronger audience connection."},
+    {"question": "How often should I upload?", "answer": "Consistency matters more than frequency. Weekly is sustainable for most. Start with what you can maintain long-term."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-shorts-strategy",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Shorts Strategy 2025: Complete Short-Form Content Guide",
+    "description": "Master YouTube Shorts. Strategy for short-form content growth and monetization.",
+    "keywords": ["youtube shorts strategy", "youtube shorts 2025", "short form content strategy", "youtube shorts tips", "grow with youtube shorts"]
+  },
+  "hero": {
+    "badge": "Shorts Strategy",
+    "headline": "YouTube Shorts Strategy 2025",
+    "subheadline": "Master short-form. Grow faster with vertical content.",
+    "primaryKeyword": "youtube shorts strategy"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Shorts has evolved from experiment to essential. With billions of daily views, Shorts offers massive discovery potential. But Shorts strategy differs from long-form—different hooks, different pacing, different goals. Here's how to make Shorts work for your channel."},
+    {"type": "features", "title": "Shorts Fundamentals", "content": [
+      {"icon": "smartphone", "title": "Vertical Format", "description": "9:16 aspect ratio. 60 seconds max."},
+      {"icon": "zap", "title": "Instant Hook", "description": "First second determines swipe."},
+      {"icon": "repeat", "title": "Loop Potential", "description": "Seamless endings boost views."},
+      {"icon": "hash", "title": "#Shorts Tag", "description": "Helps discovery (optional now)."}
+    ]},
+    {"type": "features", "title": "Content That Works", "content": [
+      {"icon": "scissors", "title": "Repurposed Clips", "description": "Best moments from long-form."},
+      {"icon": "play", "title": "Native Shorts", "description": "Made specifically for format."},
+      {"icon": "book", "title": "Quick Tips", "description": "One valuable insight per Short."},
+      {"icon": "smile", "title": "Entertainment", "description": "Comedy and reactions perform."}
+    ]},
+    {"type": "features", "title": "Growth Strategy", "content": [
+      {"icon": "trending-up", "title": "Volume Matters", "description": "Post frequently while testing."},
+      {"icon": "filter", "title": "Double Down", "description": "More of what works."},
+      {"icon": "users", "title": "Convert to Subs", "description": "CTA to long-form content."},
+      {"icon": "bar-chart", "title": "Track Metrics", "description": "Views, likes, subs gained."}
+    ]},
+    {"type": "steps", "title": "Creating Effective Shorts", "content": [
+      "Start with strong hook (first 1-2 seconds)",
+      "Deliver value immediately—no intros",
+      "Keep pacing fast—no dead time",
+      "Use text overlays for retention",
+      "End with loop or strong CTA",
+      "Use trending audio when relevant",
+      "Optimize title and description",
+      "Post consistently (daily if possible)"
+    ]},
+    {"type": "benefits", "title": "Shorts Best Practices", "content": [
+      "Hook in first second—or they swipe",
+      "Text on screen for silent viewing",
+      "Trending audio boosts discovery",
+      "Consistency > perfection",
+      "Some Shorts just won't hit—that's normal",
+      "Shorts viewers can become long-form fans",
+      "Don't neglect long-form for Shorts only"
+    ]},
+    {"type": "checklist", "title": "Shorts Checklist", "content": [
+      "Hook in first 1-2 seconds?",
+      "Vertical format (9:16)?",
+      "Under 60 seconds?",
+      "Text overlays added?",
+      "Audio trending or original?",
+      "Title optimized for discovery?",
+      "CTA for subscribe/long-form?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do Shorts hurt long-form performance?", "answer": "Generally no—they're separate audiences initially. Shorts can introduce new viewers to your channel. Some may convert to long-form subscribers. Key is quality in both formats. Don't sacrifice long-form for Shorts."},
+    {"question": "How often should I post Shorts?", "answer": "More is generally better for testing. Daily posting common for serious growth. Quality still matters—but Shorts forgive imperfection. 3-5 per week minimum for consistent presence. Test volume and see what's sustainable."},
+    {"question": "Can I monetize Shorts?", "answer": "Yes—Shorts Fund replaced by RPM monetization. Ad revenue now shared on Shorts. Lower per-view than long-form but volume compensates. Need to be in YPP. Monetization based on views in Shorts feed."},
+    {"question": "Repurpose or create native Shorts?", "answer": "Both work. Repurposing is efficient—clip best moments from long-form. Native Shorts can be more optimized for format. Many successful channels do both. Test what your audience responds to."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

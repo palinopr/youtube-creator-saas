@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-research-process",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Research Process 2025: Find Topics That Get Views",
+    "description": "Master YouTube topic research. Find video ideas that your audience wants.",
+    "keywords": ["youtube research process", "youtube topic research", "find youtube topics", "video idea research", "youtube keyword research"]
+  },
+  "hero": {
+    "badge": "Research Process",
+    "headline": "YouTube Research Process Guide",
+    "subheadline": "Find topics people actually want. Research before you create.",
+    "primaryKeyword": "youtube research process"
+  },
+  "sections": [
+    {"type": "intro", "content": "Most creators guess what to make and hope for the best. Systematic research removes guesswork. Understanding what your audience searches for, what competitors succeed with, and where gaps exist means every video has demand before you film it. Research is the highest-ROI activity in content creation."},
+    {"type": "features", "title": "Research Sources", "content": [
+      {"icon": "search", "title": "YouTube Search", "description": "Autocomplete reveals demand."},
+      {"icon": "users", "title": "Competitor Analysis", "description": "What's working for others."},
+      {"icon": "message-circle", "title": "Comments", "description": "Questions your audience asks."},
+      {"icon": "bar-chart-2", "title": "Analytics", "description": "Your own performance data."}
+    ]},
+    {"type": "steps", "title": "Research Process", "content": [
+      "Start with broad topic in your niche",
+      "Check YouTube autocomplete for variations",
+      "Analyze top-ranking videos for topic",
+      "Note view counts and upload dates",
+      "Look for gaps—topics not well covered",
+      "Check comments for related questions",
+      "Validate with search tools (TubeBuddy, vidIQ)",
+      "Prioritize by demand and competition"
+    ]},
+    {"type": "features", "title": "Research Tools", "content": [
+      {"icon": "search", "title": "YouTube Autocomplete", "description": "Free, shows search demand."},
+      {"icon": "trending-up", "title": "TubeBuddy/vidIQ", "description": "Search volume data."},
+      {"icon": "globe", "title": "Google Trends", "description": "Topic interest over time."},
+      {"icon": "file-text", "title": "AnswerThePublic", "description": "Question-based research."}
+    ]},
+    {"type": "benefits", "title": "Research Best Practices", "content": [
+      "Autocomplete = real searches",
+      "High views + old date = opportunity",
+      "Comments reveal content gaps",
+      "Mix high/low competition topics",
+      "Validate before heavy investment",
+      "Track research in spreadsheet",
+      "Build topic bank for future"
+    ]},
+    {"type": "checklist", "title": "Research Checklist", "content": [
+      "Checked YouTube autocomplete?",
+      "Analyzed top competing videos?",
+      "Identified content gaps?",
+      "Validated search demand?",
+      "Assessed competition level?",
+      "Documented in topic bank?",
+      "Prioritized by opportunity?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much research before filming?", "answer": "At minimum: check autocomplete, look at top 5 videos for topic, read comments. Can be 15 minutes. Deep research for important topics might be hours. Always some research—never just guess."},
+    {"question": "What makes a good topic?", "answer": "High search demand, achievable competition, fits your niche, you can deliver value. Best topics have demand but aren't dominated by huge channels. Look for 'goldilocks' opportunities."},
+    {"question": "How to find gaps in content?", "answer": "Comments asking questions not answered. Old videos ranking (audience wants fresh). Related topics with no good videos. Your unique angle on common topic. Specific variations of broad topics."},
+    {"question": "Should I only make researched content?", "answer": "Research should inform most content. But passion projects and experiments valuable too. 70% research-backed, 30% creative exploration reasonable balance. Data + creativity = best results."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

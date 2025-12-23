@@ -1,0 +1,72 @@
+{
+  "slug": "coding-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Coding YouTube Tools 2025: Programming Tutorial Equipment",
+    "description": "Essential tools for coding tutorial YouTube channels. Screen recording, audio, and workflow.",
+    "keywords": ["coding youtube tools", "programming tutorial equipment", "dev youtube channel", "coding tutorial setup", "programming youtube"]
+  },
+  "hero": {
+    "badge": "Coding Content",
+    "headline": "Essential Tools for Coding YouTube Creators",
+    "subheadline": "Create clear programming tutorials. Screen recording, audio, and workflow essentials.",
+    "primaryKeyword": "coding youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Coding tutorials need crystal clear screen capture, readable text, and good audio explanations. Whether you teach web development, system programming, or data science, here's the essential toolkit for programming content."},
+    {"type": "features", "title": "Screen Recording", "content": [
+      {"icon": "monitor", "title": "OBS Studio", "description": "Free, powerful screen recording. Code-focused scene setup."},
+      {"icon": "video", "title": "ScreenFlow (Mac)", "description": "Excellent for tutorials. Easy zoom, callouts, editing built-in."},
+      {"icon": "layout", "title": "Camtasia", "description": "All-in-one recording + editing. Good for structured tutorials."}
+    ]},
+    {"type": "features", "title": "Code Presentation", "content": [
+      {"icon": "type", "title": "Large Font Size", "description": "16-20pt minimum. Viewers watch on phones. Code must be readable."},
+      {"icon": "sun", "title": "High Contrast Theme", "description": "Dark themes with bright syntax. Easy on eyes, good on video."},
+      {"icon": "maximize", "title": "Zoom for Details", "description": "Zoom into important code sections. Guide viewer attention."}
+    ]},
+    {"type": "features", "title": "Audio Setup", "content": [
+      {"icon": "mic", "title": "Quality Microphone", "description": "Clear explanations essential. USB condenser works great."},
+      {"icon": "keyboard", "title": "Quiet Keyboard", "description": "Mechanical keyboards can distract. Consider quieter switches."},
+      {"icon": "volume-2", "title": "Consistent Audio", "description": "Speaking while typing is tricky. Consider voiceover after."}
+    ]},
+    {"type": "steps", "title": "Coding Tutorial Tips", "content": [
+      "Use large font size (16pt+)",
+      "High contrast color theme",
+      "Zoom into relevant code sections",
+      "Explain before typing",
+      "Show errors and how to fix them",
+      "Use chapters for long tutorials",
+      "Provide code in description/GitHub"
+    ]},
+    {"type": "benefits", "title": "Coding Content Types", "content": [
+      "Step-by-step tutorials",
+      "Project-based learning",
+      "Code reviews",
+      "Algorithm explanations",
+      "Tool/library reviews",
+      "Career advice for developers",
+      "Live coding sessions"
+    ]},
+    {"type": "checklist", "title": "Coding Creator Setup", "content": [
+      "Screen recording software",
+      "Quality microphone",
+      "Code editor configured (font, theme)",
+      "Zoom/callout capability",
+      "GitHub for code sharing",
+      "Chapters for navigation",
+      "Quiet recording environment"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best font size for code?", "answer": "16-20pt minimum. Test on phone—if you can't read it, viewers can't either. Bigger is better for video."},
+    {"question": "Should I use face cam?", "answer": "Optional for coding. Many successful channels are screencast only. Face helps with explanation moments but not required."},
+    {"question": "How to handle typing sounds?", "answer": "Quiet keyboard, good mic placement, or voiceover after. Some viewers like typing ASMR, others find it distracting."},
+    {"question": "What about live coding vs edited?", "answer": "Edited tutorials are cleaner—cut mistakes, add callouts. Live coding is more authentic, shows real problem-solving. Both work."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "coding"
+}

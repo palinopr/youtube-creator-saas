@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { niches } from "@/lib/niches";
+import { getPublishedSEOPages } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tubegrow.io";
@@ -74,6 +75,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // Tool Landing Pages
+    {
+      url: `${baseUrl}/youtube-title-generator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/youtube-tag-generator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    // Comparison Pages
+    {
+      url: `${baseUrl}/tubebuddy-vs-vidiq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
     {
       url: `${baseUrl}/niches`,
       lastModified: new Date(),
@@ -126,5 +147,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...nichePages, ...blogPosts];
+  // Programmatic SEO pages
+  const seoPages = getPublishedSEOPages().map((page) => ({
+    url: `${baseUrl}/seo/${page.category}/${page.slug}`,
+    lastModified: new Date(page.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...nichePages, ...blogPosts, ...seoPages];
 }

@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-schedule-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Schedule YouTube Videos 2025: Video Scheduling Guide",
+    "description": "Schedule YouTube videos for automatic publishing. Step-by-step scheduling tutorial.",
+    "keywords": ["schedule youtube videos", "youtube scheduling", "schedule youtube upload", "youtube premiere schedule", "youtube publish schedule"]
+  },
+  "hero": {
+    "badge": "Scheduling",
+    "headline": "How to Schedule YouTube Videos",
+    "subheadline": "Upload now, publish later. Maintain consistency without being online.",
+    "primaryKeyword": "schedule youtube videos"
+  },
+  "sections": [
+    {"type": "intro", "content": "Scheduling videos lets you upload in batches and publish at optimal times without being present. It's essential for consistency—you can record a week's worth of content and schedule it out. Here's how to schedule videos effectively."},
+    {"type": "features", "title": "Scheduling Benefits", "content": [
+      {"icon": "calendar", "title": "Consistent Publishing", "description": "Post at same time each week. Builds audience expectation."},
+      {"icon": "clock", "title": "Optimal Timing", "description": "Publish when audience is active, regardless of your schedule."},
+      {"icon": "battery-charging", "title": "Batch Workflow", "description": "Create multiple videos, schedule ahead. Reduces daily pressure."}
+    ]},
+    {"type": "steps", "title": "Scheduling a Video", "content": [
+      "Upload video to YouTube Studio",
+      "Fill in title, description, tags",
+      "Add thumbnail",
+      "In 'Visibility' section, select 'Schedule'",
+      "Choose date and time",
+      "Set timezone (uses your account's default)",
+      "Click 'Schedule'",
+      "Video appears in 'Scheduled' tab",
+      "Edit anytime before publish time"
+    ]},
+    {"type": "features", "title": "Scheduling Options", "content": [
+      {"icon": "clock", "title": "Private Until Scheduled", "description": "Video stays private until scheduled time. Then goes public automatically."},
+      {"icon": "star", "title": "Premiere Option", "description": "Schedule as Premiere for live chat during first viewing."},
+      {"icon": "bell", "title": "Subscriber Notifications", "description": "Notifications sent at publish time if enabled. Timing matters."}
+    ]},
+    {"type": "benefits", "title": "Scheduling Strategy Tips", "content": [
+      "Test different days/times for your audience",
+      "Check Analytics for when subscribers are online",
+      "Schedule at least a few days ahead",
+      "Have buffer content for emergencies",
+      "Consider timezone of target audience",
+      "Premieres work for community-focused content",
+      "Don't schedule too far ahead—may need adjustments"
+    ]},
+    {"type": "checklist", "title": "Before Scheduling Checklist", "content": [
+      "Title finalized and optimized?",
+      "Description complete with links?",
+      "Thumbnail uploaded?",
+      "End screens and cards added?",
+      "Correct category selected?",
+      "Premiere or regular publish chosen?",
+      "Schedule time optimal?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What time should I schedule videos?", "answer": "Check YouTube Analytics > Audience > When your viewers are on YouTube. Generally, weekday afternoons work for most niches. Test and adjust based on data."},
+    {"question": "Can I edit a scheduled video?", "answer": "Yes—everything editable until publish time. Title, description, thumbnail, visibility all changeable. Can also cancel schedule entirely."},
+    {"question": "Does scheduling affect the algorithm?", "answer": "No direct impact. Algorithm cares about performance after publishing, not how it was published. Schedule vs immediate publish makes no difference."},
+    {"question": "Should I use Premiere for scheduled videos?", "answer": "Optional. Premieres are good for building community—live chat during first watch. Regular scheduling is simpler. Use Premiere for special content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

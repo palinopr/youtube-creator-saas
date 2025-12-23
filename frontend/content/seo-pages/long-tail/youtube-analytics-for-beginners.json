@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-analytics-for-beginners",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Analytics for Beginners 2025: Complete Guide",
+    "description": "Master YouTube Analytics as a beginner. Learn what metrics matter, how to read your data, and make better content decisions.",
+    "keywords": ["youtube analytics for beginners", "youtube analytics tutorial", "understand youtube analytics", "youtube studio analytics", "youtube metrics explained"]
+  },
+  "hero": {
+    "badge": "Beginner Guide",
+    "headline": "YouTube Analytics for Beginners: Complete 2025 Guide",
+    "subheadline": "Stop being confused by data. Learn exactly what YouTube Analytics metrics mean and how to use them to grow.",
+    "primaryKeyword": "youtube analytics for beginners"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "YouTube Analytics can feel overwhelming when you're new. Dozens of metrics, charts, and reports compete for attention. This guide strips away the complexity and teaches you exactly what to focus on as a beginner. You'll learn which numbers actually matter and how to use them to make better content decisions."
+    },
+    {
+      "type": "features",
+      "title": "Key Metrics for Beginners",
+      "content": [
+        {"icon": "chart", "title": "Watch Time", "description": "The total minutes people spend watching your videos. YouTube's most important metric for ranking and recommendations."},
+        {"icon": "target", "title": "Click-Through Rate (CTR)", "description": "Percentage of people who click your thumbnail when they see it. Indicates how appealing your title and thumbnail are."},
+        {"icon": "users", "title": "Subscribers Gained", "description": "How many new subscribers each video brings. Shows which content converts viewers into loyal followers."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Where to Find Key Analytics",
+      "content": [
+        "Open YouTube Studio and click 'Analytics' in the left sidebar",
+        "Check the Overview tab for your channel's summary",
+        "Use the Content tab to analyze individual video performance",
+        "Review the Audience tab to understand who watches you",
+        "Check the Revenue tab if you're monetized"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Weekly Analytics Checkup",
+      "content": [
+        "Compare this week's watch time to last week",
+        "Note which videos drove the most subscribers",
+        "Check CTR on your latest video",
+        "Review traffic sources to see where viewers find you",
+        "Look at audience retention on your newest video",
+        "Identify your top-performing video of the week"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Common Beginner Mistakes",
+      "content": [
+        "Obsessing over subscriber count instead of watch time",
+        "Checking analytics too frequently (daily is enough)",
+        "Ignoring audience retention graphs",
+        "Not comparing metrics to your own averages",
+        "Getting discouraged by normal fluctuations"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "How often should I check YouTube Analytics?", "answer": "Once daily is enough. More frequent checking leads to anxiety over normal fluctuations. Give your content time to find its audience before judging performance."},
+    {"question": "What's a good CTR for new channels?", "answer": "2-10% is typical, but it varies wildly by niche and traffic source. Compare to your own average rather than arbitrary benchmarks. Aim to improve over time."},
+    {"question": "Why is watch time more important than views?", "answer": "YouTube's business model relies on keeping people on the platform. Videos that keep viewers watching get recommended more, regardless of total views."},
+    {"question": "When should I look at advanced analytics?", "answer": "Master the basics first (watch time, CTR, subscribers). Once you're consistently posting and have a month of data, explore traffic sources and audience retention."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

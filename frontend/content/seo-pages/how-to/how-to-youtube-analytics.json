@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-analytics",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Analytics 2025: Data Guide for Creators",
+    "description": "Master YouTube Analytics. Understand metrics, find insights, and optimize your channel.",
+    "keywords": ["youtube analytics", "youtube studio analytics", "youtube metrics", "understand youtube analytics", "youtube data"]
+  },
+  "hero": {
+    "badge": "Analytics",
+    "headline": "How to Use YouTube Analytics",
+    "subheadline": "Data drives decisions. Understand what metrics matter and how to use them.",
+    "primaryKeyword": "youtube analytics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics is your performance dashboard—showing what works, what doesn't, and where to focus. Understanding these metrics helps you make data-driven decisions instead of guessing. Here's how to read and use YouTube Analytics effectively."},
+    {"type": "features", "title": "Key Metrics", "content": [
+      {"icon": "eye", "title": "Views & Watch Time", "description": "Total views and minutes watched. Foundation metrics."},
+      {"icon": "mouse-pointer", "title": "CTR & Impressions", "description": "How often videos are shown and clicked. Packaging effectiveness."},
+      {"icon": "trending-up", "title": "Audience Retention", "description": "How long viewers watch. Content quality indicator."}
+    ]},
+    {"type": "steps", "title": "Navigating Analytics", "content": [
+      "Open YouTube Studio",
+      "Click Analytics in left sidebar",
+      "Overview shows channel summary",
+      "Reach tab shows impressions/CTR",
+      "Engagement shows watch time/retention",
+      "Audience shows who's watching",
+      "Revenue shows monetization (if enabled)",
+      "Filter by video, date range, geography"
+    ]},
+    {"type": "features", "title": "Important Reports", "content": [
+      {"icon": "bar-chart-2", "title": "Audience Retention Graph", "description": "Shows exactly where viewers drop off. Per-video insight."},
+      {"icon": "users", "title": "Traffic Sources", "description": "Where views come from. Search, suggested, browse, external."},
+      {"icon": "globe", "title": "Geography & Demographics", "description": "Where and who is watching. Audience understanding."}
+    ]},
+    {"type": "benefits", "title": "What to Look For", "content": [
+      "Retention patterns across videos",
+      "Which topics perform best",
+      "Traffic source trends",
+      "CTR changes over time",
+      "Subscriber growth patterns",
+      "Best posting times (audience activity)",
+      "Video length vs performance"
+    ]},
+    {"type": "benefits", "title": "Common Mistakes", "content": [
+      "Obsessing over daily changes",
+      "Comparing to other channels",
+      "Ignoring retention graphs",
+      "Not filtering by date range",
+      "Missing traffic source insights",
+      "Overlooking returning viewers",
+      "Not testing based on data"
+    ]},
+    {"type": "checklist", "title": "Analytics Review Checklist", "content": [
+      "Weekly performance trend?",
+      "Top performing recent videos?",
+      "Retention patterns identified?",
+      "CTR improving or declining?",
+      "Traffic sources changing?",
+      "Audience growth healthy?",
+      "Revenue trends (if applicable)?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often to check analytics?", "answer": "Weekly for trends, daily is obsessive. Monthly for big picture. Don't react to single-day fluctuations."},
+    {"question": "What's most important metric?", "answer": "Audience retention for content quality. CTR for packaging. Watch time for overall performance. All matter together."},
+    {"question": "Why did views drop suddenly?", "answer": "Check traffic sources—which declined? Algorithm changes, competition, seasonality all possible. Look at data before panicking."},
+    {"question": "Realtime vs 48-hour data?", "answer": "Realtime is exciting but inaccurate. Wait 48-72 hours for reliable data. YouTube adjusts counts over time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-description-optimize",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Optimize YouTube Descriptions 2025: Description Writing Guide",
+    "description": "Write YouTube descriptions that boost SEO and engagement. Templates and best practices.",
+    "keywords": ["youtube description", "optimize youtube description", "youtube description seo", "video description", "youtube description template"]
+  },
+  "hero": {
+    "badge": "Descriptions",
+    "headline": "How to Optimize YouTube Descriptions",
+    "subheadline": "The most underutilized real estate on YouTube. Make your descriptions work harder.",
+    "primaryKeyword": "youtube description"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube descriptions are searchable, clickable real estate that most creators waste. The first 200 characters appear in search results, and the full description helps YouTube understand your content. Optimized descriptions improve discoverability and drive action."},
+    {"type": "features", "title": "Description Anatomy", "content": [
+      {"icon": "eye", "title": "First 200 Characters", "description": "Most critical. Shows in search results. Hook + keyword + value."},
+      {"icon": "file-text", "title": "Full Description", "description": "Expand on content. Include keywords naturally. Add context."},
+      {"icon": "link", "title": "Links Section", "description": "Social media, website, resources. Drive traffic beyond YouTube."}
+    ]},
+    {"type": "steps", "title": "Writing Effective Descriptions", "content": [
+      "Start with compelling hook (first 200 chars)",
+      "Include primary keyword naturally",
+      "Summarize what video covers",
+      "Add timestamps for key sections",
+      "Include relevant links",
+      "Add social media links",
+      "Include call-to-action",
+      "Add hashtags (3-5 max)"
+    ]},
+    {"type": "features", "title": "SEO Elements", "content": [
+      {"icon": "search", "title": "Keywords", "description": "Include target keyword in first 200 chars. Natural usage throughout."},
+      {"icon": "clock", "title": "Timestamps", "description": "Creates chapters. Helps viewers navigate. SEO bonus."},
+      {"icon": "hash", "title": "Hashtags", "description": "3-5 relevant hashtags. Clickable for discovery. Don't overdo."},
+      {"icon": "type", "title": "Natural Language", "description": "Write for humans, not algorithms. Keyword stuffing hurts."}
+    ]},
+    {"type": "benefits", "title": "Description Best Practices", "content": [
+      "Hook in first sentence",
+      "Keywords in first 200 characters",
+      "Full summary of video content",
+      "Timestamps for longer videos",
+      "Relevant outbound links",
+      "Clear call-to-action",
+      "Consistent format across videos"
+    ]},
+    {"type": "checklist", "title": "Description Optimization Checklist", "content": [
+      "Compelling first 200 characters?",
+      "Primary keyword included?",
+      "Video content summarized?",
+      "Timestamps added?",
+      "Links working and relevant?",
+      "Call-to-action clear?",
+      "Hashtags appropriate (3-5)?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should descriptions be?", "answer": "At least 200 words for SEO. But quality over quantity. Cover what's needed. Some creators use 500+ words with full transcripts."},
+    {"question": "Do descriptions affect search ranking?", "answer": "Yes, especially first 200 characters. YouTube uses description to understand content. Keywords here help discoverability."},
+    {"question": "Should I include timestamps?", "answer": "Yes for videos over 5 minutes. Creates chapters in YouTube player. Improves user experience. Small SEO benefit too."},
+    {"question": "How many hashtags should I use?", "answer": "3-5 is optimal. First 3 appear above title on desktop. Too many looks spammy. Relevant hashtags only."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

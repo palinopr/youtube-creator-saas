@@ -1,0 +1,65 @@
+{
+  "slug": "diy-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best DIY YouTube Tools 2025: Cameras, Lighting & Equipment",
+    "description": "Essential tools for DIY and crafting YouTubers. Cameras for tutorials, lighting for workbenches, and filming equipment.",
+    "keywords": ["diy youtube tools", "diy content creator", "craft youtube setup", "tutorial filming equipment", "maker youtube channel"]
+  },
+  "hero": {
+    "badge": "DIY Niche",
+    "headline": "Best YouTube Tools for DIY Creators in 2025",
+    "subheadline": "Capture every project detail with the right cameras, lighting, and editing tools for maker content.",
+    "primaryKeyword": "diy youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "DIY and maker content requires showing detailed processes—hands working, tools in action, step-by-step progression. This demands different filming strategies than typical YouTube content: multiple angles, overhead shots, close-up capability, and durable equipment that survives workshop environments."},
+    {"type": "features", "title": "Essential DIY Tools", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Top-down shots essential for tutorials. C-stands, boom arms, or articulating mounts."},
+      {"icon": "sun", "title": "Workshop Lighting", "description": "Bright, even lighting for workbenches. LED panels that withstand dust and heat."},
+      {"icon": "camera", "title": "Detail Camera", "description": "Camera with good macro or close-up capability for showing small parts and precision work."}
+    ]},
+    {"type": "checklist", "title": "DIY Creator Toolkit", "content": [
+      "Primary camera for wide shots",
+      "Secondary camera for close-ups",
+      "Overhead mounting system",
+      "Bright LED work lights",
+      "Action cam for POV shots",
+      "Wireless microphone (avoid cord tangles)",
+      "Time-lapse capability",
+      "Durable tripods for workshop",
+      "Video editing software",
+      "Project planning app"
+    ]},
+    {"type": "steps", "title": "Filming DIY Projects", "content": [
+      "Plan camera positions before starting project",
+      "Set up overhead shot for main work area",
+      "Position secondary camera for detail shots",
+      "Test lighting to eliminate shadows on work surface",
+      "Use wireless mic to stay hands-free",
+      "Shoot extra B-roll of tools and materials",
+      "Capture time-lapses of repetitive tasks",
+      "Show finished project from multiple angles"
+    ]},
+    {"type": "benefits", "title": "DIY Content Advantages", "content": [
+      "Highly searchable (how-to queries)",
+      "Evergreen content (projects stay relevant)",
+      "Strong affiliate potential (tools, materials)",
+      "Brand partnerships with tool companies",
+      "Cross-platform appeal (Pinterest, TikTok)",
+      "Community builds around shared interests"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I film while using both hands?", "answer": "Lock-off shots on tripods with cameras rolling continuously. Edit out the camera-free portions. Wireless mics let you narrate while working."},
+    {"question": "What about camera damage in dusty workshops?", "answer": "Use weather-sealed cameras if possible. Protect with lens hoods and covers between shots. Action cams are durable backup options."},
+    {"question": "How do I show small details clearly?", "answer": "Macro lenses or cameras with good close-up capability. High resolution (4K) lets you crop in editing. Good lighting is essential for detail visibility."},
+    {"question": "Should I film the whole project or edit heavily?", "answer": "Time-lapse repetitive work, show key steps in real-time. Viewers want to learn, not watch every screw turn. Balance instruction with engagement."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "diy"
+}

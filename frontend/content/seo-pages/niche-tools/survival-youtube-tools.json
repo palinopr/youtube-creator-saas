@@ -1,0 +1,66 @@
+{
+  "slug": "survival-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Survival YouTube Tools 2025: Outdoor & Bushcraft Equipment",
+    "description": "Top tools for survival YouTube channels. Film bushcraft and outdoor content.",
+    "keywords": ["survival youtube tools", "bushcraft channel equipment", "outdoor youtube gear", "survival video", "wilderness content"]
+  },
+  "hero": {
+    "badge": "Survival Tools",
+    "headline": "Best Survival YouTube Tools 2025",
+    "subheadline": "Document wilderness skills. Gear for survival creators.",
+    "primaryKeyword": "survival youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Survival content demands equipment that works in harsh conditions—rain, cold, dirt, and remote locations. Reliability trumps features when you're miles from help. Here's what successful bushcraft and survival YouTubers use to document their wilderness adventures."},
+    {"type": "features", "title": "Camera Systems", "content": [
+      {"icon": "video", "title": "GoPro Hero 12", "description": "Weatherproof. Excellent stabilization. POV shots."},
+      {"icon": "camera", "title": "Sony A7C", "description": "Compact full-frame. Weather sealed."},
+      {"icon": "zap", "title": "DJI Osmo Action", "description": "Dual screens. Rugged build."},
+      {"icon": "smartphone", "title": "Rugged Phone", "description": "Backup option. Always available."}
+    ]},
+    {"type": "features", "title": "Power Solutions", "content": [
+      {"icon": "battery", "title": "Solar Charger", "description": "Goal Zero, Anker. Off-grid power."},
+      {"icon": "box", "title": "Portable Battery", "description": "High capacity. Multiple device charges."},
+      {"icon": "zap", "title": "Extra Batteries", "description": "Cold drains fast. Carry spares."},
+      {"icon": "refresh-cw", "title": "Car Charger", "description": "Base camp power from vehicle."}
+    ]},
+    {"type": "features", "title": "Audio for Outdoors", "content": [
+      {"icon": "mic", "title": "Wireless Lav", "description": "Rode Wireless GO. Freedom of movement."},
+      {"icon": "wind", "title": "Windscreen", "description": "Dead cat essential. Outdoor audio."},
+      {"icon": "volume-2", "title": "Shotgun Mic", "description": "Environmental sounds. Nature audio."},
+      {"icon": "headphones", "title": "Monitoring", "description": "Check audio in field. Catch problems early."}
+    ]},
+    {"type": "benefits", "title": "Survival Content Tips", "content": [
+      "Weatherproof gear essential",
+      "Redundant power systems",
+      "Protect equipment from elements",
+      "Multiple camera angles tell story",
+      "Document process, not just results",
+      "Safety first—content second",
+      "B-roll of environment adds atmosphere"
+    ]},
+    {"type": "checklist", "title": "Field Filming Checklist", "content": [
+      "Batteries fully charged?",
+      "Solar charger packed?",
+      "Memory cards formatted?",
+      "Weather protection ready?",
+      "Audio gear with windscreens?",
+      "Backup camera available?",
+      "Dry bags for protection?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for wilderness?", "answer": "GoPro for reliability and weather resistance. Sony A7C if you need better low-light (shelter interiors). Action cameras handle abuse better—survival content is hard on gear."},
+    {"question": "How to handle power off-grid?", "answer": "Solar panels for extended trips. High-capacity battery banks for shorter ones. Cold weather kills batteries fast—keep them warm. Plan power budget carefully."},
+    {"question": "Recording audio outdoors?", "answer": "Wind is your enemy—use dead cat windscreens always. Wireless lavs give freedom while demonstrating. Record voiceover in shelter for clean narration. Always monitor in field."},
+    {"question": "Filming in rain/snow?", "answer": "Rain covers for cameras. GoPro/action cams handle weather natively. Lens cloths essential. Silica gel packets in bags prevent moisture. Have dry backup gear."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "survival"
+}

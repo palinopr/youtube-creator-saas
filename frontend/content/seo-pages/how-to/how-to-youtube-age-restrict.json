@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-age-restrict",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Age Restrict YouTube Videos 2025: Content Ratings Guide",
+    "description": "Understand YouTube age restrictions. When to restrict and how it affects your videos.",
+    "keywords": ["youtube age restrict", "age restriction youtube", "youtube content rating", "restricted youtube videos", "youtube adult content"]
+  },
+  "hero": {
+    "badge": "Age Restriction",
+    "headline": "How to Age Restrict YouTube Videos",
+    "subheadline": "Understand content ratings. Protect your channel and young viewers.",
+    "primaryKeyword": "youtube age restrict"
+  },
+  "sections": [
+    {"type": "intro", "content": "Age restriction limits videos to viewers 18+ and affects monetization, recommendations, and features. Understanding when restriction applies helps you make content decisions and protect your channel. Here's what creators need to know about YouTube's age restriction system."},
+    {"type": "features", "title": "What Triggers Age Restriction", "content": [
+      {"icon": "alert-circle", "title": "Violence", "description": "Graphic violence, gore, injury."},
+      {"icon": "x-circle", "title": "Adult Themes", "description": "Sexual content, nudity, suggestive."},
+      {"icon": "volume-x", "title": "Harmful Activities", "description": "Dangerous stunts, drug use depiction."},
+      {"icon": "type", "title": "Vulgar Language", "description": "Excessive profanity throughout."}
+    ]},
+    {"type": "steps", "title": "Self-Restricting a Video", "content": [
+      "Go to YouTube Studio",
+      "Click 'Content' in left sidebar",
+      "Select video to restrict",
+      "Click 'Details' to edit",
+      "Scroll to 'Age restriction'",
+      "Select 'Yes, restrict my video'",
+      "Save changes",
+      "Video now limited to 18+"
+    ]},
+    {"type": "features", "title": "Effects of Age Restriction", "content": [
+      {"icon": "eye-off", "title": "Limited Reach", "description": "Not recommended, excluded from some features."},
+      {"icon": "dollar-sign", "title": "Reduced Monetization", "description": "Limited or no ads on restricted content."},
+      {"icon": "share-2", "title": "Embedding Disabled", "description": "Can't be embedded on other sites."},
+      {"icon": "bell", "title": "Notifications Reduced", "description": "May not notify all subscribers."}
+    ]},
+    {"type": "features", "title": "Appeal Process", "content": [
+      {"icon": "help-circle", "title": "Request Review", "description": "Appeal if you believe restriction is wrong."},
+      {"icon": "clock", "title": "Wait Time", "description": "Reviews take time, be patient."},
+      {"icon": "check", "title": "Clear Violation", "description": "If borderline, YouTube may maintain restriction."},
+      {"icon": "file-text", "title": "Documentation", "description": "Explain why content isn't adult."}
+    ]},
+    {"type": "benefits", "title": "Content Best Practices", "content": [
+      "Know YouTube's Community Guidelines",
+      "Context matters—educational vs gratuitous",
+      "Self-restrict proactively if borderline",
+      "Consider edited/censored versions",
+      "Thumbnails must also be appropriate",
+      "Titles can trigger review",
+      "When in doubt, play it safe"
+    ]},
+    {"type": "checklist", "title": "Content Review Checklist", "content": [
+      "Violence level appropriate?",
+      "No sexual/suggestive content?",
+      "Dangerous activities shown responsibly?",
+      "Language within guidelines?",
+      "Thumbnail appropriate?",
+      "Title not misleading to guidelines?",
+      "Educational context if mature themes?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I remove age restriction?", "answer": "If YouTube applied it, appeal through Studio. If you self-applied, edit video settings to remove. YouTube-applied restrictions require review—success not guaranteed."},
+    {"question": "Does age restriction affect monetization?", "answer": "Significantly—many advertisers avoid restricted content. Revenue typically much lower. Some restricted content may not monetize at all. Consider if mature content is worth the trade-off."},
+    {"question": "Why was my video age-restricted?", "answer": "YouTube's system or reviewer flagged mature content. Check email for specifics. Common triggers: violence, adult themes, language, dangerous activities. Context matters but doesn't guarantee exemption."},
+    {"question": "Should I self-restrict borderline content?", "answer": "Sometimes strategic—protects channel from strikes. Shows good faith. However, limits reach significantly. Consider audience and content purpose. Alternative: edit content to avoid restriction entirely."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

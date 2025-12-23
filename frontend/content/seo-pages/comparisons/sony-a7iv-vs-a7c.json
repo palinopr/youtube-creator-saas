@@ -1,0 +1,67 @@
+{
+  "slug": "sony-a7iv-vs-a7c",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Sony A7IV vs A7C 2025: Best Sony Camera for YouTube",
+    "description": "Compare Sony A7IV and A7C for YouTube. Which full-frame mirrorless is right for your content?",
+    "keywords": ["sony a7iv vs a7c", "a7iv vs a7c", "sony youtube camera", "best sony for youtube", "a7iv youtube"]
+  },
+  "hero": {
+    "badge": "Sony Cameras",
+    "headline": "Sony A7IV vs A7C",
+    "subheadline": "Two excellent full-frame options. Different priorities for different creators.",
+    "primaryKeyword": "sony a7iv vs a7c"
+  },
+  "sections": [
+    {"type": "intro", "content": "Sony's A7IV and A7C are both popular choices for YouTube creators wanting full-frame quality. The A7IV offers more features and resolution. The A7C prioritizes compactness and portability. Both shoot excellent video—here's how to choose."},
+    {"type": "comparison", "title": "Camera Comparison", "content": [
+      {"feature": "Price", "toolA": "A7IV ~$2,500", "toolB": "A7C ~$1,800", "tubeGrow": "N/A"},
+      {"feature": "Size", "toolA": "Larger body", "toolB": "Compact, rangefinder style", "tubeGrow": "N/A"},
+      {"feature": "Resolution", "toolA": "33MP", "toolB": "24.2MP", "tubeGrow": "N/A"},
+      {"feature": "Video", "toolA": "4K60 (crop), 4K30 full", "toolB": "4K30 (slight crop)", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "Newer generation", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "Flip Screen", "toolA": "Vari-angle", "toolB": "Flip-out side", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "A7IV Strengths", "content": [
+      {"icon": "video", "title": "Better Video Specs", "description": "4K60, 10-bit, better codecs. More professional video output."},
+      {"icon": "camera", "title": "Higher Resolution", "description": "33MP for stills. More cropping flexibility."},
+      {"icon": "zap", "title": "Newer Autofocus", "description": "Latest eye-tracking. Improved subject detection."}
+    ]},
+    {"type": "features", "title": "A7C Strengths", "content": [
+      {"icon": "package", "title": "Compact Size", "description": "Much smaller body. Full-frame in near-APS-C size."},
+      {"icon": "dollar-sign", "title": "Lower Price", "description": "$700+ savings. Money for lenses or accessories."},
+      {"icon": "move", "title": "Portability", "description": "Travel and vlog-friendly. Less intimidating for subjects."}
+    ]},
+    {"type": "benefits", "title": "Choose A7IV If", "content": [
+      "Video features are priority",
+      "Need 4K60 capability",
+      "Want latest autofocus tech",
+      "Larger body is fine",
+      "Professional production work",
+      "Budget accommodates",
+      "Need 10-bit recording"
+    ]},
+    {"type": "benefits", "title": "Choose A7C If", "content": [
+      "Portability matters most",
+      "Travel or vlog content",
+      "Budget conscious",
+      "4K30 is sufficient",
+      "Compact body preferred",
+      "Street/candid shooting",
+      "Want full-frame in small package"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better autofocus?", "answer": "A7IV has newer generation AF with improved subject tracking. Both are excellent. Difference noticeable mainly in challenging conditions."},
+    {"question": "Is the size difference significant?", "answer": "Yes. A7C is dramatically smaller and lighter. Feels like different category of camera. A7IV is traditional mirrorless size."},
+    {"question": "Best for YouTube vlogging?", "answer": "A7C for handheld vlogging due to size. A7IV for studio/desk setup where features matter more than portability."},
+    {"question": "Will A7C II change this comparison?", "answer": "A7C II brings newer features to compact body. Check current prices—may affect value proposition of either original model."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "sony-a7iv",
+  "secondaryTool": "sony-a7c"
+}

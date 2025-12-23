@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-niching-down",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Niching Down 2025: Find Your Specific Audience",
+    "description": "Master YouTube niching down. Find and dominate your specific content niche.",
+    "keywords": ["youtube niching down", "youtube niche", "find youtube niche", "youtube niche strategy", "specific youtube audience"]
+  },
+  "hero": {
+    "badge": "Niching Down",
+    "headline": "YouTube Niching Down Strategy",
+    "subheadline": "Go specific to grow faster. Find your unique space.",
+    "primaryKeyword": "youtube niching down"
+  },
+  "sections": [
+    {"type": "intro", "content": "Broad channels struggle to grow—too much competition, unclear audience, algorithm confusion. Niching down means getting specific enough to own a topic. Instead of 'fitness,' you become 'bodyweight fitness for busy dads.' Narrow + deep beats broad + shallow. Here's how to find and dominate your niche."},
+    {"type": "features", "title": "Why Niche Works", "content": [
+      {"icon": "target", "title": "Clear Audience", "description": "Know exactly who you serve."},
+      {"icon": "compass", "title": "Less Competition", "description": "Smaller pond, bigger fish."},
+      {"icon": "trending-up", "title": "Algorithm Clarity", "description": "YouTube understands your content."},
+      {"icon": "users", "title": "Loyal Community", "description": "Specific = passionate."}
+    ]},
+    {"type": "features", "title": "Finding Your Niche", "content": [
+      {"icon": "heart", "title": "Your Interests", "description": "What could you talk about forever?"},
+      {"icon": "star", "title": "Your Skills", "description": "What do you know well?"},
+      {"icon": "users", "title": "Audience Need", "description": "What do people want?"},
+      {"icon": "search", "title": "Market Gap", "description": "What's underserved?"}
+    ]},
+    {"type": "features", "title": "Niche Layers", "content": [
+      {"icon": "layers", "title": "Topic", "description": "What you cover."},
+      {"icon": "user", "title": "Audience", "description": "Who it's for."},
+      {"icon": "type", "title": "Format", "description": "How you deliver."},
+      {"icon": "smile", "title": "Perspective", "description": "Your unique angle."}
+    ]},
+    {"type": "steps", "title": "Niching Down Process", "content": [
+      "List broad topics you're interested in",
+      "For each, list specific subtopics",
+      "Identify target audience characteristics",
+      "Research competition in each subtopic",
+      "Find intersection of passion + skill + opportunity",
+      "Test content in that niche",
+      "Adjust based on response",
+      "Commit and go deep"
+    ]},
+    {"type": "benefits", "title": "Niching Best Practices", "content": [
+      "Too broad = competing with everyone",
+      "Too narrow = no audience exists",
+      "Test before fully committing",
+      "Can expand later once established",
+      "Own your specific before going broad",
+      "Passion sustains long-term creation",
+      "Specific expertise builds authority"
+    ]},
+    {"type": "checklist", "title": "Niche Validation Checklist", "content": [
+      "Can sustain 100+ videos on topic?",
+      "Audience large enough to matter?",
+      "Competition not overwhelming?",
+      "Genuinely interested long-term?",
+      "Unique perspective or skill?",
+      "Content already exists and performs?",
+      "Clear target viewer defined?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How specific should I niche?", "answer": "Specific enough to own, broad enough to sustain. 'Photography' is too broad. 'Macro photography of insects with vintage lenses' might be too narrow. 'Budget photography gear reviews' is often right level."},
+    {"question": "Can I change niches later?", "answer": "Yes, but it's hard. Audience came for specific content. Gradual evolution works better than sudden pivots. Some creators start new channels for new niches. Consider before committing."},
+    {"question": "What if I have multiple interests?", "answer": "Pick one to start. Establish before expanding. Multiple interests can become content pillars within a niche. Or find overlap between interests. Scattered content confuses audience and algorithm."},
+    {"question": "How to know if niche is viable?", "answer": "Search YouTube—does content exist and perform? But not too saturated. Can you add unique value? Would you watch 100 videos on this? Community exists and is active? Trust your research."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

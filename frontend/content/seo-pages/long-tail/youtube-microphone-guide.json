@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-microphone-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Microphone Guide 2025: Best Mics for YouTubers",
+    "description": "Choose the right microphone for YouTube. Audio quality that keeps viewers watching.",
+    "keywords": ["youtube microphone", "best mic for youtube", "youtube audio equipment", "microphone guide youtube", "youtube recording setup"]
+  },
+  "hero": {
+    "badge": "Microphone Guide",
+    "headline": "YouTube Microphone Guide",
+    "subheadline": "Audio quality matters more than video. Get it right.",
+    "primaryKeyword": "youtube microphone"
+  },
+  "sections": [
+    {"type": "intro", "content": "Viewers tolerate mediocre video but click away from bad audio. Clear audio keeps people watching; poor audio makes your content feel amateur. The right microphone depends on your setup, environment, and content type. Here's how to choose."},
+    {"type": "features", "title": "Microphone Types", "content": [
+      {"icon": "mic", "title": "USB Mic", "description": "Plug and play simplicity."},
+      {"icon": "settings", "title": "XLR Mic", "description": "Pro quality, needs interface."},
+      {"icon": "radio", "title": "Lavalier", "description": "Clip-on for mobility."},
+      {"icon": "video", "title": "Shotgun", "description": "Directional, on-camera mount."}
+    ]},
+    {"type": "features", "title": "Popular Options", "content": [
+      {"icon": "star", "title": "Blue Yeti", "description": "USB, versatile, common choice."},
+      {"icon": "zap", "title": "Shure SM7B", "description": "XLR, broadcast standard."},
+      {"icon": "mic", "title": "Rode PodMic", "description": "XLR, great value."},
+      {"icon": "radio", "title": "Rode Wireless Go", "description": "Wireless lav system."}
+    ]},
+    {"type": "steps", "title": "Setting Up Audio", "content": [
+      "Choose mic type for your needs",
+      "Position close to mouth (6-12 inches)",
+      "Use pop filter for plosives",
+      "Treat room acoustics if possible",
+      "Set gain properly—not too hot",
+      "Monitor with headphones while recording",
+      "Test record and playback before filming",
+      "Process audio in post (normalize, compress)"
+    ]},
+    {"type": "benefits", "title": "Audio Best Practices", "content": [
+      "Closer mic = better sound usually",
+      "Room treatment helps any mic",
+      "USB fine for most YouTubers",
+      "XLR worth it if growing seriously",
+      "Pop filter is cheap necessity",
+      "Consistent audio setup matters",
+      "Record room tone for editing"
+    ]},
+    {"type": "checklist", "title": "Audio Checklist", "content": [
+      "Microphone appropriate for content?",
+      "Positioned correctly?",
+      "Pop filter in place?",
+      "Gain levels set properly?",
+      "Room echo minimized?",
+      "Test recording done?",
+      "Headphones for monitoring?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best budget microphone for YouTube?", "answer": "Fifine K669 or similar USB mics under $50 are surprisingly good. Blue Snowball at $50-70 classic choice. Rode NT-USB Mini excellent mid-range. Start budget, upgrade when warranted."},
+    {"question": "USB or XLR microphone?", "answer": "USB simpler—plug into computer and go. XLR higher quality ceiling but needs audio interface. Most YouTubers fine with USB. XLR for podcasts, voiceover, professional work."},
+    {"question": "How to reduce echo and room noise?", "answer": "Record in smaller room if possible. Soft furnishings absorb sound—carpets, curtains, furniture help. Foam panels on walls effective. Closets make great vocal booths. Blankets work in a pinch."},
+    {"question": "Why does my audio sound bad?", "answer": "Common issues: mic too far away, gain too high causing distortion, room echo, handling noise. Get mic closer, lower gain, treat room, use shock mount. Most problems are setup not gear."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-studio-setup-budget",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Studio Setup on Budget 2025: Affordable Equipment Guide",
+    "description": "Build YouTube studio affordably. Budget equipment recommendations for quality content.",
+    "keywords": ["youtube studio budget", "cheap youtube setup", "budget youtube equipment", "affordable youtube studio", "youtube gear budget"]
+  },
+  "hero": {
+    "badge": "Budget Studio",
+    "headline": "YouTube Studio Setup on Budget",
+    "subheadline": "Professional-looking content without breaking the bank. Smart choices matter.",
+    "primaryKeyword": "youtube studio budget"
+  },
+  "sections": [
+    {"type": "intro", "content": "You don't need expensive gear to make great YouTube content—proof is everywhere on the platform. The key is knowing where to invest and where to save. Audio matters more than video quality. Lighting matters more than camera. Here's how to build a capable setup affordably."},
+    {"type": "features", "title": "Budget Priority Order", "content": [
+      {"icon": "mic", "title": "1. Audio First", "description": "Bad audio kills videos. $50-100 budget mic transforms quality."},
+      {"icon": "sun", "title": "2. Lighting Second", "description": "Good lighting makes any camera look better. $30-50 ring light works."},
+      {"icon": "camera", "title": "3. Camera Third", "description": "Your phone is probably fine to start. Upgrade later if needed."}
+    ]},
+    {"type": "features", "title": "Budget Equipment Picks", "content": [
+      {"icon": "mic", "title": "Audio: Fifine K669B (~$30)", "description": "USB condenser mic. Surprisingly good. Great starter."},
+      {"icon": "sun", "title": "Lighting: Ring Light (~$30)", "description": "Basic ring light with stand. Even lighting on face."},
+      {"icon": "video", "title": "Camera: Your Phone", "description": "Modern phones have great cameras. Use what you have."}
+    ]},
+    {"type": "steps", "title": "Budget Build Path", "content": [
+      "Start with phone camera (free)",
+      "Add $30-50 USB microphone",
+      "Get basic ring light ($30-40)",
+      "Use natural light when possible",
+      "DIY backdrop (sheet, clean wall)",
+      "Free editing software (DaVinci Resolve)",
+      "Upgrade individual items as budget allows"
+    ]},
+    {"type": "benefits", "title": "Money-Saving Tips", "content": [
+      "Phone cameras are genuinely good now",
+      "Natural light is free and beautiful",
+      "DIY backdrops work fine",
+      "Free editing software is professional-grade",
+      "Buy used equipment carefully",
+      "Upgrade audio before video",
+      "Content matters more than gear"
+    ]},
+    {"type": "checklist", "title": "Budget Setup Checklist", "content": [
+      "Decent audio solution?",
+      "Basic lighting arranged?",
+      "Camera (phone is fine)?",
+      "Clean background area?",
+      "Editing software installed?",
+      "Test recordings done?",
+      "Upgrade path planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Absolute minimum to start?", "answer": "Phone + free editing software + natural light. Add $30 mic when possible. That's genuinely enough to create good content."},
+    {"question": "Should I buy camera or phone gimbal?", "answer": "Neither initially. Tripod or phone mount more useful. Stabilization can be added in software. Invest in audio first."},
+    {"question": "When to upgrade from phone?", "answer": "When you've made 50+ videos and know exactly what you need. Most creators upgrade too early. Master what you have first."},
+    {"question": "Best budget upgrade?", "answer": "Almost always audio. $100 on better mic/interface beats $500 on camera. Viewers tolerate mediocre video; bad audio makes them leave."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

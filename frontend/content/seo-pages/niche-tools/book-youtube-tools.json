@@ -1,0 +1,63 @@
+{
+  "slug": "book-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best BookTube Tools 2025: Book YouTube Channel Equipment Guide",
+    "description": "Top tools for BookTube and book review channels. Filming, lighting, and production equipment.",
+    "keywords": ["booktube tools", "book youtube equipment", "book review youtube", "booktube channel", "booktuber equipment"]
+  },
+  "hero": {
+    "badge": "BookTube Tools",
+    "headline": "Best BookTube Tools 2025",
+    "subheadline": "Share your reading passion. Equipment for book content creators.",
+    "primaryKeyword": "booktube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "BookTube combines literary passion with video creation—reviews, hauls, reading vlogs, and recommendation videos. The aesthetic matters in this community, with cozy setups and beautiful book displays. Here's what successful booktubers use to create engaging content."},
+    {"type": "features", "title": "Camera & Video", "content": [
+      {"icon": "camera", "title": "Vlogging Camera", "description": "Sony ZV-E10, Canon M50. Good for talking-head format. Flip screen helpful."},
+      {"icon": "aperture", "title": "Shallow DOF Lens", "description": "Background blur makes setups look aesthetic. 35mm or 50mm lens."},
+      {"icon": "smartphone", "title": "Phone Option", "description": "iPhone 13+ works great. Portrait mode for blur. Many BookTubers started here."}
+    ]},
+    {"type": "features", "title": "Lighting & Aesthetic", "content": [
+      {"icon": "sun", "title": "Soft Key Light", "description": "Elgato Key Light, ring light. Soft, flattering for talking head."},
+      {"icon": "lamp", "title": "Fairy Lights", "description": "BookTube aesthetic staple. Warm, cozy background vibes."},
+      {"icon": "sun", "title": "Natural Light", "description": "Window light works beautifully. Diffused daylight is free and great."}
+    ]},
+    {"type": "features", "title": "Set Design", "content": [
+      {"icon": "book-open", "title": "Bookshelf Background", "description": "The classic BookTube backdrop. Organize aesthetically, not just alphabetically."},
+      {"icon": "coffee", "title": "Cozy Props", "description": "Candles, mugs, plants. Create the reading nook atmosphere."},
+      {"icon": "layout", "title": "Display Stands", "description": "Book stands to showcase covers during reviews. Clear acrylic works well."}
+    ]},
+    {"type": "benefits", "title": "BookTube Best Practices", "content": [
+      "Show book covers clearly—viewers want to see them",
+      "Aesthetic consistency builds brand",
+      "Audio quality matters for long reviews",
+      "Monthly wrap-ups perform well",
+      "TBR and haul videos get engagement",
+      "Be honest in reviews—credibility matters",
+      "Engage with BookTube community"
+    ]},
+    {"type": "checklist", "title": "BookTube Video Checklist", "content": [
+      "Bookshelf background tidy?",
+      "Lighting soft and flattering?",
+      "Book covers visible during review?",
+      "Audio clear for longer videos?",
+      "Links to books in description?",
+      "Cozy aesthetic maintained?",
+      "Thumbnail shows featured book?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need expensive equipment?", "answer": "No—many successful BookTubers use phones. Aesthetic and authenticity matter more. Natural light, tidy bookshelf, genuine reviews. Start with what you have."},
+    {"question": "Best video format for BookTube?", "answer": "Monthly wrap-ups, TBR videos, book hauls, and single-book reviews all work. Experiment to find your style. Reading vlogs are popular but time-intensive."},
+    {"question": "How to grow a BookTube channel?", "answer": "Engage with community, participate in readathons, tag videos properly. BookTube is tight-knit—being active in comments helps. Consistency and genuine recommendations."},
+    {"question": "Should I include affiliate links?", "answer": "Common practice. Amazon Associates, Bookshop.org. Disclose clearly. Many viewers appreciate easy buying links to recommended books."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "booktube"
+}

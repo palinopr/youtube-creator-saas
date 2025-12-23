@@ -1,0 +1,73 @@
+{
+  "slug": "how-to-youtube-notifications",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Set Up YouTube Notifications 2025: Never Miss Content",
+    "description": "Configure YouTube notifications. Manage channel alerts and subscriber bells.",
+    "keywords": ["youtube notifications", "youtube notification bell", "youtube alerts", "youtube subscriber notifications", "youtube notification settings"]
+  },
+  "hero": {
+    "badge": "Notifications",
+    "headline": "How to Set Up YouTube Notifications",
+    "subheadline": "Get alerted for content you care about. Manage the noise.",
+    "primaryKeyword": "youtube notifications"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube notifications help you catch new content from favorite creators—but can quickly become overwhelming. Understanding notification types and settings lets you stay updated without notification fatigue. Here's how to configure notifications as a viewer and understand them as a creator."},
+    {"type": "features", "title": "Notification Types", "content": [
+      {"icon": "bell", "title": "All Notifications", "description": "Every upload and live stream."},
+      {"icon": "bell", "title": "Personalized", "description": "YouTube decides what to send."},
+      {"icon": "bell-off", "title": "None", "description": "No notifications from channel."},
+      {"icon": "video", "title": "Live Only", "description": "Just live stream alerts."}
+    ]},
+    {"type": "steps", "title": "Setting Channel Notifications", "content": [
+      "Go to the channel you want notifications from",
+      "Click Subscribe (if not already subscribed)",
+      "Click the bell icon next to Subscribe",
+      "Select: All, Personalized, or None",
+      "For All: receive every upload notification",
+      "For Personalized: YouTube chooses which to send",
+      "Repeat for each channel you follow"
+    ]},
+    {"type": "features", "title": "Device Settings", "content": [
+      {"icon": "smartphone", "title": "Mobile Settings", "description": "Push notification preferences."},
+      {"icon": "mail", "title": "Email Notifications", "description": "Digest or per-upload emails."},
+      {"icon": "monitor", "title": "Desktop Alerts", "description": "Browser notification settings."},
+      {"icon": "settings", "title": "Global Settings", "description": "Master notification controls."}
+    ]},
+    {"type": "features", "title": "For Creators", "content": [
+      {"icon": "bell", "title": "Bell Asks", "description": "Remind viewers to hit the bell."},
+      {"icon": "clock", "title": "Upload Time", "description": "Consistent schedule builds habit."},
+      {"icon": "users", "title": "Subscriber Reach", "description": "Not all subscribers get notified."},
+      {"icon": "zap", "title": "First Hour", "description": "Notifications push initial views."}
+    ]},
+    {"type": "benefits", "title": "Notification Best Practices", "content": [
+      "Use 'All' only for must-watch channels",
+      "'Personalized' for casual follows",
+      "Check email settings regularly",
+      "Creators: don't beg for bells excessively",
+      "Schedule posts when audience is awake",
+      "Mobile notifications drive fastest views",
+      "Too many notifications = all ignored"
+    ]},
+    {"type": "checklist", "title": "Notification Checklist", "content": [
+      "Favorite channels set to 'All'?",
+      "Email notification frequency set?",
+      "Mobile push notifications enabled?",
+      "Browser notifications configured?",
+      "Notification sounds/banners as desired?",
+      "Not overwhelmed by too many?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why don't I get notifications?", "answer": "Check bell setting on channel—might be 'Personalized' or 'None.' Check device notification settings. Check email spam folder. YouTube may not notify for every upload even with 'All' selected during high traffic."},
+    {"question": "Do all subscribers get notified?", "answer": "No—even with bell, YouTube doesn't guarantee 100% delivery. 'Personalized' means YouTube decides. 'All' improves odds but isn't guaranteed. This is why creators ask viewers to hit the bell."},
+    {"question": "How to reduce notification overload?", "answer": "Audit subscriptions—unsubscribe from inactive follows. Set most channels to 'Personalized' or 'None.' Reserve 'All' for top 5-10 creators. Use email digest instead of per-upload. Check notification settings monthly."},
+    {"question": "Notifications for live streams?", "answer": "Live notifications are separate—YouTube often prioritizes these. Turn on for channels you want to catch live. Scheduled premieres also send notifications. Live notifications typically sent 5-10 minutes before start."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

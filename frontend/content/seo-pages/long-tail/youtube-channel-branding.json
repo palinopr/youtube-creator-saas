@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-channel-branding",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Channel Branding 2025: Visual Identity Guide",
+    "description": "Build recognizable YouTube channel branding. Logos, banners, and visual consistency.",
+    "keywords": ["youtube channel branding", "youtube visual identity", "channel branding guide", "youtube brand design", "channel aesthetics"]
+  },
+  "hero": {
+    "badge": "Channel Branding",
+    "headline": "YouTube Channel Branding Guide",
+    "subheadline": "Stand out and be remembered. Build your visual identity.",
+    "primaryKeyword": "youtube channel branding"
+  },
+  "sections": [
+    {"type": "intro", "content": "Strong branding makes your channel instantly recognizable—viewers scroll past hundreds of videos, and consistent visual identity helps yours stand out. From profile picture to thumbnail style, every element should work together. Here's how to build branding that makes your channel memorable."},
+    {"type": "features", "title": "Brand Elements", "content": [
+      {"icon": "user", "title": "Profile Picture", "description": "Face or logo. Recognizable at small sizes."},
+      {"icon": "image", "title": "Banner", "description": "Value prop, schedule, personality showcase."},
+      {"icon": "grid", "title": "Thumbnail Style", "description": "Consistent template. Instantly recognizable."},
+      {"icon": "palette", "title": "Color Palette", "description": "2-3 colors. Used across all visuals."}
+    ]},
+    {"type": "steps", "title": "Building Your Brand", "content": [
+      "Define your channel's personality and voice",
+      "Choose 2-3 brand colors",
+      "Select fonts (1-2 max)",
+      "Create profile picture that works small",
+      "Design banner with clear message",
+      "Develop thumbnail template",
+      "Apply consistently across all videos",
+      "Extend to social media presence"
+    ]},
+    {"type": "features", "title": "Visual Specifications", "content": [
+      {"icon": "square", "title": "Profile Picture", "description": "800x800px. Shows at 98x98 usually."},
+      {"icon": "monitor", "title": "Banner", "description": "2560x1440px. Safe area 1546x423 center."},
+      {"icon": "film", "title": "Watermark", "description": "150x150px. Transparent PNG."},
+      {"icon": "image", "title": "Thumbnails", "description": "1280x720px. Under 2MB."}
+    ]},
+    {"type": "features", "title": "Design Tools", "content": [
+      {"icon": "layout", "title": "Canva", "description": "Templates, easy editing. Free tier."},
+      {"icon": "edit-3", "title": "Figma", "description": "Professional design. Free for individuals."},
+      {"icon": "layers", "title": "Adobe Express", "description": "Quick branded content. Templates."},
+      {"icon": "image", "title": "Photoshop", "description": "Full control. Industry standard."}
+    ]},
+    {"type": "benefits", "title": "Branding Best Practices", "content": [
+      "Consistency builds recognition",
+      "Simple designs work best small",
+      "Colors should contrast and pop",
+      "Face photos usually outperform logos",
+      "Update gradually, not all at once",
+      "Test thumbnail recognition in feed",
+      "Brand extends to video intros/outros"
+    ]},
+    {"type": "checklist", "title": "Branding Checklist", "content": [
+      "Profile picture recognizable small?",
+      "Banner communicates value?",
+      "Color palette defined?",
+      "Thumbnail template created?",
+      "Fonts selected?",
+      "Consistent across all videos?",
+      "Social media aligned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Face or logo for profile picture?", "answer": "Face usually performs better—humans connect with faces. Logos work for brands, gaming channels, anonymous creators. Whatever you choose, make sure it's recognizable at thumbnail comment-size."},
+    {"question": "How often should I rebrand?", "answer": "Rarely—consistency builds recognition. Update gradually if needed. Major rebrands can confuse audience. Only rebrand if current branding doesn't represent you or is holding you back."},
+    {"question": "What colors work best?", "answer": "Bright, saturated colors stand out in feeds. Blues and reds are popular but common. Choose colors that represent your content energy. Test thumbnail visibility against competitors."},
+    {"question": "Should thumbnails all look the same?", "answer": "Consistent style, not identical. Same fonts, colors, composition patterns—but each thumbnail unique to its content. Balance recognizability with visual variety."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

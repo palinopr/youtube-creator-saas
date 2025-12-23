@@ -7,7 +7,7 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
-from ..auth.dependencies import get_current_user, check_usage
+from ..auth.dependencies import get_current_user, check_usage, get_channel_profile
 from ..db.models import User
 from ..agents.seo_agent import SEOAgent
 from ..services.youtube import YouTubeTools
@@ -64,11 +64,12 @@ class DescriptionGenerateRequest(BaseModel):
 async def analyze_video_seo(
     request: Request,
     video_id: str,
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Analyze a video's SEO and get AI-powered recommendations.
-    
+
     Returns:
     - Current SEO data (title, description, tags analysis)
     - SEO score (0-100)
@@ -79,8 +80,8 @@ async def analyze_video_seo(
     try:
         youtube = get_authenticated_service("youtube", "v3")
         analytics = get_authenticated_service("youtubeAnalytics", "v2")
-        
-        agent = SEOAgent(youtube, analytics)
+
+        agent = SEOAgent(youtube, analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_video_seo(video_id)
         
         if "error" in result:
@@ -98,11 +99,12 @@ async def analyze_video_seo(
 async def audit_channel_seo(
     request: Request,
     limit: int = 10,
-    user: User = Depends(check_usage("ai_queries_per_month"))
+    user: User = Depends(check_usage("ai_queries_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Audit the channel's recent videos for SEO issues.
-    
+
     Returns:
     - Channel SEO summary (avg score, common issues)
     - List of videos with SEO scores
@@ -111,8 +113,8 @@ async def audit_channel_seo(
     try:
         youtube = get_authenticated_service("youtube", "v3")
         analytics = get_authenticated_service("youtubeAnalytics", "v2")
-        
-        agent = SEOAgent(youtube, analytics)
+
+        agent = SEOAgent(youtube, analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.audit_channel_seo(limit=limit)
         
         if "error" in result:
@@ -130,11 +132,12 @@ async def audit_channel_seo(
 async def research_keywords(
     request: Request,
     keyword_request: KeywordResearchRequest,
-    user: User = Depends(check_usage("ai_queries_per_month"))
+    user: User = Depends(check_usage("ai_queries_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Research keywords by analyzing competitor videos.
-    
+
     Returns:
     - Top performing competitor videos
     - Popular tags from competitors
@@ -142,8 +145,8 @@ async def research_keywords(
     """
     try:
         youtube = get_authenticated_service("youtube", "v3")
-        
-        agent = SEOAgent(youtube)
+
+        agent = SEOAgent(youtube, user_id=user.id, channel_profile=channel_profile)
         result = await agent.research_keywords(keyword_request.topic, limit=keyword_request.limit)
         
         if "error" in result:
@@ -161,11 +164,12 @@ async def research_keywords(
 async def generate_metadata(
     request: Request,
     metadata_request: MetadataGenerationRequest,
-    user: User = Depends(check_usage("ai_queries_per_month"))
+    user: User = Depends(check_usage("ai_queries_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Generate optimized title, description, and tags for a video topic.
-    
+
     Returns:
     - 3 optimized title options
     - Full SEO-optimized description
@@ -174,8 +178,8 @@ async def generate_metadata(
     """
     try:
         youtube = get_authenticated_service("youtube", "v3")
-        
-        agent = SEOAgent(youtube)
+
+        agent = SEOAgent(youtube, user_id=user.id, channel_profile=channel_profile)
         result = await agent.generate_optimized_metadata(
             video_topic=metadata_request.topic,
             current_title=metadata_request.current_title,

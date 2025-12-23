@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-analytics-read",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Read YouTube Analytics 2025: Data-Driven Growth",
+    "description": "Understand YouTube Analytics. Learn which metrics matter for channel growth.",
+    "keywords": ["youtube analytics", "read youtube analytics", "youtube studio analytics", "youtube metrics", "channel analytics"]
+  },
+  "hero": {
+    "badge": "Analytics",
+    "headline": "How to Read YouTube Analytics",
+    "subheadline": "Turn data into growth. Understand what the numbers mean.",
+    "primaryKeyword": "youtube analytics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube gives you incredible data—if you know how to read it. Most creators glance at views and miss the insights that drive growth. Understanding your analytics reveals what's working, what's failing, and exactly what to do next. Here's how to extract actionable insights from your data."},
+    {"type": "steps", "title": "Accessing Analytics", "content": [
+      "Open YouTube Studio (studio.youtube.com)",
+      "Click 'Analytics' in left sidebar",
+      "Default view shows Overview tab",
+      "Explore: Content, Audience, Research tabs",
+      "Click any metric for detailed breakdown",
+      "Adjust date range for comparisons",
+      "Export data for deeper analysis"
+    ]},
+    {"type": "features", "title": "Key Metrics Explained", "content": [
+      {"icon": "eye", "title": "Impressions", "description": "Times thumbnail shown. Measures reach."},
+      {"icon": "mouse-pointer", "title": "CTR", "description": "Click-through rate. Thumbnail + title effectiveness."},
+      {"icon": "clock", "title": "Watch Time", "description": "Total minutes watched. Primary ranking factor."},
+      {"icon": "percent", "title": "AVD", "description": "Average view duration. Content quality indicator."}
+    ]},
+    {"type": "features", "title": "Important Reports", "content": [
+      {"icon": "trending-up", "title": "Traffic Sources", "description": "Where views come from. Optimize discovery."},
+      {"icon": "users", "title": "Audience Retention", "description": "When viewers leave. Fix weak points."},
+      {"icon": "map-pin", "title": "Demographics", "description": "Who watches. Tailor content to audience."},
+      {"icon": "search", "title": "Search Terms", "description": "How viewers find you. Content ideas."}
+    ]},
+    {"type": "benefits", "title": "Analytics Best Practices", "content": [
+      "Compare to your own averages, not others",
+      "Look at 28-day trends, not daily",
+      "Retention graph shows exact drop-off points",
+      "High CTR + low AVD = clickbait problem",
+      "Low CTR + high AVD = packaging problem",
+      "Traffic sources reveal growth opportunities",
+      "Returning viewers indicate loyalty"
+    ]},
+    {"type": "checklist", "title": "Weekly Analytics Review", "content": [
+      "CTR trending up or down?",
+      "Which videos have best retention?",
+      "Top traffic sources identified?",
+      "Audience demographics shifting?",
+      "Search terms revealing new topics?",
+      "Subscriber conversion rate healthy?",
+      "Revenue metrics tracked?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good CTR?", "answer": "4-10% is typical. Higher for established channels, lower for viral/new content reaching broader audiences. Compare to YOUR average, not others. CTR alone doesn't matter—CTR × impressions × AVD is what counts."},
+    {"question": "Why does watch time matter most?", "answer": "YouTube optimizes for time spent on platform. Watch time directly influences recommendations. A video with 50% retention on 20-minute video beats 80% retention on 3-minute video in total watch time."},
+    {"question": "How to read retention graphs?", "answer": "Flat line is ideal—viewers watching through. Steep early drop = weak hook. Drops at specific points = content issues there. Spikes often indicate replays of valuable moments."},
+    {"question": "Impressions but low CTR?", "answer": "YouTube testing your content with broader audience. Thumbnail/title not compelling enough. If CTR drops when impressions rise, that's normal—broader audience is less targeted."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-thumbnail-ab-testing",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Thumbnail A/B Testing 2025: Test and Optimize CTR",
+    "description": "A/B test YouTube thumbnails effectively. Data-driven optimization for higher CTR.",
+    "keywords": ["youtube thumbnail a/b testing", "thumbnail testing youtube", "test thumbnails", "youtube ctr optimization", "thumbnail split test"]
+  },
+  "hero": {
+    "badge": "A/B Testing",
+    "headline": "YouTube Thumbnail A/B Testing",
+    "subheadline": "Test, measure, improve. Data-driven thumbnail optimization.",
+    "primaryKeyword": "youtube thumbnail a/b testing"
+  },
+  "sections": [
+    {"type": "intro", "content": "A 2% CTR improvement can double your video's reach. Thumbnail A/B testing removes guesswork—let data decide what works. YouTube's native test feature (in limited rollout) and manual testing methods help you optimize every thumbnail based on actual viewer behavior."},
+    {"type": "features", "title": "Testing Methods", "content": [
+      {"icon": "beaker", "title": "YouTube Native Test", "description": "Test & Compare feature. Limited availability. Gold standard when accessible."},
+      {"icon": "refresh-cw", "title": "Manual Swap Testing", "description": "Change thumbnail, measure CTR over time. Lower confidence."},
+      {"icon": "bar-chart", "title": "TubeBuddy A/B Test", "description": "Third-party testing tool. Rotates thumbnails automatically."},
+      {"icon": "eye", "title": "Community Poll", "description": "Ask audience preference. Quick but not click data."}
+    ]},
+    {"type": "steps", "title": "Manual Testing Process", "content": [
+      "Create 2-3 thumbnail variations",
+      "Note current CTR baseline",
+      "Upload first variation",
+      "Wait 7-14 days minimum",
+      "Record CTR data",
+      "Swap to next variation",
+      "Wait same period",
+      "Compare results and decide"
+    ]},
+    {"type": "features", "title": "What to Test", "content": [
+      {"icon": "type", "title": "Text vs No Text", "description": "Does title overlay help or clutter?"},
+      {"icon": "user", "title": "Face Expression", "description": "Which emotion drives more clicks?"},
+      {"icon": "palette", "title": "Color Scheme", "description": "Warm vs cool, contrast levels."},
+      {"icon": "layout", "title": "Composition", "description": "Subject placement, zoom level, background."}
+    ]},
+    {"type": "benefits", "title": "Testing Best Practices", "content": [
+      "Test one variable at a time",
+      "Wait for statistically significant data",
+      "Document all tests systematically",
+      "Compare similar traffic periods",
+      "Consider external factors (trends, seasons)",
+      "Apply learnings to future thumbnails",
+      "Retest underperforming older videos"
+    ]},
+    {"type": "checklist", "title": "A/B Test Checklist", "content": [
+      "Clear hypothesis formed?",
+      "Single variable being tested?",
+      "Baseline CTR recorded?",
+      "Sufficient time allowed?",
+      "External factors accounted for?",
+      "Results documented?",
+      "Learnings applied to system?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should I run each test?", "answer": "Minimum 7 days, ideally 14. Need enough impressions for statistical significance. Low-view videos need longer test periods."},
+    {"question": "Does YouTube have official A/B testing?", "answer": "Yes—Test & Compare feature rolling out. Check YouTube Studio > Video > Analytics for availability. Not all channels have access yet."},
+    {"question": "Can testing hurt my video?", "answer": "Short-term CTR may fluctuate. Worst case is temporary lower CTR during poor variant. Long-term benefits outweigh short-term risk."},
+    {"question": "How do I know if results are significant?", "answer": "Look for 10%+ CTR difference with 1000+ impressions. Smaller differences may be noise. Use online statistical significance calculators if unsure."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

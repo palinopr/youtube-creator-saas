@@ -1,0 +1,61 @@
+{
+  "slug": "capcut-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best CapCut Alternatives 2025: Free Video Editors",
+    "description": "Looking for a CapCut alternative? Compare free and affordable video editors for YouTube and short-form content.",
+    "keywords": ["capcut alternative", "capcut alternatives", "free video editor", "video editor like capcut", "capcut competitor"]
+  },
+  "hero": {
+    "badge": "Video Editing",
+    "headline": "Best CapCut Alternatives for Content Creators",
+    "subheadline": "Free and affordable video editors when CapCut isn't the right fit.",
+    "primaryKeyword": "capcut alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "CapCut is excellent and free, but not everyone wants to use a ByteDance product, or you might need features CapCut doesn't have. Here are the best alternatives for short-form and YouTube editing."},
+    {"type": "features", "title": "Top CapCut Alternatives", "content": [
+      {"icon": "video", "title": "DaVinci Resolve", "description": "Professional-grade, free. More powerful than CapCut but steeper learning curve."},
+      {"icon": "edit", "title": "Filmora", "description": "Beginner-friendly with more features. Paid but affordable."},
+      {"icon": "apple", "title": "iMovie", "description": "Free for Mac. Simple, clean, perfect for basics."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "DaVinci Resolve", "toolA": "Free/$295", "toolB": "Professional", "tubeGrow": "N/A"},
+      {"feature": "Filmora", "toolA": "$50/yr or $80", "toolB": "Beginner", "tubeGrow": "N/A"},
+      {"feature": "iMovie", "toolA": "Free (Mac)", "toolB": "Basic", "tubeGrow": "N/A"},
+      {"feature": "InShot", "toolA": "Free/$8/yr", "toolB": "Mobile", "tubeGrow": "N/A"},
+      {"feature": "VLLO", "toolA": "Free/$18/yr", "toolB": "Mobile", "tubeGrow": "N/A"},
+      {"feature": "Shotcut", "toolA": "Free", "toolB": "Open Source", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Reasons to Consider Alternatives", "content": [
+      "Privacy concerns with ByteDance",
+      "Need more advanced features",
+      "Prefer different interface",
+      "Mac-native experience (iMovie)",
+      "Professional color grading (Resolve)",
+      "Different effect libraries",
+      "Offline-only editing"
+    ]},
+    {"type": "steps", "title": "Choosing Your Editor", "content": [
+      "List your must-have features",
+      "Consider privacy preferences",
+      "Evaluate learning curve tolerance",
+      "Check platform availability",
+      "Try free versions first",
+      "Consider long-term growth",
+      "Match to content type"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's the best free alternative?", "answer": "DaVinci Resolve for power, iMovie for simplicity, Shotcut for open source. CapCut is hard to beat for free + easy + capable."},
+    {"question": "Is there privacy concern with CapCut?", "answer": "CapCut is owned by ByteDance (TikTok). Some users prefer alternatives for data privacy. Your risk tolerance may vary."},
+    {"question": "What has similar effects to CapCut?", "answer": "Filmora has trendy effects. InShot on mobile is similar. Most alternatives have different but usable effect libraries."},
+    {"question": "Best for Shorts/TikTok specifically?", "answer": "CapCut is designed for this. InShot is similar for mobile. VN Video Editor is another mobile option with similar focus."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "capcut"
+}

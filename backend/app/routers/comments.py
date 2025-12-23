@@ -13,7 +13,7 @@ from typing import Optional, List
 import logging
 
 from ..auth import get_authenticated_service
-from ..auth.dependencies import get_current_user
+from ..auth.dependencies import get_current_user, get_channel_profile
 from ..db.models import User
 from ..agents.comment_agent import CommentAgent
 
@@ -25,7 +25,8 @@ router = APIRouter(prefix="/api/comments", tags=["comments"])
 async def analyze_channel_comments(
     limit: int = Query(default=50, ge=10, le=100, description="Number of comments to analyze"),
     include_notable: bool = Query(default=True, description="Check for notable commenters (uses more API quota)"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Analyze comments across the channel's recent videos.
@@ -42,7 +43,7 @@ async def analyze_channel_comments(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_comments(
             video_id=None,  # Analyze across channel
             limit=limit,
@@ -63,7 +64,8 @@ async def analyze_video_comments(
     video_id: str,
     limit: int = Query(default=50, ge=10, le=100, description="Number of comments to analyze"),
     include_notable: bool = Query(default=True, description="Check for notable commenters"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Analyze comments for a specific video.
@@ -80,7 +82,7 @@ async def analyze_video_comments(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_comments(
             video_id=video_id,
             limit=limit,
@@ -103,7 +105,8 @@ async def analyze_video_comments(
 async def get_sentiment_trend(
     video_ids: str = Query(..., description="Comma-separated video IDs (max 10)"),
     comments_per_video: int = Query(default=20, ge=5, le=50, description="Comments to analyze per video"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Analyze sentiment trends across multiple videos.
@@ -136,7 +139,7 @@ async def get_sentiment_trend(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         results = await agent.get_sentiment_over_time(
             video_ids=ids,
             comments_per_video=comments_per_video
@@ -158,7 +161,8 @@ async def get_sentiment_trend(
 async def get_unanswered_questions(
     video_id: Optional[str] = Query(default=None, description="Optional video ID filter"),
     limit: int = Query(default=50, ge=10, le=100, description="Number of comments to scan"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Get questions from comments that need responses.
@@ -174,7 +178,7 @@ async def get_unanswered_questions(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_comments(
             video_id=video_id,
             limit=limit,
@@ -199,7 +203,8 @@ async def get_unanswered_questions(
 async def get_content_ideas_from_comments(
     video_id: Optional[str] = Query(default=None, description="Optional video ID filter"),
     limit: int = Query(default=50, ge=10, le=100, description="Number of comments to scan"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Extract content ideas from comments.
@@ -217,7 +222,7 @@ async def get_content_ideas_from_comments(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_comments(
             video_id=video_id,
             limit=limit,
@@ -242,7 +247,8 @@ async def get_content_ideas_from_comments(
 async def get_notable_commenters(
     video_id: Optional[str] = Query(default=None, description="Optional video ID filter"),
     min_subscribers: int = Query(default=1000, ge=100, description="Minimum subscriber count"),
-    user: User = Depends(get_current_user)
+    user: User = Depends(get_current_user),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Find notable creators who commented on your videos.
@@ -262,7 +268,7 @@ async def get_notable_commenters(
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
 
-        agent = CommentAgent(youtube, youtube_analytics)
+        agent = CommentAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         result = await agent.analyze_comments(
             video_id=video_id,
             limit=50,  # Check top 50 comments

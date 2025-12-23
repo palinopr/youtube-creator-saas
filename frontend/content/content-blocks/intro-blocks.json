@@ -1,0 +1,127 @@
+[
+  {
+    "id": "intro-comparison-1",
+    "category": "comparisons",
+    "template": "Choosing the right {toolType} can make or break your YouTube growth strategy. In this comprehensive comparison, we analyze {toolA} vs {toolB} to help you make an informed decision for your channel in 2025."
+  },
+  {
+    "id": "intro-comparison-2",
+    "category": "comparisons",
+    "template": "Every successful YouTuber knows that the right tools separate growing channels from stagnant ones. We've tested both {toolA} and {toolB} extensively to bring you this detailed breakdown."
+  },
+  {
+    "id": "intro-comparison-3",
+    "category": "comparisons",
+    "template": "With thousands of creators debating {toolA} versus {toolB}, we decided to put both tools through rigorous testing. Here's what we discovered about their strengths, weaknesses, and which one delivers better ROI."
+  },
+  {
+    "id": "intro-comparison-4",
+    "category": "comparisons",
+    "template": "The battle between {toolA} and {toolB} has divided the YouTube creator community. We break down every feature, pricing tier, and use case to help you choose the winner for your specific needs."
+  },
+  {
+    "id": "intro-comparison-5",
+    "category": "comparisons",
+    "template": "Stop wasting money on the wrong {toolType}. Our side-by-side analysis of {toolA} and {toolB} reveals which tool actually helps creators grow faster and why the answer might surprise you."
+  },
+  {
+    "id": "intro-niche-1",
+    "category": "niche-tools",
+    "template": "{niche} creators face unique challenges that generic YouTube tools simply don't address. We've curated the best {toolType} specifically designed for {niche} content in 2025."
+  },
+  {
+    "id": "intro-niche-2",
+    "category": "niche-tools",
+    "template": "Growing a {niche} YouTube channel requires specialized tools that understand your audience. Here are the top {toolType} that successful {niche} creators swear by."
+  },
+  {
+    "id": "intro-niche-3",
+    "category": "niche-tools",
+    "template": "What works for gaming YouTubers won't work for {niche} creators. Discover the {toolType} that top {niche} channels use to optimize their content and accelerate growth."
+  },
+  {
+    "id": "intro-niche-4",
+    "category": "niche-tools",
+    "template": "The {niche} YouTube space is more competitive than ever. These {toolType} give you the edge you need to stand out and build a loyal audience in 2025."
+  },
+  {
+    "id": "intro-niche-5",
+    "category": "niche-tools",
+    "template": "After analyzing hundreds of successful {niche} channels, we identified the {toolType} that consistently appear in their tech stacks. Here's your complete guide."
+  },
+  {
+    "id": "intro-howto-1",
+    "category": "how-to",
+    "template": "Learning {action} is one of the most impactful skills you can develop as a YouTube creator. This step-by-step guide walks you through proven strategies that work in 2025."
+  },
+  {
+    "id": "intro-howto-2",
+    "category": "how-to",
+    "template": "Most creators struggle with {action} because they follow outdated advice. We've compiled the latest techniques that top YouTubers use to {actionBenefit}."
+  },
+  {
+    "id": "intro-howto-3",
+    "category": "how-to",
+    "template": "Want to know {action} like the pros? This comprehensive guide breaks down everything from basics to advanced strategies that actually move the needle."
+  },
+  {
+    "id": "intro-howto-4",
+    "category": "how-to",
+    "template": "The difference between struggling creators and successful ones often comes down to {action}. Master this skill with our detailed walkthrough and real examples."
+  },
+  {
+    "id": "intro-howto-5",
+    "category": "how-to",
+    "template": "{action} doesn't have to be complicated. We've distilled years of YouTube growth experience into actionable steps you can implement today."
+  },
+  {
+    "id": "intro-alternative-1",
+    "category": "alternatives",
+    "template": "Looking for a {tool} alternative? Whether you need better features, lower pricing, or a different approach, we've identified the top options for YouTube creators in 2025."
+  },
+  {
+    "id": "intro-alternative-2",
+    "category": "alternatives",
+    "template": "{tool} isn't the only option. Discover powerful alternatives that offer unique features, better value, or specialized capabilities for your YouTube channel."
+  },
+  {
+    "id": "intro-alternative-3",
+    "category": "alternatives",
+    "template": "Frustrated with {tool}? You're not alone. Here are the best alternatives that thousands of creators have switched to for improved results and better experiences."
+  },
+  {
+    "id": "intro-alternative-4",
+    "category": "alternatives",
+    "template": "Before committing to {tool}, smart creators explore their options. This guide covers every viable alternative and helps you make the right choice for your needs."
+  },
+  {
+    "id": "intro-alternative-5",
+    "category": "alternatives",
+    "template": "The YouTube tools landscape has evolved significantly. While {tool} remains popular, these alternatives offer compelling reasons to consider switching in 2025."
+  },
+  {
+    "id": "intro-longtail-1",
+    "category": "long-tail",
+    "template": "{keyword} is a game-changer for creators who understand how to leverage it. We break down everything you need to know to gain a competitive advantage."
+  },
+  {
+    "id": "intro-longtail-2",
+    "category": "long-tail",
+    "template": "Smart YouTube creators are focusing on {keyword} to differentiate themselves. Here's the complete guide to implementing this strategy on your channel."
+  },
+  {
+    "id": "intro-longtail-3",
+    "category": "long-tail",
+    "template": "Understanding {keyword} can transform your YouTube growth trajectory. We've researched the best practices and compiled them into this actionable resource."
+  },
+  {
+    "id": "intro-longtail-4",
+    "category": "long-tail",
+    "template": "The most successful creators aren't ignoring {keyword}. Learn why this matters for your channel and how to implement it effectively in 2025."
+  },
+  {
+    "id": "intro-longtail-5",
+    "category": "long-tail",
+    "template": "{keyword} represents an untapped opportunity for most YouTube creators. Discover how to capitalize on this to grow your audience and revenue."
+  }
+]

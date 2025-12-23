@@ -1,0 +1,63 @@
+{
+  "slug": "drone-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Drone YouTube Tools 2025: Aerial Videography Equipment",
+    "description": "Top tools for drone YouTube channels. FPV and aerial content creation equipment.",
+    "keywords": ["drone youtube tools", "fpv youtube equipment", "aerial videography", "drone channel", "drone content creator"]
+  },
+  "hero": {
+    "badge": "Drone Tools",
+    "headline": "Best Drone YouTube Tools 2025",
+    "subheadline": "Capture stunning aerials. Essential tools for drone content creators.",
+    "primaryKeyword": "drone youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Drone content splits into cinematic aerials and FPV freestyle—different approaches, different gear. Both require understanding regulations, mastering flight skills, and capturing compelling footage. Here's what drone YouTubers need for professional aerial content."},
+    {"type": "features", "title": "Cinematic Drones", "content": [
+      {"icon": "video", "title": "DJI Air 3", "description": "Excellent balance of portability and quality. Dual cameras."},
+      {"icon": "film", "title": "DJI Mavic 3 Pro", "description": "Professional cinema-grade. Hasselblad camera."},
+      {"icon": "zap", "title": "DJI Mini 4 Pro", "description": "Under 250g, no registration. Surprisingly capable."}
+    ]},
+    {"type": "features", "title": "FPV Equipment", "content": [
+      {"icon": "airplay", "title": "DJI Avata 2", "description": "Ready-to-fly FPV. Beginner-friendly immersion."},
+      {"icon": "settings", "title": "Custom FPV Build", "description": "5\" quads for freestyle. More control, more complexity."},
+      {"icon": "eye", "title": "FPV Goggles", "description": "DJI Goggles 3. Immersive flying experience."}
+    ]},
+    {"type": "features", "title": "Supporting Gear", "content": [
+      {"icon": "battery", "title": "Extra Batteries", "description": "Fly time limited. 4-6 batteries for full shoot day."},
+      {"icon": "sun", "title": "ND Filters", "description": "Control shutter speed for cinematic motion blur."},
+      {"icon": "tablet", "title": "iPad/Monitor", "description": "Larger screen for framing. Better than phone."}
+    ]},
+    {"type": "benefits", "title": "Drone Content Tips", "content": [
+      "Know and follow regulations (Part 107 in US)",
+      "Register drone if over 250g",
+      "ND filters for cinematic shutter",
+      "Slow, smooth movements look professional",
+      "Scout locations before flying",
+      "Golden hour for best light",
+      "Always have visual observer"
+    ]},
+    {"type": "checklist", "title": "Flight Checklist", "content": [
+      "Airspace checked (LAANC if needed)?",
+      "Weather conditions safe?",
+      "All batteries fully charged?",
+      "Firmware updated?",
+      "ND filter appropriate for light?",
+      "Spotter available?",
+      "Memory cards empty?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need a drone license?", "answer": "In US: Part 107 for commercial use. Recreational follows FAA rules. Under 250g (Mini series) has fewer requirements. Know your local regulations."},
+    {"question": "Best beginner drone for YouTube?", "answer": "DJI Mini 4 Pro—excellent quality, under 250g, no registration in US. Or DJI Air 3 for more features. Both have beginner-friendly flight modes."},
+    {"question": "How to get smooth cinematic footage?", "answer": "ND filters for 180° shutter rule. Slow stick movements. Tripod/Cine mode. Post-stabilization if needed. Plan shots before flying."},
+    {"question": "FPV vs regular drone for content?", "answer": "Different purposes. Cinematic drones for smooth, planned shots. FPV for dynamic, immersive footage. Many creators use both for variety."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "drone"
+}

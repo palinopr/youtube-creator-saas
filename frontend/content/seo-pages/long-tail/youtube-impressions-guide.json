@@ -1,0 +1,67 @@
+{
+  "slug": "youtube-impressions-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Impressions Guide 2025: Get More Thumbnail Views",
+    "description": "Increase YouTube impressions. How thumbnails get shown and strategies to grow reach.",
+    "keywords": ["youtube impressions", "increase youtube impressions", "youtube thumbnail impressions", "youtube reach", "impressions youtube analytics"]
+  },
+  "hero": {
+    "badge": "Impressions",
+    "headline": "YouTube Impressions Guide",
+    "subheadline": "Before clicks come impressions. How to get your thumbnail seen more.",
+    "primaryKeyword": "youtube impressions"
+  },
+  "sections": [
+    {"type": "intro", "content": "Impressions are how many times your thumbnail is shown to potential viewers. Before anyone can click, they have to see it. Understanding impressions helps you gauge your reach and identify where to optimize. More impressions with the same CTR means more views."},
+    {"type": "features", "title": "Impression Basics", "content": [
+      {"icon": "eye", "title": "What Counts", "description": "Thumbnail shown for 1+ second, at least 50% visible. Homepage, search, suggested."},
+      {"icon": "x", "title": "What Doesn't Count", "description": "External sites, embeds, end screens, notifications, browsing while paused."},
+      {"icon": "percent", "title": "CTR Relationship", "description": "Views ÷ Impressions = CTR. Both metrics matter together."}
+    ]},
+    {"type": "features", "title": "Where Impressions Come From", "content": [
+      {"icon": "home", "title": "Browse Features", "description": "Homepage and Home feed. Personalized to each viewer."},
+      {"icon": "search", "title": "YouTube Search", "description": "Keywords viewers search. SEO determines presence here."},
+      {"icon": "play-circle", "title": "Suggested Videos", "description": "Sidebar and post-watch recommendations. Related content."},
+      {"icon": "external-link", "title": "External", "description": "Google search, social media, websites. Doesn't count in impression stats."}
+    ]},
+    {"type": "steps", "title": "Increasing Impressions", "content": [
+      "Create content on searchable topics (search impressions)",
+      "Make content similar to popular videos (suggested impressions)",
+      "Build subscriber base (notification and feed impressions)",
+      "Maintain high CTR (algorithm shows high-CTR content more)",
+      "Post consistently (more videos = more impression opportunities)",
+      "Optimize titles for search terms",
+      "Create evergreen content that keeps generating impressions"
+    ]},
+    {"type": "benefits", "title": "Impression Strategy Tips", "content": [
+      "More videos = more impression opportunities",
+      "High CTR content gets more impressions over time",
+      "Search content provides steady impressions",
+      "Suggested videos can explode impressions",
+      "Subscribers provide base impression floor",
+      "Trending topics give impression spikes",
+      "Evergreen content compounds impressions"
+    ]},
+    {"type": "checklist", "title": "Impression Optimization Checklist", "content": [
+      "Targeting searchable keywords?",
+      "Content related to popular videos in niche?",
+      "CTR being optimized (thumbnails/titles)?",
+      "Consistent upload schedule?",
+      "Mix of trending and evergreen content?",
+      "Traffic sources analyzed in analytics?",
+      "Impression trends tracked over time?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good impression count?", "answer": "Depends entirely on channel size and niche. Compare to your own videos. Look at impression-to-view ratio (CTR) more than raw impressions."},
+    {"question": "Why are my impressions low?", "answer": "New channel, low subscriber base, not ranking in search, content not being suggested. Focus on improving CTR and watch time—algorithm will show you more."},
+    {"question": "Do impressions affect the algorithm?", "answer": "Impressions are output, not input. You don't directly control them. Algorithm gives more impressions to content with good CTR and retention."},
+    {"question": "How to track impression sources?", "answer": "YouTube Studio > Analytics > Reach > Traffic source types. Shows where impressions and views come from. Optimize for your top sources."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

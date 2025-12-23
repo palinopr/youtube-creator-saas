@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-analytics-beginners",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Analytics for Beginners 2025: Getting Started Guide",
+    "description": "Learn YouTube Analytics basics. Understand your data and grow your channel with insights.",
+    "keywords": ["youtube analytics beginners", "youtube analytics tutorial", "understand youtube analytics", "youtube studio analytics", "youtube data for beginners"]
+  },
+  "hero": {
+    "badge": "Analytics Basics",
+    "headline": "YouTube Analytics for Beginners",
+    "subheadline": "Understand your channel data. Make better content decisions with analytics.",
+    "primaryKeyword": "youtube analytics beginners"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics tells you what's working and what isn't. But the dashboard can be overwhelming. Focus on the metrics that actually matter for growth. Here's a beginner's guide to understanding and using your YouTube data."},
+    {"type": "features", "title": "Key Metrics to Track", "content": [
+      {"icon": "eye", "title": "Views", "description": "How many times videos watched. Simple but important baseline metric."},
+      {"icon": "clock", "title": "Watch Time", "description": "Total minutes watched. YouTube's most important metric for recommendations."},
+      {"icon": "users", "title": "Subscribers", "description": "Channel growth indicator. Track net gain/loss over time."}
+    ]},
+    {"type": "features", "title": "Engagement Metrics", "content": [
+      {"icon": "percent", "title": "CTR (Click-Through Rate)", "description": "Impressions to views ratio. Measures thumbnail/title effectiveness."},
+      {"icon": "bar-chart", "title": "Average View Duration", "description": "How long viewers watch. Indicates content quality."},
+      {"icon": "thumbs-up", "title": "Likes/Comments", "description": "Direct feedback. High engagement = interested audience."}
+    ]},
+    {"type": "steps", "title": "Accessing Analytics", "content": [
+      "Go to YouTube Studio (studio.youtube.com)",
+      "Click 'Analytics' in left menu",
+      "Overview shows key metrics",
+      "Click tabs for detailed data",
+      "'Reach' shows impressions/CTR",
+      "'Engagement' shows watch time",
+      "'Audience' shows viewer demographics"
+    ]},
+    {"type": "benefits", "title": "What to Look For", "content": [
+      "Which videos get most views",
+      "Where viewers come from (source)",
+      "When your audience is online",
+      "Which thumbnails perform best",
+      "Where viewers drop off in videos",
+      "Subscriber growth trends",
+      "Traffic source breakdown"
+    ]},
+    {"type": "checklist", "title": "Weekly Analytics Review", "content": [
+      "Check views and watch time trend",
+      "Review top performing videos",
+      "Note any viral moments",
+      "Check subscriber net change",
+      "Review CTR on recent uploads",
+      "Look at audience retention graphs",
+      "Compare to previous period"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which metric matters most?", "answer": "Watch time is YouTube's priority for recommendations. But CTR gets people to click first. Focus on both together."},
+    {"question": "How often should I check analytics?", "answer": "Weekly for trends, daily check for new uploads (first 48 hours matter). Don't obsess hourly—data needs time."},
+    {"question": "Why are my views low?", "answer": "Check CTR (thumbnail/title issue if low) and retention (content issue if low). Both need to be good for YouTube to recommend."},
+    {"question": "What's Real-Time analytics?", "answer": "Shows views in last 48 hours and 60 minutes. Useful for seeing new upload performance. Under 'Overview' tab."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

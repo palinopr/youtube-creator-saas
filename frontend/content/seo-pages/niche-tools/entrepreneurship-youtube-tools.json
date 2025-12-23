@@ -1,0 +1,72 @@
+{
+  "slug": "entrepreneurship-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Entrepreneurship YouTube Tools 2025: Business Content Equipment",
+    "description": "Essential tools for business and entrepreneurship YouTube channels. Authority, credibility, and production.",
+    "keywords": ["entrepreneurship youtube tools", "business youtube equipment", "startup content creator", "business channel setup", "entrepreneur youtube"]
+  },
+  "hero": {
+    "badge": "Business Content",
+    "headline": "Essential Tools for Entrepreneurship YouTube Creators",
+    "subheadline": "Build authority and credibility. Professional presentation matters in business content.",
+    "primaryKeyword": "entrepreneurship youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Business and entrepreneurship content requires credibility—your production quality signals professionalism. Whether you're sharing startup advice, business strategies, or success stories, your tools should reflect the quality you teach. Here's what business YouTubers need."},
+    {"type": "features", "title": "Production Quality", "content": [
+      {"icon": "camera", "title": "Professional Camera", "description": "4K quality, shallow depth of field. Sony ZV-E10, Canon R series."},
+      {"icon": "mic", "title": "Studio Microphone", "description": "Clear, authoritative voice. Shure SM7B or Rode NT1 style."},
+      {"icon": "sun", "title": "Professional Lighting", "description": "Clean, well-lit appearance. Key light, fill, maybe hair light."}
+    ]},
+    {"type": "features", "title": "Background & Setting", "content": [
+      {"icon": "home", "title": "Office/Studio Background", "description": "Clean, professional space. Books, plants, subtle branding."},
+      {"icon": "monitor", "title": "Screen Sharing", "description": "Show data, presentations, tools. OBS for quality capture."},
+      {"icon": "layout", "title": "Presentation Software", "description": "Keynote, PowerPoint, Canva. Clean slides for concepts."}
+    ]},
+    {"type": "features", "title": "Content Creation", "content": [
+      {"icon": "edit", "title": "Script/Teleprompter", "description": "Polished delivery. iPad teleprompter or BigVu app."},
+      {"icon": "film", "title": "B-Roll Assets", "description": "Business footage, graphs, animations. Storyblocks, Envato."},
+      {"icon": "bar-chart-2", "title": "Data Visualization", "description": "Charts, graphs that pop. Make numbers engaging."}
+    ]},
+    {"type": "steps", "title": "Business Content Tips", "content": [
+      "Lead with results and proof",
+      "Share specific numbers when possible",
+      "Be authentic about failures too",
+      "Provide actionable frameworks",
+      "Case studies build credibility",
+      "Interview successful people",
+      "Update content as markets change"
+    ]},
+    {"type": "benefits", "title": "Business Content Types", "content": [
+      "Strategy and tactics",
+      "Case study breakdowns",
+      "Tool and resource reviews",
+      "Interview series",
+      "Industry analysis",
+      "Behind-the-scenes business",
+      "Failure lessons"
+    ]},
+    {"type": "checklist", "title": "Business Creator Setup", "content": [
+      "Professional camera setup",
+      "Quality microphone",
+      "Clean, credible background",
+      "Screen recording capability",
+      "Presentation templates",
+      "B-roll asset library",
+      "Teleprompter option"
+    ]}
+  ],
+  "faq": [
+    {"question": "How important is production quality?", "answer": "Very important for business content. Your production signals your professionalism. Poor quality undermines credibility in this niche."},
+    {"question": "Should I show my face?", "answer": "Yes for business content. Personal brand matters. Authority comes from being seen. Trust is built face-to-face."},
+    {"question": "How to establish credibility?", "answer": "Share specific results, show proof, be transparent about experience level. Credibility comes from value delivered, not claims."},
+    {"question": "Office background important?", "answer": "Yes—signals professionalism. Doesn't need to be fancy, but clean and intentional. Bookshelf, plants, subtle lighting work well."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "entrepreneurship"
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "sports-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Sports YouTube Tools 2025: Equipment & Software Guide",
+    "description": "Essential tools for sports content creators. Capture action, analyze plays, and grow your sports YouTube channel.",
+    "keywords": ["sports youtube tools", "sports content creation", "sports video equipment", "sports youtube channel", "sports editing software"]
+  },
+  "hero": {
+    "badge": "Sports Content",
+    "headline": "Essential Tools for Sports YouTube Creators",
+    "subheadline": "Capture the action, analyze the plays, grow your sports channel.",
+    "primaryKeyword": "sports youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Sports content demands specialized tools. You need cameras that capture fast action without blur, software for telestration and play analysis, and equipment that survives outdoor conditions. Whether you're covering games, teaching techniques, or analyzing plays, here are the essential tools for sports YouTube creators."},
+    {"type": "features", "title": "Action Cameras & Equipment", "content": [
+      {"icon": "video", "title": "GoPro Hero 12", "description": "Stabilized 4K action footage. Waterproof, durable, mounts anywhere on the field."},
+      {"icon": "camera", "title": "Sony A7 IV (or A7S III)", "description": "Fast autofocus tracks athletes. Excellent for sideline coverage and interviews."},
+      {"icon": "wind", "title": "DJI Mini 4 Pro", "description": "Aerial coverage of fields and stadiums. Compact, quality footage, legal in most areas."}
+    ]},
+    {"type": "features", "title": "Analysis & Editing Software", "content": [
+      {"icon": "play", "title": "Hudl or CoachPaint", "description": "Professional telestration tools for drawing on video. Arrows, circles, play diagrams."},
+      {"icon": "edit", "title": "DaVinci Resolve", "description": "Slow motion, color grading, and professional editing. Free version handles sports content."},
+      {"icon": "clock", "title": "Kinovea", "description": "Free motion analysis software. Frame-by-frame, angle measurements, technique breakdown."}
+    ]},
+    {"type": "steps", "title": "Recommended Sports Setup", "content": [
+      "Action cam for athlete POV shots",
+      "DSLR/mirrorless for main coverage",
+      "External recorder for clean audio",
+      "Wireless lav for athlete interviews",
+      "Drone for establishing shots",
+      "Telestration software for analysis",
+      "Color grading for consistent look"
+    ]},
+    {"type": "benefits", "title": "Content Ideas for Sports Channels", "content": [
+      "Game highlights and recaps",
+      "Technique tutorials and drills",
+      "Play analysis and breakdowns",
+      "Equipment reviews for the sport",
+      "Athlete interviews and profiles",
+      "Training routines and workouts",
+      "Match predictions and reactions"
+    ]},
+    {"type": "checklist", "title": "Sports Creator Essentials", "content": [
+      "High frame rate camera for slow-mo",
+      "Fast memory cards for 4K/120fps",
+      "Durable, weather-resistant gear",
+      "Telestration software installed",
+      "Audio solution for outdoor noise",
+      "Mobile editing setup for same-day uploads",
+      "Cloud backup for large files"
+    ]}
+  ],
+  "faq": [
+    {"question": "What frame rate do I need for sports?", "answer": "Minimum 60fps for smooth playback, 120fps or higher for slow motion analysis. Most sports channels shoot at 60fps minimum."},
+    {"question": "How do I get clean audio outdoors?", "answer": "Use shotgun mics with wind protection, or record voice-over in post. Outdoor audio is challenging—many sports creators add commentary later."},
+    {"question": "What's the best free telestration software?", "answer": "Kinovea for motion analysis, GIMP or free drawing tools for static images. For video telestration, CoachPaint offers limited free features."},
+    {"question": "Do I need a drone for sports content?", "answer": "Not required but valuable for establishing shots and unique angles. Check regulations for your area and sporting events."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "sports"
+}

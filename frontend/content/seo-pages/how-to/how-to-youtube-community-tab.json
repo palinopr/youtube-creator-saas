@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-community-tab",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Community Tab 2025: Complete Strategy Guide",
+    "description": "Master YouTube's Community Tab. Post types, engagement strategies, and growth tactics.",
+    "keywords": ["youtube community tab", "community post youtube", "youtube community strategy", "how to use community tab", "youtube engagement"]
+  },
+  "hero": {
+    "badge": "Community Tab",
+    "headline": "How to Use YouTube Community Tab",
+    "subheadline": "Keep your audience engaged between uploads. Maximize this powerful feature.",
+    "primaryKeyword": "youtube community tab"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Community Tab is YouTube's social media feed—built right into the platform. It keeps subscribers engaged between videos, polls their preferences, and teases upcoming content. Many creators underuse this feature. Here's how to leverage it for growth and engagement."},
+    {"type": "features", "title": "Post Types Available", "content": [
+      {"icon": "image", "title": "Image Posts", "description": "Behind-the-scenes, thumbnails, announcements. Visual engagement."},
+      {"icon": "bar-chart", "title": "Polls", "description": "Ask audience preferences. Content ideas. Incredible engagement rates."},
+      {"icon": "video", "title": "Video Teasers", "description": "Promote uploads. Share clips. Cross-promote older content."}
+    ]},
+    {"type": "steps", "title": "Community Tab Strategy", "content": [
+      "Post 2-4 times per week minimum",
+      "Vary post types (polls, images, text)",
+      "Tease upcoming videos to build anticipation",
+      "Ask questions to learn audience preferences",
+      "Share behind-the-scenes content",
+      "Resurface older videos with new context",
+      "Respond to comments on posts"
+    ]},
+    {"type": "features", "title": "High-Engagement Post Ideas", "content": [
+      {"icon": "help-circle", "title": "This or That Polls", "description": "'Which should I make next?' Easy engagement, content ideas."},
+      {"icon": "camera", "title": "Thumbnail Reveal", "description": "Show upcoming video thumbnail. Build anticipation."},
+      {"icon": "message-circle", "title": "Question Posts", "description": "'What's your biggest struggle with X?' Content research."}
+    ]},
+    {"type": "benefits", "title": "Community Tab Benefits", "content": [
+      "Stay visible between uploads",
+      "Algorithm notices engagement",
+      "Free audience research",
+      "Promote videos without re-uploading",
+      "Build community connection",
+      "Test ideas before creating videos",
+      "Drive traffic to older content"
+    ]},
+    {"type": "checklist", "title": "Community Tab Checklist", "content": [
+      "Posting at least 2x weekly?",
+      "Mixing post types?",
+      "Using polls regularly?",
+      "Teasing upcoming videos?",
+      "Responding to comments?",
+      "Resurfacing old content?",
+      "Asking audience questions?"
+    ]}
+  ],
+  "faq": [
+    {"question": "When do I get the Community Tab?", "answer": "Currently at 500 subscribers. YouTube has changed this threshold before. Once unlocked, it's permanent."},
+    {"question": "Best time to post on Community Tab?", "answer": "When your audience is active—check YouTube Analytics for audience times. Generally evening/night in your main audience's timezone."},
+    {"question": "Do Community posts help video performance?", "answer": "Indirectly yes. Engagement keeps you visible to subscribers. Posts can drive traffic to new uploads. Algorithm notices active creators."},
+    {"question": "How often is too often?", "answer": "Multiple times daily might annoy. 1-4 times per week is sweet spot. Quality over quantity—make posts genuinely interesting."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

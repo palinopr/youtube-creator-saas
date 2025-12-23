@@ -1,0 +1,59 @@
+{
+  "slug": "rode-wireless-go-vs-dji-mic",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Rode Wireless GO vs DJI Mic 2025: Wireless Microphone Comparison",
+    "description": "Compare Rode Wireless GO II and DJI Mic systems. Audio quality, range, and which is best for YouTube creators.",
+    "keywords": ["rode wireless go vs dji mic", "wireless microphone comparison", "rode wireless go ii", "dji mic review", "youtube wireless mic"]
+  },
+  "hero": {
+    "badge": "Wireless Mics",
+    "headline": "Rode Wireless GO vs DJI Mic: Wireless Audio Showdown",
+    "subheadline": "Two premium wireless systems for content creators. Which delivers better audio?",
+    "primaryKeyword": "rode wireless go vs dji mic"
+  },
+  "sections": [
+    {"type": "intro", "content": "Wireless microphones freed creators from cable constraints. The Rode Wireless GO II and DJI Mic are the two most popular compact wireless systems. Both record internally, work with cameras and phones, and deliver broadcast-quality audio. Here's how to choose."},
+    {"type": "comparison", "title": "Rode Wireless GO vs DJI Mic Comparison", "content": [
+      {"feature": "Price (2-person kit)", "toolA": "~$300", "toolB": "~$330", "tubeGrow": "N/A"},
+      {"feature": "Internal Recording", "toolA": "Yes (40hr)", "toolB": "Yes (14hr)", "tubeGrow": "N/A"},
+      {"feature": "Range", "toolA": "200m", "toolB": "250m", "tubeGrow": "N/A"},
+      {"feature": "Battery Life", "toolA": "7 hours", "toolB": "6 hours", "tubeGrow": "N/A"},
+      {"feature": "Charging Case", "toolA": "No", "toolB": "Yes", "tubeGrow": "N/A"},
+      {"feature": "Touchscreen", "toolA": "No", "toolB": "Yes (receiver)", "tubeGrow": "N/A"},
+      {"feature": "Size", "toolA": "Very compact", "toolB": "Compact", "tubeGrow": "N/A"},
+      {"feature": "USB-C Phone Use", "toolA": "Adapter needed", "toolB": "Direct connect", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Rode Wireless GO II Strengths", "content": [
+      {"icon": "box", "title": "Ultra Compact", "description": "Smaller, lighter transmitters. Less visible on camera."},
+      {"icon": "hard-drive", "title": "More Internal Storage", "description": "40+ hours of backup recording. Peace of mind."},
+      {"icon": "check", "title": "Proven Track Record", "description": "Years of reliability. Huge user base and support."}
+    ]},
+    {"type": "features", "title": "DJI Mic Strengths", "content": [
+      {"icon": "battery", "title": "Charging Case", "description": "Like AirPods—charge on the go. 15 hours total."},
+      {"icon": "monitor", "title": "Touchscreen Control", "description": "Easy settings access on receiver. No app needed."},
+      {"icon": "smartphone", "title": "Phone Connectivity", "description": "USB-C connects directly to phones. No adapter."}
+    ]},
+    {"type": "steps", "title": "Which Should You Choose?", "content": [
+      "Choose Rode if: Ultra-compact size matters",
+      "Choose Rode if: You need maximum backup recording",
+      "Choose Rode if: Camera use is primary",
+      "Choose DJI if: Charging case convenience matters",
+      "Choose DJI if: Phone recording is common",
+      "Choose DJI if: Touchscreen control appeals to you"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better audio quality?", "answer": "Very close. Both are excellent. Rode slightly warmer, DJI slightly crisper. Most viewers won't hear a difference."},
+    {"question": "Do I need internal recording?", "answer": "Highly recommended. Wireless can fail. Internal backup has saved countless shoots. Both offer this essential feature."},
+    {"question": "Which is better for vlogging?", "answer": "DJI's phone connectivity and charging case suit mobile vloggers. Rode's compact size is less visible. Both work great."},
+    {"question": "What about the Rode Wireless ME?", "answer": "Simpler, cheaper, phone-focused. Good for casual use. GO II and DJI Mic are more capable for serious creators."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "rode-wireless-go",
+  "secondaryTool": "dji-mic"
+}

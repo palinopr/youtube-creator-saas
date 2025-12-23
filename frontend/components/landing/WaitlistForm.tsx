@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Loader2, CheckCircle, Mail } from "lucide-react";
-import { submitWaitlistSignup } from "@/lib/supabase";
+import { submitWaitlistSignup } from "@/lib/waitlist";
 
 interface WaitlistFormProps {
   variant?: "hero" | "inline";

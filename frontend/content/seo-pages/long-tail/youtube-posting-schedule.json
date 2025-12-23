@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-posting-schedule",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Posting Schedule 2025: Best Upload Times & Frequency",
+    "description": "Optimize your YouTube posting schedule. Best times and frequency to upload.",
+    "keywords": ["youtube posting schedule", "best time post youtube", "youtube upload schedule", "how often post youtube", "youtube upload frequency"]
+  },
+  "hero": {
+    "badge": "Posting Schedule",
+    "headline": "YouTube Posting Schedule Guide",
+    "subheadline": "When and how often to upload. Build consistency that works.",
+    "primaryKeyword": "youtube posting schedule"
+  },
+  "sections": [
+    {"type": "intro", "content": "Consistency matters more than frequency—but timing and schedule optimization can boost initial performance. The best schedule is one you can maintain long-term. Finding optimal upload times for your specific audience maximizes early engagement, which signals to the algorithm that your video deserves promotion."},
+    {"type": "features", "title": "Schedule Factors", "content": [
+      {"icon": "calendar", "title": "Consistency", "description": "Regular pattern matters most."},
+      {"icon": "clock", "title": "Timing", "description": "When your audience is active."},
+      {"icon": "repeat", "title": "Frequency", "description": "How often you upload."},
+      {"icon": "globe", "title": "Audience Location", "description": "Time zones matter."}
+    ]},
+    {"type": "features", "title": "General Best Times", "content": [
+      {"icon": "sun", "title": "Weekdays 2-4 PM", "description": "Before peak watching hours."},
+      {"icon": "calendar", "title": "Thursday-Sunday", "description": "Higher engagement typically."},
+      {"icon": "clock", "title": "Your Peak Hours", "description": "Check your Analytics."},
+      {"icon": "users", "title": "Audience Specific", "description": "Varies by demographic."}
+    ]},
+    {"type": "steps", "title": "Finding Your Schedule", "content": [
+      "Check Analytics for when audience is online",
+      "Note peak days and hours",
+      "Upload 2-3 hours before peak",
+      "Choose frequency you can sustain",
+      "Commit to consistency for 3+ months",
+      "Announce schedule to audience",
+      "Use scheduling feature for flexibility",
+      "Adjust based on performance data"
+    ]},
+    {"type": "benefits", "title": "Schedule Best Practices", "content": [
+      "Consistency > optimal timing",
+      "Upload before peak, not during",
+      "Weekly schedule works for most",
+      "Your Analytics > general advice",
+      "Subscribers appreciate predictability",
+      "Batch filming enables consistency",
+      "Schedule YouTube uploads in advance"
+    ]},
+    {"type": "checklist", "title": "Schedule Checklist", "content": [
+      "Checked Analytics for audience activity?",
+      "Frequency sustainable long-term?",
+      "Consistent day/time established?",
+      "Using schedule feature?",
+      "Buffer videos prepared?",
+      "Audience knows your schedule?",
+      "Tracking performance by timing?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I upload?", "answer": "As often as you can sustainably. Weekly is common and effective. Daily can work but burns many out. Monthly is fine if quality is high. Consistency matters more than frequency."},
+    {"question": "What's the best time to upload?", "answer": "2-3 hours before your audience's peak viewing time. Check your Analytics > Audience > When viewers are on YouTube. General rule: afternoons/evenings in your main audience timezone."},
+    {"question": "Does upload time really matter?", "answer": "For initial push, somewhat. Early engagement signals quality to algorithm. Long-term, consistency matters more. A great video finds its audience regardless. Don't stress excessively about timing."},
+    {"question": "Should I tell subscribers my schedule?", "answer": "Yes—predictability builds habit. Mention in videos, channel description, Community tab. Subscribers who know when to expect content are more likely to watch promptly."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

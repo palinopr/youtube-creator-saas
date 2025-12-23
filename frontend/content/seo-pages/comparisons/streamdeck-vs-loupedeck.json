@@ -1,0 +1,67 @@
+{
+  "slug": "streamdeck-vs-loupedeck",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Stream Deck vs Loupedeck 2025: Best Control Surface for Creators",
+    "description": "Compare Elgato Stream Deck and Loupedeck control surfaces. Which is better for YouTube creators?",
+    "keywords": ["stream deck vs loupedeck", "elgato stream deck", "loupedeck", "control surface youtube", "streaming controller"]
+  },
+  "hero": {
+    "badge": "Control Surfaces",
+    "headline": "Stream Deck vs Loupedeck",
+    "subheadline": "Button control vs dial precision. Which workflow controller fits your needs?",
+    "primaryKeyword": "stream deck vs loupedeck"
+  },
+  "sections": [
+    {"type": "intro", "content": "Stream Deck and Loupedeck both accelerate creative workflows. Stream Deck offers customizable LCD buttons for shortcuts and macros. Loupedeck adds dials and touchscreens for precision control. Different tools for different workflows."},
+    {"type": "comparison", "title": "Controller Comparison", "content": [
+      {"feature": "Price", "toolA": "Stream Deck $150-250", "toolB": "Loupedeck $269-549", "tubeGrow": "N/A"},
+      {"feature": "Primary Input", "toolA": "LCD buttons", "toolB": "Dials + buttons + touch", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "Streaming, shortcuts", "toolB": "Photo/video editing", "tubeGrow": "N/A"},
+      {"feature": "Software", "toolA": "Excellent", "toolB": "Good", "tubeGrow": "N/A"},
+      {"feature": "Plugins", "toolA": "Massive ecosystem", "toolB": "Growing", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Easy", "toolB": "Moderate", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Stream Deck Strengths", "content": [
+      {"icon": "layout", "title": "LCD Buttons", "description": "Visual feedback. See what each button does. Customizable icons."},
+      {"icon": "plug", "title": "Plugin Ecosystem", "description": "Thousands of plugins. OBS, Zoom, Home Assistant, everything."},
+      {"icon": "layers", "title": "Folders & Profiles", "description": "Infinite buttons via folders. App-specific profiles."}
+    ]},
+    {"type": "features", "title": "Loupedeck Strengths", "content": [
+      {"icon": "sliders", "title": "Precision Dials", "description": "Fine adjustments for editing. Exposure, color, timeline scrubbing."},
+      {"icon": "palette", "title": "Editing Focus", "description": "Built for Lightroom, Premiere, Photoshop. Deep integration."},
+      {"icon": "smartphone", "title": "Touch Screen", "description": "Additional touch controls. More interaction options."}
+    ]},
+    {"type": "benefits", "title": "Choose Stream Deck If", "content": [
+      "Primary use is streaming",
+      "Want macro buttons and shortcuts",
+      "Value plugin ecosystem",
+      "Need quick-launch buttons",
+      "Smart home control wanted",
+      "Budget matters",
+      "Prefer simple setup"
+    ]},
+    {"type": "benefits", "title": "Choose Loupedeck If", "content": [
+      "Heavy photo/video editing",
+      "Want precision dial control",
+      "Lightroom/Premiere primary apps",
+      "Color grading work",
+      "Fine adjustments matter",
+      "Investment in workflow acceptable",
+      "Professional editing setup"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can Stream Deck do editing?", "answer": "Yes, but buttons only. Good for shortcuts, transitions, effects triggers. Lacks dials for fine adjustments Loupedeck offers."},
+    {"question": "Is Loupedeck worth the price?", "answer": "For editors spending hours in Premiere or Lightroom, yes. Dials transform color grading workflow. For streamers, Stream Deck is better value."},
+    {"question": "Can I use both?", "answer": "Absolutely. Many pros use Stream Deck for macros/shortcuts and Loupedeck for editing precision. Different tools, complementary functions."},
+    {"question": "Which has better software?", "answer": "Stream Deck software is more polished with larger plugin ecosystem. Loupedeck software is functional but less refined. Both work well."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "stream-deck",
+  "secondaryTool": "loupedeck"
+}

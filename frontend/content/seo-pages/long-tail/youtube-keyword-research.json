@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-keyword-research",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Keyword Research 2025: Find Topics That Get Views",
+    "description": "Master YouTube keyword research to find topics your audience searches for. Tools, techniques, and strategies for video SEO.",
+    "keywords": ["youtube keyword research", "youtube seo keywords", "find youtube topics", "video keyword strategy", "youtube search optimization"]
+  },
+  "hero": {
+    "badge": "YouTube SEO",
+    "headline": "YouTube Keyword Research: Find Topics That Get Views",
+    "subheadline": "Discover what your audience is searching for and create content that ranks.",
+    "primaryKeyword": "youtube keyword research"
+  },
+  "sections": [
+    {"type": "intro", "content": "Keyword research helps you create videos people actually search for. Instead of guessing topics, you find proven demand. This guide covers free and paid tools, research techniques, and how to incorporate keywords into your content strategy for maximum discoverability."},
+    {"type": "features", "title": "Keyword Research Methods", "content": [
+      {"icon": "search", "title": "YouTube Autocomplete", "description": "Free and accurate. Start typing your topic and YouTube suggests popular searches."},
+      {"icon": "tool", "title": "Dedicated Tools", "description": "TubeBuddy, VidIQ, and TubeGrow provide search volume, competition, and opportunity scores."},
+      {"icon": "chart", "title": "Competitor Analysis", "description": "Study successful videos in your niche. What keywords appear in their titles and descriptions?"}
+    ]},
+    {"type": "steps", "title": "Keyword Research Process", "content": [
+      "Brainstorm seed keywords for your niche",
+      "Use YouTube autocomplete to expand ideas",
+      "Check search volume with VidIQ/TubeBuddy",
+      "Analyze competition (can you rank?)",
+      "Look at competitor successful videos",
+      "Build keyword-to-video mapping",
+      "Prioritize low competition + decent volume"
+    ]},
+    {"type": "benefits", "title": "Where to Use Keywords", "content": [
+      "Video title (front-load primary keyword)",
+      "Description (first 2-3 sentences)",
+      "Tags (diminished importance but still use)",
+      "Spoken in video (YouTube transcribes)",
+      "Filename before uploading",
+      "Chapter titles and timestamps",
+      "End screen and card titles"
+    ]},
+    {"type": "checklist", "title": "Free Keyword Research Tools", "content": [
+      "YouTube Autocomplete (search bar suggestions)",
+      "YouTube Studio Research tab",
+      "Google Trends (YouTube filter)",
+      "Keyword Tool.io (limited free queries)",
+      "VidIQ Chrome extension (basic data free)",
+      "TubeBuddy browser extension (free tier)",
+      "Answer the Public (question variations)"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I know if a keyword is too competitive?", "answer": "Check who ranks for it. If top results are all huge channels, look for longer-tail variations. VidIQ and TubeBuddy provide competition scores."},
+    {"question": "Are tags still important for YouTube SEO?", "answer": "Less than before, but still worth using. Put primary keyword first, add variations. Don't expect tags alone to drive discovery."},
+    {"question": "Should I optimize for Google or YouTube search?", "answer": "Both. YouTube videos appear in Google search results. Focus on YouTube search intent first, but Google-friendly titles help with external discovery."},
+    {"question": "How many keywords should I target per video?", "answer": "One primary keyword, 2-3 secondary variations. Don't keyword stuff. Create content that thoroughly covers the topic naturally."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

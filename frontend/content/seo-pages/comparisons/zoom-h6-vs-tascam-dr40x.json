@@ -1,0 +1,65 @@
+{
+  "slug": "zoom-h6-vs-tascam-dr40x",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Zoom H6 vs Tascam DR-40X 2025: Field Recorders Compared",
+    "description": "Compare Zoom H6 and Tascam DR-40X portable recorders. Features, audio quality, and which is best for YouTube creators.",
+    "keywords": ["zoom h6 vs tascam dr40x", "portable recorder comparison", "field recorder", "zoom h6 review", "tascam dr40x review"]
+  },
+  "hero": {
+    "badge": "Audio Equipment",
+    "headline": "Zoom H6 vs Tascam DR-40X: Portable Audio Recorders",
+    "subheadline": "Two pro-grade portable recorders for YouTube content. Which fits your audio workflow?",
+    "primaryKeyword": "zoom h6 vs tascam dr40x"
+  },
+  "sections": [
+    {"type": "intro", "content": "Portable recorders give you flexibility that USB mics can't match. Record on location, backup camera audio, or use as a USB interface. The Zoom H6 and Tascam DR-40X are both excellent choices for YouTube creators, but they target different needs. Here's a detailed comparison."},
+    {"type": "comparison", "title": "Zoom H6 vs Tascam DR-40X Comparison", "content": [
+      {"feature": "Price", "toolA": "~$350", "toolB": "~$200", "tubeGrow": "N/A"},
+      {"feature": "Input Channels", "toolA": "4 XLR + 2 (swappable)", "toolB": "4 (2 XLR + 2 built-in)", "tubeGrow": "N/A"},
+      {"feature": "USB Audio Interface", "toolA": "6-in/2-out", "toolB": "2-in/2-out", "tubeGrow": "N/A"},
+      {"feature": "Recording Format", "toolA": "Up to 24-bit/96kHz", "toolB": "Up to 24-bit/96kHz", "tubeGrow": "N/A"},
+      {"feature": "Battery Life", "toolA": "~20 hours (AA)", "toolB": "~15 hours (AA)", "tubeGrow": "N/A"},
+      {"feature": "Swappable Capsules", "toolA": "Yes", "toolB": "No", "tubeGrow": "N/A"},
+      {"feature": "Weight", "toolA": "280g (no batteries)", "toolB": "213g (no batteries)", "tubeGrow": "N/A"},
+      {"feature": "Dual Recording", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Zoom H6 Advantages", "content": [
+      {"icon": "layers", "title": "Modular Capsules", "description": "Swap mic capsules for different recording scenarios. Shotgun, XY, MS options available."},
+      {"icon": "mic", "title": "More Inputs", "description": "6 tracks simultaneous recording. Perfect for multi-person podcasts and interviews."},
+      {"icon": "monitor", "title": "Larger Display", "description": "Big color screen makes levels easy to monitor. Essential for field recording."}
+    ]},
+    {"type": "features", "title": "Tascam DR-40X Advantages", "content": [
+      {"icon": "dollar-sign", "title": "Better Value", "description": "Similar core features at lower price. Great for creators on a budget."},
+      {"icon": "settings", "title": "Adjustable Mics", "description": "Built-in mics rotate from XY to AB pattern. Flexibility without swapping."},
+      {"icon": "smartphone", "title": "Compact Size", "description": "Smaller and lighter. Easier to mount on camera or carry in a bag."}
+    ]},
+    {"type": "benefits", "title": "Choose Zoom H6 If", "content": [
+      "You record multi-person content",
+      "You need modular capsule options",
+      "USB interface with many inputs matters",
+      "You want room to grow",
+      "Budget allows for premium option"
+    ]},
+    {"type": "benefits", "title": "Choose Tascam DR-40X If", "content": [
+      "Budget is a primary concern",
+      "You mainly record 1-2 people",
+      "Compact size is important",
+      "Built-in mics are sufficient",
+      "You need solid basics without extras"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better built-in mics?", "answer": "Both are excellent. The Zoom H6 capsules are slightly higher quality. The Tascam adjustable pattern is more versatile. Either works great for YouTube."},
+    {"question": "Can I use these as USB microphones?", "answer": "Yes. Both work as USB audio interfaces. The H6 offers more inputs for podcasting. DR-40X is simpler but effective."},
+    {"question": "Which is better for run-and-gun?", "answer": "Tascam DR-40X is more compact and quicker to set up. H6 is more capable but bulkier. For fast mounting, Tascam edges out."},
+    {"question": "Do I need phantom power?", "answer": "Both provide 48V phantom power for condenser and shotgun mics. Essential for professional mics, and both deliver."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "zoom-h6",
+  "secondaryTool": "tascam-dr40x"
+}

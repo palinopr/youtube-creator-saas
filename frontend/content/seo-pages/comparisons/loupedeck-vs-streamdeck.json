@@ -1,0 +1,59 @@
+{
+  "slug": "loupedeck-vs-streamdeck",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Loupedeck vs Stream Deck 2025: Creator Control Surfaces",
+    "description": "Compare Loupedeck and Elgato Stream Deck for content creation. Features, software, and which fits your workflow.",
+    "keywords": ["loupedeck vs stream deck", "stream deck vs loupedeck", "creator control surface", "streaming controller", "editing controller"]
+  },
+  "hero": {
+    "badge": "Control Surfaces",
+    "headline": "Loupedeck vs Stream Deck: Control Surface Showdown",
+    "subheadline": "Buttons, dials, or both? Choosing the right control surface for your creative workflow.",
+    "primaryKeyword": "loupedeck vs stream deck"
+  },
+  "sections": [
+    {"type": "intro", "content": "Control surfaces speed up creative work with physical buttons and controls for software actions. Stream Deck focuses on programmable buttons with screens. Loupedeck adds dials and sliders for hands-on control. Here's how to choose between them for your YouTube workflow."},
+    {"type": "comparison", "title": "Loupedeck vs Stream Deck Comparison", "content": [
+      {"feature": "Stream Deck MK2", "toolA": "-", "toolB": "~$150 (15 keys)", "tubeGrow": "N/A"},
+      {"feature": "Loupedeck CT", "toolA": "~$550", "toolB": "-", "tubeGrow": "N/A"},
+      {"feature": "Loupedeck Live", "toolA": "~$270", "toolB": "-", "tubeGrow": "N/A"},
+      {"feature": "Dials", "toolA": "Yes", "toolB": "No", "tubeGrow": "N/A"},
+      {"feature": "LCD Buttons", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"},
+      {"feature": "Touch Screen", "toolA": "Yes (CT)", "toolB": "No", "tubeGrow": "N/A"},
+      {"feature": "Editing Focus", "toolA": "Strong", "toolB": "Moderate", "tubeGrow": "N/A"},
+      {"feature": "Streaming Focus", "toolA": "Good", "toolB": "Excellent", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Stream Deck Strengths", "content": [
+      {"icon": "video", "title": "Streaming Optimized", "description": "Deep OBS integration. Scene switching, source control, alerts."},
+      {"icon": "dollar-sign", "title": "Lower Entry Price", "description": "Stream Deck MK2 is affordable. Great value for streamers."},
+      {"icon": "settings", "title": "Huge Plugin Ecosystem", "description": "Plugins for everything. Obsidian, Spotify, smart home, and more."}
+    ]},
+    {"type": "features", "title": "Loupedeck Strengths", "content": [
+      {"icon": "sliders", "title": "Dials and Sliders", "description": "Hands-on control for editing. Adjust exposure, timeline, effects."},
+      {"icon": "edit", "title": "Editing Workflows", "description": "Native Premiere, Resolve, Lightroom integration. Built for editors."},
+      {"icon": "layers", "title": "Touch Screen (CT)", "description": "Swipeable touch screen for additional controls and workspaces."}
+    ]},
+    {"type": "steps", "title": "Which Should You Choose?", "content": [
+      "Choose Stream Deck if: Streaming is primary use",
+      "Choose Stream Deck if: Budget is a concern",
+      "Choose Stream Deck if: You want simple button actions",
+      "Choose Loupedeck if: Video editing is primary use",
+      "Choose Loupedeck if: You want dials for precise control",
+      "Choose Loupedeck if: Photo editing workflow matters"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which is better for video editing?", "answer": "Loupedeck's dials shine for editing—timeline scrubbing, color grading, audio levels. Stream Deck works but button-only limits precision."},
+    {"question": "Can Stream Deck do what Loupedeck does?", "answer": "Some things. Stream Deck+ has dials now. But Loupedeck's editing integrations are deeper. Different strengths."},
+    {"question": "Is Loupedeck worth the price?", "answer": "For heavy editors, yes. Time savings compound. For occasional editing or mainly streaming, Stream Deck is better value."},
+    {"question": "Can I use both?", "answer": "Yes. Some have Stream Deck for streaming and Loupedeck for editing. Different tools for different workflows."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "loupedeck",
+  "secondaryTool": "stream-deck"
+}

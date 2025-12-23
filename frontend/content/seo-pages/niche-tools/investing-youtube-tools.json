@@ -1,0 +1,63 @@
+{
+  "slug": "investing-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Investing YouTube Tools 2025: Finance Creator Resources",
+    "description": "Top tools for investing YouTube channels. Resources for finance and stock market creators.",
+    "keywords": ["investing youtube tools", "finance youtube tools", "stock market youtube", "financial creator tools", "money youtube channel"]
+  },
+  "hero": {
+    "badge": "Finance Tools",
+    "headline": "Best Investing YouTube Tools 2025",
+    "subheadline": "Create credible financial content. Tools for data, charts, and compliance.",
+    "primaryKeyword": "investing youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Finance YouTube requires credibility above all else—viewers are trusting you with their financial education. The right tools help you present accurate data, create compelling visualizations, and maintain professional standards that build trust."},
+    {"type": "features", "title": "Data & Research Tools", "content": [
+      {"icon": "trending-up", "title": "TradingView", "description": "Best charts for presentations. Free tier generous. Screen recording works well."},
+      {"icon": "database", "title": "Yahoo Finance", "description": "Free stock data, screeners. Good enough for most educational content."},
+      {"icon": "bar-chart-2", "title": "Finviz", "description": "Stock screening, visualizations. Heat maps popular in thumbnails/videos."}
+    ]},
+    {"type": "features", "title": "Presentation & Graphics", "content": [
+      {"icon": "layout", "title": "Canva", "description": "Charts, graphics, thumbnails. Finance templates available. Quick production."},
+      {"icon": "pie-chart", "title": "Google Sheets", "description": "Create custom charts. Screen record spreadsheet analysis. Free."},
+      {"icon": "monitor", "title": "Screen Recording", "description": "OBS or Loom for TradingView walkthroughs. Show real-time analysis."}
+    ]},
+    {"type": "features", "title": "Compliance Considerations", "content": [
+      {"icon": "alert-triangle", "title": "Disclaimers", "description": "Not financial advice. Required for legal protection. Include in every video."},
+      {"icon": "shield", "title": "Disclosure", "description": "Disclose positions, sponsorships. FTC and SEC requirements. Be transparent."},
+      {"icon": "book", "title": "Research", "description": "Cite sources. Use data, not opinions alone. Build credibility over time."}
+    ]},
+    {"type": "benefits", "title": "Finance Content Best Practices", "content": [
+      "Always include appropriate disclaimers",
+      "Disclose any positions or conflicts",
+      "Use data to support points",
+      "Explain concepts clearly for beginners",
+      "Avoid specific investment recommendations",
+      "Date-stamp time-sensitive information",
+      "Build credibility through transparency"
+    ]},
+    {"type": "checklist", "title": "Finance Video Checklist", "content": [
+      "Disclaimer included?",
+      "Positions disclosed if relevant?",
+      "Data sources cited?",
+      "Charts clear and readable?",
+      "Jargon explained?",
+      "Date context provided?",
+      "No promises of returns?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need certifications to make finance content?", "answer": "Not required, but helps credibility. Be clear about your qualifications. Education content is legal; personalized advice requires licensing."},
+    {"question": "Best way to show stock charts?", "answer": "TradingView screen recording. Clean interface, professional look. Free tier works for content creation."},
+    {"question": "How to monetize finance YouTube?", "answer": "High CPM ads (finance pays well). Sponsorships from brokers, tools. Courses. Avoid recommending specific investments."},
+    {"question": "What about copyright for market data?", "answer": "Most data is fine for educational use. Be careful with proprietary research. TradingView allows screen recording. Check terms."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "investing"
+}

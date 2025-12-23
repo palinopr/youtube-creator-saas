@@ -1,0 +1,70 @@
+{
+  "slug": "how-to-youtube-thumbnails-create",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Thumbnails 2025: Design High-CTR Images",
+    "description": "Create YouTube thumbnails that get clicks. Design principles and tools.",
+    "keywords": ["youtube thumbnails", "create thumbnails youtube", "thumbnail design", "high ctr thumbnails", "youtube thumbnail maker"]
+  },
+  "hero": {
+    "badge": "Thumbnails",
+    "headline": "How to Create YouTube Thumbnails",
+    "subheadline": "Design thumbnails that demand clicks. Proven techniques for CTR.",
+    "primaryKeyword": "youtube thumbnails"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your thumbnail is your video's billboard—viewers decide to click in milliseconds based on this single image. Great thumbnails combine curiosity, clarity, and contrast. A 2% CTR improvement can double your video's reach. Here's how to create thumbnails that convert."},
+    {"type": "features", "title": "Design Principles", "content": [
+      {"icon": "eye", "title": "Curiosity Gap", "description": "Show enough to intrigue, not enough to satisfy."},
+      {"icon": "zap", "title": "Contrast", "description": "Bold colors, clear subjects. Stand out in feed."},
+      {"icon": "smile", "title": "Expressive Faces", "description": "Emotions grab attention. Exaggerate if needed."},
+      {"icon": "type", "title": "Minimal Text", "description": "3-4 words max. Big, bold, readable at small size."}
+    ]},
+    {"type": "steps", "title": "Creation Process", "content": [
+      "Plan thumbnail before or during filming",
+      "Capture high-quality source image",
+      "Open design tool (Canva, Photoshop)",
+      "Start with 1280x720 canvas",
+      "Cut out subject if using photo",
+      "Add contrasting background",
+      "Add minimal, bold text",
+      "Check at small size (mobile)",
+      "Export as JPG/PNG under 2MB"
+    ]},
+    {"type": "features", "title": "Design Tools", "content": [
+      {"icon": "layout", "title": "Canva", "description": "Beginner-friendly. Templates. Free tier."},
+      {"icon": "layers", "title": "Photoshop", "description": "Professional control. Industry standard."},
+      {"icon": "smartphone", "title": "Photopea", "description": "Free Photoshop alternative. Browser-based."},
+      {"icon": "image", "title": "Remove.bg", "description": "AI background removal. Quick cutouts."}
+    ]},
+    {"type": "benefits", "title": "Thumbnail Best Practices", "content": [
+      "Design at 1280x720 resolution",
+      "Check readability at small size",
+      "Use 3 colors maximum",
+      "Faces with eye contact convert",
+      "Consistent style builds brand",
+      "Title and thumbnail complement (don't repeat)",
+      "A/B test when possible"
+    ]},
+    {"type": "checklist", "title": "Thumbnail Checklist", "content": [
+      "High contrast colors?",
+      "Readable at mobile size?",
+      "Text under 4 words?",
+      "Subject clearly visible?",
+      "Creates curiosity?",
+      "Complements (not copies) title?",
+      "Under 2MB file size?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What size should thumbnails be?", "answer": "1280x720 pixels (16:9 ratio) is standard. YouTube recommends this exact size. Under 2MB file size. JPG or PNG format."},
+    {"question": "Best free thumbnail maker?", "answer": "Canva is most popular—templates, easy editing, free tier. Photopea for Photoshop-like features free in browser. Both handle YouTube sizes well."},
+    {"question": "How much text on thumbnails?", "answer": "Less is more. 3-4 words maximum. Large, bold, readable at small sizes. Text should add context, not repeat title."},
+    {"question": "Should I use my face?", "answer": "Faces with emotion typically perform better—humans are wired to notice faces. Not required for all niches, but strong performer for personality-driven channels."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

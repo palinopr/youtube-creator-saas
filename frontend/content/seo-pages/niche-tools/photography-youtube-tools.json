@@ -1,0 +1,67 @@
+{
+  "slug": "photography-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Photography YouTube Tools 2025: Creator Equipment Guide",
+    "description": "Essential tools for photography content on YouTube. Camera gear, editing software, and studio equipment for photo tutorials.",
+    "keywords": ["photography youtube tools", "photo tutorial equipment", "photography content creation", "camera youtube channel", "photography editing software"]
+  },
+  "hero": {
+    "badge": "Photography Content",
+    "headline": "Essential Tools for Photography YouTube Creators",
+    "subheadline": "Create stunning photo tutorials and reviews. The gear behind the gear.",
+    "primaryKeyword": "photography youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Photography YouTubers face a unique challenge: you need gear to film yourself using gear. Screen recording for editing tutorials, overhead rigs for flat lays, and cameras that can show your camera. This guide covers the essential tools for creating compelling photography content on YouTube."},
+    {"type": "features", "title": "Video Production Gear", "content": [
+      {"icon": "video", "title": "Second Camera Body", "description": "Dedicate one body to video while showcasing the other. Many use older bodies for filming."},
+      {"icon": "monitor", "title": "Overhead Rig", "description": "Essential for Lightroom tutorials and product shots. Shows your workspace from above."},
+      {"icon": "cast", "title": "HDMI Capture Card", "description": "Record clean camera screens. Elgato Cam Link or similar for showing camera settings."}
+    ]},
+    {"type": "features", "title": "Screen Recording & Editing", "content": [
+      {"icon": "monitor", "title": "OBS Studio", "description": "Free screen recording for Lightroom and Photoshop tutorials. High quality, no watermarks."},
+      {"icon": "edit", "title": "Lightroom Classic", "description": "Your editing software is also content. Show your workflow, presets, and techniques."},
+      {"icon": "layers", "title": "Photoshop", "description": "Retouching tutorials, composite work, and advanced techniques. Screen record everything."}
+    ]},
+    {"type": "steps", "title": "Photography Tutorial Setup", "content": [
+      "Main camera on tripod for talking head",
+      "Overhead camera for desk/editing view",
+      "Screen recording software running",
+      "Good lighting on face and subject",
+      "Clean workspace visible on camera",
+      "Audio from dedicated microphone",
+      "Editing timeline ready for multicam"
+    ]},
+    {"type": "benefits", "title": "Content Ideas for Photo Channels", "content": [
+      "Camera and lens reviews",
+      "Lightroom/Photoshop tutorials",
+      "Before and after edits",
+      "Shooting technique guides",
+      "Preset and LUT breakdowns",
+      "Location shooting vlogs",
+      "Gear comparison videos"
+    ]},
+    {"type": "checklist", "title": "Photo Creator Essentials", "content": [
+      "Dedicated video camera",
+      "Screen recording software",
+      "HDMI capture card",
+      "Overhead camera mount",
+      "Good microphone for narration",
+      "Lightbox or product table",
+      "Consistent studio lighting"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need two cameras?", "answer": "Helpful but not required. Many start by filming with their phone while showcasing their main camera. Upgrade to two bodies as you grow."},
+    {"question": "What's the best software for screen recording?", "answer": "OBS Studio is free and excellent. ScreenFlow (Mac) and Camtasia offer more editing features. For Lightroom tutorials, any works."},
+    {"question": "How do I show my camera screen clearly?", "answer": "Use an HDMI capture card like Elgato Cam Link. Records clean output from camera. Better than filming the screen."},
+    {"question": "Should I show my face or just the screen?", "answer": "Both. Picture-in-picture with your face builds connection. Full screen for detailed editing. Switch between them."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "photography"
+}

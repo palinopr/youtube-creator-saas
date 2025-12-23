@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-intro",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make a YouTube Intro 2025: Templates & Tips",
+    "description": "Create an effective YouTube intro. Length, style, and tools for channel branding.",
+    "keywords": ["youtube intro", "make youtube intro", "youtube intro maker", "channel intro", "video intro"]
+  },
+  "hero": {
+    "badge": "Intros",
+    "headline": "How to Make a YouTube Intro",
+    "subheadline": "Brand your channel. Short, effective intros that don't lose viewers.",
+    "primaryKeyword": "youtube intro"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube intros establish brand recognition—but they must be short. Long intros kill retention. The modern approach: hook first, brand second, keep it under 5 seconds. Here's how to create intros that work."},
+    {"type": "features", "title": "Intro Creation Tools", "content": [
+      {"icon": "video", "title": "Canva Video", "description": "Free templates, easy customization. Great for beginners."},
+      {"icon": "film", "title": "Envato Elements", "description": "Professional templates. Customize in After Effects or Premiere."},
+      {"icon": "zap", "title": "Placeit", "description": "Browser-based, quick renders. Mockup style intros."}
+    ]},
+    {"type": "steps", "title": "Creating Your Intro", "content": [
+      "Decide on intro style (animated logo, text, footage)",
+      "Keep under 5 seconds total",
+      "Include channel name/logo",
+      "Match your channel aesthetic",
+      "Add music or sound effect",
+      "Export at high quality",
+      "Place AFTER your hook, not before"
+    ]},
+    {"type": "features", "title": "Intro Best Practices", "content": [
+      {"icon": "clock", "title": "Under 5 Seconds", "description": "Shorter is better. 3 seconds ideal. Long intros hurt retention."},
+      {"icon": "zap", "title": "After the Hook", "description": "Hook viewers first, then intro. Don't intro before value."},
+      {"icon": "palette", "title": "Consistent Branding", "description": "Same intro across videos builds recognition."}
+    ]},
+    {"type": "benefits", "title": "What Makes Good Intros", "content": [
+      "Short (3-5 seconds max)",
+      "Recognizable brand elements",
+      "Matching music/sound",
+      "Clean, professional look",
+      "Consistent across videos",
+      "Not before the hook",
+      "Optional for some content"
+    ]},
+    {"type": "checklist", "title": "Intro Checklist", "content": [
+      "Under 5 seconds?",
+      "Placed after hook?",
+      "Includes channel branding?",
+      "Music/sound appropriate?",
+      "Quality matches content?",
+      "Consistent style?",
+      "Actually needed for this video?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need an intro?", "answer": "Not necessarily. Many successful channels have no intro. If you use one, keep it short. Content quality matters more."},
+    {"question": "Where should intro go?", "answer": "After your hook. Open with value or intrigue first. Then quick intro. Never start with intro—viewers will click away."},
+    {"question": "How long is too long?", "answer": "Over 5 seconds is too long. 3 seconds is ideal. Long intros are from an older YouTube era. Respect viewer time."},
+    {"question": "Free vs paid templates?", "answer": "Free templates work fine for most. Canva has great options. Paid gives more unique options and customization."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

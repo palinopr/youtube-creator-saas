@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-description",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Descriptions 2025: SEO Guide",
+    "description": "Write effective YouTube video descriptions. SEO optimization, structure, and best practices.",
+    "keywords": ["youtube description", "video description youtube", "youtube description template", "seo description youtube", "write youtube description"]
+  },
+  "hero": {
+    "badge": "Descriptions",
+    "headline": "How to Write YouTube Descriptions",
+    "subheadline": "Descriptions help search and context. Structure them right for SEO and viewer value.",
+    "primaryKeyword": "youtube description"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube descriptions are prime SEO real estate. The first 150 characters show in search results, and the full description helps YouTube understand your content. A well-structured description improves discoverability and provides value to viewers."},
+    {"type": "features", "title": "Description Structure", "content": [
+      {"icon": "type", "title": "Hook (First 150 chars)", "description": "Shows in search. Include main keyword. Compelling summary."},
+      {"icon": "file-text", "title": "Main Description", "description": "Detailed video overview. Natural keyword inclusion. Value proposition."},
+      {"icon": "link", "title": "Links & Resources", "description": "Products mentioned, social links, related content. Affiliate opportunities."}
+    ]},
+    {"type": "steps", "title": "Writing Process", "content": [
+      "Start with main keyword naturally",
+      "Summarize video value in first sentence",
+      "Expand on what viewers will learn",
+      "Include relevant timestamps",
+      "Add links to mentioned resources",
+      "Include social media links",
+      "End with relevant hashtags (optional)"
+    ]},
+    {"type": "features", "title": "SEO Elements", "content": [
+      {"icon": "search", "title": "Keyword Placement", "description": "Primary keyword in first 25 words. Natural, not stuffed."},
+      {"icon": "hash", "title": "Hashtags", "description": "3-5 relevant hashtags. First 3 show above title."},
+      {"icon": "list", "title": "Timestamps", "description": "Chapter markers. Improves search and user experience."}
+    ]},
+    {"type": "benefits", "title": "Description Do's", "content": [
+      "Front-load important information",
+      "Include target keywords naturally",
+      "Add timestamps for chapters",
+      "Link to relevant resources",
+      "Use line breaks for readability",
+      "Include call-to-action",
+      "Update default channel description"
+    ]},
+    {"type": "benefits", "title": "Description Don'ts", "content": [
+      "Don't keyword stuff",
+      "Don't use irrelevant hashtags",
+      "Don't leave description empty",
+      "Don't start with 'In this video...'",
+      "Don't use excessive emojis",
+      "Don't copy other videos' descriptions",
+      "Don't include misleading links"
+    ]},
+    {"type": "checklist", "title": "Description Checklist", "content": [
+      "Main keyword in first 25 words?",
+      "First 150 chars compelling?",
+      "Timestamps included?",
+      "Relevant links added?",
+      "Call-to-action present?",
+      "Natural reading flow?",
+      "Hashtags relevant (3-5 max)?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should descriptions be?", "answer": "Minimum 200-300 words recommended. Use the space—it's free SEO. But quality over length. Don't pad with fluff."},
+    {"question": "Do descriptions affect ranking?", "answer": "Yes, but less than title and watch time. Descriptions help YouTube understand context and appear in search. Worth optimizing."},
+    {"question": "Should I use timestamps?", "answer": "Yes. Creates chapters in video player, improves UX, and can appear in Google search results. Easy win."},
+    {"question": "What about default descriptions?", "answer": "Set up a default with common links, social media, channel info. Then customize the top portion for each video."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

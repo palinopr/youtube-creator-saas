@@ -1,0 +1,64 @@
+{
+  "slug": "chess-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Chess YouTube Tools 2025: Chess Content Creator Equipment",
+    "description": "Top tools for chess YouTube channels. Board setup, analysis software, and streaming gear.",
+    "keywords": ["chess youtube tools", "chess channel equipment", "chess content creator", "chess streaming setup", "chess analysis tools"]
+  },
+  "hero": {
+    "badge": "Chess Tools",
+    "headline": "Best Chess YouTube Tools 2025",
+    "subheadline": "Create compelling chess content. Analysis tools and streaming setup.",
+    "primaryKeyword": "chess youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Chess content boomed with online play. From game analysis to puzzles to entertaining commentary, the format works. You need reliable screen capture, good analysis tools, and engaging presentation. Here's what successful chess YouTubers use."},
+    {"type": "features", "title": "Analysis Software", "content": [
+      {"icon": "cpu", "title": "Stockfish/Lichess", "description": "Free engine analysis. Industry standard accuracy."},
+      {"icon": "bar-chart", "title": "Chess.com Game Review", "description": "Built-in analysis with computer lines."},
+      {"icon": "monitor", "title": "ChessBase", "description": "Professional database. Opening preparation."},
+      {"icon": "search", "title": "Lichess Analysis Board", "description": "Free, powerful, shareable. Great for content."}
+    ]},
+    {"type": "features", "title": "Streaming/Recording", "content": [
+      {"icon": "video", "title": "OBS Studio", "description": "Screen capture, webcam overlay. Standard setup."},
+      {"icon": "camera", "title": "Webcam", "description": "Reaction shots add personality. Logitech C920+."},
+      {"icon": "mic", "title": "Quality Microphone", "description": "Commentary is key. Blue Yeti, Rode, Shure."}
+    ]},
+    {"type": "features", "title": "Physical Board Setup", "content": [
+      {"icon": "grid", "title": "DGT Board", "description": "Digital game transmission. Physical moves synced to computer."},
+      {"icon": "video", "title": "Overhead Camera", "description": "Capture physical board play. Professional look."},
+      {"icon": "sun", "title": "Board Lighting", "description": "Even illumination without glare. LED panels."}
+    ]},
+    {"type": "benefits", "title": "Chess Content Tips", "content": [
+      "Explain thought process, not just moves",
+      "Vary content: analysis, puzzles, games",
+      "Personality matters as much as skill",
+      "Engage with chess community",
+      "Consistent rating/improvement content",
+      "Collaborate with other chess creators",
+      "React to interesting games"
+    ]},
+    {"type": "checklist", "title": "Chess Setup Checklist", "content": [
+      "Analysis software configured?",
+      "OBS scenes set up?",
+      "Webcam positioned?",
+      "Audio quality good?",
+      "Board clearly visible?",
+      "Engine analysis ready?",
+      "Streaming keys configured?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need to be a titled player?", "answer": "No—entertaining commentary and improvement journeys work at any level. Levy Rozman (GothamChess) succeeded through personality and education, not just strength."},
+    {"question": "Best platform for chess content?", "answer": "Lichess is free with excellent features. Chess.com has larger player base. Both work for content creation. Many creators use both."},
+    {"question": "Physical or digital board?", "answer": "Digital is easier—no additional setup. Physical with overhead camera adds production value. DGT boards sync physical to digital. Start digital, upgrade later."},
+    {"question": "How to stand out in chess content?", "answer": "Personality and niche focus. Opening specialists, improvement journeys, puzzle content, entertainment value. Find your angle beyond just playing games."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "chess"
+}

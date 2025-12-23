@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { api } from "@/lib/api";
+import { api, YouTubeChannel } from "@/lib/api";
 import {
   Youtube,
   Sparkles,
@@ -16,6 +16,7 @@ import {
   Zap,
   Video,
   AlertCircle,
+  Users,
 } from "lucide-react";
 
 interface AuthStatus {
@@ -27,11 +28,12 @@ interface AuthStatus {
   };
 }
 
-type OnboardingStep = "welcome" | "connect" | "complete";
+type OnboardingStep = "welcome" | "connect" | "select" | "complete";
 
 const steps: { id: OnboardingStep; label: string }[] = [
   { id: "welcome", label: "Welcome" },
   { id: "connect", label: "Connect" },
+  { id: "select", label: "Select Channel" },
   { id: "complete", label: "Complete" },
 ];
 
@@ -42,6 +44,9 @@ export default function OnboardingPage() {
   const [loading, setLoading] = useState(true);
   const [connecting, setConnecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [channels, setChannels] = useState<YouTubeChannel[]>([]);
+  const [loadingChannels, setLoadingChannels] = useState(false);
+  const [selectingChannel, setSelectingChannel] = useState<string | null>(null);
 
   useEffect(() => {
     checkAuthStatus();
@@ -58,14 +63,55 @@ export default function OnboardingPage() {
         return;
       }
 
-      // If channel is connected, complete onboarding
+      // If channel is connected, check if we need channel selection
       if (data.channel_connected) {
-        setCurrentStep("complete");
+        // Fetch channels to see if there are multiple
+        await fetchChannels();
       }
     } catch (err) {
       setError("Failed to check authentication status");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchChannels = async () => {
+    setLoadingChannels(true);
+    try {
+      const data = await api.getUserChannels();
+      setChannels(data.channels);
+
+      // If only one channel, auto-select it and go to complete
+      if (data.channels.length === 1) {
+        await handleSelectChannel(data.channels[0].id);
+      } else if (data.channels.length > 1) {
+        // Check if any channel is already primary
+        const hasPrimary = data.channels.some((ch) => ch.is_primary);
+        if (hasPrimary) {
+          setCurrentStep("complete");
+        } else {
+          setCurrentStep("select");
+        }
+      } else {
+        // No channels, stay on connect step
+        setCurrentStep("connect");
+      }
+    } catch (err) {
+      setError("Failed to fetch channels");
+    } finally {
+      setLoadingChannels(false);
+    }
+  };
+
+  const handleSelectChannel = async (channelId: string) => {
+    setSelectingChannel(channelId);
+    try {
+      await api.selectPrimaryChannel(channelId);
+      setCurrentStep("complete");
+    } catch (err) {
+      setError("Failed to select channel");
+    } finally {
+      setSelectingChannel(null);
     }
   };
 
@@ -307,6 +353,76 @@ export default function OnboardingPage() {
                   )}
                 </button>
               </div>
+            </div>
+          )}
+
+          {/* Select Channel Step */}
+          {currentStep === "select" && (
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-10 h-10 text-blue-400" />
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Select Your Channel
+              </h1>
+              <p className="text-gray-400 text-lg mb-8">
+                We found {channels.length} YouTube channel{channels.length > 1 ? "s" : ""} connected to your account.
+                Choose the one you want to analyze.
+              </p>
+
+              {loadingChannels ? (
+                <div className="flex items-center justify-center gap-3 py-8">
+                  <Loader2 className="w-6 h-6 animate-spin text-purple-500" />
+                  <span className="text-gray-400">Loading channels...</span>
+                </div>
+              ) : (
+                <div className="grid gap-4 mb-8">
+                  {channels.map((channel) => (
+                    <button
+                      key={channel.id}
+                      onClick={() => handleSelectChannel(channel.id)}
+                      disabled={selectingChannel !== null}
+                      className={`flex items-center gap-4 p-4 bg-white/5 border rounded-xl transition-all text-left w-full ${
+                        selectingChannel === channel.id
+                          ? "border-purple-500 bg-purple-500/10"
+                          : "border-white/10 hover:border-white/30 hover:bg-white/10"
+                      } disabled:opacity-50`}
+                    >
+                      {channel.thumbnail_url ? (
+                        <img
+                          src={channel.thumbnail_url}
+                          alt={channel.channel_name || "Channel"}
+                          className="w-16 h-16 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center">
+                          <Youtube className="w-8 h-8 text-gray-500" />
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-medium text-white truncate">
+                          {channel.channel_name || "Unnamed Channel"}
+                        </h3>
+                        <p className="text-sm text-gray-400">
+                          {channel.subscriber_count?.toLocaleString() || 0} subscribers
+                        </p>
+                        <p className="text-xs text-gray-500 font-mono truncate">
+                          {channel.id}
+                        </p>
+                      </div>
+                      {selectingChannel === channel.id ? (
+                        <Loader2 className="w-6 h-6 animate-spin text-purple-500" />
+                      ) : (
+                        <ArrowRight className="w-6 h-6 text-gray-400" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <p className="text-sm text-gray-500">
+                You can change your selected channel later in Settings.
+              </p>
             </div>
           )}
 

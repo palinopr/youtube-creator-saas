@@ -1,0 +1,77 @@
+{
+  "slug": "youtube-description-templates",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Description Templates 2025: Copy-Paste Frameworks",
+    "description": "Ready-to-use YouTube description templates. Copy, customize, and optimize your videos.",
+    "keywords": ["youtube description template", "video description template", "youtube description format", "youtube description example", "video description"]
+  },
+  "hero": {
+    "badge": "Description Templates",
+    "headline": "YouTube Description Templates",
+    "subheadline": "Ready-to-use frameworks. Stop starting from scratch.",
+    "primaryKeyword": "youtube description template"
+  },
+  "sections": [
+    {"type": "intro", "content": "A good description template saves time and ensures consistency. Instead of writing from scratch every video, customize proven frameworks that cover SEO essentials, viewer info, and your standard links. Here are templates for different content types you can adapt."},
+    {"type": "features", "title": "Template Sections", "content": [
+      {"icon": "type", "title": "Hook (First 150 chars)", "description": "Keyword + value prop. Shows in search."},
+      {"icon": "file-text", "title": "Body", "description": "Expanded description. More keywords."},
+      {"icon": "clock", "title": "Timestamps", "description": "Chapters for navigation."},
+      {"icon": "link", "title": "Links Section", "description": "Resources, social, affiliate."},
+      {"icon": "hash", "title": "Hashtags", "description": "3-5 relevant tags at end."},
+      {"icon": "info", "title": "Default Info", "description": "About, schedule, contact."}
+    ]},
+    {"type": "steps", "title": "Building Your Template", "content": [
+      "Create hook section placeholder",
+      "Add space for video-specific content",
+      "Include timestamps format",
+      "Add your standard links (never change)",
+      "Include social media links",
+      "Add about section (channel description)",
+      "Include hashtag placeholders",
+      "Save as YouTube default description"
+    ]},
+    {"type": "features", "title": "Template Types", "content": [
+      {"icon": "book", "title": "Tutorial Template", "description": "Steps, resources, prerequisites."},
+      {"icon": "video", "title": "Vlog Template", "description": "Context, locations, gear used."},
+      {"icon": "star", "title": "Review Template", "description": "Product links, specs, verdict."},
+      {"icon": "list", "title": "List Video Template", "description": "Timestamps for each item."}
+    ]},
+    {"type": "features", "title": "Set as Default", "content": [
+      {"icon": "settings", "title": "YouTube Studio", "description": "Settings > Upload defaults."},
+      {"icon": "save", "title": "Default Description", "description": "Paste your template here."},
+      {"icon": "refresh-cw", "title": "Every Upload", "description": "Pre-filled, ready to customize."},
+      {"icon": "clock", "title": "Time Saved", "description": "Minutes per video add up."}
+    ]},
+    {"type": "benefits", "title": "Template Best Practices", "content": [
+      "Keep evergreen links at bottom",
+      "Customize top section each video",
+      "Update affiliate links as needed",
+      "Include call to action",
+      "Don't keyword stuff",
+      "Make timestamps consistent format",
+      "Review and update quarterly"
+    ]},
+    {"type": "checklist", "title": "Template Checklist", "content": [
+      "Hook section with keyword space?",
+      "Video-specific section clear?",
+      "Timestamp format defined?",
+      "All social links included?",
+      "Affiliate disclosures if needed?",
+      "About section present?",
+      "Set as upload default?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I set a default description?", "answer": "YouTube Studio > Settings > Upload defaults > Basic info > Description. Paste your template. Every new upload will start with this. Saves significant time."},
+    {"question": "Should every video have unique description?", "answer": "Top section should be unique—first 150 characters especially. Standard links, about section can repeat. YouTube understands boilerplate at bottom. Unique + template hybrid is best."},
+    {"question": "How long should descriptions be?", "answer": "Longer generally better for SEO—200+ words recommended. Front-load unique content. Don't pad with fluff. Template provides structure without sacrificing length."},
+    {"question": "What about timestamps format?", "answer": "0:00 Introduction (start at zero). Minimum 3 timestamps. Each section 10+ seconds. YouTube auto-generates chapters from this format. Consistent naming helps."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

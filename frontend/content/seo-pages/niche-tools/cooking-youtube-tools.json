@@ -1,0 +1,78 @@
+{
+  "slug": "cooking-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Cooking YouTube Tools 2025: Grow Your Food Channel",
+    "description": "Essential tools for cooking YouTubers. Camera gear, editing software, SEO tools, and everything food content creators need to succeed.",
+    "keywords": ["cooking youtube tools", "food youtube channel tools", "recipe video equipment", "cooking content creation", "food vlog tools"]
+  },
+  "hero": {
+    "badge": "Cooking Niche",
+    "headline": "Best YouTube Tools for Cooking Creators in 2025",
+    "subheadline": "From overhead camera rigs to recipe SEO, here's everything you need to create mouthwatering food content.",
+    "primaryKeyword": "cooking youtube tools"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Cooking content on YouTube combines visual appeal with practical value, making it one of the most engaging niches. But creating professional-looking food videos requires specific tools and techniques. This guide covers the essential equipment and software cooking YouTubers need to make their channels sizzle."
+    },
+    {
+      "type": "features",
+      "title": "Essential Cooking Creator Tools",
+      "content": [
+        {"icon": "video", "title": "Overhead Camera Setup", "description": "The signature top-down shot requires a camera arm or ceiling mount. Elgato Multi Mount or SmallRig arms are popular choices for stable overhead footage."},
+        {"icon": "sparkles", "title": "Good Lighting", "description": "Food looks best under soft, diffused lighting. Ring lights or softboxes positioned to eliminate shadows make dishes pop on camera."},
+        {"icon": "chart", "title": "Recipe SEO", "description": "Food content has specific SEO patterns. Tools that understand recipe keywords and seasonal trends help you time content perfectly."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Cooking YouTube Toolkit Checklist",
+      "content": [
+        "Camera with good low-light performance for kitchen filming",
+        "Overhead camera mount or arm for top-down shots",
+        "Softbox or ring light for flattering food lighting",
+        "External microphone (kitchens are noisy)",
+        "Video editor with color grading for food (make it look appetizing)",
+        "Thumbnail tools with food-friendly templates",
+        "SEO tool for recipe keyword research",
+        "Tripod for stable front-facing shots"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Why Cooking Channels Need Specialized Tools",
+      "content": [
+        "Top-down shots require specific mounting equipment",
+        "Kitchen lighting is often harsh and unflattering",
+        "Food needs color grading to look appetizing on camera",
+        "Recipe SEO follows seasonal and holiday patterns",
+        "Audio is challenging in kitchen environments"
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Setting Up Your Cooking Creator Workflow",
+      "content": [
+        "Choose a camera position style: overhead, front-facing, or hybrid",
+        "Invest in lighting before upgrading your camera",
+        "Set up a reliable mounting system for overhead shots",
+        "Create a color grading preset that makes food look delicious",
+        "Build a content calendar around seasonal ingredients and holidays"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "What camera do cooking YouTubers use?", "answer": "Many use Sony cameras (A6400, A7C) for their autofocus and color science. iPhones also work well for cooking content with proper lighting. The camera matters less than lighting."},
+    {"question": "How do I get good overhead shots?", "answer": "Use a camera arm clamped to your counter or table. Products like Elgato Multi Mount or SmallRig arms provide stable positioning. Ensure your camera can tilt 90 degrees."},
+    {"question": "Do I need to show my face in cooking videos?", "answer": "Not required. Many successful cooking channels show only hands and food. However, personality-driven channels with face cam tend to build stronger subscriber loyalty."},
+    {"question": "How important is audio in cooking videos?", "answer": "Very important. Sizzling sounds, chopping, and commentary add to the experience. Invest in a directional mic that focuses on your voice while picking up cooking ASMR."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1,
+  "niche": "cooking"
+}

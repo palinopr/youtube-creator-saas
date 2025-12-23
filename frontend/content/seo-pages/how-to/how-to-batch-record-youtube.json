@@ -1,0 +1,63 @@
+{
+  "slug": "how-to-batch-record-youtube",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Batch Record YouTube Videos 2025: Efficiency Guide",
+    "description": "Master batch recording for consistent YouTube uploads. Workflow tips for recording multiple videos efficiently.",
+    "keywords": ["batch record youtube", "batch recording", "record multiple videos", "youtube workflow", "efficient youtube production"]
+  },
+  "hero": {
+    "badge": "Batch Recording",
+    "headline": "How to Batch Record YouTube Videos",
+    "subheadline": "Record a month of content in one day. The efficient creator's secret weapon.",
+    "primaryKeyword": "batch record youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "Batch recording means filming multiple videos in one session. Set up once, knock out 4-8 videos, then edit gradually. It's how many full-time creators stay consistent while having a life. Here's how to batch record effectively."},
+    {"type": "features", "title": "Benefits of Batch Recording", "content": [
+      {"icon": "clock", "title": "Time Efficiency", "description": "Setup once for many videos. No daily camera configuration."},
+      {"icon": "calendar", "title": "Content Buffer", "description": "Build a backlog. Never scramble for content on upload day."},
+      {"icon": "zap", "title": "Focus State", "description": "Get in the zone once. Maintain energy across recordings."}
+    ]},
+    {"type": "steps", "title": "Batch Recording Process", "content": [
+      "Plan 4-8 video topics in advance",
+      "Write all scripts before recording day",
+      "Set up equipment and test everything",
+      "Prepare outfit changes if needed",
+      "Record in logical order",
+      "Take breaks to maintain energy",
+      "Review footage before tearing down",
+      "Organize files for editing"
+    ]},
+    {"type": "benefits", "title": "Batch Recording Tips", "content": [
+      "Schedule recording days on calendar",
+      "Have scripts/outlines printed",
+      "Keep water and snacks nearby",
+      "Take breaks every 2-3 videos",
+      "Change clothes between videos (variety)",
+      "Record B-roll while set up",
+      "Save equipment settings"
+    ]},
+    {"type": "checklist", "title": "Recording Day Checklist", "content": [
+      "All scripts finalized",
+      "Equipment tested and ready",
+      "Batteries charged, cards formatted",
+      "Multiple outfits prepared",
+      "Recording space clean",
+      "Schedule cleared for the day",
+      "Water and snacks stocked",
+      "Backup equipment available"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many videos should I batch?", "answer": "Start with 3-4. Work up to 6-8 with practice. Quality drops if you push too hard. Find your sustainable maximum."},
+    {"question": "How do I maintain energy across recordings?", "answer": "Take real breaks. Eat snacks. Stand up and move. Record hardest videos when energy is highest. Don't schedule too many."},
+    {"question": "Won't my content feel dated?", "answer": "For evergreen content, no problem. For timely content, record closer to upload. Many creators batch evergreen and record timely content separately."},
+    {"question": "How do I organize batch recorded footage?", "answer": "Clear file naming immediately. Create folders per video. Add notes about each recording. Organization prevents editing headaches."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "3d-printing-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best 3D Printing YouTube Tools 2025: Maker Video Equipment Guide",
+    "description": "Top tools for 3D printing YouTube channels. Cameras and setups for maker content.",
+    "keywords": ["3d printing youtube tools", "3d printer youtube", "maker youtube equipment", "3d printing channel", "additive manufacturing youtube"]
+  },
+  "hero": {
+    "badge": "3D Printing Tools",
+    "headline": "Best 3D Printing YouTube Tools 2025",
+    "subheadline": "Document your prints perfectly. Essential tools for 3D printing creators.",
+    "primaryKeyword": "3d printing youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "3D printing content spans reviews, tutorials, time-lapses, and project builds. Capturing print quality, time-lapse progress, and software workflows requires specific equipment. From macro detail shots to long-duration recording, here's what 3D printing YouTubers need."},
+    {"type": "features", "title": "Camera Equipment", "content": [
+      {"icon": "camera", "title": "Macro-Capable Camera", "description": "Show layer detail, print quality. 90mm macro lens ideal."},
+      {"icon": "video", "title": "Time-Lapse Camera", "description": "Pi Camera, webcam with OctoPrint. Dedicated print monitoring."},
+      {"icon": "smartphone", "title": "Overhead Rig", "description": "Top-down view of bed. Document full prints."}
+    ]},
+    {"type": "features", "title": "Time-Lapse Setup", "content": [
+      {"icon": "clock", "title": "OctoPrint + Octolapse", "description": "Perfect layer-synced time-lapses. Clean motion."},
+      {"icon": "move", "title": "Camera Mount", "description": "Stable mounting during long prints. No vibration."},
+      {"icon": "cpu", "title": "Raspberry Pi", "description": "Run OctoPrint, control camera. Essential combo."}
+    ]},
+    {"type": "features", "title": "Screen Recording", "content": [
+      {"icon": "monitor", "title": "OBS Studio", "description": "Capture CAD/slicer workflow. Free and powerful."},
+      {"icon": "layers", "title": "Slicer Settings Display", "description": "Show settings clearly. Highlight key parameters."},
+      {"icon": "type", "title": "Annotation Tools", "description": "Draw on screen, highlight. Explain complex settings."}
+    ]},
+    {"type": "benefits", "title": "3D Printing Content Tips", "content": [
+      "Time-lapse every interesting print",
+      "Macro shots show quality differences",
+      "Screen record slicer workflows",
+      "Include failures—they educate",
+      "Compare settings side-by-side",
+      "Good lighting reveals layer lines",
+      "Turntable for finished model reveals"
+    ]},
+    {"type": "checklist", "title": "Print Filming Checklist", "content": [
+      "Time-lapse camera positioned?",
+      "OctoPrint/Octolapse configured?",
+      "Lighting consistent for time-lapse?",
+      "Macro lens for detail shots?",
+      "Screen recording software ready?",
+      "Print settings documented?",
+      "Turntable for product shots?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best time-lapse camera for 3D printing?", "answer": "Raspberry Pi with HQ Camera and Octolapse is gold standard. Syncs with layer changes for perfect time-lapses. Wyze Cam as cheap alternative."},
+    {"question": "How to show print quality clearly?", "answer": "Macro lens at 1:1 magnification. Side lighting reveals layer lines. Compare prints at same angle/lighting. Turntable rotation shows all sides."},
+    {"question": "What's Octolapse and why use it?", "answer": "OctoPrint plugin that syncs camera capture with print head position. Creates smooth time-lapses without print head in frame. Industry standard for print content."},
+    {"question": "Best lighting for 3D prints?", "answer": "Side lighting reveals texture and layer detail. Avoid flat front lighting that hides imperfections. Rotating light source for product shots shows different angles."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "3d-printing"
+}

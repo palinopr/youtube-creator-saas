@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-brand-account",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Brand Account 2025: Business Channel Setup",
+    "description": "Set up a YouTube Brand Account for business. Multiple managers and professional features.",
+    "keywords": ["youtube brand account", "youtube business account", "brand account youtube", "youtube channel for business", "youtube team account"]
+  },
+  "hero": {
+    "badge": "Brand Account",
+    "headline": "How to Create YouTube Brand Account",
+    "subheadline": "Professional channel structure. Multiple managers, separate identity.",
+    "primaryKeyword": "youtube brand account"
+  },
+  "sections": [
+    {"type": "intro", "content": "A YouTube Brand Account separates your channel from your personal Google account. This enables multiple managers, professional branding, and easier future transfers. For businesses and serious creators, brand accounts are the way to go."},
+    {"type": "features", "title": "Brand Account Benefits", "content": [
+      {"icon": "users", "title": "Multiple Managers", "description": "Add team members without sharing personal login."},
+      {"icon": "briefcase", "title": "Separate Identity", "description": "Channel not tied to personal Google account."},
+      {"icon": "refresh-cw", "title": "Transferable", "description": "Can transfer ownership. Important for business sale."}
+    ]},
+    {"type": "steps", "title": "Creating Brand Account", "content": [
+      "Sign in to YouTube with Google account",
+      "Click profile picture > Settings",
+      "Click 'Create a new channel'",
+      "Choose 'Use a custom name'",
+      "Enter your brand/channel name",
+      "This creates a Brand Account automatically",
+      "Verify channel is under Brand Account in Settings",
+      "Add managers through Brand Account settings"
+    ]},
+    {"type": "features", "title": "Manager Roles", "content": [
+      {"icon": "crown", "title": "Owner", "description": "Full control. Can delete channel. Can add/remove owners."},
+      {"icon": "user", "title": "Manager", "description": "Full access except deleting channel and managing owners."},
+      {"icon": "message-square", "title": "Communications Manager", "description": "Can reply to comments and manage community. Limited access."}
+    ]},
+    {"type": "benefits", "title": "When to Use Brand Account", "content": [
+      "Team will manage channel",
+      "Business or professional channel",
+      "Want separation from personal",
+      "May transfer ownership later",
+      "Multiple channels planned",
+      "Agency managing for client",
+      "Professional branding important"
+    ]},
+    {"type": "checklist", "title": "Brand Account Setup Checklist", "content": [
+      "Channel created with custom name?",
+      "Verified it's under Brand Account?",
+      "Owner access confirmed?",
+      "Managers added if needed?",
+      "Roles appropriately assigned?",
+      "Recovery options set up?",
+      "Team access documented?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to check if I have Brand Account?", "answer": "YouTube Studio > Settings > Channel > See 'Advanced settings'. It shows account type. Brand Account shows 'This account is managed by a Brand Account.'"},
+    {"question": "Can I convert personal to Brand Account?", "answer": "Yes—in YouTube Settings, 'Move channel to a Brand Account'. Creates Brand Account and moves content. Doesn't affect videos or subscribers."},
+    {"question": "How many managers can I add?", "answer": "Up to 50 managers per Brand Account. Plenty for most teams. Remove inactive managers periodically for security."},
+    {"question": "Is Brand Account required?", "answer": "No—personal accounts work fine for solo creators. Brand Account mainly useful for teams, businesses, or future transferability."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-video-optimization",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video Optimization 2025: Complete Optimization Guide",
+    "description": "Optimize YouTube videos for maximum reach. Complete video optimization checklist.",
+    "keywords": ["youtube video optimization", "optimize youtube videos", "youtube optimization tips", "video seo optimization", "youtube performance"]
+  },
+  "hero": {
+    "badge": "Video Optimization",
+    "headline": "YouTube Video Optimization Guide",
+    "subheadline": "Maximize every video. Optimize for discovery and retention.",
+    "primaryKeyword": "youtube video optimization"
+  },
+  "sections": [
+    {"type": "intro", "content": "Every video has optimization opportunities most creators miss. From pre-upload preparation to post-publish tweaks, systematic optimization compounds your reach. The algorithm rewards videos that perform well—optimization gives each video its best chance."},
+    {"type": "features", "title": "Optimization Areas", "content": [
+      {"icon": "image", "title": "Thumbnail", "description": "Click-through rate driver."},
+      {"icon": "type", "title": "Title", "description": "Search and curiosity."},
+      {"icon": "file-text", "title": "Description", "description": "SEO and context."},
+      {"icon": "tag", "title": "Tags", "description": "Topic signals."}
+    ]},
+    {"type": "steps", "title": "Pre-Upload Optimization", "content": [
+      "Research keywords before filming",
+      "Structure content for retention",
+      "Plan hook in first 30 seconds",
+      "Film with thumbnail shots in mind",
+      "Create compelling title options",
+      "Write description with keywords",
+      "Design thumbnail before upload",
+      "Prepare tags list"
+    ]},
+    {"type": "features", "title": "Post-Upload Optimization", "content": [
+      {"icon": "trending-up", "title": "First 24 Hours", "description": "Promote heavily."},
+      {"icon": "message-circle", "title": "Engagement", "description": "Reply to comments."},
+      {"icon": "refresh-cw", "title": "Testing", "description": "A/B test thumbnails."},
+      {"icon": "link", "title": "Cards/End Screens", "description": "Internal linking."}
+    ]},
+    {"type": "benefits", "title": "Optimization Best Practices", "content": [
+      "Thumbnails matter most—test constantly",
+      "Titles balance keywords and curiosity",
+      "First 100 characters of description critical",
+      "Timestamps improve retention and search",
+      "End screens capture leaving viewers",
+      "Playlists extend watch sessions",
+      "Update old videos with new cards"
+    ]},
+    {"type": "checklist", "title": "Video Optimization Checklist", "content": [
+      "Keyword researched for topic?",
+      "Hook strong in first 30 seconds?",
+      "Thumbnail compelling and clear?",
+      "Title optimized for CTR and search?",
+      "Description keyword-rich?",
+      "Tags relevant and comprehensive?",
+      "End screen and cards added?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's the most important optimization?", "answer": "Thumbnail and title together—they determine click-through rate. CTR is the first gate. Without clicks, content quality doesn't matter. Spend disproportionate time on these."},
+    {"question": "Can I optimize old videos?", "answer": "Yes and you should. Update thumbnails, titles, descriptions of underperforming videos. Add cards to older videos linking to newer content. Optimization never stops."},
+    {"question": "How many tags should I use?", "answer": "Use all relevant tags up to the 500 character limit. Mix broad and specific terms. Tags have less weight than before but still help YouTube understand content. Don't spam irrelevant tags."},
+    {"question": "When to A/B test thumbnails?", "answer": "Test when video underperforms expectations. YouTube's test feature available to larger channels. Manually test by changing and monitoring CTR. Give each version adequate time to gather data."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

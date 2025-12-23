@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-content-calendar-planning",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Content Calendar Planning 2025: Organize Your Upload Schedule",
+    "description": "Plan your YouTube content calendar. Stay consistent and organized.",
+    "keywords": ["youtube content calendar", "content planning youtube", "youtube upload schedule", "video content calendar", "youtube planning"]
+  },
+  "hero": {
+    "badge": "Content Calendar",
+    "headline": "YouTube Content Calendar Planning",
+    "subheadline": "Stay consistent without burnout. Plan your content strategically.",
+    "primaryKeyword": "youtube content calendar"
+  },
+  "sections": [
+    {"type": "intro", "content": "A content calendar transforms chaotic creation into sustainable production. Instead of scrambling for ideas, you plan ahead—balancing content types, seasonal topics, and your capacity. Consistency is the algorithm's friend, and calendars make consistency possible. Here's how to plan content that works."},
+    {"type": "features", "title": "Calendar Benefits", "content": [
+      {"icon": "calendar", "title": "Consistency", "description": "Regular uploads become achievable."},
+      {"icon": "layers", "title": "Content Balance", "description": "Mix of topics, formats, types."},
+      {"icon": "clock", "title": "Batch Production", "description": "Film multiple videos efficiently."},
+      {"icon": "trending-up", "title": "Strategic Timing", "description": "Plan around seasons, events, trends."}
+    ]},
+    {"type": "steps", "title": "Creating Your Calendar", "content": [
+      "Determine realistic upload frequency",
+      "Map your content pillars/categories",
+      "Research seasonal and trending topics",
+      "Plan 4-8 weeks ahead minimum",
+      "Include production deadlines (not just publish dates)",
+      "Build in buffer for unexpected delays",
+      "Review and adjust weekly",
+      "Track what performs for future planning"
+    ]},
+    {"type": "features", "title": "Calendar Tools", "content": [
+      {"icon": "grid", "title": "Notion", "description": "Flexible database. Templates available."},
+      {"icon": "table", "title": "Trello", "description": "Kanban boards. Visual workflow."},
+      {"icon": "calendar", "title": "Google Calendar", "description": "Simple, shareable, reminders."},
+      {"icon": "file-text", "title": "Spreadsheet", "description": "Google Sheets. Maximum flexibility."}
+    ]},
+    {"type": "features", "title": "What to Track", "content": [
+      {"icon": "type", "title": "Video Title/Topic", "description": "Working title for planning."},
+      {"icon": "calendar", "title": "Publish Date", "description": "When video goes live."},
+      {"icon": "flag", "title": "Status", "description": "Idea, scripted, filmed, edited, published."},
+      {"icon": "tag", "title": "Content Type", "description": "Tutorial, vlog, review, etc."}
+    ]},
+    {"type": "benefits", "title": "Planning Best Practices", "content": [
+      "Plan further ahead than you think",
+      "Include buffer days for problems",
+      "Batch similar content types",
+      "Balance evergreen and trending",
+      "Note production requirements",
+      "Review performance to inform future",
+      "Adjust calendar based on results"
+    ]},
+    {"type": "checklist", "title": "Calendar Checklist", "content": [
+      "Upload frequency set realistically?",
+      "Content pillars defined?",
+      "4+ weeks planned ahead?",
+      "Production deadlines included?",
+      "Buffer time built in?",
+      "Seasonal content mapped?",
+      "Weekly review scheduled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How far ahead should I plan?", "answer": "Minimum 4 weeks, ideally 8-12. Gives time to research, script, film, edit without rushing. Include buffer weeks. The further ahead, the less last-minute stress."},
+    {"question": "What if I miss my schedule?", "answer": "Happens to everyone. Communicate with audience if needed. Don't abandon calendar—adjust and continue. One miss isn't failure; giving up on planning is."},
+    {"question": "How often should I post?", "answer": "Quality over quantity. Once per week is common baseline. More frequent only if you can maintain quality. Consistency matters more than frequency—whatever you can sustain."},
+    {"question": "Should I plan specific topics or just dates?", "answer": "Both—date without topic creates stress. Have working titles even if they change. Bank of backup ideas helps fill gaps. More detailed planning = smoother production."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "how-to-copyright-claim-youtube",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Handle YouTube Copyright Claims 2025: Complete Guide",
+    "description": "Understand and resolve YouTube copyright claims. Disputes, appeals, and prevention strategies for creators.",
+    "keywords": ["youtube copyright claim", "copyright claim youtube", "resolve copyright claim", "content id claim", "youtube copyright dispute"]
+  },
+  "hero": {
+    "badge": "Copyright",
+    "headline": "How to Handle YouTube Copyright Claims",
+    "subheadline": "Understand claims, resolve disputes, and protect your content and revenue.",
+    "primaryKeyword": "youtube copyright claim"
+  },
+  "sections": [
+    {"type": "intro", "content": "Copyright claims are common on YouTube. They happen when Content ID detects copyrighted material in your video—usually music. Most claims don't hurt your channel, but they can redirect ad revenue. Here's how to understand, prevent, and resolve copyright claims."},
+    {"type": "features", "title": "Types of Copyright Issues", "content": [
+      {"icon": "alert-circle", "title": "Content ID Claim", "description": "Automated detection. Usually monetization goes to claimant. No strike."},
+      {"icon": "alert-triangle", "title": "Copyright Takedown", "description": "Manual request from owner. Video removed. Counts toward strikes."},
+      {"icon": "x-circle", "title": "Copyright Strike", "description": "3 strikes = channel termination. Serious consequence."}
+    ]},
+    {"type": "steps", "title": "Dispute Options", "content": [
+      "Remove the claimed content (trim/mute)",
+      "Replace with different music",
+      "Share revenue with claimant",
+      "Dispute if you have rights",
+      "Dispute if fair use applies",
+      "Wait for claim to expire (rare)",
+      "Appeal if dispute rejected"
+    ]},
+    {"type": "benefits", "title": "Prevention Strategies", "content": [
+      "Use royalty-free music services",
+      "Use YouTube Audio Library",
+      "License music properly",
+      "Document all permissions",
+      "Check songs before using",
+      "Avoid popular music entirely",
+      "Use AI-generated music"
+    ]},
+    {"type": "checklist", "title": "Copyright Claim Checklist", "content": [
+      "Check if claim affects monetization",
+      "Verify claim is legitimate",
+      "Evaluate your fair use case",
+      "Consider editing to remove content",
+      "Document any licenses you have",
+      "Dispute only if confident",
+      "Don't abuse the dispute system"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does a claim hurt my channel?", "answer": "Content ID claims don't give strikes or limit your channel. They mainly affect that video's monetization. Takedowns are more serious."},
+    {"question": "Should I dispute every claim?", "answer": "No. Only dispute if you legitimately have rights or clear fair use. False disputes can lead to strikes. Accept claims for content you don't own."},
+    {"question": "What is fair use?", "answer": "Using copyrighted material for commentary, criticism, education, or parody. It's complex and context-dependent. Not just 'I credited them.'"},
+    {"question": "How long do claims last?", "answer": "Depends on claimant policy. Some are permanent. Others release after a period. Check claim details for specifics."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

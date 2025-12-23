@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-scripting-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Scripting Tips 2025: Write Better Video Scripts",
+    "description": "Master YouTube video scripting. Structure, hooks, and engagement techniques.",
+    "keywords": ["youtube scripting tips", "youtube script writing", "video script tips", "youtube script structure", "write youtube scripts"]
+  },
+  "hero": {
+    "badge": "Scripting Tips",
+    "headline": "YouTube Scripting Tips",
+    "subheadline": "Write scripts that engage. Structure for retention.",
+    "primaryKeyword": "youtube scripting tips"
+  },
+  "sections": [
+    {"type": "intro", "content": "Great YouTube videos start with great scripts. Not word-for-word reading, but structured frameworks that keep you on track and viewers engaged. Scripting improves retention, reduces rambling, and makes editing easier. Here's how to write scripts that work."},
+    {"type": "features", "title": "Script Types", "content": [
+      {"icon": "file-text", "title": "Full Script", "description": "Word-for-word written out."},
+      {"icon": "list", "title": "Outline Script", "description": "Key points and transitions."},
+      {"icon": "message-circle", "title": "Bullet Points", "description": "Loose structure, natural delivery."},
+      {"icon": "zap", "title": "Hybrid", "description": "Scripted hooks, outlined body."}
+    ]},
+    {"type": "features", "title": "Script Structure", "content": [
+      {"icon": "zap", "title": "Hook", "description": "Grab attention in 5 seconds."},
+      {"icon": "eye", "title": "Preview", "description": "Tell them what's coming."},
+      {"icon": "layers", "title": "Body", "description": "Deliver the value."},
+      {"icon": "check-circle", "title": "Conclusion", "description": "Wrap up and CTA."}
+    ]},
+    {"type": "features", "title": "Hook Techniques", "content": [
+      {"icon": "help-circle", "title": "Question", "description": "Provoke curiosity."},
+      {"icon": "alert-circle", "title": "Bold Claim", "description": "Make them want proof."},
+      {"icon": "film", "title": "Teaser", "description": "Show the payoff first."},
+      {"icon": "trending-up", "title": "Problem", "description": "State their pain point."}
+    ]},
+    {"type": "steps", "title": "Writing Process", "content": [
+      "Define the one main point of video",
+      "Write the hook last (when you know content)",
+      "Outline key sections and transitions",
+      "Add pattern interrupts and engagement points",
+      "Write conversationally—read aloud",
+      "Cut ruthlessly—remove fluff",
+      "Practice delivery before recording",
+      "Adjust based on recording experience"
+    ]},
+    {"type": "benefits", "title": "Scripting Best Practices", "content": [
+      "Write like you talk, not like you write",
+      "Short sentences work better on video",
+      "Build in 'open loops' for retention",
+      "Cut your first draft by 30%",
+      "Hook should promise specific value",
+      "Natural is better than polished",
+      "Practice until it sounds unrehearsed"
+    ]},
+    {"type": "checklist", "title": "Script Checklist", "content": [
+      "Hook grabs attention in 5 seconds?",
+      "Main point clear and singular?",
+      "Conversational language?",
+      "Open loops throughout?",
+      "Transitions smooth?",
+      "Ruthlessly cut fluff?",
+      "CTA included?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I read scripts word-for-word?", "answer": "Depends on style. Some creators read verbatim (teleprompter). Others use outlines and speak naturally. Hybrid common—scripted hooks, outlined body. Find what works for your delivery style."},
+    {"question": "How to sound natural when scripted?", "answer": "Write conversationally—use contractions, casual language. Read aloud while writing. Practice until it feels natural. Record multiple takes. Edit out stilted delivery. It takes practice."},
+    {"question": "What are open loops?", "answer": "Teasing upcoming content to keep viewers watching. 'In a minute I'll show you...' or 'but first...' Creates curiosity that must be satisfied by watching. Powerful retention technique."},
+    {"question": "How long should scripts be?", "answer": "Rough guide: 150 words = 1 minute of speaking. But varies by pace. Write based on content needed, not target length. Better to be concise than pad for length."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "youtube-studio-tutorial",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Studio Tutorial 2025: Complete Dashboard Guide",
+    "description": "Master YouTube Studio with this complete guide. Analytics, video manager, monetization, and every feature explained.",
+    "keywords": ["youtube studio tutorial", "youtube studio guide", "youtube dashboard", "youtube studio analytics", "how to use youtube studio"]
+  },
+  "hero": {
+    "badge": "YouTube Studio",
+    "headline": "YouTube Studio Tutorial: Master Your Dashboard",
+    "subheadline": "Learn every feature of YouTube Studio to manage your channel like a pro.",
+    "primaryKeyword": "youtube studio tutorial"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Studio is your channel's command center. Understanding every feature helps you make data-driven decisions, manage your content efficiently, and grow faster. This tutorial covers the complete YouTube Studio dashboard from basics to advanced features."},
+    {"type": "features", "title": "YouTube Studio Sections", "content": [
+      {"icon": "home", "title": "Dashboard", "description": "Channel overview with recent performance, latest video stats, and news from YouTube."},
+      {"icon": "video", "title": "Content", "description": "Manage all videos, Shorts, lives, and playlists. Edit metadata, check monetization status."},
+      {"icon": "chart", "title": "Analytics", "description": "Deep performance data. Views, watch time, audience demographics, and revenue."}
+    ]},
+    {"type": "steps", "title": "Key YouTube Studio Features", "content": [
+      "Dashboard: Quick overview and channel health",
+      "Content: Video management and editing",
+      "Analytics: Performance data and insights",
+      "Comments: Community management",
+      "Subtitles: Caption management",
+      "Monetization: Revenue and ad settings",
+      "Customization: Channel branding",
+      "Audio Library: Free music and sound effects",
+      "Settings: Channel configuration"
+    ]},
+    {"type": "benefits", "title": "Analytics You Should Track", "content": [
+      "Watch time (most important metric)",
+      "Average view duration",
+      "Click-through rate (CTR)",
+      "Impressions and reach",
+      "Traffic sources",
+      "Audience retention graphs",
+      "Real-time views",
+      "Subscriber changes"
+    ]},
+    {"type": "checklist", "title": "YouTube Studio Must-Know Tips", "content": [
+      "Check real-time stats after uploading",
+      "Review retention graphs for each video",
+      "Compare videos to identify patterns",
+      "Monitor traffic sources for opportunities",
+      "Use Research tab for content ideas",
+      "Set up scheduled posts",
+      "Respond to comments regularly",
+      "Download analytics for deeper analysis"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I access YouTube Studio?", "answer": "Go to studio.youtube.com or click your profile picture on YouTube and select 'YouTube Studio'. Mobile app also available."},
+    {"question": "What analytics matter most?", "answer": "Watch time and average view duration indicate content quality. CTR measures packaging. Traffic sources show where to focus. All work together."},
+    {"question": "Can I edit videos in YouTube Studio?", "answer": "Basic editing only. Trim start/end, blur faces/content, add cards and end screens. For real editing, use dedicated software."},
+    {"question": "How often should I check analytics?", "answer": "Daily for active uploaders, weekly for most. Don't obsess over short-term fluctuations. Look for patterns over time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

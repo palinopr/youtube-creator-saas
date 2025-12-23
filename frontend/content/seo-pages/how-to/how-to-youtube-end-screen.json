@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-end-screen",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube End Screens 2025: Complete Guide",
+    "description": "Learn to add end screens to YouTube videos. Promote videos, playlists, and drive subscribers.",
+    "keywords": ["youtube end screen", "add end screen youtube", "youtube outro", "end screen tutorial", "youtube end card"]
+  },
+  "hero": {
+    "badge": "End Screens",
+    "headline": "How to Add End Screens to YouTube Videos",
+    "subheadline": "Keep viewers watching. End screens drive views to more content.",
+    "primaryKeyword": "youtube end screen"
+  },
+  "sections": [
+    {"type": "intro", "content": "End screens appear in the final 5-20 seconds of your video. They can promote other videos, playlists, channels, or encourage subscriptions. Effective end screens significantly increase session time and subscriber growth. Here's how to set them up."},
+    {"type": "steps", "title": "Adding End Screens", "content": [
+      "Go to YouTube Studio",
+      "Select video to edit",
+      "Click 'Editor' in left menu",
+      "Select 'End screen' option",
+      "Choose element type (video, playlist, subscribe, etc.)",
+      "Position elements on screen",
+      "Adjust timing (5-20 seconds before end)",
+      "Save changes"
+    ]},
+    {"type": "features", "title": "End Screen Elements", "content": [
+      {"icon": "video", "title": "Video", "description": "Your videos or best for viewer. Most clicked element type."},
+      {"icon": "list", "title": "Playlist", "description": "Drive viewers into a series. Increases session time."},
+      {"icon": "user-plus", "title": "Subscribe", "description": "One-click subscribe button. Good for call-to-action."}
+    ]},
+    {"type": "features", "title": "Best Practices", "content": [
+      {"icon": "layout", "title": "Design Space", "description": "Leave clear area in video for end screen elements. Don't cover important content."},
+      {"icon": "clock", "title": "Verbal CTA", "description": "Tell viewers to click. 'Check out this video' increases clicks significantly."},
+      {"icon": "target", "title": "Relevant Content", "description": "'Best for viewer' often outperforms specific videos. Test both."}
+    ]},
+    {"type": "steps", "title": "End Screen Strategy", "content": [
+      "Design outro graphics with clear space",
+      "Use 15-20 second end screen duration",
+      "Include verbal call-to-action",
+      "Test 'Best for viewer' vs specific video",
+      "Point or gesture toward elements",
+      "Keep talking through end screen",
+      "Analyze click-through in Studio"
+    ]},
+    {"type": "checklist", "title": "End Screen Checklist", "content": [
+      "Video is 25+ seconds long?",
+      "Clear space for elements?",
+      "Verbal CTA included?",
+      "Elements don't cover content?",
+      "Pointing/directing viewers?",
+      "Timing appropriate?",
+      "Elements clickable and visible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should end screens be?", "answer": "15-20 seconds is ideal. Long enough to give viewers time to click, not so long it feels padded. Minimum 5 seconds available."},
+    {"question": "Best for viewer vs specific video?", "answer": "'Best for viewer' uses YouTube's algorithm to suggest personalized content. Often gets more clicks. Test against your specific video picks."},
+    {"question": "Why can't I add end screens?", "answer": "Video must be at least 25 seconds long. Some videos with content restrictions may not allow end screens. Check Studio for specific issues."},
+    {"question": "Do end screens affect watch time?", "answer": "They can decrease percentage watched (people click away early) but increase session time (they watch more videos). Net positive for channel."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

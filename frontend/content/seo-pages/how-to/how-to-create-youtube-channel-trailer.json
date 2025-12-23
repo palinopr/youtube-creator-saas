@@ -1,0 +1,60 @@
+{
+  "slug": "how-to-create-youtube-channel-trailer",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create a YouTube Channel Trailer 2025: Complete Guide",
+    "description": "Create an effective channel trailer that converts visitors to subscribers. Structure, tips, and examples that work.",
+    "keywords": ["youtube channel trailer", "create channel trailer", "youtube trailer", "channel intro video", "youtube channel introduction"]
+  },
+  "hero": {
+    "badge": "Channel Trailer",
+    "headline": "How to Create a YouTube Channel Trailer That Converts",
+    "subheadline": "Your 60-second pitch to new visitors. Make it count.",
+    "primaryKeyword": "youtube channel trailer"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your channel trailer plays automatically for non-subscribers visiting your channel. It's your best chance to convert a curious visitor into a subscriber. The most effective trailers are short, clear about the channel's value, and give a taste of your personality and content."},
+    {"type": "features", "title": "Effective Trailer Elements", "content": [
+      {"icon": "target", "title": "Clear Value Proposition", "description": "What does your channel offer? Why should they subscribe? Answer in 10 seconds."},
+      {"icon": "video", "title": "Content Showcase", "description": "Show clips of your best content. Let people see what they'll get."},
+      {"icon": "user", "title": "Personal Connection", "description": "Show your personality. People subscribe to people, not just topics."}
+    ]},
+    {"type": "steps", "title": "Trailer Structure Template", "content": [
+      "Hook (0-5s): Attention-grabbing opening",
+      "Introduction (5-15s): Who you are and what you do",
+      "Value (15-30s): What viewers will gain",
+      "Content clips (30-50s): Best moment montage",
+      "Call-to-action (50-60s): Ask them to subscribe"
+    ]},
+    {"type": "benefits", "title": "Channel Trailer Best Practices", "content": [
+      "Keep under 60-90 seconds maximum",
+      "Lead with your best energy",
+      "Speak directly to new viewers",
+      "Show variety of content types",
+      "End with clear subscribe ask",
+      "Update when channel evolves",
+      "Don't use dated references"
+    ]},
+    {"type": "checklist", "title": "Trailer Checklist", "content": [
+      "Starts with hook, not logo",
+      "Clearly states channel topic",
+      "Shows personality authentically",
+      "Includes best content clips",
+      "Under 90 seconds",
+      "Has clear call-to-action",
+      "Represents current content style",
+      "Set as channel trailer in settings"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should a channel trailer be?", "answer": "30-60 seconds is ideal. Maximum 90 seconds. Shorter trailers convert better. Say what you need to say efficiently."},
+    {"question": "Should I script my trailer?", "answer": "Yes. Every second matters in a trailer. Script tightly, practice delivery, and edit ruthlessly. Don't ramble."},
+    {"question": "How often should I update my trailer?", "answer": "When your content direction changes significantly or your trailer feels dated. Some creators update yearly, others keep the same trailer for years."},
+    {"question": "Do channel trailers still matter?", "answer": "Yes. Auto-play catches attention. Many subscribers credit the trailer for their subscription. It's free real estate on your channel page."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

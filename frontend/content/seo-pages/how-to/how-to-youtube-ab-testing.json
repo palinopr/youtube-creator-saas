@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-ab-testing",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to A/B Test on YouTube 2025: Thumbnail & Title Testing Guide",
+    "description": "A/B test YouTube thumbnails and titles. Data-driven optimization strategies.",
+    "keywords": ["youtube ab testing", "thumbnail ab test", "youtube split test", "test youtube thumbnails", "youtube title testing"]
+  },
+  "hero": {
+    "badge": "A/B Testing",
+    "headline": "How to A/B Test on YouTube",
+    "subheadline": "Test thumbnails and titles systematically. Data over guesswork.",
+    "primaryKeyword": "youtube ab testing"
+  },
+  "sections": [
+    {"type": "intro", "content": "Thumbnails and titles determine whether viewers click. A/B testing removes guesswork—let data show what works. YouTube now offers native A/B testing for thumbnails, plus you can test manually. Here's how to optimize through systematic testing."},
+    {"type": "features", "title": "Testing Methods", "content": [
+      {"icon": "shuffle", "title": "YouTube Native Testing", "description": "Built-in thumbnail A/B testing. Automatic, reliable data."},
+      {"icon": "clock", "title": "Manual Time-Based", "description": "Swap thumbnails, track CTR changes. Less reliable but flexible."},
+      {"icon": "tool", "title": "Third-Party Tools", "description": "TubeBuddy offers testing. More features, subscription required."}
+    ]},
+    {"type": "steps", "title": "Native Thumbnail Testing", "content": [
+      "Go to YouTube Studio > Content",
+      "Select video to test",
+      "Click 'Test & Compare' (if available)",
+      "Upload alternative thumbnail",
+      "Let test run until statistically significant",
+      "Review results and apply winner",
+      "Apply learnings to future thumbnails"
+    ]},
+    {"type": "features", "title": "What to Test", "content": [
+      {"icon": "image", "title": "Thumbnail Elements", "description": "Face expression, text, colors, composition. One variable at a time."},
+      {"icon": "type", "title": "Title Variations", "description": "Different hooks, number vs no number, question vs statement."},
+      {"icon": "eye", "title": "CTR Impact", "description": "Measure click-through rate changes. Primary metric."}
+    ]},
+    {"type": "benefits", "title": "Testing Best Practices", "content": [
+      "Test one variable at a time",
+      "Let tests run long enough for data",
+      "Document what you tested and learned",
+      "Apply winners but keep testing",
+      "Different videos may have different winners",
+      "Test on older videos too",
+      "Build testing into workflow"
+    ]},
+    {"type": "checklist", "title": "A/B Testing Checklist", "content": [
+      "Clear hypothesis for test?",
+      "Only one variable changed?",
+      "Test running long enough?",
+      "Statistical significance reached?",
+      "Results documented?",
+      "Winner applied?",
+      "Learnings noted for future?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should tests run?", "answer": "Until statistically significant—usually 7-14 days minimum. More impressions = faster results. YouTube shows when data is reliable."},
+    {"question": "What's good CTR improvement?", "answer": "Even 0.5-1% improvement matters at scale. Focus on consistent improvement over time. Small gains compound."},
+    {"question": "Should I test every video?", "answer": "No—test high-potential videos, apply learnings broadly. Test older evergreen content for ongoing optimization."},
+    {"question": "Does testing hurt video performance?", "answer": "No—YouTube optimizes for best performer. Worse thumbnail shown less. Testing generally improves overall performance."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

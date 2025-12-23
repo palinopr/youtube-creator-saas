@@ -24,6 +24,7 @@ from ..agents.alert_agent import (
     mark_alert_read,
     mark_all_alerts_read,
     dismiss_alert,
+    cleanup_duplicate_alerts,
 )
 
 logger = logging.getLogger(__name__)
@@ -205,6 +206,30 @@ async def check_for_new_alerts(
 
     except Exception as e:
         logger.error(f"Error checking for new alerts: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/cleanup")
+async def cleanup_duplicates(
+    user: User = Depends(get_current_user)
+):
+    """
+    Remove duplicate alerts for the current user.
+
+    Keeps only the oldest instance of each milestone alert
+    and removes duplicate titles for other alert types.
+    """
+    try:
+        deleted_count = cleanup_duplicate_alerts(user.id)
+
+        return {
+            "success": True,
+            "deleted_count": deleted_count,
+            "message": f"Removed {deleted_count} duplicate alert(s)" if deleted_count else "No duplicates found",
+        }
+
+    except Exception as e:
+        logger.error(f"Error cleaning up duplicates: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

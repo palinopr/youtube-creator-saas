@@ -1,0 +1,60 @@
+{
+  "slug": "how-to-pin-comment-youtube",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Pin Comments on YouTube 2025: Complete Guide",
+    "description": "Learn to pin comments on YouTube videos. Boost engagement, highlight important info, and manage discussions.",
+    "keywords": ["pin comment youtube", "how to pin youtube comment", "youtube pinned comment", "pin comment", "youtube comment management"]
+  },
+  "hero": {
+    "badge": "Comments",
+    "headline": "How to Pin Comments on YouTube",
+    "subheadline": "Highlight important comments and drive engagement with pinned comments.",
+    "primaryKeyword": "pin comment youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "Pinned comments stick to the top of your comment section. They're visible to every viewer who scrolls down. Use them strategically to add context, ask questions, or highlight community responses. Here's how to pin comments and use them effectively."},
+    {"type": "steps", "title": "How to Pin a Comment", "content": [
+      "Go to the video on YouTube",
+      "Scroll to the comment you want to pin",
+      "Click the three dots (⋮) next to the comment",
+      "Select 'Pin'",
+      "Confirm the action",
+      "Comment now shows 'Pinned by [Channel Name]'"
+    ]},
+    {"type": "features", "title": "Ways to Use Pinned Comments", "content": [
+      {"icon": "message-circle", "title": "Engagement Question", "description": "Ask viewers something. 'What should I cover next?' Gets responses."},
+      {"icon": "link", "title": "Links and Resources", "description": "Add links mentioned in video. Easy access for viewers."},
+      {"icon": "star", "title": "Highlight Fan Comment", "description": "Pin a great viewer comment. Builds community."}
+    ]},
+    {"type": "benefits", "title": "Pinned Comment Best Practices", "content": [
+      "Change pinned comment periodically",
+      "Use for timely updates or corrections",
+      "Ask questions to boost engagement",
+      "Highlight helpful viewer comments",
+      "Add timestamps if missing from description",
+      "Include call-to-action",
+      "Keep it concise and valuable"
+    ]},
+    {"type": "checklist", "title": "Pinned Comment Ideas", "content": [
+      "Question for viewers",
+      "Correction to video content",
+      "Links mentioned in video",
+      "Related video recommendation",
+      "Subscriber milestone thanks",
+      "Highlight from a viewer",
+      "Context or update for older videos"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I pin my own comment?", "answer": "Yes. Most creators pin their own comments. Write your comment, then pin it. Great for questions or added context."},
+    {"question": "How many comments can I pin?", "answer": "Only one per video. Pinning a new comment unpins the previous one. Choose strategically."},
+    {"question": "Do pinned comments affect algorithm?", "answer": "Indirectly. They can increase engagement (more replies), which signals active content. But pinning itself isn't a ranking factor."},
+    {"question": "Should I always have a pinned comment?", "answer": "Not required. But it's an opportunity. Even a simple question can boost engagement significantly."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

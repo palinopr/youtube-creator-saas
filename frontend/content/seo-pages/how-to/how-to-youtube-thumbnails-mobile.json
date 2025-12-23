@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-thumbnails-mobile",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make YouTube Thumbnails on Phone 2025: Mobile Design Guide",
+    "description": "Create professional YouTube thumbnails on mobile. Best apps and techniques for phone editing.",
+    "keywords": ["youtube thumbnail phone", "thumbnail app mobile", "make thumbnails iphone", "youtube thumbnail android", "mobile thumbnail maker"]
+  },
+  "hero": {
+    "badge": "Mobile Thumbnails",
+    "headline": "How to Make YouTube Thumbnails on Phone",
+    "subheadline": "Professional thumbnails without a computer. Mobile apps that work.",
+    "primaryKeyword": "youtube thumbnail phone"
+  },
+  "sections": [
+    {"type": "intro", "content": "You don't need Photoshop or a desktop to make great thumbnails. Mobile apps have become surprisingly powerful, and many successful creators work entirely from their phones. Here's how to create scroll-stopping thumbnails using just your mobile device."},
+    {"type": "features", "title": "Best Mobile Apps", "content": [
+      {"icon": "layout", "title": "Canva (Free/Pro)", "description": "Best overall. YouTube templates. Easy to use. Free tier generous."},
+      {"icon": "smartphone", "title": "Photoshop Express", "description": "Adobe's mobile option. Quick edits, cutouts. Free with ads."},
+      {"icon": "camera", "title": "Picsart", "description": "Photo editing plus design. Good cutout tool. Free with premium."}
+    ]},
+    {"type": "steps", "title": "Mobile Thumbnail Workflow", "content": [
+      "Take photo with phone camera (good lighting)",
+      "Open Canva, select YouTube Thumbnail size",
+      "Remove background from photo if needed",
+      "Add to canvas, position on one side",
+      "Add bold, readable text (3-5 words max)",
+      "Choose contrasting colors",
+      "Export as PNG, upload to YouTube"
+    ]},
+    {"type": "features", "title": "Mobile Photography Tips", "content": [
+      {"icon": "sun", "title": "Natural Light", "description": "Face window for even lighting. Phone cameras love natural light."},
+      {"icon": "camera", "title": "Expression", "description": "Exaggerated expressions work. Show emotion clearly."},
+      {"icon": "image", "title": "Multiple Shots", "description": "Take 20+ photos. Choose best expression later."}
+    ]},
+    {"type": "benefits", "title": "Mobile Thumbnail Tips", "content": [
+      "Use bold, simple fonts",
+      "High contrast colors pop",
+      "Face should be large and clear",
+      "Test at small size—that's how viewers see it",
+      "Keep text minimal—3-5 words max",
+      "Consistent branding across thumbnails",
+      "Save templates for speed"
+    ]},
+    {"type": "checklist", "title": "Mobile Thumbnail Checklist", "content": [
+      "Good quality source photo?",
+      "Background removed cleanly?",
+      "Text large and readable?",
+      "Colors contrast well?",
+      "Looks good at small size?",
+      "Matches video content?",
+      "Exported at right dimensions?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Canva free or pro for thumbnails?", "answer": "Free is enough for most creators. Pro adds background remover (helpful) and more assets. Upgrade when free feels limiting."},
+    {"question": "Best app for removing backgrounds?", "answer": "Canva Pro, Remove.bg app, or Photoshop Express. Most are surprisingly good with clean photos."},
+    {"question": "Phone photos good enough quality?", "answer": "Modern phones are excellent. Good lighting matters more than camera. iPhone and high-end Android produce professional results."},
+    {"question": "How to get consistent thumbnail style?", "answer": "Create template in Canva. Save as 'Copy this design'. Same fonts, colors, layout positions. Swap photo and text each time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

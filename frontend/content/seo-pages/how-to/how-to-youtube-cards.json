@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-cards",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube Cards 2025: Complete Guide",
+    "description": "Add YouTube cards to your videos. Timing, types, and best practices for engagement.",
+    "keywords": ["youtube cards", "add youtube cards", "youtube card tutorial", "video cards youtube", "youtube interactive cards"]
+  },
+  "hero": {
+    "badge": "Cards",
+    "headline": "How to Add YouTube Cards",
+    "subheadline": "Interactive elements that keep viewers on your channel. Strategic placement matters.",
+    "primaryKeyword": "youtube cards"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube cards are interactive elements that appear during videos—linking to other videos, playlists, channels, or polls. Well-placed cards extend watch sessions and guide viewers to related content. Here's how to use them effectively."},
+    {"type": "features", "title": "Card Types", "content": [
+      {"icon": "video", "title": "Video/Playlist Cards", "description": "Link to specific videos or playlists. Most common type."},
+      {"icon": "users", "title": "Channel Cards", "description": "Promote other channels. Collabs or recommendations."},
+      {"icon": "bar-chart-2", "title": "Poll Cards", "description": "Interactive polls. Boost engagement directly."}
+    ]},
+    {"type": "steps", "title": "Adding Cards", "content": [
+      "Open YouTube Studio",
+      "Select video to edit",
+      "Click Editor, then Cards",
+      "Click + Add Card",
+      "Choose card type",
+      "Select linked content",
+      "Set timing (when card appears)",
+      "Add teaser text",
+      "Save changes"
+    ]},
+    {"type": "features", "title": "Timing Strategy", "content": [
+      {"icon": "clock", "title": "When Mentioning", "description": "Card appears when you reference related content. 'Speaking of...'"},
+      {"icon": "trending-up", "title": "Before Drop-Off", "description": "Place before common exit points. Analytics shows where."},
+      {"icon": "target", "title": "Relevant Moments", "description": "When topic of linked video comes up naturally."}
+    ]},
+    {"type": "benefits", "title": "Card Best Practices", "content": [
+      "Max 5 cards per video",
+      "Don't cluster at video end",
+      "Spread throughout video",
+      "Match card to verbal mention",
+      "Use descriptive teaser text",
+      "Link to genuinely relevant content",
+      "Check analytics for card performance"
+    ]},
+    {"type": "checklist", "title": "Card Checklist", "content": [
+      "Video has relevant content to link?",
+      "Timing matches verbal mentions?",
+      "Teaser text is compelling?",
+      "Not too many cards (max 5)?",
+      "Cards spread throughout?",
+      "Linked content is quality?",
+      "Analytics reviewed for optimization?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many cards per video?", "answer": "YouTube allows up to 5 cards. But use only what's needed. 2-3 well-placed cards often outperform 5 random ones."},
+    {"question": "Best timing for cards?", "answer": "When you mention related content verbally. Also before natural drop-off points. Don't cluster at the end."},
+    {"question": "Cards vs end screens?", "answer": "Different purposes. Cards work throughout video for contextual links. End screens are for final CTA. Use both."},
+    {"question": "Do cards hurt retention?", "answer": "Potentially—if they send viewers away. But keeping viewers on your channel overall is the goal. Strategic placement minimizes loss."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

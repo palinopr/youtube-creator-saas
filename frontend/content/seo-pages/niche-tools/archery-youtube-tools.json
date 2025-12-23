@@ -1,0 +1,66 @@
+{
+  "slug": "archery-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Archery YouTube Tools 2025: Bow & Arrow Channel Equipment",
+    "description": "Top tools for archery YouTube channels. Capture form, arrow flight, and hunting.",
+    "keywords": ["archery youtube tools", "bow hunting channel", "archery video equipment", "bow content", "hunting youtube gear"]
+  },
+  "hero": {
+    "badge": "Archery Tools",
+    "headline": "Best Archery YouTube Tools 2025",
+    "subheadline": "Capture every shot. Gear for archery creators.",
+    "primaryKeyword": "archery youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Archery content spans target practice, bowhunting, traditional archery, and compound tech reviews. Viewers want to see form, arrow flight, and impact. High frame rate cameras reveal what eyes miss. Here's what successful archery YouTubers use."},
+    {"type": "features", "title": "Camera Requirements", "content": [
+      {"icon": "video", "title": "High Frame Rate", "description": "120fps+ for arrow flight."},
+      {"icon": "camera", "title": "Sony A7S III", "description": "120fps 4K. Low light hunting."},
+      {"icon": "zap", "title": "GoPro Hero", "description": "240fps 1080p slow-mo."},
+      {"icon": "eye", "title": "POV Cameras", "description": "Bow-mounted perspective."}
+    ]},
+    {"type": "features", "title": "Angles & Mounts", "content": [
+      {"icon": "maximize", "title": "Target Camera", "description": "Behind target for impact shots."},
+      {"icon": "user", "title": "Form Camera", "description": "Side angle for technique."},
+      {"icon": "crosshair", "title": "Bow Mount", "description": "First-person arrow release."},
+      {"icon": "move", "title": "Tripod Setup", "description": "Multiple angles essential."}
+    ]},
+    {"type": "features", "title": "Field & Hunt Gear", "content": [
+      {"icon": "tree", "title": "Camo Cameras", "description": "Blend with hunting setup."},
+      {"icon": "volume-x", "title": "Silent Operation", "description": "No beeps to spook game."},
+      {"icon": "battery", "title": "Extended Battery", "description": "All-day hunting coverage."},
+      {"icon": "shield", "title": "Arrow Protection", "description": "Protect cameras from stray shots."}
+    ]},
+    {"type": "benefits", "title": "Archery Content Tips", "content": [
+      "Slow-motion arrow flight is mesmerizing",
+      "Show both hits and misses",
+      "Explain gear choices and tuning",
+      "Form breakdowns help beginners",
+      "Hunt footage requires patience",
+      "Target challenge videos engage",
+      "Traditional vs compound debates draw views"
+    ]},
+    {"type": "checklist", "title": "Archery Video Checklist", "content": [
+      "High frame rate mode enabled?",
+      "Target camera positioned safely?",
+      "Form angle captures full draw?",
+      "Audio capturing release sounds?",
+      "Multiple shots for slow-mo?",
+      "Safety considerations addressed?",
+      "Gear specs noted for description?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best frame rate for arrow flight?", "answer": "120fps minimum, 240fps ideal for detailed slow-mo. At 240fps you see arrow flex, fletching spin, and precise impact. GoPro and iPhone both capable. Dedicated slow-mo cameras exist but expensive."},
+    {"question": "How to film hunting safely?", "answer": "Cameras on tripods well out of arrow path. Never mount cameras where you might accidentally shoot them. Bow mounts with quick release. Solo hunting? Use trail camera setups. Safety always first."},
+    {"question": "Indoor vs outdoor archery filming?", "answer": "Indoor: controlled lighting easier, consistent background. Outdoor: natural light beautiful but variable. Indoor range may have restrictions on filming. Outdoor offers more content variety."},
+    {"question": "Best bow-mounted camera?", "answer": "GoPro Hero or DJI Action with bow stabilizer mount. Keep camera small and light—affects bow balance. Use the stabilizer rail or riser mount points. Film in wide angle to capture full scene."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "archery"
+}

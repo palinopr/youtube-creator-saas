@@ -1,0 +1,76 @@
+{
+  "slug": "youtube-collab-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Collaboration Guide 2025: How to Find & Partner with Creators",
+    "description": "Complete guide to YouTube collaborations. Finding partners, pitching, and executing successful collabs.",
+    "keywords": ["youtube collaboration", "youtube collab", "collab with youtubers", "youtube partnership", "creator collaboration"]
+  },
+  "hero": {
+    "badge": "Collaborations",
+    "headline": "YouTube Collaboration Guide",
+    "subheadline": "Grow through partnerships. Find the right creators and execute collabs that work.",
+    "primaryKeyword": "youtube collaboration"
+  },
+  "sections": [
+    {"type": "intro", "content": "Collaborations expose your channel to new audiences and build creator relationships. Done right, both channels grow. Done wrong, you waste time or damage reputation. Here's how to find, pitch, and execute successful YouTube collaborations."},
+    {"type": "features", "title": "Finding Partners", "content": [
+      {"icon": "users", "title": "Similar Size Channels", "description": "Within 0.5x-2x your subscriber count. Mutual benefit is key."},
+      {"icon": "target", "title": "Complementary Content", "description": "Related but not identical. Your audience would enjoy their content."},
+      {"icon": "heart", "title": "Genuine Alignment", "description": "You actually like their content. Authenticity matters."}
+    ]},
+    {"type": "steps", "title": "Collaboration Process", "content": [
+      "Identify 10-20 potential collab partners",
+      "Engage genuinely on their content first",
+      "Craft personalized outreach pitch",
+      "Propose specific collab idea",
+      "Discuss logistics (format, timeline, promotion)",
+      "Create content together",
+      "Cross-promote effectively",
+      "Thank them publicly after"
+    ]},
+    {"type": "features", "title": "Collab Formats", "content": [
+      {"icon": "video", "title": "Guest Appearances", "description": "Appear on each other's channels. Two videos from one shoot."},
+      {"icon": "users", "title": "Joint Videos", "description": "Create together, post on one channel. Trade video appearances."},
+      {"icon": "gift", "title": "Challenges/Trends", "description": "Participate in same trend, link to each other. Lower coordination."}
+    ]},
+    {"type": "benefits", "title": "Good Collab Practices", "content": [
+      "Personalized, not template pitches",
+      "Specific idea, not 'let's collab sometime'",
+      "Clear value proposition for them",
+      "Professional but friendly communication",
+      "Flexible on format/timing",
+      "Deliver on commitments",
+      "Promote their content genuinely"
+    ]},
+    {"type": "benefits", "title": "Collab Red Flags", "content": [
+      "Only wanting your audience (no reciprocity)",
+      "Unprofessional communication",
+      "Content that doesn't align with your brand",
+      "Last-minute changes or cancellations",
+      "Pressure tactics or impatience",
+      "Asking for money for exposure",
+      "Inappropriate content or controversy"
+    ]},
+    {"type": "checklist", "title": "Before Reaching Out", "content": [
+      "Watched multiple of their videos?",
+      "Engaged on their content authentically?",
+      "Have specific collab idea ready?",
+      "Clear on mutual value?",
+      "Contact info found (business email)?",
+      "Pitch personalized to them?",
+      "Ready to be flexible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to find creators to collab with?", "answer": "Search your niche, check who your audience also watches, browse collab hashtags, join creator communities. Focus on similar-size channels."},
+    {"question": "When is my channel ready for collabs?", "answer": "No minimum, but having established content (20+ videos) and consistent quality helps. You need something valuable to offer."},
+    {"question": "What if they don't respond?", "answer": "Follow up once after 1-2 weeks. If still no response, move on. They might be busy or not interested—both are okay."},
+    {"question": "Should I pay for collabs?", "answer": "Generally no for peer collabs. If paying, it's sponsorship, not collaboration. True collabs exchange value, not money."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

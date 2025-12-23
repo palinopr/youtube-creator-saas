@@ -1,0 +1,65 @@
+{
+  "slug": "tech-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Tech YouTube Tools 2025: Cameras, B-Roll & Editing",
+    "description": "Essential tools for tech YouTubers. Cinema cameras, product photography setups, and editing workflows for tech reviews.",
+    "keywords": ["tech youtube tools", "tech review equipment", "tech youtube setup", "tech content creator", "product review camera"]
+  },
+  "hero": {
+    "badge": "Tech Niche",
+    "headline": "Best YouTube Tools for Tech Creators in 2025",
+    "subheadline": "Create MKBHD-quality tech content with professional cameras, lighting, and editing workflows.",
+    "primaryKeyword": "tech youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Tech YouTube demands premium production value. Viewers expect cinematic B-roll, perfect product shots, and polished editing. The good news is you don't need MKBHD's budget to create professional tech content. Here's what you need to start and scale your tech channel."},
+    {"type": "features", "title": "Essential Tech Tools", "content": [
+      {"icon": "video", "title": "Cinema-Quality Camera", "description": "Sony A7/FX series, Canon R5/R6, or Blackmagic for that shallow depth of field tech look."},
+      {"icon": "sun", "title": "Product Lighting", "description": "Soft, controlled lighting for product shots. LED panels, softboxes, and reflectors."},
+      {"icon": "rotate-3d", "title": "Motion Control", "description": "Sliders, gimbals, or motorized turntables for smooth product reveals."}
+    ]},
+    {"type": "checklist", "title": "Tech Creator Toolkit", "content": [
+      "Full-frame or APS-C camera with 4K",
+      "Fast lens (f/1.8 or wider)",
+      "Tripod with fluid head",
+      "Slider or gimbal for motion",
+      "LED light panels",
+      "Product photography backdrop",
+      "Lavalier and shotgun microphones",
+      "Editing software (Premiere, DaVinci)",
+      "Screen recording software",
+      "Color grading LUTs"
+    ]},
+    {"type": "steps", "title": "Filming Tech Reviews", "content": [
+      "Plan your B-roll shots before filming",
+      "Set up clean, minimal backgrounds",
+      "Light products from multiple angles",
+      "Shoot at low angles for drama",
+      "Use slow-motion for hero shots",
+      "Capture both wide and detail shots",
+      "Record screen with quality software",
+      "Color grade for consistent look"
+    ]},
+    {"type": "benefits", "title": "Tech Content Advantages", "content": [
+      "High CPM due to tech-savvy audience",
+      "Strong affiliate revenue potential",
+      "Early access and review units from brands",
+      "Sponsorships from tech companies",
+      "Consistent new content from launches",
+      "Cross-over with other tech interests"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need an expensive camera for tech reviews?", "answer": "You need good video quality, but mid-range cameras work fine. A Sony A6400 or Canon R10 with good lighting beats an expensive camera with poor lighting."},
+    {"question": "How do tech YouTubers get review units?", "answer": "Build an audience first. Once you have consistent views and quality content, reach out to PR teams. Start with smaller brands, work up to major companies."},
+    {"question": "What makes tech B-roll look professional?", "answer": "Shallow depth of field, smooth camera movement, dramatic lighting, slow motion, and clean backgrounds. Motion control (sliders, gimbals) elevates production value."},
+    {"question": "What editing software do tech YouTubers use?", "answer": "Premiere Pro is most common, followed by DaVinci Resolve. Final Cut Pro for Mac users. DaVinci is free with professional color grading built in."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "tech"
+}

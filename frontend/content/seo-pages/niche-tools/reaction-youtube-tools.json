@@ -1,0 +1,68 @@
+{
+  "slug": "reaction-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Reaction YouTube Tools 2025: Equipment for Reaction Content",
+    "description": "Essential tools for reaction content creators. Cameras, audio, and software for professional reaction videos.",
+    "keywords": ["reaction youtube tools", "reaction video equipment", "reaction channel setup", "reaction content creation", "reaction video software"]
+  },
+  "hero": {
+    "badge": "Reaction Content",
+    "headline": "Essential Tools for Reaction YouTube Creators",
+    "subheadline": "Capture authentic reactions with professional quality. The complete reaction setup.",
+    "primaryKeyword": "reaction youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Reaction content is popular but requires a specific setup. You need quality face cam, good audio for commentary, and screen capture of the content you're reacting to—all while navigating copyright carefully. Here's the equipment that reaction creators use."},
+    {"type": "features", "title": "Camera & Video Setup", "content": [
+      {"icon": "video", "title": "Face Camera", "description": "Webcam or mirrorless. Good autofocus to capture expressions. Face is the content."},
+      {"icon": "monitor", "title": "Screen Capture", "description": "OBS or dedicated capture. Record what you're watching alongside reaction."},
+      {"icon": "layout", "title": "Multi-Source Recording", "description": "Capture face and screen simultaneously. Picture-in-picture editing later."}
+    ]},
+    {"type": "features", "title": "Audio Equipment", "content": [
+      {"icon": "mic", "title": "Clear Microphone", "description": "Your commentary needs to be heard over source audio. Quality mic essential."},
+      {"icon": "headphones", "title": "Closed Headphones", "description": "Monitor audio without bleeding into mic. Hear source clearly."},
+      {"icon": "sliders", "title": "Audio Balance", "description": "Interface for controlling source vs voice volume. Mix in post."}
+    ]},
+    {"type": "steps", "title": "Reaction Recording Setup", "content": [
+      "Face camera positioned at eye level",
+      "Good lighting on your face",
+      "Microphone close for clear voice",
+      "Headphones for audio monitoring",
+      "Screen capture running",
+      "Source material ready to play",
+      "OBS or recording software configured",
+      "Picture-in-picture layout planned"
+    ]},
+    {"type": "benefits", "title": "Reaction Best Practices", "content": [
+      "Add transformative commentary",
+      "React naturally—don't perform",
+      "Pause frequently for your input",
+      "Keep source clips minimal for copyright",
+      "Credit original creators",
+      "Ask permission when possible",
+      "Focus on your unique perspective"
+    ]},
+    {"type": "checklist", "title": "Reaction Creator Essentials", "content": [
+      "Quality webcam or camera",
+      "Broadcast microphone",
+      "Closed-back headphones",
+      "Screen recording software",
+      "Video editing software",
+      "Good lighting setup",
+      "Understanding of fair use"
+    ]}
+  ],
+  "faq": [
+    {"question": "Are reaction videos legal?", "answer": "Complicated. Transformative commentary can be fair use. But many reactions face claims. Minimize source footage, add substantial commentary."},
+    {"question": "How do I avoid copyright claims?", "answer": "Keep clips short, pause frequently for commentary, add transformative value. Some creators ask permission. Claims are common—accept or dispute carefully."},
+    {"question": "What camera angle works best?", "answer": "Slightly above eye level, centered. Your face should fill significant portion of frame. Expressions are the content."},
+    {"question": "Should I show the full video I'm reacting to?", "answer": "No. Show minimal necessary clips. Your reaction and commentary should be the focus. This helps with copyright and makes better content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "reaction"
+}

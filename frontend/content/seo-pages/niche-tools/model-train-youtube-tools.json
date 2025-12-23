@@ -1,0 +1,66 @@
+{
+  "slug": "model-train-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Model Train YouTube Tools 2025: Model Railroad Channel Equipment",
+    "description": "Top tools for model train YouTube channels. Film layouts and operations.",
+    "keywords": ["model train youtube tools", "model railroad channel", "train layout video", "ho scale youtube", "model railroading content"]
+  },
+  "hero": {
+    "badge": "Model Train Tools",
+    "headline": "Best Model Train YouTube Tools 2025",
+    "subheadline": "Capture the layout. Gear for model railroaders.",
+    "primaryKeyword": "model train youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Model railroad content showcases incredible craftsmanship—layouts that take years to build, operating sessions, and detailed scenery. Viewers want to see realistic operations and the artistry of miniature worlds. Filming small scales presents unique challenges. Here's what model train YouTubers use."},
+    {"type": "features", "title": "Camera Approaches", "content": [
+      {"icon": "video", "title": "Layout Overview", "description": "Wide shots showing full layout."},
+      {"icon": "eye", "title": "Train Level", "description": "POV shots at track height."},
+      {"icon": "camera", "title": "Cab Ride Cameras", "description": "Onboard locomotive view."},
+      {"icon": "zoom-in", "title": "Macro Details", "description": "Close-ups of scenery work."}
+    ]},
+    {"type": "features", "title": "Onboard Cameras", "content": [
+      {"icon": "video", "title": "Micro Cameras", "description": "Fit in locomotives and cars."},
+      {"icon": "wifi", "title": "Wireless Options", "description": "No trailing wires."},
+      {"icon": "battery", "title": "Rechargeable", "description": "Small batteries for runs."},
+      {"icon": "settings", "title": "Wide Angle", "description": "Capture more at close range."}
+    ]},
+    {"type": "features", "title": "Lighting Layouts", "content": [
+      {"icon": "sun", "title": "Even Illumination", "description": "No hot spots or shadows."},
+      {"icon": "moon", "title": "Day/Night Scenes", "description": "LEDs for building lights."},
+      {"icon": "layers", "title": "Backdrops", "description": "Smooth lighting on horizons."},
+      {"icon": "zap", "title": "LED Strips", "description": "Valance lighting common."}
+    ]},
+    {"type": "benefits", "title": "Model Train Content Tips", "content": [
+      "Cab ride videos are consistently popular",
+      "Layout tours showcase the artistry",
+      "Operating sessions show realism",
+      "How-to content helps community",
+      "Product reviews have audience",
+      "Progress updates build following",
+      "Sound is part of the immersion"
+    ]},
+    {"type": "checklist", "title": "Model Train Video Checklist", "content": [
+      "Layout clean and dust-free?",
+      "Track tested for smooth operation?",
+      "Lighting even across layout?",
+      "Onboard camera charged?",
+      "Sound system working?",
+      "Multiple angles planned?",
+      "Locomotives running smoothly?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best onboard camera for model trains?", "answer": "Micro cameras designed for RC work well. Some purpose-built for model trains exist. Wireless preferred to avoid track interference. Balance quality with size—too heavy affects operation. Test compatibility with your scale."},
+    {"question": "How to light a layout for video?", "answer": "LED strips in valance above layout popular. Avoid single-point sources that create shadows. Daylight-balanced LEDs (5500-6500K) for realism. Supplement building lights for night scenes. Even illumination is key."},
+    {"question": "Audio in train videos?", "answer": "DCC sound locomotives add realism. Record layout sounds separately for better quality. Ambient sounds (bells, horns) matter. Consider adding subtle ambient audio. Voiceover for educational content."},
+    {"question": "What video types perform best?", "answer": "Cab ride POV videos consistently popular—relaxing, immersive. Layout tours showcase your work. How-to tutorials help community. Operating sessions show the point of the hobby. Progress updates build invested audience."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "model-train"
+}

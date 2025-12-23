@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-voiceover",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Record YouTube Voiceovers 2025: Complete Guide",
+    "description": "Record professional voiceovers for YouTube. Equipment, technique, and editing tips.",
+    "keywords": ["youtube voiceover", "record voiceover", "voiceover tutorial", "narration youtube", "voice recording youtube"]
+  },
+  "hero": {
+    "badge": "Voiceovers",
+    "headline": "How to Record YouTube Voiceovers",
+    "subheadline": "Professional narration for any video. Recording, editing, and delivery.",
+    "primaryKeyword": "youtube voiceover"
+  },
+  "sections": [
+    {"type": "intro", "content": "Voiceover separates professional content from amateur. Clear, engaging narration elevates any video—tutorials, documentaries, explainers. Here's how to record voiceovers that sound professional without a studio."},
+    {"type": "features", "title": "Recording Equipment", "content": [
+      {"icon": "mic", "title": "USB Microphone", "description": "Blue Yeti, Rode NT-USB. Plug-and-play quality."},
+      {"icon": "shield", "title": "Pop Filter", "description": "Eliminates plosives (P and B sounds). Essential accessory."},
+      {"icon": "volume-x", "title": "Quiet Space", "description": "Room treatment or closet recording. Silence is golden."}
+    ]},
+    {"type": "steps", "title": "Recording Process", "content": [
+      "Write or outline your script",
+      "Set up microphone 6-8 inches from mouth",
+      "Position pop filter between you and mic",
+      "Test levels (not clipping, not too quiet)",
+      "Record in quiet environment",
+      "Speak clearly at consistent pace",
+      "Record room tone for editing",
+      "Save multiple takes"
+    ]},
+    {"type": "features", "title": "Voice Technique", "content": [
+      {"icon": "volume-2", "title": "Consistent Distance", "description": "Stay same distance from mic. Volume consistency."},
+      {"icon": "coffee", "title": "Hydration", "description": "Drink water. Avoid dairy, caffeine before recording."},
+      {"icon": "smile", "title": "Smile While Speaking", "description": "Changes voice tone positively. Sounds more engaging."}
+    ]},
+    {"type": "benefits", "title": "Post-Recording Tips", "content": [
+      "Edit out mistakes and pauses",
+      "Apply noise reduction if needed",
+      "Normalize audio levels",
+      "Add subtle compression",
+      "EQ to brighten voice",
+      "Sync with video visuals",
+      "Leave room for B-roll audio"
+    ]},
+    {"type": "checklist", "title": "Voiceover Checklist", "content": [
+      "Script prepared?",
+      "Recording environment quiet?",
+      "Mic positioned correctly?",
+      "Pop filter in place?",
+      "Levels set (not clipping)?",
+      "Water nearby?",
+      "Test recording sounds good?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best microphone for voiceover?", "answer": "USB condensers like Rode NT-USB or Blue Yeti work great. XLR options with interface sound better. Start USB, upgrade later."},
+    {"question": "How do I reduce room echo?", "answer": "Record in small space with soft surfaces. Closets with clothes work. Acoustic panels, blankets, or moving blankets help."},
+    {"question": "Should I read from script?", "answer": "Script ensures accuracy and efficiency. Practice until it sounds natural. Bullet points work for conversational style."},
+    {"question": "How to sound more natural?", "answer": "Smile, vary your pace, emphasize key words. Read aloud to yourself first. Record multiple takes. Edit the best parts together."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

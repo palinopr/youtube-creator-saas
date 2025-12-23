@@ -1,0 +1,72 @@
+{
+  "slug": "fashion-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Fashion YouTube Tools 2025: Style Content Creator Equipment",
+    "description": "Essential tools for fashion YouTube channels. Outfit filming, lighting for clothing, and lookbook production.",
+    "keywords": ["fashion youtube tools", "style youtube equipment", "fashion content creator", "outfit video setup", "lookbook youtube"]
+  },
+  "hero": {
+    "badge": "Fashion Content",
+    "headline": "Essential Tools for Fashion YouTube Creators",
+    "subheadline": "Showcase style beautifully. Color accuracy, full-body shots, and aesthetic production.",
+    "primaryKeyword": "fashion youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Fashion content requires showing clothes accurately—colors, textures, fit. Your lighting, camera setup, and background need to present outfits professionally. Whether hauls, lookbooks, or styling tips, here's what fashion YouTubers need."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "Full-Body Capable", "description": "Wide enough for head-to-toe shots. Tripod with height adjustment."},
+      {"icon": "aperture", "title": "Color Accuracy", "description": "Camera with good color science. Avoid oversaturation."},
+      {"icon": "smartphone", "title": "Phone Alternative", "description": "Modern phones work well. Good for quick content."}
+    ]},
+    {"type": "features", "title": "Lighting Priority", "content": [
+      {"icon": "sun", "title": "High CRI Lights", "description": "95+ CRI for accurate fabric colors. Cheap lights distort colors."},
+      {"icon": "layout", "title": "Even Full-Body", "description": "Light entire outfit evenly. Multiple sources help."},
+      {"icon": "circle", "title": "Natural Light Option", "description": "Window light is excellent. Soft, accurate, free."}
+    ]},
+    {"type": "features", "title": "Set Design", "content": [
+      {"icon": "home", "title": "Clean Background", "description": "Neutral backdrop or styled set. Don't compete with outfits."},
+      {"icon": "image", "title": "Full-Length Mirror", "description": "Alternative filming option. Mirrors can double for selfie-style."},
+      {"icon": "move", "title": "Walk Space", "description": "Room to move, walk, show outfit in motion."}
+    ]},
+    {"type": "steps", "title": "Fashion Content Tips", "content": [
+      "Film in daylight when possible",
+      "Multiple angles show fit better",
+      "Include close-ups of details/textures",
+      "Show outfit in movement",
+      "Accurate color is more important than 'aesthetic'",
+      "Style multiple ways when relevant",
+      "Include sizing info for viewer reference"
+    ]},
+    {"type": "benefits", "title": "Fashion Content Types", "content": [
+      "Hauls and try-ons",
+      "Lookbook compilations",
+      "Styling tips and tutorials",
+      "Capsule wardrobe content",
+      "Brand reviews",
+      "Thrift/secondhand finds",
+      "Seasonal style guides"
+    ]},
+    {"type": "checklist", "title": "Fashion Creator Setup", "content": [
+      "Full-body filming possible?",
+      "High CRI lighting?",
+      "Clean, neutral background?",
+      "Tripod with height range?",
+      "Room to move?",
+      "Good audio setup?",
+      "Color-accurate display for editing?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for fashion YouTube?", "answer": "Any modern mirrorless or good smartphone. Color accuracy matters more than resolution. Sony, Canon, iPhone all work well."},
+    {"question": "How to show true colors?", "answer": "High CRI lighting (95+), accurate white balance, minimal color grading. Natural daylight is most accurate."},
+    {"question": "Should I show my face?", "answer": "Most fashion creators do—face builds connection and you're modeling the clothes. But hands-and-outfit only channels exist."},
+    {"question": "How to film outfit details?", "answer": "Close-up B-roll shots. Macro lens optional but helpful. Show texture, tags, construction details separately."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "fashion"
+}

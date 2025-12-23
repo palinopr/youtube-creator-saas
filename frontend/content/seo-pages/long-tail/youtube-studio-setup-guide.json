@@ -1,0 +1,71 @@
+{
+  "slug": "youtube-studio-setup-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Studio Setup Guide 2025: Build Your Recording Space",
+    "description": "Build the perfect YouTube recording studio. Space, lighting, and acoustic tips.",
+    "keywords": ["youtube studio setup", "youtube recording studio", "home studio youtube", "youtube filming space", "youtube studio design"]
+  },
+  "hero": {
+    "badge": "Studio Setup",
+    "headline": "YouTube Studio Setup Guide",
+    "subheadline": "Build your space. Create professional content at home.",
+    "primaryKeyword": "youtube studio setup"
+  },
+  "sections": [
+    {"type": "intro", "content": "A dedicated recording space transforms your content quality and workflow. Whether a corner of a room or an entire studio, thoughtful setup eliminates production friction. Good lighting, sound treatment, and organization let you focus on content, not troubleshooting. Here's how to build your studio."},
+    {"type": "features", "title": "Space Requirements", "content": [
+      {"icon": "home", "title": "Dedicated Area", "description": "Consistent setup saves time."},
+      {"icon": "volume-x", "title": "Quiet Location", "description": "Away from noise sources."},
+      {"icon": "sun", "title": "Light Control", "description": "Blackout capability for consistent lighting."},
+      {"icon": "thermometer", "title": "Climate Control", "description": "Comfortable for long sessions."}
+    ]},
+    {"type": "features", "title": "Lighting Essentials", "content": [
+      {"icon": "sun", "title": "Key Light", "description": "Main light source on face."},
+      {"icon": "layers", "title": "Fill Light", "description": "Softens shadows."},
+      {"icon": "move", "title": "Back Light", "description": "Separates from background."},
+      {"icon": "zap", "title": "LED Panels", "description": "Versatile, adjustable."}
+    ]},
+    {"type": "features", "title": "Acoustic Treatment", "content": [
+      {"icon": "box", "title": "Foam Panels", "description": "Absorb reflections."},
+      {"icon": "layers", "title": "Bass Traps", "description": "Corner placement."},
+      {"icon": "grid", "title": "Diffusion", "description": "Scatter remaining sound."},
+      {"icon": "home", "title": "Soft Furnishings", "description": "Carpet, curtains help."}
+    ]},
+    {"type": "features", "title": "Background Options", "content": [
+      {"icon": "image", "title": "Bookshelf", "description": "Classic YouTube look."},
+      {"icon": "layout", "title": "LED Lights", "description": "Color and mood."},
+      {"icon": "grid", "title": "Minimalist", "description": "Clean, distraction-free."},
+      {"icon": "layers", "title": "Branded Elements", "description": "Logos, colors."}
+    ]},
+    {"type": "benefits", "title": "Studio Setup Tips", "content": [
+      "Start simple, upgrade over time",
+      "Sound treatment often more important than camera",
+      "Consistent setup reduces setup time",
+      "Consider camera angle in room layout",
+      "Cable management matters for sanity",
+      "Test before committing to permanent setup",
+      "Leave room to grow and add gear"
+    ]},
+    {"type": "checklist", "title": "Studio Checklist", "content": [
+      "Dedicated space identified?",
+      "Key light positioned?",
+      "Sound treatment in place?",
+      "Background designed?",
+      "Camera mount installed?",
+      "Cables managed?",
+      "Workflow organized?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much space do I need?", "answer": "6x6 feet minimum for talking head. Larger for product reviews or movement. Ceiling height matters for lighting. Work with what you have—great content made in closets. Optimize your space."},
+    {"question": "What to prioritize first?", "answer": "Audio treatment often more impactful than camera upgrade. Then lighting. Camera last—decent cameras with good light and sound outperform great cameras with bad audio. Budget accordingly."},
+    {"question": "How to soundproof on a budget?", "answer": "Moving blankets are cheap absorption. Carpets and curtains help. Record during quiet times. Closets with clothes = free sound treatment. Foam panels later. Perfect isn't required."},
+    {"question": "DIY or buy studio furniture?", "answer": "Both work—IKEA desks popular for budget setups. Custom builds fit exactly. Start with what you have, upgrade as you understand needs. Permanent installations after you know what works."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "mental-health-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Mental Health YouTube Tools 2025: Wellness Creator Resources",
+    "description": "Top tools for mental health YouTube channels. Resources for therapists and wellness creators.",
+    "keywords": ["mental health youtube tools", "wellness youtube", "therapy youtube channel", "self-help creator tools", "psychology youtube"]
+  },
+  "hero": {
+    "badge": "Mental Health Tools",
+    "headline": "Best Mental Health YouTube Tools 2025",
+    "subheadline": "Create supportive, professional content. Tools for therapists and wellness creators.",
+    "primaryKeyword": "mental health youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Mental health content requires a delicate balance—professional credibility with approachable warmth. Your production setup should create a calming, trustworthy environment. The right tools help you deliver sensitive topics with the care they deserve while reaching those who need support."},
+    {"type": "features", "title": "Calming Environment Setup", "content": [
+      {"icon": "sun", "title": "Soft Lighting", "description": "Ring lights or softboxes. Avoid harsh shadows. Warm, inviting tones."},
+      {"icon": "home", "title": "Background Design", "description": "Plants, books, neutral colors. Professional but approachable office feel."},
+      {"icon": "camera", "title": "Eye-Level Camera", "description": "Creates connection. Feels like conversation. Use webcam or DSLR at face height."}
+    ]},
+    {"type": "features", "title": "Content Creation", "content": [
+      {"icon": "mic", "title": "Quality Audio", "description": "Clear voice is crucial for sensitive topics. USB condenser mic minimum."},
+      {"icon": "edit", "title": "Teleprompter Apps", "description": "Maintain eye contact while covering complex topics. PromptSmart, BigVu."},
+      {"icon": "film", "title": "Simple Editing", "description": "Clean cuts, no flashy effects. Content over production."}
+    ]},
+    {"type": "features", "title": "Professional Resources", "content": [
+      {"icon": "book", "title": "Research Databases", "description": "PubMed, Google Scholar. Evidence-based content builds credibility."},
+      {"icon": "shield", "title": "Disclaimer Templates", "description": "Not a substitute for treatment. Legal protection essential."},
+      {"icon": "users", "title": "Community Moderation", "description": "Comment moderation tools. Supportive community management."}
+    ]},
+    {"type": "benefits", "title": "Mental Health Content Ethics", "content": [
+      "Always include crisis resources",
+      "Clear disclaimers—not a replacement for therapy",
+      "Trigger warnings when appropriate",
+      "Evidence-based information only",
+      "Avoid diagnostic content",
+      "Moderate comments actively",
+      "Know your scope and limitations"
+    ]},
+    {"type": "checklist", "title": "Mental Health Video Checklist", "content": [
+      "Crisis resources included?",
+      "Appropriate disclaimers added?",
+      "Content evidence-based?",
+      "Trigger warnings if needed?",
+      "Tone warm and supportive?",
+      "Comments moderation planned?",
+      "Professional boundaries maintained?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need credentials to make mental health content?", "answer": "You can share personal experience without credentials. For clinical advice, credentials matter. Be clear about your qualifications and limitations."},
+    {"question": "How to handle concerning comments?", "answer": "Pin crisis resources. Have moderation strategy. You can't provide individual help through comments, but can direct to resources."},
+    {"question": "Best format for mental health content?", "answer": "Conversational, like talking to a friend. Sitting, eye-level, calm environment. Psychoeducation works well—explaining concepts clearly."},
+    {"question": "How to monetize ethically?", "answer": "Ads work but review advertiser fit. Courses on coping skills. Books. Avoid promising cures or exploiting vulnerability."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "mental-health"
+}

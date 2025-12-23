@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-community-building",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Community Building 2025: Create Loyal Fan Base",
+    "description": "Build an engaged YouTube community. Turn viewers into loyal fans and advocates.",
+    "keywords": ["youtube community building", "build youtube community", "youtube audience engagement", "youtube fan base", "creator community"]
+  },
+  "hero": {
+    "badge": "Community",
+    "headline": "YouTube Community Building Guide",
+    "subheadline": "Turn viewers into family. Build a community that supports your channel.",
+    "primaryKeyword": "youtube community building"
+  },
+  "sections": [
+    {"type": "intro", "content": "Views come and go, but community lasts. A strong community watches every video, engages with content, defends you in comments, and supports through memberships or merch. Building community takes intention and consistency. Here's how successful creators cultivate loyal fan bases."},
+    {"type": "features", "title": "Community Foundations", "content": [
+      {"icon": "users", "title": "Define Your Audience", "description": "Know who your community is. Create for them specifically."},
+      {"icon": "message-circle", "title": "Respond to Comments", "description": "Especially early. Every reply builds connection."},
+      {"icon": "heart", "title": "Show Authenticity", "description": "Be real. Share struggles and wins. Relatability builds trust."},
+      {"icon": "repeat", "title": "Consistency", "description": "Regular uploads build habit. Viewers know when to expect you."}
+    ]},
+    {"type": "steps", "title": "Community Building Actions", "content": [
+      "Respond to comments genuinely (especially first 24 hours)",
+      "Create community posts between videos",
+      "Ask questions and involve audience in decisions",
+      "Use viewer names in videos when appropriate",
+      "Feature community content and comments",
+      "Host live streams for direct interaction",
+      "Create exclusive spaces (Discord, memberships)",
+      "Celebrate community milestones together"
+    ]},
+    {"type": "features", "title": "Platform Tools", "content": [
+      {"icon": "hash", "title": "Community Tab", "description": "Polls, updates, behind-the-scenes. Stay connected."},
+      {"icon": "star", "title": "Channel Memberships", "description": "Exclusive perks create inner circle."},
+      {"icon": "video", "title": "Live Streams", "description": "Real-time interaction. Super Chat engagement."},
+      {"icon": "award", "title": "Shoutouts", "description": "Feature community members. Recognition motivates."}
+    ]},
+    {"type": "benefits", "title": "Strong Community Benefits", "content": [
+      "Consistent viewership regardless of algorithm",
+      "Higher engagement metrics",
+      "Word-of-mouth growth",
+      "Direct monetization (memberships, Super Chat)",
+      "Honest feedback for improvement",
+      "Emotional support during challenges",
+      "Sustainable creator career"
+    ]},
+    {"type": "checklist", "title": "Community Checklist", "content": [
+      "Responding to comments regularly?",
+      "Community posts active?",
+      "Viewer involvement in content?",
+      "Lives or direct interaction scheduled?",
+      "Community names/terms established?",
+      "Member recognition happening?",
+      "External community space available?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long to build a community?", "answer": "Meaningful community takes 1-2 years of consistent effort. Early signs appear sooner—returning commenters, inside jokes forming. Don't rush it."},
+    {"question": "Should I create a Discord server?", "answer": "Only if you'll actively moderate and participate. Empty/ignored Discords hurt more than help. Start when you have engaged core audience."},
+    {"question": "How to handle negative community members?", "answer": "Set clear expectations. Moderate fairly but firmly. Block truly toxic members. Your community reflects the culture you allow."},
+    {"question": "Can you buy community?", "answer": "No—fake engagement hurts more than helps. Real community builds through genuine connection over time. No shortcuts exist."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

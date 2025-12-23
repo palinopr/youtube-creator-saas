@@ -1,0 +1,75 @@
+{
+  "slug": "best-time-to-post-youtube",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "Best Time to Post on YouTube 2025: Maximize Your Views",
+    "description": "Discover the best times to upload YouTube videos for maximum views. Data-driven insights for optimal publishing schedules.",
+    "keywords": ["best time to post youtube", "when to upload youtube videos", "youtube upload schedule", "optimal youtube posting time", "youtube publishing time"]
+  },
+  "hero": {
+    "badge": "Upload Strategy",
+    "headline": "Best Time to Post on YouTube in 2025",
+    "subheadline": "Data-driven insights on when to publish for maximum initial velocity and long-term views.",
+    "primaryKeyword": "best time to post youtube"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Timing matters on YouTube. Publishing when your audience is online gives videos a strong initial push that signals quality to the algorithm. But the 'best' time varies by audience, niche, and goals. This guide helps you find your optimal upload schedule."
+    },
+    {
+      "type": "features",
+      "title": "Why Upload Time Matters",
+      "content": [
+        {"icon": "trending", "title": "Initial Velocity", "description": "Videos that get early engagement perform better long-term. Publishing when subscribers are active creates a strong first-hour signal."},
+        {"icon": "users", "title": "Subscriber Notifications", "description": "Subscribers with notifications get pinged immediately. Uploading when they're online increases the chance they actually watch."},
+        {"icon": "chart", "title": "Algorithm Window", "description": "YouTube evaluates new videos quickly. Strong early performance leads to more recommendations."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Finding Your Best Time",
+      "content": [
+        "Check YouTube Studio Analytics > Audience > When your viewers are on YouTube",
+        "Identify the hours with highest subscriber activity",
+        "Consider uploading 2-3 hours before peak to allow processing",
+        "Test different times and compare first-48-hour performance",
+        "Account for time zones of your primary audience"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "General Best Practices",
+      "content": [
+        "Weekday afternoons (2-4 PM) in your audience's timezone",
+        "Avoid early morning uploads when most people sleep",
+        "Consider Saturday morning for family/kid content",
+        "Consistency often matters more than perfect timing",
+        "Use scheduled publishing to hit exact times"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Upload Timing Checklist",
+      "content": [
+        "Reviewed 'When viewers are on YouTube' in Analytics",
+        "Identified primary audience timezone",
+        "Tested at least 3 different upload times",
+        "Compared first-48-hour view counts",
+        "Set a consistent weekly schedule",
+        "Using scheduled publishing feature"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "Does upload time really affect views?", "answer": "Yes, but it's one factor among many. A great video at a bad time still outperforms a mediocre video at the perfect time. Optimize timing, but content quality matters more."},
+    {"question": "Should I upload daily at the same time?", "answer": "Consistency helps subscribers know when to expect content. But upload frequency matters more than perfect timing. Find a sustainable schedule first."},
+    {"question": "What if my audience is global?", "answer": "You can't hit everyone's peak hours. Focus on your largest audience segment. Use Analytics to find where most viewers are located."},
+    {"question": "How long before peak should I upload?", "answer": "Upload 2-3 hours before peak viewing time. This allows YouTube to process, generate recommendations, and send notifications before your audience comes online."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

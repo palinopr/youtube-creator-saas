@@ -1,0 +1,70 @@
+{
+  "slug": "how-to-youtube-premiere-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to YouTube Premiere Videos 2025: Complete Premiere Guide",
+    "description": "Set up YouTube Premieres correctly. Build anticipation and engage viewers live.",
+    "keywords": ["youtube premiere", "premiere videos youtube", "how to premiere youtube", "youtube premiere setup", "schedule premiere"]
+  },
+  "hero": {
+    "badge": "Premieres",
+    "headline": "How to Set Up YouTube Premieres",
+    "subheadline": "Turn uploads into events. Build anticipation and watch together live.",
+    "primaryKeyword": "youtube premiere"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Premieres combine the excitement of live streaming with the polish of edited videos. Viewers watch together for the first time, chat in real-time, and you get that launch-day energy. When done right, premieres boost engagement and signal quality to the algorithm."},
+    {"type": "steps", "title": "Setting Up a Premiere", "content": [
+      "Upload video to YouTube Studio",
+      "Click 'Visibility' during upload",
+      "Select 'Schedule' then 'Set as Premiere'",
+      "Choose premiere date and time",
+      "Set countdown theme (optional)",
+      "Add custom thumbnail",
+      "Set notification preferences",
+      "Publish to schedule premiere",
+      "Promote before premiere time"
+    ]},
+    {"type": "features", "title": "Premiere Features", "content": [
+      {"icon": "clock", "title": "Countdown", "description": "2-minute default or custom. Builds anticipation."},
+      {"icon": "message-circle", "title": "Live Chat", "description": "Real-time interaction during first viewing."},
+      {"icon": "bell", "title": "Notifications", "description": "Subscribers notified when premiere starts."},
+      {"icon": "heart", "title": "Super Chat", "description": "Monetized channels can receive Super Chats."}
+    ]},
+    {"type": "benefits", "title": "Why Use Premieres", "content": [
+      "Creates shared viewing experience",
+      "Boosts initial engagement metrics",
+      "Live interaction builds community",
+      "Algorithm sees concentrated watch time",
+      "Generates anticipation and excitement",
+      "Professional channel feel",
+      "Great for important content"
+    ]},
+    {"type": "features", "title": "When to Premiere", "content": [
+      {"icon": "star", "title": "Major Videos", "description": "Season finales, documentaries, big announcements."},
+      {"icon": "music", "title": "Music Releases", "description": "Perfect for music videos and album drops."},
+      {"icon": "trending-up", "title": "Milestone Content", "description": "100K subscriber specials, anniversary videos."},
+      {"icon": "calendar", "title": "Scheduled Series", "description": "Weekly shows benefit from premiere consistency."}
+    ]},
+    {"type": "checklist", "title": "Premiere Checklist", "content": [
+      "Video fully uploaded and processed?",
+      "Premiere time optimal for audience?",
+      "Custom thumbnail uploaded?",
+      "Countdown theme selected?",
+      "Community post promoting premiere?",
+      "Plan to be present during premiere?",
+      "Chat moderation set up?"
+    ]}
+  ],
+  "faq": [
+    {"question": "When should I premiere vs regular upload?", "answer": "Premiere special content—big productions, important announcements, milestone videos. Regular uploads for frequent content. Don't premiere everything or it loses impact."},
+    {"question": "How far ahead should I schedule premiere?", "answer": "24-72 hours gives time to promote. Longer for major content. Short notice works for spontaneous community events. Test what works for your audience."},
+    {"question": "Should I be present during premiere?", "answer": "Ideally yes—engage in live chat. Increases retention and community connection. If you can't, pin a comment explaining. Have moderators if possible."},
+    {"question": "Can I edit video after scheduling premiere?", "answer": "Can edit title, description, tags before premiere. Cannot replace video file. If major issue found, cancel premiere and reschedule with correct video."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

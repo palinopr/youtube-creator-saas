@@ -1,0 +1,71 @@
+{
+  "slug": "youtube-thumbnail-psychology",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Thumbnail Psychology 2025: Design That Drives Clicks",
+    "description": "Psychology behind effective thumbnails. What makes viewers click.",
+    "keywords": ["youtube thumbnail psychology", "thumbnail design psychology", "youtube click psychology", "thumbnail that get clicks", "youtube ctr psychology"]
+  },
+  "hero": {
+    "badge": "Thumbnail Psychology",
+    "headline": "YouTube Thumbnail Psychology",
+    "subheadline": "Understand why people click. Design with psychology.",
+    "primaryKeyword": "youtube thumbnail psychology"
+  },
+  "sections": [
+    {"type": "intro", "content": "Thumbnails are split-second decisions. Viewers scroll past dozens of options—what makes them stop on yours? Understanding the psychology of attention, emotion, and curiosity helps you design thumbnails that command clicks. Here's the science behind effective thumbnail design."},
+    {"type": "features", "title": "Attention Triggers", "content": [
+      {"icon": "eye", "title": "Faces", "description": "Humans drawn to human faces."},
+      {"icon": "alert-circle", "title": "Contrast", "description": "Stand out from surroundings."},
+      {"icon": "zap", "title": "Color", "description": "Bright colors catch attention."},
+      {"icon": "move", "title": "Movement", "description": "Implied motion creates interest."}
+    ]},
+    {"type": "features", "title": "Emotional Triggers", "content": [
+      {"icon": "smile", "title": "Expression", "description": "Exaggerated emotions resonate."},
+      {"icon": "help-circle", "title": "Curiosity", "description": "Incomplete information pulls."},
+      {"icon": "alert-triangle", "title": "Urgency", "description": "FOMO and scarcity work."},
+      {"icon": "heart", "title": "Desire", "description": "Promise of value or pleasure."}
+    ]},
+    {"type": "features", "title": "Cognitive Principles", "content": [
+      {"icon": "layers", "title": "Simplicity", "description": "Brain prefers easy processing."},
+      {"icon": "hash", "title": "Pattern Recognition", "description": "Familiar formats feel safe."},
+      {"icon": "target", "title": "Focal Point", "description": "One clear focus element."},
+      {"icon": "type", "title": "Text Hierarchy", "description": "Most important word largest."}
+    ]},
+    {"type": "features", "title": "Design Elements", "content": [
+      {"icon": "user", "title": "Face Close-Up", "description": "Eyes and expression visible."},
+      {"icon": "type", "title": "Bold Text", "description": "3-4 words maximum."},
+      {"icon": "maximize", "title": "Large Elements", "description": "Readable at small size."},
+      {"icon": "layers", "title": "Clean Background", "description": "Subject stands out."}
+    ]},
+    {"type": "benefits", "title": "Psychology-Based Tips", "content": [
+      "Faces with strong emotion perform best",
+      "Curiosity gap: show, don't tell everything",
+      "Contrast with competing thumbnails",
+      "Test expressions—surprised often wins",
+      "Yellow/red statistically attract attention",
+      "Arrow and circle overlays guide eyes",
+      "Before/after creates tension"
+    ]},
+    {"type": "checklist", "title": "Psychology Checklist", "content": [
+      "Clear emotional expression?",
+      "Curiosity created?",
+      "High contrast with competition?",
+      "Single clear focal point?",
+      "Readable at mobile size?",
+      "Color palette intentional?",
+      "Tested against alternatives?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why do faces work so well?", "answer": "Evolution—humans are wired to notice and read faces. We process faces faster than other images. Emotional expressions trigger mirror neurons. Eye contact creates connection. It's instinctual, not learned."},
+    {"question": "What's the curiosity gap?", "answer": "Showing enough to intrigue but not enough to satisfy. Viewer must click to complete the information. 'You won't believe what happened' creates gap. Answer in video, not thumbnail. Don't give everything away."},
+    {"question": "Best colors for thumbnails?", "answer": "Yellow and red attract attention fastest (evolutionary—danger/fruit). Blue is calming and trustworthy. Green less common, stands out. Consider your niche and competitor colors. Contrast matters more than specific colors."},
+    {"question": "How to test thumbnail psychology?", "answer": "A/B test with YouTube's built-in tool. Watch CTR changes. Ask community which draws attention. Step back and view at small size. Check what's working for top creators in your niche."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

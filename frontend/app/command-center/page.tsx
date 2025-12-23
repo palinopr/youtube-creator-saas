@@ -25,6 +25,7 @@ import {
   Clock,
   DollarSign,
   AlertTriangle,
+  RefreshCw,
 } from "lucide-react";
 import Link from "next/link";
 import { ChartSkeleton } from "@/components/dashboard";
@@ -36,6 +37,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import HealthScore from "@/components/dashboard/HealthScore";
 import AlertsPanel, { Alert } from "@/components/dashboard/AlertsPanel";
 import ViralRadar, { TrendingVideo, calculateVideoVelocity } from "@/components/dashboard/ViralRadar";
+import { InlineToast } from "@/components/ui/Toast";
 
 // Lazy load charts for better performance
 const ViewsTrendChart = dynamic(
@@ -73,9 +75,10 @@ export default function CommandCenterPage() {
 }
 
 function Dashboard() {
-  const { channelStats, recentVideos, topVideo, analyticsOverview, isLoading } = useDashboardData();
+  const { channelStats, recentVideos, topVideo, analyticsOverview, isLoading, error, errors, lastUpdated, refetch } = useDashboardData();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [showError, setShowError] = useState(true);
 
   const handleLogout = async () => {
     try {
@@ -162,15 +165,42 @@ function Dashboard() {
   const [alertsLoading, setAlertsLoading] = useState(false);
 
   useEffect(() => {
+    // Deduplicate alerts by type+title (keeps first occurrence)
+    const deduplicateAlerts = (alerts: Alert[]): Alert[] => {
+      const seen = new Map<string, Alert>();
+      for (const alert of alerts) {
+        // For milestones, dedupe by milestone value in data
+        // For others, dedupe by type+title combination
+        const key = alert.type === 'milestone'
+          ? `milestone-${alert.data?.milestone || alert.title}`
+          : `${alert.type}-${alert.title}`;
+
+        if (!seen.has(key)) {
+          seen.set(key, alert);
+        }
+      }
+      return Array.from(seen.values());
+    };
+
     const fetchAlerts = async () => {
       setAlertsLoading(true);
       try {
-        // First, trigger a check for new alerts based on current data
+        // First, cleanup any existing duplicates in the database
+        try {
+          await api.cleanupDuplicateAlerts();
+        } catch {
+          // Ignore cleanup errors - it's an optimization
+        }
+
+        // Then, trigger a check for new alerts based on current data
         await api.checkForAlerts();
 
-        // Then fetch all alerts
+        // Fetch all alerts
         const response = await api.getAlerts(20, false);
-        setAlerts(response.alerts as Alert[]);
+
+        // Deduplicate on frontend as extra safety
+        const uniqueAlerts = deduplicateAlerts(response.alerts as Alert[]);
+        setAlerts(uniqueAlerts);
       } catch (error) {
         console.error("Failed to fetch alerts:", error);
         // Fallback: generate alerts locally if API fails
@@ -252,8 +282,8 @@ function Dashboard() {
 
     fetchAlerts();
 
-    // Refresh alerts every 5 minutes
-    const interval = setInterval(fetchAlerts, 5 * 60 * 1000);
+    // Refresh alerts every 15 minutes (reduced from 5 to prevent duplicate creation)
+    const interval = setInterval(fetchAlerts, 15 * 60 * 1000);
     return () => clearInterval(interval);
   }, [trendingVideos, healthMetrics, channelStats]);
 
@@ -381,12 +411,38 @@ function Dashboard() {
                 </h1>
                 <p className="text-gray-500">Real-time channel performance at a glance</p>
               </div>
-              <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
-                <Clock className="w-4 h-4" />
-                Last updated: {new Date().toLocaleTimeString()}
+              <div className="hidden sm:flex items-center gap-4">
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <Clock className="w-4 h-4" />
+                  Last updated: {lastUpdated ? lastUpdated.toLocaleTimeString() : "—"}
+                </div>
+                <button
+                  onClick={refetch}
+                  disabled={isLoading}
+                  className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50"
+                  title="Refresh data"
+                >
+                  <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+                </button>
               </div>
             </div>
           </div>
+
+          {/* Error Banner */}
+          {error && showError && (
+            <div className="mb-6">
+              <InlineToast
+                type="error"
+                title={error}
+                message={Object.entries(errors)
+                  .filter(([_, err]) => err !== null)
+                  .map(([key, err]) => `${key}: ${err}`)
+                  .join("; ")}
+                onRetry={refetch}
+                onDismiss={() => setShowError(false)}
+              />
+            </div>
+          )}
 
           {/* Top Row: Health Score + Quick Stats */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">

@@ -1,0 +1,66 @@
+{
+  "slug": "rc-hobby-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best RC Hobby YouTube Tools 2025: RC Car & Plane Channel Equipment",
+    "description": "Top tools for RC hobby YouTube channels. Film RC cars, planes, and boats.",
+    "keywords": ["rc hobby youtube tools", "rc car channel", "rc plane video", "radio control youtube", "hobby grade rc content"]
+  },
+  "hero": {
+    "badge": "RC Hobby Tools",
+    "headline": "Best RC Hobby YouTube Tools 2025",
+    "subheadline": "Capture the action. Gear for RC enthusiasts.",
+    "primaryKeyword": "rc hobby youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "RC hobby content showcases cars, planes, helicopters, boats, and drones in action. Viewers want to see speed, crashes, builds, and reviews. Filming fast-moving small objects presents unique challenges—tracking shots, onboard cameras, and crash-worthy gear. Here's what RC YouTubers use."},
+    {"type": "features", "title": "Action Cameras", "content": [
+      {"icon": "video", "title": "GoPro Hero", "description": "Onboard footage. Survives crashes."},
+      {"icon": "camera", "title": "Insta360 Go", "description": "Ultra-light for small RCs."},
+      {"icon": "eye", "title": "RunCam", "description": "FPV and action cameras."},
+      {"icon": "zap", "title": "DJI Action", "description": "Stabilized onboard."}
+    ]},
+    {"type": "features", "title": "Tracking Shots", "content": [
+      {"icon": "move", "title": "Tripod Pan/Tilt", "description": "Follow RC around track."},
+      {"icon": "video", "title": "Mirrorless Camera", "description": "External tracking shots."},
+      {"icon": "search", "title": "Telephoto Lens", "description": "Distance shots of planes."},
+      {"icon": "zap", "title": "High Frame Rate", "description": "Slow-mo crashes and stunts."}
+    ]},
+    {"type": "features", "title": "Workshop/Bench Content", "content": [
+      {"icon": "camera", "title": "Overhead Camera", "description": "Build and repair footage."},
+      {"icon": "sun", "title": "Good Lighting", "description": "See small parts clearly."},
+      {"icon": "mic", "title": "Clear Audio", "description": "Explain builds and reviews."},
+      {"icon": "maximize", "title": "Macro Shots", "description": "Detail shots of components."}
+    ]},
+    {"type": "benefits", "title": "RC Content Tips", "content": [
+      "Onboard cameras add excitement",
+      "Crashes are content—don't cut them",
+      "Unboxing and reviews perform well",
+      "Speed runs need measurement proof",
+      "Comparisons between models engage",
+      "Build videos help community",
+      "Show repairs and upgrades"
+    ]},
+    {"type": "checklist", "title": "RC Video Checklist", "content": [
+      "Onboard camera mounted securely?",
+      "External camera positioned?",
+      "Batteries fully charged?",
+      "Weather suitable for filming?",
+      "Location safe and legal?",
+      "Slow-mo mode ready for stunts?",
+      "Audio setup for commentary?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best onboard camera for RC?", "answer": "GoPro Hero for durability and quality. Insta360 Go for ultra-light on small RCs. RunCam for FPV setups. Weight matters—lighter is better for performance. Secure mounting essential for crashes."},
+    {"question": "How to film fast RC cars?", "answer": "Tripod with fluid head for panning. Position at track curves for dramatic shots. High frame rate for slow-mo. Practice tracking before filming runs. Multiple angles make better final edit."},
+    {"question": "Where to fly/drive for content?", "answer": "RC clubs and tracks offer community and facilities. Open fields for planes (check regulations). Skate parks sometimes allow RC. Private property with permission. Avoid public spaces with restrictions."},
+    {"question": "Do crash videos perform well?", "answer": "Yes—crashes are often the most viewed content. Include them, don't hide failures. Slow-mo crash replays are satisfying. Balance with successful runs. Viewers appreciate honesty about mishaps."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "rc-hobby"
+}

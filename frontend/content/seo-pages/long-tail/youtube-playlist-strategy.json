@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-playlist-strategy",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Playlist Strategy 2025: Organize for More Watch Time",
+    "description": "Create YouTube playlists that boost watch time. Organization strategies for growth.",
+    "keywords": ["youtube playlist strategy", "youtube playlists", "playlist optimization", "youtube watch time", "organize youtube videos"]
+  },
+  "hero": {
+    "badge": "Playlist Strategy",
+    "headline": "YouTube Playlist Strategy Guide",
+    "subheadline": "Keep viewers watching. Organize content for maximum watch time.",
+    "primaryKeyword": "youtube playlist strategy"
+  },
+  "sections": [
+    {"type": "intro", "content": "Playlists are watch time multipliers—when one video ends, the next starts automatically. Strategic playlists guide viewers through your content, increase session time, and organize your channel professionally. Here's how to create playlists that keep viewers watching."},
+    {"type": "features", "title": "Playlist Benefits", "content": [
+      {"icon": "play", "title": "Auto-Play", "description": "Next video plays automatically."},
+      {"icon": "clock", "title": "Session Time", "description": "Viewers watch multiple videos."},
+      {"icon": "search", "title": "SEO Value", "description": "Playlists rank in search."},
+      {"icon": "grid", "title": "Organization", "description": "Help viewers find content."}
+    ]},
+    {"type": "steps", "title": "Creating Effective Playlists", "content": [
+      "Identify content themes/categories",
+      "Group related videos logically",
+      "Order videos strategically (best first)",
+      "Write SEO-optimized playlist titles",
+      "Add descriptions with keywords",
+      "Set appropriate playlist visibility",
+      "Feature playlists on channel homepage",
+      "Promote playlists, not just videos"
+    ]},
+    {"type": "features", "title": "Playlist Types", "content": [
+      {"icon": "book", "title": "Course/Series", "description": "Sequential learning. Start to finish."},
+      {"icon": "tag", "title": "Topic Playlists", "description": "All videos on one subject."},
+      {"icon": "star", "title": "Best Of", "description": "Top performers, greatest hits."},
+      {"icon": "calendar", "title": "Chronological", "description": "Season 1, monthly uploads, etc."}
+    ]},
+    {"type": "features", "title": "Optimization Tips", "content": [
+      {"icon": "type", "title": "Keyword Titles", "description": "Include searchable terms."},
+      {"icon": "file-text", "title": "Description", "description": "Explain playlist value. Keywords."},
+      {"icon": "image", "title": "Thumbnail", "description": "First video's thumbnail shows."},
+      {"icon": "list", "title": "Video Order", "description": "Best performer first usually."}
+    ]},
+    {"type": "benefits", "title": "Playlist Best Practices", "content": [
+      "Put best-performing video first",
+      "10-20 videos per playlist ideal",
+      "Don't over-categorize small channels",
+      "Update playlists with new content",
+      "Share playlist links, not video links",
+      "Feature playlists on homepage",
+      "Cross-promote in end screens"
+    ]},
+    {"type": "checklist", "title": "Playlist Checklist", "content": [
+      "Playlist title optimized for search?",
+      "Description written with keywords?",
+      "Videos in logical order?",
+      "Best video first?",
+      "Featured on channel homepage?",
+      "Shared in video end screens?",
+      "Updated with new content?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many playlists should I have?", "answer": "Depends on content volume. Start with 3-5 main categories. Don't over-segment small catalogs. Add playlists as content grows. Quality organization matters more than quantity."},
+    {"question": "Should I put videos in multiple playlists?", "answer": "Yes—one video can be in multiple playlists where relevant. Course playlist AND topic playlist. Increases discovery paths. Don't force-fit though."},
+    {"question": "Do playlists help SEO?", "answer": "Yes—playlists appear in search results. Well-titled playlists can rank. Playlist pages are indexable. Treat playlist titles like video titles for SEO."},
+    {"question": "What order for videos in playlist?", "answer": "For courses: chronological/logical progression. For topics: best performer first to hook viewers. Experiment with order. First video matters most—it's the entry point."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

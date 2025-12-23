@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-banner",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Make a YouTube Banner 2025: Channel Art Guide",
+    "description": "Create an effective YouTube channel banner. Dimensions, design tips, and free tools.",
+    "keywords": ["youtube banner", "channel art youtube", "youtube banner size", "make youtube banner", "channel banner design"]
+  },
+  "hero": {
+    "badge": "Channel Art",
+    "headline": "How to Make a YouTube Banner",
+    "subheadline": "First impression of your channel. Clean design, right dimensions, clear branding.",
+    "primaryKeyword": "youtube banner"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your YouTube banner is the billboard of your channel—viewers see it on every page. Good channel art establishes brand identity and communicates what your channel offers. Here's how to create a banner that works across all devices."},
+    {"type": "features", "title": "Dimensions", "content": [
+      {"icon": "maximize", "title": "Full Size: 2560 x 1440px", "description": "Upload at this size. Covers all display scenarios."},
+      {"icon": "smartphone", "title": "Safe Area: 1546 x 423px", "description": "Center content here. Visible on all devices including mobile."},
+      {"icon": "monitor", "title": "TV Display", "description": "Full banner shows on TV app. Keep edges clean."}
+    ]},
+    {"type": "steps", "title": "Creating Your Banner", "content": [
+      "Open design tool (Canva, Photoshop, Figma)",
+      "Create 2560 x 1440px canvas",
+      "Mark safe zone center (1546 x 423px)",
+      "Place critical elements in safe zone",
+      "Add branding (logo, name, tagline)",
+      "Include upload schedule if consistent",
+      "Export as PNG or JPG",
+      "Upload in YouTube Studio"
+    ]},
+    {"type": "features", "title": "Design Elements", "content": [
+      {"icon": "user", "title": "Your Photo/Avatar", "description": "Optional but builds recognition. Consistent with profile picture."},
+      {"icon": "type", "title": "Channel Name", "description": "Clear, readable text. Your brand identity."},
+      {"icon": "calendar", "title": "Upload Schedule", "description": "'New videos every Tuesday' builds expectation."}
+    ]},
+    {"type": "benefits", "title": "Banner Best Practices", "content": [
+      "Keep text large and readable",
+      "Use brand colors consistently",
+      "Avoid clutter—less is more",
+      "Test on multiple devices",
+      "Update seasonally if relevant",
+      "High contrast for readability",
+      "Professional quality matters"
+    ]},
+    {"type": "benefits", "title": "Free Tools", "content": [
+      "Canva (templates included)",
+      "Photopea (Photoshop alternative)",
+      "Figma (design collaboration)",
+      "Adobe Express",
+      "Pixlr",
+      "GIMP (advanced)",
+      "Snappa"
+    ]},
+    {"type": "checklist", "title": "Banner Checklist", "content": [
+      "2560 x 1440px canvas?",
+      "Critical content in safe zone?",
+      "Channel name visible?",
+      "Brand colors used?",
+      "Text readable on mobile?",
+      "High quality export?",
+      "Tested on multiple devices?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What size should YouTube banner be?", "answer": "Upload 2560 x 1440 pixels. Keep important elements within center 1546 x 423 pixels (safe zone visible on all devices)."},
+    {"question": "Best free tool for banners?", "answer": "Canva is easiest with YouTube banner templates. Photopea for more control. Both free and browser-based."},
+    {"question": "How often to update banner?", "answer": "When branding changes or seasonally if relevant to your content. Some creators update for special series or events."},
+    {"question": "Should I include my face?", "answer": "Optional. Helps recognition and personal connection. Many successful channels don't show face in banner. Match your brand."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

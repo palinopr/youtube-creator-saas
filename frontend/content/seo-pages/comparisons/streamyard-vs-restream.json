@@ -1,0 +1,65 @@
+{
+  "slug": "streamyard-vs-restream",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "StreamYard vs Restream 2025: Which Multistreaming Platform Wins?",
+    "description": "Compare StreamYard and Restream for live streaming. Features, pricing, and which platform is best for YouTube creators.",
+    "keywords": ["streamyard vs restream", "multistreaming comparison", "live streaming platforms", "streamyard review", "restream review"]
+  },
+  "hero": {
+    "badge": "Live Streaming",
+    "headline": "StreamYard vs Restream: Complete Comparison",
+    "subheadline": "Two browser-based multistreaming platforms. Which one fits your YouTube live streaming needs?",
+    "primaryKeyword": "streamyard vs restream"
+  },
+  "sections": [
+    {"type": "intro", "content": "Both StreamYard and Restream let you broadcast to multiple platforms simultaneously from your browser. No downloads, no complex OBS setup. But they approach live streaming differently. StreamYard focuses on production features and guest management. Restream emphasizes multistreaming reach and scheduling. Here's how they compare for YouTube creators."},
+    {"type": "comparison", "title": "StreamYard vs Restream Comparison", "content": [
+      {"feature": "Free Tier", "toolA": "20hr/month, watermark", "toolB": "Multistream basic", "tubeGrow": "N/A"},
+      {"feature": "Paid Plans", "toolA": "From $20/month", "toolB": "From $19/month", "tubeGrow": "N/A"},
+      {"feature": "Simultaneous Guests", "toolA": "Up to 10", "toolB": "Up to 6", "tubeGrow": "N/A"},
+      {"feature": "Multistream Destinations", "toolA": "Up to 8", "toolB": "30+", "tubeGrow": "N/A"},
+      {"feature": "Stream Recording", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"},
+      {"feature": "Custom Overlays", "toolA": "Built-in only", "toolB": "More flexible", "tubeGrow": "N/A"},
+      {"feature": "Chat Integration", "toolA": "All platforms", "toolB": "All platforms", "tubeGrow": "N/A"},
+      {"feature": "Scheduled Streams", "toolA": "Yes", "toolB": "Yes, more robust", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "StreamYard Strengths", "content": [
+      {"icon": "users", "title": "Guest Experience", "description": "Best-in-class guest experience. Simple links, easy controls, professional look."},
+      {"icon": "layout", "title": "Built-in Production", "description": "Overlays, banners, and layouts included. No design skills needed."},
+      {"icon": "message-square", "title": "On-Screen Comments", "description": "Display viewer comments on stream with one click. Great for engagement."}
+    ]},
+    {"type": "features", "title": "Restream Strengths", "content": [
+      {"icon": "share-2", "title": "Multistream Power", "description": "30+ destinations in one stream. Reach every platform simultaneously."},
+      {"icon": "calendar", "title": "Advanced Scheduling", "description": "Schedule streams, manage events, and organize your streaming calendar."},
+      {"icon": "bar-chart", "title": "Cross-Platform Analytics", "description": "See performance across all platforms in unified analytics dashboard."}
+    ]},
+    {"type": "benefits", "title": "Choose StreamYard If", "content": [
+      "You frequently have guests on your streams",
+      "You want simple, polished production",
+      "Guest experience is top priority",
+      "You're doing interviews or podcasts",
+      "You want built-in graphics without design work"
+    ]},
+    {"type": "benefits", "title": "Choose Restream If", "content": [
+      "Maximum platform reach matters most",
+      "You stream to many destinations",
+      "You need advanced scheduling",
+      "Cross-platform analytics are important",
+      "You want more overlay customization"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which is better for YouTube specifically?", "answer": "Both work great with YouTube. StreamYard edges out for guest shows. Restream wins for simulcasting to YouTube plus many other platforms."},
+    {"question": "Can I use OBS with these platforms?", "answer": "Both support RTMP, so yes. But if you're using OBS anyway, you might not need either—OBS can multistream directly with plugins."},
+    {"question": "Do they affect stream quality?", "answer": "Both re-encode your stream, which can slightly reduce quality. For most YouTube content, it's not noticeable. Direct encoding is slightly better."},
+    {"question": "Which has better free tier?", "answer": "Depends on needs. StreamYard free includes watermark but full features. Restream free has multistreaming but limited features. Try both."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "streamyard",
+  "secondaryTool": "restream"
+}

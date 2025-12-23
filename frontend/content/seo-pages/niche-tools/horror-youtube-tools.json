@@ -1,0 +1,67 @@
+{
+  "slug": "horror-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Horror YouTube Tools 2025: Scary Content Equipment",
+    "description": "Essential tools for horror content creators. Lighting, audio, and effects for scary YouTube videos.",
+    "keywords": ["horror youtube tools", "horror channel equipment", "scary video production", "horror content creation", "creepy video effects"]
+  },
+  "hero": {
+    "badge": "Horror Content",
+    "headline": "Essential Tools for Horror YouTube Creators",
+    "subheadline": "Create genuinely scary content. Lighting, sound, and effects that deliver chills.",
+    "primaryKeyword": "horror youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Horror content relies on atmosphere—lighting, sound design, and pacing create fear more than jump scares alone. Whether you make scary stories, horror game content, or atmospheric short films, here are the tools that help create genuinely unsettling content."},
+    {"type": "features", "title": "Lighting for Horror", "content": [
+      {"icon": "sun", "title": "RGB LED Panels", "description": "Create colored lighting for mood. Red, blue, green for eerie effects."},
+      {"icon": "moon", "title": "Practical Lights", "description": "Candles, flashlights, lamps in scene. Realistic, atmospheric."},
+      {"icon": "eye", "title": "Hard Shadows", "description": "Undiffused light sources. Sharp shadows are inherently unsettling."}
+    ]},
+    {"type": "features", "title": "Audio & Sound Design", "content": [
+      {"icon": "volume-2", "title": "Sound Effects Library", "description": "Creaking, whispers, ambient drones. Epidemic Sound, Artlist have horror packs."},
+      {"icon": "mic", "title": "Quality Microphone", "description": "Clear voice for narration. Horror stories need great voice capture."},
+      {"icon": "music", "title": "Tension Music", "description": "Building dread, sudden stings. Music is half the scare."}
+    ]},
+    {"type": "steps", "title": "Horror Production Techniques", "content": [
+      "Use low-key lighting (mostly shadow)",
+      "Build tension before scares",
+      "Let silence create dread",
+      "Use sound before showing source",
+      "Keep scary elements mostly hidden",
+      "Pacing matters more than effects",
+      "Practice vocal delivery for narration"
+    ]},
+    {"type": "benefits", "title": "Horror Content Types", "content": [
+      "Scary story narration",
+      "Horror game let's plays",
+      "Creepypasta readings",
+      "Short horror films",
+      "True crime/mystery",
+      "Urban legend exploration",
+      "Paranormal investigation (entertainment)"
+    ]},
+    {"type": "checklist", "title": "Horror Creator Essentials", "content": [
+      "RGB lighting for mood",
+      "Quality voice microphone",
+      "Sound effects library",
+      "Video editing with audio tools",
+      "Script/story development",
+      "Quiet recording space",
+      "Understanding of tension and pacing"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I make content genuinely scary?", "answer": "Tension over jump scares. Sound design is crucial. Let imagination do work. What you don't show is scarier than what you do."},
+    {"question": "What lighting creates the creepiest effect?", "answer": "Low-key, hard shadows. Single source from below or side. Colored light (especially blue/green) adds unease. Embrace darkness."},
+    {"question": "Best microphone for horror narration?", "answer": "Warm condenser microphones work well. SM7B or Rode NT1. Record close for intimate, creepy delivery. Quality matters for voice content."},
+    {"question": "How do I find horror sound effects?", "answer": "Epidemic Sound, Artlist have horror packs. Freesound.org for free options. Recording your own is best for unique sounds."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "horror"
+}

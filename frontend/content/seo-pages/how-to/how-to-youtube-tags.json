@@ -1,0 +1,77 @@
+{
+  "slug": "how-to-youtube-tags",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube Tags 2025: Tag Optimization Guide",
+    "description": "Optimize YouTube video tags. Best practices, tools, and strategy for discoverability.",
+    "keywords": ["youtube tags", "video tags youtube", "youtube tag optimization", "best youtube tags", "how to tag youtube videos"]
+  },
+  "hero": {
+    "badge": "Tags",
+    "headline": "How to Optimize YouTube Tags",
+    "subheadline": "Tags help YouTube understand your content. Not as important as titles—but still useful.",
+    "primaryKeyword": "youtube tags"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube tags help the algorithm understand video content and context. They're less important than titles, descriptions, and thumbnails—but still contribute to discoverability. Here's how to use tags effectively without overthinking them."},
+    {"type": "features", "title": "Tag Strategy", "content": [
+      {"icon": "target", "title": "Primary Keywords", "description": "Main topic tags first. Exact match search terms."},
+      {"icon": "hash", "title": "Variations", "description": "Different phrasings of same concept. How people search."},
+      {"icon": "folder", "title": "Broad Category", "description": "General topic tags. Helps YouTube categorize."}
+    ]},
+    {"type": "steps", "title": "Adding Tags", "content": [
+      "Go to YouTube Studio",
+      "Select video (or upload new)",
+      "Click Show More in details",
+      "Find Tags section",
+      "Add primary keyword first",
+      "Add 2-3 variations",
+      "Add broad category tags",
+      "Include common misspellings",
+      "Keep total under 500 characters"
+    ]},
+    {"type": "features", "title": "Tag Best Practices", "content": [
+      {"icon": "check", "title": "Relevant Only", "description": "Only tags that match content. Irrelevant tags hurt."},
+      {"icon": "list", "title": "Mix Specific & Broad", "description": "Specific for targeted search. Broad for related suggestions."},
+      {"icon": "repeat", "title": "Consistent Series Tags", "description": "Same tags across video series. Links content together."}
+    ]},
+    {"type": "benefits", "title": "Tag Do's", "content": [
+      "Use exact search phrases",
+      "Include your channel name",
+      "Add series/playlist identifiers",
+      "Include common misspellings",
+      "Use long-tail keywords",
+      "Stay relevant to content",
+      "Research competitor tags"
+    ]},
+    {"type": "benefits", "title": "Tag Don'ts", "content": [
+      "Don't use irrelevant popular tags",
+      "Don't stuff with repetition",
+      "Don't exceed 500 characters",
+      "Don't use misleading tags",
+      "Don't ignore tags entirely",
+      "Don't copy competitor tags blindly",
+      "Don't obsess over tags"
+    ]},
+    {"type": "checklist", "title": "Tag Checklist", "content": [
+      "Primary keyword included?",
+      "Variations added?",
+      "Broad category tags?",
+      "All tags relevant?",
+      "Under 500 characters?",
+      "Series tags consistent?",
+      "Channel name included?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How important are tags?", "answer": "Minor factor. Title, thumbnail, and description matter more. Tags help with misspellings and variations. Don't obsess over them."},
+    {"question": "How many tags to use?", "answer": "5-15 relevant tags is reasonable. Quality over quantity. YouTube limit is 500 characters total."},
+    {"question": "Can I see competitor tags?", "answer": "Not directly in YouTube. Tools like TubeBuddy, vidIQ show them. Or view page source and search 'keywords'."},
+    {"question": "Do hashtags count as tags?", "answer": "Different feature. Hashtags show on video page, tags don't. Both can help discovery. Use both."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

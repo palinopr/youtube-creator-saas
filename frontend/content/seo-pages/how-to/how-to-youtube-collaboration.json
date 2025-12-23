@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-collaboration",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Collaborate on YouTube 2025: Creator Partnerships Guide",
+    "description": "Master YouTube collaborations. Find partners, plan content, and grow together.",
+    "keywords": ["youtube collaboration", "youtube collab", "youtube partnership", "collaborate youtube", "creator collaboration"]
+  },
+  "hero": {
+    "badge": "Collaborations",
+    "headline": "How to Collaborate on YouTube",
+    "subheadline": "Cross-pollinate audiences. Grow together through strategic partnerships.",
+    "primaryKeyword": "youtube collaboration"
+  },
+  "sections": [
+    {"type": "intro", "content": "Collaborations expose your channel to new audiences who already trust the recommending creator. Done right, both channels grow. Done wrong, it's wasted effort. Here's how to find partners, plan effective collaborations, and maximize mutual benefit."},
+    {"type": "features", "title": "Collaboration Types", "content": [
+      {"icon": "users", "title": "Guest Appearances", "description": "Feature on each other's channels. Each creates for their audience."},
+      {"icon": "video", "title": "Co-Created Content", "description": "Make content together. One video or series. Shared effort."},
+      {"icon": "message-circle", "title": "Shoutouts/Mentions", "description": "Lower commitment. Recommend each other. Builds relationships."}
+    ]},
+    {"type": "steps", "title": "Finding Partners", "content": [
+      "Identify channels with similar audience, not competitors",
+      "Look for similar subscriber count (within 2-3x)",
+      "Engage genuinely on their content first",
+      "Reach out with specific, mutually beneficial idea",
+      "Start small—shoutout before big production",
+      "Build relationship before pitching",
+      "Be professional and reliable"
+    ]},
+    {"type": "features", "title": "Collaboration Planning", "content": [
+      {"icon": "calendar", "title": "Coordinate Uploads", "description": "Release at same time or link videos. Cross-promotion maximum."},
+      {"icon": "clipboard", "title": "Clear Roles", "description": "Who does what? Editing, hosting, scripting. Avoid confusion."},
+      {"icon": "trending-up", "title": "Mutual Benefit", "description": "Both channels should gain. Don't exploit size differences."}
+    ]},
+    {"type": "benefits", "title": "Collaboration Best Practices", "content": [
+      "Similar but not identical audiences",
+      "Complementary skills or perspectives",
+      "Clear communication throughout",
+      "Both promote enthusiastically",
+      "Give credit generously",
+      "Be reliable and professional",
+      "Follow up and maintain relationship"
+    ]},
+    {"type": "checklist", "title": "Collaboration Checklist", "content": [
+      "Partner audience overlaps but differs?",
+      "Similar channel size?",
+      "Content idea benefits both?",
+      "Roles clearly defined?",
+      "Upload timing coordinated?",
+      "Promotion plan agreed?",
+      "Follow-up scheduled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to approach creators for collab?", "answer": "Engage first. Then DM with specific idea, not generic request. Show you know their content. Make it easy to say yes."},
+    {"question": "What if they're bigger than me?", "answer": "Bring unique value—expertise, audience angle, production skills. Big creators collaborate with smaller if value is clear."},
+    {"question": "How many collabs should I do?", "answer": "Quality over quantity. One great collab beats many mediocre ones. Build genuine relationships, not transactional partnerships."},
+    {"question": "Do collabs actually help growth?", "answer": "Yes, when audiences overlap appropriately. New viewers from trusted recommendation. One of best growth strategies available."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

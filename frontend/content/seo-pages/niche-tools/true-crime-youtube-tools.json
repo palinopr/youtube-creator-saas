@@ -1,0 +1,63 @@
+{
+  "slug": "true-crime-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best True Crime YouTube Tools 2025: Documentary Creator Equipment",
+    "description": "Top tools for true crime YouTube channels. Research, narration, and production equipment.",
+    "keywords": ["true crime youtube tools", "crime documentary youtube", "true crime channel", "crime content creator", "true crime equipment"]
+  },
+  "hero": {
+    "badge": "True Crime Tools",
+    "headline": "Best True Crime YouTube Tools 2025",
+    "subheadline": "Tell important stories responsibly. Tools for true crime creators.",
+    "primaryKeyword": "true crime youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "True crime content requires careful research, sensitive storytelling, and professional presentation. The genre demands accuracy, respect for victims, and engaging narrative. Here's what responsible true crime creators use to tell these stories well."},
+    {"type": "features", "title": "Research Tools", "content": [
+      {"icon": "search", "title": "Court Records Access", "description": "PACER, state court systems. Primary source documents."},
+      {"icon": "file-text", "title": "Document Organization", "description": "Notion, Scrivener. Organize complex case timelines."},
+      {"icon": "database", "title": "News Archives", "description": "Newspapers.com, local archives. Contemporary coverage adds depth."}
+    ]},
+    {"type": "features", "title": "Production Equipment", "content": [
+      {"icon": "mic", "title": "Narration Microphone", "description": "Clear, intimate voice. Shure SM7B, Rode NT1. Audio carries the content."},
+      {"icon": "film", "title": "Editing Software", "description": "Premiere Pro, DaVinci Resolve. Timeline-based storytelling."},
+      {"icon": "music", "title": "Atmospheric Music", "description": "Tension-building tracks. Epidemic Sound, Artlist suspense collections."}
+    ]},
+    {"type": "features", "title": "Visual Elements", "content": [
+      {"icon": "map", "title": "Timeline Graphics", "description": "After Effects, Canva. Visualize case chronology."},
+      {"icon": "image", "title": "Photo Resources", "description": "Public domain, licensed images. Never use unauthorized victim photos."},
+      {"icon": "tv", "title": "Court Footage", "description": "Public court recordings where available. Adds authenticity."}
+    ]},
+    {"type": "benefits", "title": "True Crime Ethics", "content": [
+      "Victims first—treat with dignity",
+      "Accuracy over drama",
+      "Cite sources, show your work",
+      "Don't sensationalize tragedy",
+      "Respect families still grieving",
+      "Avoid speculation presented as fact",
+      "Consider impact of content"
+    ]},
+    {"type": "checklist", "title": "True Crime Video Checklist", "content": [
+      "Facts verified from primary sources?",
+      "Victims treated respectfully?",
+      "Sources cited in description?",
+      "Speculation clearly labeled?",
+      "Timeline accurate?",
+      "Music appropriate not sensational?",
+      "Legal review if needed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I cover any case?", "answer": "Legally, usually yes for public cases. Ethically, consider ongoing investigations, victim families, and your responsibility. Some cases shouldn't be entertainment."},
+    {"question": "How to find case information?", "answer": "Court records (PACER, state systems), news archives, public documents. Be skeptical of secondary sources. Primary documents whenever possible."},
+    {"question": "Do I need to show my face?", "answer": "No—many successful true crime channels are narration-only with documents and images. Format depends on your style. Either works."},
+    {"question": "How to handle sensitive content?", "answer": "Content warnings when needed. Don't show graphic images. Focus on story, not gore. Monetization may be limited—prioritize responsibility over revenue."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "true-crime"
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "fishing-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Fishing YouTube Tools 2025: Angler Video Equipment Guide",
+    "description": "Top tools for fishing YouTube channels. Waterproof equipment for outdoor content.",
+    "keywords": ["fishing youtube tools", "fishing channel equipment", "angler youtube", "fishing video gear", "outdoor fishing content"]
+  },
+  "hero": {
+    "badge": "Fishing Tools",
+    "headline": "Best Fishing YouTube Tools 2025",
+    "subheadline": "Capture the catch. Waterproof gear for fishing content creators.",
+    "primaryKeyword": "fishing youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Fishing content faces unique challenges—water everywhere, unpredictable action, and often solo filming. You need waterproof equipment, quick-deploy capability, and setups that work when both hands are holding a rod. Here's what successful fishing YouTubers use."},
+    {"type": "features", "title": "Camera Equipment", "content": [
+      {"icon": "camera", "title": "GoPro Hero 12", "description": "Waterproof, compact, versatile mounting. Fishing essential."},
+      {"icon": "video", "title": "Insta360 X4", "description": "360° capture. Reframe shots later. Never miss action."},
+      {"icon": "smartphone", "title": "Waterproof Phone Case", "description": "Catalyst, LifeProof. Phone filming backup."}
+    ]},
+    {"type": "features", "title": "Mounting Solutions", "content": [
+      {"icon": "anchor", "title": "Boat Mounts", "description": "RAM Mounts, Railblaza. Secure to any surface."},
+      {"icon": "user", "title": "Chest/Head Mount", "description": "POV fishing action. Hands-free capture."},
+      {"icon": "move", "title": "Flexible Tripod", "description": "Wrap around rod holder, rails. Adapt anywhere."}
+    ]},
+    {"type": "features", "title": "Audio Solutions", "content": [
+      {"icon": "mic", "title": "Wireless Lav", "description": "DJI Mic 2 or Rode Wireless. Wind-resistant covers essential."},
+      {"icon": "volume-2", "title": "Voiceover Post", "description": "Record narration at home. Cleaner than field audio."},
+      {"icon": "wind", "title": "Wind Protection", "description": "Deadcat windscreens for outdoor mics."}
+    ]},
+    {"type": "benefits", "title": "Fishing Content Tips", "content": [
+      "Always have camera rolling before cast",
+      "Multiple angles capture action better",
+      "Morning golden hour for best light",
+      "Show location beauty, not just fish",
+      "Teach techniques for educational value",
+      "Catch-and-release shown properly",
+      "Safety demonstrations included"
+    ]},
+    {"type": "checklist", "title": "Fishing Shoot Checklist", "content": [
+      "Cameras waterproofed/protected?",
+      "All mounts secure?",
+      "Extra batteries/storage?",
+      "Wind protection on mics?",
+      "Camera rolling before action?",
+      "Multiple angles set up?",
+      "Backup recording enabled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for fishing YouTube?", "answer": "GoPro is the standard—waterproof, mountable everywhere, excellent quality. Add Insta360 for 360° flexibility. Higher-end mirrorless for beauty shots from shore."},
+    {"question": "How to protect equipment on water?", "answer": "GoPro/Insta360 are naturally waterproof. Regular cameras need rain covers and dry bags. Floating straps prevent loss. Dry equipment immediately after use."},
+    {"question": "How to film solo while fishing?", "answer": "Static mounts with continuous recording. 360 cameras let you reframe later. Start recording before fishing. Edit down to interesting moments."},
+    {"question": "Best way to capture the catch?", "answer": "Chest mount for POV of fight. Static wide shot for landing. GoPro on rod or hat for unique angles. Multiple cameras increase your options."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "fishing"
+}

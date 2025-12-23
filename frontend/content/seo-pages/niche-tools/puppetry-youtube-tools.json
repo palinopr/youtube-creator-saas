@@ -1,0 +1,66 @@
+{
+  "slug": "puppetry-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Puppetry YouTube Tools 2025: Puppet Channel Equipment",
+    "description": "Top tools for puppetry YouTube channels. Film puppet shows and tutorials.",
+    "keywords": ["puppetry youtube tools", "puppet channel equipment", "puppet video", "ventriloquist youtube", "puppet content"]
+  },
+  "hero": {
+    "badge": "Puppetry Tools",
+    "headline": "Best Puppetry YouTube Tools 2025",
+    "subheadline": "Bring characters to life. Gear for puppet creators.",
+    "primaryKeyword": "puppetry youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Puppetry on YouTube combines performance with production. Whether hand puppets, marionettes, or ventriloquism, successful puppet content requires careful staging, lighting, and camera work to create illusion. Here's what puppet YouTubers use to bring characters to life."},
+    {"type": "features", "title": "Stage Setup", "content": [
+      {"icon": "layers", "title": "Puppet Stage", "description": "Frame to hide puppeteer."},
+      {"icon": "image", "title": "Backdrop Options", "description": "Sets and scenic backgrounds."},
+      {"icon": "video", "title": "Camera Height", "description": "Eye level with puppet."},
+      {"icon": "move", "title": "Monitor Positioning", "description": "See what camera sees."}
+    ]},
+    {"type": "features", "title": "Lighting for Puppets", "content": [
+      {"icon": "sun", "title": "Front Light", "description": "Illuminate puppet clearly."},
+      {"icon": "layers", "title": "Background Light", "description": "Separate puppet from set."},
+      {"icon": "moon", "title": "Mood Lighting", "description": "Drama and atmosphere."},
+      {"icon": "eye-off", "title": "Hide Shadows", "description": "Puppeteer shadow control."}
+    ]},
+    {"type": "features", "title": "Audio Considerations", "content": [
+      {"icon": "mic", "title": "Overhead Boom", "description": "Capture voice clearly."},
+      {"icon": "headphones", "title": "Monitor Mix", "description": "Hear your own timing."},
+      {"icon": "music", "title": "Sound Effects", "description": "Add life to performances."},
+      {"icon": "volume-2", "title": "Voice Characterization", "description": "Distinct puppet voices."}
+    ]},
+    {"type": "benefits", "title": "Puppet Content Tips", "content": [
+      "Eye contact between puppet and camera",
+      "Subtle movements keep illusion alive",
+      "Distinct voices for each character",
+      "Behind-the-scenes content engages",
+      "Tutorial content for aspiring puppeteers",
+      "Short sketches work well for algorithms",
+      "Kids content vs adult comedy—know your audience"
+    ]},
+    {"type": "checklist", "title": "Puppet Video Checklist", "content": [
+      "Puppeteer hidden from camera?",
+      "Lighting on puppet not puppeteer?",
+      "Camera at puppet eye level?",
+      "Monitor visible during performance?",
+      "Audio capturing clearly?",
+      "Puppeteer shadows controlled?",
+      "Performance rehearsed?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to hide the puppeteer?", "answer": "Puppet stage with curtain is traditional. Camera angle looking up at puppet works. Green screen can help in post. Black backdrop with dark clothing. Plan shots to naturally conceal."},
+    {"question": "Best camera angle for puppets?", "answer": "Eye level with puppet creates connection. Slightly below looking up is classic Muppet style. Monitor essential so you can see what camera sees. Test multiple angles for your setup."},
+    {"question": "One person or team?", "answer": "Solo possible but challenging—performance while monitoring camera. Team helps: puppeteer focuses on performance, camera operator handles technical. Start solo, add help as channel grows."},
+    {"question": "What puppet content works?", "answer": "Comedy sketches with distinct characters. Kids content for educational/entertainment (huge audience). Behind-the-scenes puppet making. Tutorial content for aspiring puppeteers. Choose audience and commit."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "puppetry"
+}

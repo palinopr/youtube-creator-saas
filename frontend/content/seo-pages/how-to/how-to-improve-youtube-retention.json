@@ -1,0 +1,62 @@
+{
+  "slug": "how-to-improve-youtube-retention",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Improve YouTube Retention 2025: Keep Viewers Watching",
+    "description": "Boost your YouTube watch time with proven retention strategies. Hooks, pacing, and editing techniques that stop viewers leaving.",
+    "keywords": ["youtube retention", "improve watch time", "youtube audience retention", "keep viewers watching", "youtube retention tips"]
+  },
+  "hero": {
+    "badge": "Audience Retention",
+    "headline": "How to Improve YouTube Audience Retention in 2025",
+    "subheadline": "Keep viewers watching longer with strategic content structure and editing techniques.",
+    "primaryKeyword": "improve youtube retention"
+  },
+  "sections": [
+    {"type": "intro", "content": "Retention is the most important metric for YouTube success. Videos that keep viewers watching get promoted by the algorithm. Every percentage point of improvement means more recommendations, more views, more growth. This guide covers proven strategies to keep viewers engaged from start to finish."},
+    {"type": "features", "title": "Retention Killers to Avoid", "content": [
+      {"icon": "x-circle", "title": "Slow Introductions", "description": "Long logos, channel introductions, and preamble. Viewers want value immediately."},
+      {"icon": "clock", "title": "Padding for Length", "description": "Stretching content doesn't help. Viewers leave, hurting retention and recommendations."},
+      {"icon": "yawn", "title": "Flat Energy Sections", "description": "Long stretches without variety cause drop-off. Vary pacing and energy throughout."}
+    ]},
+    {"type": "steps", "title": "Retention Strategies", "content": [
+      "Hook in the first 5-10 seconds (not 30)",
+      "Preview what's coming to create anticipation",
+      "Use pattern interrupts every 30-60 seconds",
+      "Cut ruthlessly—remove anything boring",
+      "Add visual variety (B-roll, graphics, zooms)",
+      "Use open loops to create curiosity",
+      "Deliver on promises made in the hook"
+    ]},
+    {"type": "benefits", "title": "Pattern Interrupts That Work", "content": [
+      "Jump cuts and zoom cuts",
+      "B-roll sequences",
+      "Text overlays and graphics",
+      "Sound effects",
+      "Music changes",
+      "Topic transitions with visual cues",
+      "Quick cuts to related content"
+    ]},
+    {"type": "checklist", "title": "Retention Optimization Checklist", "content": [
+      "Value within first 10 seconds",
+      "No unnecessary introduction",
+      "Smooth transitions between sections",
+      "Pattern interrupts throughout",
+      "Energy maintained or built",
+      "No padding or filler",
+      "Satisfying conclusion",
+      "Analytics reviewed for drop-off points"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good retention rate?", "answer": "50%+ average is solid. 60%+ is excellent. New channels often see 30-40%. Focus on improvement over time rather than hitting specific numbers."},
+    {"question": "Where should I check retention?", "answer": "YouTube Studio > Analytics > Engagement > Audience retention. Look at the graph shape and identify where viewers leave. Each video teaches you something."},
+    {"question": "Does video length affect retention?", "answer": "Longer videos naturally have lower percentage retention but more total watch time. Optimal length varies by content. Don't pad short topics or cut long ones short."},
+    {"question": "How do I fix retention dips?", "answer": "Study where dips occur. Common causes: slow sections, off-topic tangents, unfulfilled promises. Edit tighter, add pattern interrupts, or restructure content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

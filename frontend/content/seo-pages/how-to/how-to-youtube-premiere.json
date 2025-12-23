@@ -1,0 +1,71 @@
+{
+  "slug": "how-to-youtube-premiere",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Premieres 2025: Complete Guide",
+    "description": "Learn to use YouTube Premieres. Schedule watch parties for new videos with live chat.",
+    "keywords": ["youtube premiere", "how to premiere youtube", "youtube premiere feature", "video premiere youtube", "premiere watch party"]
+  },
+  "hero": {
+    "badge": "Premieres",
+    "headline": "How to Use YouTube Premieres",
+    "subheadline": "Create events around your uploads. Watch parties with live chat engagement.",
+    "primaryKeyword": "youtube premiere"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Premieres let you schedule a video to go live at a specific time while hosting a watch party with live chat. It combines the polish of edited content with live stream engagement. Great for building hype and community around new videos."},
+    {"type": "steps", "title": "Setting Up a Premiere", "content": [
+      "Go to YouTube Studio",
+      "Upload your video",
+      "Fill in all video details",
+      "In Visibility, choose 'Schedule'",
+      "Check 'Set as Premiere'",
+      "Choose premiere date and time",
+      "Optionally enable countdown",
+      "Schedule your premiere"
+    ]},
+    {"type": "features", "title": "Premiere Features", "content": [
+      {"icon": "clock", "title": "Countdown", "description": "2-minute countdown before video starts. Builds anticipation."},
+      {"icon": "message-circle", "title": "Live Chat", "description": "Real-time chat during first viewing. You can participate too."},
+      {"icon": "dollar-sign", "title": "Super Chat", "description": "Viewers can send Super Chats during premiere. Monetization opportunity."}
+    ]},
+    {"type": "benefits", "title": "Why Use Premieres", "content": [
+      "Build anticipation for new content",
+      "Create shared viewing experience",
+      "Engage with audience in real-time",
+      "Enable Super Chat on pre-recorded content",
+      "Show up in Live and Upcoming sections",
+      "Send premiere notifications to subscribers",
+      "Make uploads feel like events"
+    ]},
+    {"type": "steps", "title": "Premiere Best Practices", "content": [
+      "Promote premiere time in advance",
+      "Be present in chat during premiere",
+      "Respond to Super Chats live",
+      "Use for important uploads",
+      "Don't overuse (save for special content)",
+      "Consider timezone of audience",
+      "Have chat moderation ready"
+    ]},
+    {"type": "checklist", "title": "Premiere Checklist", "content": [
+      "Video fully uploaded and processed?",
+      "Premiere time announced to audience?",
+      "You'll be available during premiere?",
+      "Chat moderation prepared?",
+      "Super Chat enabled (if monetized)?",
+      "Countdown enabled?",
+      "Social promotion scheduled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does premiere help the algorithm?", "answer": "Premieres can boost initial engagement signals—chat, likes, comments concentrated at launch. Good performance may help recommendations."},
+    {"question": "Should I premiere every video?", "answer": "No. Reserve for special content. Too frequent premieres train audience to wait, reducing casual views. Monthly or for major content."},
+    {"question": "Can I edit premiere after scheduling?", "answer": "Yes. Title, description, thumbnail can change. Can't change premiere time once scheduled—would need to cancel and reschedule."},
+    {"question": "What if I miss my own premiere?", "answer": "Video still goes live. Chat continues without you. Ideally be present, but premiere works regardless."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

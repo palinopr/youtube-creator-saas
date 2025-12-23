@@ -1,0 +1,66 @@
+{
+  "slug": "baking-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Baking YouTube Tools 2025: Bakery Channel Equipment",
+    "description": "Top tools for baking YouTube channels. Film recipes and decorating tutorials.",
+    "keywords": ["baking youtube tools", "baking channel equipment", "recipe video gear", "cake decorating youtube", "baking content"]
+  },
+  "hero": {
+    "badge": "Baking Tools",
+    "headline": "Best Baking YouTube Tools 2025",
+    "subheadline": "Share your recipes beautifully. Gear for baking creators.",
+    "primaryKeyword": "baking youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Baking content is visual comfort food—beautiful process shots, satisfying reveals, and recipes viewers can follow. Success requires clear overhead shots, good lighting for food, and setups that don't interfere with your workflow. Here's what baking YouTubers use to create mouth-watering content."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Bird's eye view. Essential for workspace."},
+      {"icon": "camera", "title": "Front Angle", "description": "Face camera for presenting. Connection."},
+      {"icon": "eye", "title": "Detail Camera", "description": "Close-ups of techniques. Decoration shots."},
+      {"icon": "smartphone", "title": "iPhone", "description": "Great colors for food. Quick setup."}
+    ]},
+    {"type": "features", "title": "Overhead Rigs", "content": [
+      {"icon": "move", "title": "C-Stand + Boom", "description": "Professional stability. Heavy duty."},
+      {"icon": "maximize", "title": "Articulating Arm", "description": "Elgato mount. Adjustable."},
+      {"icon": "grid", "title": "Wall Mount", "description": "Permanent setup. Out of way."},
+      {"icon": "box", "title": "Desktop Stand", "description": "Budget option. Phone holder."}
+    ]},
+    {"type": "features", "title": "Food Lighting", "content": [
+      {"icon": "sun", "title": "Window Light", "description": "Natural diffused. Best for food."},
+      {"icon": "zap", "title": "LED Panels", "description": "Consistent. Daylight balanced."},
+      {"icon": "circle", "title": "Diffusion", "description": "Soft light flatters food."},
+      {"icon": "minus", "title": "Fill/Bounce", "description": "Reduce harsh shadows."}
+    ]},
+    {"type": "benefits", "title": "Baking Content Tips", "content": [
+      "Mise en place before filming",
+      "Overhead essential for technique",
+      "Good lighting makes food appetizing",
+      "Clean workspace always",
+      "Show textures and details",
+      "Time-lapse for long processes",
+      "Final reveal shot matters"
+    ]},
+    {"type": "checklist", "title": "Baking Video Checklist", "content": [
+      "Ingredients prepped?",
+      "Workspace clean?",
+      "Overhead camera positioned?",
+      "Lighting consistent?",
+      "Extra ingredients for mistakes?",
+      "Timer visible if needed?",
+      "Final shot planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best overhead camera setup?", "answer": "C-stand with boom arm for heavy cameras. Elgato articulating arm for lighter setups. Wall-mounted rig if permanent studio. Key is stability—shaky overhead ruins shots."},
+    {"question": "How to light baking videos?", "answer": "Natural window light is ideal—soft, flattering for food. Large LED panels with diffusion as backup. Side light creates texture. Avoid overhead lighting that creates harsh shadows."},
+    {"question": "Filming while baking alone?", "answer": "Prep everything before. Multiple fixed cameras better than moving one. Remote triggers or continuous recording. Accept some imperfection—authenticity matters. Edit out mistakes."},
+    {"question": "Best camera for food content?", "answer": "Any camera with good color science. iPhones excellent for food colors. Sony/Canon mirrorless for professional. More important: good lighting and composition than expensive camera."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "baking"
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "skateboarding-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Skateboarding YouTube Tools 2025: Skate Video Equipment",
+    "description": "Top tools for skateboarding YouTube channels. Filming tricks and skate content.",
+    "keywords": ["skateboarding youtube tools", "skate video equipment", "skateboard filming", "skate channel", "skating youtube"]
+  },
+  "hero": {
+    "badge": "Skateboarding Tools",
+    "headline": "Best Skateboarding YouTube Tools 2025",
+    "subheadline": "Capture every trick perfectly. Tools for skate content creators.",
+    "primaryKeyword": "skateboarding youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Skateboarding videos have a distinct aesthetic—fisheye close-ups, VX1000 nostalgia, and modern 4K clarity. Whether you're making trick clips, day-in-the-life vlogs, or full parts, the right gear captures skateboarding's energy. Here's what skate YouTubers need."},
+    {"type": "features", "title": "Camera Options", "content": [
+      {"icon": "camera", "title": "Sony VX1000", "description": "Classic look. Still used for that aesthetic. Vintage."},
+      {"icon": "video", "title": "Sony A7 Series", "description": "Modern 4K. Slow-motion for trick analysis."},
+      {"icon": "zap", "title": "GoPro Hero", "description": "POV skating, mounted shots. Durable."},
+      {"icon": "smartphone", "title": "iPhone 15 Pro", "description": "Capable action mode. Always in pocket."}
+    ]},
+    {"type": "features", "title": "Signature Gear", "content": [
+      {"icon": "circle", "title": "Fisheye Lens", "description": "The skate video look. Wide angle, close follow."},
+      {"icon": "move", "title": "Death Lens", "description": "Fisheye attachment for phones. Budget option."},
+      {"icon": "video", "title": "Handle/Rig", "description": "Stable follow filming. Run with camera."},
+      {"icon": "sun", "title": "ND Filters", "description": "Control exposure outdoors. Consistent look."}
+    ]},
+    {"type": "features", "title": "Production Tools", "content": [
+      {"icon": "music", "title": "Music Licensing", "description": "Skate videos need good tracks. Artlist, Epidemic."},
+      {"icon": "film", "title": "Premiere/Resolve", "description": "Editing with multiple angles, slow-mo."},
+      {"icon": "volume-x", "title": "Location Audio", "description": "Board sounds, ambient. Part of the vibe."}
+    ]},
+    {"type": "benefits", "title": "Skate Content Tips", "content": [
+      "Fisheye follow filming is classic",
+      "Multiple angles on tricks",
+      "Board sounds add authenticity",
+      "Build local scene content",
+      "Document progression",
+      "Day-in-the-life vlogs popular",
+      "Music selection matters"
+    ]},
+    {"type": "checklist", "title": "Filming Checklist", "content": [
+      "Fisheye attached?",
+      "Batteries fully charged?",
+      "SD cards empty?",
+      "Handle rig secure?",
+      "Spot permission if needed?",
+      "Multiple angles planned?",
+      "Audio recording ambient?"
+    ]}
+  ],
+  "faq": [
+    {"question": "VX1000 vs modern camera?", "answer": "VX1000 has the classic look many love. Modern cameras offer 4K, slow-mo, easier workflow. Many creators use both—VX for aesthetic, modern for quality."},
+    {"question": "Best fisheye lens?", "answer": "Opteka 6.5mm for DSLRs. Death Lens for phones. Vintage fisheye adapters for VX. The distorted wide look defines skate videos."},
+    {"question": "How to film tricks well?", "answer": "Follow filming takes practice. Stay low, keep skater framed. Multiple attempts normal. Mix angles—fisheye follow, long lens profile, tripod wide."},
+    {"question": "Do I need a filmer?", "answer": "Helps significantly. Self-filming possible with tripod and GoPro. Community filming is how most start—film each other, share clips."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "skateboarding"
+}

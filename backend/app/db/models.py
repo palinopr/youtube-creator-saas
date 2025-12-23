@@ -466,6 +466,10 @@ class YouTubeChannel(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     last_sync_at = Column(DateTime, nullable=True)
 
+    # Channel profile (detected niche, language, content patterns)
+    # Format: {"niche": "gaming", "language": "en", "content_types": [...], "title_patterns": [...], ...}
+    channel_profile = Column(JSON, nullable=True)
+
     # Relationships
     user = relationship("User", back_populates="channels")
 
@@ -481,6 +485,7 @@ class YouTubeChannel(Base):
             "is_primary": self.is_primary,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "last_sync_at": self.last_sync_at.isoformat() if self.last_sync_at else None,
+            "channel_profile": self.channel_profile,
         }
 
 

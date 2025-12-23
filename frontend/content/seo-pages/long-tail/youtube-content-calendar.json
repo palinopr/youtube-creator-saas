@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-content-calendar",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Content Calendar 2025: Plan Your Videos",
+    "description": "Create a YouTube content calendar. Planning, templates, and consistency strategies.",
+    "keywords": ["youtube content calendar", "video content calendar", "youtube planning", "content planning youtube", "youtube schedule"]
+  },
+  "hero": {
+    "badge": "Content Planning",
+    "headline": "YouTube Content Calendar Guide",
+    "subheadline": "Plan your content systematically. Consistency beats sporadic quality.",
+    "primaryKeyword": "youtube content calendar"
+  },
+  "sections": [
+    {"type": "intro", "content": "A content calendar transforms random uploads into strategic publishing. Planning ahead reduces stress, improves consistency, and helps you batch produce efficiently. Here's how to create and maintain a YouTube content calendar."},
+    {"type": "features", "title": "Calendar Tools", "content": [
+      {"icon": "calendar", "title": "Notion", "description": "Flexible databases. Track ideas, status, publish dates. Popular with creators."},
+      {"icon": "layout", "title": "Trello", "description": "Kanban boards. Visual workflow from idea to published."},
+      {"icon": "table", "title": "Google Sheets", "description": "Simple spreadsheet. Free, shareable, works for basics."}
+    ]},
+    {"type": "steps", "title": "Building Your Calendar", "content": [
+      "Choose your publishing frequency (realistic)",
+      "Set up tracking tool (Notion, Trello, Sheets)",
+      "Brain dump all video ideas",
+      "Categorize ideas by type/series",
+      "Schedule ideas across calendar",
+      "Include production milestones",
+      "Build buffer of completed videos"
+    ]},
+    {"type": "features", "title": "What to Track", "content": [
+      {"icon": "file-text", "title": "Video Details", "description": "Title, description, keywords. Pre-plan metadata."},
+      {"icon": "list", "title": "Production Status", "description": "Idea, scripted, filmed, edited, published. Track progress."},
+      {"icon": "target", "title": "Goals", "description": "Target metrics, launch dates, promotional plans."}
+    ]},
+    {"type": "benefits", "title": "Calendar Benefits", "content": [
+      "Reduced upload day stress",
+      "Consistent publishing schedule",
+      "Strategic content planning",
+      "Better batch production",
+      "No last-minute scrambling",
+      "Seasonal content prepared early",
+      "Clear production priorities"
+    ]},
+    {"type": "checklist", "title": "Content Calendar Checklist", "content": [
+      "Realistic publishing frequency set?",
+      "Tool chosen and configured?",
+      "Ideas backlog created?",
+      "Content categorized?",
+      "Production milestones tracked?",
+      "Buffer videos planned?",
+      "Calendar reviewed weekly?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How far ahead should I plan?", "answer": "4-8 weeks ideal. Enough time to batch produce without being locked to stale ideas. Review and adjust weekly."},
+    {"question": "What if I don't feel like making a planned video?", "answer": "Calendar is a guide, not a prison. Swap videos, adjust schedule. The point is reducing chaos, not eliminating flexibility."},
+    {"question": "Best frequency for new channels?", "answer": "What you can sustain. Weekly is good balance. Consistency matters more than frequency. Don't burn out."},
+    {"question": "Should I batch produce?", "answer": "Highly recommended. Film multiple videos in one session. Edit in batches. More efficient, better consistency, less setup time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

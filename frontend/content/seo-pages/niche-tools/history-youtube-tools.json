@@ -1,0 +1,72 @@
+{
+  "slug": "history-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best History YouTube Tools 2025: Documentary Creator Equipment",
+    "description": "Essential tools for history YouTube channels. Research, visuals, and production for educational content.",
+    "keywords": ["history youtube tools", "documentary youtube equipment", "history channel creator", "educational youtube gear", "history content creation"]
+  },
+  "hero": {
+    "badge": "History Content",
+    "headline": "Essential Tools for History YouTube Creators",
+    "subheadline": "Tell stories of the past. Research, visuals, and narration for history content.",
+    "primaryKeyword": "history youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "History content requires strong research, compelling visuals for events you can't film, and engaging narration. Whether you cover ancient civilizations, modern history, or niche historical topics, these tools help create educational content that captivates viewers."},
+    {"type": "features", "title": "Visual Storytelling", "content": [
+      {"icon": "image", "title": "Historical Maps", "description": "Animated maps show troop movements, border changes, migrations."},
+      {"icon": "film", "title": "Stock Footage Archives", "description": "Archive.org, Getty, historical film libraries for authentic footage."},
+      {"icon": "layers", "title": "Motion Graphics", "description": "Animate timelines, family trees, statistics. After Effects or similar."}
+    ]},
+    {"type": "features", "title": "Research Tools", "content": [
+      {"icon": "book", "title": "Academic Databases", "description": "JSTOR, Google Scholar for primary sources and research papers."},
+      {"icon": "globe", "title": "Digital Archives", "description": "National archives, museum collections, digitized documents."},
+      {"icon": "file-text", "title": "Citation Management", "description": "Zotero, Notion for organizing sources. Credibility matters."}
+    ]},
+    {"type": "features", "title": "Production Setup", "content": [
+      {"icon": "mic", "title": "Quality Narration Mic", "description": "Clear voice essential. Condenser mic, treated room."},
+      {"icon": "video", "title": "Simple Talking Head", "description": "Face-to-camera builds trust. Don't over-produce."},
+      {"icon": "music", "title": "Period Music", "description": "Era-appropriate background music. Sets the mood."}
+    ]},
+    {"type": "steps", "title": "History Video Production", "content": [
+      "Research thoroughly with multiple sources",
+      "Create clear narrative structure",
+      "Script for spoken word (conversational)",
+      "Gather visual assets early",
+      "Record narration in quiet space",
+      "Use maps and graphics for context",
+      "Cite sources in description"
+    ]},
+    {"type": "benefits", "title": "History Content Types", "content": [
+      "Event deep dives",
+      "Biographical profiles",
+      "Era overviews",
+      "Myth vs reality videos",
+      "Lesser-known stories",
+      "Current events in historical context",
+      "Interactive timelines"
+    ]},
+    {"type": "checklist", "title": "History Creator Essentials", "content": [
+      "Research organization system",
+      "Quality narration microphone",
+      "Access to stock footage/images",
+      "Motion graphics capability",
+      "Map animation tool",
+      "Script writing workflow",
+      "Source citation template"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I get historical footage?", "answer": "Archive.org has free public domain footage. Getty, Shutterstock for licensed content. National archives for specific countries. Some require attribution."},
+    {"question": "Do I need to show my face?", "answer": "Not required. Many successful history channels are voiceover-only. But face builds connection. Test what works for your content."},
+    {"question": "How do I make animated maps?", "answer": "After Effects is common. MapChart.net for quick maps. Some use PowerPoint animations. Quality maps significantly boost production value."},
+    {"question": "How to avoid copyright issues?", "answer": "Use public domain images (check date/jurisdiction). License stock footage. Fair use for commentary is limited—don't rely on it heavily."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "history"
+}

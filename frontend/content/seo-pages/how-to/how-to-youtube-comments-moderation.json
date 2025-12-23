@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-comments-moderation",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Moderate YouTube Comments 2025: Comment Settings Guide",
+    "description": "Manage YouTube comments effectively. Moderation settings, filters, and community management.",
+    "keywords": ["youtube comments moderation", "moderate youtube comments", "youtube comment settings", "youtube spam comments", "youtube community management"]
+  },
+  "hero": {
+    "badge": "Comment Moderation",
+    "headline": "How to Moderate YouTube Comments",
+    "subheadline": "Build healthy community. Control spam and negativity effectively.",
+    "primaryKeyword": "youtube comments moderation"
+  },
+  "sections": [
+    {"type": "intro", "content": "Comment moderation protects your community and your sanity. YouTube provides powerful tools to filter spam, hold comments for review, and block problematic users. Proper moderation creates a welcoming space while reducing the toxicity that can burn out creators."},
+    {"type": "features", "title": "Moderation Options", "content": [
+      {"icon": "shield", "title": "Hold for Review", "description": "All comments require approval before appearing publicly."},
+      {"icon": "filter", "title": "Increase Strictness", "description": "Let YouTube auto-hold likely spam and inappropriate comments."},
+      {"icon": "slash", "title": "Block Words", "description": "Custom list of words that auto-hold or hide comments."}
+    ]},
+    {"type": "steps", "title": "Setting Up Moderation", "content": [
+      "Go to YouTube Studio",
+      "Click 'Settings' (gear icon)",
+      "Select 'Community'",
+      "Navigate to 'Defaults' tab",
+      "Choose moderation level",
+      "Add blocked words to filter",
+      "Set hidden users if needed",
+      "Configure approved users list",
+      "Save changes"
+    ]},
+    {"type": "features", "title": "Advanced Moderation Tools", "content": [
+      {"icon": "users", "title": "Moderators", "description": "Assign trusted users to help moderate. They can approve/remove comments."},
+      {"icon": "eye-off", "title": "Hidden Users", "description": "Ban specific users. Their comments only visible to them."},
+      {"icon": "check-circle", "title": "Approved Users", "description": "Whitelist trusted commenters. Their comments auto-approved."},
+      {"icon": "link", "title": "Link Blocking", "description": "Auto-hold comments with links. Common spam vector."}
+    ]},
+    {"type": "benefits", "title": "Moderation Best Practices", "content": [
+      "Review held comments daily",
+      "Respond to genuine comments",
+      "Don't feed trolls—just remove",
+      "Block repeated offenders",
+      "Pin positive/valuable comments",
+      "Create community guidelines",
+      "Use moderators for large channels"
+    ]},
+    {"type": "checklist", "title": "Moderation Setup Checklist", "content": [
+      "Moderation level appropriate?",
+      "Blocked words list updated?",
+      "Link comments held?",
+      "Moderators assigned (if needed)?",
+      "Reviewing held comments regularly?",
+      "Community guidelines clear?",
+      "Responding to good comments?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I hold all comments for review?", "answer": "Only for very sensitive content or small channels wanting full control. Otherwise, increased strictness is enough. Full review becomes unmanageable at scale."},
+    {"question": "How to handle hate comments?", "answer": "Remove and optionally hide user. Don't respond—it encourages more. Report if severely violating. Focus energy on positive community."},
+    {"question": "Can viewers see if they're hidden?", "answer": "No—hidden users see their own comments normally. They don't know they're hidden. It's shadow-ban functionality."},
+    {"question": "How many moderators can I have?", "answer": "YouTube allows multiple moderators. Add trusted community members. They can approve/remove comments but not access your channel settings."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

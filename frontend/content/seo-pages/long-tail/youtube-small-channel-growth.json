@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-small-channel-growth",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Small Channel Growth 2025: Strategies for New Creators",
+    "description": "Grow a small YouTube channel from scratch. Proven strategies for new and small creators.",
+    "keywords": ["small youtube channel", "grow small channel", "new youtube channel", "small youtuber growth", "youtube beginner growth"]
+  },
+  "hero": {
+    "badge": "Small Channel Growth",
+    "headline": "YouTube Small Channel Growth Guide",
+    "subheadline": "From zero to momentum. Strategies that actually work for new creators.",
+    "primaryKeyword": "small youtube channel growth"
+  },
+  "sections": [
+    {"type": "intro", "content": "Growing a small YouTube channel is the hardest phase—you're competing against established creators with no momentum. But small channels have advantages too: flexibility, authenticity, and the ability to niche down hard. Here's how to break through."},
+    {"type": "features", "title": "Small Channel Advantages", "content": [
+      {"icon": "zap", "title": "Niche Flexibility", "description": "Can target underserved topics big channels ignore."},
+      {"icon": "heart", "title": "Authentic Connection", "description": "Can respond to every comment. Build genuine community."},
+      {"icon": "refresh-cw", "title": "Fast Iteration", "description": "Can experiment freely. Pivot without audience backlash."}
+    ]},
+    {"type": "steps", "title": "Growth Strategy for Small Channels", "content": [
+      "Pick specific niche—smaller is better initially",
+      "Study what works for channels your size",
+      "Target search-friendly topics first",
+      "Create 30+ videos before expecting traction",
+      "Analyze every video for improvement",
+      "Engage genuinely in your niche community",
+      "Collaborate with similar-sized channels",
+      "Post consistently (weekly minimum)",
+      "Improve thumbnails and titles constantly"
+    ]},
+    {"type": "features", "title": "What to Focus On", "content": [
+      {"icon": "search", "title": "Search Traffic", "description": "New channels win in search before browse. Target keywords."},
+      {"icon": "target", "title": "Niche Authority", "description": "Become THE channel for your specific topic. Go deep."},
+      {"icon": "bar-chart", "title": "Improvement Rate", "description": "Each video should be better. Skills compound."},
+      {"icon": "users", "title": "Community Building", "description": "100 engaged fans beat 10,000 passive subscribers."}
+    ]},
+    {"type": "benefits", "title": "Growth Accelerators", "content": [
+      "Searchable content for passive discovery",
+      "Shorts for reach, long-form for depth",
+      "Consistent upload schedule",
+      "Community engagement",
+      "Cross-platform promotion",
+      "Collaboration with peers",
+      "Patient persistence—it takes time"
+    ]},
+    {"type": "checklist", "title": "Small Channel Growth Checklist", "content": [
+      "Niche clearly defined?",
+      "Targeting searchable topics?",
+      "Uploading consistently?",
+      "Responding to comments?",
+      "Analyzing performance?",
+      "Improving each video?",
+      "Engaging in community?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long until I see growth?", "answer": "Varies wildly—3 months to 2+ years for meaningful traction. Focus on improvement, not timeline. Consistency and quality eventually compound."},
+    {"question": "Should I do Shorts?", "answer": "Yes for reach, but don't rely solely on them. Shorts subscribers often don't watch long-form. Use Shorts to attract, long-form to convert."},
+    {"question": "Is my niche too small?", "answer": "Probably not. Small niches are easier to dominate. Better to be #1 in tiny niche than #10,000 in huge one. Expand later."},
+    {"question": "When should I quit my day job?", "answer": "Not until you have 6+ months of living expenses saved from YouTube. Monetization takes time. Keep stable income while building."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

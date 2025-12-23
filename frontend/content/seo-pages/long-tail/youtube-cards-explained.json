@@ -1,0 +1,62 @@
+{
+  "slug": "youtube-cards-explained",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Cards Explained 2025: How to Use Info Cards",
+    "description": "Master YouTube cards to keep viewers watching. Types, placement timing, and best practices for info cards.",
+    "keywords": ["youtube cards", "info cards youtube", "youtube cards tutorial", "add cards youtube", "video cards"]
+  },
+  "hero": {
+    "badge": "YouTube Cards",
+    "headline": "YouTube Cards: Keep Viewers Engaged",
+    "subheadline": "Interactive elements that link to more content. How to use cards effectively.",
+    "primaryKeyword": "youtube cards"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube cards are interactive elements that appear during your video. They can link to other videos, playlists, channels, or polls. Used strategically, cards keep viewers in your content ecosystem and boost session time. Here's how to use them effectively."},
+    {"type": "features", "title": "Types of YouTube Cards", "content": [
+      {"icon": "video", "title": "Video Cards", "description": "Link to specific videos. Point viewers to related content."},
+      {"icon": "list", "title": "Playlist Cards", "description": "Link to playlists. Keep viewers watching your content longer."},
+      {"icon": "bar-chart-2", "title": "Poll Cards", "description": "Quick surveys during video. Boost engagement, get feedback."}
+    ]},
+    {"type": "steps", "title": "How to Add Cards", "content": [
+      "Open YouTube Studio",
+      "Select video to edit",
+      "Click 'Editor' in left menu",
+      "Click 'Cards' section",
+      "Select card type",
+      "Choose timing (when card appears)",
+      "Add custom message",
+      "Save changes"
+    ]},
+    {"type": "benefits", "title": "Card Placement Best Practices", "content": [
+      "Place at relevant moments (not random)",
+      "Time when you mention related content",
+      "Avoid first 30 seconds",
+      "Don't overlap with other elements",
+      "Space cards throughout video",
+      "Maximum 5 cards per video",
+      "Match card to verbal call-out"
+    ]},
+    {"type": "checklist", "title": "Card Strategy Checklist", "content": [
+      "Cards link to relevant content?",
+      "Timing matches verbal mentions?",
+      "Not placed during key moments?",
+      "Custom text is compelling?",
+      "Cards don't block important visuals?",
+      "Using less than 5 cards?",
+      "Tested on mobile display?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do cards hurt retention?", "answer": "Can if viewers click away. But keeping them in your content is better than leaving YouTube. Strategic cards improve session time."},
+    {"question": "What's better: cards or end screens?", "answer": "Both serve different purposes. Cards during video for relevant moments. End screens for subscription and next video. Use both."},
+    {"question": "When should I add poll cards?", "answer": "When asking viewers opinions. When you want engagement boost. When gathering content ideas. Don't overuse—one poll per video maximum."},
+    {"question": "Can I see card performance?", "answer": "Yes. YouTube Studio shows card clicks and CTR per card. Analyze which cards perform best and learn from patterns."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

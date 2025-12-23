@@ -1,0 +1,66 @@
+{
+  "slug": "miniature-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Miniature YouTube Tools 2025: Mini Painting Channel Equipment",
+    "description": "Top tools for miniature painting YouTube channels. Film tiny details beautifully.",
+    "keywords": ["miniature youtube tools", "mini painting channel", "warhammer youtube gear", "miniature painting video", "tabletop hobby"]
+  },
+  "hero": {
+    "badge": "Miniature Tools",
+    "headline": "Best Miniature YouTube Tools 2025",
+    "subheadline": "Capture tiny details. Gear for miniature painting creators.",
+    "primaryKeyword": "miniature youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Miniature painting content showcases incredibly detailed work at tiny scales—28mm warriors, terrain pieces, dioramas. Viewers need to see brush strokes on faces and subtle blending. This demands specialized macro photography, excellent lighting, and stable filming. Here's what successful mini painters use."},
+    {"type": "features", "title": "Camera Systems", "content": [
+      {"icon": "camera", "title": "Macro Lens", "description": "60-100mm macro. Fill frame with miniature."},
+      {"icon": "eye", "title": "Extension Tubes", "description": "Budget macro solution. Add to existing lens."},
+      {"icon": "video", "title": "Sony A6400", "description": "Popular choice. Good video autofocus."},
+      {"icon": "smartphone", "title": "Phone Macro", "description": "Clip-on macro. Quick shots."}
+    ]},
+    {"type": "features", "title": "Lighting Setup", "content": [
+      {"icon": "sun", "title": "Daylight LEDs", "description": "5500K for color accuracy. Essential."},
+      {"icon": "circle", "title": "Light Box/Tent", "description": "Diffused even light. No harsh shadows."},
+      {"icon": "layers", "title": "Multiple Sources", "description": "Front + sides. Reduce shadows in details."},
+      {"icon": "sliders", "title": "Dimmable", "description": "Adjust for metallic, NMM, different effects."}
+    ]},
+    {"type": "features", "title": "Filming Essentials", "content": [
+      {"icon": "move", "title": "Copy Stand", "description": "Rock-solid stability for overhead."},
+      {"icon": "maximize", "title": "Tripod + Head", "description": "Precise positioning. Macro magnifies shake."},
+      {"icon": "grid", "title": "Focus Rail", "description": "Micro adjustments for focus stacking."},
+      {"icon": "image", "title": "Backdrop", "description": "Neutral gray or gradient. Focus on mini."}
+    ]},
+    {"type": "benefits", "title": "Mini Content Tips", "content": [
+      "Good lighting reveals detail you painted",
+      "Stability critical—tripod essential",
+      "Show work at different angles",
+      "Before/after comparisons effective",
+      "Time-lapse full paint sessions",
+      "Macro reveals technique",
+      "Multiple minis show consistency"
+    ]},
+    {"type": "checklist", "title": "Mini Video Checklist", "content": [
+      "Lighting even, no hot spots?",
+      "Camera stable on tripod?",
+      "Focus sharp on details?",
+      "Colors accurate to real model?",
+      "Multiple angles captured?",
+      "B-roll of process filmed?",
+      "Final reveal shot impressive?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best macro lens for miniatures?", "answer": "60mm or 90mm macro lenses popular. Sony 90mm, Canon 100mm excellent. Even kit lens with extension tubes works. True 1:1 macro ratio ideal for 28mm scale."},
+    {"question": "How to light metallic paint?", "answer": "Larger light sources reduce harsh reflections. Light tents work well. Experiment with angles—metallic reflects differently. Some creators prefer controlled single source for NMM."},
+    {"question": "Filming painting process?", "answer": "Overhead camera for painting. Side angle for holding mini. Time-lapse long sessions. Real-time for technique explanations. Multiple camera angles add production value."},
+    {"question": "Focus stacking for photos?", "answer": "Multiple images at different focus points, combined in software. Helicon Focus, Photoshop work. Critical for final showcase shots where entire mini must be sharp. Less relevant for video."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "miniature"
+}

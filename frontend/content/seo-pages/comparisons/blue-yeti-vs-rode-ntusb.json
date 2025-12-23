@@ -1,0 +1,65 @@
+{
+  "slug": "blue-yeti-vs-rode-ntusb",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Blue Yeti vs Rode NT-USB 2025: Best USB Microphone",
+    "description": "Compare Blue Yeti and Rode NT-USB microphones for YouTube. Sound quality, features, and which USB mic is right for you.",
+    "keywords": ["blue yeti vs rode nt-usb", "best usb microphone", "yeti vs rode", "usb mic comparison", "youtube microphone"]
+  },
+  "hero": {
+    "badge": "USB Microphones",
+    "headline": "Blue Yeti vs Rode NT-USB: Which USB Mic Should You Buy?",
+    "subheadline": "Two popular USB microphones with different strengths. Find your perfect match.",
+    "primaryKeyword": "blue yeti vs rode nt-usb"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Blue Yeti and Rode NT-USB are two of the most popular USB microphones for YouTube creators. The Yeti offers versatility with multiple polar patterns, while the Rode delivers studio-quality sound in a focused package. This comparison helps you choose."},
+    {"type": "comparison", "title": "Microphone Comparison", "content": [
+      {"feature": "Price", "toolA": "$130", "toolB": "$169", "tubeGrow": "N/A"},
+      {"feature": "Polar Patterns", "toolA": "4 patterns", "toolB": "Cardioid only", "tubeGrow": "N/A"},
+      {"feature": "Bit Depth", "toolA": "16-bit", "toolB": "16-bit", "tubeGrow": "N/A"},
+      {"feature": "Sample Rate", "toolA": "48kHz", "toolB": "48kHz", "tubeGrow": "N/A"},
+      {"feature": "Headphone Jack", "toolA": "Yes", "toolB": "Yes", "tubeGrow": "N/A"},
+      {"feature": "Pop Filter Included", "toolA": false, "toolB": true, "tubeGrow": "N/A"},
+      {"feature": "Tripod Stand", "toolA": "Included", "toolB": "Included", "tubeGrow": "N/A"},
+      {"feature": "Size", "toolA": "Large", "toolB": "Compact", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Blue Yeti Advantages", "content": [
+      {"icon": "sliders", "title": "Multiple Polar Patterns", "description": "Cardioid, stereo, omnidirectional, and bidirectional. Versatile for different recording scenarios."},
+      {"icon": "dollar", "title": "Lower Price", "description": "Around $40 cheaper while still delivering quality audio for YouTube."},
+      {"icon": "zap", "title": "Instant Mute", "description": "Physical mute button on the mic for quick silencing during recordings."}
+    ]},
+    {"type": "features", "title": "Rode NT-USB Advantages", "content": [
+      {"icon": "mic", "title": "Sound Quality", "description": "Slightly warmer, more professional sound signature. Rode's audio expertise shows."},
+      {"icon": "shield", "title": "Built-in Pop Filter", "description": "Included pop filter reduces plosives without extra purchases."},
+      {"icon": "box", "title": "Compact Design", "description": "Takes up less desk space while still delivering professional results."}
+    ]},
+    {"type": "benefits", "title": "Choose Blue Yeti If", "content": [
+      "You need multiple polar patterns",
+      "Budget is a primary concern",
+      "You record podcasts with multiple people",
+      "You want a physical mute button",
+      "Versatility matters more than pure sound"
+    ]},
+    {"type": "benefits", "title": "Choose Rode NT-USB If", "content": [
+      "Sound quality is top priority",
+      "You only need cardioid pattern",
+      "You want a more compact mic",
+      "Built-in pop filter is valuable",
+      "You trust Rode's audio reputation"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which sounds better?", "answer": "The Rode NT-USB has a slightly warmer, more refined sound. The Yeti is good but can sound a bit harsh. For pure audio quality, Rode edges ahead."},
+    {"question": "Is the Yeti's size a problem?", "answer": "It's large and can dominate desk space or appear prominent on camera. If aesthetics or space matter, consider the more compact Rode."},
+    {"question": "Do I need multiple polar patterns?", "answer": "Most YouTubers only use cardioid. Multiple patterns help for interviews (bidirectional) or ambient recording (omnidirectional). If you're unsure, cardioid-only is fine."},
+    {"question": "What about the Rode NT-USB Mini?", "answer": "The NT-USB Mini is smaller and cheaper than the full NT-USB. Sound quality is close. Consider it if desk space is limited."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "blue-yeti",
+  "secondaryTool": "rode-nt-usb"
+}

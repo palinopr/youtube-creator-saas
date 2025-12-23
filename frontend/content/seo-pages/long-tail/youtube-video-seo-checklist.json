@@ -1,0 +1,92 @@
+{
+  "slug": "youtube-video-seo-checklist",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video SEO Checklist 2025: Optimize Every Upload",
+    "description": "Complete YouTube SEO checklist. Optimize every video for maximum visibility.",
+    "keywords": ["youtube video seo checklist", "youtube seo checklist", "video optimization checklist", "youtube upload checklist", "youtube seo"]
+  },
+  "hero": {
+    "badge": "SEO Checklist",
+    "headline": "YouTube Video SEO Checklist",
+    "subheadline": "Optimize every upload. Never miss an SEO opportunity.",
+    "primaryKeyword": "youtube video seo checklist"
+  },
+  "sections": [
+    {"type": "intro", "content": "Every upload is an optimization opportunity. Missing SEO elements means missing views. This checklist ensures you've covered every factor that helps YouTube understand, rank, and recommend your content. Use it for every video—consistency compounds results."},
+    {"type": "checklist", "title": "Pre-Upload SEO", "content": [
+      "Keyword research completed?",
+      "Search volume verified?",
+      "Competition analyzed?",
+      "Content matches search intent?",
+      "Topic has audience demand?",
+      "Related videos researched?",
+      "Angle differentiated from competitors?"
+    ]},
+    {"type": "checklist", "title": "Title Optimization", "content": [
+      "Primary keyword included?",
+      "Keyword near beginning?",
+      "Under 60 characters?",
+      "Creates curiosity/interest?",
+      "Complements thumbnail?",
+      "Accurate to content?",
+      "Human-readable, not stuffed?"
+    ]},
+    {"type": "checklist", "title": "Description Optimization", "content": [
+      "Keyword in first 150 characters?",
+      "200+ words total?",
+      "Timestamps/chapters added?",
+      "Relevant links included?",
+      "Secondary keywords natural?",
+      "Call to action present?",
+      "Hashtags added (3-5)?"
+    ]},
+    {"type": "checklist", "title": "Tags & Metadata", "content": [
+      "Primary keyword as first tag?",
+      "Mix of broad and specific tags?",
+      "Competitor tags researched?",
+      "500 character limit used well?",
+      "Category selected correctly?",
+      "Language set correctly?",
+      "Location tag if relevant?"
+    ]},
+    {"type": "checklist", "title": "Thumbnail Optimization", "content": [
+      "1280x720 resolution?",
+      "Under 2MB file size?",
+      "High contrast colors?",
+      "Readable at small size?",
+      "Text under 4 words?",
+      "Creates curiosity gap?",
+      "Tested against competitors?"
+    ]},
+    {"type": "checklist", "title": "Engagement Elements", "content": [
+      "Cards added at relevant points?",
+      "End screen configured?",
+      "Subscribe button in end screen?",
+      "Related video in end screen?",
+      "Pinned comment with CTA?",
+      "First comment strategy?",
+      "Playlist assignment?"
+    ]},
+    {"type": "checklist", "title": "Post-Publish SEO", "content": [
+      "Shared to social media?",
+      "Embedded on website/blog?",
+      "Added to relevant playlists?",
+      "Responded to early comments?",
+      "Performance tracked in analytics?",
+      "Thumbnail A/B test scheduled?",
+      "Title optimization if underperforming?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How important is video SEO really?", "answer": "For searchable content, critical—determines if you get found. For browse content, less direct but still matters. YouTube uses all metadata to understand and categorize your video. Every bit helps."},
+    {"question": "Should I update old video SEO?", "answer": "Yes—especially underperformers with high impressions, low CTR. Update thumbnails and titles. Fresh descriptions with current keywords. Videos can resurge with optimization."},
+    {"question": "How long until SEO shows results?", "answer": "Search ranking can take days to weeks. Some videos rank quickly for low-competition terms. High-competition keywords take longer. Consistency across videos compounds over months."},
+    {"question": "Can I over-optimize?", "answer": "Yes—keyword stuffing looks spammy and turns off viewers. Write for humans first. If it sounds unnatural, it's over-optimized. YouTube's AI is smart; natural language works."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

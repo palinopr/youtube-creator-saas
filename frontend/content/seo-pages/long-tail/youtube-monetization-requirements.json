@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-monetization-requirements",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Monetization Requirements 2025: YPP Eligibility Guide",
+    "description": "Complete guide to YouTube Partner Program requirements. Subscribers, watch hours, and eligibility.",
+    "keywords": ["youtube monetization requirements", "ypp requirements", "youtube partner program", "youtube monetization 2025", "how to monetize youtube"]
+  },
+  "hero": {
+    "badge": "Monetization",
+    "headline": "YouTube Monetization Requirements",
+    "subheadline": "What you need to join the YouTube Partner Program and start earning.",
+    "primaryKeyword": "youtube monetization requirements"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube monetization through the Partner Program (YPP) lets you earn from ads, memberships, and more. But you need to meet specific requirements first. Here's everything you need to know about YPP eligibility in 2025."},
+    {"type": "features", "title": "Core Requirements", "content": [
+      {"icon": "users", "title": "1,000 Subscribers", "description": "Minimum subscriber count required. Real, engaged subscribers."},
+      {"icon": "clock", "title": "4,000 Watch Hours", "description": "Public watch time in past 12 months. OR 10M Shorts views."},
+      {"icon": "check-circle", "title": "Policy Compliance", "description": "Follow all YouTube guidelines. No community strikes."}
+    ]},
+    {"type": "steps", "title": "Application Process", "content": [
+      "Meet subscriber threshold (1,000)",
+      "Reach watch hours (4,000) or Shorts views (10M)",
+      "Set up AdSense account",
+      "Apply through YouTube Studio",
+      "Wait for review (typically 1 month)",
+      "Accept partner agreement if approved",
+      "Set up monetization features"
+    ]},
+    {"type": "features", "title": "Additional Requirements", "content": [
+      {"icon": "shield", "title": "Two-Step Verification", "description": "Security required for your Google account."},
+      {"icon": "map-pin", "title": "Available Region", "description": "YPP must be available in your country."},
+      {"icon": "file-text", "title": "Community Guidelines", "description": "No active strikes. Good standing required."}
+    ]},
+    {"type": "benefits", "title": "What You Get with YPP", "content": [
+      "Ad revenue sharing",
+      "Channel memberships (1,000+ subs)",
+      "Super Chat and Super Thanks",
+      "YouTube Premium revenue",
+      "Merchandise shelf",
+      "Creator support access",
+      "Copyright Match Tool"
+    ]},
+    {"type": "benefits", "title": "Tips to Reach Requirements", "content": [
+      "Focus on watch time, not just views",
+      "Create longer content (8-15 minutes)",
+      "Optimize for retention",
+      "Consistent upload schedule",
+      "Engage with comments",
+      "Promote across platforms",
+      "Collaborate with other creators"
+    ]},
+    {"type": "checklist", "title": "YPP Readiness Checklist", "content": [
+      "1,000+ subscribers?",
+      "4,000 watch hours OR 10M Shorts views?",
+      "No community strikes?",
+      "Content follows guidelines?",
+      "Two-step verification enabled?",
+      "AdSense account created?",
+      "Region eligible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long to get monetized?", "answer": "Review takes about 1 month typically. Can be faster or slower. Having more content and engagement speeds review."},
+    {"question": "Do Shorts count toward watch hours?", "answer": "No, Shorts have separate path: 10 million Shorts views in 90 days. Or 4,000 regular watch hours from long-form content."},
+    {"question": "What if I lose subscribers after applying?", "answer": "If you drop below 1,000 before approval, application paused. Once approved, you keep monetization even if subs drop."},
+    {"question": "Can I be rejected?", "answer": "Yes, if content violates guidelines, reused content without value, or other policy issues. You can reapply after 30 days."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

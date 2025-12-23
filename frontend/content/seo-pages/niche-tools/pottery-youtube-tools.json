@@ -1,0 +1,66 @@
+{
+  "slug": "pottery-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Pottery YouTube Tools 2025: Ceramics Channel Equipment",
+    "description": "Top tools for pottery YouTube channels. Film wheel throwing and handbuilding.",
+    "keywords": ["pottery youtube tools", "ceramics channel equipment", "pottery video gear", "wheel throwing youtube", "clay content"]
+  },
+  "hero": {
+    "badge": "Pottery Tools",
+    "headline": "Best Pottery YouTube Tools 2025",
+    "subheadline": "Capture the magic of clay. Gear for pottery creators.",
+    "primaryKeyword": "pottery youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Pottery content is mesmerizing—the transformation of clay into form is inherently watchable. Success requires capturing the wheel from multiple angles, dealing with a dusty/wet environment, and showcasing the meditative process. Here's what pottery YouTubers use to share their craft beautifully."},
+    {"type": "features", "title": "Camera Positions", "content": [
+      {"icon": "video", "title": "Front Angle", "description": "Classic wheel view. Shows form emerging."},
+      {"icon": "camera", "title": "Overhead", "description": "Bird's eye of the wheel. Hypnotic."},
+      {"icon": "eye", "title": "Side Profile", "description": "Shows height, pulling technique."},
+      {"icon": "user", "title": "Face Camera", "description": "Connection with maker. Teaching moments."}
+    ]},
+    {"type": "features", "title": "Environment Challenges", "content": [
+      {"icon": "droplet", "title": "Water/Clay Splash", "description": "Protect equipment from mess."},
+      {"icon": "cloud", "title": "Dust", "description": "Dry clay dust settles on lenses."},
+      {"icon": "sun", "title": "Variable Lighting", "description": "Studio consistency essential."},
+      {"icon": "volume-x", "title": "Wheel Noise", "description": "Motor sound, water splashing."}
+    ]},
+    {"type": "features", "title": "Equipment Protection", "content": [
+      {"icon": "shield", "title": "Lens Covers", "description": "Quick-remove protection between takes."},
+      {"icon": "box", "title": "Camera Distance", "description": "Further than you'd like. Zoom in."},
+      {"icon": "layout", "title": "Splash Guards", "description": "Acrylic shields between camera and wheel."},
+      {"icon": "wind", "title": "Air Cleaning", "description": "Regular dust removal from gear."}
+    ]},
+    {"type": "benefits", "title": "Pottery Content Tips", "content": [
+      "Multiple angles add visual interest",
+      "Time-lapse full pieces—satisfying to watch",
+      "Real-time for teaching technique",
+      "Show failures—relatable and educational",
+      "Kiln openings are content gold",
+      "Process from raw clay to finished piece",
+      "ASMR potential—many viewers love pottery sounds"
+    ]},
+    {"type": "checklist", "title": "Pottery Video Checklist", "content": [
+      "Cameras positioned safely?",
+      "Lenses protected from splash?",
+      "Lighting consistent?",
+      "Audio clean or voiceover planned?",
+      "Multiple angles set up?",
+      "Clay prepared and wedged?",
+      "Kiln opening documented?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to protect cameras from clay?", "answer": "Distance is your friend—use longer focal lengths. Acrylic splash guards help. Rain covers/sleeves for protection. Keep lens cloths handy. Accept some risk—pottery is messy."},
+    {"question": "Best angle for wheel throwing?", "answer": "Front angle is classic—shows form emerging. Overhead creates hypnotic content. Side shows height and pulling. Most successful pottery channels use all three, switching during edits."},
+    {"question": "Audio for pottery videos?", "answer": "Two approaches: embrace sounds (ASMR appeal) or voiceover everything (cleaner education). Wheel motor and water splashing are ambient. Many viewers find pottery sounds soothing."},
+    {"question": "Lighting a pottery studio?", "answer": "Consistent artificial light preferred—natural light changes. Soft, diffused light flatters wet clay. Avoid harsh shadows in the bowl interior. Multiple sources reduce contrast issues."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "pottery"
+}

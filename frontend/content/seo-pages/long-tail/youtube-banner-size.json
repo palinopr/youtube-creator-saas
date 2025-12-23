@@ -1,0 +1,62 @@
+{
+  "slug": "youtube-banner-size",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Banner Size 2025: Channel Art Dimensions & Specs",
+    "description": "The exact YouTube banner size and dimensions. Resolution, safe zones, and how to design channel art that looks great everywhere.",
+    "keywords": ["youtube banner size", "youtube channel art size", "youtube banner dimensions", "channel art specs", "youtube banner template"]
+  },
+  "hero": {
+    "badge": "Channel Art Specs",
+    "headline": "YouTube Banner Size & Dimensions in 2025",
+    "subheadline": "The exact specifications for perfect YouTube channel art that displays correctly on all devices.",
+    "primaryKeyword": "youtube banner size"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube channel banners display differently on TV, desktop, tablet, and mobile. Getting the size right ensures your branding looks professional everywhere. This guide provides the exact dimensions, safe zones, and design tips for perfect channel art."},
+    {"type": "features", "title": "Official Banner Specifications", "content": [
+      {"icon": "ruler", "title": "Full Dimensions", "description": "2560 x 1440 pixels. This is the full banner size that YouTube requires."},
+      {"icon": "smartphone", "title": "Safe Zone", "description": "1546 x 423 pixels (centered). This area is visible on all devices."},
+      {"icon": "file", "title": "File Size", "description": "Under 6MB. JPG, PNG, or GIF format accepted."}
+    ]},
+    {"type": "checklist", "title": "Banner Specifications", "content": [
+      "Full size: 2560 x 1440 pixels",
+      "TV display area: 2560 x 1440 pixels",
+      "Desktop display: 2560 x 423 pixels (center)",
+      "Mobile/tablet safe zone: 1546 x 423 pixels",
+      "Minimum upload: 2048 x 1152 pixels",
+      "Maximum file size: 6MB",
+      "Format: JPG, PNG, GIF, or BMP",
+      "Keep important content in center safe zone"
+    ]},
+    {"type": "steps", "title": "Designing Your Banner", "content": [
+      "Start with 2560 x 1440 canvas",
+      "Mark the 1546 x 423 safe zone in center",
+      "Place logo and key text in safe zone",
+      "Extend design to full canvas for TV viewers",
+      "Check preview on all device types",
+      "Export under 6MB file size",
+      "Upload and verify display"
+    ]},
+    {"type": "benefits", "title": "Banner Design Best Practices", "content": [
+      "Keep text and logos in safe zone",
+      "Use high-contrast, readable text",
+      "Avoid placing content near edges",
+      "Match branding with thumbnails",
+      "Update seasonally or for milestones",
+      "Include upload schedule if consistent",
+      "Preview on multiple devices before finalizing"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why does my banner get cropped?", "answer": "YouTube displays different areas based on device. Only the center 1546 x 423 pixels show on mobile. Design with this safe zone in mind."},
+    {"question": "What resolution should my banner be?", "answer": "Minimum 2048 x 1152, recommended 2560 x 1440 pixels. Higher resolution ensures sharp display on TVs and large monitors."},
+    {"question": "Can I use animated banners?", "answer": "GIFs are technically accepted but won't animate on YouTube. Use static images for best results. Save animation for intros and videos."},
+    {"question": "How often should I update my banner?", "answer": "Update for major milestones (subscriber counts), seasonal events, or when branding changes. Monthly updates are excessive, annual is minimum."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

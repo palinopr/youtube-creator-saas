@@ -1,0 +1,61 @@
+{
+  "slug": "storyblocks-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Storyblocks Alternatives 2025: Stock Media for YouTube",
+    "description": "Looking for a Storyblocks alternative? Compare stock video, music, and asset platforms for YouTube.",
+    "keywords": ["storyblocks alternative", "stock video youtube", "stock footage alternative", "video stock library", "royalty free video"]
+  },
+  "hero": {
+    "badge": "Stock Media",
+    "headline": "Best Storyblocks Alternatives",
+    "subheadline": "Stock video, music, and assets for YouTube creators. All your media needs covered.",
+    "primaryKeyword": "storyblocks alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Storyblocks offers unlimited downloads of video, music, and images for a flat fee. It's great value, but some creators need different content styles, quality levels, or pricing models. Here are the best alternatives for YouTube stock media."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "film", "title": "Envato Elements", "description": "Massive library. Video templates, graphics, music all included."},
+      {"icon": "video", "title": "Artgrid", "description": "Premium footage quality. From Artlist team. Cinematic focus."},
+      {"icon": "dollar-sign", "title": "Pexels/Pixabay", "description": "Free options. Quality varies but great for budget creators."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Storyblocks", "toolA": "$15-30/mo", "toolB": "Video, music, images", "tubeGrow": "N/A"},
+      {"feature": "Envato Elements", "toolA": "$17/mo", "toolB": "Massive library + templates", "tubeGrow": "N/A"},
+      {"feature": "Artgrid", "toolA": "$25-50/mo", "toolB": "Premium footage", "tubeGrow": "N/A"},
+      {"feature": "Motion Array", "toolA": "$30/mo", "toolB": "After Effects focus", "tubeGrow": "N/A"},
+      {"feature": "Pexels", "toolA": "Free", "toolB": "Limited, quality varies", "tubeGrow": "N/A"},
+      {"feature": "Shutterstock", "toolA": "Per-asset or $29+/mo", "toolB": "Huge library", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Reasons to Consider Alternatives", "content": [
+      "Need different content styles",
+      "Want premium quality footage",
+      "Looking for free options",
+      "Need video templates",
+      "Want After Effects plugins",
+      "Different pricing preference",
+      "Specific niche content needed"
+    ]},
+    {"type": "steps", "title": "Choosing Your Stock Library", "content": [
+      "Assess what media types you need",
+      "Check footage quality and style",
+      "Consider template needs",
+      "Evaluate license terms",
+      "Browse before subscribing",
+      "Check download limits",
+      "Factor in all media needs"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is Envato Elements better than Storyblocks?", "answer": "Different strengths. Envato has more templates and graphics. Storyblocks better for pure stock footage. Both excellent value."},
+    {"question": "Are free stock sites good enough?", "answer": "For many creators, yes. Pexels and Pixabay have solid options. Quality and selection more limited than paid services."},
+    {"question": "What about Shutterstock?", "answer": "High quality, huge library. But pay-per-asset expensive. Subscription plans available. Better for occasional use."},
+    {"question": "Best for video templates?", "answer": "Envato Elements or Motion Array. Both have extensive template libraries. Storyblocks has templates too but smaller selection."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "storyblocks"
+}

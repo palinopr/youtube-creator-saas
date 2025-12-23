@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-end-screen-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube End Screen Tips 2025: Keep Viewers Watching",
+    "description": "Optimize YouTube end screens. Convert viewers into subscribers and keep them watching.",
+    "keywords": ["youtube end screen", "end screen tips", "youtube end card", "end screen optimization", "youtube outro"]
+  },
+  "hero": {
+    "badge": "End Screens",
+    "headline": "YouTube End Screen Tips",
+    "subheadline": "Capture viewers before they leave. Convert and keep watching.",
+    "primaryKeyword": "youtube end screen"
+  },
+  "sections": [
+    {"type": "intro", "content": "End screens appear in the last 5-20 seconds of your video, offering clickable elements to keep viewers in your ecosystem. Without end screens, viewers leave—with them, they subscribe, watch more, or visit external sites. Proper end screen strategy extends watch sessions and grows your channel."},
+    {"type": "features", "title": "End Screen Elements", "content": [
+      {"icon": "video", "title": "Video/Playlist", "description": "Send to more content."},
+      {"icon": "bell", "title": "Subscribe", "description": "Convert to subscribers."},
+      {"icon": "tv", "title": "Channel", "description": "Link to another channel."},
+      {"icon": "link", "title": "External Link", "description": "Website (if eligible)."}
+    ]},
+    {"type": "features", "title": "End Screen Options", "content": [
+      {"icon": "play", "title": "Best for Viewer", "description": "Algorithm chooses video."},
+      {"icon": "star", "title": "Specific Video", "description": "You choose which video."},
+      {"icon": "layers", "title": "Playlist", "description": "Start a playlist."},
+      {"icon": "clock", "title": "Most Recent", "description": "Your latest upload."}
+    ]},
+    {"type": "steps", "title": "End Screen Setup", "content": [
+      "Plan end screen during editing",
+      "Leave 15-20 seconds for elements",
+      "Design visual background for elements",
+      "Add end screen in YouTube Studio",
+      "Include video and subscribe elements",
+      "Position where viewers naturally look",
+      "Verbally call out the end screen",
+      "Test clicks in Analytics"
+    ]},
+    {"type": "benefits", "title": "End Screen Best Practices", "content": [
+      "Verbally promote: 'click here next'",
+      "15-20 seconds is ideal duration",
+      "Design end card visuals in video",
+      "'Best for viewer' often outperforms specific",
+      "Combine video + subscribe elements",
+      "Point or look toward elements",
+      "Check Analytics for click rates"
+    ]},
+    {"type": "checklist", "title": "End Screen Checklist", "content": [
+      "End screen space planned in edit?",
+      "Visual background designed?",
+      "Elements added in Studio?",
+      "Video/playlist element included?",
+      "Subscribe element added?",
+      "Verbally called out in video?",
+      "Click performance tracked?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should end screens be?", "answer": "15-20 seconds is optimal. Minimum 5 seconds required. Longer than 20 seconds feels like filler. Design your outro to naturally fit end screen duration."},
+    {"question": "Best for viewer or specific video?", "answer": "'Best for viewer' lets algorithm choose based on individual viewer behavior—often performs well. Specific video if you want strategic traffic. Test both and check Analytics."},
+    {"question": "Should I always include subscribe button?", "answer": "Generally yes—every video is subscribe opportunity. But prioritize keeping them watching. Video element usually more valuable than subscribe if choosing only one."},
+    {"question": "Why aren't people clicking end screens?", "answer": "Common issues: not verbally calling attention to them, elements not visible against background, viewers leaving before end screen, not relevant video suggestions. Check where retention drops off."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

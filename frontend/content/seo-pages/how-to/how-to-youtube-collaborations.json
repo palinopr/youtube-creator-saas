@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-collaborations",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Do YouTube Collaborations 2025: Collab Strategy Guide",
+    "description": "Master YouTube collaborations. Find partners, plan content, and grow together.",
+    "keywords": ["youtube collaborations", "youtube collab", "collab with youtubers", "youtube collaboration strategy", "grow with collabs"]
+  },
+  "hero": {
+    "badge": "Collaborations",
+    "headline": "How to Do YouTube Collaborations",
+    "subheadline": "Grow together. Find and execute successful collabs.",
+    "primaryKeyword": "youtube collaborations"
+  },
+  "sections": [
+    {"type": "intro", "content": "Collaborations expose your channel to new audiences while creating unique content. The best collabs benefit both creators and deliver value to both audiences. Finding the right partners and executing well can accelerate growth significantly. Here's how to collaborate effectively."},
+    {"type": "features", "title": "Finding Partners", "content": [
+      {"icon": "users", "title": "Similar Size", "description": "Mutual benefit when comparable."},
+      {"icon": "target", "title": "Related Niche", "description": "Audience overlap matters."},
+      {"icon": "heart", "title": "Genuine Fans", "description": "Collaborate with creators you enjoy."},
+      {"icon": "compass", "title": "Complementary", "description": "Different skills, same audience."}
+    ]},
+    {"type": "steps", "title": "Collaboration Process", "content": [
+      "Identify potential collaborators in your space",
+      "Engage genuinely with their content first",
+      "Reach out with specific collab idea",
+      "Discuss format, timeline, and logistics",
+      "Plan content that benefits both audiences",
+      "Create and coordinate upload timing",
+      "Cross-promote on both channels",
+      "Engage with each other's audiences"
+    ]},
+    {"type": "features", "title": "Collab Formats", "content": [
+      {"icon": "video", "title": "Video Swap", "description": "Appear on each other's channels."},
+      {"icon": "users", "title": "Joint Video", "description": "Create together, post on one channel."},
+      {"icon": "gift", "title": "Challenge Videos", "description": "Compete or challenge each other."},
+      {"icon": "message-circle", "title": "Podcast/Interview", "description": "Conversation format."}
+    ]},
+    {"type": "features", "title": "Outreach Tips", "content": [
+      {"icon": "mail", "title": "Personalized Email", "description": "Not copy-paste templates."},
+      {"icon": "lightbulb", "title": "Specific Idea", "description": "Pitch a concept, not just 'collab?'"},
+      {"icon": "check", "title": "Easy Yes", "description": "Make it simple for them."},
+      {"icon": "clock", "title": "Patient Follow-Up", "description": "One follow-up, then move on."}
+    ]},
+    {"type": "benefits", "title": "Collaboration Best Practices", "content": [
+      "Don't ask creators way larger than you",
+      "Be professional in all communications",
+      "Deliver your part on time and well",
+      "Promote your collab partner genuinely",
+      "Build relationships, not just transactions",
+      "Quality > quantity of collabs",
+      "Thank partners publicly"
+    ]},
+    {"type": "checklist", "title": "Collab Checklist", "content": [
+      "Partner similar size and niche?",
+      "Engaged with their content first?",
+      "Specific idea prepared?",
+      "Professional outreach sent?",
+      "Logistics clearly agreed?",
+      "Content plan benefits both?",
+      "Cross-promotion coordinated?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to find collaboration partners?", "answer": "Look for creators with similar audience size and related (not identical) niche. Check who your audience also watches. Engage in creator communities. Be a genuine fan first—forced partnerships feel forced."},
+    {"question": "What if they're bigger than me?", "answer": "Very large gap usually doesn't work—no mutual benefit. Exceptions: exceptional content proposal, existing relationship, or they genuinely like your work. Better to grow with similar-sized creators first."},
+    {"question": "Best first collab format?", "answer": "Video swap is lowest commitment—you each make content for the other's channel. Tests compatibility before deeper collaboration. Joint videos require more trust and coordination. Start simple."},
+    {"question": "How to maintain collab relationships?", "answer": "Stay in touch beyond collabs. Support their content genuinely. Refer opportunities their way. Don't only reach out when you want something. Build real relationships, not just promotional exchanges."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

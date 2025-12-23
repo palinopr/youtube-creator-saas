@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-merch-shelf",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Set Up YouTube Merch Shelf 2025: Sell Products on Videos",
+    "description": "Enable YouTube merch shelf. Display products directly on your videos.",
+    "keywords": ["youtube merch shelf", "youtube merchandise", "sell merch youtube", "youtube store setup", "creator merch"]
+  },
+  "hero": {
+    "badge": "Merch Shelf",
+    "headline": "How to Set Up YouTube Merch Shelf",
+    "subheadline": "Sell merchandise directly from your videos.",
+    "primaryKeyword": "youtube merch shelf"
+  },
+  "sections": [
+    {"type": "intro", "content": "The merch shelf displays your products directly below videos, making it easy for fans to buy without leaving YouTube. Once you're eligible and connected to a merch partner, products appear automatically on relevant videos. Here's how to set it up and maximize merch sales."},
+    {"type": "features", "title": "Merch Shelf Requirements", "content": [
+      {"icon": "users", "title": "10K Subscribers", "description": "Minimum to enable feature."},
+      {"icon": "check-circle", "title": "YPP Member", "description": "Must be monetized."},
+      {"icon": "flag", "title": "No Strikes", "description": "Community guidelines clean."},
+      {"icon": "globe", "title": "Available Region", "description": "Feature regional availability."}
+    ]},
+    {"type": "steps", "title": "Setting Up Merch Shelf", "content": [
+      "Verify you meet eligibility requirements",
+      "Go to YouTube Studio → Monetization",
+      "Click on Merch tab",
+      "Choose approved merch partner (Spreadshop, Teespring, etc.)",
+      "Connect your store account",
+      "Design and upload products",
+      "Products appear below eligible videos",
+      "Customize which products show on which videos"
+    ]},
+    {"type": "features", "title": "Approved Merch Partners", "content": [
+      {"icon": "shopping-bag", "title": "Spreadshop", "description": "Popular print-on-demand."},
+      {"icon": "star", "title": "Spring (Teespring)", "description": "Established platform."},
+      {"icon": "package", "title": "Merchbar", "description": "Music merch focus."},
+      {"icon": "layers", "title": "Others", "description": "Multiple partners available."}
+    ]},
+    {"type": "benefits", "title": "Merch Success Tips", "content": [
+      "Design products fans actually want",
+      "Mention merch in videos naturally",
+      "Pin merch shelf products strategically",
+      "Use custom designs, not generic",
+      "Price competitively but profitably",
+      "Feature merch in dedicated videos",
+      "Limited editions create urgency"
+    ]},
+    {"type": "checklist", "title": "Merch Shelf Checklist", "content": [
+      "Meet 10K subscriber requirement?",
+      "YPP membership active?",
+      "Merch partner connected?",
+      "Products designed and uploaded?",
+      "Shelf appearing on videos?",
+      "Mentioning merch in content?",
+      "Tracking sales analytics?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much can you make from merch?", "answer": "Varies wildly—depends on audience size, engagement, and product relevance. Profit margins typically 20-40% per item. Some creators earn more from merch than ads. Start small, test what sells."},
+    {"question": "Best products for YouTube merch?", "answer": "T-shirts most common and expected. Hoodies higher profit margin. Mugs, stickers for lower price points. Inside jokes and catchphrases perform well. Quality matters for repeat customers."},
+    {"question": "Can I use my own merch store?", "answer": "Merch shelf requires approved partners only. You can still link to external stores in descriptions and pinned comments. Some creators use both—shelf for convenience, external for full catalog."},
+    {"question": "Why isn't merch shelf showing?", "answer": "Check eligibility requirements met. Ensure products approved and published. Some videos may not show shelf based on content. Feature can take time to activate after setup."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

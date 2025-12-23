@@ -1,0 +1,71 @@
+{
+  "slug": "how-to-youtube-schedule-upload",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Schedule YouTube Videos 2025: Upload & Schedule Guide",
+    "description": "Learn to schedule YouTube video uploads. Set publish time in advance for consistent posting.",
+    "keywords": ["schedule youtube video", "youtube schedule upload", "youtube publish time", "schedule youtube post", "youtube scheduling"]
+  },
+  "hero": {
+    "badge": "Scheduling",
+    "headline": "How to Schedule YouTube Video Uploads",
+    "subheadline": "Upload now, publish later. Maintain consistent posting without being online.",
+    "primaryKeyword": "schedule youtube video"
+  },
+  "sections": [
+    {"type": "intro", "content": "Scheduling videos lets you maintain a consistent upload schedule without needing to publish manually. Upload when convenient, set your publish time, and YouTube handles the rest. Essential for creators managing multiple responsibilities."},
+    {"type": "steps", "title": "Scheduling a Video", "content": [
+      "Go to YouTube Studio",
+      "Click 'Create' then 'Upload video'",
+      "Select and upload your video file",
+      "Fill in title, description, tags",
+      "In 'Visibility' step, select 'Schedule'",
+      "Choose date and time",
+      "Set timezone correctly",
+      "Click 'Schedule' to confirm"
+    ]},
+    {"type": "features", "title": "Scheduling Best Practices", "content": [
+      {"icon": "clock", "title": "Optimal Time", "description": "Check Analytics for when your audience is online. Schedule for peak hours."},
+      {"icon": "calendar", "title": "Consistent Days", "description": "Same days each week builds viewer habits. Tuesday and Thursday popular."},
+      {"icon": "globe", "title": "Timezone Awareness", "description": "YouTube uses your account timezone. Consider your primary audience location."}
+    ]},
+    {"type": "benefits", "title": "Why Schedule Videos", "content": [
+      "Maintain consistency without being online",
+      "Batch produce content ahead",
+      "Publish at optimal times",
+      "Reduce upload-day stress",
+      "Plan around your schedule",
+      "Build viewer expectations",
+      "Coordinate with promotions"
+    ]},
+    {"type": "steps", "title": "Batch Upload Strategy", "content": [
+      "Create multiple videos in advance",
+      "Upload all at once",
+      "Schedule across coming weeks",
+      "Review and adjust as needed",
+      "Monitor scheduled queue",
+      "Make last-minute changes if needed",
+      "Keep buffer of scheduled content"
+    ]},
+    {"type": "checklist", "title": "Pre-Schedule Checklist", "content": [
+      "Video fully processed?",
+      "Thumbnail uploaded?",
+      "Title optimized?",
+      "Description complete?",
+      "Tags added?",
+      "End screens/cards set?",
+      "Timezone correct?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I change scheduled time after setting?", "answer": "Yes. Go to YouTube Studio > Content > Scheduled. Edit video and change publish time. Changes apply immediately."},
+    {"question": "What time should I schedule for?", "answer": "Check Analytics > Audience > When your viewers are online. Schedule 1-2 hours before peak for initial push."},
+    {"question": "Can I schedule Shorts?", "answer": "Yes. Same process as regular videos. Upload Short, select Schedule in visibility settings."},
+    {"question": "Does scheduling affect the algorithm?", "answer": "No evidence scheduling itself affects performance. Consistent timing helps build audience habits, which does help."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

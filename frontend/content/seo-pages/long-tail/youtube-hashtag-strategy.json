@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-hashtag-strategy",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Hashtag Strategy 2025: How to Use Hashtags Effectively",
+    "description": "Master YouTube hashtags. Best practices for discoverability and when to use them.",
+    "keywords": ["youtube hashtags", "youtube hashtag strategy", "how to use hashtags youtube", "youtube hashtag tips", "hashtags for youtube"]
+  },
+  "hero": {
+    "badge": "Hashtags",
+    "headline": "YouTube Hashtag Strategy",
+    "subheadline": "Use hashtags effectively. When they help and when they don't matter.",
+    "primaryKeyword": "youtube hashtag strategy"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube hashtags are clickable links that group related content. They're less important than on other platforms, but can provide minor discoverability benefits. The key is using them correctly—wrong usage can actually hurt. Here's the honest truth about YouTube hashtags."},
+    {"type": "features", "title": "How Hashtags Work", "content": [
+      {"icon": "hash", "title": "Clickable Links", "description": "First 3 hashtags appear above title. Clicking shows related videos."},
+      {"icon": "search", "title": "Searchable", "description": "Hashtags can be searched. Creates another discovery path."},
+      {"icon": "link", "title": "Description Tags", "description": "Add in description, not title. Title hashtags look spammy."}
+    ]},
+    {"type": "steps", "title": "Hashtag Best Practices", "content": [
+      "Use 3-5 hashtags maximum",
+      "Place in description, not title",
+      "Use relevant, specific hashtags",
+      "Include one branded hashtag (your channel)",
+      "Use mix of broad and specific",
+      "Avoid banned or misleading hashtags",
+      "Don't over-rely—minor impact at best"
+    ]},
+    {"type": "features", "title": "What Works", "content": [
+      {"icon": "check", "title": "Specific Topics", "description": "#PhotoshopTutorial better than #Tutorial. Specific helps targeting."},
+      {"icon": "trending-up", "title": "Trending Topics", "description": "Relevant trending hashtags can boost discoverability."},
+      {"icon": "user", "title": "Brand Hashtag", "description": "Create channel hashtag. Groups your content together."}
+    ]},
+    {"type": "benefits", "title": "Honest Assessment", "content": [
+      "Minor discoverability benefit",
+      "Not as important as title, thumbnail, tags",
+      "Won't make or break video performance",
+      "Overuse looks unprofessional",
+      "Some niches use more than others",
+      "Don't copy-paste same hashtags every video",
+      "Quality over quantity always"
+    ]},
+    {"type": "checklist", "title": "Hashtag Checklist", "content": [
+      "Only 3-5 hashtags used?",
+      "Placed in description (not title)?",
+      "Relevant to video content?",
+      "Mix of specific and broad?",
+      "No banned or misleading tags?",
+      "Not overused/spammy?",
+      "Brand hashtag included?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many hashtags should I use?", "answer": "3-5 maximum. YouTube officially recommends no more than 15. More than 5 looks spammy. Less is more."},
+    {"question": "Do hashtags really help?", "answer": "Minor impact at best. Title, thumbnail, and content quality matter far more. Hashtags are supplementary, not primary."},
+    {"question": "Should I put hashtags in title?", "answer": "No—looks unprofessional. Put in description. First 3 automatically appear above title anyway."},
+    {"question": "What happens with too many hashtags?", "answer": "YouTube may ignore all of them. Over 15 can trigger spam detection. Stick to 3-5 relevant ones."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

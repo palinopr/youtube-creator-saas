@@ -1,0 +1,65 @@
+{
+  "slug": "zoom-h1n-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Zoom H1n Alternatives 2025: Portable Recorders for YouTube",
+    "description": "Top Zoom H1n alternatives. Portable audio recorders for creators compared.",
+    "keywords": ["zoom h1n alternative", "portable recorder youtube", "audio recorder comparison", "field recorder", "zoom alternatives"]
+  },
+  "hero": {
+    "badge": "Recorder Alternatives",
+    "headline": "Best Zoom H1n Alternatives",
+    "subheadline": "Portable audio recording options. Different features, similar portability.",
+    "primaryKeyword": "zoom h1n alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Zoom H1n is a popular compact recorder for creators needing backup audio or field recording. But alternatives offer different strengths—better preamps, different features, or lower prices. Here are the best Zoom H1n alternatives."},
+    {"type": "features", "title": "Budget Alternatives", "content": [
+      {"icon": "mic", "title": "Tascam DR-05X", "description": "Similar price point. Dual recording for safety. Good quality."},
+      {"icon": "smartphone", "title": "Phone + App", "description": "iOS/Android recording apps. Already have it. Surprisingly capable."},
+      {"icon": "headphones", "title": "Sony ICD-UX570", "description": "Voice recorder style. Slim, pocketable. Basic but functional."}
+    ]},
+    {"type": "features", "title": "Upgrade Options", "content": [
+      {"icon": "volume-2", "title": "Zoom H4n Pro", "description": "XLR inputs, better preamps. More professional. Higher price."},
+      {"icon": "zap", "title": "Zoom H6", "description": "Modular, interchangeable capsules. Serious field recording."},
+      {"icon": "settings", "title": "Tascam DR-40X", "description": "XLR inputs, interface mode. Similar to H4n. Good alternative."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Price", "toolA": "Tascam DR-05X: ~$100", "toolB": "Zoom H4n Pro: ~$200", "tubeGrow": "N/A"},
+      {"feature": "XLR Inputs", "toolA": "DR-05X: No", "toolB": "H4n Pro: 2", "tubeGrow": "N/A"},
+      {"feature": "Size", "toolA": "DR-05X: Compact", "toolB": "H4n Pro: Larger", "tubeGrow": "N/A"},
+      {"feature": "Preamp Quality", "toolA": "DR-05X: Good", "toolB": "H4n Pro: Better", "tubeGrow": "N/A"},
+      {"feature": "USB Interface", "toolA": "DR-05X: Yes", "toolB": "H4n Pro: Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Why Consider Alternatives", "content": [
+      "Need XLR inputs",
+      "Better preamp quality",
+      "Different form factor",
+      "Price considerations",
+      "USB interface mode",
+      "Already own phone",
+      "Specific feature needs"
+    ]},
+    {"type": "checklist", "title": "Choosing Recorder", "content": [
+      "XLR inputs needed?",
+      "Budget range?",
+      "Portability priority?",
+      "Interface mode useful?",
+      "Battery life important?",
+      "Preamp quality critical?",
+      "Already have phone?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is the Zoom H1n still good?", "answer": "Yes, excellent compact recorder for the price. Alternatives offer different strengths, not necessarily better overall."},
+    {"question": "Tascam vs Zoom quality?", "answer": "Very similar at entry level. Both make quality recorders. Choose based on features and price more than brand."},
+    {"question": "Do I need XLR inputs?", "answer": "Only if using XLR microphones. For camera backup audio or built-in mics, 3.5mm inputs suffice."},
+    {"question": "Can phone replace portable recorder?", "answer": "For backup audio, yes. Quality apps exist. But dedicated recorders have better preamps and ergonomics."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "zoom-h1n"
+}

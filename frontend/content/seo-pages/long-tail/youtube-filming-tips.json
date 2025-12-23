@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-filming-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Filming Tips 2025: Shoot Better Videos at Home",
+    "description": "Master YouTube filming. Tips for better video quality without expensive gear.",
+    "keywords": ["youtube filming tips", "film youtube videos", "youtube shooting tips", "home video filming", "youtube recording tips"]
+  },
+  "hero": {
+    "badge": "Filming Tips",
+    "headline": "YouTube Filming Tips",
+    "subheadline": "Shoot like a pro. Better videos start with better filming.",
+    "primaryKeyword": "youtube filming tips"
+  },
+  "sections": [
+    {"type": "intro", "content": "Good filming technique makes average cameras look professional while poor technique makes expensive gear look amateur. Understanding composition, stability, and environment transforms your videos. These fundamentals apply whether you're using a phone or cinema camera."},
+    {"type": "features", "title": "Filming Fundamentals", "content": [
+      {"icon": "grid", "title": "Composition", "description": "Rule of thirds, framing."},
+      {"icon": "move", "title": "Stability", "description": "Tripod or stabilized shots."},
+      {"icon": "sun", "title": "Lighting", "description": "Light the subject well."},
+      {"icon": "volume-2", "title": "Audio", "description": "Clean sound capture."}
+    ]},
+    {"type": "steps", "title": "Filming Process", "content": [
+      "Set up stable camera position first",
+      "Arrange lighting before you frame",
+      "Use rule of thirds for composition",
+      "Check audio levels with test recording",
+      "Clear distracting background elements",
+      "Do full test recording and review",
+      "Film multiple takes of important moments",
+      "Capture B-roll while set up"
+    ]},
+    {"type": "features", "title": "Common Mistakes", "content": [
+      {"icon": "x-circle", "title": "Shaky Footage", "description": "Use tripod always."},
+      {"icon": "eye", "title": "Bad Framing", "description": "Too much headroom."},
+      {"icon": "sun", "title": "Backlighting", "description": "Light in front, not behind."},
+      {"icon": "volume-x", "title": "Echo/Noise", "description": "Choose quiet spaces."}
+    ]},
+    {"type": "benefits", "title": "Pro Filming Tips", "content": [
+      "Tripod is mandatory—not optional",
+      "Face windows for natural lighting",
+      "Eye level camera angle is flattering",
+      "Headroom: small gap above head",
+      "Look at lens, not screen",
+      "Multiple takes save editing headaches",
+      "B-roll while set up is efficient"
+    ]},
+    {"type": "checklist", "title": "Filming Checklist", "content": [
+      "Camera stable on tripod?",
+      "Lighting on face, not behind?",
+      "Rule of thirds composition?",
+      "Audio tested and clean?",
+      "Background clean and appropriate?",
+      "Test recording reviewed?",
+      "Multiple takes captured?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What camera should I use?", "answer": "Your phone is fine to start. iPhone/modern Android phones shoot great video. Upgrade to mirrorless when phone limits you. Technique matters more than gear. Master basics first."},
+    {"question": "How to look good on camera?", "answer": "Eye-level camera angle is most flattering. Good lighting hides flaws. Look at the lens, not the screen. Relax shoulders. Practice until comfortable. Everyone improves with repetition."},
+    {"question": "Film in 4K or 1080p?", "answer": "4K if storage and computer can handle it—allows cropping and future-proofing. 1080p perfectly acceptable for YouTube and easier to work with. Either works well."},
+    {"question": "How many takes should I film?", "answer": "At least 2-3 takes of important segments. More for difficult deliveries. Review between takes. Better to have options in editing. Extra footage is never wasted."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

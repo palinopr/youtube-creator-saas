@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-niche-selection-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "How to Choose YouTube Niche 2025: Selection Strategy Guide",
+    "description": "Find your perfect YouTube niche. Selection criteria and market analysis for new creators.",
+    "keywords": ["youtube niche selection", "choose youtube niche", "youtube niche ideas", "best youtube niche", "youtube topic selection"]
+  },
+  "hero": {
+    "badge": "Niche Selection",
+    "headline": "How to Choose Your YouTube Niche",
+    "subheadline": "Find the intersection of passion, expertise, and opportunity.",
+    "primaryKeyword": "youtube niche selection"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your niche determines everything—audience, competition, monetization, and whether you'll still enjoy making content in 3 years. The perfect niche isn't just popular, it's sustainable for you personally. Here's how to choose wisely."},
+    {"type": "features", "title": "Niche Selection Criteria", "content": [
+      {"icon": "heart", "title": "Passion/Interest", "description": "Can you make 500+ videos about this? Enthusiasm shows. Burnout kills channels."},
+      {"icon": "award", "title": "Expertise/Credibility", "description": "What unique knowledge or perspective do you bring? Authority matters."},
+      {"icon": "trending-up", "title": "Market Demand", "description": "Are people searching for this content? Validate with keyword research."}
+    ]},
+    {"type": "steps", "title": "Niche Selection Process", "content": [
+      "List 10 topics you could talk about for hours",
+      "Research each: search volume, competition, monetization",
+      "Identify your unique angle in each",
+      "Eliminate overly saturated without clear differentiator",
+      "Test remaining with 5-10 videos each",
+      "Analyze which resonates with audience AND you",
+      "Commit to winner for 6+ months"
+    ]},
+    {"type": "features", "title": "Niche Evaluation Factors", "content": [
+      {"icon": "users", "title": "Audience Size", "description": "Too small = limited growth. Too big = too much competition. Find sweet spot."},
+      {"icon": "dollar-sign", "title": "Monetization Potential", "description": "Some niches pay more (finance, tech). Consider sponsorship appeal."},
+      {"icon": "target", "title": "Specificity", "description": "'Gaming' is too broad. 'Retro Nintendo speedruns' is specific enough to own."}
+    ]},
+    {"type": "benefits", "title": "Signs of Good Niche", "content": [
+      "You have unique perspective or expertise",
+      "Consistent search demand exists",
+      "Competition present but not overwhelming",
+      "Clear monetization paths visible",
+      "You can produce content sustainably",
+      "Audience is engaged and willing to support",
+      "Room for growth and evolution"
+    ]},
+    {"type": "checklist", "title": "Niche Validation Checklist", "content": [
+      "Passionate enough for years of content?",
+      "Unique angle identified?",
+      "Search demand verified?",
+      "Competition level acceptable?",
+      "Monetization potential exists?",
+      "Can produce consistently?",
+      "Tested with sample content?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I change my niche later?", "answer": "Yes, but costly. Audience built for one topic may not follow. Better to pivot related than completely change. Choose carefully upfront."},
+    {"question": "Should I choose profitable or passion?", "answer": "Ideally both. Pure passion without demand means small audience. Pure profit without interest leads to burnout. Find overlap."},
+    {"question": "How specific should my niche be?", "answer": "Specific enough to be memorable and own a space. General enough to produce ongoing content. 'Guitar tutorials for beginners' better than just 'music.'"},
+    {"question": "What if my niche is saturated?", "answer": "Find unique angle—different format, specific sub-niche, unique personality. Saturated means demand exists. Stand out, don't compete directly."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "how-to-create-youtube-playlist",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Playlists 2025: Organization Guide",
+    "description": "Master YouTube playlists for better organization and discovery. Create, optimize, and grow your playlist strategy.",
+    "keywords": ["youtube playlist", "create youtube playlist", "youtube playlist strategy", "organize youtube videos", "playlist optimization"]
+  },
+  "hero": {
+    "badge": "Playlists",
+    "headline": "How to Create and Optimize YouTube Playlists",
+    "subheadline": "Organize content, boost watch time, and improve discoverability with strategic playlists.",
+    "primaryKeyword": "youtube playlist"
+  },
+  "sections": [
+    {"type": "intro", "content": "Playlists organize your content and keep viewers watching longer. They appear in search results, can be featured on your channel page, and auto-play through your videos. A good playlist strategy improves both viewer experience and algorithm performance."},
+    {"type": "features", "title": "Playlist Benefits", "content": [
+      {"icon": "play", "title": "Auto-Play Sessions", "description": "Videos play continuously. Increases watch time and session duration."},
+      {"icon": "search", "title": "Search Visibility", "description": "Playlists rank in search. Another way to be discovered."},
+      {"icon": "layout", "title": "Channel Organization", "description": "Group related content. Helps viewers find what they want."}
+    ]},
+    {"type": "steps", "title": "How to Create a Playlist", "content": [
+      "Open YouTube Studio",
+      "Click 'Playlists' in left menu",
+      "Click 'New playlist'",
+      "Add title and description",
+      "Set visibility (Public/Unlisted/Private)",
+      "Add videos from your channel",
+      "Arrange order strategically",
+      "Feature on channel homepage"
+    ]},
+    {"type": "benefits", "title": "Playlist Optimization Tips", "content": [
+      "Use keywords in playlist title",
+      "Write descriptions with relevant terms",
+      "Order videos logically (beginner to advanced)",
+      "Put best-performing video first",
+      "Create series playlists for connected content",
+      "Make topic-based playlists",
+      "Update regularly with new content"
+    ]},
+    {"type": "checklist", "title": "Playlist Strategy Checklist", "content": [
+      "Core topic playlists created?",
+      "Titles include target keywords?",
+      "Descriptions explain content?",
+      "Video order makes sense?",
+      "Playlists featured on channel?",
+      "New videos added to relevant playlists?",
+      "Dead/removed videos cleaned up?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many playlists should I have?", "answer": "Depends on content variety. Start with 3-5 core topic playlists. Add more as your content library grows. Don't over-segment."},
+    {"question": "Should every video be in a playlist?", "answer": "Yes, ideally. Every video should belong to at least one playlist. Some videos fit multiple playlists. Organize everything."},
+    {"question": "Do playlists help algorithm?", "answer": "Yes. Playlist watch sessions signal content quality. They rank in search. Featured playlists improve channel page performance."},
+    {"question": "Can I add other creators' videos?", "answer": "Yes. Curated playlists can include any public video. Good for topic collections. But focus on your content for channel growth."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

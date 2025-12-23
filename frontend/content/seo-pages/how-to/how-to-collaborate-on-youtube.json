@@ -1,0 +1,70 @@
+{
+  "slug": "how-to-collaborate-on-youtube",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Collaborate on YouTube 2025: Collab Strategy Guide",
+    "description": "Grow your channel through collaborations. How to find, pitch, and execute successful YouTube collabs.",
+    "keywords": ["youtube collaboration", "youtube collab", "collaborate on youtube", "collab with youtubers", "youtube growth"]
+  },
+  "hero": {
+    "badge": "Collaborations",
+    "headline": "How to Collaborate on YouTube Successfully",
+    "subheadline": "Collaborations are the fastest way to grow. Here's how to do them right.",
+    "primaryKeyword": "youtube collaboration"
+  },
+  "sections": [
+    {"type": "intro", "content": "Collaborations expose your content to new audiences who already watch similar creators. A single good collab can bring thousands of engaged subscribers. But bad collabs waste time and damage your brand. This guide covers how to find the right partners, pitch effectively, and execute collabs that grow both channels."},
+    {"type": "features", "title": "Types of Collaborations", "content": [
+      {"icon": "users", "title": "Guest Appearances", "description": "Appear on each other's channels. Dual uploads maximize exposure."},
+      {"icon": "video", "title": "Collaboration Video", "description": "Create content together that lives on one channel. Shoutouts bring traffic."},
+      {"icon": "share-2", "title": "Cross-Promotion", "description": "Feature each other in your videos. Recommend their content to your audience."}
+    ]},
+    {"type": "steps", "title": "Finding Collab Partners", "content": [
+      "Look for creators in adjacent niches",
+      "Target similar subscriber counts (0.5x to 2x yours)",
+      "Check engagement rates, not just subscribers",
+      "Watch their content—ensure quality match",
+      "Look for creators who collab regularly",
+      "Check if audiences would overlap",
+      "Avoid direct competitors"
+    ]},
+    {"type": "benefits", "title": "How to Pitch Collaborations", "content": [
+      "Lead with specific value you bring",
+      "Propose concrete video idea",
+      "Show you know their content",
+      "Keep pitch short (under 100 words)",
+      "Include your best video as proof",
+      "Follow up once if no response",
+      "Don't take rejection personally"
+    ]},
+    {"type": "steps", "title": "Executing Successful Collabs", "content": [
+      "Agree on video concept together",
+      "Plan logistics (remote vs in-person)",
+      "Set clear expectations and timeline",
+      "Both promote equally",
+      "Upload simultaneously if dual videos",
+      "Cross-promote in descriptions and cards",
+      "Engage with each other's comments"
+    ]},
+    {"type": "checklist", "title": "Collab Pitch Template", "content": [
+      "Personal greeting (use their name)",
+      "One sentence about why you watch them",
+      "Specific collab idea",
+      "What value you bring",
+      "Your best video link",
+      "Clear call to action",
+      "Professional signature"
+    ]}
+  ],
+  "faq": [
+    {"question": "How big should my channel be to collab?", "answer": "Any size. Small channels collab with similar size creators. Focus on value exchange, not subscriber counts. Quality collabs matter at every level."},
+    {"question": "Should I collab with smaller or bigger channels?", "answer": "Both. Bigger channels bring exposure. Similar-size collabs are easier to arrange. Smaller creators may grow alongside you."},
+    {"question": "What if they don't respond?", "answer": "Normal. Most pitches get ignored. Follow up once. If no response, move on. Build relationships over time through comments and engagement."},
+    {"question": "How do I make collabs not awkward?", "answer": "Prepare topics but don't script. Video call before filming to build rapport. Choose people whose energy matches yours. Practice makes perfect."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

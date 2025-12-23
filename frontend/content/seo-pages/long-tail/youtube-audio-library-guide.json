@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-audio-library-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Audio Library Guide 2025: Free Music & Sound Effects",
+    "description": "Master YouTube's free Audio Library. Find music, sound effects, and understand licensing for your videos.",
+    "keywords": ["youtube audio library", "free youtube music", "youtube sound effects", "royalty free music youtube", "audio library"]
+  },
+  "hero": {
+    "badge": "Audio Library",
+    "headline": "YouTube Audio Library: Free Music for Your Videos",
+    "subheadline": "Thousands of free tracks and sound effects. No copyright claims, no cost.",
+    "primaryKeyword": "youtube audio library"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube's Audio Library offers free music and sound effects for your videos. No copyright claims, no cost, no attribution required for most tracks. It's the safest option for YouTube content. Here's how to find and use it effectively."},
+    {"type": "features", "title": "What's Available", "content": [
+      {"icon": "music", "title": "Music Tracks", "description": "Thousands of songs across genres. Moods, instruments, and duration filters."},
+      {"icon": "volume-2", "title": "Sound Effects", "description": "Ambient sounds, transitions, actions. Organized by category."},
+      {"icon": "star", "title": "Starred Favorites", "description": "Save tracks for later. Build your go-to collection."}
+    ]},
+    {"type": "steps", "title": "How to Access", "content": [
+      "Open YouTube Studio",
+      "Click 'Audio Library' in left menu",
+      "Browse or search for tracks",
+      "Use filters (Genre, Mood, Duration)",
+      "Preview tracks with play button",
+      "Star favorites for easy access",
+      "Download and use in your videos"
+    ]},
+    {"type": "benefits", "title": "Filtering Tips", "content": [
+      "Filter by mood for consistent feel",
+      "Duration filter for specific needs",
+      "Genre narrows options quickly",
+      "Attribution filter shows requirements",
+      "Sort by title or date",
+      "Search by specific keywords",
+      "Combine filters for precision"
+    ]},
+    {"type": "checklist", "title": "Before Using Audio", "content": [
+      "Checked attribution requirements?",
+      "Track matches video mood?",
+      "Length fits your needs?",
+      "Saved to favorites for future?",
+      "Downloaded high-quality version?",
+      "Noted creator for attribution if needed?",
+      "Tested audio levels in edit?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is YouTube Audio Library really free?", "answer": "Yes. Free for YouTube videos. Some tracks require attribution in description (marked clearly). No claims when used properly."},
+    {"question": "Can I use Audio Library music elsewhere?", "answer": "Check each track's license. Many are only for YouTube. Some allow broader use. When in doubt, use only on YouTube."},
+    {"question": "Is the quality good enough?", "answer": "Quality is decent but varies. Some tracks sound professional, others basic. For higher quality, consider paid services like Epidemic Sound."},
+    {"question": "Why do some tracks require attribution?", "answer": "Artist preference. Some creators allow free use with credit. Copy the attribution text exactly as shown. It's a small price for free music."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

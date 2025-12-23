@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-increase-views",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Increase YouTube Views 2025: Proven Growth Strategies",
+    "description": "Get more views on YouTube videos. Actionable strategies for view growth.",
+    "keywords": ["increase youtube views", "get more youtube views", "youtube views", "grow youtube views", "more views on youtube"]
+  },
+  "hero": {
+    "badge": "Increase Views",
+    "headline": "How to Increase YouTube Views",
+    "subheadline": "More views, more growth. Strategies that actually work.",
+    "primaryKeyword": "increase youtube views"
+  },
+  "sections": [
+    {"type": "intro", "content": "Views come from two places: getting shown (impressions) and getting clicked (CTR). Then viewers need to watch (retention) for YouTube to show you more. Understanding this funnel is key to increasing views. Here are the proven strategies."},
+    {"type": "features", "title": "The Views Formula", "content": [
+      {"icon": "eye", "title": "Get Shown (Impressions)", "description": "Topic selection, SEO, subscriber notifications, algorithm."},
+      {"icon": "mouse-pointer", "title": "Get Clicked (CTR)", "description": "Thumbnail and title. The packaging that earns the click."},
+      {"icon": "clock", "title": "Keep Watching (Retention)", "description": "Content quality keeps viewers. Signals to show you more."}
+    ]},
+    {"type": "steps", "title": "Increasing Views", "content": [
+      "Create content on topics people search for",
+      "Study successful videos in your niche",
+      "Design thumbnails that stand out",
+      "Write titles that create curiosity",
+      "Hook viewers in first 30 seconds",
+      "Keep viewers watching with great content",
+      "End with next video recommendation",
+      "Promote on other platforms",
+      "Analyze and iterate on performance"
+    ]},
+    {"type": "features", "title": "Quick Win Strategies", "content": [
+      {"icon": "image", "title": "Thumbnail Upgrades", "description": "Test new thumbnails on old videos. Can revive dead content."},
+      {"icon": "type", "title": "Title Improvements", "description": "More compelling titles increase CTR. A/B test when possible."},
+      {"icon": "search", "title": "SEO Optimization", "description": "Target searchable keywords. Long-tail often easier to rank."},
+      {"icon": "video", "title": "Shorts for Discovery", "description": "Shorts reach new viewers. Can drive to long-form content."}
+    ]},
+    {"type": "benefits", "title": "What Increases Views", "content": [
+      "Topics people actually search for",
+      "Thumbnails that stand out in feed",
+      "Titles that create curiosity gap",
+      "Strong hooks in first 30 seconds",
+      "Engaging content throughout",
+      "Consistent posting schedule",
+      "Cross-platform promotion"
+    ]},
+    {"type": "checklist", "title": "Views Growth Checklist", "content": [
+      "Topic has search demand?",
+      "Thumbnail compelling?",
+      "Title creates curiosity?",
+      "Hook in first 30 seconds?",
+      "Content keeps viewers watching?",
+      "Posting consistently?",
+      "Promoting across platforms?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why aren't my videos getting views?", "answer": "Usually: not being shown (topic/SEO), not being clicked (thumbnail/title), or not being watched (content). Diagnose by checking impressions, CTR, and retention."},
+    {"question": "How long to see view growth?", "answer": "Varies widely. Some videos perform immediately, others take months. Focus on consistent improvement. 50+ videos often needed for significant traction."},
+    {"question": "Should I buy views?", "answer": "Absolutely not. Fake views destroy engagement metrics. YouTube can detect and penalize. Focus on genuine growth through good content."},
+    {"question": "Do tags help get views?", "answer": "Minimal impact today. Title, description, and content matter much more. Do tags properly but don't obsess—bigger fish to fry."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

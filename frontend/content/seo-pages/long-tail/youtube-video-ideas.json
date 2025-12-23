@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-video-ideas",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video Ideas 2025: 100+ Content Ideas That Get Views",
+    "description": "Stuck on what to make? Get proven YouTube video ideas for any niche. Content inspiration that actually performs.",
+    "keywords": ["youtube video ideas", "content ideas youtube", "youtube video topics", "what to post on youtube", "youtube content ideas"]
+  },
+  "hero": {
+    "badge": "Content Ideas",
+    "headline": "YouTube Video Ideas That Actually Get Views in 2025",
+    "subheadline": "Never run out of content ideas. Proven formats and topics that perform across any niche.",
+    "primaryKeyword": "youtube video ideas"
+  },
+  "sections": [
+    {"type": "intro", "content": "Every creator hits the content block wall. The key is having reliable formats and idea generation systems that never run dry. This guide provides proven video formats that work across niches, plus strategies to generate unlimited ideas for your specific audience."},
+    {"type": "features", "title": "Evergreen Video Formats", "content": [
+      {"icon": "list", "title": "List Videos", "description": "Top 10, 5 best, 7 mistakes. Lists are easy to make and viewers love the clear structure."},
+      {"icon": "school", "title": "Tutorial Content", "description": "How-to guides never go out of style. Solve specific problems your audience has."},
+      {"icon": "vs", "title": "Comparison Videos", "description": "X vs Y, before/after, old vs new. Comparisons satisfy decision-making viewers."}
+    ]},
+    {"type": "steps", "title": "Universal Video Ideas", "content": [
+      "Day in my life as a [your profession/hobby]",
+      "Reacting to [trending topic in your niche]",
+      "Beginner mistakes I made (and how to avoid them)",
+      "My [equipment/tools/setup] tour",
+      "Answering your questions (Q&A)",
+      "Trying [new technique/product] for the first time",
+      "The truth about [controversial topic]",
+      "What I wish I knew when I started",
+      "Rating [products/trends] in my niche",
+      "Behind the scenes of [process in your work]"
+    ]},
+    {"type": "checklist", "title": "Idea Generation Methods", "content": [
+      "Check YouTube autocomplete for your topics",
+      "Browse Reddit communities in your niche",
+      "Answer questions from your comments",
+      "Respond to competitor videos with your take",
+      "Cover trending news in your space",
+      "Create follow-ups to your best performers",
+      "Turn long videos into multiple topics",
+      "Ask your audience what they want",
+      "Repurpose content from other platforms"
+    ]},
+    {"type": "benefits", "title": "High-Performing Content Types", "content": [
+      "Tutorials that solve specific problems",
+      "Stories with emotional hooks",
+      "Controversial or contrarian takes",
+      "Transformation and journey content",
+      "Expert interviews and collaborations",
+      "Challenges and experiments",
+      "Reviews and honest opinions"
+    ]}
+  ],
+  "faq": [
+    {"question": "How do I find ideas for my specific niche?", "answer": "Search your niche keywords on YouTube, check 'People also search for', browse niche subreddits, and analyze what competitors' videos get the most views."},
+    {"question": "Should I copy what's working for others?", "answer": "Study successful formats but add your unique perspective. Same topic, different angle. Pure copying provides no value and doesn't build your brand."},
+    {"question": "How many video ideas should I have queued?", "answer": "Aim for 20-30 ideas in your backlog. This prevents content panic and lets you choose the best idea for your current energy and resources."},
+    {"question": "What if my ideas have already been done?", "answer": "Every idea has been done. Your unique take, personality, and presentation is what matters. There's room for multiple perspectives on any topic."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

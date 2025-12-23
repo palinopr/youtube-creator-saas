@@ -1,0 +1,78 @@
+{
+  "slug": "how-to-rank-youtube-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Rank YouTube Videos in Search 2025: Complete SEO Guide",
+    "description": "Learn YouTube SEO to rank your videos in search. Keywords, tags, descriptions, and optimization strategies that work in 2025.",
+    "keywords": ["rank youtube videos", "youtube seo", "youtube search ranking", "how to rank on youtube", "youtube video optimization"]
+  },
+  "hero": {
+    "badge": "YouTube SEO",
+    "headline": "How to Rank YouTube Videos in Search (2025 Guide)",
+    "subheadline": "Master YouTube SEO to get your videos discovered by viewers actively searching for your content.",
+    "primaryKeyword": "rank youtube videos"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "YouTube is the world's second-largest search engine. Ranking in search means consistent, passive views long after you upload. Unlike algorithm-dependent suggested videos, search traffic is predictable and compounding. This guide teaches you how to optimize every element for YouTube search success."
+    },
+    {
+      "type": "features",
+      "title": "YouTube Ranking Factors",
+      "content": [
+        {"icon": "search", "title": "Keyword Optimization", "description": "Using the right keywords in titles, descriptions, and tags tells YouTube what your video is about and who should see it."},
+        {"icon": "chart", "title": "Watch Time Signals", "description": "Videos that keep viewers watching rank higher. YouTube favors content that satisfies searcher intent."},
+        {"icon": "users", "title": "Engagement Metrics", "description": "Likes, comments, and shares signal quality. Higher engagement helps videos rank above competitors."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "YouTube SEO Process",
+      "content": [
+        "Research keywords before creating content (find what people search)",
+        "Put your primary keyword in the video title naturally",
+        "Write a description with keywords in the first 2 lines",
+        "Add 5-8 relevant tags including your main keyword",
+        "Create a thumbnail that matches the search intent",
+        "Optimize for watch time by delivering on your title's promise",
+        "Encourage engagement through calls-to-action in the video"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "YouTube SEO Checklist",
+      "content": [
+        "Primary keyword in first 60 characters of title",
+        "Description starts with a compelling summary including keywords",
+        "Timestamp chapters added for longer videos",
+        "5-8 relevant tags applied",
+        "Thumbnail matches search intent",
+        "Cards and end screens added",
+        "Filename includes keyword before upload"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Advanced SEO Tactics",
+      "content": [
+        "Create videos targeting long-tail keywords with less competition",
+        "Add transcripts or closed captions for more indexed text",
+        "Use YouTube's autocomplete to find search suggestions",
+        "Analyze competitor videos ranking for your target keywords",
+        "Update older videos with better optimization"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "How long does it take to rank on YouTube?", "answer": "New videos can rank within hours for low-competition keywords, or weeks for competitive terms. YouTube also evaluates watch time signals over time, so rankings can improve as your video proves it satisfies viewers."},
+    {"question": "Are YouTube tags still important?", "answer": "Tags are less important than they used to be but still help. They serve as secondary context for YouTube. Put more effort into title and description, but don't skip tags entirely."},
+    {"question": "How do I find good keywords?", "answer": "Use YouTube's search autocomplete, TubeGrow's keyword research, or analyze what keywords successful competitors rank for. Look for keywords with decent search volume but manageable competition."},
+    {"question": "Can I change SEO elements after uploading?", "answer": "Yes, you can update title, description, tags, and thumbnail anytime. If a video isn't ranking, try adjusting these elements. Give changes 1-2 weeks to take effect."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

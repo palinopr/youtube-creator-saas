@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-retention-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Retention Tips 2025: Keep Viewers Watching",
+    "description": "Improve YouTube audience retention. Techniques to keep viewers watching longer and boost your videos.",
+    "keywords": ["youtube retention tips", "audience retention", "watch time youtube", "keep viewers watching", "youtube average view duration"]
+  },
+  "hero": {
+    "badge": "Retention",
+    "headline": "YouTube Retention Tips",
+    "subheadline": "Keep viewers watching longer. Retention is the key metric for growth.",
+    "primaryKeyword": "youtube retention tips"
+  },
+  "sections": [
+    {"type": "intro", "content": "Retention—how long viewers watch—is YouTube's most important metric. High retention signals quality to the algorithm. A video with 60% retention will outperform one with 40%, regardless of other factors. Here's how to keep viewers watching."},
+    {"type": "features", "title": "Opening Hooks", "content": [
+      {"icon": "zap", "title": "Skip the Intro", "description": "No logos, no 'hey guys.' Start with value or intrigue immediately."},
+      {"icon": "eye", "title": "Pattern Interrupt", "description": "Unexpected visual or statement. Break the scroll instantly."},
+      {"icon": "clock", "title": "Promise + Payoff", "description": "Tell them what they'll learn. Give reason to stay."}
+    ]},
+    {"type": "features", "title": "Mid-Video Retention", "content": [
+      {"icon": "layers", "title": "Open Loops", "description": "Tease upcoming content. 'Later I'll show you...' keeps people watching."},
+      {"icon": "refresh-cw", "title": "Pattern Changes", "description": "New angle, B-roll, graphics every 15-30 seconds. Variety retains attention."},
+      {"icon": "message-circle", "title": "Direct Address", "description": "Talk TO viewers. Questions, acknowledgment keep them engaged."}
+    ]},
+    {"type": "steps", "title": "Retention Techniques", "content": [
+      "Hook within first 5 seconds",
+      "Eliminate slow intros completely",
+      "Use pattern interrupts every 30 seconds",
+      "Tease payoffs throughout video",
+      "Cut dead air and pauses",
+      "Add visual variety constantly",
+      "End with strong call-to-action"
+    ]},
+    {"type": "benefits", "title": "Signs of Good Retention", "content": [
+      "40%+ average view duration",
+      "Flat retention graph (not steep drop)",
+      "Viewers reaching your end screen",
+      "High percentage returning viewers",
+      "Comments mentioning watching full video",
+      "Strong re-watch spikes",
+      "Completion rate increasing over time"
+    ]},
+    {"type": "checklist", "title": "Retention Audit Checklist", "content": [
+      "Check retention graph in Studio",
+      "Identify drop-off points",
+      "Analyze your best-performing intros",
+      "Review average view duration trends",
+      "Compare retention across video types",
+      "Note what keeps YOUR audience watching",
+      "Test different approaches systematically"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good retention rate?", "answer": "40%+ is solid for most content. 50%+ is excellent. Short videos naturally have higher retention percentages. Compare against your own averages."},
+    {"question": "Why does my retention drop at the start?", "answer": "First 30 seconds critical. Viewers deciding if video is worth their time. Hook hard, deliver value fast. Cut generic intros."},
+    {"question": "How do I find retention data?", "answer": "YouTube Studio > Analytics > Engagement. Look at audience retention graph. Shows exactly where viewers leave."},
+    {"question": "Does video length affect retention?", "answer": "Yes and no. Longer videos have lower percentage but can have more total watch time. Match length to content—don't pad or cut short."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

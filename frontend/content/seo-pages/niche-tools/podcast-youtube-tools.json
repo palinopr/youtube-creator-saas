@@ -1,0 +1,59 @@
+{
+  "slug": "podcast-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Podcast YouTube Tools 2025: Video Podcasting Setup",
+    "description": "Essential tools for video podcasters on YouTube. Recording, editing, multi-camera setups, and distribution tools for podcast success.",
+    "keywords": ["podcast youtube tools", "video podcast equipment", "youtube podcast setup", "podcast recording software", "video podcasting gear"]
+  },
+  "hero": {
+    "badge": "Podcast Niche",
+    "headline": "Best YouTube Tools for Podcasters in 2025",
+    "subheadline": "Turn your podcast into engaging video content with the right recording and editing setup.",
+    "primaryKeyword": "podcast youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Video podcasting on YouTube has exploded. Audiences want to see the conversation, not just hear it. But video podcasting requires different tools than audio-only shows. This guide covers everything you need to create professional video podcasts that grow on YouTube."},
+    {"type": "features", "title": "Essential Podcast Tools", "content": [
+      {"icon": "video", "title": "Multi-Camera Recording", "description": "Riverside, Squadcast, or local recording with OBS. Remote guests need reliable, high-quality capture."},
+      {"icon": "sparkles", "title": "Audio-First Setup", "description": "Professional mics remain critical. SM7B, Rode PodMic, or Shure MV7 deliver podcast-quality audio."},
+      {"icon": "chart", "title": "Podcast Editing", "description": "Descript offers AI-powered editing with transcript-based cutting. Premiere or DaVinci for traditional editing."}
+    ]},
+    {"type": "checklist", "title": "Video Podcast Toolkit", "content": [
+      "Quality microphone per speaker (USB or XLR)",
+      "Camera with good low-light (webcam or mirrorless)",
+      "Key light for each participant",
+      "Remote recording platform (Riverside, Squadcast)",
+      "Multi-track audio recording",
+      "Video editor with podcast templates",
+      "Clip generator for highlights",
+      "Podcast hosting with YouTube distribution"
+    ]},
+    {"type": "benefits", "title": "Why Video Podcasting Works", "content": [
+      "YouTube is the #1 podcast discovery platform",
+      "Video clips drive social media engagement",
+      "Facial expressions add connection",
+      "Searchable on YouTube and Google",
+      "Monetization through YouTube Partner Program"
+    ]},
+    {"type": "steps", "title": "Setting Up Video Podcasting", "content": [
+      "Start with audio quality - it's still the foundation",
+      "Add simple lighting before expensive cameras",
+      "Choose a remote recording platform for guests",
+      "Create a clip workflow for social promotion",
+      "Distribute to audio platforms AND YouTube"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need multiple cameras?", "answer": "One camera works, but cuts between speakers keeps viewers engaged. Even two cameras (one per host) significantly improves the viewing experience."},
+    {"question": "What's the best remote recording tool?", "answer": "Riverside.fm and Squadcast lead for quality. They record locally on each participant's device, then sync the high-quality files."},
+    {"question": "How do I create clips for social media?", "answer": "Tools like Opus Clip, Descript, or manual editing in Premiere/CapCut. Short vertical clips with captions perform best on social."},
+    {"question": "Should I upload full episodes to YouTube?", "answer": "Yes, plus highlight clips as Shorts. Full episodes build watch time and subscribers. Clips drive discovery."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "podcast"
+}

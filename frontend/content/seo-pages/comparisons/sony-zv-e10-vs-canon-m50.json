@@ -1,0 +1,67 @@
+{
+  "slug": "sony-zv-e10-vs-canon-m50",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Sony ZV-E10 vs Canon M50 2025: Best YouTube Camera",
+    "description": "Compare Sony ZV-E10 and Canon M50 for YouTube. Video features, autofocus, and value.",
+    "keywords": ["sony zv-e10 vs canon m50", "best youtube camera", "zv-e10 vs m50", "vlogging camera comparison", "youtube camera 2025"]
+  },
+  "hero": {
+    "badge": "Camera Showdown",
+    "headline": "Sony ZV-E10 vs Canon M50",
+    "subheadline": "Two popular vlogging cameras. Which delivers better YouTube video?",
+    "primaryKeyword": "sony zv-e10 vs canon m50"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Sony ZV-E10 was designed specifically for creators. The Canon M50 is a popular hybrid option. Both shoot great video in their price range, but they approach vlogging differently. Here's how they compare for YouTube content."},
+    {"type": "comparison", "title": "Camera Comparison", "content": [
+      {"feature": "Price", "toolA": "ZV-E10: ~$700 body", "toolB": "M50: ~$600 body", "tubeGrow": "N/A"},
+      {"feature": "Video Resolution", "toolA": "ZV-E10: 4K 30fps", "toolB": "M50: 4K 24fps (crop)", "tubeGrow": "N/A"},
+      {"feature": "Autofocus", "toolA": "ZV-E10: Eye AF excellent", "toolB": "M50: Dual Pixel good", "tubeGrow": "N/A"},
+      {"feature": "Flip Screen", "toolA": "ZV-E10: Side-flip", "toolB": "M50: Flip-out", "tubeGrow": "N/A"},
+      {"feature": "Mic Input", "toolA": "ZV-E10: Yes + shoe", "toolB": "M50: Yes", "tubeGrow": "N/A"},
+      {"feature": "Recording Limit", "toolA": "ZV-E10: Unlimited", "toolB": "M50: 30 min limit", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Sony ZV-E10 Strengths", "content": [
+      {"icon": "video", "title": "Creator-Focused", "description": "Product showcase mode, background defocus button. Built for content."},
+      {"icon": "mic", "title": "Built-in Mic", "description": "Directional 3-capsule mic. Decent audio out of box."},
+      {"icon": "eye", "title": "Real-Time Eye AF", "description": "Locks on face/eyes reliably. Walk-and-talk friendly."}
+    ]},
+    {"type": "features", "title": "Canon M50 Strengths", "content": [
+      {"icon": "camera", "title": "Stills Capability", "description": "Better hybrid photo/video. More versatile overall."},
+      {"icon": "users", "title": "EF-M Lens Selection", "description": "Compact lenses, plus EF adapter option. Flexible system."},
+      {"icon": "book", "title": "Learning Resources", "description": "Massive community, tutorials everywhere. Great for beginners."}
+    ]},
+    {"type": "benefits", "title": "Choose ZV-E10 If", "content": [
+      "Video is primary focus",
+      "Want unlimited recording",
+      "Eye autofocus is priority",
+      "Built-in mic matters",
+      "Product showcase content",
+      "Walk-and-talk vlogging",
+      "Sony lens ecosystem"
+    ]},
+    {"type": "benefits", "title": "Choose M50 If", "content": [
+      "Photo capability important",
+      "Tighter budget",
+      "Canon ecosystem familiarity",
+      "Want flip-out screen",
+      "Beginner-friendly priority",
+      "EF lens collection exists",
+      "Hybrid photo/video use"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which has better autofocus?", "answer": "ZV-E10 has superior video autofocus with real-time eye tracking. M50's Dual Pixel is good but not as sticky in video mode."},
+    {"question": "Is the 4K crop on M50 a problem?", "answer": "Yes, significant crop makes 4K less useful. Most M50 users shoot 1080p. ZV-E10's 4K has smaller crop."},
+    {"question": "Which is better for beginners?", "answer": "M50 is more beginner-friendly with more learning resources. ZV-E10 is simple too but more video-focused."},
+    {"question": "Audio quality difference?", "answer": "ZV-E10's built-in mic is better. Both support external mics—use one for best results regardless."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "sony-zv-e10",
+  "secondaryTool": "canon-m50"
+}

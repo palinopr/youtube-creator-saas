@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-first-100-subscribers",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get Your First 100 YouTube Subscribers 2025",
+    "description": "Strategies for gaining your first 100 YouTube subscribers. Foundation building for new channels.",
+    "keywords": ["first 100 youtube subscribers", "get 100 subscribers", "new youtube channel growth", "youtube subscribers beginners", "start youtube channel"]
+  },
+  "hero": {
+    "badge": "Early Growth",
+    "headline": "Getting Your First 100 YouTube Subscribers",
+    "subheadline": "The hardest milestone. Foundation strategies that work for new channels.",
+    "primaryKeyword": "first 100 youtube subscribers"
+  },
+  "sections": [
+    {"type": "intro", "content": "The first 100 subscribers feel impossible—you're shouting into the void with no existing audience. But this foundation matters. Build genuine connections, optimize basics, and focus on quality over viral aspirations. Here's how to reach 100 legitimately."},
+    {"type": "features", "title": "Foundation Setup", "content": [
+      {"icon": "user", "title": "Complete Channel Profile", "description": "Banner, avatar, about section. Look established even when small."},
+      {"icon": "video", "title": "5-10 Quality Videos", "description": "Foundation of searchable content before promoting. Don't promote empty channel."},
+      {"icon": "target", "title": "Clear Niche", "description": "What's your channel about? Visitors should know immediately."}
+    ]},
+    {"type": "steps", "title": "Growth Strategies", "content": [
+      "Share with friends and family (genuine interest only)",
+      "Post in relevant subreddits (add value, don't spam)",
+      "Comment thoughtfully on similar channels",
+      "Optimize titles for search (long-tail keywords)",
+      "Create content answering specific questions",
+      "Engage in niche communities authentically",
+      "Collaborate with other small creators"
+    ]},
+    {"type": "features", "title": "Search-First Approach", "content": [
+      {"icon": "search", "title": "Answer Questions", "description": "What do beginners search? Create content for those queries."},
+      {"icon": "trending-up", "title": "Long-Tail Keywords", "description": "Less competition. Specific searches you can rank for."},
+      {"icon": "tag", "title": "Tutorial Format", "description": "'How to' videos get searched. Evergreen discovery."}
+    ]},
+    {"type": "benefits", "title": "What Works at 0-100", "content": [
+      "Search-optimized tutorials",
+      "Genuine community participation",
+      "Consistent upload schedule",
+      "Responding to every comment",
+      "Quality over quantity",
+      "Patience and persistence",
+      "Learning from analytics"
+    ]},
+    {"type": "benefits", "title": "What Doesn't Work", "content": [
+      "Buying subscribers",
+      "Sub4sub schemes",
+      "Spamming comment sections",
+      "Clickbait without substance",
+      "Copying popular creators exactly",
+      "Begging for subscribers",
+      "Expecting overnight success"
+    ]},
+    {"type": "checklist", "title": "First 100 Checklist", "content": [
+      "Channel art complete?",
+      "About section filled?",
+      "5+ videos published?",
+      "Titles search-optimized?",
+      "Thumbnails consistent?",
+      "Comments responded to?",
+      "Sharing in communities?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long to reach 100 subscribers?", "answer": "Varies wildly—weeks to months. Consistent uploading and optimization speeds it up. Focus on content quality, not speed."},
+    {"question": "Should I tell friends to subscribe?", "answer": "Only if genuinely interested. Unengaged subscribers hurt your metrics. Better to have 50 engaged than 100 who never watch."},
+    {"question": "Is sub4sub worth it?", "answer": "Never. Kills your channel metrics. YouTube's algorithm notices low engagement. Hurts recommendations long-term."},
+    {"question": "When to start promoting?", "answer": "After 5-10 quality videos minimum. Don't promote empty channel. Give new visitors content to binge."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

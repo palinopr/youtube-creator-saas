@@ -423,12 +423,196 @@ class ChannelAnalyzer:
             "correlation": links_data.get("correlation", "neutral"),
         }
         
-        # Hashtags factor  
+        # Hashtags factor
         hashtags_data = analysis.get("has_hashtags", {})
         model["factors"]["has_hashtags"] = {
             "weight": 10 if hashtags_data.get("correlation") == "positive" else 5,
             "correlation": hashtags_data.get("correlation", "neutral"),
         }
-        
+
         return model
+
+    def profile_channel(self, max_videos: int = 20) -> Dict[str, Any]:
+        """
+        Profile a channel to detect its niche, language, and content patterns.
+        Used to personalize AI recommendations for any channel type.
+
+        Returns a channel profile dict with:
+        - niche: detected content type (gaming, podcast, music, tech, etc.)
+        - language: primary language of content
+        - content_types: list of detected content formats
+        - title_patterns: common title structures
+        - avg_title_length, avg_description_length
+        - common_tags: most frequently used tags
+        """
+        # Get recent videos for analysis
+        videos = self.get_all_videos(max_videos=max_videos)
+
+        if not videos:
+            return self._default_profile()
+
+        # Detect language
+        language = self._detect_language(videos)
+
+        # Detect niche/content type
+        niche, content_types = self._detect_niche(videos)
+
+        # Analyze title patterns
+        title_patterns = self._analyze_title_patterns(videos)
+
+        # Calculate averages
+        avg_title_length = round(statistics.mean([v["title_length"] for v in videos]), 1)
+        avg_description_length = round(statistics.mean([v["description_length"] for v in videos]), 1)
+
+        # Get common tags
+        common_tags = self._get_common_tags(videos)
+
+        return {
+            "niche": niche,
+            "language": language,
+            "content_types": content_types,
+            "title_patterns": title_patterns,
+            "avg_title_length": avg_title_length,
+            "avg_description_length": avg_description_length,
+            "common_tags": common_tags,
+            "videos_analyzed": len(videos),
+            "analyzed_at": datetime.utcnow().isoformat(),
+        }
+
+    def _default_profile(self) -> Dict[str, Any]:
+        """Return a default profile when no videos are available."""
+        return {
+            "niche": "general",
+            "language": "en",
+            "content_types": ["video"],
+            "title_patterns": [],
+            "avg_title_length": 50,
+            "avg_description_length": 200,
+            "common_tags": [],
+            "videos_analyzed": 0,
+            "analyzed_at": datetime.utcnow().isoformat(),
+        }
+
+    def _detect_language(self, videos: List[Dict]) -> str:
+        """Detect the primary language of the channel's content."""
+        # Combine all titles and descriptions
+        text = " ".join([v["title"] + " " + v["description"][:200] for v in videos])
+        text_lower = text.lower()
+
+        # Language detection by common words
+        language_markers = {
+            "es": ["el", "la", "de", "que", "en", "los", "las", "del", "es", "un", "una", "por", "con", "para"],
+            "pt": ["o", "a", "de", "que", "em", "os", "as", "do", "da", "um", "uma", "por", "com", "para"],
+            "fr": ["le", "la", "de", "que", "en", "les", "des", "du", "un", "une", "pour", "avec", "est"],
+            "de": ["der", "die", "das", "und", "in", "ist", "von", "mit", "für", "den", "auf", "ein", "eine"],
+            "it": ["il", "la", "di", "che", "in", "e", "un", "una", "per", "con", "sono", "del", "della"],
+            "en": ["the", "and", "of", "to", "in", "is", "you", "that", "it", "for", "on", "with", "this"],
+        }
+
+        # Count matches for each language
+        scores = {}
+        words = text_lower.split()
+
+        for lang, markers in language_markers.items():
+            score = sum(1 for word in words if word in markers)
+            scores[lang] = score
+
+        # Return language with highest score, default to English
+        if not scores:
+            return "en"
+
+        best_lang = max(scores, key=scores.get)
+        return best_lang if scores[best_lang] > 5 else "en"
+
+    def _detect_niche(self, videos: List[Dict]) -> tuple:
+        """Detect the channel's niche and content types."""
+        # Combine text for analysis
+        text = " ".join([v["title"] + " " + v["description"][:300] for v in videos]).lower()
+        tags = []
+        for v in videos:
+            tags.extend([t.lower() for t in v.get("tags", [])])
+        tag_text = " ".join(tags)
+        combined = text + " " + tag_text
+
+        # Niche detection patterns
+        niche_patterns = {
+            "gaming": ["game", "gaming", "gameplay", "playthrough", "let's play", "walkthrough",
+                       "ps5", "xbox", "nintendo", "fortnite", "minecraft", "gta", "cod", "valorant"],
+            "music": ["music", "song", "audio", "beat", "lyrics", "remix", "cover", "official video",
+                      "feat.", "ft.", "prod.", "album", "single", "track"],
+            "podcast": ["podcast", "episode", "ep.", "interview", "conversation", "talk", "discussion",
+                        "guest", "host", "q&a", "ask me", "ama"],
+            "tech": ["tech", "technology", "review", "unboxing", "gadget", "smartphone", "laptop",
+                     "iphone", "android", "apple", "samsung", "software", "app"],
+            "education": ["tutorial", "how to", "learn", "guide", "course", "lesson", "explained",
+                          "tips", "tricks", "beginner", "advanced", "step by step"],
+            "vlog": ["vlog", "day in", "week in", "life", "routine", "daily", "travel", "adventure"],
+            "cooking": ["recipe", "cooking", "food", "cook", "kitchen", "meal", "dish", "ingredient"],
+            "fitness": ["workout", "fitness", "exercise", "gym", "training", "muscle", "weight",
+                        "cardio", "yoga", "stretch"],
+            "entertainment": ["funny", "comedy", "prank", "challenge", "react", "reaction",
+                              "compilation", "moments", "fails", "best of"],
+            "news": ["news", "breaking", "update", "report", "analysis", "current", "today",
+                     "happening", "latest"],
+            "beauty": ["makeup", "beauty", "skincare", "cosmetics", "tutorial", "haul", "grwm",
+                       "get ready", "routine"],
+            "sports": ["sports", "football", "soccer", "basketball", "nba", "nfl", "match",
+                       "highlights", "goals", "score"],
+        }
+
+        # Score each niche
+        niche_scores = {}
+        for niche, keywords in niche_patterns.items():
+            score = sum(combined.count(keyword) for keyword in keywords)
+            if score > 0:
+                niche_scores[niche] = score
+
+        # Determine primary niche
+        if not niche_scores:
+            primary_niche = "general"
+        else:
+            primary_niche = max(niche_scores, key=niche_scores.get)
+
+        # Get content types (top 3 niches with scores)
+        sorted_niches = sorted(niche_scores.items(), key=lambda x: x[1], reverse=True)
+        content_types = [n[0] for n in sorted_niches[:3]] if sorted_niches else ["video"]
+
+        return primary_niche, content_types
+
+    def _analyze_title_patterns(self, videos: List[Dict]) -> List[str]:
+        """Analyze common title patterns in the channel."""
+        patterns_found = []
+        titles = [v["title"] for v in videos]
+
+        # Check for common patterns
+        pattern_checks = {
+            "question": lambda t: t.strip().endswith("?"),
+            "numbered_list": lambda t: bool(re.match(r'^\d+\s', t)),
+            "all_caps_words": lambda t: bool(re.search(r'\b[A-Z]{3,}\b', t)),
+            "emoji_usage": lambda t: bool(re.search(r'[\U0001F300-\U0001F9FF]', t)),
+            "brackets": lambda t: "[" in t or "(" in t,
+            "pipe_separator": lambda t: "|" in t,
+            "colon_separator": lambda t: ":" in t,
+            "dash_separator": lambda t: " - " in t or " – " in t,
+            "hashtag_in_title": lambda t: "#" in t,
+        }
+
+        for pattern_name, check_func in pattern_checks.items():
+            count = sum(1 for t in titles if check_func(t))
+            if count >= len(titles) * 0.2:  # At least 20% of videos use this pattern
+                patterns_found.append(pattern_name)
+
+        return patterns_found
+
+    def _get_common_tags(self, videos: List[Dict], top_n: int = 15) -> List[str]:
+        """Get the most commonly used tags across videos."""
+        tag_counts = {}
+        for video in videos:
+            for tag in video.get("tags", []):
+                tag_lower = tag.lower()
+                tag_counts[tag_lower] = tag_counts.get(tag_lower, 0) + 1
+
+        # Sort by count and return top tags
+        sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
+        return [tag for tag, count in sorted_tags[:top_n]]
 

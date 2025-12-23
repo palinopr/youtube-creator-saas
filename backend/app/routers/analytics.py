@@ -6,7 +6,7 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
-from ..auth.dependencies import get_current_user, check_usage
+from ..auth.dependencies import get_current_user, check_usage, get_channel_profile
 from ..auth.youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
 from ..config import get_settings
 from ..db.models import User
@@ -266,14 +266,15 @@ async def get_analytics_overview(
 async def query_agent(
     request: Request,
     query: AgentQuery,
-    user: User = Depends(check_usage("ai_queries_per_month"))
+    user: User = Depends(check_usage("ai_queries_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """Ask the AI agent a question about your channel."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
-        
-        agent = AnalyticsAgent(youtube, youtube_analytics)
+
+        agent = AnalyticsAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         response = await agent.query(query.question)
         
         return {
@@ -291,14 +292,15 @@ async def query_agent(
 @limiter.limit("5/minute")
 async def get_quick_insights(
     request: Request,
-    user: User = Depends(check_usage("ai_queries_per_month"))
+    user: User = Depends(check_usage("ai_queries_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """Get quick AI-generated insights about the channel."""
     try:
         youtube = get_authenticated_service("youtube", "v3")
         youtube_analytics = get_authenticated_service("youtubeAnalytics", "v2")
-        
-        agent = AnalyticsAgent(youtube, youtube_analytics)
+
+        agent = AnalyticsAgent(youtube, youtube_analytics, user_id=user.id, channel_profile=channel_profile)
         insights = agent.get_quick_insights()
         
         return insights

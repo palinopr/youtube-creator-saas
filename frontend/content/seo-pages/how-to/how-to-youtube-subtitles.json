@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-subtitles",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add YouTube Subtitles 2025: Captions & Translations Guide",
+    "description": "Add subtitles to YouTube videos. Auto-captions, manual upload, and translation strategies.",
+    "keywords": ["youtube subtitles", "youtube captions", "add captions youtube", "youtube closed captions", "subtitle youtube video"]
+  },
+  "hero": {
+    "badge": "Subtitles",
+    "headline": "How to Add YouTube Subtitles",
+    "subheadline": "Reach more viewers with captions. Accessibility and SEO benefits.",
+    "primaryKeyword": "youtube subtitles"
+  },
+  "sections": [
+    {"type": "intro", "content": "Subtitles dramatically expand your audience—viewers watching without sound, non-native speakers, deaf and hard-of-hearing communities, and ESL learners. Captions also improve SEO since YouTube indexes caption text. Here's how to add them effectively."},
+    {"type": "features", "title": "Caption Options", "content": [
+      {"icon": "cpu", "title": "Auto-Generated", "description": "YouTube creates automatically. Good starting point, needs editing."},
+      {"icon": "edit", "title": "Manual Upload", "description": "Upload SRT file. Most accurate. Time-consuming."},
+      {"icon": "type", "title": "Type Alongside", "description": "Type in YouTube Studio. Syncs to audio automatically."}
+    ]},
+    {"type": "steps", "title": "Adding Subtitles", "content": [
+      "Open YouTube Studio, go to video",
+      "Click Subtitles in left menu",
+      "Select language (add if needed)",
+      "Choose method: auto-sync, type, or upload",
+      "Edit auto-generated captions for accuracy",
+      "Add punctuation and formatting",
+      "Publish captions"
+    ]},
+    {"type": "features", "title": "Caption Quality Tips", "content": [
+      {"icon": "check", "title": "Edit Auto-Captions", "description": "Never leave auto-captions unedited. Fix errors, add punctuation."},
+      {"icon": "globe", "title": "Add Translations", "description": "Translated captions expand global reach. Use professional translation."},
+      {"icon": "layout", "title": "Format for Readability", "description": "Short lines, natural breaks. Don't cover important visuals."}
+    ]},
+    {"type": "benefits", "title": "Subtitle Benefits", "content": [
+      "Accessibility for deaf/hard-of-hearing",
+      "Viewers watching without sound (80%+ on mobile)",
+      "Non-native English speakers",
+      "SEO boost—YouTube indexes caption text",
+      "Searchability within video",
+      "Professionalism signal",
+      "Required for some translations"
+    ]},
+    {"type": "checklist", "title": "Caption Checklist", "content": [
+      "Auto-captions edited for accuracy?",
+      "Punctuation added correctly?",
+      "Speaker identification if multiple?",
+      "Timing synced properly?",
+      "Jargon/names spelled correctly?",
+      "Sound effects noted [in brackets]?",
+      "Published and enabled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Are auto-captions good enough?", "answer": "No—always edit. Auto-captions have errors that look unprofessional and hurt accessibility. 5-10 minutes editing is worth it."},
+    {"question": "Do captions help SEO?", "answer": "Yes. YouTube indexes caption text for search. Accurate captions with keywords naturally included improve discoverability."},
+    {"question": "Should I add other languages?", "answer": "If you have international audience, yes. Check Analytics for viewer locations. Professional translation recommended over auto-translate."},
+    {"question": "How to add captions faster?", "answer": "Tools like Descript or Rev.com transcribe accurately. Edit their output, export SRT, upload to YouTube. Faster than manual."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

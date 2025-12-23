@@ -1,0 +1,65 @@
+{
+  "slug": "elgato-vs-avermedia",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Elgato vs AVerMedia 2025: Best Capture Card for YouTube",
+    "description": "Compare Elgato and AVerMedia capture cards for YouTube gaming and streaming. Features, quality, and value for content creators.",
+    "keywords": ["elgato vs avermedia", "best capture card", "capture card comparison", "game capture", "streaming capture card"]
+  },
+  "hero": {
+    "badge": "Capture Cards",
+    "headline": "Elgato vs AVerMedia: Which Capture Card Wins?",
+    "subheadline": "Two capture card giants battle for your streaming setup. Find the right choice for your needs.",
+    "primaryKeyword": "elgato vs avermedia"
+  },
+  "sections": [
+    {"type": "intro", "content": "Elgato and AVerMedia dominate the capture card market for YouTube creators. Both offer quality game capture, but with different strengths in software, features, and price points. This comparison helps you choose the right card for your gaming content."},
+    {"type": "comparison", "title": "Capture Card Comparison", "content": [
+      {"feature": "Price Range", "toolA": "$150-400", "toolB": "$100-350", "tubeGrow": "N/A"},
+      {"feature": "Software", "toolA": "4K Capture Utility", "toolB": "RECentral", "tubeGrow": "N/A"},
+      {"feature": "OBS Integration", "toolA": "Excellent", "toolB": "Good", "tubeGrow": "N/A"},
+      {"feature": "Passthrough", "toolA": "4K60 HDR", "toolB": "4K60 HDR", "tubeGrow": "N/A"},
+      {"feature": "Capture Quality", "toolA": "4K30/1080p60", "toolB": "4K30/1080p60", "tubeGrow": "N/A"},
+      {"feature": "Build Quality", "toolA": "Premium", "toolB": "Good", "tubeGrow": "N/A"},
+      {"feature": "Stream Deck", "toolA": "Full Integration", "toolB": "Basic", "tubeGrow": "N/A"},
+      {"feature": "Mac Support", "toolA": "Excellent", "toolB": "Limited", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Elgato Advantages", "content": [
+      {"icon": "grid", "title": "Ecosystem Integration", "description": "Works seamlessly with Stream Deck, Wave microphones, and Elgato lighting."},
+      {"icon": "apple", "title": "Mac Support", "description": "Better macOS compatibility than any competitor."},
+      {"icon": "tool", "title": "Build Quality", "description": "Premium feel and reliable long-term performance."}
+    ]},
+    {"type": "features", "title": "AVerMedia Advantages", "content": [
+      {"icon": "dollar", "title": "Value Pricing", "description": "Often $50-100 cheaper than comparable Elgato cards."},
+      {"icon": "video", "title": "Internal Cards", "description": "Strong PCIe internal card lineup for desktop setups."},
+      {"icon": "zap", "title": "Hardware Encoding", "description": "Some models include hardware encoding, reducing CPU load."}
+    ]},
+    {"type": "benefits", "title": "Choose Elgato If", "content": [
+      "You use Mac for streaming/recording",
+      "You want Stream Deck integration",
+      "You prioritize build quality and reliability",
+      "You're building an Elgato ecosystem",
+      "Software experience matters to you"
+    ]},
+    {"type": "benefits", "title": "Choose AVerMedia If", "content": [
+      "Budget is a primary concern",
+      "You want a PCIe internal card",
+      "You need hardware encoding",
+      "You primarily use Windows",
+      "You want similar quality for less"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need a capture card for PC gaming?", "answer": "Not for recording your own PC games. OBS can capture directly. Capture cards are for console gaming or dual-PC streaming setups."},
+    {"question": "Which brand has better software?", "answer": "Elgato's software is more polished and user-friendly. Most creators use OBS anyway, where both brands work well."},
+    {"question": "Can I use these for console streaming?", "answer": "Yes, that's their primary purpose. Both brands capture PlayStation, Xbox, and Nintendo Switch footage."},
+    {"question": "Internal or external capture card?", "answer": "External USB cards are more flexible. Internal PCIe cards have slightly better performance. Choose based on your setup needs."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "elgato",
+  "secondaryTool": "avermedia"
+}

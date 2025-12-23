@@ -1,0 +1,68 @@
+{
+  "slug": "youtube-burnout-prevention",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Burnout Prevention 2025: Creator Mental Health Guide",
+    "description": "Prevent YouTube creator burnout. Sustainable content creation strategies.",
+    "keywords": ["youtube burnout", "creator burnout", "youtube mental health", "prevent burnout youtube", "sustainable youtube"]
+  },
+  "hero": {
+    "badge": "Burnout Prevention",
+    "headline": "YouTube Burnout Prevention Guide",
+    "subheadline": "Create sustainably. Strategies for long-term creator health.",
+    "primaryKeyword": "youtube burnout"
+  },
+  "sections": [
+    {"type": "intro", "content": "Creator burnout is epidemic. The pressure to constantly create, the algorithm anxiety, negative comments, and the never-ending nature of content creation takes a toll. Sustainable creation isn't just nice to have—it's essential for long-term success."},
+    {"type": "features", "title": "Burnout Signs", "content": [
+      {"icon": "battery-low", "title": "Exhaustion", "description": "Dreading content creation. No energy or motivation."},
+      {"icon": "x-circle", "title": "Detachment", "description": "Disconnect from audience, content, channel. Going through motions."},
+      {"icon": "trending-down", "title": "Reduced Output", "description": "Missing uploads, lower quality, avoiding filming."}
+    ]},
+    {"type": "steps", "title": "Preventing Burnout", "content": [
+      "Set sustainable upload schedule (not what others do)",
+      "Batch content creation for efficiency",
+      "Build buffer of scheduled content",
+      "Take planned breaks without guilt",
+      "Disconnect from metrics regularly",
+      "Diversify your life beyond YouTube",
+      "Build systems that reduce decision fatigue",
+      "Connect with other creators who understand"
+    ]},
+    {"type": "features", "title": "Sustainable Practices", "content": [
+      {"icon": "calendar", "title": "Realistic Schedule", "description": "Upload frequency you can maintain for years, not weeks."},
+      {"icon": "layers", "title": "Content Batching", "description": "Film multiple videos in one session. More efficient."},
+      {"icon": "pause", "title": "Planned Breaks", "description": "Schedule time off. Communicate with audience. They'll understand."},
+      {"icon": "shield", "title": "Comment Boundaries", "description": "Limit comment reading. Use moderation. Protect mental health."}
+    ]},
+    {"type": "benefits", "title": "Sustainability Tips", "content": [
+      "Quality > quantity for sustainability",
+      "Audience prefers consistent over burned-out creator",
+      "Buffer content reduces stress",
+      "Breaks often improve creativity",
+      "Success means nothing if miserable",
+      "YouTube is marathon, not sprint",
+      "Your health comes first, always"
+    ]},
+    {"type": "checklist", "title": "Sustainability Checklist", "content": [
+      "Upload schedule sustainable long-term?",
+      "Content buffer built?",
+      "Breaks scheduled?",
+      "Metrics obsession managed?",
+      "Life outside YouTube exists?",
+      "Comment boundaries set?",
+      "Creator support network exists?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I upload?", "answer": "What you can sustain for years. Weekly is common, but bi-weekly or monthly can work. Consistency matters more than frequency. Don't compare to full-time creators if you're not."},
+    {"question": "Should I take a break?", "answer": "If you're asking, probably yes. Communicate with audience, schedule break, recharge. Channel survives breaks better than burned-out creator."},
+    {"question": "How to handle negative comments?", "answer": "Moderation settings, limited reading time, moderators. Don't read before bed. Block freely. Your mental health is worth more than any comment."},
+    {"question": "What if my channel suffers during breaks?", "answer": "Short-term dip possible but usually recovers. Long-term burnout causes permanent quit. Taking breaks is sustainable, burning out isn't."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

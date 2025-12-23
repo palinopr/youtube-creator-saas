@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-lighting-setup",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Lighting Setup 2025: Best Lighting for Videos",
+    "description": "Set up lighting for YouTube videos. Budget to professional lighting solutions.",
+    "keywords": ["youtube lighting setup", "lighting for youtube", "video lighting tips", "youtube studio lighting", "best lights youtube"]
+  },
+  "hero": {
+    "badge": "Lighting Setup",
+    "headline": "YouTube Lighting Setup Guide",
+    "subheadline": "Good lighting makes any camera look better. Here's how to set it up.",
+    "primaryKeyword": "youtube lighting setup"
+  },
+  "sections": [
+    {"type": "intro", "content": "Lighting is the single biggest improvement you can make to video quality—more than camera upgrades. Proper lighting makes you look professional, eliminates harsh shadows, and helps cameras capture better footage. You can start with natural light and upgrade as budget allows."},
+    {"type": "features", "title": "Lighting Basics", "content": [
+      {"icon": "sun", "title": "Key Light", "description": "Main light source on subject."},
+      {"icon": "zap", "title": "Fill Light", "description": "Softens shadows from key."},
+      {"icon": "box", "title": "Back Light", "description": "Separates from background."},
+      {"icon": "layers", "title": "Background Light", "description": "Illuminates set behind."}
+    ]},
+    {"type": "features", "title": "Light Types", "content": [
+      {"icon": "circle", "title": "Ring Light", "description": "Good for face, flat look."},
+      {"icon": "square", "title": "Softbox", "description": "Soft, flattering light."},
+      {"icon": "layers", "title": "Panel LED", "description": "Versatile, adjustable."},
+      {"icon": "sun", "title": "Window Light", "description": "Free, beautiful, variable."}
+    ]},
+    {"type": "steps", "title": "Basic Setup Process", "content": [
+      "Position key light 45° to side of face",
+      "Place at slightly above eye level",
+      "Add fill light opposite key (half intensity)",
+      "Consider backlight for depth",
+      "Diffuse harsh lights with softboxes",
+      "Match color temperature across lights",
+      "Check on camera—adjust as needed",
+      "Block competing light sources"
+    ]},
+    {"type": "benefits", "title": "Lighting Tips", "content": [
+      "Window light is free and beautiful",
+      "Softboxes more flattering than ring lights",
+      "Color temperature consistency matters",
+      "Avoid mixing natural and artificial",
+      "Light the background for depth",
+      "Diffusion makes everything better",
+      "Test record before filming"
+    ]},
+    {"type": "checklist", "title": "Lighting Checklist", "content": [
+      "Key light positioned correctly?",
+      "Shadows soft, not harsh?",
+      "No unflattering under-eye shadows?",
+      "Background visible and lit?",
+      "Color temperature matched?",
+      "Tested on camera?",
+      "Competing light sources blocked?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best budget lighting option?", "answer": "Natural window light is free and excellent. For artificial, Neewer softbox kits under $100 work well. Single good light beats multiple cheap ones. Start simple, upgrade as needed."},
+    {"question": "Ring light or softbox?", "answer": "Softbox more flattering for most—soft, natural look. Ring lights distinctive but can look artificial. Ring lights good for beauty, softbox better for general content. Both work."},
+    {"question": "How to light with one light?", "answer": "Place single softbox at 45° angle to face. Use white wall or reflector opposite to fill shadows. Position near window for combined effect. One good light can work great."},
+    {"question": "Does lighting matter that much?", "answer": "More than camera quality in most cases. Well-lit phone footage beats poorly-lit expensive camera. Lighting is first upgrade recommendation for improving video quality. Worth the investment."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

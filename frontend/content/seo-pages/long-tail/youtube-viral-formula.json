@@ -1,0 +1,68 @@
+{
+  "slug": "youtube-viral-formula",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Viral Formula 2025: What Makes Videos Go Viral",
+    "description": "Understand what makes YouTube videos go viral. Elements, patterns, and strategies for viral content.",
+    "keywords": ["youtube viral formula", "make viral video", "youtube viral", "viral video tips", "go viral youtube"]
+  },
+  "hero": {
+    "badge": "Viral Formula",
+    "headline": "YouTube Viral Formula Guide",
+    "subheadline": "Virality isn't random. Understand the patterns behind explosive videos.",
+    "primaryKeyword": "youtube viral formula"
+  },
+  "sections": [
+    {"type": "intro", "content": "Viral videos share common patterns—emotional triggers, shareability factors, and timing elements. While virality can't be guaranteed, understanding these patterns dramatically increases your odds. Here's what separates viral videos from the rest."},
+    {"type": "features", "title": "Viral Video Elements", "content": [
+      {"icon": "heart", "title": "Emotional Trigger", "description": "Joy, surprise, awe, anger, or inspiration. Strong emotion drives sharing."},
+      {"icon": "share-2", "title": "Shareability", "description": "Makes people look good/smart/funny when they share it."},
+      {"icon": "clock", "title": "Timing", "description": "Taps into current trends, news, or cultural moments."}
+    ]},
+    {"type": "features", "title": "Viral Content Types", "content": [
+      {"icon": "zap", "title": "Surprising Content", "description": "Unexpected outcomes, plot twists, reveals. Subverted expectations."},
+      {"icon": "award", "title": "Achievement/Talent", "description": "Impressive skills, records, accomplishments viewers want to share."},
+      {"icon": "message-circle", "title": "Relatable Moments", "description": "Universal experiences people tag friends in. 'This is so us.'"},
+      {"icon": "book", "title": "Educational Insight", "description": "Mind-blowing facts, 'I never knew that' content."}
+    ]},
+    {"type": "steps", "title": "Viral-Optimized Creation", "content": [
+      "Identify emotional core of your content",
+      "Make sharing feel valuable to the sharer",
+      "Hook intensely in first 3 seconds",
+      "Create 'I have to share this' moments",
+      "Optimize for the share platforms (Twitter, TikTok, etc.)",
+      "Time releases with relevant trends",
+      "Make content easy to clip and reshare",
+      "Build anticipation before release"
+    ]},
+    {"type": "benefits", "title": "Virality Principles", "content": [
+      "Emotion drives shares more than information",
+      "Simple concepts spread faster",
+      "Controversy generates engagement (carefully)",
+      "Timing with trends multiplies reach",
+      "Thumbnails must trigger curiosity",
+      "First 30 seconds determine everything",
+      "Virality is a bonus, not a strategy"
+    ]},
+    {"type": "checklist", "title": "Viral Potential Checklist", "content": [
+      "Strong emotional trigger present?",
+      "Would people feel good sharing this?",
+      "Hook grabs attention immediately?",
+      "Relevant to current trends/news?",
+      "Easy to understand and share?",
+      "Creates conversation or debate?",
+      "Thumbnail irresistible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can you guarantee a viral video?", "answer": "No—virality has luck component. But you can stack the odds. Understand patterns, optimize elements, create more attempts. Volume + optimization = eventual viral hit."},
+    {"question": "Should I try to go viral?", "answer": "Not as primary strategy. Build sustainable content first. Viral is bonus. Channels built on viral hits struggle when they stop. Consistent content > chasing viral."},
+    {"question": "How important is timing?", "answer": "Significant for trend-based content. Posting about news event days late kills viral potential. For evergreen content, timing matters less."},
+    {"question": "Do viral videos help channel long-term?", "answer": "Mixed—can bring subscribers but often wrong audience. Viral viewers may not watch your regular content. Treat viral as awareness, not growth strategy."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "blacksmithing-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Blacksmithing YouTube Tools 2025: Forge Channel Equipment",
+    "description": "Top tools for blacksmithing YouTube channels. Film forging, knifemaking, and metalwork.",
+    "keywords": ["blacksmithing youtube tools", "forge channel equipment", "knifemaking video", "metalwork youtube", "blacksmith content"]
+  },
+  "hero": {
+    "badge": "Blacksmithing Tools",
+    "headline": "Best Blacksmithing YouTube Tools 2025",
+    "subheadline": "Capture the heat. Gear for forge creators.",
+    "primaryKeyword": "blacksmithing youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Blacksmithing content is viscerally satisfying—glowing metal, hammer strikes, and transformation from raw steel to finished pieces. Filming in forge conditions presents challenges: extreme heat, dynamic lighting, and loud environments. Here's what successful blacksmith YouTubers use."},
+    {"type": "features", "title": "Camera Challenges", "content": [
+      {"icon": "thermometer", "title": "Heat Protection", "description": "Keep cameras away from forge."},
+      {"icon": "sun", "title": "Dynamic Range", "description": "Bright forge, dark shop."},
+      {"icon": "video", "title": "Multiple Angles", "description": "Forge, anvil, detail shots."},
+      {"icon": "eye", "title": "Slow Motion", "description": "Hammer strikes and sparks."}
+    ]},
+    {"type": "features", "title": "Exposure Control", "content": [
+      {"icon": "aperture", "title": "Manual Settings", "description": "Auto exposure fails on forge."},
+      {"icon": "layers", "title": "Graduated ND", "description": "Balance bright and dark."},
+      {"icon": "monitor", "title": "HDR Options", "description": "Capture full range if available."},
+      {"icon": "sliders", "title": "Dual Exposure", "description": "Capture both, composite."}
+    ]},
+    {"type": "features", "title": "Audio Solutions", "content": [
+      {"icon": "volume-2", "title": "Hammer Sounds", "description": "Forge ASMR is popular."},
+      {"icon": "mic", "title": "Voiceover", "description": "Record separately, mix in."},
+      {"icon": "headphones", "title": "Ear Protection", "description": "For you, limit for audience."},
+      {"icon": "volume-x", "title": "Noise Control", "description": "Exhaust fans, power tools."}
+    ]},
+    {"type": "benefits", "title": "Blacksmithing Content Tips", "content": [
+      "Slow-mo hammer strikes are mesmerizing",
+      "Show the transformation—raw to finished",
+      "Forge sounds are ASMR gold",
+      "Knifemaking especially popular",
+      "Safety demonstrations build trust",
+      "Process is as engaging as product",
+      "Before/after comparisons satisfy"
+    ]},
+    {"type": "checklist", "title": "Blacksmithing Video Checklist", "content": [
+      "Cameras protected from heat?",
+      "Exposure handles bright metal?",
+      "Multiple angles set up?",
+      "Safety gear visible?",
+      "Audio solution in place?",
+      "Slow-mo mode ready?",
+      "Finished piece shots planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film glowing metal?", "answer": "Manual exposure crucial—auto will blow out bright metal. Expose for the hot metal, let shadows go dark. Consider dual exposure compositing in post. Some cameras have better dynamic range than others."},
+    {"question": "Camera too close to forge?", "answer": "Heat damages electronics—maintain safe distance. Telephoto/zoom lens from farther away. Position cameras to the side, not in front of forge opening. Monitor temperatures if concerned."},
+    {"question": "Best content for blacksmithing?", "answer": "Knifemaking extremely popular—process and result. Tool making for practical appeal. Restoration projects tell stories. Technique tutorials help community. Full project videos most engaging."},
+    {"question": "Audio in the forge?", "answer": "Hammer strikes and sizzling metal are satisfying sounds. Voiceover often recorded separately for clarity. Mix forge sounds lower than painful. Some videos work well with minimal dialogue, just forge sounds."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "blacksmithing"
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "crafts-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Crafts YouTube Tools 2025: DIY & Crafting Channel Equipment",
+    "description": "Essential tools for crafts YouTube channels. Camera angles, lighting for detail work, overhead setups.",
+    "keywords": ["crafts youtube tools", "diy channel equipment", "crafting youtube setup", "handmade content creator", "craft tutorial equipment"]
+  },
+  "hero": {
+    "badge": "Crafts Content",
+    "headline": "Essential Tools for Crafts YouTube Creators",
+    "subheadline": "Show detailed handwork clearly. Overhead shots, good lighting, close-up capability.",
+    "primaryKeyword": "crafts youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Crafts content requires showing detailed handwork—viewers need to see every step clearly. Overhead camera setups, proper lighting for detail work, and close-up capability are essential. Here's what crafts YouTubers need."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "Overhead Mount", "description": "Top-down view of work surface. Essential for most crafts."},
+      {"icon": "video", "title": "Side Angle Camera", "description": "Show depth, 3D work. Cut between overhead and side."},
+      {"icon": "search", "title": "Macro/Close-Up", "description": "Detail shots for small work. Jewelry, embroidery, fine details."}
+    ]},
+    {"type": "features", "title": "Lighting", "content": [
+      {"icon": "sun", "title": "Shadow-Free Lighting", "description": "Diffused light from multiple angles. No hand shadows on work."},
+      {"icon": "circle", "title": "Ring Light Alternative", "description": "Panel lights either side. Even coverage on work surface."},
+      {"icon": "zap", "title": "Color Accurate", "description": "High CRI for fabric, paint colors. Viewers see true colors."}
+    ]},
+    {"type": "features", "title": "Audio", "content": [
+      {"icon": "mic", "title": "Clear Narration", "description": "Explain while working. Lapel mic keeps hands free."},
+      {"icon": "volume-2", "title": "ASMR Option", "description": "Crafting sounds can be satisfying. Quality mic captures texture."},
+      {"icon": "music", "title": "Background Music", "description": "Royalty-free tracks for time-lapses. Relaxing vibes."}
+    ]},
+    {"type": "steps", "title": "Crafts Content Tips", "content": [
+      "Always show materials list upfront",
+      "Include supply links (affiliate opportunity)",
+      "Speed up repetitive sections",
+      "Show common mistakes and fixes",
+      "Provide templates when possible",
+      "Multiple skill levels welcome",
+      "Seasonal/holiday content plans ahead"
+    ]},
+    {"type": "benefits", "title": "Crafts Content Types", "content": [
+      "Step-by-step tutorials",
+      "Supply hauls and reviews",
+      "Organization and storage",
+      "Time-lapse making videos",
+      "Beginner vs advanced projects",
+      "Trend recreations",
+      "Budget-friendly alternatives"
+    ]},
+    {"type": "checklist", "title": "Crafts Creator Setup", "content": [
+      "Overhead camera mount",
+      "Diffused lighting setup",
+      "Clean, organized workspace",
+      "Lapel microphone",
+      "Templates/printables to share",
+      "Supply list system",
+      "Time-lapse capability"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best overhead camera setup?", "answer": "C-stand with arm, or wall-mounted boom. Phone with good stabilization works for beginners. Main camera recommended for quality."},
+    {"question": "How to avoid hand shadows?", "answer": "Light from both sides, not directly above. Diffusion panels soften light. LED panels at 45-degree angles work well."},
+    {"question": "Show face or just hands?", "answer": "Both is ideal. Face builds connection, hands show technique. Picture-in-picture works well. But hands-only channels succeed too."},
+    {"question": "Handle messy projects?", "answer": "Clean as you go for video. Time-lapses hide mess. Dedicated filming space that can get dirty. Protect camera from debris."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "crafts"
+}

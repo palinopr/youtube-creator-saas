@@ -1,0 +1,62 @@
+{
+  "slug": "how-to-edit-youtube-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Edit YouTube Videos 2025: Complete Editing Guide",
+    "description": "Learn video editing for YouTube from scratch. Software recommendations, editing techniques, and workflows that save time.",
+    "keywords": ["how to edit youtube videos", "youtube video editing", "editing for youtube", "video editing tutorial", "youtube editing tips"]
+  },
+  "hero": {
+    "badge": "Video Editing",
+    "headline": "How to Edit YouTube Videos Like a Pro in 2025",
+    "subheadline": "Master the editing workflow that turns raw footage into engaging content viewers can't stop watching.",
+    "primaryKeyword": "edit youtube videos"
+  },
+  "sections": [
+    {"type": "intro", "content": "Editing is where good footage becomes great content. It's not about fancy effects—it's about pacing, cuts, and keeping viewers engaged. This guide covers the fundamentals of YouTube editing, from choosing software to developing a fast, efficient workflow."},
+    {"type": "features", "title": "Editing Software Options", "content": [
+      {"icon": "sparkles", "title": "DaVinci Resolve", "description": "Free and incredibly powerful. Professional color grading built-in. Steep but rewarding learning curve."},
+      {"icon": "video", "title": "Adobe Premiere Pro", "description": "Industry standard with broad plugin support. $22.99/month subscription."},
+      {"icon": "zap", "title": "CapCut", "description": "Free, beginner-friendly with modern effects. Perfect for Shorts and quick edits."}
+    ]},
+    {"type": "steps", "title": "Basic Editing Workflow", "content": [
+      "Import and organize your footage",
+      "Create a rough cut with essential clips",
+      "Cut out mistakes, ums, and dead space",
+      "Add B-roll and visual interest",
+      "Balance and enhance audio",
+      "Add text, graphics, and effects",
+      "Color correct for consistency",
+      "Export in YouTube-optimized settings"
+    ]},
+    {"type": "benefits", "title": "Editing Techniques That Work", "content": [
+      "Jump cuts to maintain pace",
+      "B-roll to cover voice-over sections",
+      "Zoom cuts to add energy",
+      "Sound effects for emphasis",
+      "Text overlays for key points",
+      "Music that matches energy",
+      "Transitions that don't distract"
+    ]},
+    {"type": "checklist", "title": "Before You Export", "content": [
+      "Watch full video at 1x speed",
+      "Check audio levels are consistent",
+      "Verify all text is readable",
+      "Confirm no copyrighted music",
+      "Export at 1080p or 4K",
+      "Use H.264 codec for YouTube",
+      "Keep bitrate high (15-50 Mbps)"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's the best free editing software?", "answer": "DaVinci Resolve is the most powerful free option with professional features. CapCut is easier for beginners. Both are genuinely free, not trials."},
+    {"question": "How long should editing take?", "answer": "Expect 2-4 hours of editing per finished minute when starting out. With practice and templates, this drops to 1-2 hours or less."},
+    {"question": "Should I edit my own videos?", "answer": "Start by editing yourself to learn the craft and your style. As you grow, outsourcing editing frees time for more content and strategy."},
+    {"question": "What export settings should I use?", "answer": "1080p at 30fps or 4K at 24-60fps. H.264 codec. High bitrate (15+ Mbps for 1080p, 35+ for 4K). YouTube re-compresses, so start with quality."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

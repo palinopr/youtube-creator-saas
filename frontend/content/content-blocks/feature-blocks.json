@@ -1,0 +1,92 @@
+[
+  {
+    "id": "features-analytics-1",
+    "category": "comparisons",
+    "features": [
+      {"icon": "chart", "title": "Advanced Analytics Dashboard", "description": "Track views, engagement, and revenue with real-time data visualization and trend analysis."},
+      {"icon": "trending", "title": "Growth Predictions", "description": "AI-powered forecasting helps you understand where your channel is heading and what to optimize."},
+      {"icon": "users", "title": "Audience Insights", "description": "Deep demographic data reveals who's watching, when they watch, and what keeps them engaged."}
+    ]
+  },
+  {
+    "id": "features-analytics-2",
+    "category": "comparisons",
+    "features": [
+      {"icon": "search", "title": "Competitor Analysis", "description": "Monitor rival channels, track their strategies, and discover opportunities they're missing."},
+      {"icon": "video", "title": "Content Performance", "description": "Identify your best-performing videos and understand exactly what made them successful."},
+      {"icon": "zap", "title": "Real-Time Alerts", "description": "Get instant notifications when videos go viral or performance drops unexpectedly."}
+    ]
+  },
+  {
+    "id": "features-seo-1",
+    "category": "niche-tools",
+    "features": [
+      {"icon": "search", "title": "Keyword Research", "description": "Discover high-volume, low-competition keywords specific to your niche for maximum visibility."},
+      {"icon": "target", "title": "Tag Optimization", "description": "Generate perfect tags that help YouTube understand and recommend your content."},
+      {"icon": "sparkles", "title": "Title Generator", "description": "AI-crafted titles that balance click appeal with SEO for optimal performance."}
+    ]
+  },
+  {
+    "id": "features-seo-2",
+    "category": "niche-tools",
+    "features": [
+      {"icon": "chart", "title": "Rank Tracking", "description": "Monitor where your videos rank for target keywords and track improvements over time."},
+      {"icon": "trending", "title": "Trend Detection", "description": "Spot rising topics in your niche before they peak for first-mover advantage."},
+      {"icon": "video", "title": "Description Templates", "description": "Optimized description frameworks that boost discoverability without feeling spammy."}
+    ]
+  },
+  {
+    "id": "features-growth-1",
+    "category": "how-to",
+    "features": [
+      {"icon": "trending", "title": "Subscriber Growth", "description": "Proven tactics to convert viewers into loyal subscribers who never miss an upload."},
+      {"icon": "video", "title": "Content Strategy", "description": "Data-driven content planning that aligns with audience interests and algorithm preferences."},
+      {"icon": "zap", "title": "Engagement Boost", "description": "Techniques to increase likes, comments, and shares that signal quality to YouTube."}
+    ]
+  },
+  {
+    "id": "features-growth-2",
+    "category": "how-to",
+    "features": [
+      {"icon": "users", "title": "Community Building", "description": "Foster a dedicated fanbase that supports your channel through thick and thin."},
+      {"icon": "sparkles", "title": "Upload Optimization", "description": "Perfect timing, thumbnails, and metadata for maximum initial velocity."},
+      {"icon": "chart", "title": "Performance Review", "description": "Weekly analysis routines that keep your growth on track and identify opportunities."}
+    ]
+  },
+  {
+    "id": "features-tools-1",
+    "category": "alternatives",
+    "features": [
+      {"icon": "zap", "title": "All-In-One Platform", "description": "Everything you need in a single dashboard - no more juggling multiple subscriptions."},
+      {"icon": "target", "title": "Creator-First Design", "description": "Built by YouTubers for YouTubers, with workflows that match how you actually work."},
+      {"icon": "chart", "title": "Affordable Pricing", "description": "Enterprise-level features at indie creator prices, with no hidden fees or upsells."}
+    ]
+  },
+  {
+    "id": "features-tools-2",
+    "category": "alternatives",
+    "features": [
+      {"icon": "sparkles", "title": "AI-Powered Insights", "description": "Machine learning that actually understands YouTube, not generic marketing AI."},
+      {"icon": "video", "title": "Thumbnail A/B Testing", "description": "Test different thumbnails with real audience data to find what converts best."},
+      {"icon": "users", "title": "Team Collaboration", "description": "Invite editors, managers, and collaborators with granular permission controls."}
+    ]
+  },
+  {
+    "id": "features-longtail-1",
+    "category": "long-tail",
+    "features": [
+      {"icon": "search", "title": "Niche Optimization", "description": "Specialized strategies for your specific content category and audience type."},
+      {"icon": "trending", "title": "Long-Term Growth", "description": "Sustainable tactics that build lasting success, not short-term vanity metrics."},
+      {"icon": "target", "title": "Precision Targeting", "description": "Reach exactly the viewers who will become your most engaged subscribers."}
+    ]
+  },
+  {
+    "id": "features-longtail-2",
+    "category": "long-tail",
+    "features": [
+      {"icon": "chart", "title": "Data-Driven Decisions", "description": "Every recommendation backed by actual performance data from successful channels."},
+      {"icon": "zap", "title": "Quick Implementation", "description": "Actionable tips you can apply immediately, not theoretical concepts."},
+      {"icon": "sparkles", "title": "Continuous Updates", "description": "Stay ahead with strategies updated for the latest algorithm changes and trends."}
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "slug": "barbecue-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Barbecue YouTube Tools 2025: BBQ & Smoking Channel Equipment",
+    "description": "Top tools for barbecue YouTube channels. Film smoking, grilling, and outdoor cooking.",
+    "keywords": ["barbecue youtube tools", "bbq channel equipment", "smoking video gear", "grilling youtube", "outdoor cooking content"]
+  },
+  "hero": {
+    "badge": "BBQ Tools",
+    "headline": "Best Barbecue YouTube Tools 2025",
+    "subheadline": "Capture the smoke. Gear for BBQ creators.",
+    "primaryKeyword": "barbecue youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Barbecue content is about the journey—the preparation, the long cook, the anticipation, and the reveal. Viewers want to see smoke wisping, meat searing, and that perfect pull. Outdoor filming presents challenges but the rewards are worth it. Here's what successful BBQ YouTubers use."},
+    {"type": "features", "title": "Camera Challenges", "content": [
+      {"icon": "sun", "title": "Bright Sunlight", "description": "ND filter or high shutter."},
+      {"icon": "thermometer", "title": "Heat Tolerance", "description": "Keep cameras away from direct heat."},
+      {"icon": "droplet", "title": "Grease/Smoke", "description": "Protect lenses with UV filter."},
+      {"icon": "video", "title": "Multiple Angles", "description": "Grill, prep area, reveal."}
+    ]},
+    {"type": "features", "title": "Outdoor Audio", "content": [
+      {"icon": "mic", "title": "Wireless Lav", "description": "Move freely around grill."},
+      {"icon": "wind", "title": "Wind Protection", "description": "Deadcat on mics essential."},
+      {"icon": "volume-2", "title": "Sizzle Sounds", "description": "ASMR of meat cooking."},
+      {"icon": "headphones", "title": "Monitor Outside", "description": "Can't hear issues later."}
+    ]},
+    {"type": "features", "title": "Long Cook Coverage", "content": [
+      {"icon": "clock", "title": "Time-Lapse", "description": "Show 12+ hour cooks efficiently."},
+      {"icon": "camera", "title": "GoPro Setup", "description": "Extended time-lapse capable."},
+      {"icon": "battery", "title": "Power Management", "description": "Long cooks need backup power."},
+      {"icon": "moon", "title": "Night Filming", "description": "LEDs for overnight checks."}
+    ]},
+    {"type": "benefits", "title": "BBQ Content Tips", "content": [
+      "Show full process, not just results",
+      "Temperature monitoring builds anticipation",
+      "The reveal is the payoff—nail it",
+      "Include tips for beginners",
+      "Review different cookers and accessories",
+      "Competition content has audience",
+      "Regional BBQ styles create variety"
+    ]},
+    {"type": "checklist", "title": "BBQ Video Checklist", "content": [
+      "Camera protected from smoke/grease?",
+      "Wireless audio setup working?",
+      "Time-lapse camera positioned?",
+      "Batteries/power for long cook?",
+      "Wind protection on mics?",
+      "Outdoor lighting if needed?",
+      "Reveal shot planned?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film smoke?", "answer": "Backlight makes smoke visible—position light source behind the smoker. Early morning or late afternoon natural light works well. Avoid direct midday sun that washes out smoke. Dark background shows smoke better."},
+    {"question": "Best camera for outdoor cooking?", "answer": "Weather-sealed cameras help. Sony A7 series, Panasonic GH6 popular. GoPro for time-lapse and action shots. Keep main camera away from direct smoke and heat. UV filter protects lens from grease splatter."},
+    {"question": "How to cover long cooks?", "answer": "Time-lapse is essential for 8-16 hour cooks. Check-in segments show progress. Fast-forward with voiceover explanation. The reveal shot should be carefully planned and well-lit. Don't skip the waiting."},
+    {"question": "Dealing with wind noise?", "answer": "Deadcat windscreens mandatory outdoors. Lavalier with foam windscreen inside clothing. Record voiceover inside if wind is bad. Natural outdoor sound can add authenticity if not too windy."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "barbecue"
+}

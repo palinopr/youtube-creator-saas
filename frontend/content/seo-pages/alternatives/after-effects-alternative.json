@@ -1,0 +1,65 @@
+{
+  "slug": "after-effects-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best After Effects Alternatives 2025: Motion Graphics for YouTube",
+    "description": "Top Adobe After Effects alternatives. Motion graphics and VFX options for creators.",
+    "keywords": ["after effects alternative", "after effects alternatives", "motion graphics software", "vfx youtube", "animation software"]
+  },
+  "hero": {
+    "badge": "Motion Graphics",
+    "headline": "Best After Effects Alternatives",
+    "subheadline": "Motion graphics without Adobe's subscription. Capable alternatives exist.",
+    "primaryKeyword": "after effects alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Adobe After Effects is the industry standard for motion graphics and VFX, but the subscription cost isn't for everyone. Whether you want free options or one-time purchases, several alternatives can create similar results for YouTube content."},
+    {"type": "features", "title": "Free Alternatives", "content": [
+      {"icon": "film", "title": "DaVinci Resolve Fusion", "description": "Built into free Resolve. Node-based compositing. Powerful but complex."},
+      {"icon": "layers", "title": "Blender", "description": "3D + motion graphics. Steep learning curve. Incredibly capable."},
+      {"icon": "video", "title": "HitFilm", "description": "Free version available. VFX and compositing. Good for YouTube."}
+    ]},
+    {"type": "features", "title": "Paid Alternatives", "content": [
+      {"icon": "apple", "title": "Apple Motion", "description": "Mac only. $50 one-time. Integrates with Final Cut Pro."},
+      {"icon": "zap", "title": "Cavalry", "description": "Newer tool, subscription. Procedural animation focus."},
+      {"icon": "play-circle", "title": "Nuke (Non-Commercial)", "description": "Hollywood-grade, free for learning. Overkill for most YouTubers."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Price", "toolA": "Fusion: Free", "toolB": "Apple Motion: $50", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Fusion: Steep", "toolB": "Apple Motion: Moderate", "tubeGrow": "N/A"},
+      {"feature": "Platform", "toolA": "Fusion: Both", "toolB": "Apple Motion: Mac only", "tubeGrow": "N/A"},
+      {"feature": "Workflow", "toolA": "Fusion: Node-based", "toolB": "Apple Motion: Layer-based", "tubeGrow": "N/A"},
+      {"feature": "YouTube Focus", "toolA": "Fusion: No", "toolB": "Apple Motion: Good", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Why Switch from After Effects", "content": [
+      "No monthly subscription",
+      "Free professional options exist",
+      "One-time purchase available",
+      "Different workflow preference",
+      "Integration with other tools",
+      "Learning new skills",
+      "Simpler for basic needs"
+    ]},
+    {"type": "checklist", "title": "Choosing Alternative", "content": [
+      "Budget (free vs paid)?",
+      "Platform (Mac/Windows)?",
+      "Complexity tolerance?",
+      "Type of motion graphics needed?",
+      "Integration with editor?",
+      "3D needs?",
+      "Learning time available?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best free After Effects alternative?", "answer": "DaVinci Resolve Fusion is most capable free option. HitFilm for easier learning curve. Both produce quality results."},
+    {"question": "Is Blender good for motion graphics?", "answer": "Yes, very capable. But primarily 3D focused. Learning curve is significant. Great for 3D motion graphics."},
+    {"question": "Apple Motion worth it?", "answer": "For Mac users with Final Cut Pro, excellent value at $50. Integration is seamless. Not as powerful as AE but sufficient."},
+    {"question": "Can I do AE-quality work in alternatives?", "answer": "Yes, with effort. Tools are capable. The difference is workflow and ecosystem, not output quality."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "after-effects"
+}

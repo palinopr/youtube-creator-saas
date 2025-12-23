@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-hashtags-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Hashtags Guide 2025: How to Use Them Effectively",
+    "description": "Learn how YouTube hashtags work. Best practices, placement, and whether hashtags actually help discoverability.",
+    "keywords": ["youtube hashtags", "youtube hashtags guide", "how to use youtube hashtags", "youtube hashtag strategy", "video hashtags"]
+  },
+  "hero": {
+    "badge": "Hashtags",
+    "headline": "YouTube Hashtags: Do They Actually Help?",
+    "subheadline": "The truth about hashtags on YouTube. When to use them and how many.",
+    "primaryKeyword": "youtube hashtags"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube hashtags appear above your video title when clicked, grouping content with the same tag. But unlike Instagram or TikTok, their impact on discovery is limited. Here's how hashtags actually work on YouTube and how to use them effectively without over-investing."},
+    {"type": "features", "title": "How YouTube Hashtags Work", "content": [
+      {"icon": "hash", "title": "Title Display", "description": "First 3 hashtags from description appear above title. Clickable links."},
+      {"icon": "search", "title": "Hashtag Pages", "description": "Clicking hashtag shows related videos. Low traffic compared to search."},
+      {"icon": "link", "title": "In Description", "description": "Add in description text. Only first 3 display prominently."}
+    ]},
+    {"type": "steps", "title": "Hashtag Best Practices", "content": [
+      "Use 3-5 hashtags maximum",
+      "Place at end of description or naturally within",
+      "Use relevant, specific hashtags",
+      "Include your brand hashtag",
+      "Don't spam unrelated tags",
+      "Avoid overly generic hashtags",
+      "Check hashtag pages for context"
+    ]},
+    {"type": "benefits", "title": "When Hashtags Help", "content": [
+      "Trending topics (#worldcup, #election2024)",
+      "Content series organization",
+      "Niche community discovery",
+      "Brand recognition",
+      "Challenge participation",
+      "Event-related content",
+      "Shorts discovery (more impact)"
+    ]},
+    {"type": "checklist", "title": "Hashtag Checklist", "content": [
+      "Using 3-5 relevant hashtags?",
+      "Hashtags match video content?",
+      "No misleading or clickbait tags?",
+      "Brand hashtag included?",
+      "Checked hashtag page quality?",
+      "Not over 60 hashtags (causes hiding)?",
+      "Hashtags look professional?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do hashtags help YouTube SEO?", "answer": "Minimal direct impact on search ranking. They're more for categorization than SEO. Title, description text, and engagement matter more."},
+    {"question": "How many hashtags should I use?", "answer": "3-5 is ideal. Only first 3 show above title. More than 15 can look spammy. Over 60 causes YouTube to ignore all of them."},
+    {"question": "Are hashtags more important for Shorts?", "answer": "Yes. Shorts discovery uses hashtags more actively. Include relevant Shorts hashtags like #shorts plus topic tags."},
+    {"question": "Should I use the same hashtags every video?", "answer": "Use 1-2 consistent brand hashtags plus video-specific tags. Vary based on content. Don't copy-paste identical sets."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

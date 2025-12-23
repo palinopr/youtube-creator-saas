@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-add-music-youtube",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Add Music to YouTube Videos 2025: Copyright-Safe Guide",
+    "description": "Learn to add music to YouTube videos without copyright strikes. Legal music sources and best practices.",
+    "keywords": ["add music youtube", "youtube video music", "copyright free music youtube", "how to add background music", "youtube music library"]
+  },
+  "hero": {
+    "badge": "Music",
+    "headline": "How to Add Music to YouTube Videos",
+    "subheadline": "Add background music legally. Avoid copyright strikes and monetization issues.",
+    "primaryKeyword": "add music youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "Music enhances videos but wrong choices cause copyright claims, demonetization, or video removal. Using popular songs without license isn't worth the risk. Here's how to add music safely and where to find legal options."},
+    {"type": "features", "title": "Legal Music Sources", "content": [
+      {"icon": "music", "title": "YouTube Audio Library", "description": "Free, built into YouTube Studio. No attribution required for most."},
+      {"icon": "headphones", "title": "Epidemic Sound/Artlist", "description": "Subscription services. Professional quality, claim-free."},
+      {"icon": "gift", "title": "Creative Commons", "description": "Free with attribution. Check specific license terms."}
+    ]},
+    {"type": "steps", "title": "Using YouTube Audio Library", "content": [
+      "Go to YouTube Studio",
+      "Click 'Audio Library' in left menu",
+      "Browse or search for music",
+      "Preview tracks",
+      "Check license (Attribution or Free)",
+      "Download tracks you want",
+      "Add to video in your editor"
+    ]},
+    {"type": "features", "title": "Adding Music in Editors", "content": [
+      {"icon": "sliders", "title": "Volume Balance", "description": "Music should support, not compete. -12 to -20dB under voice."},
+      {"icon": "volume-2", "title": "Ducking", "description": "Lower music when speaking, raise during B-roll. Professional technique."},
+      {"icon": "music", "title": "Matching Mood", "description": "Music sets emotional tone. Match energy to content."}
+    ]},
+    {"type": "benefits", "title": "Music Best Practices", "content": [
+      "Keep music subtle under voice",
+      "Match music energy to content",
+      "Use different tracks for different sections",
+      "Fade in and out smoothly",
+      "Consider no music for serious topics",
+      "Test on different speakers",
+      "Keep attribution if required"
+    ]},
+    {"type": "checklist", "title": "Music Checklist", "content": [
+      "Track is licensed for YouTube use?",
+      "Downloaded from legal source?",
+      "Volume balanced with voice?",
+      "Fades are smooth?",
+      "Attribution included (if required)?",
+      "No copyright claims expected?",
+      "Matches video mood?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I use any song with credit?", "answer": "No. Giving credit doesn't grant license. You need actual permission or license. Most popular songs will result in claims regardless of credit."},
+    {"question": "What about copyright-free YouTube channels?", "answer": "Some are legitimate, some aren't. Verify license terms. NoCopyrightSounds, Audio Library are generally safe. Always check."},
+    {"question": "What happens if I get a claim?", "answer": "Content ID claim usually means revenue goes to rights holder. Strike is more serious—affects channel standing. Dispute only if you have rights."},
+    {"question": "Is YouTube Audio Library good enough?", "answer": "For many creators, yes. Quality varies but good tracks available. Free and guaranteed safe. Paid services offer more variety and quality."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

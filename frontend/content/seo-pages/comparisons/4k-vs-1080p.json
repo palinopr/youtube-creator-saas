@@ -1,0 +1,67 @@
+{
+  "slug": "4k-vs-1080p",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "4K vs 1080p for YouTube 2025: Which Resolution to Choose",
+    "description": "Compare 4K and 1080p for YouTube videos. Which resolution is right for your content?",
+    "keywords": ["4k vs 1080p youtube", "youtube resolution", "4k vs 1080p", "best resolution youtube", "should I film 4k"]
+  },
+  "hero": {
+    "badge": "Video Resolution",
+    "headline": "4K vs 1080p for YouTube",
+    "subheadline": "Higher resolution vs practical workflow. What actually matters for YouTube.",
+    "primaryKeyword": "4k vs 1080p youtube"
+  },
+  "sections": [
+    {"type": "intro", "content": "4K sounds better than 1080p, but does it matter for YouTube? Most viewers watch on phones. 4K requires more storage, processing power, and upload time. Here's when 4K actually helps and when 1080p is the smarter choice."},
+    {"type": "comparison", "title": "Resolution Comparison", "content": [
+      {"feature": "Resolution", "toolA": "4K: 3840×2160", "toolB": "1080p: 1920×1080", "tubeGrow": "N/A"},
+      {"feature": "File Size", "toolA": "4K: ~4x larger", "toolB": "1080p: Baseline", "tubeGrow": "N/A"},
+      {"feature": "Edit Performance", "toolA": "4K: Demanding", "toolB": "1080p: Smooth", "tubeGrow": "N/A"},
+      {"feature": "Upload Time", "toolA": "4K: Much longer", "toolB": "1080p: Faster", "tubeGrow": "N/A"},
+      {"feature": "Viewer Experience", "toolA": "4K: On large screens", "toolB": "1080p: Fine on mobile", "tubeGrow": "N/A"},
+      {"feature": "Reframe Ability", "toolA": "4K: Yes, to 1080p", "toolB": "1080p: Limited", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Advantages of 4K", "content": [
+      {"icon": "crop", "title": "Reframing Flexibility", "description": "Crop to 1080p without losing quality. Punch in, reframe, stabilize."},
+      {"icon": "tv", "title": "Future-Proof", "description": "4K TVs growing. Content looks better long-term on big screens."},
+      {"icon": "eye", "title": "Visual Detail", "description": "Product reviews, tutorials benefit from visible detail."}
+    ]},
+    {"type": "features", "title": "Advantages of 1080p", "content": [
+      {"icon": "zap", "title": "Faster Workflow", "description": "Smaller files, faster editing, quicker uploads. More videos produced."},
+      {"icon": "hard-drive", "title": "Less Storage", "description": "~4x less space needed. Practical for most setups."},
+      {"icon": "smartphone", "title": "Mobile Reality", "description": "Most viewers on phones. 1080p looks identical to 4K on mobile."}
+    ]},
+    {"type": "benefits", "title": "When to Choose 4K", "content": [
+      "Content is visual-detail focused",
+      "Plan to reframe or crop shots",
+      "Audience watches on TVs",
+      "Strong computer handles it",
+      "Storage is sufficient",
+      "Documentary or cinematic style",
+      "Long-term archive value"
+    ]},
+    {"type": "benefits", "title": "When to Choose 1080p", "content": [
+      "Face-to-camera talking heads",
+      "Fast turnaround needed",
+      "Limited storage/computer power",
+      "Most audience on mobile",
+      "Volume over visual perfection",
+      "Gaming content (frame rate > resolution)",
+      "Streaming/live content"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does YouTube compress 4K anyway?", "answer": "Yes, but 4K gets higher bitrate allocation. Looks slightly better on capable devices. Difference subtle on mobile."},
+    {"question": "Should I record 4K even if exporting 1080p?", "answer": "Good strategy if computer handles it. 4K source downsampled to 1080p looks excellent. Plus reframing flexibility."},
+    {"question": "Do viewers care about 4K?", "answer": "Most don't notice or select it. Mobile viewers rarely choose 4K. Big screen viewers appreciate it. Content matters more."},
+    {"question": "What about 1440p?", "answer": "Good middle ground. Better bitrate than 1080p, less demanding than 4K. YouTube treats it well. Solid compromise."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "4k",
+  "secondaryTool": "1080p"
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "commentary-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Commentary YouTube Tools 2025: Video Essay Equipment",
+    "description": "Essential tools for commentary and video essay creators. Screen recording, editing, and production workflow tips.",
+    "keywords": ["commentary youtube tools", "video essay equipment", "commentary channel setup", "essay channel tools", "commentary editing"]
+  },
+  "hero": {
+    "badge": "Commentary Content",
+    "headline": "Essential Tools for Commentary YouTube Creators",
+    "subheadline": "Create compelling video essays. Research, editing, and production tools for commentary channels.",
+    "primaryKeyword": "commentary youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Commentary and video essay content relies on strong research, tight editing, and engaging narration. You're competing with traditional media through craft, not production budgets. Here are the tools that help commentary creators produce polished, compelling content."},
+    {"type": "features", "title": "Recording & Editing", "content": [
+      {"icon": "mic", "title": "Quality Microphone", "description": "Voice is primary content. SM7B, Rode NT1, or similar. Clear, warm audio."},
+      {"icon": "monitor", "title": "OBS Studio", "description": "Screen recording for clips and references. Free and feature-rich."},
+      {"icon": "edit", "title": "Premiere or Resolve", "description": "Complex editing with many cuts, clips, and overlays. Need robust software."}
+    ]},
+    {"type": "features", "title": "Research & Writing", "content": [
+      {"icon": "file-text", "title": "Notion or Obsidian", "description": "Organize research, scripts, and sources. Essential for long-form content."},
+      {"icon": "book", "title": "Archive Access", "description": "Internet Archive, academic databases, source material for clips."},
+      {"icon": "pen-tool", "title": "Script Writing", "description": "Write full scripts. Commentary needs tight, edited prose."}
+    ]},
+    {"type": "steps", "title": "Commentary Production Flow", "content": [
+      "Research topic thoroughly",
+      "Outline main arguments",
+      "Write full script",
+      "Record voice-over",
+      "Gather clips and references",
+      "Edit with visual support",
+      "Add graphics and text",
+      "Review and polish"
+    ]},
+    {"type": "benefits", "title": "Commentary Best Practices", "content": [
+      "Cite sources and show receipts",
+      "Script tightly—every word matters",
+      "Use clips sparingly and fairly",
+      "Add visual variety (not just face cam)",
+      "Build arguments logically",
+      "End with clear conclusion",
+      "Research more than you use"
+    ]},
+    {"type": "checklist", "title": "Commentary Creator Essentials", "content": [
+      "Broadcast-quality microphone",
+      "Quiet recording space",
+      "Screen recording software",
+      "Professional editing software",
+      "Research organization system",
+      "Source/clip archive",
+      "Graphics templates"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need a face cam for commentary?", "answer": "Not required. Many successful creators are voice-only with B-roll. Face cam adds personality but isn't essential for video essays."},
+    {"question": "How do I avoid copyright issues with clips?", "answer": "Use clips for commentary and criticism (fair use). Keep clips short. Transform with analysis. When in doubt, describe instead of showing."},
+    {"question": "How long should video essays be?", "answer": "As long as needed. 10-30 minutes is common. Longer (1+ hour) for deep dives. Shorter for focused takes. Quality and pacing matter more than length."},
+    {"question": "What software for scripting?", "answer": "Whatever works for you. Google Docs, Notion, Scrivener. Some write directly in editing software. Find your flow."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "commentary"
+}

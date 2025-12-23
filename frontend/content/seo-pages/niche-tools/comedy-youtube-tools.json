@@ -1,0 +1,63 @@
+{
+  "slug": "comedy-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Comedy YouTube Tools 2025: Funny Video Creator Equipment",
+    "description": "Top tools for comedy YouTube channels. Editing, sound effects, and production equipment for comedians.",
+    "keywords": ["comedy youtube tools", "funny video equipment", "sketch comedy youtube", "comedian youtube", "comedy editing tools"]
+  },
+  "hero": {
+    "badge": "Comedy Tools",
+    "headline": "Best Comedy YouTube Tools 2025",
+    "subheadline": "Timing is everything. Tools that help land the joke.",
+    "primaryKeyword": "comedy youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Comedy on YouTube is about timing, energy, and editing. The best comedy creators use punchy cuts, well-timed sound effects, and clean audio to maximize laughs. Whether you do sketches, commentary, or standup—these tools help you deliver."},
+    {"type": "features", "title": "Editing for Comedy", "content": [
+      {"icon": "scissors", "title": "Premiere Pro / DaVinci", "description": "Precise cuts for timing. Comedy lives in the edit."},
+      {"icon": "zap", "title": "Jump Cuts", "description": "Fast-paced energy. Remove dead air ruthlessly."},
+      {"icon": "zoom-in", "title": "Zoom Punch-ins", "description": "Emphasize reactions. Simple but effective technique."}
+    ]},
+    {"type": "features", "title": "Sound & Music", "content": [
+      {"icon": "volume-2", "title": "Sound Effect Libraries", "description": "Epidemic Sound, FreeSound.org. Timing sound effects to jokes."},
+      {"icon": "music", "title": "Comedic Music Stings", "description": "Seinfeld bass, sitcom cues. Use for emphasis."},
+      {"icon": "mic", "title": "Clear Dialogue Audio", "description": "Comedy needs clean audio. Every word matters."}
+    ]},
+    {"type": "features", "title": "Production Elements", "content": [
+      {"icon": "image", "title": "Meme Templates", "description": "React images, popular formats. Canva or Photoshop."},
+      {"icon": "type", "title": "On-Screen Text", "description": "Subtitles, captions, commentary text. Adds comedic layer."},
+      {"icon": "film", "title": "Green Screen", "description": "Insert yourself anywhere. Sketch flexibility."}
+    ]},
+    {"type": "benefits", "title": "Comedy Content Best Practices", "content": [
+      "Cut to the joke—remove all setup fat",
+      "Sound effects enhance, don't replace comedy",
+      "Reaction shots sell the punchline",
+      "Energy must stay high throughout",
+      "Callback to earlier jokes",
+      "Don't explain jokes in video",
+      "Test with friends before posting"
+    ]},
+    {"type": "checklist", "title": "Comedy Video Checklist", "content": [
+      "All dead air removed?",
+      "Timing feels tight?",
+      "Sound effects enhance jokes?",
+      "Audio is crystal clear?",
+      "Energy consistent throughout?",
+      "Punchlines land clearly?",
+      "Thumbnail captures comedy tone?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best editing software for comedy?", "answer": "Premiere Pro for precise timing control. DaVinci Resolve free version works great too. Key is learning keyboard shortcuts for fast editing."},
+    {"question": "How to time sound effects?", "answer": "Place on beat with joke delivery. Too early ruins it, too late misses moment. Practice. Study how successful comedians time theirs."},
+    {"question": "Should comedy videos be short?", "answer": "Depends on format. Shorts work for quick jokes. Longer for sketch/commentary. Pacing matters more than length. Cut ruthlessly regardless."},
+    {"question": "How to make thumbnails funny?", "answer": "Exaggerated expressions, absurd situations, clear visual joke. The thumbnail should make people curious about the punchline."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "comedy"
+}

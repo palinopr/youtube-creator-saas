@@ -1,0 +1,66 @@
+{
+  "slug": "sailing-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Sailing YouTube Tools 2025: Yacht & Boat Channel Equipment",
+    "description": "Top tools for sailing YouTube channels. Document voyages and life at sea.",
+    "keywords": ["sailing youtube tools", "yacht channel equipment", "boat vlog gear", "sailing content", "marine video"]
+  },
+  "hero": {
+    "badge": "Sailing Tools",
+    "headline": "Best Sailing YouTube Tools 2025",
+    "subheadline": "Capture life at sea. Gear built for the water.",
+    "primaryKeyword": "sailing youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Sailing content faces unique challenges—salt spray, constant motion, limited power, and cramped quarters. Yet viewers love the adventure of voyages, storms weathered, and exotic anchorages. Successful sailing YouTubers protect their gear and capture the magic of life aboard. Here's what works."},
+    {"type": "features", "title": "Weather-Resistant Cameras", "content": [
+      {"icon": "video", "title": "GoPro Hero", "description": "Waterproof essential. Multiple mounts."},
+      {"icon": "camera", "title": "Sony A7C", "description": "Full frame compact. Weather sealed."},
+      {"icon": "smartphone", "title": "iPhone Pro", "description": "Waterproof case. Quick captures."},
+      {"icon": "eye", "title": "DJI Action", "description": "Magnetic mounts. Durable."}
+    ]},
+    {"type": "features", "title": "Mount Solutions", "content": [
+      {"icon": "anchor", "title": "Rail Mounts", "description": "Clamp to stanchions and rails."},
+      {"icon": "move", "title": "Suction Mounts", "description": "Deck and hull attachment."},
+      {"icon": "maximize", "title": "Masthead Camera", "description": "Epic sailing shots from above."},
+      {"icon": "box", "title": "Gimbal Stabilizer", "description": "Smooth footage in swells."}
+    ]},
+    {"type": "features", "title": "Power & Storage", "content": [
+      {"icon": "battery", "title": "Solar Charging", "description": "Power independence at sea."},
+      {"icon": "hard-drive", "title": "Rugged SSDs", "description": "Shock resistant storage."},
+      {"icon": "upload-cloud", "title": "Starlink", "description": "Upload from anywhere."},
+      {"icon": "zap", "title": "Power Banks", "description": "Backup power essential."}
+    ]},
+    {"type": "benefits", "title": "Sailing Content Tips", "content": [
+      "Protect ALL gear from salt spray",
+      "Backup footage to multiple drives",
+      "Capture daily routines, not just drama",
+      "Show passage planning and navigation",
+      "Include maintenance and repairs",
+      "Weather and storm content performs well",
+      "Destination episodes draw new viewers"
+    ]},
+    {"type": "checklist", "title": "Sailing Video Checklist", "content": [
+      "Cameras in waterproof housing?",
+      "Backup power charged?",
+      "Storage backed up?",
+      "Mounts secured for passage?",
+      "Audio solution for wind?",
+      "Drone batteries charged?",
+      "Editing setup ready?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for sailing?", "answer": "GoPro for action and deck work—fully waterproof. Sony A7C or similar for interviews and b-roll. iPhone in waterproof case for quick captures. Multiple cameras cover different needs."},
+    {"question": "How to deal with wind noise?", "answer": "Deadcat/windscreen essential on any external mic. Lavalier mics under clothing. ADR voiceover in editing. Record in protected cockpit areas. Wind is sailing content's biggest audio challenge."},
+    {"question": "Editing while sailing?", "answer": "MacBook Air popular—efficient on power. iPad Pro for lighter setup. Edit in port when possible. Solar panels help but power is always limited. Plan editing schedule around passages."},
+    {"question": "How to upload at sea?", "answer": "Starlink changed everything—reliable offshore internet now possible. Otherwise marina WiFi or local SIM cards. Some sailors batch upload in port. Content calendar adapts to connectivity."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "sailing"
+}

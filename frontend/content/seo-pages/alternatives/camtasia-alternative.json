@@ -1,0 +1,68 @@
+{
+  "slug": "camtasia-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Camtasia Alternative 2025: Screen Recording & Editing Options",
+    "description": "Top Camtasia alternatives for screen recording. Free and paid options compared.",
+    "keywords": ["camtasia alternative", "screen recording software", "camtasia competitor", "video editor alternative", "tutorial software"]
+  },
+  "hero": {
+    "badge": "Camtasia Alternative",
+    "headline": "Best Camtasia Alternative 2025",
+    "subheadline": "Screen recording without the price tag. Find your perfect fit.",
+    "primaryKeyword": "camtasia alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Camtasia combines screen recording with video editing—great for tutorials and courses. At $300+ one-time or subscription, it's a significant investment. These alternatives offer similar capabilities, from free options to professional tools, often with features Camtasia lacks."},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "video", "title": "OBS Studio", "description": "Free, powerful. Recording focus, needs separate editor."},
+      {"icon": "monitor", "title": "ScreenPal", "description": "Formerly Screencast-O-Matic. Simple, affordable."},
+      {"icon": "layout", "title": "Loom", "description": "Quick sharing. Browser-based recording."},
+      {"icon": "film", "title": "DaVinci Resolve", "description": "Free pro editor. Pair with any recorder."}
+    ]},
+    {"type": "comparison", "title": "Camtasia vs Alternatives", "content": [
+      {"feature": "Price", "toolA": "$300+ or sub", "toolB": "$0-200", "tubeGrow": "N/A"},
+      {"feature": "Screen Recording", "toolA": "Built-in", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Video Editing", "toolA": "Integrated", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Moderate", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Templates", "toolA": "Yes", "toolB": "Some", "tubeGrow": "N/A"},
+      {"feature": "Annotations", "toolA": "Strong", "toolB": "Varies", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Free Options", "content": [
+      {"icon": "download", "title": "OBS Studio", "description": "Recording + streaming. Limitless."},
+      {"icon": "play", "title": "ShareX", "description": "Windows. Fast capture and sharing."},
+      {"icon": "film", "title": "DaVinci Resolve", "description": "Pro editing free. Combine with recorder."},
+      {"icon": "chrome", "title": "Screencastify", "description": "Chrome extension. Basic free tier."}
+    ]},
+    {"type": "benefits", "title": "When to Switch", "content": [
+      "Budget constraints",
+      "Need better editing features",
+      "Want cloud-based workflow",
+      "Need team collaboration",
+      "Cross-platform requirement",
+      "Simpler tool sufficient",
+      "Already have preferred editor"
+    ]},
+    {"type": "checklist", "title": "Selection Checklist", "content": [
+      "Budget determined?",
+      "Recording + editing in one needed?",
+      "Annotation features required?",
+      "Cloud sharing important?",
+      "Platform compatibility checked?",
+      "Learning curve acceptable?",
+      "Free trial tested?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is there a free Camtasia alternative?", "answer": "OBS Studio for recording is completely free and powerful. Combine with DaVinci Resolve (free) for editing. Together they exceed Camtasia's capabilities at zero cost."},
+    {"question": "Best for tutorial videos?", "answer": "ScreenPal (Screencast-O-Matic) is purpose-built for tutorials, more affordable. Loom great for quick tutorials with instant sharing. Camtasia's annotations are hard to match though."},
+    {"question": "OBS vs Camtasia?", "answer": "OBS: free, unlimited recording, steeper learning curve, no built-in editing. Camtasia: paid, integrated editing, easier for beginners, annotations included. OBS + DaVinci is more powerful but requires learning both."},
+    {"question": "Best for courses?", "answer": "Camtasia's templates and consistency good for courses. ScreenPal offers similar. Loom for quick lessons. Consider your editing needs—if complex, separate recorder + professional editor may be better."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "Camtasia"
+}

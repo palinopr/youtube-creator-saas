@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-live-stream",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to YouTube Live Stream 2025: Complete Setup Guide",
+    "description": "Start live streaming on YouTube. Equipment, software setup, and tips for engaging streams.",
+    "keywords": ["youtube live stream", "how to stream youtube", "youtube streaming setup", "live stream tutorial", "go live youtube"]
+  },
+  "hero": {
+    "badge": "Live Streaming",
+    "headline": "How to Start Live Streaming on YouTube",
+    "subheadline": "Go live on YouTube. Setup, equipment, and strategies for successful streams.",
+    "primaryKeyword": "youtube live stream"
+  },
+  "sections": [
+    {"type": "intro", "content": "Live streaming builds deeper connections with your audience. YouTube Live offers powerful features—Super Chats, live chat, and automatic VOD saving. Here's how to set up and run successful live streams on YouTube."},
+    {"type": "steps", "title": "Basic Live Stream Setup", "content": [
+      "Enable live streaming in YouTube Studio",
+      "Wait 24 hours for activation (first time)",
+      "Choose streaming method (webcam or encoder)",
+      "Set stream title, description, visibility",
+      "Configure chat settings",
+      "Test audio and video",
+      "Go live when ready"
+    ]},
+    {"type": "features", "title": "Streaming Software Options", "content": [
+      {"icon": "monitor", "title": "OBS Studio", "description": "Free, powerful, customizable. Industry standard for streaming."},
+      {"icon": "layout", "title": "StreamYard", "description": "Browser-based, easy guests. Great for interviews and podcasts."},
+      {"icon": "video", "title": "YouTube Webcam", "description": "No software needed. Basic but works for simple streams."}
+    ]},
+    {"type": "features", "title": "Essential Equipment", "content": [
+      {"icon": "camera", "title": "Good Webcam", "description": "Logitech C920 or better. Consider mirrorless for quality jump."},
+      {"icon": "mic", "title": "Quality Microphone", "description": "Audio quality crucial for streams. USB mic minimum."},
+      {"icon": "sun", "title": "Lighting", "description": "Face well-lit. Ring light or key light makes huge difference."}
+    ]},
+    {"type": "benefits", "title": "Stream Content Ideas", "content": [
+      "Q&A with your audience",
+      "Live tutorials and walkthroughs",
+      "Gaming sessions",
+      "Product unboxings",
+      "Behind-the-scenes",
+      "Collaborations with guests",
+      "Watch parties for premieres"
+    ]},
+    {"type": "steps", "title": "Growing Your Live Audience", "content": [
+      "Schedule streams in advance",
+      "Promote upcoming streams",
+      "Go live at consistent times",
+      "Engage with chat constantly",
+      "Use Super Chat features",
+      "Create stream-specific content",
+      "Repurpose VODs into clips"
+    ]},
+    {"type": "checklist", "title": "Pre-Stream Checklist", "content": [
+      "Internet connection stable?",
+      "Camera positioned correctly?",
+      "Audio levels tested?",
+      "Lighting looks good?",
+      "Stream title/description set?",
+      "Chat moderation configured?",
+      "Notifications sent to subscribers?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Why wait 24 hours to stream?", "answer": "YouTube verification requirement for new channels. Prevents spam and abuse. Enable it early so you're ready when needed."},
+    {"question": "What internet speed do I need?", "answer": "Minimum 10 Mbps upload for 1080p. 20+ Mbps recommended for stability. Wired connection always better than WiFi for streaming."},
+    {"question": "OBS vs StreamYard?", "answer": "OBS more powerful, free, steeper learning curve. StreamYard easier, great for guests, browser-based. Both work well with YouTube."},
+    {"question": "How to get viewers on live streams?", "answer": "Consistency is key. Stream same time weekly. Promote beforehand. Engage chat actively. YouTube suggests streams to subscribers."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

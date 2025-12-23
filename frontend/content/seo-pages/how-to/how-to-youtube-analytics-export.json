@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-analytics-export",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Export YouTube Analytics 2025: Download Your Data",
+    "description": "Export YouTube analytics data. Download reports and track performance externally.",
+    "keywords": ["export youtube analytics", "download youtube data", "youtube analytics export", "youtube csv export", "youtube data download"]
+  },
+  "hero": {
+    "badge": "Analytics Export",
+    "headline": "How to Export YouTube Analytics",
+    "subheadline": "Download your data. Analyze beyond YouTube Studio.",
+    "primaryKeyword": "export youtube analytics"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Studio provides data, but sometimes you need it outside the platform—for spreadsheets, custom analysis, reports to sponsors, or long-term tracking. Exporting analytics lets you manipulate data freely and maintain records YouTube might not keep forever."},
+    {"type": "features", "title": "Export Benefits", "content": [
+      {"icon": "download", "title": "External Analysis", "description": "Use Excel, Sheets, custom tools."},
+      {"icon": "archive", "title": "Historical Records", "description": "Keep data long-term."},
+      {"icon": "file-text", "title": "Reports", "description": "Create sponsor/brand reports."},
+      {"icon": "bar-chart-2", "title": "Custom Dashboards", "description": "Build your own views."}
+    ]},
+    {"type": "steps", "title": "Exporting Analytics", "content": [
+      "Open YouTube Studio",
+      "Click Analytics in left menu",
+      "Select the report you want",
+      "Choose date range",
+      "Click Advanced Mode for more options",
+      "Click Export in top right",
+      "Choose format (Google Sheets or CSV)",
+      "File downloads or opens in Sheets"
+    ]},
+    {"type": "features", "title": "Available Reports", "content": [
+      {"icon": "eye", "title": "Views", "description": "View counts over time."},
+      {"icon": "clock", "title": "Watch Time", "description": "Hours watched data."},
+      {"icon": "users", "title": "Subscribers", "description": "Growth and changes."},
+      {"icon": "dollar-sign", "title": "Revenue", "description": "Earnings breakdown."}
+    ]},
+    {"type": "benefits", "title": "Export Tips", "content": [
+      "Advanced Mode offers more data",
+      "Export regularly for historical records",
+      "Google Sheets for immediate analysis",
+      "CSV for Excel or database import",
+      "Compare periods in spreadsheets",
+      "Build sponsor-ready reports",
+      "Track trends YouTube doesn't surface"
+    ]},
+    {"type": "checklist", "title": "Export Checklist", "content": [
+      "Using Advanced Mode for full data?",
+      "Date range correctly set?",
+      "Right format selected?",
+      "Regular export schedule?",
+      "Data backed up externally?",
+      "Reports organized and labeled?",
+      "Historical comparisons enabled?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What data can I export?", "answer": "Most analytics data exportable—views, watch time, subscribers, revenue (if monetized), traffic sources, demographics, and more. Advanced Mode reveals additional breakdowns. Some real-time data not available."},
+    {"question": "Google Sheets or CSV?", "answer": "Google Sheets for immediate cloud access and collaboration. CSV for local storage, Excel use, or database import. Both contain same data. Choose based on your workflow."},
+    {"question": "How far back can I export?", "answer": "Data available from channel creation. Some metrics have limited historical depth. Lifetime view useful for long-term. Export regularly to ensure you have records."},
+    {"question": "Can I automate exports?", "answer": "Not natively in YouTube Studio. YouTube Analytics API allows programmatic access for developers. Third-party tools can automate. Manual export simple for most creators."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

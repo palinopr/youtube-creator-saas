@@ -1,0 +1,66 @@
+{
+  "slug": "leathercraft-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Leathercraft YouTube Tools 2025: Leather Working Channel Equipment",
+    "description": "Top tools for leathercraft YouTube channels. Film projects and tutorials.",
+    "keywords": ["leathercraft youtube tools", "leather working channel", "leather video equipment", "leatherwork youtube", "craft content"]
+  },
+  "hero": {
+    "badge": "Leathercraft Tools",
+    "headline": "Best Leathercraft YouTube Tools 2025",
+    "subheadline": "Document your craft. Gear for leatherworking creators.",
+    "primaryKeyword": "leathercraft youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Leathercraft content showcases traditional skills—cutting, stitching, tooling, and finishing. Viewers want to see technique details: hand stitching, edge burnishing, and tooling patterns. The ASMR quality of leather work is an unexpected bonus. Here's what successful leathercraft YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Bird's eye of work surface. Essential."},
+      {"icon": "camera", "title": "Side Angle", "description": "Shows hand technique."},
+      {"icon": "eye", "title": "Detail Camera", "description": "Close-ups of stitching, tooling."},
+      {"icon": "user", "title": "Face Camera", "description": "Tutorial explanations."}
+    ]},
+    {"type": "features", "title": "Overhead Rigs", "content": [
+      {"icon": "move", "title": "C-Stand + Boom", "description": "Rock solid. Professional stability."},
+      {"icon": "maximize", "title": "Articulating Arm", "description": "Elgato mount. Adjustable positions."},
+      {"icon": "grid", "title": "Wall Mount", "description": "Permanent studio solution."},
+      {"icon": "box", "title": "Copy Stand", "description": "For detailed flat work shots."}
+    ]},
+    {"type": "features", "title": "Audio & ASMR", "content": [
+      {"icon": "mic", "title": "Condenser Mic", "description": "Capture cutting, stitching sounds."},
+      {"icon": "volume-2", "title": "Close Placement", "description": "Pick up subtle sounds."},
+      {"icon": "headphones", "title": "No Background Noise", "description": "ASMR quality requires quiet."},
+      {"icon": "music", "title": "Natural Sounds", "description": "Many viewers enjoy unedited audio."}
+    ]},
+    {"type": "benefits", "title": "Leathercraft Content Tips", "content": [
+      "Overhead essential for process",
+      "Show full project start to finish",
+      "Detail shots reveal technique",
+      "ASMR audio appeals to many",
+      "Template/pattern sharing adds value",
+      "Tool reviews perform well",
+      "Time-lapse long projects"
+    ]},
+    {"type": "checklist", "title": "Leathercraft Video Checklist", "content": [
+      "Overhead camera positioned?",
+      "Work surface clean and clear?",
+      "Lighting even across surface?",
+      "Audio capturing work sounds?",
+      "Tools organized for filming?",
+      "Project steps planned?",
+      "Final product shots prepared?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best overhead setup for leatherwork?", "answer": "C-stand with boom arm for heavy cameras—most stable. Elgato articulating arm for lighter setups. Key is stability—any shake ruins overhead shots. Position camera directly above work area."},
+    {"question": "Should I include work sounds?", "answer": "Yes—leathercraft sounds are satisfying. Cutting, stitching, burnishing have ASMR appeal. Many successful channels feature these sounds prominently. Separate audio recording can improve quality."},
+    {"question": "Lighting for leather?", "answer": "Even diffused light prevents harsh shadows in tooled patterns. Side light can show texture. Consistent throughout video. LED panels at angles work well. Avoid direct overhead that flattens texture."},
+    {"question": "What content works for leathercraft?", "answer": "Full project tutorials most popular. Tool reviews and comparisons. Technique breakdowns (edge finishing, stitching). Pattern/template shares. Satisfying compilation videos."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "leathercraft"
+}

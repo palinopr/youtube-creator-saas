@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-video-ideas-generator",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video Ideas Generator 2025: Never Run Out of Content",
+    "description": "Generate endless YouTube video ideas. Methods and frameworks for content ideation.",
+    "keywords": ["youtube video ideas generator", "youtube content ideas", "video idea generation", "youtube content brainstorming", "what to post on youtube"]
+  },
+  "hero": {
+    "badge": "Video Ideas",
+    "headline": "YouTube Video Ideas Generator",
+    "subheadline": "Never face blank page syndrome again. Frameworks that work.",
+    "primaryKeyword": "youtube video ideas generator"
+  },
+  "sections": [
+    {"type": "intro", "content": "Running out of video ideas is the number one reason creators quit. But idea generation isn't magic—it's a system. With the right frameworks, you'll have more ideas than you can ever produce. Here are proven methods for generating endless content ideas."},
+    {"type": "features", "title": "Idea Framework Types", "content": [
+      {"icon": "help-circle", "title": "Question-Based", "description": "Answer what your audience asks."},
+      {"icon": "refresh-cw", "title": "Remix Existing", "description": "New angle on proven topics."},
+      {"icon": "trending-up", "title": "Trend-Jacking", "description": "Your niche + current events."},
+      {"icon": "layers", "title": "Series/Pillars", "description": "Recurring content themes."}
+    ]},
+    {"type": "features", "title": "Question Mining", "content": [
+      {"icon": "message-circle", "title": "Comments", "description": "Questions in your own comments."},
+      {"icon": "search", "title": "Google Autocomplete", "description": "What people search for."},
+      {"icon": "help-circle", "title": "Quora/Reddit", "description": "Real questions people ask."},
+      {"icon": "users", "title": "Community Tab", "description": "Poll your audience directly."}
+    ]},
+    {"type": "features", "title": "Content Multipliers", "content": [
+      {"icon": "list", "title": "Top 10 Lists", "description": "Works for almost any topic."},
+      {"icon": "git-compare", "title": "Comparisons", "description": "X vs Y format."},
+      {"icon": "book", "title": "Tutorials", "description": "How to do specific things."},
+      {"icon": "clock", "title": "Updates", "description": "Topic + current year."}
+    ]},
+    {"type": "steps", "title": "Weekly Ideation Process", "content": [
+      "Block 30 minutes weekly for ideation",
+      "Review analytics—what performed?",
+      "Check comments for questions",
+      "Search your niche keywords",
+      "Note trending topics in your space",
+      "Add all ideas to master list (no filtering)",
+      "Weekly: pick best ideas for next week",
+      "Keep list always growing"
+    ]},
+    {"type": "benefits", "title": "Idea Generation Tips", "content": [
+      "Quantity over quality in brainstorming",
+      "No idea is too small—note everything",
+      "Combine two topics for new angles",
+      "What do YOU wish existed?",
+      "Competitors' comments = your ideas",
+      "Every problem = potential video",
+      "Keep running idea document always"
+    ]},
+    {"type": "checklist", "title": "Ideation Checklist", "content": [
+      "Master idea list exists?",
+      "Weekly ideation time blocked?",
+      "Comments reviewed for questions?",
+      "Search trends checked?",
+      "Competitor content audited?",
+      "Community polled for interests?",
+      "Ideas never deleted, just deferred?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many ideas should I have backlogged?", "answer": "Aim for 50+ ideas minimum in your master list. Never worry about running out. Most ideas won't become videos—that's fine. The goal is abundance. Add faster than you produce."},
+    {"question": "What if my niche feels too narrow?", "answer": "Narrow niches have depth—go more specific, not broader. 100 videos on one topic is possible. Different formats, levels, updates. Narrow + deep beats broad + shallow for audience building."},
+    {"question": "Should I make videos on trending topics?", "answer": "If relevant to your niche, yes. Your angle on trending topic can work. Don't chase irrelevant trends. Trend + your expertise = good. Pure trend chasing without relevance = audience confusion."},
+    {"question": "How to pick which idea to make next?", "answer": "Balance: what you're excited about, what audience wants, what's timely. Enthusiasm shows in content. Data shows what works. Seasonal/trending topics have windows. Mix of all three."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

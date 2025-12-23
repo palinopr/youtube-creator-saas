@@ -1,0 +1,66 @@
+{
+  "slug": "cigar-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Cigar YouTube Tools 2025: Cigar Review Channel Equipment",
+    "description": "Top tools for cigar YouTube channels. Film reviews, lounges, and lifestyle.",
+    "keywords": ["cigar youtube tools", "cigar review channel", "cigar video equipment", "cigar content", "tobacco youtube"]
+  },
+  "hero": {
+    "badge": "Cigar Tools",
+    "headline": "Best Cigar YouTube Tools 2025",
+    "subheadline": "Capture the experience. Gear for cigar reviewers.",
+    "primaryKeyword": "cigar youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Cigar content combines review, lifestyle, and community. Viewers want to see wrapper details, understand construction, and share the relaxation experience. Filming in lounges, outdoors, and home setups each present unique challenges. Here's what cigar YouTubers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "camera", "title": "Good Low Light", "description": "Lounges are often dim."},
+      {"icon": "eye", "title": "Macro Capability", "description": "Wrapper detail shots."},
+      {"icon": "video", "title": "External Mic Input", "description": "Clear audio in noisy lounges."},
+      {"icon": "battery", "title": "Long Battery Life", "description": "Reviews can be 1-2 hours."}
+    ]},
+    {"type": "features", "title": "Lighting Considerations", "content": [
+      {"icon": "sun", "title": "Portable LED", "description": "Supplement lounge lighting."},
+      {"icon": "moon", "title": "Warm Tones", "description": "Match lounge atmosphere."},
+      {"icon": "circle", "title": "Ring Light", "description": "Good for face shots."},
+      {"icon": "layers", "title": "Natural Light", "description": "Outdoor smoking is ideal."}
+    ]},
+    {"type": "features", "title": "Audio Solutions", "content": [
+      {"icon": "mic", "title": "Lavalier Mic", "description": "Clear speech despite ambiance."},
+      {"icon": "volume-x", "title": "Noise Reduction", "description": "Lounge background noise."},
+      {"icon": "headphones", "title": "Monitor Audio", "description": "Check levels in environment."},
+      {"icon": "volume-2", "title": "Ambiance", "description": "Some background is good."}
+    ]},
+    {"type": "benefits", "title": "Cigar Content Tips", "content": [
+      "Detailed wrapper shots show quality",
+      "Explain flavor profiles clearly",
+      "Lounge reviews build community",
+      "Consistent rating system helps",
+      "Pairing content expands appeal",
+      "Lifestyle content beyond just reviews",
+      "Age verification considerations"
+    ]},
+    {"type": "checklist", "title": "Cigar Video Checklist", "content": [
+      "Camera low light capable?",
+      "Portable lighting packed?",
+      "Lavalier mic tested?",
+      "Batteries for long review?",
+      "Lounge permission obtained?",
+      "Detail shots planned?",
+      "Rating criteria consistent?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for cigar reviews?", "answer": "Sony A7 series excellent low light. Canon M50 good budget option. Macro lens or mode for wrapper details. Compact size helpful for lounge filming. Good audio input essential."},
+    {"question": "Filming in cigar lounges?", "answer": "Always ask permission first—many welcome exposure. Be respectful of other patrons. Portable lighting helps dim environments. Lavalier mic essential for clear audio over background."},
+    {"question": "How long should reviews be?", "answer": "Depends on format—full smoke 1-2 hours, edited highlight 10-20 minutes. Some viewers enjoy full-length relaxation content. Others prefer condensed reviews. Consider offering both formats."},
+    {"question": "Age restrictions and monetization?", "answer": "YouTube restricts tobacco content promotion. Reviews may face limited ads. Some creators focus on community over monetization. Comply with platform policies. Consider alternative revenue streams."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "cigar"
+}

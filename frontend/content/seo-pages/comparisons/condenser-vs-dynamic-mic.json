@@ -1,0 +1,67 @@
+{
+  "slug": "condenser-vs-dynamic-mic",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Condenser vs Dynamic Microphone 2025: Best for YouTube",
+    "description": "Compare condenser and dynamic microphones for YouTube. Which type fits your recording environment?",
+    "keywords": ["condenser vs dynamic", "microphone comparison", "dynamic vs condenser", "best mic youtube", "microphone type youtube"]
+  },
+  "hero": {
+    "badge": "Microphone Types",
+    "headline": "Condenser vs Dynamic Microphone",
+    "subheadline": "Two different tools for different situations. Choose the right mic type.",
+    "primaryKeyword": "condenser vs dynamic"
+  },
+  "sections": [
+    {"type": "intro", "content": "Condenser and dynamic microphones work differently and suit different environments. Condensers are sensitive and detailed—great in treated rooms. Dynamics reject noise—ideal for untreated spaces. Choose based on your recording situation."},
+    {"type": "comparison", "title": "Microphone Comparison", "content": [
+      {"feature": "Sensitivity", "toolA": "Condenser: High", "toolB": "Dynamic: Lower", "tubeGrow": "N/A"},
+      {"feature": "Room Noise", "toolA": "Condenser: Picks up more", "toolB": "Dynamic: Rejects better", "tubeGrow": "N/A"},
+      {"feature": "Detail", "toolA": "Condenser: More detail", "toolB": "Dynamic: Slightly less", "tubeGrow": "N/A"},
+      {"feature": "Power", "toolA": "Condenser: Needs phantom", "toolB": "Dynamic: No power needed", "tubeGrow": "N/A"},
+      {"feature": "Price", "toolA": "Condenser: $100-500+", "toolB": "Dynamic: $100-400+", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "Condenser: Treated rooms", "toolB": "Dynamic: Untreated spaces", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Condenser Advantages", "content": [
+      {"icon": "mic", "title": "Detail and Clarity", "description": "Captures nuance and high frequencies. 'Airy' sound quality."},
+      {"icon": "volume-2", "title": "Sensitivity", "description": "Picks up subtle sounds. Great for ASMR, vocals, detailed work."},
+      {"icon": "zap", "title": "Presence", "description": "Bright, forward sound. Cuts through mix."}
+    ]},
+    {"type": "features", "title": "Dynamic Advantages", "content": [
+      {"icon": "shield", "title": "Noise Rejection", "description": "Ignores room noise, AC, outside sounds. Forgiving."},
+      {"icon": "anchor", "title": "Durability", "description": "Built tough. Hard to damage. Tour-ready."},
+      {"icon": "volume-x", "title": "Less Room Sound", "description": "Focus on voice, not environment. Untreated room friendly."}
+    ]},
+    {"type": "benefits", "title": "Choose Condenser If", "content": [
+      "Recording space is treated/quiet",
+      "Want maximum detail",
+      "ASMR or delicate sounds",
+      "Have phantom power source",
+      "Room echo is controlled",
+      "Vocal clarity priority",
+      "Controlled environment"
+    ]},
+    {"type": "benefits", "title": "Choose Dynamic If", "content": [
+      "Room is untreated",
+      "Background noise present",
+      "Recording environment varies",
+      "Podcast/voice focus",
+      "Want forgiving mic",
+      "Close-mic technique",
+      "Budget includes no treatment"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which is better for YouTube?", "answer": "Depends on your room. Condenser in quiet, treated space. Dynamic in noisy or untreated room. Both can sound great."},
+    {"question": "Why does SM7B sound good in untreated rooms?", "answer": "It's dynamic—naturally rejects room sound. Plus cardioid pattern focuses on voice. That's why podcasters love it."},
+    {"question": "Can I use condenser in untreated room?", "answer": "Yes, but you'll hear more room. Use close-mic technique, add panels, or embrace it. Dynamic is easier solution."},
+    {"question": "Popular options for each?", "answer": "Condenser: Rode NT1, Audio-Technica AT2020. Dynamic: Shure SM7B, Rode PodMic, Shure MV7."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "condenser",
+  "secondaryTool": "dynamic"
+}

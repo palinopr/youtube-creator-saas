@@ -1,0 +1,72 @@
+{
+  "slug": "pets-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Pets YouTube Tools 2025: Animal Content Creator Equipment",
+    "description": "Essential tools for pet YouTube channels. Filming animals, unpredictable moments, and engaging content.",
+    "keywords": ["pets youtube tools", "animal youtube equipment", "pet content creator", "dog youtube setup", "cat youtube tools"]
+  },
+  "hero": {
+    "badge": "Pet Content",
+    "headline": "Essential Tools for Pet YouTube Creators",
+    "subheadline": "Capture furry stars in action. Equipment for unpredictable animal filming.",
+    "primaryKeyword": "pets youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Pet content is unpredictable—your star won't follow a script. You need equipment that's quick to deploy, captures motion well, and handles varying conditions. Whether dogs, cats, or exotic pets, here's what animal content creators need."},
+    {"type": "features", "title": "Camera Options", "content": [
+      {"icon": "smartphone", "title": "Smartphone", "description": "Always ready. Modern phones handle motion well. Quick capture."},
+      {"icon": "video", "title": "Action Camera", "description": "GoPro for pet POV. Attach to harness. Durable, wide angle."},
+      {"icon": "camera", "title": "Fast Autofocus Camera", "description": "Sony or Canon with animal eye AF. Track moving pets reliably."}
+    ]},
+    {"type": "features", "title": "Filming Challenges", "content": [
+      {"icon": "target", "title": "Animal Eye AF", "description": "Many cameras now track animal eyes. Game-changer for pet content."},
+      {"icon": "zap", "title": "Fast Shutter Speed", "description": "Freeze motion for action shots. 1/500+ for moving animals."},
+      {"icon": "sun", "title": "Good Lighting", "description": "Pets move into shadows. Bright, even lighting helps cameras."}
+    ]},
+    {"type": "features", "title": "Audio Solutions", "content": [
+      {"icon": "mic", "title": "External Mic", "description": "Capture animal sounds clearly. Rode VideoMicro on camera."},
+      {"icon": "volume-2", "title": "Voiceover Option", "description": "Narrate over footage. Separate recording cleaner than on-location."},
+      {"icon": "music", "title": "Music/SFX", "description": "Cute compilations need good music. Build emotional connection."}
+    ]},
+    {"type": "steps", "title": "Pet Content Tips", "content": [
+      "Film way more than you'll use",
+      "Let animals be themselves",
+      "Learn your pet's schedule/patterns",
+      "Multiple angles improve compilations",
+      "Patience is your best tool",
+      "Safety first—never stress animals",
+      "Natural behavior beats trained tricks"
+    ]},
+    {"type": "benefits", "title": "Pet Content Types", "content": [
+      "Daily life/routine videos",
+      "Training tutorials",
+      "Product reviews (pet supplies)",
+      "Rescue/adoption stories",
+      "Funny compilations",
+      "Educational content",
+      "New pet introductions"
+    ]},
+    {"type": "checklist", "title": "Pet Creator Setup", "content": [
+      "Fast autofocus camera/phone",
+      "Good lighting setup",
+      "Action camera for POV",
+      "External microphone",
+      "Treats for cooperation",
+      "Patient editing mindset",
+      "Lots of storage space"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for pet content?", "answer": "Sony cameras with animal eye AF are excellent. iPhone 15+ has solid animal tracking. Any camera with good autofocus and low light helps."},
+    {"question": "How to get good footage?", "answer": "Patience and volume. Film constantly, curate the best moments. Animals don't perform on demand—capture natural behavior."},
+    {"question": "Action camera recommendations?", "answer": "GoPro Hero series or DJI Action for pet POV. Use chest mounts for dogs. Be careful with attachments—pet safety first."},
+    {"question": "Should I show my face?", "answer": "Optional. Many successful pet channels focus entirely on animals. Some include owner for narrative. Match your style."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "pets"
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "restream-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best Restream Alternatives 2025: Multistreaming Platform Comparison",
+    "description": "Top Restream alternatives for YouTube multistreaming. Compare streaming platforms.",
+    "keywords": ["restream alternative", "restream alternatives", "multistreaming alternative", "stream to multiple platforms", "restream competitor"]
+  },
+  "hero": {
+    "badge": "Alternatives",
+    "headline": "Best Restream Alternatives 2025",
+    "subheadline": "Multistream to YouTube and beyond. Options compared.",
+    "primaryKeyword": "restream alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "Restream is popular for broadcasting to multiple platforms simultaneously, but it's not the only option. Whether you want lower cost, different features, or just alternatives—here are the best options for multistreaming your YouTube content."},
+    {"type": "comparison", "title": "Restream vs Alternatives", "content": [
+      {"feature": "Price", "toolA": "Restream: $19/mo", "toolB": "StreamYard: $25/mo", "tubeGrow": "N/A"},
+      {"feature": "Platforms", "toolA": "Restream: 30+", "toolB": "StreamYard: 8", "tubeGrow": "N/A"},
+      {"feature": "Guest Features", "toolA": "Restream: Basic", "toolB": "StreamYard: Excellent", "tubeGrow": "N/A"},
+      {"feature": "Custom RTMP", "toolA": "Restream: Yes", "toolB": "OBS + Plugin: Yes", "tubeGrow": "N/A"},
+      {"feature": "Chat Aggregation", "toolA": "Restream: Yes", "toolB": "Prism: Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Top Alternatives", "content": [
+      {"icon": "monitor", "title": "OBS + Plugins", "description": "Free multistreaming with plugins. Full control, more setup."},
+      {"icon": "globe", "title": "StreamYard", "description": "Better guest management. Fewer platforms but easier use."},
+      {"icon": "cast", "title": "Prism Live", "description": "Mobile multistreaming. Free tier available."},
+      {"icon": "radio", "title": "Castr", "description": "Similar to Restream. Different pricing structure."}
+    ]},
+    {"type": "features", "title": "Free Multistreaming Options", "content": [
+      {"icon": "code", "title": "OBS + obs-multi-rtmp", "description": "Plugin for OBS. Free, requires technical setup."},
+      {"icon": "server", "title": "Own Server + nginx", "description": "Technical but free. Full control over streams."},
+      {"icon": "smartphone", "title": "Prism Live Free Tier", "description": "Limited platforms but free. Mobile-focused."},
+      {"icon": "dollar-sign", "title": "YouTube Native", "description": "Stream to YouTube only, simulcast with RTMP key to others."}
+    ]},
+    {"type": "benefits", "title": "Why Consider Alternatives", "content": [
+      "OBS plugins are completely free",
+      "StreamYard better for interviews",
+      "Lower cost options exist",
+      "Some offer better chat features",
+      "Different platforms supported",
+      "Mobile streaming options",
+      "Self-hosted for full control"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I multistream for free?", "answer": "Yes—OBS with multi-rtmp plugin works well. Requires more technical setup. Prism has limited free tier. True free options exist."},
+    {"question": "Is StreamYard better than Restream?", "answer": "Different focus. StreamYard better for guests and production. Restream better for pure multistreaming to many platforms. Depends on needs."},
+    {"question": "What about just streaming to YouTube?", "answer": "YouTube alone is fine for most creators. Multistreaming spreads audience thin. Consider: is multistreaming necessary for your goals?"},
+    {"question": "Best for multistreaming with guests?", "answer": "StreamYard or Riverside for guests. Restream's guest features are basic. If interviews are priority, guest-focused platforms work better."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "restream"
+}

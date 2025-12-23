@@ -51,8 +51,12 @@ class CommentAgent:
         youtube_service: Resource,
         analytics_service: Optional[Resource] = None,
         user_id: Optional[str] = None,
+        channel_profile: Optional[Dict[str, Any]] = None,
     ):
         self.youtube_tools = YouTubeTools(youtube_service, analytics_service)
+        self.channel_profile = channel_profile or {}
+        self.niche = self.channel_profile.get("niche", "general")
+        self.language = self.channel_profile.get("language", "en")
 
         # Create cost tracking callback
         self.cost_callback = create_cost_tracking_callback(
@@ -67,6 +71,26 @@ class CommentAgent:
             temperature=0.3,  # Slightly creative but mostly consistent
             callbacks=[self.cost_callback],
         )
+
+    def _build_channel_context(self) -> str:
+        """Build channel context for the system prompt."""
+        if not self.channel_profile:
+            return ""
+
+        niche = self.niche
+        language = self.language
+        common_tags = self.channel_profile.get("common_tags", [])
+
+        tags_str = ", ".join(common_tags[:8]) if common_tags else "various topics"
+
+        return f"""
+
+CHANNEL CONTEXT:
+- This is a {niche} channel with primary language: {language}
+- Common topics: {tags_str}
+
+When analyzing comments, consider what matters most to {niche} audiences.
+Content ideas should be relevant to this channel's niche."""
 
     async def analyze_comments(
         self,
@@ -199,8 +223,11 @@ Rules:
 6. Percentages for sentiment should add up to 100"""
 
         try:
+            channel_context = self._build_channel_context()
+            system_content = f"""You are an expert YouTube comment analyst. Analyze comments to help creators engage with their audience and find content opportunities. Always respond with valid JSON.
+{channel_context}"""
             response = self.llm.invoke([
-                SystemMessage(content="You are an expert YouTube comment analyst. Analyze comments to help creators engage with their audience and find content opportunities. Always respond with valid JSON."),
+                SystemMessage(content=system_content),
                 HumanMessage(content=prompt)
             ])
 

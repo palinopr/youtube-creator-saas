@@ -1,0 +1,66 @@
+{
+  "slug": "numismatic-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Numismatic YouTube Tools 2025: Coin Collecting Channel Equipment",
+    "description": "Top tools for numismatic YouTube channels. Film coins, currency, and collections.",
+    "keywords": ["numismatic youtube tools", "coin collecting channel", "coin video equipment", "currency youtube", "coin collecting content"]
+  },
+  "hero": {
+    "badge": "Numismatic Tools",
+    "headline": "Best Numismatic YouTube Tools 2025",
+    "subheadline": "Capture the details. Gear for coin collectors.",
+    "primaryKeyword": "numismatic youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Numismatic content serves collectors and enthusiasts—coin hunting, grading explanations, collection showcases, and market analysis. Viewers need to see coin details clearly: mint marks, wear patterns, and luster. Macro photography skills are essential. Here's what coin YouTubers use."},
+    {"type": "features", "title": "Macro Photography", "content": [
+      {"icon": "camera", "title": "True Macro Lens", "description": "1:1 ratio for coin details."},
+      {"icon": "eye", "title": "Extension Tubes", "description": "Budget macro solution."},
+      {"icon": "video", "title": "4K Minimum", "description": "Details visible on screen."},
+      {"icon": "move", "title": "Copy Stand", "description": "Stable overhead position."}
+    ]},
+    {"type": "features", "title": "Lighting Coins", "content": [
+      {"icon": "sun", "title": "Axial Lighting", "description": "Reduces harsh shadows."},
+      {"icon": "layers", "title": "Angled Light", "description": "Shows relief and luster."},
+      {"icon": "circle", "title": "Ring Light", "description": "Even illumination option."},
+      {"icon": "moon", "title": "Dark Background", "description": "Coins pop visually."}
+    ]},
+    {"type": "features", "title": "Presentation Setup", "content": [
+      {"icon": "grid", "title": "Velvet Display", "description": "Classic coin backdrop."},
+      {"icon": "maximize", "title": "Coin Holders", "description": "Safe handling, clear viewing."},
+      {"icon": "refresh-cw", "title": "Rotation Platform", "description": "Show all angles."},
+      {"icon": "shield", "title": "Gloves", "description": "Handle coins properly on camera."}
+    ]},
+    {"type": "benefits", "title": "Coin Content Tips", "content": [
+      "Macro reveals what eyes miss",
+      "Coin roll hunting videos are popular",
+      "Grading explanations educational",
+      "Market updates keep viewers informed",
+      "Error coins drive high interest",
+      "Collection showcases inspire",
+      "Compare genuine vs counterfeit"
+    ]},
+    {"type": "checklist", "title": "Coin Video Checklist", "content": [
+      "Macro lens/setup ready?",
+      "Lighting shows coin detail?",
+      "Background clean and neutral?",
+      "Coins handled with gloves?",
+      "Multiple angles captured?",
+      "Mint marks visible?",
+      "Grading references available?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best macro setup for coins?", "answer": "True macro lens (60mm-100mm) ideal. Extension tubes on normal lens work for budget. Copy stand provides stability. 1:1 magnification shows all details. Higher than 1:1 for mint marks."},
+    {"question": "How to light coins properly?", "answer": "Angled light shows relief and luster—experiment with angles. Axial lighting (through half-mirror) reduces shadows. Ring lights give even illumination. Multiple small lights offer flexibility. Dark background makes coins stand out."},
+    {"question": "Handling coins on camera?", "answer": "Always use gloves—white cotton or nitrile. Hold by edges only. Demonstrate proper handling as education. Keep coins in holders when possible. Never clean coins on camera (controversial topic)."},
+    {"question": "What coin content performs well?", "answer": "Coin roll hunting very popular—the hunt is entertaining. Error coin discoveries drive excitement. Grading explanations help beginners. Market updates for investors. Rare coin showcases for aspirational content."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "numismatic"
+}

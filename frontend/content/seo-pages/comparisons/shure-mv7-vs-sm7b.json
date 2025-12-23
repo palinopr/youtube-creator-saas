@@ -1,0 +1,67 @@
+{
+  "slug": "shure-mv7-vs-sm7b",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Shure MV7 vs SM7B 2025: Best Shure Mic for YouTube",
+    "description": "Compare Shure MV7 and SM7B microphones. Which Shure is right for your YouTube content?",
+    "keywords": ["shure mv7 vs sm7b", "mv7 vs sm7b", "shure youtube mic", "best shure microphone", "sm7b vs mv7"]
+  },
+  "hero": {
+    "badge": "Microphone Comparison",
+    "headline": "Shure MV7 vs SM7B",
+    "subheadline": "Two legendary Shure mics. USB convenience vs broadcast standard.",
+    "primaryKeyword": "shure mv7 vs sm7b"
+  },
+  "sections": [
+    {"type": "intro", "content": "Shure's SM7B is the legendary broadcast microphone. The MV7 brings similar DNA with USB convenience. Both produce excellent YouTube audio—but they serve different needs and budgets. Here's the full comparison."},
+    {"type": "comparison", "title": "Microphone Comparison", "content": [
+      {"feature": "Price", "toolA": "MV7 ~$250", "toolB": "SM7B ~$400", "tubeGrow": "N/A"},
+      {"feature": "Connection", "toolA": "USB or XLR", "toolB": "XLR only", "tubeGrow": "N/A"},
+      {"feature": "Interface Needed", "toolA": "No (USB mode)", "toolB": "Yes + cloudlifter often", "tubeGrow": "N/A"},
+      {"feature": "Sound Character", "toolA": "Similar, slightly brighter", "toolB": "Warm, broadcast standard", "tubeGrow": "N/A"},
+      {"feature": "Total Cost", "toolA": "$250 standalone", "toolB": "$400 + interface ($100-300)", "tubeGrow": "N/A"},
+      {"feature": "Software", "toolA": "ShurePlus MOTIV app", "toolB": "None (hardware control)", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "MV7 Strengths", "content": [
+      {"icon": "usb", "title": "USB Option", "description": "Plug and play. No interface needed. Hybrid USB/XLR flexibility."},
+      {"icon": "dollar-sign", "title": "Lower Total Cost", "description": "Works standalone. Don't need interface, cloudlifter, cables."},
+      {"icon": "smartphone", "title": "App Control", "description": "ShurePlus MOTIV app for EQ, compression. Built-in processing."}
+    ]},
+    {"type": "features", "title": "SM7B Strengths", "content": [
+      {"icon": "award", "title": "Industry Standard", "description": "40+ years of professional use. Proven sound."},
+      {"icon": "music", "title": "Superior Versatility", "description": "Vocals, instruments, broadcast. Does everything."},
+      {"icon": "shield", "title": "Build Quality", "description": "Built to last decades. Studio workhorse."}
+    ]},
+    {"type": "benefits", "title": "Choose MV7 If", "content": [
+      "Want USB simplicity",
+      "Budget conscious (total cost)",
+      "Starting YouTube journey",
+      "Don't have audio interface",
+      "Want built-in processing",
+      "Portability matters",
+      "Hybrid connection useful"
+    ]},
+    {"type": "benefits", "title": "Choose SM7B If", "content": [
+      "Want the broadcast standard",
+      "Already have audio interface",
+      "Plan to record music too",
+      "Want maximum audio quality",
+      "Investment mindset (buy once)",
+      "Professional aspirations",
+      "XLR ecosystem preferred"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can you hear the difference?", "answer": "Subtle. SM7B slightly warmer, smoother. MV7 a bit brighter. Both sound excellent. Most YouTube listeners won't notice difference."},
+    {"question": "Does SM7B need a cloudlifter?", "answer": "Often, yes. SM7B has low output. Many interfaces struggle. Cloudlifter or Fethead ($100) helps. Some modern interfaces have enough gain."},
+    {"question": "Total cost comparison?", "answer": "MV7: $250 standalone. SM7B: $400 + interface ($100-300) + possibly cloudlifter ($100) + XLR cable ($20). SM7B setup: $500-800 total."},
+    {"question": "Which sounds more professional?", "answer": "Both sound professional. SM7B has more prestige in industry. MV7 is essentially SM7B DNA in modern package. Either works for YouTube."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "shure-mv7",
+  "secondaryTool": "shure-sm7b"
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "prores-vs-h264",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "ProRes vs H.264 2025: Which Video Codec for YouTube",
+    "description": "Compare ProRes and H.264 codecs. Which is best for recording and editing YouTube content?",
+    "keywords": ["prores vs h264", "video codec youtube", "prores vs h.264", "best recording codec", "editing codec comparison"]
+  },
+  "hero": {
+    "badge": "Video Codecs",
+    "headline": "ProRes vs H.264",
+    "subheadline": "Quality vs file size. Which codec for your YouTube workflow?",
+    "primaryKeyword": "prores vs h264"
+  },
+  "sections": [
+    {"type": "intro", "content": "ProRes and H.264 serve different purposes. ProRes is designed for editing—high quality, large files. H.264 is designed for delivery—compressed, efficient. Understanding when to use each improves your workflow and final quality."},
+    {"type": "comparison", "title": "Codec Comparison", "content": [
+      {"feature": "File Size", "toolA": "ProRes: Very large", "toolB": "H.264: Small", "tubeGrow": "N/A"},
+      {"feature": "Quality", "toolA": "ProRes: Excellent", "toolB": "H.264: Very good", "tubeGrow": "N/A"},
+      {"feature": "Edit Performance", "toolA": "ProRes: Excellent", "toolB": "H.264: Moderate", "tubeGrow": "N/A"},
+      {"feature": "Best For", "toolA": "ProRes: Editing", "toolB": "H.264: Delivery", "tubeGrow": "N/A"},
+      {"feature": "CPU Load (Editing)", "toolA": "ProRes: Low", "toolB": "H.264: High", "tubeGrow": "N/A"},
+      {"feature": "Color Depth", "toolA": "ProRes: 10-bit+", "toolB": "H.264: Usually 8-bit", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "When to Use ProRes", "content": [
+      {"icon": "film", "title": "Recording Original Footage", "description": "If camera supports it and storage permits. Maximum quality retained."},
+      {"icon": "sliders", "title": "Heavy Color Grading", "description": "10-bit color handles grading better. Less banding, more flexibility."},
+      {"icon": "cpu", "title": "Smoother Editing", "description": "Less CPU decoding. Timeline scrubs smoothly. Faster editing."}
+    ]},
+    {"type": "features", "title": "When to Use H.264", "content": [
+      {"icon": "upload", "title": "Final Export for YouTube", "description": "YouTube prefers H.264. Good quality at manageable size."},
+      {"icon": "hard-drive", "title": "Storage Limited", "description": "10x smaller files than ProRes. Practical for most."},
+      {"icon": "camera", "title": "Most Camera Recording", "description": "Most cameras record H.264/H.265. Practical default."}
+    ]},
+    {"type": "benefits", "title": "Optimal Workflow", "content": [
+      "Record in best quality camera offers",
+      "Transcode to ProRes for editing (if needed)",
+      "Edit in editing codec",
+      "Export to H.264 for YouTube upload",
+      "Keep original files as backup",
+      "Use proxies for 4K+ workflows",
+      "Match export to YouTube recommendations"
+    ]},
+    {"type": "checklist", "title": "Codec Decision Guide", "content": [
+      "What does your camera record?",
+      "How much storage available?",
+      "Heavy color grading planned?",
+      "Computer handles H.264 editing okay?",
+      "Final delivery platform requirements?",
+      "Archival quality needed?",
+      "Proxy workflow option?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I record in ProRes?", "answer": "If camera supports it and storage permits, yes—best quality. Most cameras don't offer it. Use highest quality your camera provides."},
+    {"question": "What about H.265/HEVC?", "answer": "Better compression than H.264 but harder to edit. Good for final delivery if YouTube supports it. ProRes still better for editing."},
+    {"question": "Does YouTube prefer ProRes uploads?", "answer": "YouTube accepts both but recommends H.264. ProRes won't look better—YouTube re-encodes everything. H.264 uploads faster."},
+    {"question": "My computer struggles with H.264 editing?", "answer": "Create proxy files. Edit with proxies, link to originals for export. Or transcode to ProRes/DNxHR for editing."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "prores",
+  "secondaryTool": "h264"
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "jewelry-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Jewelry YouTube Tools 2025: Jewelry Making Channel Equipment",
+    "description": "Top tools for jewelry YouTube channels. Film metalwork, beading, and designs.",
+    "keywords": ["jewelry youtube tools", "jewelry making channel", "jewelry video equipment", "craft jewelry youtube", "beading content"]
+  },
+  "hero": {
+    "badge": "Jewelry Tools",
+    "headline": "Best Jewelry YouTube Tools 2025",
+    "subheadline": "Showcase sparkle beautifully. Gear for jewelry creators.",
+    "primaryKeyword": "jewelry youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Jewelry content requires capturing tiny details, controlling reflections on metal and gems, and showing intricate work clearly. Whether you're making wire-wrapped pieces, metalsmithing, or stringing beads, viewers need to see every detail. Here's what successful jewelry YouTubers use."},
+    {"type": "features", "title": "Camera & Lens", "content": [
+      {"icon": "camera", "title": "Macro Lens", "description": "60-100mm macro. Fill frame with details."},
+      {"icon": "video", "title": "Sony A6400", "description": "APS-C with macro. Great detail."},
+      {"icon": "eye", "title": "Extension Tubes", "description": "Budget macro solution."},
+      {"icon": "smartphone", "title": "Phone Macro", "description": "Clip-on lens. Quick shots."}
+    ]},
+    {"type": "features", "title": "Lighting Control", "content": [
+      {"icon": "box", "title": "Light Tent", "description": "Diffused, even illumination. Reduces reflections."},
+      {"icon": "sun", "title": "Daylight LEDs", "description": "5500K. Accurate gem colors."},
+      {"icon": "circle", "title": "Ring Light", "description": "Even front light. Good for demos."},
+      {"icon": "minus", "title": "Light Modifiers", "description": "Control reflections on metal."}
+    ]},
+    {"type": "features", "title": "Workspace Setup", "content": [
+      {"icon": "move", "title": "Overhead Camera", "description": "Bird's eye for work process."},
+      {"icon": "maximize", "title": "Copy Stand", "description": "Stable macro shots."},
+      {"icon": "image", "title": "Backgrounds", "description": "Neutral, non-reflective surfaces."},
+      {"icon": "grid", "title": "Magnification", "description": "Jeweler's loupe shots for detail."}
+    ]},
+    {"type": "benefits", "title": "Jewelry Content Tips", "content": [
+      "Macro reveals craftsmanship",
+      "Control reflections on metals",
+      "Show scale with common objects",
+      "Before/during/after tells story",
+      "Clean pieces before final shots",
+      "Multiple angles showcase design",
+      "Natural light shows true colors"
+    ]},
+    {"type": "checklist", "title": "Jewelry Video Checklist", "content": [
+      "Piece cleaned and polished?",
+      "Macro lens/setup ready?",
+      "Reflections controlled?",
+      "Colors accurate?",
+      "Scale reference included?",
+      "Multiple angles captured?",
+      "Work surface clean?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for jewelry?", "answer": "Any camera with macro capability works. True macro lens (1:1 ratio) ideal. Sony, Canon mirrorless popular. Even phone with macro lens can capture good detail. Lighting matters as much as camera."},
+    {"question": "How to avoid reflections on metal?", "answer": "Light tent diffuses light beautifully. Position lights at angles, not direct. Matte spray for extreme cases (wash off). Polarizing filter reduces some reflections. Experiment with positions."},
+    {"question": "Filming jewelry making process?", "answer": "Overhead camera essential for work surface. Macro for detail shots. Time-lapse long processes. Real-time for key techniques. Mix of angles in edit. Good lighting throughout."},
+    {"question": "How to show accurate gem colors?", "answer": "Daylight-balanced lighting (5500K) most accurate. Avoid warm tungsten. Natural light near window works well. Color calibration helps. Show gems in different lights for sparkle."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "jewelry"
+}

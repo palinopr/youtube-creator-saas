@@ -1,0 +1,70 @@
+{
+  "slug": "youtube-channel-audit",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Channel Audit 2025: How to Analyze Your Channel",
+    "description": "Conduct a YouTube channel audit. Identify strengths, weaknesses, and growth opportunities.",
+    "keywords": ["youtube channel audit", "channel analysis youtube", "youtube audit checklist", "analyze youtube channel", "channel review youtube"]
+  },
+  "hero": {
+    "badge": "Channel Audit",
+    "headline": "YouTube Channel Audit Guide",
+    "subheadline": "Systematic channel review. Find what's working and what needs fixing.",
+    "primaryKeyword": "youtube channel audit"
+  },
+  "sections": [
+    {"type": "intro", "content": "A channel audit is a systematic review of your YouTube presence—identifying what's working, what's not, and where opportunities exist. Regular audits prevent stagnation and reveal blind spots. Here's how to conduct a thorough self-audit."},
+    {"type": "features", "title": "Audit Areas", "content": [
+      {"icon": "bar-chart", "title": "Performance Metrics", "description": "Views, watch time, subscriber growth. Trends over time."},
+      {"icon": "image", "title": "Visual Branding", "description": "Thumbnails, banner, consistency. First impressions matter."},
+      {"icon": "file-text", "title": "Content Strategy", "description": "Topics, formats, posting frequency. What's working?"},
+      {"icon": "users", "title": "Audience Engagement", "description": "Comments, community tab, subscriber loyalty."}
+    ]},
+    {"type": "steps", "title": "Conducting Your Audit", "content": [
+      "Export last 6-12 months of analytics",
+      "Identify top 10 and bottom 10 videos",
+      "Analyze what differentiates them",
+      "Review thumbnail click-through rates",
+      "Check audience retention patterns",
+      "Compare to competitors in niche",
+      "Review channel page and branding",
+      "Document findings and action items",
+      "Prioritize highest-impact improvements"
+    ]},
+    {"type": "features", "title": "Key Metrics to Review", "content": [
+      {"icon": "trending-up", "title": "Growth Rate", "description": "Subscribers per month. Is growth accelerating or declining?"},
+      {"icon": "percent", "title": "Average CTR", "description": "Thumbnail effectiveness. Compare to your own average."},
+      {"icon": "clock", "title": "Average View Duration", "description": "Content quality signal. Benchmark against video length."},
+      {"icon": "share-2", "title": "Traffic Sources", "description": "Where views come from. Search vs browse vs external."}
+    ]},
+    {"type": "benefits", "title": "What to Look For", "content": [
+      "Which topics consistently perform well?",
+      "Which thumbnails get highest CTR?",
+      "Where do viewers typically drop off?",
+      "What traffic sources are growing?",
+      "Are subscribers watching new videos?",
+      "What differentiates hits from misses?",
+      "Where are competitors outperforming you?"
+    ]},
+    {"type": "checklist", "title": "Audit Checklist", "content": [
+      "Analytics reviewed for patterns?",
+      "Top/bottom videos identified?",
+      "CTR patterns analyzed?",
+      "Retention graphs reviewed?",
+      "Branding consistency checked?",
+      "Competitors benchmarked?",
+      "Action items prioritized?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I audit my channel?", "answer": "Full audit quarterly. Monthly check on key metrics. Don't over-analyze—focus on patterns, not daily fluctuations."},
+    {"question": "What's most important in an audit?", "answer": "Finding what differentiates your hits from misses. The patterns in your own data are more valuable than generic advice."},
+    {"question": "Should I hire someone for an audit?", "answer": "Self-audits are valuable and free. Professional audits can catch blind spots. Worth it if budget allows and you've plateaued."},
+    {"question": "What tools help with audits?", "answer": "YouTube Studio Analytics is primary. VidIQ/TubeBuddy for competitor analysis. Spreadsheet for tracking patterns over time."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-hook-formulas",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Hook Formulas 2025: Opening Lines That Grab Viewers",
+    "description": "Proven YouTube hook formulas. Grab attention in the first 5 seconds.",
+    "keywords": ["youtube hook formulas", "video hooks youtube", "attention grabbing openings", "youtube intro hooks", "first 5 seconds youtube"]
+  },
+  "hero": {
+    "badge": "Hook Formulas",
+    "headline": "YouTube Hook Formulas That Work",
+    "subheadline": "Grab attention instantly. Proven openers for higher retention.",
+    "primaryKeyword": "youtube hook formulas"
+  },
+  "sections": [
+    {"type": "intro", "content": "The first 5 seconds determine if viewers stay or leave. A strong hook creates curiosity, establishes relevance, and promises value. You don't need creativity every time—proven formulas work. Here are hook structures that consistently perform."},
+    {"type": "features", "title": "Proven Hook Types", "content": [
+      {"icon": "zap", "title": "Result Hook", "description": "Show the end result first. 'This is what we built today.'"},
+      {"icon": "help-circle", "title": "Question Hook", "description": "Ask what viewers are thinking. 'Ever wonder why...?'"},
+      {"icon": "alert-circle", "title": "Shock Hook", "description": "Surprising statement or visual. Disrupt expectations."},
+      {"icon": "star", "title": "Promise Hook", "description": "State exactly what they'll learn. Direct value proposition."}
+    ]},
+    {"type": "steps", "title": "Hook Structure", "content": [
+      "Seconds 0-2: Pattern interrupt (grab attention)",
+      "Seconds 2-5: Promise (why keep watching)",
+      "Seconds 5-10: Proof (you can deliver)",
+      "Seconds 10-15: Preview (what's coming)",
+      "Then: Deliver on promise immediately"
+    ]},
+    {"type": "features", "title": "Formula Examples", "content": [
+      {"icon": "type", "title": "Mistake Hook", "description": "'I made this mistake for years, and it cost me...'"},
+      {"icon": "clock", "title": "Time Hook", "description": "'In the next 10 minutes, you'll learn...'"},
+      {"icon": "target", "title": "Specific Hook", "description": "'3 exact steps that grew my channel to...'"},
+      {"icon": "refresh-cw", "title": "Contrast Hook", "description": "'Most people do X, but top creators do Y.'"}
+    ]},
+    {"type": "benefits", "title": "What Makes Hooks Work", "content": [
+      "Creates curiosity gap",
+      "Promises specific value",
+      "Establishes credibility quickly",
+      "Matches search intent",
+      "Differs from competition",
+      "Flows naturally into content",
+      "Respects viewer time"
+    ]},
+    {"type": "checklist", "title": "Hook Checklist", "content": [
+      "Grabs attention in 2 seconds?",
+      "Promise clear by 5 seconds?",
+      "Relevant to video content?",
+      "Different from typical openers?",
+      "Creates curiosity?",
+      "Matches thumbnail promise?",
+      "Flows into main content?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should a hook be?", "answer": "5-15 seconds for the hook phase. First 5 seconds most critical—this is where most drop-off happens. Get to value quickly after hook."},
+    {"question": "Do I need a new hook every video?", "answer": "Formulas work repeatedly—viewers don't mind familiar structures. Content of hook changes, pattern can repeat. Consistency is fine."},
+    {"question": "What if my topic is boring?", "answer": "No topic is boring with right hook. Focus on transformation, outcome, or counterintuitive angle. Find what makes it matter to viewer."},
+    {"question": "Should hook match thumbnail?", "answer": "Yes—if thumbnail promises something, hook should deliver on or expand that promise. Mismatch causes immediate drop-off."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

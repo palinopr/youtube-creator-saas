@@ -1,0 +1,61 @@
+{
+  "slug": "how-to-create-youtube-community-post",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Community Posts 2025: Complete Guide",
+    "description": "Master YouTube Community tab. Post types, best practices, and strategies to engage subscribers between videos.",
+    "keywords": ["youtube community post", "community tab", "youtube community", "community post ideas", "youtube engagement"]
+  },
+  "hero": {
+    "badge": "Community Tab",
+    "headline": "How to Create YouTube Community Posts That Engage",
+    "subheadline": "Keep your audience engaged between video uploads. Master the Community tab.",
+    "primaryKeyword": "youtube community post"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Community tab lets you connect with subscribers without uploading videos. Polls, images, text posts, and behind-the-scenes content keep your audience engaged and your channel active. It's underused by most creators. Here's how to use Community posts effectively."},
+    {"type": "features", "title": "Community Post Types", "content": [
+      {"icon": "bar-chart-2", "title": "Polls", "description": "Ask questions and get direct feedback. Highest engagement of all post types."},
+      {"icon": "image", "title": "Image Posts", "description": "Share photos, memes, and behind-the-scenes content. Visual stops the scroll."},
+      {"icon": "type", "title": "Text Posts", "description": "Updates, questions, and announcements. Simple but effective for news."}
+    ]},
+    {"type": "steps", "title": "How to Create Community Posts", "content": [
+      "Open YouTube Studio on desktop or mobile",
+      "Click 'Create' button",
+      "Select 'Create post'",
+      "Choose post type (text, image, poll, video)",
+      "Add your content",
+      "Preview on mobile",
+      "Click 'Post' to publish"
+    ]},
+    {"type": "benefits", "title": "Community Post Best Practices", "content": [
+      "Post 2-4 times per week minimum",
+      "Use polls to involve audience in decisions",
+      "Share behind-the-scenes content",
+      "Respond to comments on posts",
+      "Ask questions to spark discussion",
+      "Test video ideas before filming",
+      "Announce upcoming videos"
+    ]},
+    {"type": "checklist", "title": "Community Post Ideas", "content": [
+      "Poll: What video should I make next?",
+      "Image: Behind-the-scenes setup shot",
+      "Text: Milestone celebration post",
+      "Poll: This or that in your niche",
+      "Image: Preview of upcoming video",
+      "Text: Question for subscribers",
+      "Video: Highlight from recent upload"
+    ]}
+  ],
+  "faq": [
+    {"question": "When do I get the Community tab?", "answer": "At 500 subscribers. Once unlocked, it's visible on your channel and in YouTube Studio."},
+    {"question": "How often should I post?", "answer": "2-4 times per week keeps your audience engaged. More is fine if you have content. Don't spam low-effort posts."},
+    {"question": "Do Community posts affect the algorithm?", "answer": "They don't directly boost video performance, but they keep subscribers engaged. Engaged subscribers watch more videos."},
+    {"question": "What post types get most engagement?", "answer": "Polls consistently get highest engagement. They're easy to interact with. Image posts are second. Text posts need compelling questions."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

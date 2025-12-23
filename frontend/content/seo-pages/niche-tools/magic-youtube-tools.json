@@ -1,0 +1,66 @@
+{
+  "slug": "magic-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Magic YouTube Tools 2025: Magician & Illusion Channel Equipment",
+    "description": "Top tools for magic YouTube channels. Film tricks and illusions effectively.",
+    "keywords": ["magic youtube tools", "magician channel equipment", "magic trick filming", "illusion youtube", "card magic video"]
+  },
+  "hero": {
+    "badge": "Magic Tools",
+    "headline": "Best Magic YouTube Tools 2025",
+    "subheadline": "Capture the impossible. Gear for magic creators.",
+    "primaryKeyword": "magic youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Magic on YouTube requires careful camera angles—showing enough to amaze but not enough to expose. Lighting, camera position, and editing all serve the illusion. Whether card magic, mentalism, or stage illusions, technical choices protect secrets while maximizing impact. Here's what magician YouTubers use."},
+    {"type": "features", "title": "Camera Angles", "content": [
+      {"icon": "video", "title": "Controlled Framing", "description": "Show exactly what you want."},
+      {"icon": "eye", "title": "Single Take", "description": "Proves no editing tricks."},
+      {"icon": "camera", "title": "Multiple Angles", "description": "Edit carefully around methods."},
+      {"icon": "user", "title": "Reaction Shots", "description": "Spectator faces sell magic."}
+    ]},
+    {"type": "features", "title": "Lighting for Magic", "content": [
+      {"icon": "sun", "title": "Key Light Control", "description": "Hide palmed items in shadow."},
+      {"icon": "layers", "title": "Background Separation", "description": "Subject stands out clearly."},
+      {"icon": "circle", "title": "Even Hand Lighting", "description": "Cards and coins visible."},
+      {"icon": "moon", "title": "Mood Lighting", "description": "Stage feel for presentations."}
+    ]},
+    {"type": "features", "title": "Close-Up Magic Setup", "content": [
+      {"icon": "maximize", "title": "Overhead Camera", "description": "Card table perspective."},
+      {"icon": "move", "title": "Smooth Surface", "description": "Close-up mat essential."},
+      {"icon": "grid", "title": "Clean Background", "description": "Focus stays on hands."},
+      {"icon": "mic", "title": "Clear Audio", "description": "Patter and presentation matter."}
+    ]},
+    {"type": "benefits", "title": "Magic Content Tips", "content": [
+      "Protect methods—angle carefully",
+      "Reaction videos drive engagement",
+      "Tutorials for self-working tricks only",
+      "Build presentation, not just tricks",
+      "Street magic format popular",
+      "Explain theory without exposure",
+      "Community sensitive to exposure"
+    ]},
+    {"type": "checklist", "title": "Magic Video Checklist", "content": [
+      "Angles checked for method protection?",
+      "Lighting hides what needs hiding?",
+      "Practice run filmed first?",
+      "Audio captures presentation?",
+      "Reactions genuine and visible?",
+      "No accidental flashes in edit?",
+      "Community standards respected?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to film magic without exposing methods?", "answer": "Control framing precisely—only show what you want. Review footage before posting. Single continuous shots prove no camera tricks. Some angles naturally protect methods. Watch your own videos critically."},
+    {"question": "Should magicians teach tricks on YouTube?", "answer": "Self-working tricks and basic principles fine. Marketed effects—never. Magic community has norms around exposure. Focus on presentation and theory. Performance videos safer than tutorials."},
+    {"question": "Best camera for card magic?", "answer": "Any camera with good low-light performance and manual focus. 4K helpful for cropping. Overhead rig for table work. Sony A6400 or Canon M50 popular choices. Clean sensor matters for smooth shots."},
+    {"question": "How important are reactions?", "answer": "Extremely—reactions sell magic to viewers. Film spectators alongside trick. Genuine surprised faces drive engagement. Some creators film reactions separately. Street magic format works because of reactions."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "magic"
+}

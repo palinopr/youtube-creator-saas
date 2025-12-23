@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-engagement-rate",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Engagement Rate 2025: Calculate & Improve It",
+    "description": "Understand and improve your YouTube engagement rate. Likes, comments, shares, and what they mean for growth.",
+    "keywords": ["youtube engagement rate", "engagement rate youtube", "youtube engagement", "video engagement", "improve youtube engagement"]
+  },
+  "hero": {
+    "badge": "Engagement",
+    "headline": "YouTube Engagement Rate Explained",
+    "subheadline": "Measure and improve audience engagement. The signal that tells YouTube viewers care.",
+    "primaryKeyword": "youtube engagement rate"
+  },
+  "sections": [
+    {"type": "intro", "content": "Engagement rate measures how actively viewers interact with your content—likes, comments, shares, saves. High engagement signals valuable content to YouTube's algorithm. Here's how to calculate, understand, and improve your engagement rate."},
+    {"type": "features", "title": "Engagement Metrics", "content": [
+      {"icon": "thumbs-up", "title": "Likes", "description": "Quick positive signal. Easiest form of engagement to get."},
+      {"icon": "message-circle", "title": "Comments", "description": "Strongest engagement signal. Shows viewers invested enough to write."},
+      {"icon": "share-2", "title": "Shares", "description": "Viewers recommending to others. Expands reach significantly."}
+    ]},
+    {"type": "steps", "title": "Calculating Engagement Rate", "content": [
+      "Add likes + comments + shares",
+      "Divide by total views",
+      "Multiply by 100 for percentage",
+      "Example: (500 + 50 + 20) / 10,000 = 5.7%",
+      "Compare against your channel average",
+      "Track trends over time",
+      "Benchmark against similar channels"
+    ]},
+    {"type": "features", "title": "Improving Engagement", "content": [
+      {"icon": "help-circle", "title": "Ask Questions", "description": "End videos with questions. Give viewers something to respond to."},
+      {"icon": "message-square", "title": "Reply to Comments", "description": "Creates conversation. Encourages more comments from others."},
+      {"icon": "star", "title": "Pin Best Comments", "description": "Highlights engagement. Shows you value community input."}
+    ]},
+    {"type": "benefits", "title": "Why Engagement Matters", "content": [
+      "Signals quality to algorithm",
+      "Increases video recommendations",
+      "Builds community connection",
+      "Provides content feedback",
+      "Attracts sponsors (social proof)",
+      "Improves watch time indirectly",
+      "Creates loyal audience base"
+    ]},
+    {"type": "checklist", "title": "Engagement Boost Checklist", "content": [
+      "Ask specific question at video end",
+      "Respond to comments within 24 hours",
+      "Create community posts between uploads",
+      "Pin thought-provoking comments",
+      "Acknowledge top commenters",
+      "Use polls in community tab",
+      "End with clear call-to-action"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good engagement rate?", "answer": "2-5% is average. 5-10% is good. 10%+ is excellent. Varies by niche—smaller channels often have higher rates."},
+    {"question": "Which matters more: likes or comments?", "answer": "Comments signal stronger engagement. But likes are easier to get. Both matter. Focus on encouraging comments when possible."},
+    {"question": "Does engagement affect the algorithm?", "answer": "Yes, but indirectly. Engagement signals quality. High engagement often correlates with good retention, which directly affects reach."},
+    {"question": "How do I get more comments?", "answer": "Ask questions. Be specific—not 'let me know what you think' but 'what's YOUR biggest challenge with X?' Make it easy to respond."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

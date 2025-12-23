@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-grow-youtube-shorts",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Grow with YouTube Shorts in 2025: Complete Strategy",
+    "description": "Master YouTube Shorts to grow your channel fast. Learn the algorithm, content strategy, and optimization tips for Shorts success.",
+    "keywords": ["youtube shorts growth", "how to grow youtube shorts", "youtube shorts strategy", "shorts algorithm", "grow with shorts"]
+  },
+  "hero": {
+    "badge": "Shorts Strategy",
+    "headline": "How to Grow Your Channel with YouTube Shorts in 2025",
+    "subheadline": "Unlock the Shorts algorithm and turn short-form content into long-term channel growth.",
+    "primaryKeyword": "grow youtube shorts"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "YouTube Shorts has become one of the fastest ways to grow a new channel. With a separate algorithm that favors new creators and viral potential, Shorts can drive massive subscriber growth. But success requires understanding what makes Shorts different from long-form content and optimizing accordingly."
+    },
+    {
+      "type": "features",
+      "title": "Shorts Success Factors",
+      "content": [
+        {"icon": "zap", "title": "Hook in First Second", "description": "Shorts viewers scroll fast. Your first frame must stop them. Start with movement, text, or a compelling question - never a slow intro."},
+        {"icon": "trending", "title": "Loop Potential", "description": "The best Shorts loop seamlessly or end unexpectedly, making viewers rewatch. High replay rate signals quality to the algorithm."},
+        {"icon": "video", "title": "Vertical Native", "description": "Shorts must feel native to vertical viewing. Don't just crop long-form - create specifically for 9:16 aspect ratio."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "YouTube Shorts Strategy Step-by-Step",
+      "content": [
+        "Study viral Shorts in your niche for 30 minutes daily",
+        "Create a hook library of first-second attention grabbers",
+        "Script your Shorts with a clear beginning, middle, and end",
+        "Film vertically and fill the frame - no black bars",
+        "Post consistently (1-3 Shorts per day works well)",
+        "Use trending sounds strategically but not randomly",
+        "Link Shorts topics to your long-form content for conversion"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Shorts Best Practices",
+      "content": [
+        "Keep most Shorts under 30 seconds for optimal performance",
+        "Add captions - many watch without sound",
+        "Use descriptive titles (hashtags are less important now)",
+        "Post during peak hours for your audience",
+        "Create Shorts series that encourage binge-watching"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Converting Shorts Viewers to Subscribers",
+      "content": [
+        "Tease long-form content in your Shorts",
+        "Create Shorts that answer questions your main videos explore deeper",
+        "Use a consistent intro style so viewers recognize your brand",
+        "Pin a comment linking to your full videos",
+        "End with a reason to follow: \"More tips like this every day\""
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "Do Shorts subscribers watch long-form content?", "answer": "Some do, but the conversion rate is lower than long-form subscribers. Shorts are great for growth, but you need a strategy to convert casual viewers into engaged subscribers."},
+    {"question": "How many Shorts should I post per day?", "answer": "1-3 Shorts daily is the sweet spot for most creators. Quality beats quantity, but consistency matters. Find a sustainable pace you can maintain."},
+    {"question": "Why aren't my Shorts getting views?", "answer": "Common issues: weak hook, slow start, poor audio quality, or irrelevant hashtags. The algorithm tests your Shorts with small audiences first - a 50%+ swipe-away rate kills reach."},
+    {"question": "Should I only make Shorts?", "answer": "A mix works best. Shorts drive discovery and subscribers, while long-form builds deeper connection and better monetization. Many successful creators do both."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

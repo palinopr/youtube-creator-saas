@@ -1,0 +1,78 @@
+{
+  "slug": "tech-review-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Tech Review YouTube Tools 2025: Create Professional Reviews",
+    "description": "Essential tools for tech review YouTubers. Camera gear, lighting, B-roll equipment, and software for professional product reviews.",
+    "keywords": ["tech review youtube tools", "product review equipment", "tech youtube channel", "review video tools", "unboxing video gear"]
+  },
+  "hero": {
+    "badge": "Tech Review Niche",
+    "headline": "Best YouTube Tools for Tech Reviewers in 2025",
+    "subheadline": "Create professional product reviews with the right gear, lighting, and workflow.",
+    "primaryKeyword": "tech review youtube tools"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Tech review videos demand high production quality. Viewers expect to see products clearly, with accurate colors and professional presentation. This guide covers the specialized tools tech YouTubers use to create compelling reviews that build trust and attract brand sponsorships."
+    },
+    {
+      "type": "features",
+      "title": "Essential Tech Review Tools",
+      "content": [
+        {"icon": "video", "title": "Macro & Product Camera", "description": "Clean, detailed shots require cameras with good macro capability or dedicated macro lenses. Sony A7 series or Panasonic GH6 are popular choices."},
+        {"icon": "sparkles", "title": "Studio Lighting", "description": "Accurate color representation requires neutral lighting. Softboxes and key lights eliminate harsh shadows on products."},
+        {"icon": "target", "title": "Product Staging", "description": "Turntables, acrylic stands, and clean backgrounds showcase products professionally."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Tech Review Toolkit Checklist",
+      "content": [
+        "Camera with 4K video and manual controls",
+        "Macro lens or camera with close-focus capability",
+        "Two-point lighting minimum for product shots",
+        "Clean backdrop (white, gray, or branded)",
+        "Turntable for 360-degree product shots",
+        "Teleprompter for scripted reviews",
+        "Audio setup for voiceover recording",
+        "Screen recording software for software reviews"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Why Tech Channels Need Specialized Gear",
+      "content": [
+        "Product close-ups require macro capability",
+        "Color accuracy matters for honest representation",
+        "Professional lighting attracts brand partnerships",
+        "B-roll quality differentiates top channels",
+        "Screen recording is essential for software/app reviews"
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Building Your Tech Review Setup",
+      "content": [
+        "Master lighting first - it makes the biggest visual difference",
+        "Create a consistent review backdrop for brand recognition",
+        "Develop a B-roll shot list for efficient product filming",
+        "Invest in quality audio for voiceover work",
+        "Build relationships with PR agencies for review units"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "How do I get products to review?", "answer": "Start by reviewing products you already own. As your channel grows, reach out to brands and PR agencies. Many have programs for creators with 10K+ subscribers."},
+    {"question": "What lighting makes products look best?", "answer": "Soft, diffused lighting from multiple angles reduces harsh shadows. A key light and fill light at 45-degree angles is a solid starting point. Avoid direct flash."},
+    {"question": "Do I need 4K for tech reviews?", "answer": "4K is increasingly expected for tech content. It allows cropping for close-ups and looks more professional. Most modern cameras and phones support 4K now."},
+    {"question": "How do I stay objective in sponsored reviews?", "answer": "Disclose sponsorships clearly. Include honest pros and cons. Your audience trusts you - protecting that trust is worth more than any single sponsorship."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1,
+  "niche": "tech-review"
+}

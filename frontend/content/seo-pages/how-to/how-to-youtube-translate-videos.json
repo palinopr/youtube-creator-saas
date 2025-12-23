@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-translate-videos",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Translate YouTube Videos 2025: Multi-Language Subtitles",
+    "description": "Add translations to YouTube videos. Reach international audiences with subtitles.",
+    "keywords": ["translate youtube videos", "youtube subtitles translation", "youtube multi language", "international youtube", "youtube caption translation"]
+  },
+  "hero": {
+    "badge": "Video Translation",
+    "headline": "How to Translate YouTube Videos",
+    "subheadline": "Reach global audiences. Add multi-language subtitles to your content.",
+    "primaryKeyword": "translate youtube videos"
+  },
+  "sections": [
+    {"type": "intro", "content": "Translation unlocks your content for billions of non-English speakers. YouTube's global reach means your next viewer could be anywhere—if they can understand you. Adding translated subtitles and metadata expands your audience dramatically. Here's how to make your content accessible worldwide."},
+    {"type": "steps", "title": "Adding Translated Subtitles", "content": [
+      "Go to YouTube Studio",
+      "Click 'Subtitles' in left sidebar",
+      "Select video to translate",
+      "Click 'Add language'",
+      "Choose target language",
+      "Select subtitle type (upload or auto-translate)",
+      "Edit auto-translations for accuracy",
+      "Publish when complete"
+    ]},
+    {"type": "features", "title": "Translation Options", "content": [
+      {"icon": "cpu", "title": "Auto-Translate", "description": "YouTube's AI. Free but needs editing."},
+      {"icon": "upload", "title": "Upload SRT", "description": "Professional translation files."},
+      {"icon": "type", "title": "Manual Entry", "description": "Type translations directly."},
+      {"icon": "users", "title": "Community", "description": "Viewers can contribute (if enabled)."}
+    ]},
+    {"type": "features", "title": "What to Translate", "content": [
+      {"icon": "file-text", "title": "Subtitles/CC", "description": "Spoken content translation."},
+      {"icon": "type", "title": "Title", "description": "Translated titles in search."},
+      {"icon": "align-left", "title": "Description", "description": "Localized video description."},
+      {"icon": "tag", "title": "Tags", "description": "Language-specific keywords."}
+    ]},
+    {"type": "features", "title": "Translation Services", "content": [
+      {"icon": "globe", "title": "Rev", "description": "Professional translation. Per-minute pricing."},
+      {"icon": "zap", "title": "Fiverr", "description": "Freelance translators. Variable quality."},
+      {"icon": "cpu", "title": "AI Tools", "description": "DeepL, ChatGPT. Need review."},
+      {"icon": "users", "title": "Native Speakers", "description": "Best quality. Build relationships."}
+    ]},
+    {"type": "benefits", "title": "Translation Best Practices", "content": [
+      "Prioritize languages with largest potential audiences",
+      "Start with Spanish, Portuguese, Hindi for reach",
+      "Auto-translate is starting point, not final",
+      "Translated titles/descriptions boost discovery",
+      "Quality matters—bad translations hurt brand",
+      "Test with native speakers when possible",
+      "Consider dubbing for highest value content"
+    ]},
+    {"type": "checklist", "title": "Translation Checklist", "content": [
+      "Target languages identified?",
+      "Original subtitles accurate first?",
+      "Translations reviewed for quality?",
+      "Title translated?",
+      "Description translated?",
+      "Keywords researched for each language?",
+      "Published and visible?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does YouTube auto-translate subtitles?", "answer": "Yes—'Auto-translate' option available on videos with captions. Quality varies, especially for idioms and technical terms. Good starting point but review recommended."},
+    {"question": "Best languages to translate to?", "answer": "Spanish has 500M+ speakers. Portuguese (Brazil) huge market. Hindi, Indonesian large viewer bases. Research where your content might resonate. Start with 2-3 key languages."},
+    {"question": "Translated titles help SEO?", "answer": "Yes—videos can appear in local language searches with translated titles and descriptions. Significant discovery boost. Often overlooked opportunity for growth."},
+    {"question": "Should I dub videos?", "answer": "For highest-value content, dubbing can significantly increase engagement. Expensive and time-consuming. Start with subtitles, dub best performers if justified by audience size."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

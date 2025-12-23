@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-get-more-subscribers",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get More YouTube Subscribers in 2025: Proven Methods",
+    "description": "Learn proven strategies to get more YouTube subscribers. From content optimization to calls-to-action that actually work.",
+    "keywords": ["get more youtube subscribers", "how to gain subscribers", "grow youtube subscribers", "youtube subscriber tips", "increase subscribers youtube"]
+  },
+  "hero": {
+    "badge": "Subscriber Growth",
+    "headline": "How to Get More YouTube Subscribers in 2025",
+    "subheadline": "Turn casual viewers into loyal subscribers with strategies that actually work in today's YouTube landscape.",
+    "primaryKeyword": "get more youtube subscribers"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Subscribers are the lifeblood of a YouTube channel. They provide consistent views, higher engagement, and signal to YouTube that your content deserves to be recommended. But getting subscribers isn't about begging for them - it's about creating value that makes subscribing the obvious choice."
+    },
+    {
+      "type": "features",
+      "title": "Subscriber Growth Fundamentals",
+      "content": [
+        {"icon": "video", "title": "Content Worth Subscribing For", "description": "Before tactics, ensure your content gives viewers a reason to come back. Each video should deliver clear value that leaves them wanting more."},
+        {"icon": "target", "title": "Strategic CTAs", "description": "Ask for subscriptions at the right moment - when you've delivered value, not before. Mid-video CTAs after a key insight perform best."},
+        {"icon": "sparkles", "title": "Consistent Publishing", "description": "Give subscribers a reason to stay. A predictable upload schedule builds anticipation and habit."}
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Step-by-Step Subscriber Growth Plan",
+      "content": [
+        "Define your channel's unique value proposition clearly",
+        "Create a channel trailer that hooks and converts visitors",
+        "Add subscribe CTAs mid-video after delivering value",
+        "Use end screens to promote your best subscriber-converting videos",
+        "Create series content that encourages subscription for continuity",
+        "Engage with comments to build community connection",
+        "Collaborate with creators who share your target audience"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "What Makes People Subscribe",
+      "content": [
+        "They want more of the specific value you provide",
+        "They trust you'll continue delivering quality content",
+        "They feel connected to you personally",
+        "They don't want to miss future content",
+        "Subscribing is the easiest way to find you again"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Common Subscriber Growth Mistakes",
+      "content": [
+        "Asking for subscriptions before providing value",
+        "Using generic \"subscribe and hit the bell\" scripts",
+        "Focusing on subscriber count over subscriber quality",
+        "Inconsistent posting that trains subscribers to forget you",
+        "Not giving a clear reason why someone should subscribe"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "How many subscribers do I need to make money?", "answer": "The YouTube Partner Program requires 1,000 subscribers plus 4,000 watch hours (or 10M Shorts views). But subscriber count alone doesn't determine income - views, watch time, and niche matter more."},
+    {"question": "Why do I get views but not subscribers?", "answer": "Usually means your content is discoverable but doesn't promise ongoing value. Ask yourself: what would a viewer miss by not subscribing? Make that clear in your content."},
+    {"question": "Is buying subscribers worth it?", "answer": "Never. Purchased subscribers don't watch your videos, which tanks your engagement metrics. YouTube can detect fake subscribers and may penalize your channel. It's a waste of money."},
+    {"question": "How often should I ask people to subscribe?", "answer": "Quality over quantity. One well-placed, genuine CTA after you've delivered value is better than multiple desperate asks. The best subscribe requests explain WHY to subscribe."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

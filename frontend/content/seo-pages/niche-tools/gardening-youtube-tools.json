@@ -1,0 +1,72 @@
+{
+  "slug": "gardening-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Gardening YouTube Tools 2025: Garden Content Creator Equipment",
+    "description": "Essential tools for gardening YouTube channels. Outdoor filming, nature sound, and plant tutorials.",
+    "keywords": ["gardening youtube tools", "garden youtube equipment", "gardening content creator", "plant youtube setup", "outdoor filming garden"]
+  },
+  "hero": {
+    "badge": "Gardening Content",
+    "headline": "Essential Tools for Gardening YouTube Creators",
+    "subheadline": "Film the garden beautifully. Outdoor challenges, plant detail, and seasonal content.",
+    "primaryKeyword": "gardening youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Gardening content means filming outdoors in variable conditions—sun, shade, wind. You need equipment that handles nature, captures plant detail, and deals with ambient sound. Whether tutorials, tours, or time-lapses, here's what gardening YouTubers need."},
+    {"type": "features", "title": "Camera Needs", "content": [
+      {"icon": "camera", "title": "Weather Resistant", "description": "Outdoor-capable cameras. Protection for unexpected conditions."},
+      {"icon": "search", "title": "Macro Capability", "description": "Close-ups of flowers, insects, detail. Macro lens or phone macro."},
+      {"icon": "video", "title": "Time-Lapse", "description": "Plant growth, bloom sequences. Built-in or intervalometer."}
+    ]},
+    {"type": "features", "title": "Outdoor Audio", "content": [
+      {"icon": "mic", "title": "Lavalier Microphone", "description": "Clip-on for clear voice. Hands-free while gardening."},
+      {"icon": "wind", "title": "Wind Protection", "description": "Dead cats essential outdoors. Wind noise is constant challenge."},
+      {"icon": "music", "title": "Nature Ambience", "description": "Birds, water features add value. Capture or add later."}
+    ]},
+    {"type": "features", "title": "Practical Gear", "content": [
+      {"icon": "move", "title": "Portable Tripod", "description": "Move through garden easily. Lightweight but stable."},
+      {"icon": "sun", "title": "Reflector/Diffuser", "description": "Control harsh sunlight. Fill shadows on plants."},
+      {"icon": "battery", "title": "Extra Power", "description": "Long shooting sessions. Extra batteries, power bank."}
+    ]},
+    {"type": "steps", "title": "Gardening Content Tips", "content": [
+      "Film early morning for best light",
+      "Overcast days reduce harsh shadows",
+      "Document seasonal changes",
+      "Include process, not just results",
+      "Time-lapse for slow growth",
+      "Practical tips viewers can use",
+      "Show failures too—relatable content"
+    ]},
+    {"type": "benefits", "title": "Gardening Content Types", "content": [
+      "Garden tours",
+      "Planting tutorials",
+      "Seasonal guides",
+      "Harvest content",
+      "Time-lapse growth",
+      "Problem-solving (pests, disease)",
+      "Tool and product reviews"
+    ]},
+    {"type": "checklist", "title": "Gardening Creator Setup", "content": [
+      "Weather-capable camera",
+      "Macro lens option",
+      "Lavalier microphone",
+      "Wind protection (dead cat)",
+      "Portable tripod",
+      "Reflector for light control",
+      "Extra batteries"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best time to film garden?", "answer": "Early morning (golden hour) or overcast days. Avoid harsh midday sun—creates tough shadows and blown highlights."},
+    {"question": "How to deal with wind noise?", "answer": "Dead cat/windscreen on microphone essential. Also record voiceover inside as backup. Wind is gardening content's biggest challenge."},
+    {"question": "Time-lapse tips?", "answer": "Use intervalometer, consistent lighting if possible, secure camera position. Days to weeks depending on plant. Be patient."},
+    {"question": "Should I show face or just garden?", "answer": "Both work. Face builds connection. Garden-only is cinematic. Many successful channels mix approaches."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "gardening"
+}

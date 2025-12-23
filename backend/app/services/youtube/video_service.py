@@ -10,6 +10,16 @@ from .base import YouTubeBaseService, youtube_api_retry
 logger = logging.getLogger(__name__)
 
 
+def _safe_int(value: Any, default: Optional[int] = None) -> Optional[int]:
+    """Safely convert to int, returning None if value is missing or invalid."""
+    if value is None:
+        return default
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        return default
+
+
 class YouTubeVideoService(YouTubeBaseService):
     """Service for YouTube video operations."""
 
@@ -74,15 +84,17 @@ class YouTubeVideoService(YouTubeBaseService):
         for video in videos_response.get("items", []):
             snippet = video["snippet"]
             stats = video.get("statistics", {})
+            has_stats = bool(stats)
 
             videos.append({
                 "video_id": video["id"],
                 "title": snippet["title"],
                 "published_at": snippet["publishedAt"],
-                "view_count": int(stats.get("viewCount", 0)),
-                "like_count": int(stats.get("likeCount", 0)),
-                "comment_count": int(stats.get("commentCount", 0)),
+                "view_count": _safe_int(stats.get("viewCount"), 0 if has_stats else None),
+                "like_count": _safe_int(stats.get("likeCount"), 0 if has_stats else None),
+                "comment_count": _safe_int(stats.get("commentCount"), 0 if has_stats else None),
                 "thumbnail_url": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
+                "stats_available": has_stats,
             })
 
         return videos
@@ -102,6 +114,7 @@ class YouTubeVideoService(YouTubeBaseService):
         snippet = video["snippet"]
         stats = video.get("statistics", {})
         content = video.get("contentDetails", {})
+        has_stats = bool(stats)
 
         return {
             "video_id": video["id"],
@@ -112,11 +125,12 @@ class YouTubeVideoService(YouTubeBaseService):
             "tags": snippet.get("tags", []),
             "category_id": snippet.get("categoryId", ""),
             "duration": content.get("duration", ""),
-            "view_count": int(stats.get("viewCount", 0)),
-            "like_count": int(stats.get("likeCount", 0)),
-            "comment_count": int(stats.get("commentCount", 0)),
+            "view_count": _safe_int(stats.get("viewCount"), 0 if has_stats else None),
+            "like_count": _safe_int(stats.get("likeCount"), 0 if has_stats else None),
+            "comment_count": _safe_int(stats.get("commentCount"), 0 if has_stats else None),
             "thumbnail_url": snippet.get("thumbnails", {}).get("maxres",
                            snippet.get("thumbnails", {}).get("high", {})).get("url", ""),
+            "stats_available": has_stats,
         }
 
     @youtube_api_retry
@@ -157,6 +171,7 @@ class YouTubeVideoService(YouTubeBaseService):
         video = response["items"][0]
         snippet = video["snippet"]
         stats = video.get("statistics", {})
+        has_stats = bool(stats)
 
         return {
             "video_id": video_id,
@@ -165,9 +180,10 @@ class YouTubeVideoService(YouTubeBaseService):
             "tags": snippet.get("tags", []),
             "category_id": snippet.get("categoryId", "22"),
             "thumbnail_url": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
-            "view_count": int(stats.get("viewCount", 0)),
-            "like_count": int(stats.get("likeCount", 0)),
+            "view_count": _safe_int(stats.get("viewCount"), 0 if has_stats else None),
+            "like_count": _safe_int(stats.get("likeCount"), 0 if has_stats else None),
             "published_at": snippet.get("publishedAt", ""),
+            "stats_available": has_stats,
         }
 
     @youtube_api_retry

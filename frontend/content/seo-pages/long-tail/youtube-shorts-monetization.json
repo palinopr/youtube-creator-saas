@@ -1,0 +1,59 @@
+{
+  "slug": "youtube-shorts-monetization",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Shorts Monetization 2025: How to Earn From Short Videos",
+    "description": "Complete guide to monetizing YouTube Shorts. Revenue sharing, requirements, and how much Shorts creators earn.",
+    "keywords": ["youtube shorts monetization", "shorts money", "how much shorts pay", "shorts revenue", "shorts fund"]
+  },
+  "hero": {
+    "badge": "Shorts Money",
+    "headline": "YouTube Shorts Monetization: How to Earn in 2025",
+    "subheadline": "Understanding the Shorts revenue model and how to maximize your short-form earnings.",
+    "primaryKeyword": "youtube shorts monetization"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Shorts monetization works differently than long-form content. Revenue comes from a shared ad pool rather than per-video ads. Understanding this system helps you set realistic expectations and optimize for Shorts income."},
+    {"type": "features", "title": "Shorts Revenue Model", "content": [
+      {"icon": "dollar", "title": "Revenue Pool", "description": "Ads run between Shorts in feed. Revenue pooled and distributed based on views and music usage."},
+      {"icon": "music", "title": "Music Impact", "description": "Using licensed music splits your share with rights holders. Original audio keeps full creator portion."},
+      {"icon": "chart", "title": "View-Based Split", "description": "Your share of the pool depends on your percentage of total Shorts views."}
+    ]},
+    {"type": "steps", "title": "Shorts Monetization Requirements", "content": [
+      "1,000 subscribers minimum",
+      "10 million Shorts views in 90 days, OR",
+      "4,000 public watch hours in 12 months",
+      "Comply with YouTube monetization policies",
+      "Two-step verification enabled",
+      "No active community guidelines strikes",
+      "Accept Shorts monetization module in YPP"
+    ]},
+    {"type": "benefits", "title": "Maximizing Shorts Revenue", "content": [
+      "Post consistently to build view volume",
+      "Use original audio when possible",
+      "Create viral-potential content",
+      "Cross-promote to long-form content",
+      "Build subscriber base through Shorts",
+      "Focus on views, not just engagement"
+    ]},
+    {"type": "checklist", "title": "Shorts Earnings Reality Check", "content": [
+      "RPM is lower than long-form (often $0.02-0.10)",
+      "Volume is key to meaningful revenue",
+      "Music usage significantly reduces earnings",
+      "Shorts are better for audience building than direct revenue",
+      "Long-form remains the primary revenue driver",
+      "Shorts can unlock YPP for long-form monetization"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much do YouTube Shorts pay?", "answer": "RPM typically ranges from $0.02-0.10 per 1000 views. Much lower than long-form. 1 million views might earn $20-100, varying by factors."},
+    {"question": "Is the Shorts Fund still active?", "answer": "The original Shorts Fund was replaced by revenue sharing in February 2023. Shorts now earn from the ad revenue pool system."},
+    {"question": "Does using trending sounds hurt revenue?", "answer": "Yes. Licensed music splits your share with rights holders. For maximum revenue, use original audio or royalty-free music."},
+    {"question": "Are Shorts worth it for money?", "answer": "For direct revenue, usually no. For building audience that watches long-form content, absolutely. Think of Shorts as discovery, not income."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

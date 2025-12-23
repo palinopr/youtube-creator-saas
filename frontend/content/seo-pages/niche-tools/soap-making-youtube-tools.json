@@ -1,0 +1,66 @@
+{
+  "slug": "soap-making-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Soap Making YouTube Tools 2025: Soap Crafting Channel Equipment",
+    "description": "Top tools for soap making YouTube channels. Film cold process and melt & pour.",
+    "keywords": ["soap making youtube tools", "soap channel equipment", "soap crafting video", "cold process soap youtube", "handmade soap content"]
+  },
+  "hero": {
+    "badge": "Soap Making Tools",
+    "headline": "Best Soap Making YouTube Tools 2025",
+    "subheadline": "Capture the swirl. Gear for soap crafters.",
+    "primaryKeyword": "soap making youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Soap making content is visually satisfying—colorful swirls, the pour, the cut reveal. Viewers love watching cold process, melt and pour, and artistic soap designs. Capturing the colors accurately and showing technique clearly drives engagement. Here's what successful soap makers use."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Essential for pouring shots."},
+      {"icon": "camera", "title": "Side Angle", "description": "Shows depth of molds."},
+      {"icon": "eye", "title": "4K Resolution", "description": "Detail in swirl patterns."},
+      {"icon": "move", "title": "Stable Mount", "description": "No shake during pour."}
+    ]},
+    {"type": "features", "title": "Color Accuracy", "content": [
+      {"icon": "sun", "title": "Daylight LEDs", "description": "5500K for accurate colors."},
+      {"icon": "sliders", "title": "White Balance", "description": "Manual for consistency."},
+      {"icon": "layers", "title": "Diffused Light", "description": "Soft shadows on curves."},
+      {"icon": "aperture", "title": "Color Calibration", "description": "Monitor matches reality."}
+    ]},
+    {"type": "features", "title": "Special Shots", "content": [
+      {"icon": "scissors", "title": "Cut Reveal", "description": "The money shot—inside patterns."},
+      {"icon": "clock", "title": "Time-Lapse", "description": "Show cure process."},
+      {"icon": "zoom-in", "title": "Macro Details", "description": "Texture and embeds close-up."},
+      {"icon": "play", "title": "Pour Shots", "description": "Satisfying slow pours."}
+    ]},
+    {"type": "benefits", "title": "Soap Content Tips", "content": [
+      "Cut reveal is the most anticipated moment",
+      "Accurate colors matter for soap sales",
+      "ASMR of mixing and pouring is popular",
+      "Recipe sharing builds trust",
+      "Show failures—they're relatable",
+      "Seasonal soap themes drive traffic",
+      "Process shots more engaging than just product"
+    ]},
+    {"type": "checklist", "title": "Soap Video Checklist", "content": [
+      "Overhead camera positioned?",
+      "Lighting showing accurate colors?",
+      "Work surface clean?",
+      "Ingredients prepped and measured?",
+      "Cut reveal angle planned?",
+      "Audio capturing sounds?",
+      "Safety gear visible if required?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to capture accurate soap colors?", "answer": "Daylight-balanced LEDs (5500K) most important. Custom white balance for each session. Avoid mixing light temperatures. Post-processing can help but start accurate. Test with known colors before filming."},
+    {"question": "Best angle for soap making?", "answer": "Overhead for pours and mold work. Side angle shows layers and depth. 45-degree for personality shots. Cut reveal needs careful planning—often multiple angles. Consider viewer perspective."},
+    {"question": "Should I speed up the process?", "answer": "Mix of real-time and time-lapse works best. Key moments in real-time (trace, pour, cut). Long curing as time-lapse. Viewers appreciate seeing technique at real speed. Edit out truly boring parts."},
+    {"question": "Audio in soap videos?", "answer": "Mixing sounds are ASMR popular. Pour sounds satisfying. Voiceover for explanation. Some viewers love pure ASMR, others want tutorial. Consider offering both—separate ASMR versions can work well."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "soap-making"
+}

@@ -4,7 +4,7 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle, XCircle, Loader2, ArrowRight } from "lucide-react";
-import { confirmWaitlistEmail } from "@/lib/supabase";
+import { confirmWaitlistEmail } from "@/lib/waitlist";
 
 function ConfirmContent() {
   const searchParams = useSearchParams();

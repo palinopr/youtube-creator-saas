@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-studio-tour-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Studio Tour Tips 2025: Design Your Recording Space",
+    "description": "Design your YouTube studio. Tips for creating the perfect recording environment.",
+    "keywords": ["youtube studio tour", "youtube studio setup", "home studio youtube", "youtube recording space", "studio design youtube"]
+  },
+  "hero": {
+    "badge": "Studio Design",
+    "headline": "YouTube Studio Design Tips",
+    "subheadline": "Create a recording space that looks and sounds professional.",
+    "primaryKeyword": "youtube studio setup"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your recording environment impacts every video. A well-designed studio means consistent quality, faster setup, and better production value. You don't need a dedicated room—even a corner can become an effective studio with thoughtful planning."},
+    {"type": "features", "title": "Studio Elements", "content": [
+      {"icon": "home", "title": "Space", "description": "Dedicated or convertible area."},
+      {"icon": "sun", "title": "Lighting", "description": "Controllable and consistent."},
+      {"icon": "volume-2", "title": "Acoustics", "description": "Sound treatment."},
+      {"icon": "image", "title": "Background", "description": "Visual interest behind you."}
+    ]},
+    {"type": "features", "title": "Background Options", "content": [
+      {"icon": "book", "title": "Shelving", "description": "Books, plants, decor."},
+      {"icon": "layers", "title": "LED Panels", "description": "Colored accent lighting."},
+      {"icon": "tv", "title": "Monitors/Screens", "description": "Tech aesthetic."},
+      {"icon": "image", "title": "Plain Wall", "description": "Simple and clean."}
+    ]},
+    {"type": "steps", "title": "Setting Up Studio", "content": [
+      "Choose a consistent recording location",
+      "Control or block natural light",
+      "Set up key light position",
+      "Add acoustic treatment if needed",
+      "Design background thoughtfully",
+      "Organize cables and equipment",
+      "Create permanent camera position",
+      "Document settings for consistency"
+    ]},
+    {"type": "benefits", "title": "Studio Tips", "content": [
+      "Consistency beats perfection",
+      "Corner studios work great",
+      "Depth in background adds interest",
+      "LED accent lights add production value",
+      "Acoustic panels reduce echo",
+      "Document your setup for consistency",
+      "Evolve gradually—don't overspend early"
+    ]},
+    {"type": "checklist", "title": "Studio Checklist", "content": [
+      "Consistent recording location?",
+      "Lighting controllable?",
+      "Echo and noise minimized?",
+      "Background visually interesting?",
+      "Equipment organized?",
+      "Settings documented?",
+      "Easy to set up repeatedly?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much space do I need?", "answer": "6x6 feet minimum for talking head. More for standing or movement. Even a closet works for voiceover. Corner of room with controlled background sufficient for most content."},
+    {"question": "How much should I spend on studio?", "answer": "Start with $200-500: basic lights, backdrop, acoustic treatment. Upgrade gradually. Many successful creators started with near-nothing. Invest in audio first, lighting second."},
+    {"question": "How to handle small spaces?", "answer": "Tight shots hide small spaces. Use depth with diagonal shooting. Mirrors can create illusion of space. Minimalist backgrounds work well. Small can look intentional if designed well."},
+    {"question": "Dedicated room or shared space?", "answer": "Dedicated ideal for efficiency—always ready. Shared space works with good organization—document setup to recreate. Rolling carts help with portable studios. Many successful creators share space."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

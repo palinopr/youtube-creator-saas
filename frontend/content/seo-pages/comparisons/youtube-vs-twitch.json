@@ -1,0 +1,65 @@
+{
+  "slug": "youtube-vs-twitch",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube vs Twitch 2025: Which Platform for Streaming?",
+    "description": "Compare YouTube and Twitch for live streaming. Monetization, discoverability, and which platform fits your content.",
+    "keywords": ["youtube vs twitch", "youtube or twitch streaming", "best streaming platform", "twitch vs youtube live", "streaming platform comparison"]
+  },
+  "hero": {
+    "badge": "Streaming Platforms",
+    "headline": "YouTube vs Twitch: Where Should You Stream?",
+    "subheadline": "Two streaming giants with different strengths. Find the platform that fits your content and goals.",
+    "primaryKeyword": "youtube vs twitch"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube and Twitch dominate live streaming, but with very different approaches. Twitch built streaming-first with a gaming focus. YouTube added streaming to its massive video platform. Your choice depends on content type, audience goals, and how streaming fits your broader creator strategy."},
+    {"type": "comparison", "title": "Platform Comparison", "content": [
+      {"feature": "Discoverability", "toolA": "Strong (algorithm)", "toolB": "Weak (live only)", "tubeGrow": "N/A"},
+      {"feature": "VOD Performance", "toolA": "Excellent", "toolB": "Limited", "tubeGrow": "N/A"},
+      {"feature": "Stream Culture", "toolA": "Growing", "toolB": "Established", "tubeGrow": "N/A"},
+      {"feature": "Monetization Start", "toolA": "1K subs + 4K hours", "toolB": "50 followers", "tubeGrow": "N/A"},
+      {"feature": "Revenue Split", "toolA": "70/30", "toolB": "50/50", "tubeGrow": "N/A"},
+      {"feature": "Chat Features", "toolA": "Basic", "toolB": "Advanced", "tubeGrow": "N/A"},
+      {"feature": "Gaming Focus", "toolA": "Moderate", "toolB": "Primary", "tubeGrow": "N/A"},
+      {"feature": "Mobile App", "toolA": "Unified", "toolB": "Dedicated", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "YouTube Streaming Advantages", "content": [
+      {"icon": "search", "title": "Discoverability", "description": "YouTube's algorithm recommends streams and VODs, driving new viewers."},
+      {"icon": "video", "title": "VOD Power", "description": "Stream archives become searchable videos that keep getting views."},
+      {"icon": "dollar", "title": "Better Revenue Split", "description": "70/30 split for memberships beats Twitch's 50/50 for most creators."}
+    ]},
+    {"type": "features", "title": "Twitch Streaming Advantages", "content": [
+      {"icon": "users", "title": "Stream Culture", "description": "Purpose-built for streaming with established community expectations."},
+      {"icon": "message-circle", "title": "Chat Features", "description": "Superior chat tools, emotes, and community features."},
+      {"icon": "play", "title": "Lower Barrier", "description": "Easier to start monetizing with just 50 followers for affiliate."}
+    ]},
+    {"type": "benefits", "title": "Choose YouTube Streaming If", "content": [
+      "You already have a YouTube audience",
+      "You want VODs to rank in search",
+      "You create diverse content (not just gaming)",
+      "You prefer the 70/30 revenue split",
+      "Discoverability is a priority"
+    ]},
+    {"type": "benefits", "title": "Choose Twitch If", "content": [
+      "You're primarily a gaming streamer",
+      "You want established streaming culture",
+      "Chat interaction is crucial to your content",
+      "You need faster path to monetization",
+      "Your audience expects Twitch"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I stream on both platforms?", "answer": "Twitch Partners have exclusivity clauses. Affiliates have 24-hour exclusivity. If you're not partnered, multistreaming to both is possible."},
+    {"question": "Which pays better?", "answer": "YouTube's 70/30 split beats Twitch's standard 50/50. However, Twitch's lower monetization threshold means faster first income. Long-term, YouTube often pays better."},
+    {"question": "Which has better discoverability?", "answer": "YouTube by far. YouTube recommends streams and VODs through search and algorithm. Twitch discovery is mostly through directory browsing."},
+    {"question": "Is Twitch dying?", "answer": "No, but competition is increasing. YouTube Gaming is growing fast. Many creators now multistream or move to YouTube for better terms and discoverability."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "youtube",
+  "secondaryTool": "twitch"
+}

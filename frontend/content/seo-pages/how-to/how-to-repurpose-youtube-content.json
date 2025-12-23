@@ -1,0 +1,62 @@
+{
+  "slug": "how-to-repurpose-youtube-content",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Repurpose YouTube Content 2025: Multi-Platform Strategy",
+    "description": "Turn one YouTube video into multiple pieces of content. Repurposing strategies for maximum reach.",
+    "keywords": ["repurpose youtube content", "content repurposing", "youtube to tiktok", "youtube clips", "multi-platform content"]
+  },
+  "hero": {
+    "badge": "Content Repurposing",
+    "headline": "How to Repurpose YouTube Content",
+    "subheadline": "One video, many platforms. Maximize your content's reach and ROI.",
+    "primaryKeyword": "repurpose youtube content"
+  },
+  "sections": [
+    {"type": "intro", "content": "Creating content is time-intensive. Smart creators extract maximum value by repurposing one video across multiple platforms and formats. A single 15-minute video can become Shorts, TikToks, tweets, blog posts, and more. Here's how to build a repurposing system."},
+    {"type": "features", "title": "Repurposing Formats", "content": [
+      {"icon": "smartphone", "title": "Short-Form Clips", "description": "Cut best moments for YouTube Shorts, TikTok, Instagram Reels."},
+      {"icon": "twitter", "title": "Social Posts", "description": "Key quotes, insights, and clips for Twitter, LinkedIn, Facebook."},
+      {"icon": "file-text", "title": "Written Content", "description": "Transform scripts into blog posts, newsletters, threads."}
+    ]},
+    {"type": "steps", "title": "Repurposing Workflow", "content": [
+      "Identify 3-5 clip moments while editing",
+      "Export vertical clips for Shorts/TikTok",
+      "Extract key quotes for social",
+      "Adapt script for blog post",
+      "Create audiogram for podcast feeds",
+      "Design carousel graphics",
+      "Schedule across platforms",
+      "Track performance per platform"
+    ]},
+    {"type": "benefits", "title": "What to Repurpose", "content": [
+      "Most engaging moments (retention peaks)",
+      "Quotable insights or tips",
+      "Before/after reveals",
+      "Reactions and surprises",
+      "Educational nuggets",
+      "Behind-the-scenes clips",
+      "Bloopers and personality moments"
+    ]},
+    {"type": "checklist", "title": "Platform-Specific Guidelines", "content": [
+      "YouTube Shorts: Under 60s, vertical, hook in first 2s",
+      "TikTok: Trending sounds, native feel, captions",
+      "Instagram Reels: Polished, branded, trending audio",
+      "Twitter/X: 2min max video, text hook, engagement question",
+      "LinkedIn: Professional angle, business value",
+      "Newsletter: Full written breakdown",
+      "Blog: SEO-optimized article"
+    ]}
+  ],
+  "faq": [
+    {"question": "Doesn't this hurt my YouTube views?", "answer": "Opposite usually. Short clips drive people to full videos. Different platforms reach different audiences. Cross-promotion helps growth."},
+    {"question": "How do I make vertical clips from horizontal video?", "answer": "Crop and reframe key elements to center. Use auto-caption tools. Some edit in CapCut or Premiere. Plan for vertical during filming."},
+    {"question": "How much content can I extract from one video?", "answer": "Depends on video length and density. 15-minute video might yield 3-5 Shorts, 10 tweets, 1 blog post. Get more from content-rich videos."},
+    {"question": "Should I post same clip everywhere?", "answer": "Adjust for platform culture. TikTok wants native feel, LinkedIn wants business angle. Same core clip, different context and framing."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

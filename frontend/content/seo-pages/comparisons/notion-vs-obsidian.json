@@ -1,0 +1,59 @@
+{
+  "slug": "notion-vs-obsidian",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Notion vs Obsidian 2025: Best for YouTube Content Planning",
+    "description": "Compare Notion and Obsidian for content creation workflows. Organization, planning, and which works best for creators.",
+    "keywords": ["notion vs obsidian", "content planning tool", "youtube organization", "notion for creators", "obsidian for creators"]
+  },
+  "hero": {
+    "badge": "Productivity Tools",
+    "headline": "Notion vs Obsidian: Content Planning Comparison",
+    "subheadline": "Two powerful note-taking apps for organizing your YouTube content workflow.",
+    "primaryKeyword": "notion vs obsidian"
+  },
+  "sections": [
+    {"type": "intro", "content": "Content creators need systems for organizing ideas, scripts, research, and publishing schedules. Notion and Obsidian both excel at this but take different approaches. Notion is collaborative and database-driven. Obsidian is local, linked-notes focused. Here's how to choose for your creator workflow."},
+    {"type": "comparison", "title": "Notion vs Obsidian Comparison", "content": [
+      {"feature": "Price", "toolA": "Free/$10/mo", "toolB": "Free/$50/yr (Sync)", "tubeGrow": "N/A"},
+      {"feature": "Data Storage", "toolA": "Cloud-based", "toolB": "Local files", "tubeGrow": "N/A"},
+      {"feature": "Databases", "toolA": "Powerful", "toolB": "Via plugins", "tubeGrow": "N/A"},
+      {"feature": "Collaboration", "toolA": "Built-in", "toolB": "Limited", "tubeGrow": "N/A"},
+      {"feature": "Linking", "toolA": "Good", "toolB": "Excellent", "tubeGrow": "N/A"},
+      {"feature": "Offline", "toolA": "Limited", "toolB": "Full", "tubeGrow": "N/A"},
+      {"feature": "Learning Curve", "toolA": "Moderate", "toolB": "Moderate-Steep", "tubeGrow": "N/A"},
+      {"feature": "Mobile", "toolA": "Good apps", "toolB": "Decent apps", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Notion for Creators", "content": [
+      {"icon": "database", "title": "Content Databases", "description": "Track video ideas, statuses, publish dates. Kanban boards for workflow."},
+      {"icon": "users", "title": "Team Collaboration", "description": "Share with editors, writers. Real-time editing and comments."},
+      {"icon": "template", "title": "Templates", "description": "Script templates, SOPs, reusable structures. Clone for new videos."}
+    ]},
+    {"type": "features", "title": "Obsidian for Creators", "content": [
+      {"icon": "link", "title": "Linked Ideas", "description": "Connect research, scripts, and notes. See relationships between content."},
+      {"icon": "shield", "title": "Data Ownership", "description": "Local markdown files. You own your data. No lock-in."},
+      {"icon": "zap", "title": "Fast & Offline", "description": "Works without internet. Instant loading. No sync delays."}
+    ]},
+    {"type": "steps", "title": "Which Should You Choose?", "content": [
+      "Choose Notion if: Team collaboration is essential",
+      "Choose Notion if: You want visual databases/Kanbans",
+      "Choose Notion if: Mobile access is important",
+      "Choose Obsidian if: Privacy/data ownership matters",
+      "Choose Obsidian if: You prefer local, fast apps",
+      "Choose Obsidian if: Knowledge linking is your style"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which is better for solo creators?", "answer": "Either works. Obsidian if you value speed and privacy. Notion if you want visual organization and might add team members later."},
+    {"question": "Can I use both?", "answer": "Yes. Some use Obsidian for research/writing and Notion for project management/publishing calendar. Find what works for you."},
+    {"question": "What about content calendars?", "answer": "Notion's calendar database is excellent. Obsidian needs plugins. For visual scheduling, Notion is easier."},
+    {"question": "Is the learning curve worth it?", "answer": "Yes for both. Time invested pays off in organization. Neither requires complex setup to start—grow as needed."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "notion",
+  "secondaryTool": "obsidian"
+}

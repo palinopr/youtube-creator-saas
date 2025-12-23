@@ -1,0 +1,64 @@
+{
+  "slug": "how-to-youtube-custom-url",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get YouTube Custom URL 2025: Channel URL Guide",
+    "description": "Get a custom YouTube channel URL. Requirements and step-by-step setup process.",
+    "keywords": ["youtube custom url", "youtube channel url", "custom youtube link", "youtube vanity url", "youtube url setup"]
+  },
+  "hero": {
+    "badge": "Custom URL",
+    "headline": "How to Get YouTube Custom URL",
+    "subheadline": "Replace random characters with your brand name. Professional channel identity.",
+    "primaryKeyword": "youtube custom url"
+  },
+  "sections": [
+    {"type": "intro", "content": "A custom URL transforms youtube.com/channel/UCxyz123abc into youtube.com/@YourBrandName. It's more professional, easier to share, and helps with brand recognition. YouTube requires meeting certain thresholds before you can claim your custom URL."},
+    {"type": "features", "title": "Eligibility Requirements", "content": [
+      {"icon": "users", "title": "100+ Subscribers", "description": "Minimum subscriber count required. Can't create custom URL without this."},
+      {"icon": "calendar", "title": "30+ Days Old", "description": "Channel must be at least 30 days old."},
+      {"icon": "image", "title": "Profile Picture", "description": "Must have uploaded channel profile picture."},
+      {"icon": "image", "title": "Banner Image", "description": "Must have channel banner uploaded."}
+    ]},
+    {"type": "steps", "title": "Claiming Your Custom URL", "content": [
+      "Go to YouTube Studio",
+      "Click 'Customization' in left menu",
+      "Select 'Basic info' tab",
+      "Scroll to 'Channel URL' section",
+      "Click 'Set a custom URL'",
+      "YouTube suggests options based on channel name",
+      "Choose or modify your preferred URL",
+      "Confirm your selection",
+      "Custom URL active immediately"
+    ]},
+    {"type": "benefits", "title": "Custom URL Best Practices", "content": [
+      "Match your brand name exactly if possible",
+      "Keep it short and memorable",
+      "Avoid numbers if possible",
+      "Consider how it looks in links",
+      "Check availability before branding elsewhere",
+      "Once set, it's permanent",
+      "Use consistently across all platforms"
+    ]},
+    {"type": "checklist", "title": "Before Claiming Checklist", "content": [
+      "Have 100+ subscribers?",
+      "Channel 30+ days old?",
+      "Profile picture uploaded?",
+      "Banner image uploaded?",
+      "Decided on exact URL?",
+      "Checked spelling carefully?",
+      "Ready to commit permanently?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I change my custom URL later?", "answer": "Very limited. YouTube allows rare changes but don't count on it. Choose carefully the first time—treat it as permanent."},
+    {"question": "What if my name is taken?", "answer": "Try variations—add 'official', 'tv', 'hq', or your niche. Or secure brand name elsewhere and build toward it."},
+    {"question": "Does custom URL help SEO?", "answer": "Minimal direct SEO benefit. Main value is professionalism and shareability. Makes your channel easier to find and remember."},
+    {"question": "Can I have multiple custom URLs?", "answer": "YouTube now uses handles (@name) which function as your URL. Each channel gets one handle/custom URL."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

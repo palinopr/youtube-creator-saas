@@ -1,0 +1,63 @@
+{
+  "slug": "aquarium-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Aquarium YouTube Tools 2025: Fishkeeping Video Equipment",
+    "description": "Top tools for aquarium YouTube channels. Filming underwater and tank content.",
+    "keywords": ["aquarium youtube tools", "fish tank youtube", "aquarium channel equipment", "fishkeeping youtube", "underwater filming"]
+  },
+  "hero": {
+    "badge": "Aquarium Tools",
+    "headline": "Best Aquarium YouTube Tools 2025",
+    "subheadline": "Capture underwater beauty. Tools for aquarium content creators.",
+    "primaryKeyword": "aquarium youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Aquarium content has unique challenges—shooting through glass, underwater filming, and capturing small, fast-moving subjects. The right equipment eliminates reflections, reveals vibrant colors, and shows the intricate details of aquatic life. Here's what fishkeeping YouTubers need."},
+    {"type": "features", "title": "Camera Equipment", "content": [
+      {"icon": "camera", "title": "Mirrorless with Good AF", "description": "Sony A6400, Canon R10. Eye tracking for fish. Fast autofocus."},
+      {"icon": "video", "title": "Action Camera", "description": "GoPro in waterproof housing. Submersible tank shots."},
+      {"icon": "maximize", "title": "Macro Lens", "description": "Detail shots of fish, corals, plants. 90mm+ recommended."}
+    ]},
+    {"type": "features", "title": "Filming Through Glass", "content": [
+      {"icon": "circle", "title": "Polarizing Filter", "description": "Eliminates glass reflections. Essential for tank shots."},
+      {"icon": "sun", "title": "Tank Lighting", "description": "Strong aquarium lights. Supplement with LED panels."},
+      {"icon": "moon", "title": "Room Darkness", "description": "Dark room eliminates reflections. Blackout surroundings."}
+    ]},
+    {"type": "features", "title": "Audio & Post", "content": [
+      {"icon": "mic", "title": "Voiceover Setup", "description": "Post-recorded narration cleanest. Pump noise eliminated."},
+      {"icon": "music", "title": "Ambient Music", "description": "Calming tracks complement aquarium visuals."},
+      {"icon": "sliders", "title": "Color Enhancement", "description": "White balance for tank lighting. Enhance blues/greens."}
+    ]},
+    {"type": "benefits", "title": "Aquarium Content Tips", "content": [
+      "Polarizer eliminates reflections",
+      "Dark room behind camera",
+      "Strong tank lighting essential",
+      "Patience for fish behavior",
+      "Macro for detail shots",
+      "Time-lapse for plant growth",
+      "Clean glass before filming"
+    ]},
+    {"type": "checklist", "title": "Tank Filming Checklist", "content": [
+      "Tank glass cleaned inside/out?",
+      "Polarizing filter attached?",
+      "Room lights off?",
+      "Tank lighting optimal?",
+      "Camera stabilized?",
+      "Macro lens for details?",
+      "Audio recorded separately?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How to eliminate reflections?", "answer": "Circular polarizing filter is essential. Darken the room behind camera. Shoot at slight angle if needed. Black fabric behind tripod helps."},
+    {"question": "Best camera for aquarium videos?", "answer": "Mirrorless with fast autofocus—fish move quickly. Sony A6400 great for eye tracking. Macro lens for detail. GoPro for inside-tank shots."},
+    {"question": "How to film inside the tank?", "answer": "GoPro in waterproof housing works well. Or purpose-built underwater camera. Secure mounting to prevent floating. Be mindful of fish stress."},
+    {"question": "Best lighting for tank filming?", "answer": "Your existing aquarium lights as primary. Add daylight LED panels from sides if needed. Avoid harsh shadows. Full spectrum shows true colors."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "aquarium"
+}

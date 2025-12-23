@@ -1,0 +1,70 @@
+{
+  "slug": "how-to-youtube-memberships",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Set Up YouTube Memberships 2025: Channel Membership Guide",
+    "description": "Set up YouTube channel memberships. Recurring revenue from loyal fans.",
+    "keywords": ["youtube memberships", "channel membership youtube", "youtube member perks", "youtube recurring revenue", "fan membership"]
+  },
+  "hero": {
+    "badge": "Memberships",
+    "headline": "How to Set Up YouTube Memberships",
+    "subheadline": "Build recurring revenue. Offer exclusive perks to your biggest fans.",
+    "primaryKeyword": "youtube memberships"
+  },
+  "sections": [
+    {"type": "intro", "content": "Channel memberships let fans pay monthly for exclusive perks—badges, emotes, members-only content, and community access. It's predictable recurring revenue from your most loyal viewers. Here's how to set up and grow a successful membership program."},
+    {"type": "steps", "title": "Enabling Memberships", "content": [
+      "Meet requirements: 500+ subs, YPP member",
+      "Go to YouTube Studio",
+      "Click 'Monetization' in left menu",
+      "Select 'Memberships' tab",
+      "Click 'Get started'",
+      "Set up membership levels",
+      "Create perks for each level",
+      "Add custom badges and emotes",
+      "Publish memberships"
+    ]},
+    {"type": "features", "title": "Membership Requirements", "content": [
+      {"icon": "users", "title": "500+ Subscribers", "description": "Minimum to enable memberships."},
+      {"icon": "check", "title": "YPP Member", "description": "Must be in YouTube Partner Program."},
+      {"icon": "flag", "title": "No Community Strikes", "description": "Channel in good standing required."},
+      {"icon": "calendar", "title": "18+ Years Old", "description": "Age requirement for monetization."}
+    ]},
+    {"type": "features", "title": "Perk Ideas", "content": [
+      {"icon": "award", "title": "Loyalty Badges", "description": "Exclusive badges that evolve over time."},
+      {"icon": "smile", "title": "Custom Emotes", "description": "Members-only emotes for chat."},
+      {"icon": "video", "title": "Exclusive Content", "description": "Members-only videos, early access."},
+      {"icon": "message-circle", "title": "Community Access", "description": "Members-only posts, Discord roles."}
+    ]},
+    {"type": "benefits", "title": "Growing Memberships", "content": [
+      "Promote regularly but not excessively",
+      "Deliver consistent member value",
+      "Thank members by name in videos",
+      "Exclusive content keeps value high",
+      "Community posts for member engagement",
+      "Multiple tiers for different budgets",
+      "Member milestones celebrated"
+    ]},
+    {"type": "checklist", "title": "Membership Checklist", "content": [
+      "Requirements met?",
+      "Tiers and pricing set?",
+      "Perks clearly valuable?",
+      "Badges designed?",
+      "Emotes created?",
+      "Exclusive content planned?",
+      "Promotion strategy ready?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What percentage does YouTube take?", "answer": "YouTube takes 30%, you keep 70% of membership revenue. This is standard for platform-hosted memberships. Consider value of YouTube's infrastructure."},
+    {"question": "How much should I charge?", "answer": "Most channels offer $4.99 base tier. Higher tiers $9.99-$24.99 for premium perks. Start simple, add tiers as community grows. Research your niche."},
+    {"question": "What perks work best?", "answer": "Exclusive/early content, members-only chat badges, custom emotes, direct access (Discord, streams). Tangible value viewers can't get otherwise."},
+    {"question": "How to get first members?", "answer": "Ask! Promote genuinely to engaged community. Offer compelling value. First members often come from most active commenters and stream chatters."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

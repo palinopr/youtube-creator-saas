@@ -1,0 +1,63 @@
+{
+  "slug": "guitar-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Guitar YouTube Tools 2025: Guitarist Video Equipment",
+    "description": "Top tools for guitar YouTube channels. Recording, filming, and lesson creation.",
+    "keywords": ["guitar youtube tools", "guitar channel equipment", "guitar tutorial gear", "music youtube setup", "guitar recording"]
+  },
+  "hero": {
+    "badge": "Guitar Tools",
+    "headline": "Best Guitar YouTube Tools 2025",
+    "subheadline": "Share your playing professionally. Audio and video for guitar creators.",
+    "primaryKeyword": "guitar youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Guitar content thrives on YouTube—tutorials, covers, gear reviews, and performances. Success requires quality audio (most important), clear video showing techniques, and engaging presentation. Here's what guitar YouTubers need for professional content."},
+    {"type": "features", "title": "Audio Recording", "content": [
+      {"icon": "mic", "title": "Audio Interface", "description": "Focusrite Scarlett, Universal Audio. Direct guitar input."},
+      {"icon": "volume-2", "title": "Amp Simulation", "description": "Neural DSP, Helix Native. Professional tones in the box."},
+      {"icon": "headphones", "title": "DAW Software", "description": "Logic, Reaper, GarageBand. Recording and mixing."}
+    ]},
+    {"type": "features", "title": "Video Setup", "content": [
+      {"icon": "camera", "title": "Camera System", "description": "Sony A6400, Canon M50. Multiple angles if budget allows."},
+      {"icon": "move", "title": "Fretboard Angle", "description": "Overhead or side camera for technique videos."},
+      {"icon": "sun", "title": "Lighting", "description": "LED panels showing both player and fretboard clearly."}
+    ]},
+    {"type": "features", "title": "Lesson Creation", "content": [
+      {"icon": "type", "title": "Tab Software", "description": "Guitar Pro, Soundslice. Create professional tabs."},
+      {"icon": "monitor", "title": "Screen Recording", "description": "Show tabs synced with playing. OBS for capture."},
+      {"icon": "music", "title": "Backing Tracks", "description": "Custom or licensed. Essential for play-alongs."}
+    ]},
+    {"type": "benefits", "title": "Guitar Content Tips", "content": [
+      "Audio quality is priority one",
+      "Show fretboard for tutorials",
+      "Multiple angles add value",
+      "Tab/notation on screen helps",
+      "Slow-motion for techniques",
+      "Engage with guitar community",
+      "Mix covers, originals, tutorials"
+    ]},
+    {"type": "checklist", "title": "Recording Checklist", "content": [
+      "Audio interface connected?",
+      "DAW project set up?",
+      "Amp sim dialed in?",
+      "Camera angles positioned?",
+      "Lighting showing fretboard?",
+      "Tab/screen capture ready?",
+      "Sync audio and video?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do I need expensive gear?", "answer": "Start with interface ($150), free amp sims, and phone camera. Upgrade as channel grows. Audio quality matters most—invest there first."},
+    {"question": "How to show fretboard clearly?", "answer": "Overhead camera or angled side shot. Good lighting essential—no shadows on neck. Consider dual cameras for face and fretboard."},
+    {"question": "Best way to record guitar audio?", "answer": "Direct into audio interface with amp simulation. Cleaner than mic'd amp for most home setups. Neural DSP, Helix Native are top choices."},
+    {"question": "How to sync tabs with playing?", "answer": "Soundslice is purpose-built for this. Or screen record Guitar Pro while playing. Edit to sync in post. Takes practice but looks professional."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "guitar"
+}

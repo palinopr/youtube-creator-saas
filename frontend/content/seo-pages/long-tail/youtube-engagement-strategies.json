@@ -1,0 +1,75 @@
+{
+  "slug": "youtube-engagement-strategies",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Engagement Strategies 2025: Boost Likes, Comments & Shares",
+    "description": "Increase YouTube engagement. Strategies for more likes, comments, and community interaction.",
+    "keywords": ["youtube engagement strategies", "youtube engagement", "increase youtube engagement", "youtube comments strategy", "youtube interaction"]
+  },
+  "hero": {
+    "badge": "Engagement Strategies",
+    "headline": "YouTube Engagement Strategies",
+    "subheadline": "Turn viewers into community. Build engagement that grows your channel.",
+    "primaryKeyword": "youtube engagement strategies"
+  },
+  "sections": [
+    {"type": "intro", "content": "Engagement signals tell YouTube your content resonates—likes, comments, shares, and saves all indicate value. Beyond algorithm benefits, engaged viewers become loyal fans who return video after video. Here's how to create content that sparks interaction."},
+    {"type": "features", "title": "Engagement Signals", "content": [
+      {"icon": "heart", "title": "Likes", "description": "Quick approval. Low barrier action."},
+      {"icon": "message-circle", "title": "Comments", "description": "Deeper engagement. Community building."},
+      {"icon": "share-2", "title": "Shares", "description": "Highest value. Spreads content."},
+      {"icon": "bookmark", "title": "Saves", "description": "Save to playlist. Future intent."}
+    ]},
+    {"type": "steps", "title": "Driving Engagement", "content": [
+      "Create content worth discussing",
+      "Ask specific questions in video",
+      "Respond to comments (especially early)",
+      "Pin interesting comments for visibility",
+      "Use Community posts between uploads",
+      "Create polls for easy interaction",
+      "Acknowledge viewers by name in videos",
+      "Build running jokes and callbacks"
+    ]},
+    {"type": "features", "title": "Comment Strategies", "content": [
+      {"icon": "help-circle", "title": "Ask Questions", "description": "End with specific question to answer."},
+      {"icon": "users", "title": "Create Debates", "description": "Encourage discussion between viewers."},
+      {"icon": "award", "title": "Feature Comments", "description": "Highlight viewers in future videos."},
+      {"icon": "heart", "title": "Respond Fast", "description": "First hour engagement matters most."}
+    ]},
+    {"type": "features", "title": "Beyond Comments", "content": [
+      {"icon": "list", "title": "Polls", "description": "Easy interaction. Community tab."},
+      {"icon": "image", "title": "Community Posts", "description": "Stay visible between uploads."},
+      {"icon": "video", "title": "Live Streams", "description": "Real-time engagement. Super Chats."},
+      {"icon": "mail", "title": "Call to Actions", "description": "Specific asks get more response."}
+    ]},
+    {"type": "benefits", "title": "Engagement Best Practices", "content": [
+      "Be present in your own comments",
+      "Early responses boost more discussion",
+      "Specific questions beat generic asks",
+      "Create community inside jokes",
+      "Acknowledge regular commenters",
+      "Don't beg—earn engagement with value",
+      "Quality engagement over quantity"
+    ]},
+    {"type": "checklist", "title": "Engagement Checklist", "content": [
+      "Question asked in video?",
+      "First hour comments responded to?",
+      "Best comment pinned?",
+      "Community post this week?",
+      "Poll considered for engagement?",
+      "Viewers acknowledged?",
+      "Engagement trends monitored?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does engagement help the algorithm?", "answer": "Yes—engagement signals content quality. Comments especially valuable. But watch time and retention matter more. Engagement complements good content, doesn't replace it."},
+    {"question": "How to get more comments?", "answer": "Ask specific questions, not just 'comment below.' Respond to early comments to spark discussion. Feature commenters in videos. Create debates/discussions. Make commenting feel valuable."},
+    {"question": "Should I respond to all comments?", "answer": "As many as possible when small. Quality responses when large. At scale, prioritize: questions, new viewers, regulars. Heart comments you can't reply to. Presence matters."},
+    {"question": "What about negative comments?", "answer": "Genuine criticism: consider and respond thoughtfully. Trolls: ignore or delete. Don't engage with bad faith comments—it encourages more. Build positive community culture."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

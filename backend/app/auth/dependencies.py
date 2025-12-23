@@ -385,6 +385,37 @@ async def require_admin(
     return user
 
 
+async def get_channel_profile(
+    user: User = Depends(get_current_user)
+) -> dict:
+    """
+    Get the channel profile for the current user's primary channel.
+    Returns empty dict if no profile is available.
+
+    Use this to pass channel context to AI agents:
+        @router.get("/analyze")
+        async def analyze(
+            user: User = Depends(get_current_user),
+            channel_profile: dict = Depends(get_channel_profile)
+        ):
+            agent = SEOAgent(youtube, analytics, channel_profile=channel_profile)
+            ...
+    """
+    with get_db_session() as session:
+        # Get primary channel, or first active channel
+        channel = session.query(YouTubeChannel).filter(
+            YouTubeChannel.user_id == user.id,
+            YouTubeChannel.is_active == True
+        ).order_by(
+            YouTubeChannel.is_primary.desc()
+        ).first()
+
+        if channel and channel.channel_profile:
+            return channel.channel_profile
+
+        return {}
+
+
 def verify_channel_ownership(user: User, channel_id: str) -> None:
     """
     Verify that the authenticated user owns or has access to the given channel_id.

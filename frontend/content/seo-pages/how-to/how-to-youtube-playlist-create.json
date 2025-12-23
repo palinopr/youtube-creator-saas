@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-youtube-playlist-create",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Playlists 2025: Organize Videos for Growth",
+    "description": "Create and optimize YouTube playlists. Increase watch time and organization.",
+    "keywords": ["youtube playlist create", "make youtube playlist", "youtube playlist tips", "organize youtube videos", "playlist optimization"]
+  },
+  "hero": {
+    "badge": "Create Playlists",
+    "headline": "How to Create YouTube Playlists",
+    "subheadline": "Organize content. Boost watch time. Help viewers binge.",
+    "primaryKeyword": "youtube playlist create"
+  },
+  "sections": [
+    {"type": "intro", "content": "Playlists organize your content and encourage binge-watching by auto-playing the next video. They appear in search results, can rank independently, and significantly boost session watch time. Strategic playlist creation is an underutilized growth lever."},
+    {"type": "features", "title": "Playlist Benefits", "content": [
+      {"icon": "play", "title": "Auto-Play", "description": "Next video plays automatically."},
+      {"icon": "clock", "title": "Watch Time", "description": "Sessions extend naturally."},
+      {"icon": "search", "title": "SEO Value", "description": "Playlists rank in search."},
+      {"icon": "folder", "title": "Organization", "description": "Help viewers find content."}
+    ]},
+    {"type": "steps", "title": "Creating a Playlist", "content": [
+      "Go to YouTube Studio or youtube.com",
+      "Click Playlists in left menu",
+      "Click New Playlist",
+      "Add title (keyword-rich)",
+      "Write compelling description",
+      "Set visibility (public recommended)",
+      "Add videos in strategic order",
+      "Share playlist link to promote"
+    ]},
+    {"type": "features", "title": "Playlist Types", "content": [
+      {"icon": "layers", "title": "Series Playlist", "description": "Sequential content in order."},
+      {"icon": "star", "title": "Best Of", "description": "Top performing videos."},
+      {"icon": "book", "title": "Topic Playlists", "description": "Grouped by subject."},
+      {"icon": "users", "title": "Beginner Guides", "description": "For new audience members."}
+    ]},
+    {"type": "benefits", "title": "Playlist Optimization Tips", "content": [
+      "Use keywords in playlist titles",
+      "Write descriptions with target keywords",
+      "Put best video first (hook viewers)",
+      "Order videos logically for binging",
+      "Create playlists for every topic",
+      "Add new videos to relevant playlists",
+      "Feature playlists on channel page"
+    ]},
+    {"type": "checklist", "title": "Playlist Checklist", "content": [
+      "Keyword-optimized title?",
+      "Description with keywords?",
+      "Videos in logical order?",
+      "Best/hook video first?",
+      "Playlist set to public?",
+      "Featured on channel page?",
+      "All relevant videos included?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many playlists should I have?", "answer": "At least one for every topic/series you cover. More is fine—help viewers find specific content. 10-30 playlists common for established channels. Quality over quantity—each should have purpose."},
+    {"question": "Do playlists help with SEO?", "answer": "Yes—playlists can rank in YouTube and Google search. Titles and descriptions indexed. Watch time from playlists signals value. Cross-link between related playlists for internal SEO."},
+    {"question": "Best video order in playlists?", "answer": "Put most engaging/popular video first to hook viewers. Then logical progression. For series, chronological order. For topics, most helpful content first. Test different orders."},
+    {"question": "Can I add other creators' videos?", "answer": "Yes—you can add any public video to your playlists. Good for curating helpful content for your audience. Be careful not to send viewers away from your content. Most creators stick to their own videos."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

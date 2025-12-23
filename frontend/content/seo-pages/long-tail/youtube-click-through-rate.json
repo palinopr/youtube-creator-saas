@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-click-through-rate",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Click-Through Rate 2025: Improve CTR for More Views",
+    "description": "Improve YouTube CTR. Get more clicks on your thumbnails and titles.",
+    "keywords": ["youtube click through rate", "youtube ctr", "improve youtube ctr", "thumbnail click rate", "youtube impressions"]
+  },
+  "hero": {
+    "badge": "Click-Through Rate",
+    "headline": "YouTube Click-Through Rate Guide",
+    "subheadline": "More clicks = more views. Master the first gate.",
+    "primaryKeyword": "youtube click through rate"
+  },
+  "sections": [
+    {"type": "intro", "content": "Click-through rate (CTR) measures how often people click your video when they see it. High CTR signals to YouTube that your video is compelling, leading to more impressions. It's the first gate—without clicks, your content never gets watched no matter how good it is."},
+    {"type": "features", "title": "CTR Components", "content": [
+      {"icon": "image", "title": "Thumbnail", "description": "Visual hook that grabs attention."},
+      {"icon": "type", "title": "Title", "description": "Promise that compels click."},
+      {"icon": "eye", "title": "Impressions", "description": "Times video was shown."},
+      {"icon": "mouse-pointer", "title": "Clicks", "description": "Times people clicked."}
+    ]},
+    {"type": "features", "title": "CTR Benchmarks", "content": [
+      {"icon": "alert-circle", "title": "2-3%", "description": "Below average—needs work."},
+      {"icon": "minus", "title": "4-5%", "description": "Average performance."},
+      {"icon": "check", "title": "6-8%", "description": "Good CTR."},
+      {"icon": "star", "title": "10%+", "description": "Excellent performance."}
+    ]},
+    {"type": "steps", "title": "Improving CTR", "content": [
+      "Study thumbnails of top-performing videos in niche",
+      "Use faces with clear emotions",
+      "Create contrast and visual hierarchy",
+      "Keep text minimal on thumbnails",
+      "Write titles that create curiosity",
+      "Test multiple thumbnail versions",
+      "Balance searchability with intrigue",
+      "Update thumbnails on underperforming videos"
+    ]},
+    {"type": "benefits", "title": "CTR Best Practices", "content": [
+      "Thumbnail and title work together",
+      "Don't put title text on thumbnail",
+      "Faces outperform no faces usually",
+      "Bright colors grab attention",
+      "Curiosity gap drives clicks",
+      "Numbers in titles perform well",
+      "Test constantly—CTR is learnable"
+    ]},
+    {"type": "checklist", "title": "CTR Checklist", "content": [
+      "Thumbnail visually striking?",
+      "Face with emotion visible?",
+      "Contrast and colors pop?",
+      "Title creates curiosity?",
+      "Title and thumbnail complement?",
+      "Tested multiple versions?",
+      "Tracking CTR in analytics?"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good CTR?", "answer": "4-5% is average, 6-8% is good, 10%+ is excellent. Varies by source—browse CTR is lower than search CTR. Compare your videos to each other, not to arbitrary benchmarks."},
+    {"question": "Why does my CTR vary so much?", "answer": "CTR depends on impression source. Search impressions have higher CTR. As videos age and reach broader audience, CTR often drops. New video CTR to subscribers is naturally higher."},
+    {"question": "How to A/B test thumbnails?", "answer": "YouTube has built-in A/B testing for larger channels. Manually test by changing thumbnail and monitoring CTR over a week. Give enough time for data to be meaningful. Test one element at a time."},
+    {"question": "Clickbait vs curiosity?", "answer": "Clickbait promises what video doesn't deliver—damages retention and trust. Curiosity creates intrigue that video satisfies. Aim for compelling truth, not misleading hype. Retention reveals if you're delivering."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

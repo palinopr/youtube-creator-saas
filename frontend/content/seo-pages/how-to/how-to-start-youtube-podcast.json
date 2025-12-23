@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-start-youtube-podcast",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Start a YouTube Podcast 2025: Complete Setup Guide",
+    "description": "Launch a video podcast on YouTube. Equipment, software, format, and growth strategies for podcast creators.",
+    "keywords": ["youtube podcast", "video podcast", "podcast on youtube", "how to start podcast", "youtube podcast setup"]
+  },
+  "hero": {
+    "badge": "Podcasting",
+    "headline": "How to Start a YouTube Podcast",
+    "subheadline": "Video podcasts are exploding. Here's everything you need to launch yours.",
+    "primaryKeyword": "youtube podcast"
+  },
+  "sections": [
+    {"type": "intro", "content": "Video podcasts on YouTube are growing faster than audio-only. You get the discoverability of YouTube plus the deep engagement of long-form conversation. Many successful podcasts started on YouTube before expanding to Spotify and Apple. Here's how to launch your video podcast."},
+    {"type": "features", "title": "Essential Podcast Equipment", "content": [
+      {"icon": "mic", "title": "Quality Microphones", "description": "Shure SM7B or Rode PodMic for each host. Audio quality is non-negotiable."},
+      {"icon": "video", "title": "Multi-Camera Setup", "description": "At least 2-3 cameras for visual variety. Switch between wide and close-ups."},
+      {"icon": "headphones", "title": "Audio Interface", "description": "Rodecaster Pro II or Focusrite for multiple mic inputs and easy control."}
+    ]},
+    {"type": "features", "title": "Software & Recording", "content": [
+      {"icon": "monitor", "title": "OBS Studio", "description": "Free multi-camera recording and scene switching. Industry standard."},
+      {"icon": "users", "title": "Riverside or Squadcast", "description": "High-quality remote guest recording. Essential for remote interviews."},
+      {"icon": "edit", "title": "DaVinci Resolve", "description": "Multicam editing with audio sync. Free version handles podcast editing."}
+    ]},
+    {"type": "steps", "title": "Podcast Launch Checklist", "content": [
+      "Define your niche and format",
+      "Set up recording space with acoustic treatment",
+      "Install microphones and cameras",
+      "Test audio levels and video quality",
+      "Record 3-5 episodes before launch",
+      "Create podcast artwork and channel art",
+      "Plan release schedule",
+      "Launch and promote consistently"
+    ]},
+    {"type": "benefits", "title": "Video Podcast Best Practices", "content": [
+      "Invest most in audio quality",
+      "Use multiple camera angles for visual interest",
+      "Add B-roll and graphics in post",
+      "Create clips for Shorts and TikTok",
+      "Timestamp chapters for navigation",
+      "Consistent upload schedule",
+      "Repurpose to audio platforms"
+    ]},
+    {"type": "checklist", "title": "Per-Episode Workflow", "content": [
+      "Prep guest and topic research",
+      "Sound check before recording",
+      "Record with multiple cameras running",
+      "Backup audio recording (always)",
+      "Edit for pacing and remove dead air",
+      "Add intro, outro, and graphics",
+      "Create clips and timestamps",
+      "Upload and promote"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should podcast episodes be?", "answer": "1-2 hours is standard for deep conversation. But edit ruthlessly—keep the best parts. Some successful podcasts are 30-45 minutes."},
+    {"question": "Do I need a co-host?", "answer": "Not required. Solo podcasts work (monologues, interviews). Co-hosts add dynamics but complicate scheduling. Start with what's sustainable."},
+    {"question": "Should I record video and audio separately?", "answer": "Yes. Always record backup audio through your interface. Video can fail. Audio backup saves episodes."},
+    {"question": "How do I get guests?", "answer": "Start with your network. Reach out to bigger guests as you grow. Having 10-20 episodes builds credibility. Warm intros work best."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

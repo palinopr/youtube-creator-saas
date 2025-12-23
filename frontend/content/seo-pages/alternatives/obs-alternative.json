@@ -1,0 +1,60 @@
+{
+  "slug": "obs-alternative",
+  "category": "alternatives",
+  "status": "published",
+  "metadata": {
+    "title": "Best OBS Alternatives 2025: Streaming & Recording Software",
+    "description": "Looking for an OBS alternative? Compare streaming and screen recording software for YouTube creators.",
+    "keywords": ["obs alternative", "obs alternatives", "streaming software", "screen recording software", "obs competitor"]
+  },
+  "hero": {
+    "badge": "Streaming Software",
+    "headline": "Best OBS Alternatives for YouTube Creators in 2025",
+    "subheadline": "Explore streaming and recording software options beyond OBS Studio.",
+    "primaryKeyword": "obs alternative"
+  },
+  "sections": [
+    {"type": "intro", "content": "OBS Studio is the most popular free streaming software, but it's not the only option. Whether you want more features, easier setup, or a different approach, several alternatives serve YouTube creators. This guide compares the best OBS alternatives."},
+    {"type": "features", "title": "Top OBS Alternatives", "content": [
+      {"icon": "sparkles", "title": "Streamlabs", "description": "OBS-based with added features. Built-in alerts, themes, and widgets. More beginner-friendly."},
+      {"icon": "video", "title": "NVIDIA ShadowPlay", "description": "Hardware-accelerated recording for NVIDIA GPU owners. Minimal performance impact."},
+      {"icon": "monitor", "title": "XSplit", "description": "Professional streaming software with intuitive interface. Paid with free tier."}
+    ]},
+    {"type": "comparison", "title": "Alternative Comparison", "content": [
+      {"feature": "Price", "toolA": "Free OBS", "toolB": "Varies", "tubeGrow": "N/A"},
+      {"feature": "Streamlabs", "toolA": "-", "toolB": "Free / $19/mo", "tubeGrow": "N/A"},
+      {"feature": "XSplit", "toolA": "-", "toolB": "Free / $15/mo", "tubeGrow": "N/A"},
+      {"feature": "ShadowPlay", "toolA": "-", "toolB": "Free (NVIDIA)", "tubeGrow": "N/A"},
+      {"feature": "Lightstream", "toolA": "-", "toolB": "Cloud-based", "tubeGrow": "N/A"},
+      {"feature": "Restream", "toolA": "-", "toolB": "Multi-platform", "tubeGrow": "N/A"},
+      {"feature": "vMix", "toolA": "-", "toolB": "Professional", "tubeGrow": "N/A"}
+    ]},
+    {"type": "benefits", "title": "Reasons to Consider Alternatives", "content": [
+      "Easier setup and configuration",
+      "Built-in alerts and widgets",
+      "Better hardware integration",
+      "Cloud-based streaming options",
+      "Different workflow approaches",
+      "Professional broadcast features"
+    ]},
+    {"type": "steps", "title": "Choosing Your Software", "content": [
+      "Identify what you find difficult in OBS",
+      "Determine if you need streaming, recording, or both",
+      "Check hardware compatibility",
+      "Try free versions first",
+      "Consider your learning curve tolerance",
+      "Factor in long-term cost"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is Streamlabs better than OBS?", "answer": "Streamlabs is easier with more built-in features but uses more resources. OBS is leaner and more customizable. Streamlabs is OBS underneath with extras."},
+    {"question": "What about just screen recording?", "answer": "For recording only: OBS, ShadowPlay, and built-in Windows Game Bar work well. Camtasia adds editing. Loom is great for quick recordings."},
+    {"question": "Do I need streaming software for YouTube?", "answer": "Only for live streaming. Pre-recorded videos just need screen recording and video editing. OBS handles both but simpler tools exist."},
+    {"question": "What's the best low-resource option?", "answer": "NVIDIA ShadowPlay has minimal performance impact if you have an NVIDIA GPU. Otherwise, OBS is reasonably efficient when configured properly."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "obs"
+}

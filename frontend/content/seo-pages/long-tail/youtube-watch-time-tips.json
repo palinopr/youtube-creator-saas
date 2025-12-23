@@ -1,0 +1,61 @@
+{
+  "slug": "youtube-watch-time-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Watch Time Tips 2025: Increase Viewer Retention",
+    "description": "Boost your YouTube watch time with proven techniques. Hooks, pacing, and strategies that keep viewers watching.",
+    "keywords": ["youtube watch time", "watch time tips", "increase watch time", "youtube retention", "viewer retention"]
+  },
+  "hero": {
+    "badge": "Watch Time",
+    "headline": "YouTube Watch Time: Keep Viewers Watching Longer",
+    "subheadline": "Watch time is YouTube's most important metric. Here's how to maximize it.",
+    "primaryKeyword": "youtube watch time"
+  },
+  "sections": [
+    {"type": "intro", "content": "Watch time directly affects how YouTube recommends your content. More watch time signals value to the algorithm. But you can't trick viewers into watching—you have to earn their attention every minute. Here are proven strategies to increase watch time through better content and structure."},
+    {"type": "features", "title": "Watch Time Fundamentals", "content": [
+      {"icon": "zap", "title": "Strong Hooks", "description": "First 30 seconds determine if people stay. Promise value, create curiosity."},
+      {"icon": "trending-up", "title": "Payoff Delivery", "description": "Deliver on your title's promise. Unmet expectations cause abandonment."},
+      {"icon": "fast-forward", "title": "Pacing", "description": "Maintain energy throughout. Cut dead air. Keep momentum."}
+    ]},
+    {"type": "steps", "title": "Hook Techniques That Work", "content": [
+      "Open with the best moment (cold open)",
+      "Ask a compelling question",
+      "Make a bold statement",
+      "Tease what's coming",
+      "Show the end result first",
+      "Address why this matters NOW",
+      "Skip long intros (get to value fast)"
+    ]},
+    {"type": "benefits", "title": "Retention Boosting Tactics", "content": [
+      "Use pattern interrupts (graphics, B-roll)",
+      "Add chapter timestamps",
+      "Vary your pacing and energy",
+      "Include multiple hooks throughout",
+      "Tease upcoming points",
+      "Remove unnecessary tangents",
+      "End strong with call-to-action"
+    ]},
+    {"type": "checklist", "title": "Watch Time Audit Checklist", "content": [
+      "Check retention graph for each video",
+      "Identify common drop-off points",
+      "Note what top videos do differently",
+      "Time your intro (under 15 seconds?)",
+      "Count pattern interrupts per minute",
+      "Verify payoff matches promise",
+      "Review video pacing honestly"
+    ]}
+  ],
+  "faq": [
+    {"question": "What's a good average view duration?", "answer": "50%+ of video length is solid. 70%+ is excellent. But context matters—a 50% on 20 minutes beats 80% on 3 minutes in total watch time."},
+    {"question": "Why do viewers leave in the first 30 seconds?", "answer": "Usually weak hooks, mismatched expectations, or slow starts. Your intro must immediately validate the click and promise value."},
+    {"question": "Should I make shorter videos for better retention?", "answer": "Not necessarily. Shorter videos have higher percentage retention but less total watch time. Make videos as long as they need to be—no longer."},
+    {"question": "Do pattern interrupts really help?", "answer": "Yes. Visual changes every 10-30 seconds keep attention. B-roll, graphics, camera angle changes, and zoom effects all help."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

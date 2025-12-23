@@ -1,0 +1,60 @@
+{
+  "slug": "youtube-video-length-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Video Length Guide 2025: How Long Should Videos Be?",
+    "description": "Find the optimal video length for your content. Data-driven recommendations by content type and goal.",
+    "keywords": ["youtube video length", "how long youtube video", "optimal video length", "best video length", "video duration youtube"]
+  },
+  "hero": {
+    "badge": "Video Length",
+    "headline": "YouTube Video Length: How Long Should Your Videos Be?",
+    "subheadline": "The right length depends on your content, audience, and goals. Here's how to decide.",
+    "primaryKeyword": "youtube video length"
+  },
+  "sections": [
+    {"type": "intro", "content": "There's no universal 'best' video length. A tutorial should be as long as needed. Entertainment should be as long as it's entertaining. What matters is viewer satisfaction—did the video deliver value for its length? Here's how to think about video duration strategically."},
+    {"type": "features", "title": "Length by Content Type", "content": [
+      {"icon": "book", "title": "Tutorials", "description": "10-20 minutes for comprehensive guides. Shorter for specific topics. Match length to complexity."},
+      {"icon": "play", "title": "Entertainment", "description": "8-15 minutes is sweet spot. Longer for established audiences. Shorts for quick laughs."},
+      {"icon": "trending-up", "title": "Vlogs", "description": "10-20 minutes for day-in-life. Shorter for specific events. Audience relationships matter more."}
+    ]},
+    {"type": "steps", "title": "Length Recommendations", "content": [
+      "Shorts: Under 60 seconds",
+      "Quick tips: 3-5 minutes",
+      "Standard videos: 8-15 minutes",
+      "Deep tutorials: 15-25 minutes",
+      "Long-form/podcasts: 30+ minutes",
+      "For monetization: 8+ minutes (mid-roll eligible)"
+    ]},
+    {"type": "benefits", "title": "Length Optimization Tips", "content": [
+      "Watch your retention graphs religiously",
+      "Note where viewers drop off",
+      "Cut ruthlessly—earn every minute",
+      "Don't pad for length (viewers notice)",
+      "Longer isn't automatically better",
+      "Match competition in your niche",
+      "Test different lengths"
+    ]},
+    {"type": "checklist", "title": "Finding Your Ideal Length", "content": [
+      "Analyze top videos in your niche",
+      "Check retention on your best performers",
+      "Note where your videos drag",
+      "Survey your audience preferences",
+      "Test shorter and longer versions",
+      "Compare performance metrics",
+      "Optimize based on data, not guesses"
+    ]}
+  ],
+  "faq": [
+    {"question": "Does length affect algorithm ranking?", "answer": "Indirectly. YouTube values watch time and satisfaction. Longer videos can generate more watch time if people watch. But a boring 20-minute video hurts you."},
+    {"question": "What's the minimum for monetization?", "answer": "8 minutes to place mid-roll ads. There's no minimum for end cards. Shorter videos can still earn from pre-roll and display ads."},
+    {"question": "Should I make videos longer for more ads?", "answer": "Only if content quality stays high. Viewers who feel videos are padded lose trust. One engaged viewer beats ten who leave early."},
+    {"question": "Are shorter videos getting more popular?", "answer": "Shorts are growing, but long-form isn't dying. Different content serves different needs. Many creators succeed with 15-30+ minute videos."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "travel-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Travel YouTube Tools 2025: Gear for Travel Vloggers",
+    "description": "Essential tools for travel YouTubers. Portable cameras, stabilizers, editing on the go, and gear that survives adventures.",
+    "keywords": ["travel youtube tools", "travel vlog equipment", "portable camera gear", "travel content creation", "adventure vlog setup"]
+  },
+  "hero": {
+    "badge": "Travel Niche",
+    "headline": "Best YouTube Tools for Travel Creators in 2025",
+    "subheadline": "Create stunning travel content with portable, durable gear designed for life on the road.",
+    "primaryKeyword": "travel youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Travel content demands gear that's portable, durable, and versatile. You can't carry a studio in your backpack. This guide covers the essential tools travel YouTubers use to capture adventures while keeping their kit light and their workflow efficient."},
+    {"type": "features", "title": "Essential Travel Creator Tools", "content": [
+      {"icon": "video", "title": "Compact Camera System", "description": "Action cams (GoPro, DJI) for adventure, compact mirrorless (Sony ZV-E10, Canon R50) for cinematic shots."},
+      {"icon": "zap", "title": "Portable Stabilization", "description": "DJI Osmo Pocket 3 combines camera and gimbal. Phone gimbals work for smartphone creators."},
+      {"icon": "sparkles", "title": "Mobile Editing", "description": "LumaFusion on iPad or CapCut on phone. Edit and upload from anywhere with decent internet."}
+    ]},
+    {"type": "checklist", "title": "Travel YouTube Toolkit", "content": [
+      "Compact camera with good stabilization",
+      "Action camera for extreme conditions",
+      "Phone gimbal or pocket camera",
+      "Portable hard drive for backups",
+      "Compact tripod (GorillaPod style)",
+      "Universal power adapter",
+      "Solar charger or large power bank",
+      "Compact microphone (Rode VideoMicro)"
+    ]},
+    {"type": "benefits", "title": "Travel Gear Priorities", "content": [
+      "Weight and size matter more than specs",
+      "Durability for unpredictable conditions",
+      "Weather sealing for rain and dust",
+      "Long battery life or easy charging",
+      "Versatility over specialized gear"
+    ]},
+    {"type": "steps", "title": "Building Your Travel Kit", "content": [
+      "Start with what fits in your carry-on",
+      "Prioritize one excellent camera over many mediocre ones",
+      "Get weatherproof bags and cases",
+      "Plan backup and upload workflow",
+      "Test everything before important trips"
+    ]}
+  ],
+  "faq": [
+    {"question": "GoPro or mirrorless for travel?", "answer": "Both, ideally. GoPro for action, water, and POV. Mirrorless for cinematic B-roll and talking head. If choosing one, pick based on your primary content style."},
+    {"question": "How do travel vloggers backup footage?", "answer": "Portable SSDs (Samsung T7), cloud upload when WiFi allows, and sometimes shipping drives home. Losing footage is the biggest travel creator fear."},
+    {"question": "Can I edit travel videos on mobile?", "answer": "Yes. LumaFusion on iPad is surprisingly powerful. CapCut works well for simpler edits. Many travel creators edit entirely on mobile."},
+    {"question": "What about drones for travel?", "answer": "DJI Mini series is travel-friendly (under 250g, fewer regulations). But research drone laws for each destination - many countries restrict or ban drones."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "travel"
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-script",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Scripts 2025: Video Scripting Guide",
+    "description": "Write effective YouTube video scripts. Structure, hooks, and retention strategies.",
+    "keywords": ["youtube script", "write youtube script", "video script template", "youtube scripting", "how to script videos"]
+  },
+  "hero": {
+    "badge": "Scripting",
+    "headline": "How to Write YouTube Scripts",
+    "subheadline": "Structure your videos for maximum retention. Scripts that keep viewers watching.",
+    "primaryKeyword": "youtube script"
+  },
+  "sections": [
+    {"type": "intro", "content": "Scripting transforms rambling into compelling content. Even if you don't read word-for-word, having a script ensures you cover key points, maintain pacing, and include hooks that keep viewers engaged. Here's how to write scripts that work."},
+    {"type": "features", "title": "Script Structure", "content": [
+      {"icon": "zap", "title": "Hook (0-30 seconds)", "description": "Grab attention immediately. Promise value. Create curiosity."},
+      {"icon": "file-text", "title": "Body Content", "description": "Deliver on promise. Organized sections. Clear progression."},
+      {"icon": "target", "title": "Strong Close", "description": "Recap value, CTA, next steps. End with purpose."}
+    ]},
+    {"type": "steps", "title": "Scripting Process", "content": [
+      "Define video's single main point",
+      "Write the hook first (most important)",
+      "Outline key sections/points",
+      "Write conversationally, not formally",
+      "Include pattern interrupts/transitions",
+      "Add notes for B-roll/visuals",
+      "Read aloud and time it",
+      "Edit for clarity and pace"
+    ]},
+    {"type": "features", "title": "Hook Formulas", "content": [
+      {"icon": "help-circle", "title": "Question Hook", "description": "'Have you ever wondered why...' Engage curiosity immediately."},
+      {"icon": "alert-circle", "title": "Problem Hook", "description": "'Most people make this mistake...' Identify pain point."},
+      {"icon": "gift", "title": "Value Hook", "description": "'By the end of this video, you'll know...' Promise specific outcome."}
+    ]},
+    {"type": "benefits", "title": "Script Best Practices", "content": [
+      "Write like you talk",
+      "Short sentences, clear words",
+      "One idea per section",
+      "Include verbal transitions",
+      "Build curiosity throughout",
+      "Use open loops",
+      "Plan visual changes"
+    ]},
+    {"type": "benefits", "title": "Common Scripting Mistakes", "content": [
+      "Too formal/academic tone",
+      "Burying the hook",
+      "Long tangents without purpose",
+      "No clear structure",
+      "Over-scripting to robotic delivery",
+      "Forgetting visual cues",
+      "Weak or no CTA"
+    ]},
+    {"type": "checklist", "title": "Script Checklist", "content": [
+      "Strong hook in first 30 seconds?",
+      "Clear single main point?",
+      "Conversational tone?",
+      "Logical section flow?",
+      "Open loops for retention?",
+      "Visual/B-roll notes included?",
+      "Timed and appropriate length?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I script word-for-word?", "answer": "Depends on your style. Some prefer bullet points for natural delivery. Others read scripts via teleprompter. Test what sounds natural for you."},
+    {"question": "How long should scripts be?", "answer": "About 150 words per minute of video. 10-minute video = ~1,500 words. Adjust based on your speaking pace."},
+    {"question": "How to sound natural when scripted?", "answer": "Write conversationally, practice reading aloud, use a teleprompter. Bullet points if full script feels stiff."},
+    {"question": "Do all videos need scripts?", "answer": "Not necessarily. Vlogs, casual content can be unscripted. Educational, tutorial, essay-style content benefits most from scripting."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,91 @@
+{
+  "slug": "youtube-seo-checklist",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube SEO Checklist 2025: Optimize Every Video",
+    "description": "Complete YouTube SEO checklist for 2025. Step-by-step optimization for titles, descriptions, tags, thumbnails, and more.",
+    "keywords": ["youtube seo checklist", "video optimization checklist", "youtube video checklist", "youtube upload checklist", "seo checklist youtube"]
+  },
+  "hero": {
+    "badge": "SEO Checklist",
+    "headline": "The Ultimate YouTube SEO Checklist for 2025",
+    "subheadline": "Never miss an optimization step. Use this checklist to maximize every video's potential.",
+    "primaryKeyword": "youtube seo checklist"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "content": "Consistent optimization separates growing channels from stagnant ones. This checklist covers every SEO element you should address before, during, and after uploading. Bookmark it and use it for every video to ensure nothing falls through the cracks."
+    },
+    {
+      "type": "checklist",
+      "title": "Before Recording",
+      "content": [
+        "Research keywords with decent search volume",
+        "Check competition for your target keyword",
+        "Review top-ranking videos for content gaps",
+        "Plan your hook for the first 30 seconds",
+        "Script or outline your video with SEO in mind",
+        "Prepare your thumbnail shot in advance"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "Before Upload",
+      "content": [
+        "Rename video file with target keyword",
+        "Create 3-5 thumbnail variations",
+        "Write title with keyword in first 60 characters",
+        "Draft description with keyword in first line",
+        "Prepare 5-8 relevant tags",
+        "Create timestamp chapters if applicable"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "During Upload",
+      "content": [
+        "Select the right category for your content",
+        "Add video to relevant playlists",
+        "Set appropriate language and caption options",
+        "Add end screen with subscribe button",
+        "Add cards linking to related content",
+        "Double-check thumbnail is clear at small size"
+      ]
+    },
+    {
+      "type": "checklist",
+      "title": "After Publishing",
+      "content": [
+        "Pin a comment with call-to-action",
+        "Share to relevant social platforms",
+        "Respond to early comments to boost engagement",
+        "Check analytics after 48 hours",
+        "Consider thumbnail swap if CTR is below average",
+        "Update description if you missed anything"
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Quick Wins You Might Miss",
+      "content": [
+        "Add hashtags in description (3 max for best results)",
+        "Include your keyword in spoken audio for transcription",
+        "Use all 500 characters allowed for description",
+        "Link to your other videos in description",
+        "Add location tags if relevant to your content"
+      ]
+    }
+  ],
+  "faq": [
+    {"question": "Do I need to do all of this for every video?", "answer": "The core elements (title, description, tags, thumbnail) are essential for every video. Additional steps like cards and end screens can be added in batches later if needed."},
+    {"question": "How long should I spend on SEO per video?", "answer": "Most optimization should take 15-30 minutes per video once you have a system. Keyword research might add 15 minutes for new topics. It's time well spent."},
+    {"question": "What's the most important SEO element?", "answer": "Title and thumbnail together drive CTR, which is crucial for discovery. After that, watch time (content quality) matters most. Tags and description are supporting factors."},
+    {"question": "Should I update old videos with better SEO?", "answer": "Yes, especially for videos that get search traffic. Updating titles, descriptions, and thumbnails can revive underperforming content. Prioritize videos with potential."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 1
+}

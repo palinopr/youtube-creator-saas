@@ -1,0 +1,76 @@
+{
+  "slug": "how-to-youtube-playlist",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Playlists 2025: Complete Guide",
+    "description": "Create and optimize YouTube playlists. Organization, SEO benefits, and watch time strategies.",
+    "keywords": ["youtube playlist", "create youtube playlist", "youtube playlist seo", "organize youtube videos", "playlist strategy youtube"]
+  },
+  "hero": {
+    "badge": "Playlists",
+    "headline": "How to Create YouTube Playlists",
+    "subheadline": "Organize content, boost watch time, and improve channel navigation.",
+    "primaryKeyword": "youtube playlist"
+  },
+  "sections": [
+    {"type": "intro", "content": "Playlists organize your content and encourage binge-watching. When viewers watch multiple videos in a session, your watch time skyrockets. Playlists also rank in search and provide clear navigation for your channel."},
+    {"type": "features", "title": "Playlist Benefits", "content": [
+      {"icon": "play-circle", "title": "Auto-Play", "description": "Videos play in sequence. Viewers watch more without effort."},
+      {"icon": "search", "title": "SEO Value", "description": "Playlists rank in search. Another discovery opportunity."},
+      {"icon": "layout", "title": "Organization", "description": "Group related content. Viewers find what they want."}
+    ]},
+    {"type": "steps", "title": "Creating Playlists", "content": [
+      "Go to YouTube Studio or your channel page",
+      "Click 'Playlists' then 'New playlist'",
+      "Name with keywords (SEO)",
+      "Write detailed description",
+      "Add relevant videos",
+      "Set visibility (Public/Unlisted)",
+      "Order videos strategically",
+      "Feature playlists on channel page"
+    ]},
+    {"type": "features", "title": "Playlist Strategy", "content": [
+      {"icon": "list", "title": "Series Playlists", "description": "Group video series. Start-to-finish viewing experience."},
+      {"icon": "folder", "title": "Topic Playlists", "description": "Organize by subject. Viewers find related content."},
+      {"icon": "star", "title": "Best Of Playlists", "description": "Curate your best work. Perfect for new visitors."}
+    ]},
+    {"type": "benefits", "title": "Playlist Best Practices", "content": [
+      "Keyword-rich playlist titles",
+      "Detailed descriptions (SEO)",
+      "Logical video ordering",
+      "Strong opener video first",
+      "Regular updates with new content",
+      "Feature on channel page",
+      "Cross-link between playlists"
+    ]},
+    {"type": "benefits", "title": "Playlist Types", "content": [
+      "Complete series (beginner to advanced)",
+      "Topic collections",
+      "Frequently updated compilations",
+      "Seasonal content",
+      "Collaboration playlists",
+      "Best of / highlights",
+      "Course or tutorial sequences"
+    ]},
+    {"type": "checklist", "title": "Playlist Checklist", "content": [
+      "Keywords in title?",
+      "Description optimized?",
+      "Videos in logical order?",
+      "Strong first video?",
+      "Featured on channel page?",
+      "Set to public?",
+      "Updated regularly?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do playlists rank in search?", "answer": "Yes, playlists can appear in YouTube and Google search. Optimize titles and descriptions with keywords."},
+    {"question": "Best number of videos per playlist?", "answer": "5-15 videos is a sweet spot. Enough to binge, not overwhelming. Very long playlists can be subdivided."},
+    {"question": "Can I add other creators' videos?", "answer": "Yes, you can create playlists with any public videos. Great for curating resources or collaborator collections."},
+    {"question": "How to feature playlists on channel?", "answer": "Customize channel layout in YouTube Studio. Add playlist sections to channel homepage. Highlight your best playlists."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

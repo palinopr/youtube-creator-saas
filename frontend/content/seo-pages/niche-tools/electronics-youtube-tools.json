@@ -1,0 +1,66 @@
+{
+  "slug": "electronics-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Electronics YouTube Tools 2025: Tech & DIY Channel Equipment",
+    "description": "Top tools for electronics YouTube channels. Film repairs, builds, and tutorials.",
+    "keywords": ["electronics youtube tools", "tech channel equipment", "electronics repair video", "diy electronics youtube", "tech tutorial gear"]
+  },
+  "hero": {
+    "badge": "Electronics Tools",
+    "headline": "Best Electronics YouTube Tools 2025",
+    "subheadline": "Capture your builds clearly. Gear for electronics creators.",
+    "primaryKeyword": "electronics youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Electronics content demands clear visuals of tiny components, stable macro shots, and workspace coverage. Whether you're filming repairs, kit builds, or teardowns, viewers need to see what you're doing. Here's what successful electronics YouTubers use to make intricate work visible and engaging."},
+    {"type": "features", "title": "Camera Setup", "content": [
+      {"icon": "video", "title": "Overhead Camera", "description": "Bird's eye of workspace. Essential for soldering."},
+      {"icon": "eye", "title": "Macro Lens", "description": "Component close-ups. SMD detail."},
+      {"icon": "monitor", "title": "USB Microscope", "description": "Extreme magnification. Inspection shots."},
+      {"icon": "camera", "title": "Face Camera", "description": "Explanation shots. Tutorial presentation."}
+    ]},
+    {"type": "features", "title": "Lighting Solutions", "content": [
+      {"icon": "sun", "title": "LED Panels", "description": "Even workspace illumination."},
+      {"icon": "circle", "title": "Ring Light", "description": "Shadow-free overhead. Component clarity."},
+      {"icon": "target", "title": "Task Lighting", "description": "Adjustable arm lamps. Focused light."},
+      {"icon": "zap", "title": "Diffusion", "description": "Reduce reflections on shiny components."}
+    ]},
+    {"type": "features", "title": "Capture Equipment", "content": [
+      {"icon": "move", "title": "Articulating Arm", "description": "Position overhead camera. Elgato mount."},
+      {"icon": "box", "title": "C-Stand", "description": "Heavy duty for larger cameras."},
+      {"icon": "layers", "title": "Screen Recording", "description": "Oscilloscope, software captures."},
+      {"icon": "smartphone", "title": "Phone Mount", "description": "Quick macro shots. B-roll."}
+    ]},
+    {"type": "benefits", "title": "Electronics Content Tips", "content": [
+      "Good lighting prevents shadows on work",
+      "Macro shots show detail viewers need",
+      "Explain as you work—narration essential",
+      "Show common mistakes and fixes",
+      "Document process start to finish",
+      "Schematics and diagrams help viewers",
+      "Test footage before long projects"
+    ]},
+    {"type": "checklist", "title": "Electronics Video Checklist", "content": [
+      "Workspace well-lit?",
+      "Overhead camera positioned?",
+      "Macro lens ready for details?",
+      "Audio recording clean?",
+      "Reflections minimized?",
+      "Test shots checked?",
+      "Schematics prepared?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for electronics work?", "answer": "Any camera with good macro capability. Sony A6400 with macro lens popular. USB microscope for extreme detail. Overhead positioning matters more than camera brand."},
+    {"question": "How to avoid reflections on components?", "answer": "Diffused lighting from multiple angles. Avoid direct overhead light on shiny surfaces. Matte work surface helps. Adjust angles—test before starting project."},
+    {"question": "USB microscope vs macro lens?", "answer": "Both useful. Macro lens: better video quality, moderate magnification. USB microscope: extreme magnification, inspection-level detail. Many creators use both."},
+    {"question": "Screen recording for oscilloscopes?", "answer": "If digital scope with USB, capture directly. OBS for screen recording. Some scopes have video out. Photos of screen work for static measurements."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "electronics"
+}

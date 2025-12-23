@@ -1,0 +1,66 @@
+{
+  "slug": "youtube-thumbnail-size-guide",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Thumbnail Size 2025: Dimensions, Resolution & Design Guide",
+    "description": "Perfect YouTube thumbnail dimensions. Size requirements, resolution, and design best practices.",
+    "keywords": ["youtube thumbnail size", "thumbnail dimensions", "youtube thumbnail resolution", "thumbnail size youtube", "youtube thumbnail specs"]
+  },
+  "hero": {
+    "badge": "Thumbnail Specs",
+    "headline": "YouTube Thumbnail Size Guide",
+    "subheadline": "Get the dimensions right. Technical requirements and design best practices.",
+    "primaryKeyword": "youtube thumbnail size"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your thumbnail is the single most important factor in whether someone clicks. But before design, you need the technical specs right. Wrong dimensions mean YouTube will crop or compress your image, ruining your carefully crafted design. Here are the exact requirements."},
+    {"type": "features", "title": "Official Requirements", "content": [
+      {"icon": "maximize", "title": "1280 x 720 pixels", "description": "Minimum resolution. 16:9 aspect ratio. Standard HD dimensions."},
+      {"icon": "file", "title": "Under 2MB", "description": "File size limit. JPG, GIF, or PNG format accepted."},
+      {"icon": "image", "title": "16:9 Aspect Ratio", "description": "Must be widescreen format. Other ratios will be cropped."}
+    ]},
+    {"type": "benefits", "title": "Technical Best Practices", "content": [
+      "Design at 1920x1080 for crispness, export at 1280x720",
+      "Use PNG for text-heavy designs (sharper)",
+      "Use JPG for photo-based thumbnails (smaller file)",
+      "Keep important elements away from edges",
+      "Test at small sizes—that's how most viewers see it",
+      "Avoid thin text—gets lost at small sizes",
+      "High contrast is essential"
+    ]},
+    {"type": "features", "title": "Where Thumbnails Appear", "content": [
+      {"icon": "smartphone", "title": "Mobile Feed", "description": "Very small. Text must be large, readable. Most viewers here."},
+      {"icon": "monitor", "title": "Desktop Browse", "description": "Medium size. More detail visible. Still needs clarity."},
+      {"icon": "tv", "title": "TV Apps", "description": "Large display. Low quality shows. Design for sharpness."}
+    ]},
+    {"type": "steps", "title": "Design Workflow", "content": [
+      "Create canvas at 1920x1080 (or 1280x720)",
+      "Use guides for safe zones (10% margin)",
+      "Design with mobile viewing in mind",
+      "Keep text to 3-5 words maximum",
+      "Test at thumbnail size before finalizing",
+      "Export as PNG for best quality",
+      "Compress if over 2MB"
+    ]},
+    {"type": "checklist", "title": "Thumbnail Technical Checklist", "content": [
+      "1280x720 minimum resolution?",
+      "16:9 aspect ratio?",
+      "Under 2MB file size?",
+      "PNG or JPG format?",
+      "Readable at small sizes?",
+      "Important elements not cropped?",
+      "High contrast for visibility?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I use higher resolution?", "answer": "Yes, but it will be scaled down. 1920x1080 works well—same aspect ratio, sharper source. YouTube compresses all thumbnails."},
+    {"question": "Why is my thumbnail blurry?", "answer": "Either source resolution too low, heavy JPEG compression, or too much fine detail. Use PNG for text, ensure 1280x720 minimum."},
+    {"question": "GIF thumbnails work?", "answer": "YouTube accepts GIF format but displays as static image. No animated thumbnails allowed currently."},
+    {"question": "Best format for quality?", "answer": "PNG for graphics and text, JPG for photos. PNG is lossless but larger files. JPG compresses more."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -19,7 +19,7 @@ from slowapi.util import get_remote_address
 
 from ..auth import get_authenticated_service
 from ..auth.youtube_auth import load_credentials, DEFAULT_TOKEN_KEY
-from ..auth.dependencies import get_current_user, check_usage, require_feature
+from ..auth.dependencies import get_current_user, check_usage, require_feature, get_channel_profile
 from ..db.models import User
 from ..tools.clips_generator import FrankenBiteDetector, ClipRenderer
 from ..tools.transcript_analyzer import TranscriptAnalyzer
@@ -102,7 +102,8 @@ class ClipSuggestionResponse(BaseModel):
 async def generate_clips_stream(
     video_id: str,
     max_clips: int = 5,
-    user: User = Depends(check_usage("clips_per_month"))
+    user: User = Depends(check_usage("clips_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Stream clip generation progress using Server-Sent Events (SSE).
@@ -110,7 +111,10 @@ async def generate_clips_stream(
     from fastapi.responses import StreamingResponse
     import json
     import asyncio
-    
+
+    # Capture channel_profile in closure for the generator
+    _channel_profile = channel_profile
+
     async def event_generator():
         import sys
         print(f"[STREAM] ========== STREAM STARTED for {video_id} ==========", flush=True)
@@ -188,7 +192,7 @@ async def generate_clips_stream(
             
             # Use new Agent Workflow
             from ..agents.clips_agent import ViralClipsAgent
-            agent = ViralClipsAgent()
+            agent = ViralClipsAgent(channel_profile=_channel_profile)
             
             # Get original transcript segments for better sentence boundary detection
             transcript_segments = transcript_data.get("segments", [])
@@ -289,7 +293,8 @@ async def generate_clips_stream(
 async def generate_clips(
     request: Request,
     clips_request: GenerateClipsRequest,
-    user: User = Depends(check_usage("clips_per_month"))
+    user: User = Depends(check_usage("clips_per_month")),
+    channel_profile: dict = Depends(get_channel_profile)
 ):
     """
     Generate viral clip suggestions from a video using the Franken-bite method.
@@ -402,7 +407,7 @@ async def generate_clips(
         print("[CLIPS] Creating ViralClipsAgent...")
 
         from ..agents.clips_agent import ViralClipsAgent
-        agent = ViralClipsAgent()
+        agent = ViralClipsAgent(channel_profile=channel_profile)
         print("[CLIPS] Agent created, calling generate_clips()...")
 
         try:

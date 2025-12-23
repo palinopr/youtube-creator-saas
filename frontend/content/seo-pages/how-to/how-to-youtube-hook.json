@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-youtube-hook",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Write YouTube Hooks 2025: First 30 Seconds Guide",
+    "description": "Write hooks that keep viewers watching. First 30 seconds strategies that work.",
+    "keywords": ["youtube hook", "video hook", "youtube intro hook", "first 30 seconds youtube", "how to hook viewers"]
+  },
+  "hero": {
+    "badge": "Hooks",
+    "headline": "How to Write YouTube Hooks",
+    "subheadline": "The first 30 seconds determine if viewers stay or leave. Make them count.",
+    "primaryKeyword": "youtube hook"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your hook is everything. Most viewers decide within seconds whether to keep watching. A weak start kills otherwise great videos. Strong hooks grab attention, create curiosity, and make staying feel essential. Here's how to write hooks that work."},
+    {"type": "features", "title": "Hook Types", "content": [
+      {"icon": "help-circle", "title": "Question Hook", "description": "'Have you ever wondered...' Opens curiosity loop."},
+      {"icon": "alert-circle", "title": "Problem Hook", "description": "'Most people get this wrong...' Identifies pain point."},
+      {"icon": "gift", "title": "Promise Hook", "description": "'By the end, you'll know exactly...' States value."}
+    ]},
+    {"type": "steps", "title": "Creating Strong Hooks", "content": [
+      "Open with your strongest point (not intro/greetings)",
+      "Create a curiosity gap immediately",
+      "Promise specific value or outcome",
+      "Use pattern interrupts (unexpected starts)",
+      "Match hook energy to content",
+      "Keep it under 15-30 seconds",
+      "Don't give everything away—tease"
+    ]},
+    {"type": "features", "title": "Hook Formulas", "content": [
+      {"icon": "zap", "title": "Cold Open", "description": "Start mid-action or mid-thought. No setup, just content."},
+      {"icon": "star", "title": "Teaser", "description": "Show the end result first. 'Here's what we achieved...'"},
+      {"icon": "list", "title": "Stakes Statement", "description": "'If you don't know this, you're losing...' Create urgency."}
+    ]},
+    {"type": "benefits", "title": "Hook Best Practices", "content": [
+      "No 'Hey guys, welcome back'",
+      "Skip the pleasantries",
+      "Get to value immediately",
+      "Match thumbnail/title promise",
+      "Create an open loop",
+      "Energy should be high",
+      "Test different approaches"
+    ]},
+    {"type": "benefits", "title": "Hook Killers", "content": [
+      "Long introductions",
+      "Explaining what you'll cover",
+      "Sponsor mentions first",
+      "Slow, low-energy starts",
+      "Unrelated rambling",
+      "Begging for likes/subs early",
+      "Channel intro before content"
+    ]},
+    {"type": "checklist", "title": "Hook Checklist", "content": [
+      "Attention grabbed in first 5 seconds?",
+      "Curiosity created?",
+      "Value promised?",
+      "No wasted intro time?",
+      "Energy appropriate?",
+      "Open loop established?",
+      "Matches title/thumbnail?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should the hook be?", "answer": "5-30 seconds typically. Get to value fast. The hook should flow into content, not be a separate intro."},
+    {"question": "Should I tease the ending?", "answer": "Often yes—showing results first creates curiosity about how. 'Here's what I built/achieved... let me show you how.'"},
+    {"question": "Can I greet viewers at all?", "answer": "Yes, but after the hook. Deliver value first, then briefly greet if it fits your style. Never lead with greetings."},
+    {"question": "How to test hook effectiveness?", "answer": "Check retention graph at 30-second mark. High drop-off = weak hook. Compare across videos to find patterns."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-analytics-dashboard",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Analytics Dashboard 2025: Understanding Your Data",
+    "description": "Master YouTube Analytics dashboard. Make data-driven content decisions.",
+    "keywords": ["youtube analytics dashboard", "youtube studio analytics", "youtube data", "analytics overview", "youtube metrics explained"]
+  },
+  "hero": {
+    "badge": "Analytics Dashboard",
+    "headline": "YouTube Analytics Dashboard Guide",
+    "subheadline": "Understand your data. Make smarter content decisions.",
+    "primaryKeyword": "youtube analytics dashboard"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Analytics tells you exactly what's working and what isn't. The dashboard can seem overwhelming at first, but understanding the key sections helps you make informed decisions instead of guessing. Data-driven creators grow faster by doubling down on what works."},
+    {"type": "features", "title": "Dashboard Sections", "content": [
+      {"icon": "home", "title": "Overview", "description": "Quick performance snapshot."},
+      {"icon": "play", "title": "Content", "description": "Individual video performance."},
+      {"icon": "users", "title": "Audience", "description": "Who's watching you."},
+      {"icon": "search", "title": "Reach", "description": "How viewers find you."}
+    ]},
+    {"type": "features", "title": "Key Metrics", "content": [
+      {"icon": "eye", "title": "Views", "description": "Total video plays."},
+      {"icon": "clock", "title": "Watch Time", "description": "Total hours watched."},
+      {"icon": "users", "title": "Subscribers", "description": "Channel growth."},
+      {"icon": "dollar-sign", "title": "Revenue", "description": "Earnings (if monetized)."}
+    ]},
+    {"type": "steps", "title": "Using Analytics Effectively", "content": [
+      "Check overview weekly (not daily)",
+      "Compare periods to spot trends",
+      "Identify top-performing content",
+      "Study retention graphs for each video",
+      "Check traffic sources for reach insights",
+      "Review audience demographics",
+      "Make one change, measure results",
+      "Document learnings for strategy"
+    ]},
+    {"type": "benefits", "title": "Analytics Best Practices", "content": [
+      "Focus on trends, not daily fluctuations",
+      "Retention rate > view count for learning",
+      "Traffic sources reveal growth opportunities",
+      "Demographics guide content decisions",
+      "Click-through rate signals thumbnail/title",
+      "Compare similar content for insights",
+      "Export data for deeper analysis"
+    ]},
+    {"type": "checklist", "title": "Analytics Review Checklist", "content": [
+      "Checking analytics regularly?",
+      "Comparing to previous periods?",
+      "Studying top performers?",
+      "Reviewing retention graphs?",
+      "Understanding traffic sources?",
+      "Tracking subscriber trends?",
+      "Documenting insights?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How often should I check analytics?", "answer": "Weekly for strategic review. Daily checking creates anxiety without actionable insights. Data needs time to accumulate. Set specific review day/time. Resist urge to constantly refresh."},
+    {"question": "What's the most important metric?", "answer": "Depends on goals. Watch time for algorithm favor. CTR for thumbnail/title optimization. Retention for content quality. Revenue if monetized. Focus on one or two, not everything."},
+    {"question": "Why do numbers differ from public view count?", "answer": "Analytics updates differently than public counts. Some views filtered for spam/bots. Real-time tab shows immediate data. Overview shows verified data. Both are accurate for different purposes."},
+    {"question": "How to export YouTube analytics?", "answer": "Advanced mode in Analytics allows exports. Download as CSV or Google Sheets. Useful for deeper analysis or tracking over time. Compare to other data sources for full picture."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

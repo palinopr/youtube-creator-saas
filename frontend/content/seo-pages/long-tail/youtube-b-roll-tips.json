@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-b-roll-tips",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube B-Roll Tips 2025: Improve Videos with Supporting Footage",
+    "description": "Master B-roll for YouTube. Enhance videos with supporting footage and cutaways.",
+    "keywords": ["youtube b-roll", "b-roll tips", "b-roll footage youtube", "video cutaways", "supporting footage"]
+  },
+  "hero": {
+    "badge": "B-Roll Tips",
+    "headline": "YouTube B-Roll Tips",
+    "subheadline": "Enhance videos with cutaways. Keep viewers visually engaged.",
+    "primaryKeyword": "youtube b-roll"
+  },
+  "sections": [
+    {"type": "intro", "content": "B-roll is the supporting footage that plays while you're talking or over your main content. It breaks visual monotony, illustrates points, and hides cuts. Thoughtful B-roll elevates amateur-looking content to professional quality without expensive gear."},
+    {"type": "features", "title": "B-Roll Types", "content": [
+      {"icon": "video", "title": "Screen Recording", "description": "Tutorials and walkthroughs."},
+      {"icon": "image", "title": "Stock Footage", "description": "Professional supplemental shots."},
+      {"icon": "camera", "title": "Original Footage", "description": "Your own supporting shots."},
+      {"icon": "layers", "title": "Graphics/Text", "description": "Visual elements and overlays."}
+    ]},
+    {"type": "features", "title": "B-Roll Purposes", "content": [
+      {"icon": "scissors", "title": "Hide Cuts", "description": "Cover edit points."},
+      {"icon": "eye", "title": "Visual Interest", "description": "Break talking head monotony."},
+      {"icon": "check", "title": "Illustrate Points", "description": "Show what you describe."},
+      {"icon": "clock", "title": "Pacing Control", "description": "Vary the rhythm."}
+    ]},
+    {"type": "steps", "title": "Using B-Roll Effectively", "content": [
+      "Plan B-roll while scripting",
+      "Film extra footage during shoots",
+      "Build a stock footage library",
+      "Match B-roll to narration timing",
+      "Don't overuse—let content breathe",
+      "Use movement for visual interest",
+      "Color grade B-roll to match main footage",
+      "Add subtle sound effects when appropriate"
+    ]},
+    {"type": "benefits", "title": "B-Roll Best Practices", "content": [
+      "3-5 seconds per B-roll clip typical",
+      "Match motion direction with narrative",
+      "Stock footage is worth the investment",
+      "Screen recordings need zoom/highlights",
+      "Build reusable B-roll library",
+      "Film your own when possible",
+      "Memes/graphics count as B-roll"
+    ]},
+    {"type": "checklist", "title": "B-Roll Checklist", "content": [
+      "B-roll planned during scripting?",
+      "Extra footage filmed during shoot?",
+      "Stock library organized?",
+      "B-roll matches narration?",
+      "Not overused—balanced with main?",
+      "Color graded consistently?",
+      "Audio handled appropriately?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Where to get stock B-roll?", "answer": "Paid: Artgrid, Storyblocks, Envato. Free: Pexels, Pixabay. YouTube offers some in Create. Build own library over time. Quality matters—cheap stock looks cheap."},
+    {"question": "How much B-roll per video?", "answer": "Varies by style—some channels use heavily, others minimally. 20-40% B-roll coverage common for talking head content. Match your niche expectations. Don't force it where not needed."},
+    {"question": "Can I use other YouTube videos as B-roll?", "answer": "Not without permission—copyright issue. Using small clips may be fair use for commentary/criticism but risky. Stock footage or original always safer. Some creators license to others."},
+    {"question": "Tips for filming own B-roll?", "answer": "Film extra during any shoot. Keep camera rolling between takes. Capture hands doing tasks. Get establishing shots. Movement adds interest. Build library—future videos benefit."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

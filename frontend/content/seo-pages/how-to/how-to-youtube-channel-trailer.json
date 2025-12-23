@@ -1,0 +1,68 @@
+{
+  "slug": "how-to-youtube-channel-trailer",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Channel Trailer 2025: First Impression Guide",
+    "description": "Create an effective YouTube channel trailer. Convert visitors to subscribers.",
+    "keywords": ["youtube channel trailer", "channel trailer youtube", "youtube intro video", "channel trailer tips", "youtube channel preview"]
+  },
+  "hero": {
+    "badge": "Channel Trailer",
+    "headline": "How to Create YouTube Channel Trailer",
+    "subheadline": "Make a great first impression. Convert visitors into subscribers.",
+    "primaryKeyword": "youtube channel trailer"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your channel trailer plays automatically for non-subscribers visiting your channel page. It's your elevator pitch—30-90 seconds to convince new visitors to subscribe. A great trailer clearly communicates your value and personality. Here's how to create one that converts."},
+    {"type": "steps", "title": "Setting Up Channel Trailer", "content": [
+      "Go to YouTube Studio",
+      "Click 'Customization' in left menu",
+      "Select 'Layout' tab",
+      "Find 'Video spotlight' section",
+      "Click 'Add' under 'Channel trailer'",
+      "Select your trailer video",
+      "Save changes"
+    ]},
+    {"type": "features", "title": "Trailer Elements", "content": [
+      {"icon": "zap", "title": "Strong Hook", "description": "First 5 seconds must grab attention. Why should they care?"},
+      {"icon": "user", "title": "Who You Are", "description": "Brief introduction. Build connection quickly."},
+      {"icon": "video", "title": "What You Create", "description": "Show your best content. Visual proof of value."},
+      {"icon": "bell", "title": "Subscribe CTA", "description": "Clear call-to-action. Tell them what to do next."}
+    ]},
+    {"type": "features", "title": "Trailer Best Practices", "content": [
+      {"icon": "clock", "title": "Keep It Short", "description": "30-90 seconds ideal. Respect viewer time."},
+      {"icon": "film", "title": "Show Don't Tell", "description": "Include clips of your best content."},
+      {"icon": "calendar", "title": "Upload Schedule", "description": "Set expectations. 'New videos every Tuesday.'"},
+      {"icon": "refresh-cw", "title": "Update Regularly", "description": "Refresh yearly or when channel direction changes."}
+    ]},
+    {"type": "benefits", "title": "What to Include", "content": [
+      "Hook: Why they should watch",
+      "Who: Your name/channel identity",
+      "What: Content type and topics",
+      "Why: Unique value proposition",
+      "When: Upload schedule",
+      "Proof: Best content clips",
+      "CTA: Subscribe prompt"
+    ]},
+    {"type": "checklist", "title": "Trailer Checklist", "content": [
+      "Hook in first 5 seconds?",
+      "Under 90 seconds?",
+      "Value proposition clear?",
+      "Best content shown?",
+      "Personality conveyed?",
+      "Subscribe CTA included?",
+      "Set as channel trailer?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should channel trailer be?", "answer": "30-90 seconds ideal. Under 60 is best for attention spans. Long enough to show value, short enough to respect time. Test different lengths."},
+    {"question": "Should I create a trailer immediately?", "answer": "Wait until you have some content. Trailer should show your best work. First 10-20 videos, then create trailer from highlights."},
+    {"question": "Can I use existing video as trailer?", "answer": "Yes, many creators do. Your best-performing video or a strong representative video works. Dedicated trailer with CTA often converts better though."},
+    {"question": "How often to update trailer?", "answer": "Annually minimum. Update when channel focus shifts, after major growth, or when your style evolves significantly. Outdated trailers hurt conversion."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

@@ -5,24 +5,68 @@ Endpoints:
 - GET /api/user/profile - Get current user profile
 - PUT /api/user/profile - Update user profile
 - GET /api/user/channels - Get connected YouTube channels
+- POST /api/user/channels/{channel_id}/select - Select primary channel
 - GET /api/user/settings - Get account settings
 - PUT /api/user/settings - Update account settings
 - POST /api/user/export-data - Request data export
 - POST /api/user/request-deletion - Request account deletion
 """
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, BackgroundTasks
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any
 from datetime import datetime, timedelta
 import logging
 
 from ..auth.dependencies import get_current_user, get_user_subscription, get_db
+from ..auth.youtube_auth import get_authenticated_service
 from ..db.models import User, YouTubeChannel, Subscription, get_db_session
+from ..tools.channel_analyzer import ChannelAnalyzer
 from sqlalchemy.orm import Session
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/user", tags=["user"])
+
+
+# =============================================================================
+# Background Tasks
+# =============================================================================
+
+def profile_channel_background(channel_id: str, user_id: str):
+    """
+    Background task to profile a channel after selection.
+    Detects niche, language, and content patterns.
+    """
+    try:
+        logger.info(f"Starting channel profiling for channel {channel_id}")
+
+        # Get YouTube service for this user
+        youtube_service = get_authenticated_service("youtube", "v3", token_key=user_id)
+
+        # Create analyzer and profile the channel
+        analyzer = ChannelAnalyzer(youtube_service)
+        profile = analyzer.profile_channel(max_videos=20)
+
+        # Save profile to database
+        with get_db_session() as db:
+            channel = db.query(YouTubeChannel).filter(
+                YouTubeChannel.id == channel_id
+            ).first()
+
+            if channel:
+                channel.channel_profile = profile
+                channel.updated_at = datetime.utcnow()
+                db.commit()
+
+                logger.info(
+                    f"Channel {channel_id} profiled: niche={profile.get('niche')}, "
+                    f"language={profile.get('language')}, videos_analyzed={profile.get('videos_analyzed')}"
+                )
+            else:
+                logger.error(f"Channel {channel_id} not found during profiling")
+
+    except Exception as e:
+        logger.error(f"Failed to profile channel {channel_id}: {e}", exc_info=True)
 
 
 # =============================================================================
@@ -200,6 +244,57 @@ async def get_channels(
         return {
             "channels": [ch.to_dict() for ch in channels],
             "total": len(channels),
+        }
+
+
+@router.post("/channels/{channel_id}/select")
+async def select_primary_channel(
+    channel_id: str,
+    background_tasks: BackgroundTasks,
+    user: User = Depends(get_current_user),
+):
+    """
+    Set a channel as the primary channel for analysis.
+    Deselects all other channels as primary.
+    Triggers channel profiling in the background.
+    """
+    with get_db_session() as db:
+        # Find the requested channel
+        channel = db.query(YouTubeChannel).filter(
+            YouTubeChannel.id == channel_id,
+            YouTubeChannel.user_id == user.id,
+        ).first()
+
+        if not channel:
+            raise HTTPException(
+                status_code=404,
+                detail="Channel not found or you don't have access to it."
+            )
+
+        # Deselect all other channels as primary
+        db.query(YouTubeChannel).filter(
+            YouTubeChannel.user_id == user.id,
+            YouTubeChannel.id != channel_id,
+        ).update({"is_primary": False})
+
+        # Set selected channel as primary and active
+        channel.is_primary = True
+        channel.is_active = True
+        channel.updated_at = datetime.utcnow()
+
+        db.commit()
+        db.refresh(channel)
+
+        logger.info(f"User {user.id} selected channel {channel_id} as primary")
+
+        # Trigger channel profiling in the background
+        # This detects niche, language, and content patterns for personalized AI
+        background_tasks.add_task(profile_channel_background, channel_id, user.id)
+
+        return {
+            "message": "Channel selected as primary. Analyzing content patterns...",
+            "channel": channel.to_dict(),
+            "profiling_started": True,
         }
 
 

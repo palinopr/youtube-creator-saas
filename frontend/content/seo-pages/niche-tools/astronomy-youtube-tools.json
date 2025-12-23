@@ -1,0 +1,66 @@
+{
+  "slug": "astronomy-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Astronomy YouTube Tools 2025: Astrophotography Channel Equipment",
+    "description": "Top tools for astronomy YouTube channels. Capture the night sky and space content.",
+    "keywords": ["astronomy youtube tools", "astrophotography channel", "space youtube equipment", "night sky filming", "telescope camera"]
+  },
+  "hero": {
+    "badge": "Astronomy Tools",
+    "headline": "Best Astronomy YouTube Tools 2025",
+    "subheadline": "Capture the cosmos. Gear for space enthusiasts.",
+    "primaryKeyword": "astronomy youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Astronomy content captures wonder—planets, galaxies, meteor showers, and celestial events. Filming the night sky requires specialized gear, but modern cameras make astrophotography more accessible. Educational content about space also thrives. Here's what astronomy YouTubers use."},
+    {"type": "features", "title": "Camera Requirements", "content": [
+      {"icon": "camera", "title": "Full Frame Sensor", "description": "Better low-light performance."},
+      {"icon": "moon", "title": "High ISO Capability", "description": "Clean images in dark."},
+      {"icon": "video", "title": "Sony A7S III", "description": "Exceptional night video."},
+      {"icon": "star", "title": "Astro-Modified", "description": "IR filter removed for nebulae."}
+    ]},
+    {"type": "features", "title": "Telescope Setup", "content": [
+      {"icon": "eye", "title": "EQ Mount", "description": "Track stars for long exposures."},
+      {"icon": "target", "title": "Go-To Mount", "description": "Find objects automatically."},
+      {"icon": "camera", "title": "T-Ring Adapter", "description": "Connect camera to telescope."},
+      {"icon": "video", "title": "Planetary Camera", "description": "High frame rate for planets."}
+    ]},
+    {"type": "features", "title": "Wide-Field Gear", "content": [
+      {"icon": "maximize", "title": "Fast Wide Lens", "description": "f/1.4-2.8 for Milky Way."},
+      {"icon": "grid", "title": "Star Tracker", "description": "Sky-Watcher, iOptron."},
+      {"icon": "layers", "title": "Intervalometer", "description": "Time-lapse of night sky."},
+      {"icon": "thermometer", "title": "Dew Heaters", "description": "Prevent lens fogging."}
+    ]},
+    {"type": "benefits", "title": "Astronomy Content Tips", "content": [
+      "Celestial events drive massive traffic",
+      "Educational content has wide appeal",
+      "Processing tutorials help community",
+      "Gear reviews for all budgets",
+      "Time-lapse night sky is mesmerizing",
+      "Live streams of events build community",
+      "Collaborate with space news"
+    ]},
+    {"type": "checklist", "title": "Astrophotography Checklist", "content": [
+      "Weather and cloud cover checked?",
+      "Moon phase considered?",
+      "Batteries charged and extras packed?",
+      "Tracking mount aligned?",
+      "Focus set before dark?",
+      "Dew prevention ready?",
+      "Red light for preserving night vision?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best camera for astrophotography?", "answer": "Sony A7S III excellent for video. Canon or Nikon full-frame for stills. Dedicated astronomy cameras for deep sky. Even entry DSLRs can capture impressive images. Full frame helps but isn't required."},
+    {"question": "Do I need a telescope?", "answer": "Not for wide-field Milky Way shots—just camera and lens. Telescope for planets and deep sky objects. Star tracker for longer exposures without telescope. Start with camera, add telescope as you progress."},
+    {"question": "How to find dark sky locations?", "answer": "Light pollution maps (darksitefinder.com). National parks often have dark skies. Higher elevation typically darker. Check moon phase—avoid full moon. Travel time often required for quality skies."},
+    {"question": "Best content for astronomy channel?", "answer": "Celestial event coverage (eclipses, meteor showers) gets massive views. Educational explainers have lasting value. Processing tutorials help community. Gear reviews for beginners to experts."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "astronomy"
+}

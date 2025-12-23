@@ -1,0 +1,67 @@
+{
+  "slug": "elgato-green-screen-vs-backdrop",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Elgato Green Screen vs Traditional Backdrop 2025: Best for YouTube",
+    "description": "Compare Elgato collapsible green screen vs traditional backdrops. Setup, quality, convenience.",
+    "keywords": ["elgato green screen", "green screen vs backdrop", "youtube background", "collapsible green screen", "streaming background"]
+  },
+  "hero": {
+    "badge": "Background Setup",
+    "headline": "Elgato Green Screen vs Traditional Backdrop",
+    "subheadline": "Collapsible convenience vs budget-friendly fabric. Which background solution?",
+    "primaryKeyword": "elgato green screen vs backdrop"
+  },
+  "sections": [
+    {"type": "intro", "content": "Green screens unlock virtual backgrounds—but setup varies dramatically. Elgato's collapsible screen offers instant deployment. Traditional fabric backdrops cost less but require more setup. Here's when each makes sense."},
+    {"type": "comparison", "title": "Background Comparison", "content": [
+      {"feature": "Price", "toolA": "Elgato: $150-180", "toolB": "Fabric: $20-50", "tubeGrow": "N/A"},
+      {"feature": "Setup Time", "toolA": "Elgato: 3 seconds", "toolB": "Fabric: 5-15 minutes", "tubeGrow": "N/A"},
+      {"feature": "Wrinkles", "toolA": "Elgato: Wrinkle-free", "toolB": "Fabric: Requires steaming", "tubeGrow": "N/A"},
+      {"feature": "Storage", "toolA": "Elgato: Self-contained", "toolB": "Fabric: Needs stand/storage", "tubeGrow": "N/A"},
+      {"feature": "Size Options", "toolA": "Elgato: Fixed sizes", "toolB": "Fabric: Any size", "tubeGrow": "N/A"},
+      {"feature": "Portability", "toolA": "Elgato: Heavy but portable", "toolB": "Fabric: Light, needs stand", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Elgato Advantages", "content": [
+      {"icon": "zap", "title": "Instant Setup", "description": "Pull up, locks in place. Collapse to hide. 3-second transition."},
+      {"icon": "check", "title": "Always Wrinkle-Free", "description": "Pneumatic mechanism keeps tension. No steaming ever."},
+      {"icon": "box", "title": "Self-Contained", "description": "No stand needed. Case is the stand. Clean solution."}
+    ]},
+    {"type": "features", "title": "Traditional Backdrop Advantages", "content": [
+      {"icon": "dollar-sign", "title": "Budget Friendly", "description": "Fabric + stand under $50. Much lower investment."},
+      {"icon": "maximize", "title": "Size Flexibility", "description": "Any size available. Full room coverage possible."},
+      {"icon": "palette", "title": "Color Options", "description": "Any color fabric available. Not limited to green."}
+    ]},
+    {"type": "benefits", "title": "Choose Elgato If", "content": [
+      "Value convenience highly",
+      "Limited space (hide when not using)",
+      "Hate setup/takedown",
+      "Stream frequently",
+      "Want professional look instantly",
+      "Budget allows investment",
+      "Wrinkle management annoying"
+    ]},
+    {"type": "benefits", "title": "Choose Traditional If", "content": [
+      "Budget is primary concern",
+      "Need larger coverage area",
+      "Permanent setup possible",
+      "Multiple color needs",
+      "DIY approach preferred",
+      "Have space for stand",
+      "Less frequent use"
+    ]}
+  ],
+  "faq": [
+    {"question": "Is Elgato worth the premium?", "answer": "If you stream/record frequently and value convenience, yes. The time saved and wrinkle-free surface justify cost for regular users."},
+    {"question": "Does cheap green screen work?", "answer": "Yes, with proper lighting and wrinkle management. Fabric works fine if you steam it and light it evenly."},
+    {"question": "What about painted walls?", "answer": "Best option if permanent setup possible. Chroma key paint gives perfect surface. But can't be hidden."},
+    {"question": "Lighting requirements different?", "answer": "Same for both—even lighting on background, separate lighting on subject. Screen type doesn't change lighting needs."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "elgato-green-screen",
+  "secondaryTool": "traditional-backdrop"
+}

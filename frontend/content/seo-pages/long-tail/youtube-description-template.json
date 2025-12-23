@@ -1,0 +1,71 @@
+{
+  "slug": "youtube-description-template",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Description Template 2025: Copy & Paste Format",
+    "description": "Get a YouTube description template. Optimized format for SEO, engagement, and conversions.",
+    "keywords": ["youtube description template", "video description template", "youtube description format", "youtube description example", "video description seo"]
+  },
+  "hero": {
+    "badge": "Descriptions",
+    "headline": "YouTube Description Template",
+    "subheadline": "Optimized description format. Copy, customize, and improve your video SEO.",
+    "primaryKeyword": "youtube description template"
+  },
+  "sections": [
+    {"type": "intro", "content": "Your YouTube description affects search rankings, viewer decisions, and conversions. A consistent template ensures you never miss key elements. Here's an optimized format you can adapt for any video type."},
+    {"type": "steps", "title": "Description Structure", "content": [
+      "Hook sentence (appears in search)",
+      "Brief video summary (2-3 sentences)",
+      "Timestamps/chapters (if applicable)",
+      "Links mentioned in video",
+      "Call-to-action (subscribe, etc.)",
+      "Social media links",
+      "Relevant keywords naturally included"
+    ]},
+    {"type": "features", "title": "Key Elements", "content": [
+      {"icon": "search", "title": "First 150 Characters", "description": "Visible in search results. Hook + main keyword. Most important part."},
+      {"icon": "link", "title": "Strategic Links", "description": "Product links, resources, your website. Drive traffic and conversions."},
+      {"icon": "hash", "title": "Keywords", "description": "Natural keyword inclusion. Don't stuff—write for humans first."}
+    ]},
+    {"type": "benefits", "title": "What to Include", "content": [
+      "Compelling first sentence",
+      "Brief content summary",
+      "Timestamps for longer videos",
+      "Links to resources mentioned",
+      "Subscribe call-to-action",
+      "Social media links",
+      "Related video links",
+      "Contact/business email"
+    ]},
+    {"type": "steps", "title": "SEO Tips for Descriptions", "content": [
+      "Include main keyword in first sentence",
+      "Use natural language (not keyword stuffing)",
+      "Write at least 200 words",
+      "Front-load important information",
+      "Include secondary keywords naturally",
+      "Link to relevant playlists",
+      "Update older descriptions for SEO"
+    ]},
+    {"type": "checklist", "title": "Description Checklist", "content": [
+      "Hook in first 150 characters?",
+      "Main keyword included early?",
+      "Video summary clear?",
+      "Timestamps added (if needed)?",
+      "Links are correct and working?",
+      "Call-to-action included?",
+      "Consistent with your template?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How long should descriptions be?", "answer": "200-300 words ideal for SEO. YouTube indexes full description. But front-load important info—most won't click 'show more'."},
+    {"question": "Do descriptions affect ranking?", "answer": "Yes. YouTube uses description text for search indexing. Keywords in description help discoverability. Natural usage, not stuffing."},
+    {"question": "Should I use hashtags?", "answer": "3 hashtags maximum in description. They appear above your title. Use relevant ones. More than 15 and YouTube ignores all of them."},
+    {"question": "Can I use the same description template?", "answer": "Template yes, identical description no. Customize first paragraph and summary for each video. Boilerplate for links and CTAs is fine."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

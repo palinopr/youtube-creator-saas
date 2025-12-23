@@ -1,0 +1,64 @@
+{
+  "slug": "cycling-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Cycling YouTube Tools 2025: Bike Channel Video Equipment",
+    "description": "Top tools for cycling YouTube channels. Action cameras and ride documentation.",
+    "keywords": ["cycling youtube tools", "bike youtube equipment", "cycling channel", "bike vlog gear", "cycling video"]
+  },
+  "hero": {
+    "badge": "Cycling Tools",
+    "headline": "Best Cycling YouTube Tools 2025",
+    "subheadline": "Document every ride. Tools for cycling content creators.",
+    "primaryKeyword": "cycling youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Cycling content spans road racing, mountain biking, commuting, and bike reviews. Each style has different equipment needs, but action cameras and stable mounting are universal. Here's what successful cycling YouTubers use to capture their rides."},
+    {"type": "features", "title": "Camera Systems", "content": [
+      {"icon": "video", "title": "GoPro Hero 12", "description": "Standard action camera. Excellent stabilization."},
+      {"icon": "camera", "title": "Insta360 X4", "description": "360° capture. Reframe any angle later."},
+      {"icon": "zap", "title": "DJI Osmo Action", "description": "Front-facing screen. Good alternative to GoPro."}
+    ]},
+    {"type": "features", "title": "Mounting Solutions", "content": [
+      {"icon": "user", "title": "Chest Mount", "description": "POV perspective. Shows cockpit and road ahead."},
+      {"icon": "airplay", "title": "Handlebar Mount", "description": "Stable front view. K-Edge, GoPro official."},
+      {"icon": "circle", "title": "Helmet Mount", "description": "Head-turn perspective. More movement."},
+      {"icon": "move", "title": "Rear-Facing", "description": "Capture group rides. Traffic documentation."}
+    ]},
+    {"type": "features", "title": "Data Overlay", "content": [
+      {"icon": "activity", "title": "GPS/Speed Data", "description": "Garmin overlay, Strava. Performance context."},
+      {"icon": "heart", "title": "Heart Rate Display", "description": "Training content. Effort visualization."},
+      {"icon": "map", "title": "Route Maps", "description": "Show ride route. Planning content."}
+    ]},
+    {"type": "benefits", "title": "Cycling Content Tips", "content": [
+      "Stabilization essential for watchable content",
+      "Multiple angles tell better story",
+      "Data overlay adds context",
+      "Voiceover often cleaner than live audio",
+      "Ride recaps with highlights work well",
+      "Gear reviews always popular",
+      "Safety/commuting tips valuable"
+    ]},
+    {"type": "checklist", "title": "Ride Filming Checklist", "content": [
+      "Camera batteries charged?",
+      "Mounts secure?",
+      "SD cards empty?",
+      "Lens clean?",
+      "GPS/data recording?",
+      "Backup camera option?",
+      "Audio plan determined?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Best mount for cycling?", "answer": "Chest mount for immersive POV. Handlebar for stable road view. Many creators use multiple mounts for variety. Experiment to find your style."},
+    {"question": "GoPro vs Insta360 for cycling?", "answer": "GoPro: traditional, proven, great stabilization. Insta360: 360° means never miss an angle, reframe later. Both excellent—personal preference."},
+    {"question": "How to handle wind noise?", "answer": "Add voiceover in post—live audio usually unusable. Or use windscreen foam covers. Some creators embrace ambient sound, others replace entirely."},
+    {"question": "Best content type for cycling channels?", "answer": "Gear reviews, ride vlogs, training content, safety tips, commuting guides. Mix of entertainment and education. Local route guides build loyal audience."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "cycling"
+}

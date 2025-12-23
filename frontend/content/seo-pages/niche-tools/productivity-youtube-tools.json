@@ -1,0 +1,72 @@
+{
+  "slug": "productivity-youtube-tools",
+  "category": "niche-tools",
+  "status": "published",
+  "metadata": {
+    "title": "Best Productivity YouTube Tools 2025: Content Creator Equipment",
+    "description": "Essential tools for productivity YouTube channels. Screen recording, presentations, and workflow.",
+    "keywords": ["productivity youtube tools", "productivity channel equipment", "productivity content creator", "study youtube setup", "self improvement youtube"]
+  },
+  "hero": {
+    "badge": "Productivity Content",
+    "headline": "Essential Tools for Productivity YouTube Creators",
+    "subheadline": "Share systems and methods effectively. Screen capture, presentations, and clean production.",
+    "primaryKeyword": "productivity youtube tools"
+  },
+  "sections": [
+    {"type": "intro", "content": "Productivity content helps people work smarter—but your production should exemplify efficiency too. Clean visuals, clear demonstrations, and professional presentation build trust. Here's the toolkit for productivity YouTubers."},
+    {"type": "features", "title": "Screen Recording", "content": [
+      {"icon": "monitor", "title": "Screen Capture Software", "description": "Show apps, tools, systems. OBS, ScreenFlow, Loom for demos."},
+      {"icon": "layout", "title": "Clean Desktop", "description": "Minimal, organized screen. Viewers judge by what they see."},
+      {"icon": "mouse-pointer", "title": "Mouse Highlighting", "description": "Make cursor visible. Show exactly where you're clicking."}
+    ]},
+    {"type": "features", "title": "Presentation Tools", "content": [
+      {"icon": "tv", "title": "Slide Software", "description": "Keynote, PowerPoint, Canva. Clean slides for concepts."},
+      {"icon": "edit", "title": "Notion/Digital Tools", "description": "Show actual productivity tools in action. Real demos."},
+      {"icon": "zap", "title": "Animation", "description": "Motion graphics for concepts. After Effects, Keynote Magic Move."}
+    ]},
+    {"type": "features", "title": "Recording Setup", "content": [
+      {"icon": "camera", "title": "Face Cam", "description": "Trust and authority through presence. Clean, well-lit."},
+      {"icon": "mic", "title": "Clear Audio", "description": "Explanations need clarity. Quality mic essential."},
+      {"icon": "home", "title": "Minimal Background", "description": "Clean, organized space reflects content theme."}
+    ]},
+    {"type": "steps", "title": "Productivity Content Tips", "content": [
+      "Show real workflows, not theoretical",
+      "Use actual examples from your life",
+      "Keep videos actionable",
+      "Demonstrate tools live",
+      "Create templates viewers can use",
+      "Build systems content can reference",
+      "Be efficient with viewer's time"
+    ]},
+    {"type": "benefits", "title": "Productivity Content Types", "content": [
+      "Tool tutorials and reviews",
+      "System breakdowns",
+      "Morning/evening routines",
+      "Study techniques",
+      "Time management methods",
+      "Digital organization",
+      "Habit building content"
+    ]},
+    {"type": "checklist", "title": "Productivity Creator Setup", "content": [
+      "Screen recording software",
+      "Clean desktop environment",
+      "Presentation template",
+      "Quality camera and mic",
+      "Minimal background",
+      "Tools you actually use",
+      "Templates to share"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I show my face?", "answer": "Recommended. Productivity is personal—viewers want to see who's teaching them. Face builds trust and authority."},
+    {"question": "Best tools to demonstrate?", "answer": "Tools you actually use. Authenticity matters. Notion, Obsidian, calendar apps, task managers—whatever works for you."},
+    {"question": "How detailed should tutorials be?", "answer": "Specific and actionable. Don't just explain concepts—show exact implementation. Viewers want to copy your system."},
+    {"question": "Do I need fancy graphics?", "answer": "Clean > fancy. Minimal design aligns with productivity aesthetic. Clarity over complexity."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "niche": "productivity"
+}

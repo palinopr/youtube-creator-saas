@@ -1,0 +1,67 @@
+{
+  "slug": "rode-podmic-vs-shure-mv7",
+  "category": "comparisons",
+  "status": "published",
+  "metadata": {
+    "title": "Rode PodMic vs Shure MV7 2025: Best Podcast Mic for YouTube",
+    "description": "Compare Rode PodMic and Shure MV7 for YouTube and podcasting. Quality, features, and value.",
+    "keywords": ["rode podmic vs shure mv7", "podcast microphone comparison", "best podcast mic", "mv7 vs podmic", "youtube podcast mic"]
+  },
+  "hero": {
+    "badge": "Podcast Mics",
+    "headline": "Rode PodMic vs Shure MV7",
+    "subheadline": "Two excellent podcast mics at different price points. Which delivers better value?",
+    "primaryKeyword": "rode podmic vs shure mv7"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Rode PodMic and Shure MV7 are among the most popular podcast microphones for YouTube creators. The PodMic is pure analog value. The MV7 adds USB flexibility and built-in processing. Here's how they compare."},
+    {"type": "comparison", "title": "Microphone Comparison", "content": [
+      {"feature": "Price", "toolA": "PodMic: ~$99", "toolB": "MV7: ~$249", "tubeGrow": "N/A"},
+      {"feature": "Connection", "toolA": "PodMic: XLR only", "toolB": "MV7: XLR + USB", "tubeGrow": "N/A"},
+      {"feature": "Sound Quality", "toolA": "PodMic: Excellent", "toolB": "MV7: Excellent", "tubeGrow": "N/A"},
+      {"feature": "Built-in Processing", "toolA": "PodMic: No", "toolB": "MV7: Yes (ShurePlus MOTIV)", "tubeGrow": "N/A"},
+      {"feature": "Touch Controls", "toolA": "PodMic: No", "toolB": "MV7: Yes", "tubeGrow": "N/A"},
+      {"feature": "Headphone Out", "toolA": "PodMic: No", "toolB": "MV7: Yes", "tubeGrow": "N/A"}
+    ]},
+    {"type": "features", "title": "Rode PodMic Advantages", "content": [
+      {"icon": "dollar-sign", "title": "Excellent Value", "description": "Broadcast quality at ~$99. Hard to beat price-to-performance."},
+      {"icon": "mic", "title": "Pure Analog Quality", "description": "XLR purity. Full control in your interface/mixer."},
+      {"icon": "anchor", "title": "Solid Build", "description": "Metal construction. Internal pop filter. Durable."}
+    ]},
+    {"type": "features", "title": "Shure MV7 Advantages", "content": [
+      {"icon": "usb", "title": "Hybrid Connectivity", "description": "XLR for interface, USB for direct computer. Flexibility."},
+      {"icon": "sliders", "title": "Built-in DSP", "description": "Auto-leveling, EQ via app. Processing without extra gear."},
+      {"icon": "headphones", "title": "Headphone Monitoring", "description": "Direct monitoring built-in. Hear yourself in real-time."}
+    ]},
+    {"type": "benefits", "title": "Choose PodMic If", "content": [
+      "Budget is priority",
+      "Already have XLR interface",
+      "Want pure analog signal",
+      "Processing done elsewhere",
+      "Maximum value matters",
+      "Simple single-purpose mic",
+      "Great sound, less features"
+    ]},
+    {"type": "benefits", "title": "Choose MV7 If", "content": [
+      "Want USB flexibility",
+      "Starting without interface",
+      "Built-in processing valuable",
+      "Need headphone monitoring",
+      "Travel/portability matters",
+      "TouchPanel features useful",
+      "Investment budget available"
+    ]}
+  ],
+  "faq": [
+    {"question": "Which sounds better?", "answer": "Very similar sound quality—both are excellent broadcast dynamics. MV7 slightly warmer, PodMic slightly brighter. Differences are subtle."},
+    {"question": "Do I need an interface for PodMic?", "answer": "Yes, PodMic is XLR-only. Need audio interface (Focusrite Scarlett, etc.) or mixer. Add ~$100 minimum."},
+    {"question": "Is MV7 worth double the price?", "answer": "If you need USB flexibility or don't have an interface, yes. If you have interface, PodMic is better value for sound alone."},
+    {"question": "Which is better for YouTube?", "answer": "Both excellent. PodMic + interface for best value/quality. MV7 for simplicity and flexibility."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2,
+  "primaryTool": "rode-podmic",
+  "secondaryTool": "shure-mv7"
+}

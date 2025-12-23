@@ -1,0 +1,69 @@
+{
+  "slug": "youtube-evergreen-content",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Evergreen Content Strategy 2025: Videos That Keep Working",
+    "description": "Create YouTube evergreen content that generates views for years. Long-term growth strategy.",
+    "keywords": ["youtube evergreen content", "evergreen videos youtube", "long term youtube strategy", "timeless youtube content", "youtube passive views"]
+  },
+  "hero": {
+    "badge": "Evergreen Content",
+    "headline": "YouTube Evergreen Content Strategy",
+    "subheadline": "Create once, earn views forever. Content that stands the test of time.",
+    "primaryKeyword": "youtube evergreen content"
+  },
+  "sections": [
+    {"type": "intro", "content": "Evergreen content generates views months and years after publishing. Unlike trending topics that spike and die, evergreen videos compound over time through search traffic. A library of evergreen content creates sustainable, predictable growth regardless of upload frequency."},
+    {"type": "features", "title": "Evergreen Content Types", "content": [
+      {"icon": "book-open", "title": "How-To Tutorials", "description": "Teaching timeless skills. Problems people always have."},
+      {"icon": "help-circle", "title": "FAQ/Explainer Videos", "description": "Answering common questions in your niche."},
+      {"icon": "list", "title": "Resource Lists", "description": "Best tools, recommendations that remain relevant."},
+      {"icon": "compass", "title": "Beginner Guides", "description": "Introductions to topics. New people always entering."}
+    ]},
+    {"type": "steps", "title": "Creating Evergreen Content", "content": [
+      "Research persistent search queries in your niche",
+      "Identify questions that won't become outdated",
+      "Create comprehensive, definitive content",
+      "Avoid date-specific references when possible",
+      "Use timeless examples and screenshots",
+      "Build internal linking structure",
+      "Update periodically to maintain accuracy",
+      "Optimize for search from the start"
+    ]},
+    {"type": "features", "title": "Evergreen SEO Strategy", "content": [
+      {"icon": "search", "title": "Keyword Research", "description": "Focus on consistent search volume, not spikes."},
+      {"icon": "trending-up", "title": "Competition Analysis", "description": "Find evergreen topics you can rank for."},
+      {"icon": "target", "title": "Search Intent Match", "description": "Answer the question completely."},
+      {"icon": "refresh-cw", "title": "Regular Updates", "description": "Keep content fresh, accurate, current."}
+    ]},
+    {"type": "benefits", "title": "Evergreen Benefits", "content": [
+      "Consistent traffic regardless of upload schedule",
+      "Compounds over time through search",
+      "Less pressure to constantly create",
+      "Builds topical authority",
+      "Creates predictable baseline views",
+      "Works while you sleep",
+      "Reduces burnout risk"
+    ]},
+    {"type": "checklist", "title": "Evergreen Checklist", "content": [
+      "Topic has lasting relevance?",
+      "Keyword has consistent search volume?",
+      "Content comprehensive and definitive?",
+      "Date-specific references avoided?",
+      "SEO fully optimized?",
+      "Update schedule planned?",
+      "Internal links to other content?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much of my content should be evergreen?", "answer": "Aim for 50-70% evergreen, 30-50% timely/trending. Evergreen builds foundation, trending captures moments. Balance based on your niche."},
+    {"question": "How to make tutorials evergreen?", "answer": "Focus on concepts over specific UI. When software changes, update video or description. Teach principles that don't change, show current implementation."},
+    {"question": "Should I update old evergreen videos?", "answer": "Yes—annual review minimum. Update description, add cards to newer content, re-edit if significantly outdated. Don't let great content become inaccurate."},
+    {"question": "Can gaming/entertainment be evergreen?", "answer": "Harder but possible. Game guides for popular titles, genre overviews, skill tutorials. Avoid news/updates. Focus on timeless entertainment value."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

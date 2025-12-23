@@ -1,0 +1,74 @@
+{
+  "slug": "how-to-youtube-clips-feature",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Use YouTube Clips Feature 2025: Create Shareable Moments",
+    "description": "Use YouTube Clips to share video highlights. Let viewers clip and share your content.",
+    "keywords": ["youtube clips feature", "youtube clips", "share youtube clip", "create youtube clip", "video clips youtube"]
+  },
+  "hero": {
+    "badge": "Clips Feature",
+    "headline": "How to Use YouTube Clips Feature",
+    "subheadline": "Let viewers share your best moments. Enable and use Clips.",
+    "primaryKeyword": "youtube clips feature"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube Clips lets anyone create 5-60 second shareable snippets from your videos—instant word-of-mouth marketing. Viewers clip memorable moments and share them, driving new viewers to your full content. Here's how to enable, use, and maximize this underutilized feature."},
+    {"type": "steps", "title": "Enabling Clips", "content": [
+      "Clips are enabled by default for most channels",
+      "To check/change: YouTube Studio > Settings",
+      "Click 'Channel' then 'Advanced settings'",
+      "Find 'Clips' section",
+      "Toggle 'Allow viewers to clip your content'",
+      "You can also enable/disable per video",
+      "Live streams eligible after they end"
+    ]},
+    {"type": "features", "title": "Creating a Clip", "content": [
+      {"icon": "scissors", "title": "Click Clip Icon", "description": "Below video, scissors icon."},
+      {"icon": "sliders", "title": "Set Start/End", "description": "5-60 seconds. Drag handles."},
+      {"icon": "type", "title": "Add Title", "description": "Describe the clip moment."},
+      {"icon": "share-2", "title": "Share", "description": "Copy link or share to social."}
+    ]},
+    {"type": "features", "title": "Clip Benefits", "content": [
+      {"icon": "share", "title": "Viral Potential", "description": "Shareable moments spread."},
+      {"icon": "link", "title": "Always Links Back", "description": "Clips drive traffic to full video."},
+      {"icon": "users", "title": "Viewer Creates", "description": "Community does promotion work."},
+      {"icon": "trending-up", "title": "Discovery", "description": "New viewers from shared clips."}
+    ]},
+    {"type": "features", "title": "Content That Gets Clipped", "content": [
+      {"icon": "zap", "title": "Surprising Moments", "description": "Unexpected, funny, shocking."},
+      {"icon": "message-circle", "title": "Quotable Lines", "description": "Memorable statements."},
+      {"icon": "award", "title": "Key Insights", "description": "Valuable tips in brief form."},
+      {"icon": "smile", "title": "Reactions", "description": "Genuine emotional responses."}
+    ]},
+    {"type": "benefits", "title": "Maximizing Clips", "content": [
+      "Create clippable moments intentionally",
+      "Monitor which moments get clipped",
+      "Encourage viewers to clip and share",
+      "Keep clips enabled unless reason not to",
+      "Clip your own content for social media",
+      "Short, punchy segments get clipped more",
+      "Clips work for marketing your content"
+    ]},
+    {"type": "checklist", "title": "Clips Checklist", "content": [
+      "Clips enabled on channel?",
+      "Videos have clippable moments?",
+      "Mentioned clips feature to audience?",
+      "Self-clipping for social media?",
+      "Monitoring popular clips?",
+      "Content structured for shareability?",
+      "Clips driving new traffic?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Do clips hurt my watch time?", "answer": "No—clips always link back to full video. They drive discovery. A clip is marketing, not a replacement. Viewers often watch clip then full video."},
+    {"question": "Can I disable clips on certain videos?", "answer": "Yes—per-video setting in video details. Some creators disable for sensitive content or when clips might be taken out of context. Generally keep enabled."},
+    {"question": "How long can clips be?", "answer": "5 to 60 seconds. Shorter clips more shareable. Longer clips for context. Sweet spot often 15-30 seconds for social sharing."},
+    {"question": "Do I get revenue from clips?", "answer": "Not directly from clip views. But clips drive traffic to full video where you do earn. Think of clips as marketing spend that costs nothing."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

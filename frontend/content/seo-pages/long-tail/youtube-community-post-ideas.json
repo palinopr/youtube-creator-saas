@@ -1,0 +1,76 @@
+{
+  "slug": "youtube-community-post-ideas",
+  "category": "long-tail",
+  "status": "published",
+  "metadata": {
+    "title": "YouTube Community Post Ideas 2025: Engagement Strategies",
+    "description": "Creative community post ideas for YouTube. Polls, images, and engagement boosters.",
+    "keywords": ["youtube community post ideas", "community tab youtube", "youtube community engagement", "community post strategy", "youtube post ideas"]
+  },
+  "hero": {
+    "badge": "Community Tab",
+    "headline": "YouTube Community Post Ideas",
+    "subheadline": "Engage between uploads. Creative community post strategies that work.",
+    "primaryKeyword": "youtube community post ideas"
+  },
+  "sections": [
+    {"type": "intro", "content": "The Community tab lets you stay connected with subscribers between video uploads. Polls, images, text posts—all appear in subscribers' feeds. Done right, community posts boost engagement and build stronger audience relationships."},
+    {"type": "features", "title": "Post Types", "content": [
+      {"icon": "bar-chart-2", "title": "Polls", "description": "Ask questions, get opinions. High engagement, easy to participate."},
+      {"icon": "image", "title": "Images", "description": "Behind-the-scenes, memes, announcements. Visual engagement."},
+      {"icon": "type", "title": "Text Updates", "description": "Share thoughts, updates, questions. Direct communication."}
+    ]},
+    {"type": "steps", "title": "Effective Post Ideas", "content": [
+      "Ask what video to make next (poll)",
+      "Share behind-the-scenes photos",
+      "Tease upcoming content",
+      "Ask opinion questions related to niche",
+      "Share relevant memes/humor",
+      "Celebrate milestones with subscribers",
+      "Respond to comments as posts",
+      "Share useful tips in text format"
+    ]},
+    {"type": "features", "title": "High-Engagement Posts", "content": [
+      {"icon": "help-circle", "title": "This or That Polls", "description": "Simple choices. Easy to engage with. Fun debates."},
+      {"icon": "camera", "title": "Process/BTS Content", "description": "Show your work process. Subscribers love behind-the-scenes."},
+      {"icon": "message-square", "title": "Question Posts", "description": "Ask your audience questions. Makes them feel valued."}
+    ]},
+    {"type": "benefits", "title": "Community Post Benefits", "content": [
+      "Stay visible between uploads",
+      "Boost channel engagement metrics",
+      "Understand audience preferences",
+      "Build stronger community",
+      "Promote upcoming videos",
+      "Drive traffic to older content",
+      "Test content ideas"
+    ]},
+    {"type": "benefits", "title": "Post Frequency", "content": [
+      "1-3 times per week is good",
+      "More isn't always better",
+      "Quality over quantity",
+      "Don't spam subscribers",
+      "Vary post types",
+      "Time posts for visibility",
+      "Engage with comments"
+    ]},
+    {"type": "checklist", "title": "Community Post Checklist", "content": [
+      "Provides value or entertainment?",
+      "Invites engagement?",
+      "Relevant to your content?",
+      "Not too frequent?",
+      "Visually appealing (if image)?",
+      "Clear and concise?",
+      "Will respond to comments?"
+    ]}
+  ],
+  "faq": [
+    {"question": "When do I get community tab access?", "answer": "Community tab unlocks at 500 subscribers. Previously was 1,000. Most features available immediately once unlocked."},
+    {"question": "How often should I post?", "answer": "1-3 times per week is a sweet spot. Daily can feel spammy. Less than weekly and you lose the engagement benefit."},
+    {"question": "Do community posts help algorithm?", "answer": "Not directly for video recommendations, but engagement signals and keeping subscribers active on your channel helps overall."},
+    {"question": "Best time to post?", "answer": "When your audience is active—check YouTube Analytics for subscriber activity. Often evenings and weekends perform well."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

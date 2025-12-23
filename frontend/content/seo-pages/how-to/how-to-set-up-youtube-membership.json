@@ -1,0 +1,69 @@
+{
+  "slug": "how-to-set-up-youtube-membership",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Set Up YouTube Channel Memberships 2025: Complete Guide",
+    "description": "Create channel memberships on YouTube. Requirements, pricing tiers, perks, and strategies for recurring revenue.",
+    "keywords": ["youtube membership", "channel memberships", "youtube membership perks", "youtube recurring revenue", "youtube member"]
+  },
+  "hero": {
+    "badge": "Memberships",
+    "headline": "How to Set Up YouTube Channel Memberships",
+    "subheadline": "Create recurring revenue with loyal fans. Everything you need to know about YouTube memberships.",
+    "primaryKeyword": "youtube membership"
+  },
+  "sections": [
+    {"type": "intro", "content": "Channel memberships let your biggest fans support you monthly in exchange for perks like custom emoji, badges, and exclusive content. It's predictable recurring revenue that doesn't depend on views or ad rates. Here's how to set up and optimize your membership program."},
+    {"type": "features", "title": "Membership Perks You Can Offer", "content": [
+      {"icon": "smile", "title": "Custom Emoji", "description": "Members-only emoji for live chat and comments. Visible badge of membership."},
+      {"icon": "award", "title": "Loyalty Badges", "description": "Badges that show membership duration. Recognition builds community."},
+      {"icon": "lock", "title": "Members-Only Content", "description": "Exclusive videos, posts, and live streams. Premium content for paying fans."}
+    ]},
+    {"type": "steps", "title": "Membership Requirements", "content": [
+      "Be in the YouTube Partner Program",
+      "Have 500+ subscribers (was 30,000, lowered in 2023)",
+      "Be 18+ years old",
+      "Live in eligible country",
+      "No active Community Guidelines strikes",
+      "Channel not set as made for kids"
+    ]},
+    {"type": "benefits", "title": "Membership Best Practices", "content": [
+      "Create 2-5 meaningful tiers",
+      "Price appropriately for your audience",
+      "Deliver consistent exclusive value",
+      "Acknowledge members in videos",
+      "Create members-only community posts",
+      "Host members-only live streams",
+      "Thank new members personally"
+    ]},
+    {"type": "steps", "title": "How to Set Up Memberships", "content": [
+      "Go to YouTube Studio > Earn > Memberships",
+      "Click 'Get Started'",
+      "Set up your pricing tiers",
+      "Create custom emoji (up to 30)",
+      "Design loyalty badges",
+      "Add tier descriptions and perks",
+      "Enable and promote"
+    ]},
+    {"type": "checklist", "title": "Membership Launch Checklist", "content": [
+      "Perks designed for each tier",
+      "Custom emoji created",
+      "Loyalty badges designed",
+      "Tier pricing set",
+      "Promo video planned",
+      "Regular members content scheduled",
+      "Thank you message ready"
+    ]}
+  ],
+  "faq": [
+    {"question": "How much does YouTube take from memberships?", "answer": "YouTube takes 30% of membership revenue. You keep 70%. So a $4.99 membership nets you about $3.49."},
+    {"question": "What should I price tiers at?", "answer": "Common tiers: $0.99 (entry), $4.99 (standard), $9.99+ (premium). Match perks to price. Don't overpromise."},
+    {"question": "How do I get members to join?", "answer": "Remind viewers in videos, create compelling perks, show member benefits, celebrate members publicly. Consistency matters more than promotion."},
+    {"question": "What if I can't deliver perks?", "answer": "Start simple. Custom emoji and badges require no extra work. Add members-only content as you can sustain it. Don't burn out."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

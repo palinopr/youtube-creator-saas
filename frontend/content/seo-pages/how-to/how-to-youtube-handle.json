@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-handle",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Get YouTube Handle 2025: @Username Setup Guide",
+    "description": "Set up your YouTube handle (@username). Choose and claim your channel identity.",
+    "keywords": ["youtube handle", "youtube @username", "youtube handle setup", "youtube @ name", "claim youtube handle"]
+  },
+  "hero": {
+    "badge": "Handle",
+    "headline": "How to Get Your YouTube Handle",
+    "subheadline": "Your @username identity. Make it memorable and claim it now.",
+    "primaryKeyword": "youtube handle"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube handles (@username) are your unique identifier across the platform—appearing in comments, mentions, and your channel URL. Unlike display names, handles must be unique. Claiming the right handle is important for your brand identity and discoverability."},
+    {"type": "features", "title": "Handle Basics", "content": [
+      {"icon": "at-sign", "title": "Format", "description": "@YourName. Appears in URL: youtube.com/@YourName"},
+      {"icon": "lock", "title": "Unique & Permanent", "description": "Only one channel can have each handle. Changes limited."},
+      {"icon": "link", "title": "Cross-Platform", "description": "Same @ identity for comments, mentions, Shorts, channel URL."}
+    ]},
+    {"type": "steps", "title": "Setting Up Your Handle", "content": [
+      "Go to YouTube Studio",
+      "Click 'Customization' in left menu",
+      "Select 'Basic info' tab",
+      "Find 'Handle' section",
+      "Click 'Choose handle'",
+      "Enter your preferred handle",
+      "Check availability (green = available)",
+      "Confirm your choice",
+      "Handle is now active"
+    ]},
+    {"type": "features", "title": "Handle Requirements", "content": [
+      {"icon": "type", "title": "Character Rules", "description": "3-30 characters. Letters, numbers, underscores, periods only."},
+      {"icon": "x", "title": "No Spaces", "description": "Use underscores or periods for separation if needed."},
+      {"icon": "shield", "title": "Not Impersonating", "description": "Can't use handles that impersonate other creators/brands."}
+    ]},
+    {"type": "benefits", "title": "Handle Best Practices", "content": [
+      "Match your brand name exactly if possible",
+      "Shorter is better—easier to remember",
+      "Avoid numbers unless part of brand",
+      "Check across all platforms for consistency",
+      "Claim early—good handles get taken",
+      "Consider how it looks in mentions",
+      "Simple spelling reduces errors"
+    ]},
+    {"type": "checklist", "title": "Before Claiming Checklist", "content": [
+      "Handle matches your brand?",
+      "Spelled correctly (double-check)?",
+      "Available on other platforms?",
+      "Easy to say out loud?",
+      "Not confusingly similar to big channels?",
+      "Ready to commit to this handle?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Can I change my handle later?", "answer": "Yes, but limited—typically twice per 14 days. Old handle becomes available for others. Don't rely on changing frequently."},
+    {"question": "What if my name is taken?", "answer": "Try variations: add 'official', 'hq', 'tv', or your niche. Underscores and periods can help. Or shorten creatively."},
+    {"question": "Handle vs channel name?", "answer": "Different things. Channel name (display name) can be anything and isn't unique. Handle is your @ identifier and must be unique."},
+    {"question": "Do handles affect SEO?", "answer": "Minor impact. Main benefit is brand recognition and easier discovery. Your content matters more than handle for SEO."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

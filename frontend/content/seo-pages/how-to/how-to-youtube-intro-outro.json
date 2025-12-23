@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-youtube-intro-outro",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Create YouTube Intro & Outro 2025: Branding Guide",
+    "description": "Create effective YouTube intros and outros. Branding elements that work.",
+    "keywords": ["youtube intro", "youtube outro", "channel intro", "youtube branding", "intro outro template"]
+  },
+  "hero": {
+    "badge": "Intros & Outros",
+    "headline": "How to Create YouTube Intro & Outro",
+    "subheadline": "Brand your content effectively. When intros work and when they don't.",
+    "primaryKeyword": "youtube intro"
+  },
+  "sections": [
+    {"type": "intro", "content": "Intros and outros are branding elements—but the wrong approach hurts more than helps. Long intros kill retention. The trend is toward minimal branding that doesn't interrupt content flow. Here's how to create elements that work in 2025."},
+    {"type": "features", "title": "Modern Intro Approach", "content": [
+      {"icon": "zap", "title": "Super Short (2-5 sec)", "description": "If you use an intro, keep it brief. Logo flash maximum."},
+      {"icon": "x", "title": "Skip Entirely", "description": "Many successful creators use no intro. Jump straight to content."},
+      {"icon": "play", "title": "Cold Open", "description": "Hook first, then brief intro. Content before branding."}
+    ]},
+    {"type": "steps", "title": "Creating Effective Outro", "content": [
+      "Conclude content naturally first",
+      "Add end screen section (last 20 seconds)",
+      "Include verbal call-to-action",
+      "Design outro card for end screen placement",
+      "Leave space for clickable elements",
+      "Keep branding consistent",
+      "Don't extend video just for outro"
+    ]},
+    {"type": "features", "title": "Creation Tools", "content": [
+      {"icon": "film", "title": "Canva", "description": "Simple animated intros/outros. Templates available. Free tier works."},
+      {"icon": "play-circle", "title": "After Effects", "description": "Professional motion graphics. More control, steeper learning curve."},
+      {"icon": "image", "title": "Panzoid", "description": "Free 3D intro maker. Template-based. Quick results."}
+    ]},
+    {"type": "benefits", "title": "What Works in 2025", "content": [
+      "No intro is often best—hook first",
+      "If using intro, under 5 seconds",
+      "Outros work because viewers are done",
+      "End screen optimization matters",
+      "Consistency over complexity",
+      "Audio logo/jingle recognizable",
+      "Branding subtle, content forward"
+    ]},
+    {"type": "checklist", "title": "Intro/Outro Checklist", "content": [
+      "Intro under 5 seconds (if any)?",
+      "Hook before branding?",
+      "Outro has end screen space?",
+      "Verbal CTA included?",
+      "Branding consistent?",
+      "Audio balanced?",
+      "Tested with audience?"
+    ]}
+  ],
+  "faq": [
+    {"question": "Should I have an intro at all?", "answer": "Probably not. Data shows intros hurt retention. Hook + content first. Brief logo flash optional. Many top creators skip entirely."},
+    {"question": "How long should intro be?", "answer": "If you insist: 2-5 seconds maximum. Even 10 seconds is too long. Every second before content risks viewer leaving."},
+    {"question": "Do outros help?", "answer": "Yes—viewers who reach outro are engaged. End screen boosts next video clicks. Worth investing in good outro template."},
+    {"question": "Best tool for simple intro?", "answer": "Canva is easiest. Panzoid for 3D templates. Keep it simple—fancy isn't necessary. Memorable is better than impressive."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}

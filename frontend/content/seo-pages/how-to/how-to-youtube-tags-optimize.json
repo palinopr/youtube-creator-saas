@@ -1,0 +1,67 @@
+{
+  "slug": "how-to-youtube-tags-optimize",
+  "category": "how-to",
+  "status": "published",
+  "metadata": {
+    "title": "How to Optimize YouTube Tags 2025: Video Tag Strategy Guide",
+    "description": "Optimize YouTube video tags for better discovery. Tag strategy and best practices.",
+    "keywords": ["youtube tags", "youtube tag optimization", "video tags youtube", "youtube seo tags", "best youtube tags"]
+  },
+  "hero": {
+    "badge": "Tags",
+    "headline": "How to Optimize YouTube Tags",
+    "subheadline": "Tags matter less than before, but proper use still helps. Here's the current best practice.",
+    "primaryKeyword": "youtube tags"
+  },
+  "sections": [
+    {"type": "intro", "content": "YouTube tags have diminished in importance over the years—title, description, and content itself now matter more for discovery. But tags still help YouTube understand your content, especially for misspellings and related terms. Here's how to use them effectively."},
+    {"type": "features", "title": "Tag Importance Today", "content": [
+      {"icon": "trending-down", "title": "Less Impact Than Before", "description": "Algorithm now uses AI to understand content. Tags are minor signal."},
+      {"icon": "check", "title": "Still Worth Doing", "description": "Helps with misspellings, related terms. Quick win."},
+      {"icon": "search", "title": "Clarifies Topic", "description": "Helps YouTube categorize content correctly."}
+    ]},
+    {"type": "steps", "title": "Effective Tag Strategy", "content": [
+      "Start with your exact target keyword",
+      "Add variations of main keyword",
+      "Include related search terms",
+      "Add common misspellings",
+      "Include your channel name",
+      "Add broader category terms",
+      "Keep total tags under 500 characters",
+      "Prioritize most relevant tags first"
+    ]},
+    {"type": "features", "title": "Tag Best Practices", "content": [
+      {"icon": "target", "title": "Specific First", "description": "Most specific tags first, then broaden. Order matters slightly."},
+      {"icon": "type", "title": "Mix Phrase Lengths", "description": "Single words plus longer phrases. Different search behaviors."},
+      {"icon": "x", "title": "Avoid Irrelevant Tags", "description": "Don't spam trending tags. YouTube penalizes misleading tags."},
+      {"icon": "copy", "title": "Consistent Channel Tags", "description": "Some tags on every video help YouTube understand your channel."}
+    ]},
+    {"type": "benefits", "title": "Where to Focus Instead", "content": [
+      "Title is much more important",
+      "First 200 characters of description",
+      "Spoken words in video (auto-captioned)",
+      "Thumbnail for CTR",
+      "Content quality for retention",
+      "Tags are finishing touch, not priority"
+    ]},
+    {"type": "checklist", "title": "Tag Optimization Checklist", "content": [
+      "Main keyword included first?",
+      "Variations and synonyms added?",
+      "Misspellings covered?",
+      "Channel name tag included?",
+      "No irrelevant trending tags?",
+      "Under 500 characters total?",
+      "More time spent on title/description?"
+    ]}
+  ],
+  "faq": [
+    {"question": "How many tags should I use?", "answer": "5-15 relevant tags is typical. Quality over quantity. Don't max out with irrelevant terms. YouTube has 500 character limit."},
+    {"question": "Do tags really matter anymore?", "answer": "Minor impact. YouTube's AI understands content without tags now. Still worth doing properly—takes 2 minutes. But title and description matter much more."},
+    {"question": "Should I copy competitor tags?", "answer": "Can inspire ideas but don't copy exactly. Your content may differ. Tools like VidIQ show competitor tags. Use for research, not copying."},
+    {"question": "Can wrong tags hurt my video?", "answer": "Misleading tags can result in lower recommendations if viewers bounce quickly. Spam-y tags might trigger manual review. Keep tags accurate."}
+  ],
+  "relatedLinks": [],
+  "createdAt": "2025-01-15T00:00:00Z",
+  "updatedAt": "2025-01-15T00:00:00Z",
+  "rolloutBatch": 2
+}
