@@ -26,6 +26,7 @@ from ...db.models import (
 from .users import router as users_router
 from .subscriptions import router as subscriptions_router
 from .analytics import router as analytics_router
+from .waitlist import router as waitlist_router
 
 # Create main admin router
 router = APIRouter(prefix="/api/admin", tags=["admin"])
@@ -34,6 +35,7 @@ router = APIRouter(prefix="/api/admin", tags=["admin"])
 router.include_router(users_router)
 router.include_router(subscriptions_router)
 router.include_router(analytics_router)
+router.include_router(waitlist_router)
 
 
 # =============================================================================

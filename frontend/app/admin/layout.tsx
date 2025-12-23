@@ -16,6 +16,7 @@ import {
   LogOut,
   AlertTriangle,
   Cpu,
+  Mail,
 } from "lucide-react";
 import { ADMIN_ENDPOINTS } from "@/lib/config";
 
@@ -30,6 +31,7 @@ interface ImpersonationInfo {
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/users", label: "Users", icon: Users },
+  { href: "/admin/waitlist", label: "Waitlist", icon: Mail },
   { href: "/admin/subscriptions", label: "Subscriptions", icon: CreditCard },
   { href: "/admin/revenue", label: "Revenue", icon: DollarSign },
   { href: "/admin/api-costs", label: "API Costs", icon: Cpu },

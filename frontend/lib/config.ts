@@ -52,6 +52,9 @@ export const ADMIN_ENDPOINTS = {
   API_COSTS_BREAKDOWN: `${API_ENDPOINTS.ADMIN}/api-costs/breakdown`,
   API_COSTS_RECENT: `${API_ENDPOINTS.ADMIN}/api-costs/recent`,
   API_COSTS_BY_USER: `${API_ENDPOINTS.ADMIN}/api-costs/by-user`,
+  // Waitlist
+  WAITLIST: `${API_ENDPOINTS.ADMIN}/waitlist`,
+  WAITLIST_STATS: `${API_ENDPOINTS.ADMIN}/waitlist/stats`,
 } as const;
 
 // Billing endpoints
