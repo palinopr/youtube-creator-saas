@@ -1140,3 +1140,85 @@ TRANSCRIPT:
             for topic in topics.keys():
                 counter[topic] += 1
         return [topic for topic, _ in counter.most_common(5)]
+
+
+# ============================================================
+# Standalone helper function for getting transcripts
+# ============================================================
+
+def get_transcript_with_timestamps(video_id: str) -> Dict[str, Any]:
+    """
+    Standalone function to get transcript with word-level timestamps.
+    Uses youtube_transcript_api which doesn't require OAuth.
+
+    Returns:
+        Dict with keys:
+        - transcript: Full transcript text
+        - word_timestamps: List of {text, start, duration} segments
+        - error: Error message if failed
+    """
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        from youtube_transcript_api._errors import (
+            TranscriptsDisabled,
+            NoTranscriptFound,
+            VideoUnavailable
+        )
+    except ImportError:
+        return {"error": "youtube_transcript_api not installed"}
+
+    try:
+        # Try to get transcript (prefer Spanish, then English, then any)
+        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+
+        # Try to find preferred language
+        transcript = None
+        for lang in ['es', 'en']:
+            try:
+                transcript = transcript_list.find_transcript([lang])
+                break
+            except:
+                continue
+
+        if not transcript:
+            # Get any available transcript
+            try:
+                transcript = transcript_list.find_generated_transcript(['es', 'en'])
+            except:
+                # Get first available
+                for t in transcript_list:
+                    transcript = t
+                    break
+
+        if not transcript:
+            return {"error": "No transcript available for this video"}
+
+        # Fetch the actual transcript data
+        transcript_data = transcript.fetch()
+
+        # Build full text and word timestamps
+        full_text = " ".join([segment["text"] for segment in transcript_data])
+        word_timestamps = [
+            {
+                "text": segment["text"],
+                "start": segment["start"],
+                "duration": segment.get("duration", 0)
+            }
+            for segment in transcript_data
+        ]
+
+        return {
+            "transcript": full_text,
+            "word_timestamps": word_timestamps,
+            "language": transcript.language_code,
+            "is_generated": transcript.is_generated,
+        }
+
+    except TranscriptsDisabled:
+        return {"error": "Transcripts are disabled for this video"}
+    except NoTranscriptFound:
+        return {"error": "No transcript found for this video"}
+    except VideoUnavailable:
+        return {"error": "Video is unavailable"}
+    except Exception as e:
+        return {"error": f"Failed to fetch transcript: {str(e)}"}
