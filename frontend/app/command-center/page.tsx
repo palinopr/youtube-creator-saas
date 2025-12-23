@@ -242,8 +242,8 @@ function Dashboard() {
           message: "You haven't uploaded recently. Consistent uploads help maintain audience engagement.",
           timestamp: new Date(Date.now() - 3600000),
           priority: "low",
-          actionUrl: "/optimize",
-          actionLabel: "Get content ideas",
+          actionUrl: "/clips",
+          actionLabel: "Create new clips",
         });
       }
 
@@ -359,12 +359,8 @@ function Dashboard() {
             <nav className="space-y-1">
               <NavItem icon={<Home />} label="Command Center" href="/command-center" active={true} />
               <NavItem icon={<Video />} label="Videos" href="/videos" />
-              <NavItem icon={<Users />} label="Audience" href="/audience" color="blue" />
-              <NavItem icon={<BarChart3 />} label="Traffic" href="/traffic" color="emerald" />
-              <NavItem icon={<DollarSign />} label="Revenue" href="/revenue" color="green" />
               <NavItem icon={<Scissors />} label="Clips" href="/clips" color="pink" />
-              <NavItem icon={<Zap />} label="Content Ideas" href="/optimize" color="purple" />
-              <NavItem icon={<Sparkles />} label="AI Insights" href="/advanced-insights" />
+              <NavItem icon={<BarChart3 />} label="Channel Analysis" href="/analysis" color="emerald" />
             </nav>
           </div>
         </div>
@@ -583,22 +579,6 @@ function Dashboard() {
           {/* Quick Actions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <Link
-              href="/optimize"
-              className="p-5 bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl hover:border-purple-400/50 transition-all group"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-500/30 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-purple-400" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-white">Content Ideas</h3>
-                  <p className="text-gray-400 text-sm">AI-powered suggestions</p>
-                </div>
-                <ChevronRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
               href="/clips"
               className="p-5 bg-gradient-to-br from-pink-600/20 to-rose-600/20 border border-pink-500/30 rounded-xl hover:border-pink-400/50 transition-all group"
             >
@@ -615,16 +595,32 @@ function Dashboard() {
             </Link>
 
             <Link
-              href="/audience"
+              href="/analysis"
+              className="p-5 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-xl hover:border-emerald-400/50 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center">
+                  <BarChart3 className="w-6 h-6 text-emerald-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-white">Channel Analysis</h3>
+                  <p className="text-gray-400 text-sm">AI-powered insights</p>
+                </div>
+                <ChevronRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/videos"
               className="p-5 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl hover:border-blue-400/50 transition-all group"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-500/30 rounded-xl flex items-center justify-center">
-                  <Users className="w-6 h-6 text-blue-400" />
+                  <Video className="w-6 h-6 text-blue-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-white">Audience Intel</h3>
-                  <p className="text-gray-400 text-sm">Demographics & insights</p>
+                  <h3 className="font-bold text-white">Your Videos</h3>
+                  <p className="text-gray-400 text-sm">Browse all your content</p>
                 </div>
                 <ChevronRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
               </div>

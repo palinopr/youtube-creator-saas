@@ -181,6 +181,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
           color="pink"
           active={isActive("/clips")}
         />
+{/* Phase 2: Content Ideas
         <NavItem
           icon={<Zap />}
           label="Content Ideas"
@@ -188,6 +189,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
           color="purple"
           active={isActive("/optimize")}
         />
+*/}
 
         <div className="pt-4 pb-2">
           <p className="text-xs text-gray-600 uppercase tracking-wider px-3">
@@ -201,6 +203,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
           href="/analysis"
           active={isActive("/analysis")}
         />
+{/* Phase 2: Analytics features
         <NavItem
           icon={<Users />}
           label="Audience"
@@ -226,7 +229,9 @@ export default function Sidebar({ activePath }: SidebarProps) {
           href="/deep-analysis"
           active={isActive("/deep-analysis")}
         />
+*/}
 
+{/* Phase 2: Engagement section
         <div className="pt-4 pb-2">
           <p className="text-xs text-gray-600 uppercase tracking-wider px-3">
             Engagement
@@ -246,6 +251,7 @@ export default function Sidebar({ activePath }: SidebarProps) {
           href="/advanced-insights"
           active={isActive("/advanced-insights")}
         />
+*/}
 
         {/* Admin Section - Only visible to admins */}
         {isAdmin && (
