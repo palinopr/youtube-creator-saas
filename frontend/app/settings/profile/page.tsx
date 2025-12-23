@@ -250,7 +250,7 @@ export default function ProfilePage() {
                         {channel.thumbnail_url ? (
                           <img
                             src={channel.thumbnail_url}
-                            alt={channel.title}
+                            alt={channel.channel_name || "Channel"}
                             className="w-12 h-12 rounded-full"
                           />
                         ) : (
@@ -259,7 +259,7 @@ export default function ProfilePage() {
                           </div>
                         )}
                         <div className="flex-1">
-                          <h3 className="font-medium text-white">{channel.title}</h3>
+                          <h3 className="font-medium text-white">{channel.channel_name || "Unknown Channel"}</h3>
                           <p className="text-sm text-gray-400">
                             {channel.subscriber_count?.toLocaleString() || 0} subscribers
                             {" · "}

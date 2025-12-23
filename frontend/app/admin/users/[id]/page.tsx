@@ -583,7 +583,7 @@ export default function UserDetailPage({
                   <div key={channel.id} className="flex items-center gap-4 p-3 bg-white/5 rounded-lg">
                     <Youtube className="w-8 h-8 text-red-500" />
                     <div className="flex-1">
-                      <p className="font-medium">{channel.title}</p>
+                      <p className="font-medium">{channel.channel_name || "Unknown Channel"}</p>
                       <p className="text-sm text-gray-400">
                         {formatNumber(channel.subscriber_count)} subscribers · {formatNumber(channel.video_count)} videos
                       </p>
