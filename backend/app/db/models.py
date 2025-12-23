@@ -900,6 +900,56 @@ class MarketingAgentAsk(Base):
     lead = relationship("MarketingLead", lazy="joined")
 
 
+# =============================================================================
+# Waitlist (migrated from Supabase)
+# =============================================================================
+
+class WaitlistStatus(str, enum.Enum):
+    """Waitlist entry status."""
+    PENDING = "pending"
+    CONFIRMED = "confirmed"
+    INVITED = "invited"
+    CONVERTED = "converted"
+
+
+class Waitlist(Base):
+    """
+    Email waitlist for pre-launch signups.
+    Migrated from Supabase to consolidate all data in one database.
+    """
+    __tablename__ = "waitlist"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    email = Column(String(255), unique=True, nullable=False, index=True)
+
+    # Signup context
+    referral_source = Column(String(200), nullable=True)
+    ip_address = Column(String(45), nullable=True)
+    user_agent = Column(String(500), nullable=True)
+
+    # Waitlist position (auto-incremented)
+    position = Column(Integer, nullable=True)
+
+    # Confirmation
+    status = Column(Enum(WaitlistStatus), default=WaitlistStatus.PENDING, index=True)
+    confirmation_token = Column(String(36), default=lambda: str(uuid.uuid4()), unique=True, index=True)
+    confirmed_at = Column(DateTime, nullable=True)
+
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    def to_dict(self) -> dict:
+        """Convert to dictionary (safe for API responses)."""
+        return {
+            "id": self.id,
+            "email": self.email,
+            "position": self.position,
+            "status": self.status.value if self.status else None,
+            "confirmed_at": self.confirmed_at.isoformat() if self.confirmed_at else None,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+        }
+
+
 def init_db():
     """Initialize database tables."""
     # Ensure V1 model modules are imported so they register with SQLAlchemy metadata
