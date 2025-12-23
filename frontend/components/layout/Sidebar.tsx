@@ -14,7 +14,6 @@ import {
   Sparkles,
   LogOut,
   Shield,
-  Search,
   Settings,
   User,
   ChevronUp,
@@ -263,11 +262,11 @@ export default function Sidebar({ activePath }: SidebarProps) {
             </div>
 
             <NavItem
-              icon={<Search />}
-              label="SEO Rankings"
-              href="/admin/seo"
-              color="emerald"
-              active={isActive("/admin/seo")}
+              icon={<Shield />}
+              label="Admin Panel"
+              href="/admin"
+              color="purple"
+              active={isActive("/admin")}
             />
           </>
         )}

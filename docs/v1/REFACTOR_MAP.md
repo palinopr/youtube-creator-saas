@@ -46,8 +46,6 @@ V1 actions only:
   - `youtube-saas/backend/app/tools/causal_analytics.py`
   - `youtube-saas/backend/app/tools/clips_generator.py`
   - `youtube-saas/backend/app/tools/description_generator.py`
-- Services:
-  - `youtube-saas/backend/app/services/serpbear.py`
 
 ## Frontend
 
@@ -85,4 +83,4 @@ V1 actions only:
   - `youtube-saas/frontend/components/AIChatPopup.tsx` (delete)
 
 ## Non-app directories (recommendation)
-- `viral-learning/` and `serpbear/` are out of scope; archive or remove once the review product is the only focus.
+- `viral-learning/` is out of scope; archive or remove once the review product is the only focus.

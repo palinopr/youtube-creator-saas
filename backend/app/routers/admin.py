@@ -5,7 +5,6 @@ This file exists for backward compatibility. The admin routes have been
 split into separate modules under app/routers/admin/:
 - __init__.py: Main router combining all sub-routers + status, dashboard, activity-log
 - users.py: User management, impersonation
-- seo.py: SEO tracking (SerpBear integration)
 - subscriptions.py: Subscription management
 - analytics.py: Revenue, platform analytics, API cost tracking
 - base.py: Shared Pydantic models and helper functions

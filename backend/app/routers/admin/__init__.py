@@ -2,11 +2,10 @@
 Admin routes for internal business tools.
 
 These endpoints are only accessible to users with is_admin=True.
-Used for SEO tracking, business metrics, user management, and other internal tools.
+Used for business metrics, user management, and other internal tools.
 
 This module combines all admin sub-routers:
 - users: User management, impersonation
-- seo: SEO tracking (SerpBear integration)
 - subscriptions: Subscription management
 - analytics: Revenue, platform analytics, API cost tracking
 """
@@ -22,11 +21,9 @@ from ...db.models import (
     User, Subscription, AdminActivityLog, AdminActionType,
     PlanTier, SubscriptionStatus,
 )
-from ...services.serpbear import is_serpbear_running
 
 # Import sub-routers
 from .users import router as users_router
-from .seo import router as seo_router
 from .subscriptions import router as subscriptions_router
 from .analytics import router as analytics_router
 
@@ -35,7 +32,6 @@ router = APIRouter(prefix="/api/admin", tags=["admin"])
 
 # Include all sub-routers
 router.include_router(users_router)
-router.include_router(seo_router)
 router.include_router(subscriptions_router)
 router.include_router(analytics_router)
 
@@ -46,18 +42,10 @@ router.include_router(analytics_router)
 
 @router.get("/status")
 async def admin_status(user: User = Depends(require_admin)):
-    """Check admin panel status and services."""
-    serpbear_ok = await is_serpbear_running()
-
+    """Check admin panel status."""
     return {
         "admin": True,
         "user": user.email,
-        "services": {
-            "serpbear": {
-                "running": serpbear_ok,
-                "url": "http://localhost:3005" if serpbear_ok else None
-            }
-        }
     }
 
 

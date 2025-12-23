@@ -205,10 +205,10 @@ Each file defines a FastAPI router mounted in `main.py`.
 - `backend/app/routers/user.py`  
   User profile/settings, connected channels, GDPR export/deletion requests.
 
-- `backend/app/routers/admin.py`  
+- `backend/app/routers/admin.py`
   Internal admin panel endpoints:
   system status, user management, subscription overrides, revenue/API-cost analytics,
-  audit log, optional SerpBear SEO controls, impersonation session creation/end.
+  audit log, impersonation session creation/end.
 
 ## Agents (`backend/app/agents`)
 
@@ -245,11 +245,8 @@ LangChain/LangGraph agents that orchestrate tools for AI answers.
 
 ## Services (`backend/app/services`)
 
-- `backend/app/services/__init__.py`  
+- `backend/app/services/__init__.py`
   Package marker.
-
-- `backend/app/services/serpbear.py`  
-  Async client for SerpBear (external SEO rank tracker). Optional in production.
 
 ## Misc training data
 

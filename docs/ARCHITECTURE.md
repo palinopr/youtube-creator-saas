@@ -5,9 +5,9 @@ description: End-to-end architecture for TubeGrow (tubegrow.io).
 
 # TubeGrow – Architecture
 
-Frontend runs on Vercel (Next.js App Router).  
-Backend runs on Railway (FastAPI + background workers).  
-Primary external services: Google OAuth/YouTube APIs, OpenAI, Stripe (disabled during waitlist-only), optional SerpBear, optional Supabase (waitlist).
+Frontend runs on Vercel (Next.js App Router).
+Backend runs on Railway (FastAPI + background workers).
+Primary external services: Google OAuth/YouTube APIs, OpenAI, Stripe (disabled during waitlist-only), Resend (waitlist emails).
 
 **Status context (Dec 2025):** waitlist-only early access. Public UX must not show pricing.
 
@@ -41,8 +41,7 @@ mindmap
       workers(DB-backed async jobs)
       db(Postgres/SQLite models + repos)
       billing(Stripe - disabled during waitlist-only)
-      services(SerpBear)
-    supabase(Optional waitlist)
+      services(Resend)
 ```
 
 ## Deployment topology
@@ -58,8 +57,7 @@ flowchart LR
   GA[GA4 + Search Console APIs<br/>(internal SEO reporting)]
   OAI[OpenAI API]
   S[Stripe API<br/>(billing disabled while waitlist-only)]
-  SB[SerpBear API<br/>(optional)]
-  SUP[Supabase<br/>(optional waitlist)]
+  RS[Resend API<br/>(waitlist emails)]
   CLI[SEO Report CLI<br/>(local)]
 
   U --> V
@@ -70,8 +68,7 @@ flowchart LR
   CLI -.-> GA
   R --> OAI
   R --> S
-  R -.-> SB
-  V -.-> SUP
+  R -.-> RS
 ```
 
 ## Authentication flow (multi-tenant SaaS)

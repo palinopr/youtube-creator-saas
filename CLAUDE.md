@@ -84,12 +84,12 @@ youtube-saas/
 │   │   │   ├── analytics.py     # /api/channel, /api/videos, /api/agent
 │   │   │   ├── seo.py           # /api/seo endpoints
 │   │   │   ├── clips.py         # /api/clips endpoints
+│   │   │   ├── waitlist.py      # /api/waitlist endpoints
 │   │   │   ├── channel_analysis.py  # Re-exports from analysis/
 │   │   │   ├── admin.py         # Re-exports from admin/
 │   │   │   ├── admin/           # Modular admin endpoints
 │   │   │   │   ├── __init__.py  # Main admin router
 │   │   │   │   ├── users.py     # User management
-│   │   │   │   ├── seo.py       # SEO tracking (SerpBear)
 │   │   │   │   ├── analytics.py # API costs, metrics
 │   │   │   │   └── subscriptions.py # Billing admin
 │   │   │   └── analysis/        # Modular analysis endpoints
@@ -111,7 +111,7 @@ youtube-saas/
 │   │   │   │   ├── detector.py  # Clip detection
 │   │   │   │   ├── renderer.py  # FFmpeg rendering
 │   │   │   │   └── types.py     # Clip data types
-│   │   │   └── serpbear.py      # SerpBear SEO tracking client
+│   │   │   └── email.py         # Email service (Resend API)
 │   │   ├── agents/
 │   │   │   ├── analytics_agent.py   # LangGraph analytics agent
 │   │   │   ├── seo_agent.py         # SEO optimization agent
@@ -177,7 +177,7 @@ youtube-saas/
 │   │   ├── config.ts            # Frontend configuration
 │   │   ├── types.ts             # Consolidated TypeScript types
 │   │   ├── utils.ts             # Utility functions (formatNumber, etc.)
-│   │   └── supabase.ts          # Supabase client (waitlist)
+│   │   └── waitlist.ts          # Waitlist API client
 │   ├── package.json
 │   ├── tailwind.config.ts
 │   └── tsconfig.json
@@ -207,7 +207,6 @@ npm run dev
 - Frontend: http://localhost:3000 (or 3001 if 3000 is in use)
 - Backend: http://localhost:8000
 - API Docs: http://localhost:8000/docs
-- SerpBear (SEO Tracking): http://localhost:3005
 
 ## Services to Start ("turn on the servers")
 
@@ -226,24 +225,6 @@ cd /Users/jaimeortiz/youtube/youtube-saas/frontend
 npm run dev
 ```
 
-### 3. SerpBear (Docker - SEO Rank Tracking)
-```bash
-# Check if running
-docker ps | grep serpbear
-
-# If not running, start it
-docker start serpbear-app-1
-
-# Or if container doesn't exist, it may need to be recreated from original setup
-```
-
-**SerpBear Details:**
-- Self-hosted Google keyword rank tracking tool
-- Runs in Docker container `serpbear-app-1` on port 3005
-- Used by admin SEO Rankings feature (`/admin/seo`)
-- API client at `backend/app/services/serpbear.py`
-- API Key configured in backend `.env` as `SERPBEAR_API_KEY`
-
 ## Environment Variables
 
 Backend `.env`:
@@ -261,6 +242,9 @@ BACKEND_URL=http://localhost:8000
 
 # Security
 SECRET_KEY=your-secret-key
+
+# Email (Resend - for waitlist confirmation emails)
+RESEND_API_KEY=re_xxxx
 
 # Optional: LangSmith tracing
 LANGCHAIN_TRACING_V2=false
@@ -298,6 +282,11 @@ LANGCHAIN_PROJECT=
 - `GET /api/analysis/patterns` - Channel patterns
 - `GET /api/analysis/top-videos` - Top performers
 - `POST /api/analysis/deep` - Start deep analysis job
+
+### Waitlist
+- `POST /api/waitlist/signup` - Add email to waitlist
+- `POST /api/waitlist/confirm` - Confirm email with token
+- `GET /api/waitlist/status/{token}` - Check confirmation status
 
 ## Coding Conventions
 
@@ -352,6 +341,12 @@ Caches LLM responses to reduce API costs
 - Keyed by SHA-256 hash of prompt
 - TTL-based expiration
 - Hit count tracking for analytics
+
+### Waitlist
+Email waitlist for pre-launch signups
+- Status: pending, confirmed, invited, converted
+- Auto-assigned position number
+- Confirmation token for email verification
 
 ## Important Notes
 

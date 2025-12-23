@@ -31,10 +31,6 @@ export const API_ENDPOINTS = {
 // Admin endpoints
 export const ADMIN_ENDPOINTS = {
   STATUS: `${API_ENDPOINTS.ADMIN}/status`,
-  SEO_RANKINGS: `${API_ENDPOINTS.ADMIN}/seo/rankings`,
-  SEO_DOMAINS: `${API_ENDPOINTS.ADMIN}/seo/domains`,
-  SEO_KEYWORDS: `${API_ENDPOINTS.ADMIN}/seo/keywords`,
-  SEO_SUGGESTED: `${API_ENDPOINTS.ADMIN}/seo/suggested-keywords`,
   // Dashboard
   DASHBOARD: `${API_ENDPOINTS.ADMIN}/dashboard`,
   // User management

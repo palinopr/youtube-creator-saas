@@ -10,7 +10,6 @@ import {
   BarChart3,
   DollarSign,
   History,
-  Search,
   ChevronLeft,
   ChevronRight,
   Shield,
@@ -36,7 +35,6 @@ const navItems = [
   { href: "/admin/api-costs", label: "API Costs", icon: Cpu },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/activity", label: "Activity Log", icon: History },
-  { href: "/admin/seo", label: "SEO Rankings", icon: Search },
 ];
 
 export default function AdminLayout({

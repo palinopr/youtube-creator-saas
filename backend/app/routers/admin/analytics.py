@@ -14,7 +14,6 @@ from ...db.models import (
     PlanTier, SubscriptionStatus, Job, JobType, JobStatus,
     APIUsage, AgentType, OPENAI_PRICING, IS_SQLITE
 )
-from ...services.serpbear import is_serpbear_running
 
 router = APIRouter(tags=["admin-analytics"])
 
@@ -418,9 +417,6 @@ async def get_system_health(
         db.execute(text("SELECT 1"))
     except Exception:
         db_status = "error"
-
-    # SerpBear status
-    serpbear_running = await is_serpbear_running()
 
     # Query real job queue stats from Job table
     pending_jobs = db.query(Job).filter(

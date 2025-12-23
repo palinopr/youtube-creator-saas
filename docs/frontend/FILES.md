@@ -34,8 +34,8 @@ Excluded from this doc: `.next/`, `.vercel/`, `node_modules/`, build caches.
 - `frontend/package.json` / `frontend/package-lock.json`  
   Frontend dependencies and scripts (`dev`, `build`, `start`).
 
-- `frontend/env.example`, `frontend/.env.local.example`  
-  Environment variable templates (API URL, Supabase waitlist, GA).
+- `frontend/env.example`, `frontend/.env.local.example`
+  Environment variable templates (API URL, GA).
 
 - `frontend/.env.local`  
   Local developer env (kept for local use; do not remove).
@@ -166,8 +166,8 @@ App Router pages. Marketing routes are grouped under `(marketing)`.
 - `frontend/app/onboarding/page.tsx`  
   First‑run onboarding, plan selection, auth confirmation.
 
-- `frontend/app/waitlist/confirm/page.tsx`  
-  Waitlist email confirmation flow via Supabase functions.
+- `frontend/app/waitlist/confirm/page.tsx`
+  Waitlist email confirmation flow via backend API.
 
 ### Admin pages (`frontend/app/admin`)
 
@@ -197,11 +197,8 @@ Internal admin UI. Each page uses `/api/admin/*` endpoints.
 - `frontend/app/admin/analytics/page.tsx`  
   Internal analytics (feature usage, retention-like signals).
 
-- `frontend/app/admin/activity/page.tsx`  
+- `frontend/app/admin/activity/page.tsx`
   Admin audit log UI.
-
-- `frontend/app/admin/seo/page.tsx`  
-  SerpBear SEO rank tracking UI (requires SerpBear service configured).
 
 ### Metadata/edge routes
 
@@ -275,6 +272,6 @@ Reusable UI pieces.
 - `frontend/lib/blog.ts`  
   Blog post metadata + loader for SSG blog pages.
 
-- `frontend/lib/supabase.ts`  
-  Minimal Supabase REST client for waitlist signup/confirmation.
+- `frontend/lib/waitlist.ts`
+  Waitlist API client for signup/confirmation (calls backend endpoints).
 

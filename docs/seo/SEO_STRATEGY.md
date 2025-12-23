@@ -13,7 +13,6 @@ This document tracks all SEO work done for tubegrow.io to improve Google Search 
 | Tool | Purpose | Cost |
 |------|---------|------|
 | **Semrush Pro** | Keyword research, competitor analysis, site audits | $139/mo |
-| **SerpBear** | Daily rank tracking (self-hosted in Docker) | Free |
 | **Google Search Console** | Index monitoring, search performance | Free |
 
 ---
@@ -290,7 +289,6 @@ feat: Add SEO landing pages for keyword targeting
 ### Weekly Tasks
 - Check Semrush Position Tracking dashboard
 - Review Google Search Console performance
-- Monitor SerpBear rankings in /admin/seo
 
 ### Monthly Tasks
 - Run Semrush Site Audit
@@ -304,8 +302,6 @@ feat: Add SEO landing pages for keyword targeting
 
 - **Semrush Dashboard**: https://www.semrush.com/projects/
 - **Google Search Console**: https://search.google.com/search-console
-- **SerpBear (Local)**: http://localhost:3005
-- **TubeGrow Admin SEO**: https://tubegrow.io/admin/seo
 
 ---
 
