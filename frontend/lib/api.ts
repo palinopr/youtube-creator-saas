@@ -59,6 +59,8 @@ export interface YouTubeChannel {
   channel_name: string | null;
   thumbnail_url: string | null;
   subscriber_count: number;
+  video_count?: number;
+  view_count?: number;
   is_active: boolean;
   is_primary: boolean;
   created_at: string | null;
