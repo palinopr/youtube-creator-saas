@@ -955,6 +955,37 @@ class Waitlist(Base):
         }
 
 
+def run_migrations():
+    """Run database migrations to add missing columns."""
+    from sqlalchemy import text
+
+    migrations = [
+        # Add channel_profile column if it doesn't exist
+        """
+        DO $$
+        BEGIN
+            IF NOT EXISTS (
+                SELECT 1 FROM information_schema.columns
+                WHERE table_name = 'youtube_channels'
+                AND column_name = 'channel_profile'
+            ) THEN
+                ALTER TABLE youtube_channels ADD COLUMN channel_profile JSON;
+            END IF;
+        END $$;
+        """
+    ]
+
+    if not IS_SQLITE:
+        # PostgreSQL migrations
+        with engine.connect() as conn:
+            for migration in migrations:
+                try:
+                    conn.execute(text(migration))
+                    conn.commit()
+                except Exception as e:
+                    logger.warning(f"Migration skipped (may already exist): {e}")
+
+
 def init_db():
     """Initialize database tables."""
     # Ensure V1 model modules are imported so they register with SQLAlchemy metadata
@@ -964,7 +995,10 @@ def init_db():
     from app.v1.models import review_outcome as _review_outcome  # noqa: F401
 
     Base.metadata.create_all(bind=engine)
-    
+
+    # Run migrations for any missing columns
+    run_migrations()
+
     if IS_SQLITE:
         db_info = f"SQLite @ {SQLITE_DB_PATH}"
     else:
