@@ -483,7 +483,7 @@ function Dashboard() {
           )}
 
           {/* Top Row: Health Score + Quick Stats */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-4">
             {/* Health Score - Takes 1 column */}
             <div className="lg:col-span-1">
               <HealthScore metrics={healthMetrics} loading={isLoading} />
@@ -492,10 +492,10 @@ function Dashboard() {
             {/* Quick Stats - Takes 3 columns */}
             <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Views Today */}
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <Eye className="w-5 h-5 text-blue-400" />
+              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-1.5 bg-blue-500/20 rounded-lg">
+                    <Eye className="w-4 h-4 text-blue-400" />
                   </div>
                   {!isLoading && todayStats.viewsChange !== 0 && (
                     <span className={`flex items-center gap-1 text-sm ${todayStats.viewsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
@@ -505,16 +505,16 @@ function Dashboard() {
                   )}
                 </div>
                 <p className="text-sm text-gray-400 mb-1">Views Today</p>
-                <p className="text-3xl font-bold text-white">
+                <p className="text-2xl font-bold text-white">
                   {isLoading ? "—" : formatNumber(todayStats.views)}
                 </p>
               </div>
 
               {/* Subscribers Today */}
-              <div className="bg-gradient-to-br from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="p-2 bg-red-500/20 rounded-lg">
-                    <Users className="w-5 h-5 text-red-400" />
+              <div className="bg-gradient-to-br from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-1.5 bg-red-500/20 rounded-lg">
+                    <Users className="w-4 h-4 text-red-400" />
                   </div>
                   {!isLoading && todayStats.subsChange !== 0 && (
                     <span className={`flex items-center gap-1 text-sm ${todayStats.subsChange >= 0 ? 'text-green-400' : 'text-red-400'}`}>
@@ -524,20 +524,20 @@ function Dashboard() {
                   )}
                 </div>
                 <p className="text-sm text-gray-400 mb-1">Subs Today</p>
-                <p className="text-3xl font-bold text-white">
+                <p className="text-2xl font-bold text-white">
                   {isLoading ? "—" : (todayStats.subs >= 0 ? '+' : '') + formatNumber(todayStats.subs)}
                 </p>
               </div>
 
               {/* Watch Time Today */}
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="p-2 bg-purple-500/20 rounded-lg">
-                    <Clock className="w-5 h-5 text-purple-400" />
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-1.5 bg-purple-500/20 rounded-lg">
+                    <Clock className="w-4 h-4 text-purple-400" />
                   </div>
                 </div>
                 <p className="text-sm text-gray-400 mb-1">Watch Time Today</p>
-                <p className="text-3xl font-bold text-white">
+                <p className="text-2xl font-bold text-white">
                   {isLoading ? "—" : `${formatNumber(todayStats.watchTime)}h`}
                 </p>
               </div>
@@ -545,7 +545,7 @@ function Dashboard() {
           </div>
 
           {/* Middle Row: Performance Chart + Viral Radar */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4">
             {/* Performance Chart - Takes 2 columns */}
             <div className="lg:col-span-2">
               <ViewsTrendChart
@@ -566,7 +566,7 @@ function Dashboard() {
           </div>
 
           {/* Bottom Row: Alerts + Video Lists */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4">
             {/* Alerts Panel */}
             <div className="lg:col-span-1">
               <AlertsPanel
@@ -601,7 +601,7 @@ function Dashboard() {
                       <Link
                         key={video.video_id}
                         href={`/video/${video.video_id}`}
-                        className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                        className="flex items-center gap-3 p-3 hover:bg-white/5 transition-colors"
                       >
                         <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
                           index === 0 ? 'bg-yellow-500/20 text-yellow-400' :
@@ -649,7 +649,7 @@ function Dashboard() {
                       <Link
                         key={video.video_id}
                         href={`/video/${video.video_id}`}
-                        className="flex items-center gap-3 p-4 hover:bg-white/5 transition-colors"
+                        className="flex items-center gap-3 p-3 hover:bg-white/5 transition-colors"
                       >
                         <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
                           <TrendingDown className="w-3 h-3 text-red-400" />

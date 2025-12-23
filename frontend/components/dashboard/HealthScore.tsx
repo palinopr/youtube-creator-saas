@@ -98,13 +98,13 @@ export default function HealthScore({ metrics, loading, onLearnMore }: HealthSco
   }, [score, loading, metrics]);
 
   // SVG circle parameters
-  const radius = 70;
+  const radius = 54;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (animatedScore / 100) * circumference;
 
   if (loading) {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6 animate-pulse">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-4 animate-pulse">
         <div className="flex items-center justify-between mb-4">
           <div className="h-6 w-32 bg-white/10 rounded" />
         </div>
@@ -117,7 +117,7 @@ export default function HealthScore({ metrics, loading, onLearnMore }: HealthSco
 
   return (
     <div
-      className="bg-white/5 border border-white/10 rounded-xl p-6 transition-all hover:border-white/20"
+      className="bg-white/5 border border-white/10 rounded-xl p-4 transition-all hover:border-white/20"
       style={{ borderColor: `${status.color}30` }}
     >
       {/* Header */}
@@ -140,23 +140,23 @@ export default function HealthScore({ metrics, loading, onLearnMore }: HealthSco
       {/* Score Circle */}
       <div className="flex items-center justify-center">
         <div className="relative">
-          <svg width="180" height="180" className="-rotate-90">
+          <svg width="140" height="140" className="-rotate-90">
             {/* Background circle */}
             <circle
-              cx="90"
-              cy="90"
+              cx="70"
+              cy="70"
               r={radius}
               stroke="rgba(255,255,255,0.1)"
-              strokeWidth="12"
+              strokeWidth="10"
               fill="none"
             />
             {/* Progress circle */}
             <circle
-              cx="90"
-              cy="90"
+              cx="70"
+              cy="70"
               r={radius}
               stroke={status.color}
-              strokeWidth="12"
+              strokeWidth="10"
               fill="none"
               strokeLinecap="round"
               strokeDasharray={circumference}
@@ -166,7 +166,7 @@ export default function HealthScore({ metrics, loading, onLearnMore }: HealthSco
           </svg>
           {/* Center content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-4xl font-bold" style={{ color: status.color }}>
+            <span className="text-3xl font-bold" style={{ color: status.color }}>
               {animatedScore}
             </span>
             <span className="text-sm text-white/60">out of 100</span>
@@ -182,7 +182,7 @@ export default function HealthScore({ metrics, loading, onLearnMore }: HealthSco
 
       {/* Metrics Breakdown */}
       {metrics && (
-        <div className="mt-6 grid grid-cols-2 gap-3">
+        <div className="mt-4 grid grid-cols-2 gap-2">
           <MetricItem
             label="View Velocity"
             value={metrics.viewVelocity}
@@ -224,7 +224,7 @@ function MetricItem({ label, value, suffix, isPercentage }: MetricItemProps) {
   const displayValue = isPercentage ? Math.abs(value).toFixed(1) : value;
 
   return (
-    <div className="bg-white/5 rounded-lg p-3">
+    <div className="bg-white/5 rounded-lg p-2">
       <p className="text-xs text-white/60 mb-1">{label}</p>
       <div className="flex items-center gap-1">
         {isPercentage && (

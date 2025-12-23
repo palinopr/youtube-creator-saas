@@ -170,7 +170,7 @@ export default function AlertsPanel({
 
   if (loading) {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6 animate-pulse">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-4 animate-pulse">
         <div className="flex items-center justify-between mb-4">
           <div className="h-6 w-40 bg-white/10 rounded" />
         </div>
@@ -184,7 +184,7 @@ export default function AlertsPanel({
   }
 
   return (
-    <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+    <div className="bg-white/5 border border-white/10 rounded-xl p-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
@@ -221,7 +221,7 @@ export default function AlertsPanel({
             return (
               <div
                 key={alert.id}
-                className={`relative group bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors ${
+                className={`relative group bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors ${
                   !alert.isRead ? "ring-1 ring-white/20" : ""
                 }`}
                 style={{ borderLeft: `3px solid ${config.color}` }}

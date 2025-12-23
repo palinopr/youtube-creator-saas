@@ -115,7 +115,7 @@ export default function ViralRadar({
 
   if (loading) {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6 animate-pulse">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-4 animate-pulse">
         <div className="flex items-center justify-between mb-4">
           <div className="h-6 w-32 bg-white/10 rounded" />
         </div>
@@ -130,7 +130,7 @@ export default function ViralRadar({
 
   return (
     <div
-      className={`bg-white/5 border rounded-xl p-6 transition-all ${
+      className={`bg-white/5 border rounded-xl p-4 transition-all ${
         hasViralVideo
           ? "border-orange-500/30 shadow-lg shadow-orange-500/10"
           : "border-white/10"
