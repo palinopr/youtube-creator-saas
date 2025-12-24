@@ -7,14 +7,22 @@ from enum import Enum
 from typing import List, Optional
 
 
-# Try to import OpenCV for face detection (optional dependency)
+# Try MediaPipe for face detection (preferred - 40% more accurate)
+try:
+    import mediapipe as mp
+    MEDIAPIPE_AVAILABLE = True
+except ImportError:
+    MEDIAPIPE_AVAILABLE = False
+    print("[CLIPS] Warning: MediaPipe not installed. Run: pip install mediapipe")
+
+# OpenCV still needed for video frame extraction
 try:
     import cv2
     import numpy as np
     OPENCV_AVAILABLE = True
 except ImportError:
     OPENCV_AVAILABLE = False
-    print("[CLIPS] Warning: OpenCV not installed. Face detection disabled. Run: pip install opencv-python")
+    print("[CLIPS] Warning: OpenCV not installed. Run: pip install opencv-python-headless")
 
 
 class VideoSource(Enum):

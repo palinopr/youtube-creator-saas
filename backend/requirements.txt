@@ -43,7 +43,8 @@ youtube-transcript-api>=0.6.3
 # Video processing for Clips feature
 ffmpeg-python>=0.2.0
 yt-dlp>=2024.12.0
-# opencv-python-headless - optional, for face detection (disabled to speed up builds)
+opencv-python-headless>=4.9.0
+mediapipe>=0.10.9
 
 # Rate limiting
 slowapi>=0.1.9
