@@ -19,6 +19,7 @@ import VideoPreview from "@/components/video/VideoPreview";
 import TitleEditor from "@/components/video/TitleEditor";
 import DescriptionEditor from "@/components/video/DescriptionEditor";
 import TagsEditor from "@/components/video/TagsEditor";
+import ThumbnailAnalysis from "@/components/video/ThumbnailAnalysis";
 import { useToast } from "@/components/providers/ErrorProvider";
 import { api } from "@/lib/api";
 
@@ -588,10 +589,22 @@ export default function VideoDetailPage() {
             analyzing={analyzing}
             analyzed={analyzed}
             onOptimize={analyzeAll}
+            currentTitle={editTitle}
+            currentDescription={editDescription}
           />
 
           {/* Right Column - Edit Form */}
           <div className="flex-1 p-6 space-y-6">
+            {/* Thumbnail Analysis */}
+            <ThumbnailAnalysis
+              videoId={video.video_id}
+              thumbnailUrl={video.thumbnail_url}
+              onAnalyze={async () => {
+                const result = await api.analyzeThumbnail(video.video_id);
+                return result.analysis;
+              }}
+            />
+
             <TitleEditor
               editTitle={editTitle}
               onTitleChange={setEditTitle}

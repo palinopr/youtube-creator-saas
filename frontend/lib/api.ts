@@ -441,6 +441,23 @@ class ApiClient {
     return this.request(`/api/seo/videos?limit=${limit}`);
   }
 
+  async analyzeThumbnail(videoId: string): Promise<{
+    success: boolean;
+    video_id: string;
+    thumbnail_url: string;
+    analysis: {
+      overall_score: number;
+      text_readability: { score: number; feedback: string; details?: Record<string, unknown> };
+      face_detection: { score: number; feedback: string; details?: Record<string, unknown> };
+      color_contrast: { score: number; feedback: string; details?: Record<string, unknown> };
+      composition: { score: number; feedback: string; details?: Record<string, unknown> };
+      suggestions: string[];
+      summary: string;
+    };
+  }> {
+    return this.request(`/api/seo/analyze-thumbnail/${videoId}`);
+  }
+
   // YouTube Videos (OAuth)
   async listYouTubeVideos(maxResults: number = 25, pageToken?: string): Promise<any> {
     const params = new URLSearchParams({ max_results: maxResults.toString() });

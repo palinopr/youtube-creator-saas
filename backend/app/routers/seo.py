@@ -13,6 +13,7 @@ from ..agents.seo_agent import SEOAgent
 from ..services.youtube import YouTubeTools
 from ..tools.description_generator import DescriptionGenerator
 from ..tools.transcript_analyzer import TranscriptAnalyzer
+from ..services.thumbnail_analyzer import analyze_thumbnail, ThumbnailAnalysisResult
 
 router = APIRouter(prefix="/api/seo", tags=["seo"])
 limiter = Limiter(key_func=get_remote_address)
@@ -348,6 +349,53 @@ async def generate_optimized_description(
         
         return result
         
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/analyze-thumbnail/{video_id}")
+@limiter.limit("20/minute")
+async def analyze_video_thumbnail(
+    request: Request,
+    video_id: str,
+    user: User = Depends(get_current_user)
+):
+    """
+    Analyze a video's thumbnail for CTR optimization using GPT-4o Vision.
+
+    Returns:
+    - Overall CTR score (0-100)
+    - Text readability analysis
+    - Face detection and emotion
+    - Color contrast score
+    - Composition analysis
+    - Actionable improvement suggestions
+    """
+    try:
+        youtube = get_authenticated_service("youtube", "v3")
+
+        # Get video thumbnail URL
+        tools = YouTubeTools(youtube)
+        video = tools.get_video_for_editing(video_id)
+
+        if not video:
+            raise HTTPException(status_code=404, detail="Video not found")
+
+        thumbnail_url = video.get("thumbnail_url")
+        if not thumbnail_url:
+            raise HTTPException(status_code=400, detail="Video has no thumbnail")
+
+        # Analyze thumbnail using OpenAI Vision
+        result = await analyze_thumbnail(thumbnail_url)
+
+        return {
+            "success": True,
+            "video_id": video_id,
+            "thumbnail_url": thumbnail_url,
+            "analysis": result.model_dump()
+        }
     except HTTPException:
         raise
     except Exception as e:

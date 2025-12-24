@@ -171,3 +171,128 @@ export function calculateTrend(current: number, previous: number): number {
   if (previous === 0) return current > 0 ? 100 : 0;
   return Math.round(((current - previous) / previous) * 100);
 }
+
+// ============================================
+// Mobile Preview Utilities
+// ============================================
+
+/** YouTube mobile title truncation limit (chars visible before "...") */
+export const MOBILE_TITLE_LIMIT = 48;
+
+/** YouTube mobile description truncation limit (chars visible in search) */
+export const MOBILE_DESC_LIMIT = 100;
+
+/** YouTube mobile channel name truncation limit */
+export const MOBILE_CHANNEL_LIMIT = 15;
+
+export interface MobileTruncationResult {
+  /** Whether the text is truncated on mobile */
+  truncated: boolean;
+  /** How the text appears on mobile (with "..." if truncated) */
+  display: string;
+  /** Number of characters hidden on mobile */
+  hiddenChars: number;
+  /** Warning message for user */
+  warning: string | null;
+  /** Original text length */
+  originalLength: number;
+  /** Character limit used */
+  limit: number;
+}
+
+/**
+ * Get mobile truncation info for a YouTube video title
+ * @example getMobileTitleTruncation("This is a very long title...") => { truncated: true, ... }
+ */
+export function getMobileTitleTruncation(title: string): MobileTruncationResult {
+  const originalLength = title.length;
+
+  if (originalLength <= MOBILE_TITLE_LIMIT) {
+    return {
+      truncated: false,
+      display: title,
+      hiddenChars: 0,
+      warning: null,
+      originalLength,
+      limit: MOBILE_TITLE_LIMIT,
+    };
+  }
+
+  const hiddenChars = originalLength - MOBILE_TITLE_LIMIT;
+  return {
+    truncated: true,
+    display: title.slice(0, MOBILE_TITLE_LIMIT) + "...",
+    hiddenChars,
+    warning: `Last ${hiddenChars} characters hidden on mobile`,
+    originalLength,
+    limit: MOBILE_TITLE_LIMIT,
+  };
+}
+
+/**
+ * Get mobile truncation info for a YouTube video description
+ * Only the first ~100 chars show in mobile search results
+ */
+export function getMobileDescriptionTruncation(description: string): MobileTruncationResult {
+  const originalLength = description.length;
+
+  if (originalLength <= MOBILE_DESC_LIMIT) {
+    return {
+      truncated: false,
+      display: description,
+      hiddenChars: 0,
+      warning: null,
+      originalLength,
+      limit: MOBILE_DESC_LIMIT,
+    };
+  }
+
+  const hiddenChars = originalLength - MOBILE_DESC_LIMIT;
+  return {
+    truncated: true,
+    display: description.slice(0, MOBILE_DESC_LIMIT) + "...",
+    hiddenChars,
+    warning: `Only first ${MOBILE_DESC_LIMIT} chars visible in mobile search`,
+    originalLength,
+    limit: MOBILE_DESC_LIMIT,
+  };
+}
+
+/**
+ * Get mobile truncation info for channel name
+ */
+export function getMobileChannelTruncation(channelName: string): MobileTruncationResult {
+  const originalLength = channelName.length;
+
+  if (originalLength <= MOBILE_CHANNEL_LIMIT) {
+    return {
+      truncated: false,
+      display: channelName,
+      hiddenChars: 0,
+      warning: null,
+      originalLength,
+      limit: MOBILE_CHANNEL_LIMIT,
+    };
+  }
+
+  return {
+    truncated: true,
+    display: channelName.slice(0, MOBILE_CHANNEL_LIMIT) + "...",
+    hiddenChars: originalLength - MOBILE_CHANNEL_LIMIT,
+    warning: null,
+    originalLength,
+    limit: MOBILE_CHANNEL_LIMIT,
+  };
+}
+
+/**
+ * Check if important keywords appear before the mobile truncation point
+ * Returns list of keywords that will be hidden on mobile
+ */
+export function getHiddenKeywords(title: string, keywords: string[]): string[] {
+  const visiblePart = title.slice(0, MOBILE_TITLE_LIMIT).toLowerCase();
+  return keywords.filter(
+    (keyword) => !visiblePart.includes(keyword.toLowerCase()) &&
+                  title.toLowerCase().includes(keyword.toLowerCase())
+  );
+}
