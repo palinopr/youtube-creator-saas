@@ -1084,7 +1084,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             result = subprocess.run(cmd, capture_output=True, text=True)
 
             if result.returncode != 0:
-                print(f"[CLIPS] Segment {i} render failed: {result.stderr[:200]}")
+                print(f"[CLIPS] Segment {i} render failed: {result.stderr[-500:]}")
                 # Fallback without zoom - use aspect ratio aware filter
                 fallback_filter = self._build_crop_scale_filter(aspect_ratio)
                 cmd_fallback = [
@@ -1103,7 +1103,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                     '-y',
                     seg_path
                 ]
-                subprocess.run(cmd_fallback, capture_output=True)
+                fallback_result = subprocess.run(cmd_fallback, capture_output=True, text=True)
+                if fallback_result.returncode != 0:
+                    print(f"[CLIPS] Segment {i} fallback also failed: {fallback_result.stderr[-500:]}")
 
             if os.path.exists(seg_path):
                 segment_files.append(seg_path)
@@ -1113,6 +1115,11 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         if not segment_files:
             print("[CLIPS] No segments rendered successfully")
             return None
+
+        # Log segment file sizes for debugging
+        for i, seg in enumerate(segment_files):
+            size = os.path.getsize(seg) if os.path.exists(seg) else 0
+            print(f"[CLIPS] Segment {i} size: {size} bytes -> {seg}")
 
         # PHASE 2: Merge segments with AUDIO CROSSFADES
         # This eliminates the "pop" sound at Franken-bite cut points
@@ -1162,19 +1169,20 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                         f"[{i}:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo[af{i}];"
                     )
 
+                # Chain crossfades: [af0][af1]->temp0, [temp0][af2]->temp1 or aout, etc.
                 for i in range(len(segment_files) - 1):
                     if i == 0:
                         in_a = "[af0]"
                         in_b = "[af1]"
-                        out_label = "[a01]"
                     else:
-                        in_a = f"[a{str(i-1).zfill(2)}]" if i == 1 else f"[a{i-1:02d}]"
+                        in_a = f"[temp{i-1}]"  # Previous crossfade output
                         in_b = f"[af{i+1}]"
-                        out_label = f"[a{i:02d}]"
 
-                    # Last crossfade outputs to [aout]
+                    # Output label - last crossfade goes to [aout]
                     if i == len(segment_files) - 2:
                         out_label = "[aout]"
+                    else:
+                        out_label = f"[temp{i}]"
 
                     audio_filter_parts.append(
                         f"{in_a}{in_b}acrossfade=d={crossfade_duration}:c1=tri:c2=tri{out_label}"
@@ -1204,10 +1212,11 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             ]
 
             print(f"[CLIPS] Running crossfade merge with {len(segment_files)} segments...")
+            print(f"[CLIPS] Filter complex: {filter_complex[:300]}...")
             result = subprocess.run(cmd, capture_output=True, text=True)
 
             if result.returncode != 0:
-                print(f"[CLIPS] Crossfade merge failed: {result.stderr[:500]}")
+                print(f"[CLIPS] Crossfade merge failed: {result.stderr[-800:]}")
                 # Fallback: simple concat without crossfade (better than nothing)
                 print("[CLIPS] Falling back to simple concat...")
                 concat_file = os.path.join(self.temp_dir, f"concat_{clip_id}.txt")
@@ -1228,7 +1237,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                     '-y',
                     merged_no_subs
                 ]
-                subprocess.run(cmd_fallback, capture_output=True)
+                concat_result = subprocess.run(cmd_fallback, capture_output=True, text=True)
+                if concat_result.returncode != 0:
+                    print(f"[CLIPS] Concat fallback also failed: {concat_result.stderr[-500:]}")
 
                 if os.path.exists(concat_file):
                     os.remove(concat_file)
