@@ -173,8 +173,14 @@ export function calculateTrend(current: number, previous: number): number {
 }
 
 // ============================================
-// Mobile Preview Utilities
+// Preview Utilities (Desktop & Mobile)
 // ============================================
+
+/** YouTube desktop search result title truncation limit (~70 chars visible) */
+export const DESKTOP_TITLE_LIMIT = 70;
+
+/** YouTube desktop description preview limit in search results */
+export const DESKTOP_DESC_LIMIT = 120;
 
 /** YouTube mobile title truncation limit (chars visible before "...") */
 export const MOBILE_TITLE_LIMIT = 48;
@@ -295,4 +301,82 @@ export function getHiddenKeywords(title: string, keywords: string[]): string[] {
     (keyword) => !visiblePart.includes(keyword.toLowerCase()) &&
                   title.toLowerCase().includes(keyword.toLowerCase())
   );
+}
+
+// ============================================
+// Desktop Preview Utilities
+// ============================================
+
+export interface DesktopTruncationResult {
+  /** Whether the text is truncated in desktop search results */
+  truncated: boolean;
+  /** How the text appears in search results (with "..." if truncated) */
+  display: string;
+  /** Number of characters hidden in search results */
+  hiddenChars: number;
+  /** Warning message for user */
+  warning: string | null;
+  /** Original text length */
+  originalLength: number;
+  /** Character limit used */
+  limit: number;
+}
+
+/**
+ * Get desktop search result truncation info for a YouTube video title
+ * YouTube desktop search results show ~70 characters before truncating
+ * @example getDesktopTitleTruncation("Very long title...") => { truncated: true, ... }
+ */
+export function getDesktopTitleTruncation(title: string): DesktopTruncationResult {
+  const originalLength = title.length;
+
+  if (originalLength <= DESKTOP_TITLE_LIMIT) {
+    return {
+      truncated: false,
+      display: title,
+      hiddenChars: 0,
+      warning: null,
+      originalLength,
+      limit: DESKTOP_TITLE_LIMIT,
+    };
+  }
+
+  const hiddenChars = originalLength - DESKTOP_TITLE_LIMIT;
+  return {
+    truncated: true,
+    display: title.slice(0, DESKTOP_TITLE_LIMIT) + "...",
+    hiddenChars,
+    warning: `Last ${hiddenChars} chars hidden in search results`,
+    originalLength,
+    limit: DESKTOP_TITLE_LIMIT,
+  };
+}
+
+/**
+ * Get desktop search result truncation info for description
+ * Desktop search results show first ~120 chars of description
+ */
+export function getDesktopDescriptionTruncation(description: string): DesktopTruncationResult {
+  const originalLength = description.length;
+
+  if (originalLength <= DESKTOP_DESC_LIMIT) {
+    return {
+      truncated: false,
+      display: description,
+      hiddenChars: 0,
+      warning: null,
+      originalLength,
+      limit: DESKTOP_DESC_LIMIT,
+    };
+  }
+
+  const hiddenChars = originalLength - DESKTOP_DESC_LIMIT;
+  return {
+    truncated: true,
+    display: description.slice(0, DESKTOP_DESC_LIMIT) + "...",
+    hiddenChars,
+    warning: null,
+    originalLength,
+    limit: DESKTOP_DESC_LIMIT,
+  };
 }

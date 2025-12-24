@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, ThumbsUp, MessageSquare, Loader2, Wand2, Monitor, Smartphone } from "lucide-react";
-import { formatNumber, formatDate } from "@/lib/utils";
+import { Eye, ThumbsUp, MessageSquare, Loader2, Wand2, Monitor, Smartphone, AlertTriangle } from "lucide-react";
+import { formatNumber, formatDate, getDesktopTitleTruncation, DESKTOP_TITLE_LIMIT } from "@/lib/utils";
 import MobilePreview from "./MobilePreview";
 
 interface VideoData {
@@ -26,8 +26,10 @@ interface VideoPreviewProps {
   currentTitle?: string;
   /** Current description being edited */
   currentDescription?: string;
-  /** Channel name for mobile preview */
+  /** Channel name for preview */
   channelName?: string;
+  /** Channel avatar URL from Google OAuth */
+  channelAvatarUrl?: string | null;
 }
 
 type PreviewMode = "desktop" | "mobile";
@@ -40,12 +42,16 @@ export default function VideoPreview({
   currentTitle,
   currentDescription,
   channelName = "Your Channel",
+  channelAvatarUrl,
 }: VideoPreviewProps) {
   const [previewMode, setPreviewMode] = useState<PreviewMode>("desktop");
 
   // Use current edited values if provided, otherwise fall back to original
   const displayTitle = currentTitle ?? video.title;
   const displayDescription = currentDescription ?? video.description;
+
+  // Get desktop truncation info
+  const desktopTruncation = getDesktopTitleTruncation(displayTitle);
 
   return (
     <div className="w-80 flex-shrink-0 p-6 border-r border-white/10">
@@ -97,9 +103,9 @@ export default function VideoPreview({
 
               {/* Title & Meta */}
               <div className="flex-1 min-w-0">
-                {/* Title - Full display on desktop */}
+                {/* Title - Truncated like YouTube search results */}
                 <h3 className="text-white text-sm font-medium leading-tight line-clamp-2 mb-1">
-                  {displayTitle}
+                  {desktopTruncation.display}
                 </h3>
 
                 {/* Views & Date */}
@@ -107,31 +113,57 @@ export default function VideoPreview({
                   {formatNumber(video.view_count)} views • {formatDate(video.published_at)}
                 </p>
 
-                {/* Channel */}
+                {/* Channel with real avatar */}
                 <div className="flex items-center gap-1.5">
-                  <div className="w-5 h-5 rounded-full bg-gray-700 flex-shrink-0" />
+                  {channelAvatarUrl ? (
+                    <img
+                      src={channelAvatarUrl}
+                      alt={channelName}
+                      className="w-5 h-5 rounded-full object-cover flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-5 h-5 rounded-full bg-gray-700 flex-shrink-0" />
+                  )}
                   <span className="text-gray-400 text-xs">{channelName}</span>
                 </div>
+
+                {/* Description preview */}
+                <p className="text-gray-500 text-xs mt-1.5 line-clamp-1">
+                  {displayDescription.slice(0, 80)}...
+                </p>
               </div>
             </div>
+
+            {/* Desktop Truncation Warning */}
+            {desktopTruncation.truncated && (
+              <div className="mt-3 p-2 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                <div className="flex items-center gap-2 text-amber-400">
+                  <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span className="text-xs font-medium">Title truncates in search</span>
+                </div>
+                <p className="text-xs text-amber-400/70 mt-1">
+                  Last {desktopTruncation.hiddenChars} chars hidden on desktop search results
+                </p>
+              </div>
+            )}
 
             {/* Title Character Count */}
             <div className="mt-3 pt-3 border-t border-white/5">
               <div className="flex justify-between text-xs">
                 <span className="text-gray-500">Title length</span>
-                <span className={displayTitle.length > 70 ? "text-amber-400" : "text-green-400"}>
-                  {displayTitle.length} / 100 chars
+                <span className={desktopTruncation.truncated ? "text-amber-400" : "text-green-400"}>
+                  {displayTitle.length} / {DESKTOP_TITLE_LIMIT} search limit
                 </span>
               </div>
               <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden mt-1">
                 <div
                   className={`h-full transition-all ${
-                    displayTitle.length > 70
+                    desktopTruncation.truncated
                       ? "bg-gradient-to-r from-amber-500 to-red-500"
                       : "bg-gradient-to-r from-green-500 to-emerald-500"
                   }`}
                   style={{
-                    width: `${Math.min((displayTitle.length / 100) * 100, 100)}%`,
+                    width: `${Math.min((displayTitle.length / DESKTOP_TITLE_LIMIT) * 100, 100)}%`,
                   }}
                 />
               </div>
@@ -172,6 +204,7 @@ export default function VideoPreview({
             thumbnailUrl={video.thumbnail_url}
             channelName={channelName}
             viewCount={video.view_count}
+            channelAvatarUrl={channelAvatarUrl}
           />
         </div>
       )}

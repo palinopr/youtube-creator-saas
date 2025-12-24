@@ -15,6 +15,8 @@ interface MobilePreviewProps {
   thumbnailUrl: string;
   channelName: string;
   viewCount: number;
+  /** Channel avatar URL from Google OAuth */
+  channelAvatarUrl?: string | null;
 }
 
 export default function MobilePreview({
@@ -23,6 +25,7 @@ export default function MobilePreview({
   thumbnailUrl,
   channelName,
   viewCount,
+  channelAvatarUrl,
 }: MobilePreviewProps) {
   const titleTruncation = getMobileTitleTruncation(title);
   const descTruncation = getMobileDescriptionTruncation(description);
@@ -55,7 +58,15 @@ export default function MobilePreview({
             {/* Video Info Row */}
             <div className="flex gap-2">
               {/* Channel Avatar */}
-              <div className="w-8 h-8 rounded-full bg-gray-700 flex-shrink-0" />
+              {channelAvatarUrl ? (
+                <img
+                  src={channelAvatarUrl}
+                  alt={channelName}
+                  className="w-8 h-8 rounded-full object-cover flex-shrink-0"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-gray-700 flex-shrink-0" />
+              )}
 
               {/* Title & Meta */}
               <div className="flex-1 min-w-0">

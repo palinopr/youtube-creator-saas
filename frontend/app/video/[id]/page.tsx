@@ -98,12 +98,32 @@ export default function VideoDetailPage() {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
 
+  // Channel data for preview
+  const [channelName, setChannelName] = useState<string>("Your Channel");
+  const [channelAvatarUrl, setChannelAvatarUrl] = useState<string | null>(null);
+
   // Load social links from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("channelSocialLinks");
     if (saved) {
       setSocialLinks(JSON.parse(saved));
     }
+  }, []);
+
+  // Fetch channel data for preview (avatar, name)
+  useEffect(() => {
+    const fetchChannelData = async () => {
+      try {
+        const data = await api.getChannelStats();
+        if (data) {
+          setChannelName(data.title || "Your Channel");
+          setChannelAvatarUrl(data.thumbnail_url || null);
+        }
+      } catch (error) {
+        console.log("Could not fetch channel data for preview");
+      }
+    };
+    fetchChannelData();
   }, []);
 
   const saveSocialLinks = () => {
@@ -591,6 +611,8 @@ export default function VideoDetailPage() {
             onOptimize={analyzeAll}
             currentTitle={editTitle}
             currentDescription={editDescription}
+            channelName={channelName}
+            channelAvatarUrl={channelAvatarUrl}
           />
 
           {/* Right Column - Edit Form */}
