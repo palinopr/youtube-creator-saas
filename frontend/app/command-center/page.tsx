@@ -562,25 +562,21 @@ function Dashboard() {
           </div>
 
           {/* Middle Row: Performance Charts + Viral Radar */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4">
-            {/* Views Trend Chart */}
-            <div className="lg:col-span-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
+            {/* Left Column: Views + Engagement stacked */}
+            <div className="flex flex-col gap-3">
               <ViewsTrendChart
                 dailyData={analyticsOverview?.daily_data}
                 isLoading={isLoading}
               />
-            </div>
-
-            {/* Engagement Chart (Likes/Comments/Shares) */}
-            <div className="lg:col-span-1">
               <EngagementChart
                 dailyData={analyticsOverview?.daily_data}
                 isLoading={isLoading}
               />
             </div>
 
-            {/* Viral Radar */}
-            <div className="lg:col-span-1">
+            {/* Right Column: Viral Radar (full height) */}
+            <div className="h-full">
               <ViralRadar
                 videos={trendingVideos}
                 loading={isLoading}
