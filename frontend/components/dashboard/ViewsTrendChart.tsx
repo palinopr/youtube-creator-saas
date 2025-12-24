@@ -50,7 +50,7 @@ export function ViewsTrendChart({ dailyData, isLoading = false }: ViewsTrendChar
           <Eye className="w-5 h-5 text-blue-400" />
           <h3 className="font-semibold text-white">Views Trend</h3>
         </div>
-        <div className="h-[160px] flex items-center justify-center text-gray-500">
+        <div className="h-[220px] flex items-center justify-center text-gray-500">
           No analytics data available
         </div>
       </div>
@@ -102,7 +102,7 @@ export function ViewsTrendChart({ dailyData, isLoading = false }: ViewsTrendChar
       </div>
 
       {/* Chart */}
-      <div className="h-[160px]">
+      <div className="h-[220px]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
             <defs>
