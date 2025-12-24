@@ -1069,7 +1069,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 '-ss', str(start),
                 '-i', source_video,
                 '-t', str(duration),
-                '-filter_complex', video_filter,
+                '-vf', video_filter,
                 '-c:v', 'libx264',
                 '-preset', 'fast',
                 '-crf', '23',
