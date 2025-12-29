@@ -15,7 +15,7 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "AI Tools for YouTube Creators",
@@ -140,10 +140,10 @@ export default function AIYouTubeToolsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#waitlist"
+                href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                Join Waitlist <ArrowRight className="w-5 h-5" />
+                Get Started Free <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/features"
@@ -418,10 +418,10 @@ export default function AIYouTubeToolsPage() {
               Ready to Let AI Grow Your Channel?
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Be the first to access AI-powered YouTube growth tools when we launch. Join the waitlist for early access.
+              Start free with AI-powered YouTube growth tools. Get 10 video analyses and 20 AI queries per month.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

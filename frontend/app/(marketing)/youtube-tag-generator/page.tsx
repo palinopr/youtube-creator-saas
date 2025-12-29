@@ -14,12 +14,12 @@ import {
   Copy,
   BarChart3,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "YouTube Tag Generator - AI-Powered Tags That Boost Rankings",
   description:
-    "Free AI YouTube tag generator that creates SEO-optimized tags for your videos. Generate relevant tags, find trending keywords, and improve video discoverability in 2025. Join TubeGrow waitlist.",
+    "Free AI YouTube tag generator that creates SEO-optimized tags for your videos. Generate relevant tags, find trending keywords, and improve video discoverability in 2025.",
   alternates: {
     canonical: "/youtube-tag-generator",
   },
@@ -201,10 +201,10 @@ export default function YouTubeTagGeneratorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/tools/youtube-metadata-generator"
@@ -214,7 +214,7 @@ export default function YouTubeTagGeneratorPage() {
             </Link>
           </div>
           <p className="text-zinc-500 text-sm mt-4">
-            Waitlist-only early access. Free lite tool available now.
+            Free tier available. No credit card required.
           </p>
         </div>
       </section>
@@ -396,10 +396,10 @@ export default function YouTubeTagGeneratorPage() {
               Stop Guessing on Tags
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for TubeGrow's AI tag generator and start ranking for the right keywords.
+              Start using TubeGrow's AI tag generator and rank for the right keywords.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

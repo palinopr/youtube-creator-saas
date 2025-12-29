@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Sparkles, ArrowRight, Target } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import { niches } from "@/lib/niches";
 
 export const metadata: Metadata = {
@@ -42,10 +42,10 @@ export default function NichesHubPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/features"
@@ -124,10 +124,10 @@ export default function NichesHubPage() {
               Want Your Niche Playbook Inside TubeGrow?
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for early access to niche‑aware analytics, SEO, and clip workflows.
+              Start free with niche-aware analytics, SEO, and clip workflows.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="hero" />
             </div>
           </div>
         </div>

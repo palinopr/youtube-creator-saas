@@ -24,7 +24,7 @@ export default function ChannelSnapshotToolPage() {
           </h1>
           <p className="text-zinc-400 mb-6">
             Get a fast public readout on any channel: subscribers, upload cadence, and recent videos.
-            This is a lite preview of TubeGrow Analytics (waitlist‑only).
+            This is a lite preview of TubeGrow Analytics (free tier available).
           </p>
         </div>
       </section>

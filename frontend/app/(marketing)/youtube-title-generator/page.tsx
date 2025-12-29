@@ -14,12 +14,12 @@ import {
   Lightbulb,
   Copy,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "YouTube Title Generator - AI-Powered Video Titles That Get Clicks",
   description:
-    "Free AI YouTube title generator that creates click-worthy, SEO-optimized video titles. Generate multiple title variations, test CTR potential, and rank higher in 2025. Join TubeGrow waitlist.",
+    "Free AI YouTube title generator that creates click-worthy, SEO-optimized video titles. Generate multiple title variations, test CTR potential, and rank higher in 2025. Start free today.",
   alternates: {
     canonical: "/youtube-title-generator",
   },
@@ -196,10 +196,10 @@ export default function YouTubeTitleGeneratorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/tools/youtube-metadata-generator"
@@ -209,7 +209,7 @@ export default function YouTubeTitleGeneratorPage() {
             </Link>
           </div>
           <p className="text-zinc-500 text-sm mt-4">
-            Waitlist-only early access. Free lite tool available now.
+            Free tier available. <Link href="/pricing" className="text-blue-400 hover:underline">See pricing</Link>
           </p>
         </div>
       </section>
@@ -391,10 +391,10 @@ export default function YouTubeTitleGeneratorPage() {
               Stop Guessing on Titles
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for TubeGrow's AI title generator and start creating titles that get clicks.
+              Free tier with 10 analyses & 20 AI queries/month, no credit card required.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

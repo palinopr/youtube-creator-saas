@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Sparkles, BarChart3, Scissors, Zap, Brain, DollarSign, Crown } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 
@@ -68,8 +68,8 @@ const pricingData = {
   },
   tubegrow: {
     name: "TubeGrow",
-    free: "Waitlist (Early Access)",
-    paid: "TBA",
+    free: "Free tier available",
+    paid: "Free - $149/mo",
     bestFor: "Creators who want AI-first analytics and viral clips",
     pros: ["Full AI chat assistant", "Viral clip detection", "Modern interface", "Conversational insights"],
     cons: ["New platform", "No browser extension yet", "Some features in development"],
@@ -138,8 +138,8 @@ export default function TubeBuddyVsVidIQPage() {
             <a href="#comparison" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
               See Full Comparison <ArrowRight className="w-5 h-5" />
             </a>
-            <Link href="/#waitlist" className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-lg font-semibold hover:bg-white/10 transition-all">
-              Try TubeGrow (AI Alternative)
+            <Link href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`} className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-lg font-semibold hover:bg-white/10 transition-all">
+              Try TubeGrow Free (AI Alternative)
             </Link>
           </div>
 
@@ -203,7 +203,7 @@ export default function TubeBuddyVsVidIQPage() {
               <p className="text-gray-300 mb-4">
                 Modern AI approach. Chat-based insights, viral clip detection, and conversational analytics.
               </p>
-              <div className="text-purple-400 font-semibold">Waitlist Open</div>
+              <div className="text-purple-400 font-semibold">Free - $149/mo</div>
             </div>
           </div>
         </div>
@@ -427,7 +427,7 @@ export default function TubeBuddyVsVidIQPage() {
             TubeGrow offers an AI-first approach to YouTube analytics.
             No more digging through dashboards—just ask questions and get answers.
           </p>
-          <WaitlistForm source="tubebuddy-vs-vidiq-page" />
+          <GetStartedButton variant="hero" />
         </div>
       </section>
 

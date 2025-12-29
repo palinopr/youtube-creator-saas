@@ -25,7 +25,7 @@ export default function YouTubeMetadataGeneratorToolPage() {
           <p className="text-zinc-400 mb-6">
             Write better titles, descriptions, and tags in minutes. Enter a topic or paste a video URL
             and TubeGrow AI will generate optimized metadata aligned to YouTube search and Shorts discovery.
-            This is a lite preview — full workflows are inside TubeGrow (waitlist‑only).
+            This is a lite preview — full workflows are inside TubeGrow (free tier available).
           </p>
         </div>
       </section>

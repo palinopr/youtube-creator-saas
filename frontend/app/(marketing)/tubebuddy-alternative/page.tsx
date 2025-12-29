@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, ArrowRight, Sparkles, BarChart3, Scissors, Zap, Brain } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 
@@ -57,16 +57,16 @@ export default function TubeBuddyAlternativePage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/alternatives"
+              href="/pricing"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-lg font-semibold hover:bg-white/10 transition-all"
             >
-              Compare All Tools
+              See Pricing
             </Link>
           </div>
         </div>
@@ -184,8 +184,8 @@ export default function TubeBuddyAlternativePage() {
             <div className="p-8 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-2 border-purple-500/50">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">TubeGrow</h3>
-                <div className="text-4xl font-bold mb-2">Coming Soon</div>
-                <p className="text-gray-400">Join waitlist for early access</p>
+                <div className="text-4xl font-bold mb-2">Free - $149/mo</div>
+                <p className="text-gray-400">Free tier available, no credit card</p>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
@@ -206,10 +206,10 @@ export default function TubeBuddyAlternativePage() {
                 </li>
               </ul>
               <Link
-                href="/#waitlist"
+                href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
-                Join Waitlist
+                Start Free
               </Link>
             </div>
 
@@ -268,8 +268,8 @@ export default function TubeBuddyAlternativePage() {
             <div className="p-6 rounded-xl bg-white/5 border border-white/10">
               <h3 className="text-xl font-bold mb-3">Can I use TubeGrow for free?</h3>
               <p className="text-gray-400">
-                TubeGrow is currently in development. Join our waitlist to get early access and exclusive launch pricing 
-                when we go live. We're building a platform that offers exceptional value for YouTube creators.
+                Yes! TubeGrow offers a free tier with 10 video analyses and 20 AI queries per month.
+                No credit card required to get started. Upgrade anytime for more features and higher limits.
               </p>
             </div>
 
@@ -308,9 +308,9 @@ export default function TubeBuddyAlternativePage() {
             Ready to Experience the Future of YouTube Analytics?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators on the waitlist for TubeGrow—the AI-powered TubeBuddy alternative.
+            Join thousands of creators using TubeGrow—the AI-powered TubeBuddy alternative.
           </p>
-          <WaitlistForm source="tubebuddy-alternative-page" />
+          <GetStartedButton variant="inline" text="Start Free Today" />
         </div>
       </section>
 

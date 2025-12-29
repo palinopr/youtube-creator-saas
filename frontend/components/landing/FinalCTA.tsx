@@ -1,6 +1,6 @@
 "use client";
 
-import WaitlistForm from "./WaitlistForm";
+import GetStartedButton from "./GetStartedButton";
 
 export default function FinalCTA() {
   return (
@@ -17,13 +17,13 @@ export default function FinalCTA() {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl mx-auto">
-          Join the waitlist for early access to AI-powered YouTube analytics
+          Start free with AI-powered YouTube analytics
           that will help you maximize reach and engagement.
         </p>
 
-        {/* Waitlist Form */}
+        {/* CTA */}
         <div className="flex justify-center mb-8">
-          <WaitlistForm variant="inline" />
+          <GetStartedButton variant="inline" text="Start Free Today" />
         </div>
 
         {/* Trust indicators */}
@@ -42,7 +42,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>Early access benefits</span>
+            <span>Free tier available</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -58,7 +58,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>No spam, ever</span>
+            <span>No credit card required</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -74,7 +74,7 @@ export default function FinalCTA() {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>Unsubscribe anytime</span>
+            <span>Cancel anytime</span>
           </div>
         </div>
       </div>

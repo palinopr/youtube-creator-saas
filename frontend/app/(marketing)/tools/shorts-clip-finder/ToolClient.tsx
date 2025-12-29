@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import { API_URL } from "@/lib/config";
 
 type Clip = {
@@ -102,11 +102,11 @@ export default function ToolClient() {
                 Want full clip generation?
               </h2>
               <p className="text-zinc-400 mb-6">
-                TubeGrow’s full Viral Clips Generator finds more moments, scores them,
-                and lets you render/export Shorts. Join the waitlist for early access.
+                TubeGrow's full Viral Clips Generator finds more moments, scores them,
+                and lets you render/export Shorts. Get started free today.
               </p>
               <div className="max-w-md mx-auto">
-                <WaitlistForm variant="hero" />
+                <GetStartedButton variant="inline" text="Get Full Access" />
               </div>
             </div>
           </div>

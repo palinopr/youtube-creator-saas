@@ -17,7 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import type { SEOPage, ContentSection, FeatureItem, ComparisonRow, FAQItem } from "@/lib/seo/types";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 // Icon mapping for features
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -69,7 +69,7 @@ export default function SEOPageRenderer({ page, relatedPages }: Props) {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <WaitlistForm variant="inline" />
+            <GetStartedButton variant="inline" />
           </div>
         </div>
       </section>
@@ -179,9 +179,9 @@ export default function SEOPageRenderer({ page, relatedPages }: Props) {
             Ready to Grow Your YouTube Channel?
           </h2>
           <p className="text-lg text-white/70 mb-8">
-            Join thousands of creators using TubeGrow to optimize their content and grow faster.
+            Start free with TubeGrow to optimize your content and grow faster.
           </p>
-          <WaitlistForm variant="inline" />
+          <GetStartedButton variant="inline" />
         </div>
       </section>
     </div>

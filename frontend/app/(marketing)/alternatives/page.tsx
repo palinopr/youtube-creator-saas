@@ -14,7 +14,7 @@ import {
   TrendingUp,
   Search,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "VidIQ Alternative & TubeBuddy Alternative",
@@ -49,7 +49,7 @@ const competitors = [
     highlight: true,
     logo: "🚀",
     tagline: "AI-Powered Growth",
-    price: "Waitlist only",
+    price: "Free / $19+",
     features: {
       aiChat: true,
       viralClips: true,
@@ -164,7 +164,7 @@ const faqs = [
   {
     question: "Is there a free VidIQ or TubeBuddy alternative?",
     answer:
-      "TubeGrow is currently in waitlist-only early access. Join the waitlist to get access as we open the beta, and you’ll be the first to hear about launch plans.",
+      "Yes! TubeGrow offers a free tier with 10 video analyses and 20 AI queries per month. You can start using it today without a credit card.",
   },
 ];
 
@@ -196,10 +196,10 @@ export default function AlternativesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
             >
-              Join Waitlist
+              Get Started Free
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -406,11 +406,11 @@ export default function AlternativesPage() {
                 <Sparkles className="w-6 h-6 text-cyan-400" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
-                Early Access Waitlist
+                Free Tier Available
               </h3>
               <p className="text-gray-400 text-sm">
-                TubeGrow is launching in phases. Join the waitlist to be among
-                the first creators to get access when beta opens.
+                TubeGrow offers a generous free tier. Start with 10 video analyses
+                and 20 AI queries per month at no cost.
               </p>
             </div>
           </div>
@@ -447,7 +447,7 @@ export default function AlternativesPage() {
             Learn More About TubeGrow
           </h2>
           <p className="text-gray-400 mb-8">
-            Explore our AI tools and growth guides before you join the waitlist.
+            Explore our AI tools and growth guides before you get started.
           </p>
           <div className="grid md:grid-cols-3 gap-4 text-left">
             <Link
@@ -488,11 +488,11 @@ export default function AlternativesPage() {
             Ready to Try the Best VidIQ & TubeBuddy Alternative?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Be the first to access TubeGrow's AI-powered tools when we launch.
-            Join the waitlist for early access.
+            Start using TubeGrow's AI-powered tools today.
+            Free tier available - no credit card required.
           </p>
           <div className="max-w-md mx-auto">
-            <WaitlistForm variant="hero" />
+            <GetStartedButton variant="hero" />
           </div>
         </div>
       </section>

@@ -17,7 +17,7 @@ import {
   MessageSquare,
   Target,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "Viral Clips Generator for YouTube Shorts & TikTok",
@@ -86,7 +86,7 @@ const features = [
     icon: Video,
     title: "Works on Public Captions",
     description:
-      "Analyze public videos that have captions available, or connect your own channel for deeper workflows (waitlist‑only).",
+      "Analyze public videos that have captions available, or connect your own channel for deeper workflows.",
   },
 ];
 
@@ -181,10 +181,10 @@ export default function ViralClipsGeneratorPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#waitlist"
+                href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                Join Waitlist <ArrowRight className="w-5 h-5" />
+                Get Started Free <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/features"
@@ -403,7 +403,7 @@ export default function ViralClipsGeneratorPage() {
               },
               {
                 q: "Does the tool edit my video for me?",
-                a: "The lite tool gives timestamped clip suggestions. You can take the timestamps into your editor (or send them to an editor) to cut the clips. TubeGrow is waitlist‑only early access for deeper workflows.",
+                a: "The lite tool gives timestamped clip suggestions. You can take the timestamps into your editor (or send them to an editor) to cut the clips. Full TubeGrow accounts get deeper workflows and more features.",
               },
               {
                 q: "Does it work with any YouTube video?",
@@ -483,13 +483,13 @@ export default function ViralClipsGeneratorPage() {
           <div className="bg-gradient-to-r from-red-500/10 to-purple-500/10 border border-red-500/20 rounded-2xl p-12">
             <Scissors className="w-16 h-16 text-red-400 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Be First to Generate Viral Clips
+              Start Generating Viral Clips Today
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for early access to our AI-powered viral clip generator. Stop spending hours scrubbing through videos.
+              Free tier with 10 analyses & 20 AI queries/month, no credit card required.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

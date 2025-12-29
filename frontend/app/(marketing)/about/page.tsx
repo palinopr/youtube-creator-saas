@@ -188,14 +188,14 @@ export default function AboutPage() {
             Ready to Grow Your Channel?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            TubeGrow is waitlist‑only early access. Join the waitlist and we’ll invite you as we
-            open more spots.
+            Start free with 10 video analyses & 20 AI queries per month.
+            No credit card required.
           </p>
           <Link
-            href="/#waitlist"
+            href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-xl font-semibold text-lg transition-all"
           >
-            Join Waitlist
+            Get Started Free
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

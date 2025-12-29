@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Sparkles, Search, Scissors, BarChart3 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "Free YouTube Tools (Lite)",
@@ -66,13 +66,13 @@ export default function ToolsHubPage() {
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto mb-8">
             These are lite previews of the same AI workflows inside TubeGrow. Use them to
             score SEO, generate metadata, find Shorts moments, and get a channel snapshot.
-            Full access is waitlist‑only.
+            Free tier available for all tools.
           </p>
           <Link
-            href="/#waitlist"
+            href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Join Waitlist <ArrowRight className="w-5 h-5" />
+            Get Started Free <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
@@ -105,10 +105,10 @@ export default function ToolsHubPage() {
           </h2>
           <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
             The full TubeGrow product connects to your channel via OAuth, runs deeper analysis,
-            and saves everything to your dashboard. Join the waitlist and we’ll invite you as spots open.
+            and saves everything to your dashboard. Start free and upgrade anytime.
           </p>
           <div className="max-w-md mx-auto">
-            <WaitlistForm variant="hero" />
+            <GetStartedButton variant="hero" />
           </div>
         </div>
       </section>

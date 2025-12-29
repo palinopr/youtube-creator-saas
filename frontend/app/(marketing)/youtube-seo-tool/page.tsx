@@ -11,12 +11,12 @@ import {
   ArrowRight,
   Clock,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "YouTube SEO Tool",
   description:
-    "AI YouTube SEO tool to optimize titles, descriptions, and tags. Get SEO scores, keyword insights, and AI‑generated metadata that helps videos rank in 2025. Join the TubeGrow waitlist.",
+    "AI YouTube SEO tool to optimize titles, descriptions, and tags. Get SEO scores, keyword insights, and AI‑generated metadata that helps videos rank in 2025. Start free today.",
   alternates: {
     canonical: "/youtube-seo-tool",
   },
@@ -131,10 +131,10 @@ export default function YouTubeSEOToolPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/alternatives"
@@ -144,7 +144,7 @@ export default function YouTubeSEOToolPage() {
             </Link>
           </div>
           <p className="text-zinc-500 text-sm mt-4">
-            Waitlist‑only early access. No public pricing yet.
+            Free tier available. <Link href="/pricing" className="text-purple-400 hover:underline">See pricing</Link>
           </p>
         </div>
       </section>
@@ -244,8 +244,8 @@ export default function YouTubeSEOToolPage() {
                 a: "Absolutely. Refreshing metadata on existing videos is one of the fastest ways to recover search traffic and improve suggested reach.",
               },
               {
-                q: "When will TubeGrow SEO be available?",
-                a: "TubeGrow is in waitlist‑only early access. Join the waitlist and we’ll invite you as we open more spots.",
+                q: "What does TubeGrow cost?",
+                a: "Free tier with 10 analyses & 20 AI queries/month, no credit card required. Paid plans start from $19/mo for more analyses and advanced features.",
               },
             ].map((faq, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
@@ -313,13 +313,13 @@ export default function YouTubeSEOToolPage() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-12">
             <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Be First to Use TubeGrow SEO
+              Start Optimizing Your Videos Today
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for early access to our AI‑powered YouTube SEO toolkit.
+              Free tier with 10 analyses & 20 AI queries/month, no credit card required.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

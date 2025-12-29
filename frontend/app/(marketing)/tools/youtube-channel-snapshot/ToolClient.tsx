@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, AlertTriangle, Check } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import { API_URL } from "@/lib/config";
 
 type SnapshotResponse = {
@@ -143,10 +143,10 @@ export default function ToolClient() {
               </h2>
               <p className="text-zinc-400 mb-6">
                 TubeGrow connects via OAuth to pull deeper data, track trends, and answer questions with AI.
-                Join the waitlist for early access.
+                Get started free today.
               </p>
               <div className="max-w-md mx-auto">
-                <WaitlistForm variant="hero" />
+                <GetStartedButton variant="inline" text="Get Full Access" />
               </div>
             </div>
           </div>

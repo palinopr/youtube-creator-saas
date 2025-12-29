@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Users } from "lucide-react";
-import WaitlistForm from "./WaitlistForm";
+import GetStartedButton from "./GetStartedButton";
 
 export default function HeroSection() {
   return (
@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
           <Users size={16} className="text-brand-500" />
           <span className="text-sm text-white/80">
-            Join creators getting <span className="text-white font-semibold">early access</span>
+            Free tier available &mdash; <span className="text-white font-semibold">no credit card required</span>
           </span>
         </div>
 
@@ -32,10 +32,17 @@ export default function HeroSection() {
           and generate timestamped Shorts clip ideas.
         </p>
 
-        {/* Waitlist Form */}
+        {/* CTA */}
         <div className="mb-16">
-          <WaitlistForm variant="hero" anchorId="waitlist" />
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+          <GetStartedButton variant="hero" />
+          <div className="mt-6 flex items-center justify-center gap-4 text-sm">
+            <Link
+              href="/pricing"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              See pricing
+            </Link>
+            <span className="text-white/20">•</span>
             <Link
               href="/tools"
               className="text-white/70 hover:text-white transition-colors"

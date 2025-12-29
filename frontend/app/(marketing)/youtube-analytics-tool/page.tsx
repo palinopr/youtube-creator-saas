@@ -12,12 +12,12 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 
 export const metadata: Metadata = {
   title: "YouTube Analytics Tool",
   description:
-    "AI-powered YouTube analytics tool for creators. Understand your channel, videos, audience, and growth with real dashboards plus an AI assistant. Join the TubeGrow waitlist.",
+    "AI-powered YouTube analytics tool for creators. Understand your channel, videos, audience, and growth with real dashboards plus an AI assistant. Start free today.",
   alternates: {
     canonical: "/youtube-analytics-tool",
   },
@@ -137,10 +137,10 @@ export default function YouTubeAnalyticsToolPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/features"
@@ -150,7 +150,7 @@ export default function YouTubeAnalyticsToolPage() {
             </Link>
           </div>
           <p className="text-zinc-500 text-sm mt-4">
-            Waitlist‑only early access. No public pricing yet.
+            Free tier available. <Link href="/pricing" className="text-blue-400 hover:underline">See pricing</Link>
           </p>
         </div>
       </section>
@@ -260,8 +260,8 @@ export default function YouTubeAnalyticsToolPage() {
                 a: "Studio shows raw charts. TubeGrow adds cross‑video pattern analysis, clearer comparisons, and an AI assistant that explains what’s happening and what to do next.",
               },
               {
-                q: "When can I use TubeGrow?",
-                a: "TubeGrow is in waitlist‑only early access. Join the waitlist and we’ll invite you as new spots open.",
+                q: "What does TubeGrow cost?",
+                a: "Free tier with 10 analyses & 20 AI queries/month, no credit card required. Paid plans start from $19/mo for more analyses and advanced features.",
               },
             ].map((faq, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
@@ -329,13 +329,13 @@ export default function YouTubeAnalyticsToolPage() {
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
             <Clock className="w-16 h-16 text-blue-400 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Be First to Use TubeGrow Analytics
+              Start Analyzing Your Channel Today
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for early access to our AI‑powered YouTube analytics dashboard.
+              Free tier with 10 analyses & 20 AI queries/month, no credit card required.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="inline" text="Start Free Today" />
             </div>
           </div>
         </div>

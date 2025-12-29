@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, AlertTriangle } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import { API_URL } from "@/lib/config";
 
 type SeoScoreResponse = {
@@ -145,10 +145,10 @@ export default function ToolClient() {
               </h2>
               <p className="text-zinc-400 mb-6">
                 The full version scores your whole library, suggests keyword gaps, and tracks performance over time.
-                TubeGrow is waitlist‑only right now.
+                Get started free with our free tier available.
               </p>
               <div className="max-w-md mx-auto">
-                <WaitlistForm variant="hero" />
+                <GetStartedButton variant="inline" text="Get Full Access" />
               </div>
             </div>
           </div>

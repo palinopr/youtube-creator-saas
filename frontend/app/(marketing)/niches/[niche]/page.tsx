@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
-import WaitlistForm from "@/components/landing/WaitlistForm";
+import GetStartedButton from "@/components/landing/GetStartedButton";
 import { niches, nichesBySlug, type NicheSlug } from "@/lib/niches";
 
 type Props = {
@@ -52,14 +52,14 @@ export default function NichePage({ params }: Props) {
             {niche.description}
           </p>
           <p className="text-zinc-500 text-sm mb-6">
-            Waitlist‑only early access. No public pricing yet.
+            Free tier available. See pricing for details.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/#waitlist"
+              href={`${process.env.NEXT_PUBLIC_API_URL || ""}/auth/login`}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-7 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              Join Waitlist <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/niches"
@@ -179,10 +179,10 @@ export default function NichePage({ params }: Props) {
               Want TubeGrow for Your {niche.name} Channel?
             </h2>
             <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Join the waitlist for early access to niche‑aware analytics, SEO, and viral clips workflows.
+              Start free with niche-aware analytics, SEO, and viral clips workflows.
             </p>
             <div className="max-w-md mx-auto">
-              <WaitlistForm variant="hero" />
+              <GetStartedButton variant="hero" />
             </div>
           </div>
         </div>
