@@ -390,7 +390,7 @@ export default function PricingPage() {
             Ready to grow your channel?
           </h2>
           <p className="text-gray-400 mb-8">
-            Join thousands of creators using TubeGrow to optimize their content
+            Join creators using TubeGrow to optimize their content
             and grow faster.
           </p>
           <Link

@@ -56,7 +56,7 @@ const features = [
     icon: Search,
     title: "Keyword Research Built-In",
     description:
-      "Every tag comes with search volume estimates so you know which keywords are worth targeting.",
+      "Every tag is analyzed for relevance and competition so you know which keywords are worth targeting.",
   },
   {
     icon: Target,
@@ -98,7 +98,7 @@ const howItWorks = [
   {
     step: "3",
     title: "Get Optimized Tag Set",
-    description: "Receive 15-30 relevant tags sorted by search volume.",
+    description: "Receive 15-30 relevant tags sorted by relevance.",
   },
   {
     step: "4",
@@ -162,11 +162,11 @@ const faqs = [
   },
   {
     q: "How does TubeGrow find the best tags?",
-    a: "We analyze top-ranking videos for your target keywords to see what tags they use. Then we cross-reference with search volume data to prioritize tags that have real demand. The result is a tag set optimized for both relevance and discoverability.",
+    a: "We analyze top-ranking videos for your target keywords to see what tags they use. Then we prioritize tags based on relevance and competition. The result is a tag set optimized for both relevance and discoverability.",
   },
   {
     q: "Can I see what tags competitors use?",
-    a: "Yes! TubeGrow's tag extractor shows you the exact tags any public YouTube video uses. Enter a video URL and we'll reveal all their tags along with search volume estimates for each.",
+    a: "Yes! TubeGrow's tag extractor shows you the exact tags any public YouTube video uses. Enter a video URL and we'll reveal all their tags along with relevance scores.",
   },
   {
     q: "What about YouTube Shorts tags?",

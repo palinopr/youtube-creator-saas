@@ -12,7 +12,7 @@
   {
     "id": "intro-comparison-3",
     "category": "comparisons",
-    "template": "With thousands of creators debating {toolA} versus {toolB}, we decided to put both tools through rigorous testing. Here's what we discovered about their strengths, weaknesses, and which one delivers better ROI."
+    "template": "With creators debating {toolA} versus {toolB}, we decided to put both tools through rigorous testing. Here's what we discovered about their strengths, weaknesses, and which one delivers better ROI."
   },
   {
     "id": "intro-comparison-4",
@@ -87,7 +87,7 @@
   {
     "id": "intro-alternative-3",
     "category": "alternatives",
-    "template": "Frustrated with {tool}? You're not alone. Here are the best alternatives that thousands of creators have switched to for improved results and better experiences."
+    "template": "Frustrated with {tool}? You're not alone. Here are the best alternatives that creators have switched to for improved results and better experiences."
   },
   {
     "id": "intro-alternative-4",

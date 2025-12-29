@@ -62,7 +62,7 @@ const features = [
     icon: MousePointer,
     title: "CTR Prediction",
     description:
-      "Get a predicted click-through rate score for each title based on patterns from millions of YouTube videos.",
+      "Get a predicted click-through rate score for each title based on patterns from top-performing videos in your niche.",
   },
   {
     icon: Zap,

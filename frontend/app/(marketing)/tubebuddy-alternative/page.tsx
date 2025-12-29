@@ -308,7 +308,7 @@ export default function TubeBuddyAlternativePage() {
             Ready to Experience the Future of YouTube Analytics?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators using TubeGrow—the AI-powered TubeBuddy alternative.
+            Join creators using TubeGrow—the AI-powered TubeBuddy alternative.
           </p>
           <GetStartedButton variant="inline" text="Start Free Today" />
         </div>
