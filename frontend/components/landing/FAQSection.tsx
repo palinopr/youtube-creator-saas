@@ -32,17 +32,17 @@ const faqCategories = [
       {
         question: "How do I get access to TubeGrow?",
         answer:
-          "TubeGrow is currently in waitlist-only early access. Join the waitlist on the homepage, and we’ll invite creators in waves as we open the beta.",
+          "Sign up free at tubegrow.io. Connect your YouTube channel with one click via Google OAuth, and you're ready to start analyzing your content.",
       },
       {
-        question: "When will pricing be available?",
+        question: "How much does TubeGrow cost?",
         answer:
-          "We’ll share pricing when the public beta opens. Waitlist members will get early access and first notice of launch details.",
+          "TubeGrow offers a free tier with 10 video analyses and 20 AI queries per month. Pro is $19/mo for unlimited access, and Agency is $149/mo for teams managing multiple channels.",
       },
       {
-        question: "Will TubeGrow have a free plan?",
+        question: "What's included in the free plan?",
         answer:
-          "We’re finalizing launch plans now. The waitlist is the best way to get early access and learn what’s included at launch.",
+          "The free plan includes 1 YouTube channel, basic analytics, 10 video analyses per month, 20 AI queries, and SEO score analysis. Upgrade anytime for unlimited access.",
       },
     ],
   },

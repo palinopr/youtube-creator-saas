@@ -261,7 +261,7 @@ export default function LeadAgentWidget() {
                     </button>
 
                     <p className="text-white/40 text-xs">
-                      We use this to follow up with TubeGrow updates. No pricing—TubeGrow is waitlist-only.
+                      We use this to follow up with TubeGrow updates. Free tier available.
                     </p>
                   </div>
                 </div>
@@ -382,7 +382,7 @@ export default function LeadAgentWidget() {
                   </button>
                 </div>
                 <div className="text-white/30 text-[11px] mt-2">
-                  Waitlist-only early access. Answers are guidance, not guarantees.
+                  Free tier available. Answers are guidance, not guarantees.
                 </div>
               </form>
             ) : null}

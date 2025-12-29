@@ -464,7 +464,7 @@ export default function HowItWorksTabs() {
                     No credit card required
                   </p>
                   <p className="text-white/50 text-xs">
-                    Join the waitlist in seconds
+                    Sign up free in seconds
                   </p>
                 </div>
               </div>

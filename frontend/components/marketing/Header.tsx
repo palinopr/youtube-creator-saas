@@ -48,12 +48,12 @@ export function MarketingHeader() {
             >
               Sign In
             </a>
-            <Link
-              href="/#waitlist"
+            <a
+              href={AUTH_ENDPOINTS.LOGIN}
               className="px-4 py-2 bg-gradient-to-r from-brand-500 to-accent-500 hover:from-brand-600 hover:to-accent-600 text-white rounded-lg text-sm font-medium transition-all"
             >
-              Join Waitlist
-            </Link>
+              Get Started Free
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,13 +87,13 @@ export function MarketingHeader() {
                 >
                   Sign In
                 </a>
-                <Link
-                  href="/#waitlist"
+                <a
+                  href={AUTH_ENDPOINTS.LOGIN}
                   className="px-4 py-2 bg-gradient-to-r from-brand-500 to-accent-500 text-white rounded-lg text-sm font-medium text-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Join Waitlist
-                </Link>
+                  Get Started Free
+                </a>
               </div>
             </div>
           </div>

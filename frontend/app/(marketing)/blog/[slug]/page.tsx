@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
+import { AUTH_ENDPOINTS } from "@/lib/config";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -210,13 +211,13 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-gray-400 mb-6">
             Put these strategies into action with TubeGrow's AI-powered analytics.
           </p>
-          <Link
-            href="/#waitlist"
+          <a
+            href={AUTH_ENDPOINTS.LOGIN}
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"
           >
-            Join Waitlist
+            Get Started Free
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

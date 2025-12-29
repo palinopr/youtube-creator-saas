@@ -61,7 +61,7 @@ export default function ResourcesSection() {
           </h2>
           <p className="text-white/60 max-w-3xl mx-auto">
             Use the lite tools for quick wins, then follow the guides to turn improvements into
-            repeatable workflows. TubeGrow is waitlist-only early access for the full experience.
+            repeatable workflows. Sign up free to unlock the full TubeGrow experience.
           </p>
         </div>
 

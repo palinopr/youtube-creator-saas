@@ -98,7 +98,7 @@ export default function AIAgentSection() {
             <ArrowRight className="w-5 h-5" />
           </Link>
           <p className="text-white/40 text-sm mt-3">
-            No login required for tool previews. Join the waitlist for full access.
+            No login required for tool previews. Sign up free for full access.
           </p>
         </div>
       </div>

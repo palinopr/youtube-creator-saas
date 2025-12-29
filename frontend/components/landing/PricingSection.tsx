@@ -1,41 +1,42 @@
 "use client";
 
 import { Check } from "lucide-react";
-import Link from "next/link";
+import { AUTH_ENDPOINTS } from "@/lib/config";
 
 const plans = [
   {
-    name: "Starter",
+    name: "Free",
+    price: "$0",
     description: "For hobbyist creators getting started",
     features: [
       "1 YouTube channel",
       "Basic analytics dashboard",
+      "10 video analyses/month",
+      "20 AI queries/month",
       "SEO score analysis",
-      "5 AI queries per day",
-      "Weekly email reports",
       "Community support",
     ],
-    cta: "Join Waitlist",
+    cta: "Start Free",
     popular: false,
   },
   {
     name: "Pro",
+    price: "$19",
     description: "For growing creators who want to scale",
     features: [
       "3 YouTube channels",
       "Advanced analytics & insights",
-      "Full SEO optimization suite",
+      "Unlimited analyses",
       "Unlimited AI queries",
       "Viral clips generator",
-      "Audience insights",
       "Priority support",
-      "Daily email reports",
     ],
-    cta: "Join Waitlist",
+    cta: "Get Started",
     popular: true,
   },
   {
     name: "Agency",
+    price: "$149",
     description: "For agencies managing multiple channels",
     features: [
       "Unlimited channels",
@@ -44,10 +45,8 @@ const plans = [
       "Team collaboration",
       "API access",
       "Dedicated account manager",
-      "Custom integrations",
-      "SLA guarantee",
     ],
-    cta: "Contact Sales",
+    cta: "Get Started",
     popular: false,
   },
 ];
@@ -65,7 +64,7 @@ export default function PricingSection() {
             Choose the right plan for you
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Join our waitlist to get early access and exclusive launch pricing.
+            Start free and upgrade as you grow. No credit card required.
           </p>
         </div>
 
@@ -89,9 +88,12 @@ export default function PricingSection() {
 
               {/* Plan header */}
               <div className="mb-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-white mb-1">
                   {plan.name}
                 </h3>
+                <div className="text-2xl font-bold text-white mb-2">
+                  {plan.price}<span className="text-sm font-normal text-white/50">/mo</span>
+                </div>
                 <p className="text-white/50 text-sm">{plan.description}</p>
               </div>
 
@@ -111,8 +113,8 @@ export default function PricingSection() {
               </ul>
 
               {/* CTA */}
-              <Link
-                href="#waitlist"
+              <a
+                href={AUTH_ENDPOINTS.LOGIN}
                 className={`block w-full text-center py-3 rounded-full font-semibold transition-all ${
                   plan.popular
                     ? "btn-cta-primary"
@@ -120,14 +122,14 @@ export default function PricingSection() {
                 }`}
               >
                 {plan.cta}
-              </Link>
+              </a>
             </div>
           ))}
         </div>
 
         {/* Trust note */}
         <p className="text-center text-white/40 text-sm mt-8">
-          Join our waitlist for early access and exclusive launch pricing.
+          Free tier available. Upgrade or cancel anytime.
         </p>
       </div>
     </section>
